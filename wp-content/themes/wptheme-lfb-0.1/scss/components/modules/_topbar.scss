@@ -1,0 +1,21 @@
+  .top-bar { 
+
+    /* topbar global <ul> styles */
+    ul { 
+      /* Main Navigation links style */
+      &>li { 
+        &.name a {padding:0 15px;line-height:95px;}
+        &:hover { background: $topBarBgColor; }
+        a:not(.button) { } 
+        &:not(.name), &:not(.divider) {
+          &:hover, &.active, &:focus { background: $topBarBgColor;
+            a { color: darken($topBarLinkColor, 15%); }
+          }
+        }
+
+   
+      }
+    }
+
+  
+  }

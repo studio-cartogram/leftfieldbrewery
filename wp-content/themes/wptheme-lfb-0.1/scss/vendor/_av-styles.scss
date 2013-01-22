@@ -1,0 +1,29 @@
+#av-overlay-wrap { 
+	@extend .reveal-modal-bg;
+	background:black;
+	display:block; 
+}
+
+#av-overlay {
+	@extend .reveal-modal;
+	visibility:visible;
+	display:block;
+	.submit input[type=submit]{
+		@extend .button;
+		@extend .secondary;
+		@extend .radius
+	}
+	#av_verify_form p {
+		@extend .row;
+	}
+	.error {
+		@extend div.alert-box;
+		@extend .secondary;
+	}
+	#av_verify_m, #av_verify_d, #av_verify_y {
+		@extend .three;
+	}
+
+}
+
+

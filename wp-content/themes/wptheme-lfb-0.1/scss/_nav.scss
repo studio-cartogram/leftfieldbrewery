@@ -1,0 +1,33 @@
+
+#about > .row {
+	position:relative;
+}
+.link-about-close {
+  font-size:20px;
+  position: absolute;
+  z-index: 1000;
+  display: block;
+  left:15px;
+  bottom:20px;
+}
+
+.link-search {
+	position:relative;
+	&:before {
+		@include font-size(20);
+		position:absolute;
+		left:0;
+		top:50%;
+		margin-top:-12px;
+	}
+}
+.top-bar ul > li.divider, .top-bar ul > li.divider:hover  {
+	background:$darkEdge;
+}
+
+.top-bar ul > li a.aboutinfo {
+	@include font-size(12);
+	padding-left:10px;
+	padding-right:25px;
+	line-height:105px;
+}
