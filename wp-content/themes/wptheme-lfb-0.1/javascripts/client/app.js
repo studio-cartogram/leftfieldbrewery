@@ -6,6 +6,7 @@
 Fold Nav
 
 ======================================================================================================================== */
+
 	if ( $.fn.makisu.enabled ) {
 
 	    var $maki = $( '.maki' );
@@ -34,5 +35,41 @@ Fold Nav
 
 	    $( '.warning' ).show();
 	}
+
+/* ========================================================================================================================
+  
+Counters for Age Verification
+
+======================================================================================================================== */
+	
+ 	month = new Digits({ 
+  		wrapper: '#av-digits-m', 
+  		mode: 'statistics', 
+  		value: 10 
+  	});
+	day = new Digits({ 
+  		wrapper: '#av-digits-d', 
+  		mode: 'statistics', 
+  		value: 24 
+  	});  
+  	year = new Digits({ 
+  		wrapper: '#av-digits-y', 
+  		mode: 'statistics', 
+  		value: 1992 
+  	});  
+  
+  
+  
+  	// Change value when the input changes 
+
+  	$('#av_verify_m').change(function() {
+  		month.changeValue($(this).val());
+	});
+	$('#av_verify_d').change(function() {
+  		day.changeValue($(this).val());
+	});
+	$('#av_verify_y').change(function() {
+  		year.changeValue($(this).val());
+	});
 
 });

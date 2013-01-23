@@ -243,6 +243,8 @@ function av_get_verify_form() {
 	
 	$form = '';
 	
+	$form .= '<div class="row"><div class="columns three" id="av-digits-m"></div><div class="columns three" id="av-digits-d"></div><div class="columns six" id="av-digits-y"></div></div>';
+
 	$form .= '<form id="av_verify_form" action="' . home_url( '/' ) . '" method="post">';
 	
 	if ( isset( $_GET['verified'] ) && $_GET['verified'] == 'no' )
@@ -291,8 +293,8 @@ function av_get_verify_form() {
 		
 		// If set to date inputs
 		case 'inputs' :
-			
-			$form .= '<p><input type="text" name="av_verify_m" id="av_verify_m" maxlength="2" value="" placeholder="MM" /> - <input type="text" name="av_verify_d" id="av_verify_d" maxlength="2" value="" placeholder="DD" /> - <input type="text" name="av_verify_y" id="av_verify_y" maxlength="4" value="" placeholder="YYYY" /></p>';
+			$form .= '<div class="row"><div class="columns three"><input type="text" name="av_verify_m" id="av_verify_m" maxlength="2" value="" placeholder="MM" /></div><div class="columns three"><input type="text" name="av_verify_d" id="av_verify_d" maxlength="2" value="" placeholder="DD" /></div><div class="columns six"><input type="text" name="av_verify_y" id="av_verify_y" maxlength="4" value="" placeholder="YYYY" /></div></div>';
+			//$form .= '<p><input type="text" name="av_verify_m" id="av_verify_m" maxlength="2" value="" placeholder="MM" /> - <input type="text" name="av_verify_d" id="av_verify_d" maxlength="2" value="" placeholder="DD" /> - <input type="text" name="av_verify_y" id="av_verify_y" maxlength="4" value="" placeholder="YYYY" /></p>';
 			
 			$form .= '<p class="submit"><label for="av_verify_remember"><input type="checkbox" name="av_verify_remember" id="av_verify_remember" value="1" /> Remember me</label> ';
 			
@@ -348,7 +350,7 @@ function av_confirmation_required() {
  * @echo string
  */
 function av_register_form() {
-	
+
 	$text = '<p class="age-verify"><label for="_av_confirm_age"><input type="checkbox" name="_av_confirm_age" id="_av_confirm_age" value="1" /> ';
 	
 	$text .= sprintf( apply_filters( 'av_registration_text', __( 'I am at least %s years old', 'age_verify' ) ), av_get_minimum_age() );

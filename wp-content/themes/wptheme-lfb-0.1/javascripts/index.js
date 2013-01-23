@@ -16,6 +16,7 @@
 @codekit-prepend "foundation/jquery.foundation.mediaQueryToggle.js"
 @codekit-prepend "foundation/app.js"
 @codekit-prepend "client/makisu.js"
+@codekit-prepend "client/digits.js"
 @codekit-prepend "client/app.js"
 */
 

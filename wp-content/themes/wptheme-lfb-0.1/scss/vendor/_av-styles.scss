@@ -1,13 +1,22 @@
 #av-overlay-wrap { 
 	@extend .reveal-modal-bg;
-	background:black;
+	background:$mainColor; 
 	display:block; 
 }
 
 #av-overlay {
 	@extend .reveal-modal;
+	@extend .expand;
+	@include box-shadow(0 0 0);
+	text-align:center;
+	border:none;
+	background:$mainColor; 
+	color:$white;
 	visibility:visible;
 	display:block;
+	p, h1, h3, h4, h5, h6, h6, label {
+		color:$white;
+	}
 	.submit input[type=submit]{
 		@extend .button;
 		@extend .secondary;
@@ -21,7 +30,13 @@
 		@extend .secondary;
 	}
 	#av_verify_m, #av_verify_d, #av_verify_y {
-		@extend .three;
+		@include box-shadow(0 0 0);
+		@include border-radius(0);
+		padding-left:0;
+		background:none;
+		border:none;
+		color:$white;
+		border-bottom:1px solid $white;
 	}
 
 }
