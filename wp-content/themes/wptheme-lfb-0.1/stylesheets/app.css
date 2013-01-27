@@ -5091,7 +5091,7 @@ div.progress.round .meter {
 
 /* line 1, ../scss/vendor/_av-styles.scss */
 #av-overlay-wrap {
-  background: #0c223f;
+  background: rgba(12, 34, 63, 0.95);
   display: block;
 }
 
@@ -5102,7 +5102,7 @@ div.progress.round .meter {
   box-shadow: 0 0 0;
   text-align: center;
   border: none;
-  background: #0c223f;
+  background: transparent;
   color: white;
   visibility: visible;
   display: block;

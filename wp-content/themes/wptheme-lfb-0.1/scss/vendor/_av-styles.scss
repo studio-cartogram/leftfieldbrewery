@@ -1,6 +1,6 @@
 #av-overlay-wrap { 
 	@extend .reveal-modal-bg;
-	background:$mainColor; 
+	background:rgba($mainColor, 0.95); 
 	display:block; 
 }
 
@@ -10,7 +10,7 @@
 	@include box-shadow(0 0 0);
 	text-align:center;
 	border:none;
-	background:$mainColor; 
+	background:transparent; 
 	color:$white;
 	visibility:visible;
 	display:block;
