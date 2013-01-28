@@ -5446,6 +5446,220 @@ div.progress.round .meter {
   content: "Seconds";
 }
 
+/*
+ * jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/* Browser Resets */
+/* line 17, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-container a:active,
+.flexslider a:active,
+.cartogram-slider-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+/* line 20, ../scss/vendor/_flexslider.scss */
+.slides,
+.cartogram-slider-control-nav,
+.cartogram-slider-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 24, ../scss/vendor/_flexslider.scss */
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 25, ../scss/vendor/_flexslider.scss */
+.flexslider .slides > li {
+  position: relative;
+  display: none;
+  margin: 0 6px 0 6px;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 26, ../scss/vendor/_flexslider.scss */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+
+/* line 27, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+/* line 30, ../scss/vendor/_flexslider.scss */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 31, ../scss/vendor/_flexslider.scss */
+html[xmlns] .slides {
+  display: block;
+}
+
+/* line 32, ../scss/vendor/_flexslider.scss */
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 37, ../scss/vendor/_flexslider.scss */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 42, ../scss/vendor/_flexslider.scss */
+.flexslider {
+  margin: 0 0 80px;
+  position: relative;
+  zoom: 1;
+}
+
+/* line 43, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-viewport {
+  overflow: visible !important;
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 44, ../scss/vendor/_flexslider.scss */
+.loading .cartogram-slider-viewport {
+  max-height: 300px;
+}
+
+/* line 45, ../scss/vendor/_flexslider.scss */
+.flexslider .slides {
+  zoom: 1;
+}
+
+/* line 47, ../scss/vendor/_flexslider.scss */
+.carousel li {
+  margin-right: 5px;
+}
+
+/* Control Nav */
+/* line 50, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -45px;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* line 51, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-nav li {
+  margin: 0 4px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 52, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging li a {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  display: block;
+  background: #0c223f;
+  border: 3px solid #0c223f;
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+/* line 53, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging li a:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* line 54, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging li a.cartogram-slider-active {
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default;
+}
+
+/* captions */
+/* line 58, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  z-index: 10000;
+  margin: 0;
+  font-size: 37px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Direction Nav */
+/* line 74, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav {
+  *height: 0;
+}
+
+/* line 86, ../scss/vendor/_flexslider.scss */
+.slide-row {
+  height: 1000px;
+  background: #e6e6e6;
+  margin: 0 !important;
+}
+/* line 90, ../scss/vendor/_flexslider.scss */
+.slide-row article {
+  border: 1px solid #0c223f;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* line 97, ../scss/vendor/_flexslider.scss */
+.flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {
+  opacity: 1;
+}
+
+/* line 98, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav .cartogram-slider-disabled {
+  opacity: .3!important;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
+
 /* line 1, ../scss/components/modules/_topbar.scss */
 .top-bar {
   /* topbar global <ul> styles */
@@ -5883,116 +6097,6 @@ dl.tabs dd.active a {
 }
 
 /* line 1, ../scss/_screen.scss */
-.th.img-circle img {
-  -webkit-border-radius: 500px;
-  -moz-border-radius: 500px;
-  -ms-border-radius: 500px;
-  -o-border-radius: 500px;
-  border-radius: 500px;
-  margin: 10px;
-  border: none;
-  padding: 0;
-}
-
-/* line 8, ../scss/_screen.scss */
-ul.side-nav {
-  padding-top: 0;
-}
-/* line 10, ../scss/_screen.scss */
-ul.side-nav li {
-  margin-bottom: 4px;
-}
-
-/* line 17, ../scss/_screen.scss */
-ul.nav-share li a {
-  position: relative;
-}
-/* line 19, ../scss/_screen.scss */
-ul.nav-share li a:before {
-  font-size: 35px;
-  font-size: 3.5rem;
-}
-
-/* line 25, ../scss/_screen.scss */
-.callout h1, .callout p {
-  color: white;
-}
-/* line 28, ../scss/_screen.scss */
-.callout h1 {
-  font-weight: bold;
-  line-height: 1.3em;
-}
-/* line 32, ../scss/_screen.scss */
-.callout#main {
-  padding: 50px 20px;
-}
-
-/* line 37, ../scss/_screen.scss */
-dl.tabs.pill.link-list dd {
-  display: inline-block;
-  float: none;
-}
-/* line 40, ../scss/_screen.scss */
-dl.tabs.pill.link-list dd a {
-  padding: 2px 20px;
-  height: 35px;
-  line-height: 30px;
-  background: #0c223f;
-  color: white;
-}
-/* line 46, ../scss/_screen.scss */
-dl.tabs.pill.link-list dd a:hover {
-  background: white;
-  color: #0c223f;
-}
-/* line 51, ../scss/_screen.scss */
-dl.tabs.pill.link-list dd.active a {
-  font-weight: normal;
-  background: white;
-  color: #0c223f;
-}
-
-/* line 61, ../scss/_screen.scss */
-.panel.collapse {
-  margin: 0px;
-}
-/* line 64, ../scss/_screen.scss */
-.panel.no-border {
-  border: none;
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
-}
-/* line 68, ../scss/_screen.scss */
-.panel.white {
-  background: white;
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3) inset;
-  -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3) inset;
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3) inset;
-}
-/* line 72, ../scss/_screen.scss */
-.panel.light {
-  background: #3d81da;
-  border: none;
-}
-/* line 73, ../scss/_screen.scss */
-.panel.light p {
-  color: #0c223f;
-}
-/* line 77, ../scss/_screen.scss */
-.panel.flush {
-  padding: 0;
-}
-/* line 80, ../scss/_screen.scss */
-.panel.outline {
-  border: 2px solid #0c223f;
-  width: 100%;
-  display: block;
-  margin: 0;
-}
-
-/* line 89, ../scss/_screen.scss */
-.uniform {
-  height: 330px;
-  position: relative;
+body {
+  overflow-x: hidden;
 }

@@ -54,7 +54,7 @@ Fold Nav
 Counters for Age Verification
 
 ======================================================================================================================== */
-	
+if ( $.fn.Digits ) {
  	month = new Digits({ 
   		wrapper: '#av-digits-m', 
   		mode: 'statistics', 
@@ -84,5 +84,24 @@ Counters for Age Verification
 	$('#av_verify_y').change(function() {
   		year.changeValue($(this).val());
 	});
+}
+/* ========================================================================================================================
+  
+Flexslider
+
+======================================================================================================================== */
+	
+	$('.flexslider').flexslider({
+	    animation: "slide",
+	    namespace: "cartogram-slider-",
+	    prevText: "Prev",
+	    directionNav: true,
+	    controlNav: true,
+	    slideshow: false,
+	    pauseOnHover: true,
+	    slideshowSpeed: 5000,
+	    animationLoop: true
+	  });
+
 
 });

@@ -8,13 +8,14 @@
 <?php get_header() ?> 
 <div class="container">
 	<div class="row">
-		<div class="columns four">
-			<?php get_sidebar(); ?>
+		<div class="columns twelve">
+			<div class="flexslider">
+				<ul class="slides">
+			    	<?php get_template_part('parts/loops/loop', 'page') ?> 	
+			  	</ul>
+			</div>
 		</div>
-		<div class="columns eight">
-			<?php get_template_part('parts/loop'); ?>
-		</div>
-	</div>
+	</div>	
 </div>
 
 <?php get_footer() ?>
