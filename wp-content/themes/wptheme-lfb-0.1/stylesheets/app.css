@@ -5514,6 +5514,27 @@ div.progress.round .meter {
   left: 20px;
 }
 
+/* CSS for jQuery Reveal Plugin
+ * Maintained for Foundation. foundation.zurb.com
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+/* Reveal Modals ---------------------- */
+/* line 9, ../scss/components/modules/_reveal.scss */
+.reveal-modal-bg, #av-overlay-wrap {
+  background: transparent;
+}
+
+/* line 15, ../scss/components/modules/_reveal.scss */
+.reveal-modal.transparent, .transparent#av-overlay {
+  -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+  text-align: center;
+  border: none;
+  background: transparent;
+}
+
 /* line 1, ../scss/_typography.scss */
 h1 {
   font-size: 20px;
