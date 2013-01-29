@@ -110,6 +110,5 @@ Flexslider
 	  		pageSlider.flexAnimate(index);
 			return false;
 		});
-		console.log($(this).text());
 	});
 });

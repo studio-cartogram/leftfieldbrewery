@@ -1,12 +1,12 @@
 <section class="container">
 	<header class="row text-center">
-		<div class="columns four">
+		<div class="columns four mobile-two">
 			<h2>Breweing Since 2013</h2>
 		</div>
-		<hgroup class="columns four">
+		<hgroup class="columns four hide-for-small">
 			<h1><a href=<?php bloginfo( 'url' ); ?>><?php bloginfo( 'name' ); ?></a></h1>
 		</hgroup>
-		<div class="columns four">
+		<div class="columns four mobile-two">
 			<h2>Toronto &bull; Canada</h2>
 		</div>
 	</header>
