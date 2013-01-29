@@ -2,7 +2,8 @@
 $posts = new WP_Query();
 $posts->query( array(
 	'post_type'=> 'page',
-	'orderby' => 'menu_order'
+	'orderby' => 'menu_order',
+	'order' => 'DESC'
 	));
 	if ($posts->have_posts()) : ?>	
 		<?php while ($posts->have_posts()) : $posts->the_post(); ?>
