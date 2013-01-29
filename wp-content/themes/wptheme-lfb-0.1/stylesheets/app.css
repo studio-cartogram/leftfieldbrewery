@@ -16,7 +16,7 @@ html {
 /* line 7, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_globals.scss */
 body {
   background: white;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1;
   color: #222222;
@@ -133,8 +133,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 
 /* line 10, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 p {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 800;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 17px;
@@ -155,9 +155,9 @@ aside p {
 
 /* line 15, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #222222;
+  font-family: "kulturista-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #0c223f;
   text-rendering: optimizeLegibility;
   line-height: 1.1;
   margin-bottom: 14px;
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 23, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: #6f6f6f;
+  color: #2467c0;
   line-height: 0;
 }
 
@@ -212,7 +212,7 @@ hr {
 /* line 35, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 .subheader {
   line-height: 1.3;
-  color: #6f6f6f;
+  color: #2467c0;
   font-weight: 300;
   margin-bottom: 17px;
 }
@@ -302,7 +302,7 @@ ol li ul, ol li ol {
 /* line 68, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 blockquote, blockquote p {
   line-height: 1.5;
-  color: #6f6f6f;
+  color: #2467c0;
 }
 
 /* line 69, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
@@ -315,7 +315,7 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 13px;
-  color: #555555;
+  color: #1c5095;
 }
 /* line 71, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 blockquote cite:before {
@@ -323,14 +323,14 @@ blockquote cite:before {
 }
 /* line 72, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 blockquote cite a, blockquote cite a:visited {
-  color: #555555;
+  color: #1c5095;
 }
 
 /* line 76, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 abbr, acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #222222;
+  color: #0c223f;
   border-bottom: 1px solid #ddd;
   cursor: help;
 }
@@ -533,7 +533,7 @@ span.prefix, span.postfix {
 
 /* line 34, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   border: 1px solid #cccccc;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -1530,7 +1530,7 @@ that IE7/8 do not support :nth-child.
   color: white;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
   line-height: 1;
@@ -1640,19 +1640,19 @@ that IE7/8 do not support :nth-child.
 }
 /* line 33, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.secondary, #av-overlay .submit input[type=submit], #av-overlay .button.error, #av-overlay .submit input.error[type=submit] {
-  background-color: #e9e9e9;
-  color: #1d1d1d;
-  border: 1px solid #c3c3c3;
+  background-color: #fefcf8;
+  color: #523b0c;
+  border: 1px solid #f4dfb5;
 }
 /* line 34, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.secondary:hover, #av-overlay .submit input[type=submit]:hover, #av-overlay .button.error:hover, #av-overlay .submit input.error[type=submit]:hover {
-  background-color: #d0d0d0;
+  background-color: #f8e9cb;
 }
 /* line 35, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.secondary:focus, #av-overlay .submit input[type=submit]:focus, #av-overlay .button.error:focus, #av-overlay .submit input.error[type=submit]:focus {
-  -webkit-box-shadow: 0 0 5px #e9e9e9, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-  -moz-box-shadow: 0 0 5px #e9e9e9, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-  box-shadow: 0 0 5px #e9e9e9, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 0 5px #fefcf8, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 0 5px #fefcf8, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 0 5px #fefcf8, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 /* line 39, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.radius, #av-overlay .submit input[type=submit] {
@@ -1713,11 +1713,11 @@ that IE7/8 do not support :nth-child.
 }
 /* line 56, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.disabled.secondary, #av-overlay .submit input.disabled[type=submit], #av-overlay .button.disabled.error, #av-overlay .submit input.disabled.error[type=submit], .button[disabled].secondary, #av-overlay .submit input[disabled][type=submit], #av-overlay .button[disabled].error, #av-overlay .submit input[disabled].error[type=submit] {
-  background-color: #e9e9e9;
+  background-color: #fefcf8;
 }
 /* line 57, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.disabled.secondary:hover, #av-overlay .submit input.disabled[type=submit]:hover, #av-overlay .button.disabled.error:hover, #av-overlay .submit input.disabled.error[type=submit]:hover, .button[disabled].secondary:hover, #av-overlay .submit input[disabled][type=submit]:hover, #av-overlay .button[disabled].error:hover, #av-overlay .submit input[disabled].error[type=submit]:hover {
-  background-color: #e9e9e9;
+  background-color: #fefcf8;
 }
 
 /* Don't use native buttons on iOS */
@@ -1870,7 +1870,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   display: block;
   color: #555;
   font-size: 13px;
-  font-weight: normal;
+  font-weight: 800;
   padding: 6px 14px;
   text-align: left;
 }
@@ -1926,7 +1926,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
 }
 /* line 120, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split.secondary:hover, #av-overlay .submit input.dropdown.split[type=submit]:hover, #av-overlay .button.dropdown.split.error:hover, #av-overlay .submit input.dropdown.split.error[type=submit]:hover {
-  background-color: #e9e9e9;
+  background-color: #fefcf8;
 }
 /* line 123, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split > a, #av-overlay .submit input.dropdown.split[type=submit] > a {
@@ -2004,7 +2004,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   width: 0;
   height: 0;
   border: solid 6px;
-  border-color: #1d1d1d transparent transparent transparent;
+  border-color: #523b0c transparent transparent transparent;
 }
 /* line 137, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split.large span, #av-overlay .submit input.dropdown.split.large[type=submit] span {
@@ -2063,12 +2063,12 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
 }
 /* line 148, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split.secondary > span, #av-overlay .submit input.dropdown.split[type=submit] > span, #av-overlay .button.dropdown.split.error > span, #av-overlay .submit input.dropdown.split.error[type=submit] > span {
-  background-color: #e9e9e9;
-  border-left-color: #c3c3c3;
+  background-color: #fefcf8;
+  border-left-color: #f4dfb5;
 }
 /* line 149, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split.secondary > a, #av-overlay .submit input.dropdown.split[type=submit] > a, #av-overlay .button.dropdown.split.error > a, #av-overlay .submit input.dropdown.split.error[type=submit] > a {
-  color: #1d1d1d;
+  color: #523b0c;
 }
 /* line 151, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split.alert > a:hover, #av-overlay .submit input.dropdown.split.alert[type=submit] > a:hover, .button.dropdown.split.alert > span:hover, #av-overlay .submit input.dropdown.split.alert[type=submit] > span:hover {
@@ -2080,7 +2080,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
 }
 /* line 153, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split.secondary > a:hover, #av-overlay .submit input.dropdown.split[type=submit] > a:hover, #av-overlay .button.dropdown.split.error > a:hover, #av-overlay .submit input.dropdown.split.error[type=submit] > a:hover, .button.dropdown.split.secondary > span:hover, #av-overlay .submit input.dropdown.split[type=submit] > span:hover, #av-overlay .button.dropdown.split.error > span:hover, #av-overlay .submit input.dropdown.split.error[type=submit] > span:hover {
-  background-color: #d0d0d0;
+  background-color: #f8e9cb;
 }
 
 /* Button Groups ---------------------- */
@@ -2598,7 +2598,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 /* line 19, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .contain-to-grid {
   width: 100%;
-  background: #fcfcfc;
+  background: #0c223f;
 }
 
 /* Wrapped around .top-bar to make it fixed at the top */
@@ -2614,10 +2614,10 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 /* <nav> */
 /* line 25, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar {
-  background: #fcfcfc;
-  height: 100px;
-  line-height: 100px;
-  margin: 0 0 30px;
+  background: #0c223f;
+  height: 45px;
+  line-height: 45px;
+  margin: 0 0 0px;
   padding: 0;
   width: 100%;
   /* Contain width to .row width */
@@ -2631,13 +2631,13 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 33, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar > ul .name h1 {
-  line-height: 100px;
+  line-height: 45px;
   margin: 0;
 }
 /* line 34, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar > ul .name h1 a {
   font-weight: bold;
-  padding: 0 50px;
+  padding: 0 22.5px;
   font-size: 20px !important;
 }
 /* line 36, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
@@ -2648,8 +2648,8 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 /* line 41, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul {
   display: inline;
-  height: 100px;
-  line-height: 100px;
+  height: 45px;
+  line-height: 45px;
   list-style: none;
   /* Main Navigation links style */
   /* Left Side <ul> */
@@ -2666,25 +2666,25 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 45, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li a:not(.button) {
-  color: #0c223f;
+  color: white;
   display: block;
   font-size: 15px;
   font-weight: bold;
-  height: 100px;
-  line-height: 100px;
-  padding: 0 33.33333px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 15px;
 }
 /* line 46, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li:hover, .top-bar ul > li.active {
-  background: #c9c9c9;
+  background: black;
 }
 /* line 47, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li:hover a, .top-bar ul > li.active a {
-  color: black;
+  color: #d9d9d9;
 }
 /* line 51, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.divider {
-  background: #c9c9c9;
+  background: black;
   -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1);
   -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1);
   box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1);
@@ -2694,11 +2694,11 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 55, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-button a.button {
-  margin: 0 25px;
+  margin: 0 11.25px;
 }
 /* line 56, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-button:hover {
-  background: #fcfcfc;
+  background: #0c223f;
 }
 /* line 57, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-button:hover a {
@@ -2706,7 +2706,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 62, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.search {
-  padding: 0 33.33333px;
+  padding: 0 15px;
 }
 /* line 63, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.search form {
@@ -2726,7 +2726,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   float: left;
   font-size: 13px;
   margin-top: -1px;
-  height: 50px;
+  height: 22.5px;
 }
 /* line 65, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.search form input[type=text] + .button, .top-bar ul > li.search form #av-overlay .submit input[type=text] + input[type=submit], #av-overlay .submit .top-bar ul > li.search form input[type=text] + input[type=submit] {
@@ -2749,7 +2749,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 69, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.search:hover {
-  background: #fcfcfc;
+  background: #0c223f;
 }
 /* line 73, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.toggle-topbar {
@@ -2767,7 +2767,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 78, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-dropdown a {
-  padding-right: 75px;
+  padding-right: 33.75px;
 }
 /* line 79, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-dropdown a:after {
@@ -2777,7 +2777,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   height: 0;
   border: solid 5px;
   border-color: white transparent transparent transparent;
-  margin-right: 33.33333px;
+  margin-right: 15px;
   margin-top: -2.5px;
   position: absolute;
   right: 0;
@@ -2785,17 +2785,17 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 81, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-dropdown .dropdown {
-  background: #fcfcfc;
+  background: #0c223f;
   left: 0;
   margin: 0;
-  padding: 20px 0 0 0;
+  padding: 9px 0 0 0;
   position: absolute;
   visibility: hidden;
   z-index: 99;
 }
 /* line 82, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-dropdown .dropdown li {
-  background: #fcfcfc;
+  background: #0c223f;
   line-height: 1;
   min-width: 100%;
   padding-bottom: 5px;
@@ -2805,7 +2805,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   font-weight: normal;
   height: 100%;
   line-height: 1;
-  padding: 5px 35.33333px 5px 33.33333px;
+  padding: 5px 17px 5px 15px;
   white-space: nowrap;
 }
 /* line 84, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
@@ -2814,20 +2814,20 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 85, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-dropdown .dropdown li a:hover {
-  background: white;
+  background: #14396a;
 }
 /* line 87, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-dropdown .dropdown li label {
-  color: white;
+  color: #2467c0;
   font-size: 10px;
   font-weight: bold;
   margin: 0;
-  padding-left: 33.33333px;
+  padding-left: 15px;
   text-transform: uppercase;
 }
 /* line 88, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-dropdown .dropdown li.divider {
-  border-top: solid 1px #c9c9c9;
+  border-top: solid 1px black;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
@@ -2907,13 +2907,13 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 /* IE8 Fixes */
 /* line 128, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .lt-ie9 .top-bar ul li a {
-  color: #0c223f;
+  color: white;
   display: block;
   font-weight: bold;
   font-size: 15px;
-  height: 100px;
-  line-height: 100px;
-  padding: 0 33.33333px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 15px;
 }
 /* line 129, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .lt-ie9 .top-bar ul li a.button {
@@ -2923,7 +2923,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 130, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .lt-ie9 .top-bar ul li a:hover {
-  color: black;
+  color: #cccccc;
 }
 /* line 131, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .lt-ie9 .top-bar ul li a img {
@@ -2932,13 +2932,13 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 132, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .lt-ie9 .top-bar ul li a.active {
-  background: #f0f0f0;
-  color: black;
+  background: #08162a;
+  color: #d9d9d9;
 }
 
 /* line 134, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .lt-ie9 .top-bar ul li.has-dropdown {
-  padding-right: 75px;
+  padding-right: 33.75px;
 }
 /* line 136, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .lt-ie9 .top-bar ul li.has-dropdown > ul li {
@@ -2993,11 +2993,11 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 153, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.active, .top-bar ul li:hover {
-    background: #f0f0f0;
+    background: #08162a;
   }
   /* line 156, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.name {
-    background: #c9c9c9;
+    background: black;
   }
   /* line 157, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.name h1 {
@@ -3005,13 +3005,13 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 158, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.name h1 a {
-    padding-left: 50px;
+    padding-left: 22.5px;
   }
   /* line 163, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.toggle-topbar {
     cursor: pointer;
     display: block;
-    height: 100px;
+    height: 45px;
     position: absolute;
     right: 0;
     top: 0;
@@ -3028,12 +3028,12 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
     padding: 0;
     position: absolute;
     top: 50%;
-    right: 50px;
+    right: 22.5px;
     margin-top: -4px;
   }
   /* line 166, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.toggle-topbar:hover {
-    background: #c9c9c9;
+    background: black;
   }
   /* line 168, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.toggle-topbar a {
@@ -3042,7 +3042,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   /* line 171, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.divider {
     border-bottom: solid 1px rgba(255, 255, 255, 0.2);
-    border-top: solid 1px #d6d6d6;
+    border-top: solid 1px black;
     clear: both;
     height: 1px !important;
     margin: 8px 0 !important;
@@ -3050,7 +3050,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 174, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.search {
-    padding: 0 50px;
+    padding: 0 22.5px;
   }
   /* line 175, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.search form {
@@ -3067,7 +3067,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 183, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown a {
-    padding-right: 75px;
+    padding-right: 33.75px;
   }
   /* line 184, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown a:after {
@@ -3077,7 +3077,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
     height: 0;
     border: solid 5px;
     border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
-    margin-right: 33.33333px;
+    margin-right: 15px;
     margin-top: -4.5px;
     position: absolute;
     top: 50%;
@@ -3113,12 +3113,12 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 193, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown.moved .dropdown li:not(.title) a {
-    padding: 8px 50px;
+    padding: 8px 22.5px;
     font-size: 14px;
   }
   /* line 195, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown.moved .dropdown li a, .top-bar ul li.has-dropdown.moved .dropdown li label {
-    padding: 0 50px;
+    padding: 0 22.5px;
   }
   /* line 196, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown.moved .dropdown li a:hover {
@@ -3139,7 +3139,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   .top-bar ul li.has-dropdown.moved .back.title a:before {
     position: absolute;
     top: 50%;
-    left: 45px;
+    left: 17.5px;
     margin-top: -5px;
     width: 0;
     height: 0;
@@ -3175,12 +3175,12 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 213, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown .dropdown li.has-dropdown > a {
-    padding-right: 75px;
+    padding-right: 33.75px;
   }
   /* line 214, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown .dropdown li.has-dropdown > a:after {
     content: "";
-    margin-right: 33.33333px;
+    margin-right: 15px;
     content: "";
     display: block;
     width: 0;
@@ -3223,7 +3223,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 231, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar section > ul li a:not(.button) {
-    padding-left: 50px !important;
+    padding-left: 22.5px !important;
   }
   /* line 234, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar.expanded {
@@ -4222,8 +4222,8 @@ div.alert-box.alert, #av-overlay .alert.error {
 }
 /* line 148, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 div.alert-box.secondary, #av-overlay .error {
-  background-color: #e9e9e9;
-  color: #505050;
+  background-color: #fefcf8;
+  color: #ac7b18;
   text-shadow: 0 1px rgba(255, 255, 255, 0.3);
 }
 /* line 150, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
@@ -4284,8 +4284,8 @@ div.alert-box a.close:hover, #av-overlay .error a.close:hover, div.alert-box a.c
 }
 /* line 165, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 .label.secondary, #av-overlay .submit input.label[type=submit], #av-overlay .label.error {
-  background-color: #e9e9e9;
-  color: #505050;
+  background-color: #fefcf8;
+  color: #ac7b18;
 }
 
 /* Tooltips ---------------------- */
@@ -4459,24 +4459,24 @@ div.alert-box a.close:hover, #av-overlay .error a.close:hover, div.alert-box a.c
 /* line 231, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 ul.accordion {
   margin: 0 0 22px 0;
-  border-bottom: 1px solid #e9e9e9;
+  border-bottom: 1px solid #fefcf8;
 }
 /* line 233, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 ul.accordion > li {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-top: 1px solid #e9e9e9;
+  border-top: 1px solid #fefcf8;
 }
 /* line 234, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 ul.accordion > li .title {
   cursor: pointer;
-  background: #f6f6f6;
+  background: white;
   padding: 15px;
   margin: 0;
   position: relative;
-  border-left: 1px solid #e9e9e9;
-  border-right: 1px solid #e9e9e9;
+  border-left: 1px solid #fefcf8;
+  border-right: 1px solid #fefcf8;
   -webkit-transition: 0.15s background linear;
   -moz-transition: 0.15s background linear;
   -o-transition: 0.15s background linear;
@@ -4493,7 +4493,7 @@ ul.accordion > li .title:after {
   width: 0;
   height: 0;
   border: solid 6px;
-  border-color: transparent #9d9d9d transparent transparent;
+  border-color: transparent #ebc372 transparent transparent;
   position: absolute;
   right: 15px;
   top: 21px;
@@ -4519,14 +4519,14 @@ ul.accordion > li.active .title:after {
   width: 0;
   height: 0;
   border: solid 6px;
-  border-color: #9d9d9d transparent transparent transparent;
+  border-color: #ebc372 transparent transparent transparent;
 }
 /* line 248, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 ul.accordion > li.active .content {
   background: white;
   display: block;
-  border-left: 1px solid #e9e9e9;
-  border-right: 1px solid #e9e9e9;
+  border-left: 1px solid #fefcf8;
+  border-right: 1px solid #fefcf8;
 }
 
 /* Side Nav ---------------------- */
@@ -4580,7 +4580,7 @@ dl.sub-nav dt, dl.sub-nav dd {
 /* line 272, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 dl.sub-nav dt {
   color: #999;
-  font-weight: normal;
+  font-weight: 800;
 }
 /* line 273, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 dl.sub-nav dd a {
@@ -4651,9 +4651,9 @@ ul.pagination li.current a:hover {
 /* line 297, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 ul.breadcrumbs {
   display: block;
-  background: #f6f6f6;
+  background: white;
   padding: 6px 10px 7px;
-  border: 1px solid #e9e9e9;
+  border: 1px solid #fefcf8;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -4931,7 +4931,7 @@ div.progress .meter {
 }
 /* line 399, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 div.progress.secondary .meter, #av-overlay div.progress.error .meter {
-  background: #e9e9e9;
+  background: #fefcf8;
 }
 /* line 400, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 div.progress.success .meter {
@@ -5087,6 +5087,11 @@ div.progress.round .meter {
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
+}
+
+/* line 2, ../scss/base/_links.scss */
+a:hover {
+  color: #546478;
 }
 
 /* line 1, ../scss/vendor/_av-styles.scss */
@@ -5446,6 +5451,243 @@ div.progress.round .meter {
   content: "Seconds";
 }
 
+/*
+ * jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/* Browser Resets */
+/* line 17, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-container a:active,
+.flexslider a:active,
+.cartogram-slider-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+/* line 20, ../scss/vendor/_flexslider.scss */
+.slides,
+.cartogram-slider-control-nav,
+.cartogram-slider-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 24, ../scss/vendor/_flexslider.scss */
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 25, ../scss/vendor/_flexslider.scss */
+.flexslider .slides > li {
+  position: relative;
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 26, ../scss/vendor/_flexslider.scss */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+
+/* line 27, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+/* line 30, ../scss/vendor/_flexslider.scss */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 31, ../scss/vendor/_flexslider.scss */
+html[xmlns] .slides {
+  display: block;
+}
+
+/* line 32, ../scss/vendor/_flexslider.scss */
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 37, ../scss/vendor/_flexslider.scss */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 42, ../scss/vendor/_flexslider.scss */
+.flexslider {
+  margin: 0 0 80px;
+  position: relative;
+  zoom: 1;
+}
+
+/* line 43, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-viewport {
+  overflow: visible !important;
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 44, ../scss/vendor/_flexslider.scss */
+.loading .cartogram-slider-viewport {
+  max-height: 300px;
+}
+
+/* line 45, ../scss/vendor/_flexslider.scss */
+.flexslider .slides {
+  zoom: 1;
+}
+
+/* line 47, ../scss/vendor/_flexslider.scss */
+.carousel li {
+  margin-right: 5px;
+}
+
+/* line 48, ../scss/vendor/_flexslider.scss */
+.flexslider .slides li {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+/* line 50, ../scss/vendor/_flexslider.scss */
+.flexslider .slides li.cartogram-slider-active-slide {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* Control Nav */
+/* line 56, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -45px;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* line 57, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-nav li {
+  margin: 0 4px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 58, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging li a {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  display: block;
+  background: #0c223f;
+  border: 3px solid #0c223f;
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+/* line 59, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging li a:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* line 60, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging li a.cartogram-slider-active {
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default;
+}
+
+/* captions */
+/* line 64, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  z-index: 10000;
+  margin: 0;
+  font-size: 37px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Direction Nav */
+/* line 80, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav {
+  *height: 0;
+}
+/* line 82, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav a {
+  position: absolute;
+  top: 20%;
+}
+/* line 85, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav a.cartogram-slider-next {
+  right: 0;
+}
+/* line 89, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav a.cartogram-slider-prev {
+  left: 0;
+}
+
+/* line 96, ../scss/vendor/_flexslider.scss */
+.slide-row {
+  height: 1000px;
+  background: #e6e6e6;
+  margin: 0 !important;
+}
+/* line 100, ../scss/vendor/_flexslider.scss */
+.slide-row article {
+  border: 1px solid #0c223f;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* line 107, ../scss/vendor/_flexslider.scss */
+.flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {
+  opacity: 1;
+}
+
+/* line 108, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav .cartogram-slider-disabled {
+  opacity: .3!important;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
+
 /* line 1, ../scss/components/modules/_topbar.scss */
 .top-bar {
   /* topbar global <ul> styles */
@@ -5461,15 +5703,15 @@ div.progress.round .meter {
 }
 /* line 8, ../scss/components/modules/_topbar.scss */
 .top-bar ul > li:hover {
-  background: #fcfcfc;
+  background: #0c223f;
 }
 /* line 11, ../scss/components/modules/_topbar.scss */
 .top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active, .top-bar ul > li:not(.name):focus, .top-bar ul > li:not(.divider):hover, .top-bar ul > li:not(.divider).active, .top-bar ul > li:not(.divider):focus {
-  background: #fcfcfc;
+  background: #0c223f;
 }
 /* line 12, ../scss/components/modules/_topbar.scss */
 .top-bar ul > li:not(.name):hover a, .top-bar ul > li:not(.name).active a, .top-bar ul > li:not(.name):focus a, .top-bar ul > li:not(.divider):hover a, .top-bar ul > li:not(.divider).active a, .top-bar ul > li:not(.divider):focus a {
-  color: black;
+  color: #d9d9d9;
 }
 
 /* Normal Buttons ---------------------- */
@@ -5537,55 +5779,33 @@ div.progress.round .meter {
 
 /* line 1, ../scss/_typography.scss */
 h1 {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  letter-spacing: 0.03em;
+}
+/* line 4, ../scss/_typography.scss */
+h1.title {
+  margin-top: 50px;
 }
 
-/* line 6, ../scss/_typography.scss */
-p.collapse, h1.collapse, h2.collapse, h3.collapse, h4.collapse, h5.collapse, h6.collapse {
-  margin: 0;
-}
 /* line 9, ../scss/_typography.scss */
-p.light, h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
-  color: white;
+h2 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
 }
 
 /* line 14, ../scss/_typography.scss */
-h1.project-title {
-  font-size: 30px;
-  font-size: 3rem;
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
 }
-
-/* line 18, ../scss/_typography.scss */
-h3 {
-  font-size: 16px;
-  font-size: 1.6rem;
-  font-weight: bold;
-  padding-bottom: 10px;
+/* line 16, ../scss/_typography.scss */
+h1.collapse, h2.collapse, h3.collapse, h4.collapse, h5.collapse, h6.collapse {
+  margin: 0;
 }
-
-/* line 23, ../scss/_typography.scss */
-.link-back {
-  font-weight: bold;
-  position: relative;
-  font-size: 12px;
-  font-size: 1.2rem;
-  padding-left: 18px;
-}
-/* line 28, ../scss/_typography.scss */
-.link-back:before {
-  position: absolute;
-  left: 0px;
-  top: 2px;
-  font-size: 11px;
-  font-size: 1.1rem;
-}
-
-/* line 36, ../scss/_typography.scss */
-h4 {
-  font-size: 18px;
-  font-size: 1.8rem;
-  font-weight: bold;
+/* line 19, ../scss/_typography.scss */
+h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
+  color: white;
 }
 
 /* Space ---------------------- */
@@ -5748,251 +5968,12 @@ h4 {
   color: #8A61AA;
 }
 
-/* line 2, ../scss/_nav.scss */
-#about > .row, #av-overlay #av_verify_form #about > p {
-  position: relative;
-}
-
-/* line 5, ../scss/_nav.scss */
-.link-about-close {
-  font-size: 20px;
-  position: absolute;
-  z-index: 1000;
-  display: block;
-  left: 15px;
-  bottom: 20px;
-}
-
-/* line 14, ../scss/_nav.scss */
-.link-search {
-  position: relative;
-}
-/* line 16, ../scss/_nav.scss */
-.link-search:before {
-  font-size: 20px;
-  font-size: 2rem;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  margin-top: -12px;
-}
-
-/* line 24, ../scss/_nav.scss */
-.top-bar ul > li.divider, .top-bar ul > li.divider:hover {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-/* line 28, ../scss/_nav.scss */
-.top-bar ul > li a.aboutinfo {
-  font-size: 12px;
-  font-size: 1.2rem;
-  padding-left: 10px;
-  padding-right: 25px;
-  line-height: 105px;
-}
-
-/* line 1, ../scss/_single.scss */
-.fixed {
-  left: auto;
-}
-
-/* line 5, ../scss/_single.scss */
-.magellan-wrap {
-  margin: 0 -15px;
-}
-/* line 7, ../scss/_single.scss */
-.magellan-wrap .magellan {
-  max-width: 666px;
-  width: 666px;
-  margin: -1px -21px;
-  padding: 10px 0 !important;
-  left: auto;
-  border: 1px solid #0c223f;
-  border-top: none;
-  background: white;
-}
-/* line 18, ../scss/_single.scss */
-.magellan-wrap .magellan li a {
-  padding: 0px 15px;
-  display: block;
-}
-/* line 23, ../scss/_single.scss */
-.magellan-wrap .magellan li.active a {
-  font-weight: bold;
-}
-
-/* line 31, ../scss/_single.scss */
-dl.tabs {
-  margin-bottom: 0;
-}
-
-/* line 34, ../scss/_single.scss */
-ul.tabs-content.contained > li {
-  padding-top: 0;
-}
-
-/* line 38, ../scss/_single.scss */
-dl.sub-nav dt {
-  padding-right: 10px;
-  font-size: 11px;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  line-height: 25px;
-}
-/* line 44, ../scss/_single.scss */
-dl.sub-nav dt:before {
-  margin-right: 5px;
-}
-
-/* line 49, ../scss/_single.scss */
-.course-item {
-  background: #fcfcfc;
-}
-/* line 51, ../scss/_single.scss */
-.course-item h4 {
-  position: relative;
-  color: #0c223f;
-}
-/* line 54, ../scss/_single.scss */
-.course-item h4:before {
-  left: 0;
-  font-size: 20px;
-  font-size: 2rem;
-  position: absolute;
-  top: 2px;
-}
-
-/* line 63, ../scss/_single.scss */
-dl.tabs {
-  border-color: #0c223f;
-}
-/* line 65, ../scss/_single.scss */
-dl.tabs dd.active {
-  border-top: 1px solid #0c223f;
-  margin-top: 0px;
-}
-/* line 68, ../scss/_single.scss */
-dl.tabs dd.active:first-child a {
-  border-left: none;
-}
-/* line 71, ../scss/_single.scss */
-dl.tabs dd.active a {
-  color: #0c223f;
-  border-color: #0c223f;
+/* line 1, ../scss/_nav.scss */
+.top-bar ul > li.name a {
+  line-height: 45px;
 }
 
 /* line 1, ../scss/_screen.scss */
-.th.img-circle img {
-  -webkit-border-radius: 500px;
-  -moz-border-radius: 500px;
-  -ms-border-radius: 500px;
-  -o-border-radius: 500px;
-  border-radius: 500px;
-  margin: 10px;
-  border: none;
-  padding: 0;
-}
-
-/* line 8, ../scss/_screen.scss */
-ul.side-nav {
-  padding-top: 0;
-}
-/* line 10, ../scss/_screen.scss */
-ul.side-nav li {
-  margin-bottom: 4px;
-}
-
-/* line 17, ../scss/_screen.scss */
-ul.nav-share li a {
-  position: relative;
-}
-/* line 19, ../scss/_screen.scss */
-ul.nav-share li a:before {
-  font-size: 35px;
-  font-size: 3.5rem;
-}
-
-/* line 25, ../scss/_screen.scss */
-.callout h1, .callout p {
-  color: white;
-}
-/* line 28, ../scss/_screen.scss */
-.callout h1 {
-  font-weight: bold;
-  line-height: 1.3em;
-}
-/* line 32, ../scss/_screen.scss */
-.callout#main {
-  padding: 50px 20px;
-}
-
-/* line 37, ../scss/_screen.scss */
-dl.tabs.pill.link-list dd {
-  display: inline-block;
-  float: none;
-}
-/* line 40, ../scss/_screen.scss */
-dl.tabs.pill.link-list dd a {
-  padding: 2px 20px;
-  height: 35px;
-  line-height: 30px;
-  background: #0c223f;
-  color: white;
-}
-/* line 46, ../scss/_screen.scss */
-dl.tabs.pill.link-list dd a:hover {
-  background: white;
-  color: #0c223f;
-}
-/* line 51, ../scss/_screen.scss */
-dl.tabs.pill.link-list dd.active a {
-  font-weight: normal;
-  background: white;
-  color: #0c223f;
-}
-
-/* line 61, ../scss/_screen.scss */
-.panel.collapse {
-  margin: 0px;
-}
-/* line 64, ../scss/_screen.scss */
-.panel.no-border {
-  border: none;
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
-}
-/* line 68, ../scss/_screen.scss */
-.panel.white {
-  background: white;
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3) inset;
-  -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3) inset;
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3) inset;
-}
-/* line 72, ../scss/_screen.scss */
-.panel.light {
-  background: #3d81da;
-  border: none;
-}
-/* line 73, ../scss/_screen.scss */
-.panel.light p {
-  color: #0c223f;
-}
-/* line 77, ../scss/_screen.scss */
-.panel.flush {
-  padding: 0;
-}
-/* line 80, ../scss/_screen.scss */
-.panel.outline {
-  border: 2px solid #0c223f;
-  width: 100%;
-  display: block;
-  margin: 0;
-}
-
-/* line 89, ../scss/_screen.scss */
-.uniform {
-  height: 330px;
-  position: relative;
+body {
+  overflow-x: hidden;
 }

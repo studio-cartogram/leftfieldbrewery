@@ -22,7 +22,7 @@
 /* FlexSlider Necessary Styles
 *********************************/ 
 .flexslider {margin: 0; padding: 0;}
-.flexslider .slides > li {position:relative;display: none; margin: 0 6px 0 6px; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides > li {position:relative;display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {width: 100%; display: block;}
 .cartogram-slider-pauseplay span {text-transform: capitalize;}
 
@@ -40,16 +40,22 @@ html[xmlns] .slides {display: block;}
 /* FlexSlider Default Theme
 *********************************/
 .flexslider {margin: 0 0 80px;  position: relative; zoom: 1;}
-.cartogram-slider-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.cartogram-slider-viewport {overflow:visible !important; max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
 .loading .cartogram-slider-viewport {max-height: 300px;}
 .flexslider .slides {zoom: 1;}
 
 .carousel li {margin-right: 5px}
+.flexslider .slides li {
+	@include opacity(0.5);
+	&.cartogram-slider-active-slide {
+		@include opacity(1);
+	}
+}
 
 /* Control Nav */
 .cartogram-slider-control-nav {width: 100%; position: absolute; bottom: -45px; text-align: center;z-index: 1000;}
 .cartogram-slider-control-nav li {margin: 0 4px; display: inline-block; zoom: 1; *display: inline;}
-.cartogram-slider-control-paging li a {width: 15px; height: 15px;  text-align: center; display: block; background: $tanLight; border:3px solid $tanLight; cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; @include box-shadow( 0 0 1px rgba(0,0,0,0.5));}
+.cartogram-slider-control-paging li a {width: 15px; height: 15px;  text-align: center; display: block; background: $mainColor; border:3px solid $mainColor; cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; @include box-shadow( 0 0 1px rgba(0,0,0,0.5));}
 .cartogram-slider-control-paging li a:hover {  background: rgba(0,0,0,0.7); }
 .cartogram-slider-control-paging li a.cartogram-slider-active {  background: rgba(0,0,0,0.9); cursor: default; }
 
@@ -71,82 +77,32 @@ html[xmlns] .slides {display: block;}
 }
 
 /* Direction Nav */
-.cartogram-slider-direction-nav {*height: 0;}
-.cartogram-slider-direction-nav a {
-		background:$tanDark; 
-		color:$white; 
-		text-align:left; 
-		padding:0px 20px 0px 0;
-		@include font-size(12);
-		line-height:20px;
-		height:21px; 
-		margin: -20px 0 0; 
-		display: block; 
-		position: absolute;
-		width:55px;
-		top: 50%; 
-		cursor: pointer;  
-		opacity: 1; 
-		-webkit-transition: all .3s ease;
-		@extend .icon-person-left;
-		@extend [class^="icon-"];
-		&:before {
-			font-size:33px;
-			color:$tanDark;
-			position:absolute;
-			left:-30px;
-			top:0px;
-			z-index:-1;
-			display:block;
-		}
-		&:active {
-			color:$redDark;
-		}
-		&:hover {
-			color:$mainColor;
-		}
-	}
-.cartogram-slider-direction-nav .cartogram-slider-next { 
-	right:-53px; 
-	text-align:right;
-	left:auto; 
-	@extend .icon-person-right;
-	&:before {
-		left:auto;
-		top:2px;
-		right:-30px;
-	}
-	@media only screen and (max-width: $screenMedium) {
-		display:none;
-	}
-}
-.cartogram-slider-direction-nav .cartogram-slider-prev {
-	left: -48px;
-	@media only screen and (max-width: $screenMedium) {
-		display:none;
-	}
+.cartogram-slider-direction-nav {
+	*height: 0;
+	a {
+		position:absolute;
+		top:20%;
+		&.cartogram-slider-next  {
+			right:0;
 
-}
-body.embed {
-	.cartogram-slider-direction-nav .cartogram-slider-next { 
-		right:60px;
-		left:auto;
-		width:31%;
-		text-align:center;
-	}
-	.cartogram-slider-direction-nav .cartogram-slider-prev { 
-		right:auto;
-		left:60px;
-		width:31%;
-		text-align:center;
-	}
-	.cartogram-slider-direction-nav a {
-		display:block !important;
-		top:auto;
-		bottom:-40px;
+		}
+		&.cartogram-slider-prev  {
+			left:0;
+
+		}
 	}
 }
 
+.slide-row {
+	height:1000px;
+	background:darken($white, 10%);
+	margin:0 !important;
+	article {
+		border:1px solid $mainColor;
+		margin:10px;
+		padding:10px;
+	}
+}
 
 .flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {opacity: 1;}
 .cartogram-slider-direction-nav .cartogram-slider-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}

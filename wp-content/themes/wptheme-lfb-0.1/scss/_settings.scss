@@ -9,9 +9,21 @@ $mobileTotalColumns: 4 !default;
 $blockGridElements: 12 !default; // Highest number of block grid elements, Maximum of 24 supported
 
 // Colors Settings
+$navy: #0c223f;
+$navyLight: tint($navy, 30%);
+$navyLighter: tint($navy, 50%);
 
-$mainColor: #0c223f;
-$secondaryColor: #e9e9e9 !default;
+$cream: #fefcf8;
+
+$red: #ff4337;
+
+$green: #009844;
+
+$blue: #005cb8;
+
+
+$mainColor: $navy;
+$secondaryColor: $cream ;
 $alertColor: #c60f13 !default;
 $successColor: #5da423 !default;
 $txtColor: #222 !default;
@@ -24,12 +36,12 @@ $darkEdge: rgba(#000, .1) !default;
 // Font Settings
 
 $fontSmoothing: antialiased;
-$headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$headerFontWeight: normal !default;
+$headerFontFamily: "kulturista-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$headerFontWeight: 700;
 $headerFontStyle: normal !default;
-$headerFontColor: #222 !default;
-$bodyFontFamily:  "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$bodyFontWeight: normal !default;
+$headerFontColor: $navy;
+$bodyFontFamily:  "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$bodyFontWeight: 800 ;
 $bodyFontStyle: normal !default;
 $bodyFontColor: $txtColor !default;
 
@@ -103,13 +115,13 @@ $navFlyoutBaseWidth: 250px !default;
 
 // Top Bar Settings
 
-$topBarBgColor: darken($white, 1%);
-$topBarHeight: 100px;
+$topBarBgColor: $mainColor;
+$topBarHeight: 45px;
 $topBarHeightMobile: 45px !default;
-$topBarBtmMargin: 30px !default;
+$topBarBtmMargin: 0px;
 $topBarTitleWeight: bold !default;
 $topBarTitleSize: 20px;
-$topBarLinkColor: $mainColor;
+$topBarLinkColor: $white;
 $topBarLinkWeight: bold !default;
 $topBarLinkSize: 15px !default;
 $topBarDropBgColor: #fff;

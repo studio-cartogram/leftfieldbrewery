@@ -17,6 +17,7 @@
 @codekit-prepend "foundation/app.js"
 @codekit-prepend "client/makisu.js"
 @codekit-prepend "client/digits.js"
+@codekit-prepend "client/jquery.flexslider.js"
 @codekit-prepend "client/app.js"
 */
 

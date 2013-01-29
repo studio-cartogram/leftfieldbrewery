@@ -50,11 +50,16 @@
 @import "font/classes";
 @import "font/declaration";
 
+//base
+@import "base/links";
+
+
 //vendor
-@import "vendor/av-styles.scss";
-@import "vendor/makisu.scss";
-@import "vendor/digits.scss";
-@import "vendor/digits-default.scss";
+@import "vendor/av-styles";
+@import "vendor/makisu";
+@import "vendor/digits";
+@import "vendor/digits-default";
+@import "vendor/flexslider";
 
 
 

@@ -38,7 +38,7 @@
 	class foundation_nav extends Walker_Nav_Menu{
 		function start_lvl(&$output, $depth) {
 		    $indent = str_repeat("\t", $depth);
-		    $output .= "\n$indent<ul class=\"flyout\">\n";
+		    $output .= "\n$indent<ul class=\"dropdown\">\n";
 		  }
 		
 		function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
@@ -54,7 +54,7 @@
 
 			//Adds the 'parent' class to the current item if it has children
 			if( ! empty( $children_elements[$element->$id_field] ) )
-				array_push($element->classes,'has-flyout');
+				array_push($element->classes,'has-dropdown');
 
 			$cb_args = array_merge( array(&$output, $element, $depth), $args);
 
