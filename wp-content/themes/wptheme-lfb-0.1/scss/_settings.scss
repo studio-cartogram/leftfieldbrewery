@@ -103,13 +103,13 @@ $navFlyoutBaseWidth: 250px !default;
 
 // Top Bar Settings
 
-$topBarBgColor: darken($white, 1%);
-$topBarHeight: 100px;
+$topBarBgColor: $mainColor;
+$topBarHeight: 45px;
 $topBarHeightMobile: 45px !default;
-$topBarBtmMargin: 30px !default;
+$topBarBtmMargin: 0px;
 $topBarTitleWeight: bold !default;
 $topBarTitleSize: 20px;
-$topBarLinkColor: $mainColor;
+$topBarLinkColor: $white;
 $topBarLinkWeight: bold !default;
 $topBarLinkSize: 15px !default;
 $topBarDropBgColor: #fff;

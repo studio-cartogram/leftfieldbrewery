@@ -102,6 +102,14 @@ Flexslider
 	    slideshowSpeed: 5000,
 	    animationLoop: true
 	  });
-
-
+	
+	
+	$( "#global li" ).each(function( index ) {
+		var pageSlider = $('.flexslider').data('flexslider');
+  		$(this).find('a').click(function(){
+	  		pageSlider.flexAnimate(index);
+			return false;
+		});
+		console.log($(this).text());
+	});
 });

@@ -9,8 +9,8 @@
 		</div>
 		<div class="columns four">
 			<ul class="no-bullet text-small">
-				<li>office: <?php echo $options['office_phone']; ?></li>
-				<li>mobile: <?php echo $options['mobile_phone']; ?></li>
+				<li><?php echo $options['office_phone']; ?></li>
+				<li><?php echo $options['mobile_phone']; ?></li>
 			</ul>	
 		</div>
 		<div class="columns four end">

@@ -1,4 +1,8 @@
 h1 {
+	@include font-size(25)
+}
+
+h2 {
 	@include font-size(20)
 }
 
@@ -11,29 +15,4 @@ p, h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-h1.project-title {
-	@include font-size(30);
 
-}
-h3 {
-	@include font-size(16);
-	font-weight:bold;
-	padding-bottom:10px;
-}
-.link-back {
-	font-weight:bold;
-	position:relative;
-	@include font-size(12);
-	padding-left:18px;
-	&:before {
-		position:absolute;
-		left:0px;
-		top:2px;
-		@include font-size(11);
-	}
-}
-
-h4 {
-	@include font-size(18);
-	font-weight:bold;
-}
