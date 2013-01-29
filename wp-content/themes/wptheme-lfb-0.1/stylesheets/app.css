@@ -16,7 +16,7 @@ html {
 /* line 7, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_globals.scss */
 body {
   background: white;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1;
   color: #222222;
@@ -133,8 +133,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 
 /* line 10, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 p {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 800;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 17px;
@@ -155,9 +155,9 @@ aside p {
 
 /* line 15, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #222222;
+  font-family: "kulturista-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #0c223f;
   text-rendering: optimizeLegibility;
   line-height: 1.1;
   margin-bottom: 14px;
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 23, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: #6f6f6f;
+  color: #2467c0;
   line-height: 0;
 }
 
@@ -212,7 +212,7 @@ hr {
 /* line 35, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 .subheader {
   line-height: 1.3;
-  color: #6f6f6f;
+  color: #2467c0;
   font-weight: 300;
   margin-bottom: 17px;
 }
@@ -302,7 +302,7 @@ ol li ul, ol li ol {
 /* line 68, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 blockquote, blockquote p {
   line-height: 1.5;
-  color: #6f6f6f;
+  color: #2467c0;
 }
 
 /* line 69, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
@@ -315,7 +315,7 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 13px;
-  color: #555555;
+  color: #1c5095;
 }
 /* line 71, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 blockquote cite:before {
@@ -323,14 +323,14 @@ blockquote cite:before {
 }
 /* line 72, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 blockquote cite a, blockquote cite a:visited {
-  color: #555555;
+  color: #1c5095;
 }
 
 /* line 76, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 abbr, acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #222222;
+  color: #0c223f;
   border-bottom: 1px solid #ddd;
   cursor: help;
 }
@@ -533,7 +533,7 @@ span.prefix, span.postfix {
 
 /* line 34, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   border: 1px solid #cccccc;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -1530,7 +1530,7 @@ that IE7/8 do not support :nth-child.
   color: white;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
   line-height: 1;
@@ -1640,19 +1640,19 @@ that IE7/8 do not support :nth-child.
 }
 /* line 33, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.secondary, #av-overlay .submit input[type=submit], #av-overlay .button.error, #av-overlay .submit input.error[type=submit] {
-  background-color: #e9e9e9;
-  color: #1d1d1d;
-  border: 1px solid #c3c3c3;
+  background-color: #fefcf8;
+  color: #523b0c;
+  border: 1px solid #f4dfb5;
 }
 /* line 34, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.secondary:hover, #av-overlay .submit input[type=submit]:hover, #av-overlay .button.error:hover, #av-overlay .submit input.error[type=submit]:hover {
-  background-color: #d0d0d0;
+  background-color: #f8e9cb;
 }
 /* line 35, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.secondary:focus, #av-overlay .submit input[type=submit]:focus, #av-overlay .button.error:focus, #av-overlay .submit input.error[type=submit]:focus {
-  -webkit-box-shadow: 0 0 5px #e9e9e9, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-  -moz-box-shadow: 0 0 5px #e9e9e9, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-  box-shadow: 0 0 5px #e9e9e9, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 0 5px #fefcf8, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 0 5px #fefcf8, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 0 5px #fefcf8, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 /* line 39, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.radius, #av-overlay .submit input[type=submit] {
@@ -1713,11 +1713,11 @@ that IE7/8 do not support :nth-child.
 }
 /* line 56, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.disabled.secondary, #av-overlay .submit input.disabled[type=submit], #av-overlay .button.disabled.error, #av-overlay .submit input.disabled.error[type=submit], .button[disabled].secondary, #av-overlay .submit input[disabled][type=submit], #av-overlay .button[disabled].error, #av-overlay .submit input[disabled].error[type=submit] {
-  background-color: #e9e9e9;
+  background-color: #fefcf8;
 }
 /* line 57, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.disabled.secondary:hover, #av-overlay .submit input.disabled[type=submit]:hover, #av-overlay .button.disabled.error:hover, #av-overlay .submit input.disabled.error[type=submit]:hover, .button[disabled].secondary:hover, #av-overlay .submit input[disabled][type=submit]:hover, #av-overlay .button[disabled].error:hover, #av-overlay .submit input[disabled].error[type=submit]:hover {
-  background-color: #e9e9e9;
+  background-color: #fefcf8;
 }
 
 /* Don't use native buttons on iOS */
@@ -1870,7 +1870,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   display: block;
   color: #555;
   font-size: 13px;
-  font-weight: normal;
+  font-weight: 800;
   padding: 6px 14px;
   text-align: left;
 }
@@ -1926,7 +1926,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
 }
 /* line 120, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split.secondary:hover, #av-overlay .submit input.dropdown.split[type=submit]:hover, #av-overlay .button.dropdown.split.error:hover, #av-overlay .submit input.dropdown.split.error[type=submit]:hover {
-  background-color: #e9e9e9;
+  background-color: #fefcf8;
 }
 /* line 123, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split > a, #av-overlay .submit input.dropdown.split[type=submit] > a {
@@ -2004,7 +2004,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   width: 0;
   height: 0;
   border: solid 6px;
-  border-color: #1d1d1d transparent transparent transparent;
+  border-color: #523b0c transparent transparent transparent;
 }
 /* line 137, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split.large span, #av-overlay .submit input.dropdown.split.large[type=submit] span {
@@ -2063,12 +2063,12 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
 }
 /* line 148, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split.secondary > span, #av-overlay .submit input.dropdown.split[type=submit] > span, #av-overlay .button.dropdown.split.error > span, #av-overlay .submit input.dropdown.split.error[type=submit] > span {
-  background-color: #e9e9e9;
-  border-left-color: #c3c3c3;
+  background-color: #fefcf8;
+  border-left-color: #f4dfb5;
 }
 /* line 149, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split.secondary > a, #av-overlay .submit input.dropdown.split[type=submit] > a, #av-overlay .button.dropdown.split.error > a, #av-overlay .submit input.dropdown.split.error[type=submit] > a {
-  color: #1d1d1d;
+  color: #523b0c;
 }
 /* line 151, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split.alert > a:hover, #av-overlay .submit input.dropdown.split.alert[type=submit] > a:hover, .button.dropdown.split.alert > span:hover, #av-overlay .submit input.dropdown.split.alert[type=submit] > span:hover {
@@ -2080,7 +2080,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
 }
 /* line 153, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.dropdown.split.secondary > a:hover, #av-overlay .submit input.dropdown.split[type=submit] > a:hover, #av-overlay .button.dropdown.split.error > a:hover, #av-overlay .submit input.dropdown.split.error[type=submit] > a:hover, .button.dropdown.split.secondary > span:hover, #av-overlay .submit input.dropdown.split[type=submit] > span:hover, #av-overlay .button.dropdown.split.error > span:hover, #av-overlay .submit input.dropdown.split.error[type=submit] > span:hover {
-  background-color: #d0d0d0;
+  background-color: #f8e9cb;
 }
 
 /* Button Groups ---------------------- */
@@ -4222,8 +4222,8 @@ div.alert-box.alert, #av-overlay .alert.error {
 }
 /* line 148, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 div.alert-box.secondary, #av-overlay .error {
-  background-color: #e9e9e9;
-  color: #505050;
+  background-color: #fefcf8;
+  color: #ac7b18;
   text-shadow: 0 1px rgba(255, 255, 255, 0.3);
 }
 /* line 150, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
@@ -4284,8 +4284,8 @@ div.alert-box a.close:hover, #av-overlay .error a.close:hover, div.alert-box a.c
 }
 /* line 165, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 .label.secondary, #av-overlay .submit input.label[type=submit], #av-overlay .label.error {
-  background-color: #e9e9e9;
-  color: #505050;
+  background-color: #fefcf8;
+  color: #ac7b18;
 }
 
 /* Tooltips ---------------------- */
@@ -4459,24 +4459,24 @@ div.alert-box a.close:hover, #av-overlay .error a.close:hover, div.alert-box a.c
 /* line 231, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 ul.accordion {
   margin: 0 0 22px 0;
-  border-bottom: 1px solid #e9e9e9;
+  border-bottom: 1px solid #fefcf8;
 }
 /* line 233, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 ul.accordion > li {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-top: 1px solid #e9e9e9;
+  border-top: 1px solid #fefcf8;
 }
 /* line 234, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 ul.accordion > li .title {
   cursor: pointer;
-  background: #f6f6f6;
+  background: white;
   padding: 15px;
   margin: 0;
   position: relative;
-  border-left: 1px solid #e9e9e9;
-  border-right: 1px solid #e9e9e9;
+  border-left: 1px solid #fefcf8;
+  border-right: 1px solid #fefcf8;
   -webkit-transition: 0.15s background linear;
   -moz-transition: 0.15s background linear;
   -o-transition: 0.15s background linear;
@@ -4493,7 +4493,7 @@ ul.accordion > li .title:after {
   width: 0;
   height: 0;
   border: solid 6px;
-  border-color: transparent #9d9d9d transparent transparent;
+  border-color: transparent #ebc372 transparent transparent;
   position: absolute;
   right: 15px;
   top: 21px;
@@ -4519,14 +4519,14 @@ ul.accordion > li.active .title:after {
   width: 0;
   height: 0;
   border: solid 6px;
-  border-color: #9d9d9d transparent transparent transparent;
+  border-color: #ebc372 transparent transparent transparent;
 }
 /* line 248, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 ul.accordion > li.active .content {
   background: white;
   display: block;
-  border-left: 1px solid #e9e9e9;
-  border-right: 1px solid #e9e9e9;
+  border-left: 1px solid #fefcf8;
+  border-right: 1px solid #fefcf8;
 }
 
 /* Side Nav ---------------------- */
@@ -4580,7 +4580,7 @@ dl.sub-nav dt, dl.sub-nav dd {
 /* line 272, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 dl.sub-nav dt {
   color: #999;
-  font-weight: normal;
+  font-weight: 800;
 }
 /* line 273, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 dl.sub-nav dd a {
@@ -4651,9 +4651,9 @@ ul.pagination li.current a:hover {
 /* line 297, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 ul.breadcrumbs {
   display: block;
-  background: #f6f6f6;
+  background: white;
   padding: 6px 10px 7px;
-  border: 1px solid #e9e9e9;
+  border: 1px solid #fefcf8;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -4931,7 +4931,7 @@ div.progress .meter {
 }
 /* line 399, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 div.progress.secondary .meter, #av-overlay div.progress.error .meter {
-  background: #e9e9e9;
+  background: #fefcf8;
 }
 /* line 400, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 div.progress.success .meter {
@@ -5087,6 +5087,11 @@ div.progress.round .meter {
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
+}
+
+/* line 2, ../scss/base/_links.scss */
+a:hover {
+  color: #546478;
 }
 
 /* line 1, ../scss/vendor/_av-styles.scss */
@@ -5774,22 +5779,32 @@ html[xmlns] .slides {
 
 /* line 1, ../scss/_typography.scss */
 h1 {
-  font-size: 25px;
-  font-size: 2.5rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  letter-spacing: 0.03em;
+}
+/* line 4, ../scss/_typography.scss */
+h1.title {
+  margin-top: 50px;
 }
 
-/* line 5, ../scss/_typography.scss */
+/* line 9, ../scss/_typography.scss */
 h2 {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
 }
 
-/* line 10, ../scss/_typography.scss */
-p.collapse, h1.collapse, h2.collapse, h3.collapse, h4.collapse, h5.collapse, h6.collapse {
+/* line 14, ../scss/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+/* line 16, ../scss/_typography.scss */
+h1.collapse, h2.collapse, h3.collapse, h4.collapse, h5.collapse, h6.collapse {
   margin: 0;
 }
-/* line 13, ../scss/_typography.scss */
-p.light, h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
+/* line 19, ../scss/_typography.scss */
+h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
   color: white;
 }
 
