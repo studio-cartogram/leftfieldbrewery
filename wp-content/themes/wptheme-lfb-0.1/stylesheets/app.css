@@ -5765,6 +5765,7 @@ html[xmlns] .slides {
 /* line 9, ../scss/components/modules/_reveal.scss */
 .reveal-modal-bg, #av-overlay-wrap {
   background: transparent;
+  background: #fefcf8;
 }
 
 /* line 15, ../scss/components/modules/_reveal.scss */
@@ -5976,4 +5977,5 @@ h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
 /* line 1, ../scss/_screen.scss */
 body {
   overflow-x: hidden;
+  background: #fefcf8;
 }
