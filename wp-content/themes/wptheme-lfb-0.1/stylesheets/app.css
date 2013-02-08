@@ -2590,7 +2590,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 /* Element that controls breakpoint, no need to change this ever */
 /* line 16, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar-js-breakpoint {
-  width: 940px !important;
+  width: 870px !important;
   visibility: hidden;
 }
 
@@ -2946,7 +2946,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 870px) {
   /* line 142, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar {
     margin-bottom: 0;
@@ -5094,6 +5094,11 @@ a:hover {
   color: #546478;
 }
 
+/* line 2, ../scss/parts/_footer.scss */
+#footer ul li a, #footer a {
+  color: white;
+}
+
 /* line 1, ../scss/vendor/_av-styles.scss */
 #av-overlay-wrap {
   background: rgba(12, 34, 63, 0.95);
@@ -5839,14 +5844,21 @@ h2 {
 }
 
 /* line 14, ../scss/_typography.scss */
+h3 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
+}
+
+/* line 19, ../scss/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
-/* line 16, ../scss/_typography.scss */
+/* line 21, ../scss/_typography.scss */
 h1.collapse, h2.collapse, h3.collapse, h4.collapse, h5.collapse, h6.collapse {
   margin: 0;
 }
-/* line 19, ../scss/_typography.scss */
+/* line 24, ../scss/_typography.scss */
 h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
   color: white;
 }
