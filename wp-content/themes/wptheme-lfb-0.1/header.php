@@ -1,7 +1,12 @@
+<section class="container bordered-main banner">
+	<div class="row ">
+		<div class="columns bg-main twelve"></div>
+	</div>
+</section>
 <section class="container">
 	<header class="row text-center">
 		<div class="columns four mobile-two">
-			<h2>Breweing Since 2013</h2>
+			<h2>Brewing Since 2013</h2>
 		</div>
 		<hgroup class="columns four hide-for-small">
 			<h1><a href=<?php bloginfo( 'url' ); ?>><img class="logo-svg" src="<?php bloginfo('template_directory') ?>/images/logo.svg"></a></h1>

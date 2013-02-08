@@ -83,43 +83,13 @@
 	@include font-size(12);
 }
 
-
-
-
-/* Footer ---------------------- */
-
-
-.bg-purple {
-	background:#8A61AA;
-	color: $white;
-
-	a {
-	text-decoration:underline;
-	color:$white;
-	}
-
-	a:hover {
-	color: rgba(250, 250, 250, 0.7);
-	}
-
-}
-.bg-grey {
-	background:#F2F2F2;
+.bordered-main {
+	border:1px solid $mainColor;
 }
 
-
-
-/* Single ---------------------- */
-
-.grey {
-	color:#F2F2F2;
+.bg-main {
+	background:$mainColor;
 }
-
-.purple {
-	color:#8A61AA;
-}
-
-
 
 
 

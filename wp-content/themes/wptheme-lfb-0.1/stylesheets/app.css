@@ -5696,21 +5696,25 @@ html[xmlns] .slides {
 .top-bar ul {
   /* Main Navigation links style */
 }
-/* line 6, ../scss/components/modules/_topbar.scss */
-.top-bar ul > li {
+/* line 8, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global {
+  width: 66.66667%;
+}
+/* line 10, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li {
   width: 16.6%;
 }
-/* line 8, ../scss/components/modules/_topbar.scss */
-.top-bar ul > li.name a {
+/* line 12, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li.name a {
   padding: 0 15px;
   line-height: 95px;
 }
-/* line 9, ../scss/components/modules/_topbar.scss */
-.top-bar ul > li:hover {
+/* line 13, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li:hover {
   background: #0c223f;
 }
-/* line 10, ../scss/components/modules/_topbar.scss */
-.top-bar ul > li a:not(.button) {
+/* line 14, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li a:not(.button) {
   text-transform: uppercase;
   background: white;
   color: #0c223f;
@@ -5722,25 +5726,34 @@ html[xmlns] .slides {
   font-size: 12px;
   font-size: 1.2rem;
 }
-/* line 22, ../scss/components/modules/_topbar.scss */
-.top-bar ul > li.has-dropdown a {
+/* line 26, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li.has-dropdown a {
   padding-right: 15px;
 }
-/* line 24, ../scss/components/modules/_topbar.scss */
-.top-bar ul > li.has-dropdown a:after {
+/* line 28, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li.has-dropdown a:after {
   display: block;
 }
-/* line 29, ../scss/components/modules/_topbar.scss */
-.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active, .top-bar ul > li:not(.name):focus, .top-bar ul > li:not(.divider):hover, .top-bar ul > li:not(.divider).active, .top-bar ul > li:not(.divider):focus {
+/* line 33, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li:not(.name):hover, .top-bar ul#global > li:not(.name).active, .top-bar ul#global > li:not(.name):focus, .top-bar ul#global > li:not(.divider):hover, .top-bar ul#global > li:not(.divider).active, .top-bar ul#global > li:not(.divider):focus {
   background: #0c223f;
 }
-/* line 30, ../scss/components/modules/_topbar.scss */
-.top-bar ul > li:not(.name):hover a, .top-bar ul > li:not(.name).active a, .top-bar ul > li:not(.name):focus a, .top-bar ul > li:not(.divider):hover a, .top-bar ul > li:not(.divider).active a, .top-bar ul > li:not(.divider):focus a {
+/* line 34, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li:not(.name):hover a, .top-bar ul#global > li:not(.name).active a, .top-bar ul#global > li:not(.name):focus a, .top-bar ul#global > li:not(.divider):hover a, .top-bar ul#global > li:not(.divider).active a, .top-bar ul#global > li:not(.divider):focus a {
   color: #d9d9d9;
 }
-/* line 35, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global {
-  width: 66.66667%;
+/* line 39, ../scss/components/modules/_topbar.scss */
+.top-bar ul#social {
+  width: 33.33333%;
+}
+/* line 41, ../scss/components/modules/_topbar.scss */
+.top-bar ul#social > li {
+  width: 20%;
+  text-align: center;
+}
+/* line 44, ../scss/components/modules/_topbar.scss */
+.top-bar ul#social > li a {
+  border-right: 1px solid;
 }
 
 /* Normal Buttons ---------------------- */
@@ -5966,36 +5979,14 @@ h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
   font-size: 1.2rem;
 }
 
-/* Footer ---------------------- */
-/* line 92, ../scss/_helpers.scss */
-.bg-purple {
-  background: #8A61AA;
-  color: white;
-}
-/* line 96, ../scss/_helpers.scss */
-.bg-purple a {
-  text-decoration: underline;
-  color: white;
-}
-/* line 101, ../scss/_helpers.scss */
-.bg-purple a:hover {
-  color: rgba(250, 250, 250, 0.7);
+/* line 86, ../scss/_helpers.scss */
+.bordered-main {
+  border: 1px solid #0c223f;
 }
 
-/* line 106, ../scss/_helpers.scss */
-.bg-grey {
-  background: #F2F2F2;
-}
-
-/* Single ---------------------- */
-/* line 114, ../scss/_helpers.scss */
-.grey {
-  color: #F2F2F2;
-}
-
-/* line 118, ../scss/_helpers.scss */
-.purple {
-  color: #8A61AA;
+/* line 90, ../scss/_helpers.scss */
+.bg-main {
+  background: #0c223f;
 }
 
 /* line 1, ../scss/_nav.scss */
@@ -6007,4 +5998,9 @@ h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
 body {
   overflow-x: hidden;
   background: #fefcf8;
+}
+
+/* line 6, ../scss/_screen.scss */
+.banner > .row > .columns, #av-overlay #av_verify_form .banner > p > .columns {
+  height: 2px;
 }
