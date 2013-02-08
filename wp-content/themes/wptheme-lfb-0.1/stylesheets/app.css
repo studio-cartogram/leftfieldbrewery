@@ -2615,8 +2615,8 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 /* line 25, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar {
   background: #0c223f;
-  height: 45px;
-  line-height: 45px;
+  height: 40px;
+  line-height: 40px;
   margin: 0 0 0px;
   padding: 0;
   width: 100%;
@@ -2631,13 +2631,13 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 33, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar > ul .name h1 {
-  line-height: 45px;
+  line-height: 40px;
   margin: 0;
 }
 /* line 34, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar > ul .name h1 a {
   font-weight: bold;
-  padding: 0 22.5px;
+  padding: 0 20px;
   font-size: 20px !important;
 }
 /* line 36, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
@@ -2648,8 +2648,8 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 /* line 41, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul {
   display: inline;
-  height: 45px;
-  line-height: 45px;
+  height: 40px;
+  line-height: 40px;
   list-style: none;
   /* Main Navigation links style */
   /* Left Side <ul> */
@@ -2670,9 +2670,9 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   display: block;
   font-size: 15px;
   font-weight: bold;
-  height: 45px;
-  line-height: 45px;
-  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 13.33333px;
 }
 /* line 46, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li:hover, .top-bar ul > li.active {
@@ -2694,7 +2694,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 55, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-button a.button {
-  margin: 0 11.25px;
+  margin: 0 10px;
 }
 /* line 56, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-button:hover {
@@ -2706,7 +2706,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 62, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.search {
-  padding: 0 15px;
+  padding: 0 13.33333px;
 }
 /* line 63, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.search form {
@@ -2726,7 +2726,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   float: left;
   font-size: 13px;
   margin-top: -1px;
-  height: 22.5px;
+  height: 20px;
 }
 /* line 65, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.search form input[type=text] + .button, .top-bar ul > li.search form #av-overlay .submit input[type=text] + input[type=submit], #av-overlay .submit .top-bar ul > li.search form input[type=text] + input[type=submit] {
@@ -2767,7 +2767,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 78, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-dropdown a {
-  padding-right: 33.75px;
+  padding-right: 30px;
 }
 /* line 79, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-dropdown a:after {
@@ -2777,7 +2777,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   height: 0;
   border: solid 5px;
   border-color: white transparent transparent transparent;
-  margin-right: 15px;
+  margin-right: 13.33333px;
   margin-top: -2.5px;
   position: absolute;
   right: 0;
@@ -2788,7 +2788,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   background: #0c223f;
   left: 0;
   margin: 0;
-  padding: 9px 0 0 0;
+  padding: 8px 0 0 0;
   position: absolute;
   visibility: hidden;
   z-index: 99;
@@ -2805,7 +2805,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   font-weight: normal;
   height: 100%;
   line-height: 1;
-  padding: 5px 17px 5px 15px;
+  padding: 5px 15.33333px 5px 13.33333px;
   white-space: nowrap;
 }
 /* line 84, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
@@ -2822,7 +2822,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   font-size: 10px;
   font-weight: bold;
   margin: 0;
-  padding-left: 15px;
+  padding-left: 13.33333px;
   text-transform: uppercase;
 }
 /* line 88, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
@@ -2911,9 +2911,9 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   display: block;
   font-weight: bold;
   font-size: 15px;
-  height: 45px;
-  line-height: 45px;
-  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 13.33333px;
 }
 /* line 129, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .lt-ie9 .top-bar ul li a.button {
@@ -2938,7 +2938,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 
 /* line 134, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .lt-ie9 .top-bar ul li.has-dropdown {
-  padding-right: 33.75px;
+  padding-right: 30px;
 }
 /* line 136, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .lt-ie9 .top-bar ul li.has-dropdown > ul li {
@@ -3005,13 +3005,13 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 158, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.name h1 a {
-    padding-left: 22.5px;
+    padding-left: 20px;
   }
   /* line 163, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.toggle-topbar {
     cursor: pointer;
     display: block;
-    height: 45px;
+    height: 40px;
     position: absolute;
     right: 0;
     top: 0;
@@ -3028,7 +3028,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
     padding: 0;
     position: absolute;
     top: 50%;
-    right: 22.5px;
+    right: 20px;
     margin-top: -4px;
   }
   /* line 166, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
@@ -3050,7 +3050,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 174, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.search {
-    padding: 0 22.5px;
+    padding: 0 20px;
   }
   /* line 175, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.search form {
@@ -3067,7 +3067,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 183, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown a {
-    padding-right: 33.75px;
+    padding-right: 30px;
   }
   /* line 184, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown a:after {
@@ -3077,7 +3077,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
     height: 0;
     border: solid 5px;
     border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
-    margin-right: 15px;
+    margin-right: 13.33333px;
     margin-top: -4.5px;
     position: absolute;
     top: 50%;
@@ -3113,12 +3113,12 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 193, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown.moved .dropdown li:not(.title) a {
-    padding: 8px 22.5px;
+    padding: 8px 20px;
     font-size: 14px;
   }
   /* line 195, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown.moved .dropdown li a, .top-bar ul li.has-dropdown.moved .dropdown li label {
-    padding: 0 22.5px;
+    padding: 0 20px;
   }
   /* line 196, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown.moved .dropdown li a:hover {
@@ -3139,7 +3139,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   .top-bar ul li.has-dropdown.moved .back.title a:before {
     position: absolute;
     top: 50%;
-    left: 17.5px;
+    left: 15px;
     margin-top: -5px;
     width: 0;
     height: 0;
@@ -3175,12 +3175,12 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 213, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown .dropdown li.has-dropdown > a {
-    padding-right: 33.75px;
+    padding-right: 30px;
   }
   /* line 214, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown .dropdown li.has-dropdown > a:after {
     content: "";
-    margin-right: 15px;
+    margin-right: 13.33333px;
     content: "";
     display: block;
     width: 0;
@@ -3223,7 +3223,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
   /* line 231, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar section > ul li a:not(.button) {
-    padding-left: 22.5px !important;
+    padding-left: 20px !important;
   }
   /* line 234, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar.expanded {
@@ -5696,22 +5696,51 @@ html[xmlns] .slides {
 .top-bar ul {
   /* Main Navigation links style */
 }
-/* line 7, ../scss/components/modules/_topbar.scss */
+/* line 6, ../scss/components/modules/_topbar.scss */
+.top-bar ul > li {
+  width: 16.6%;
+}
+/* line 8, ../scss/components/modules/_topbar.scss */
 .top-bar ul > li.name a {
   padding: 0 15px;
   line-height: 95px;
 }
-/* line 8, ../scss/components/modules/_topbar.scss */
+/* line 9, ../scss/components/modules/_topbar.scss */
 .top-bar ul > li:hover {
   background: #0c223f;
 }
-/* line 11, ../scss/components/modules/_topbar.scss */
+/* line 10, ../scss/components/modules/_topbar.scss */
+.top-bar ul > li a:not(.button) {
+  text-transform: uppercase;
+  background: white;
+  color: #0c223f;
+  line-height: 30px;
+  height: 30px;
+  margin-top: 5px;
+  text-align: center;
+  margin-right: 5px;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+/* line 22, ../scss/components/modules/_topbar.scss */
+.top-bar ul > li.has-dropdown a {
+  padding-right: 15px;
+}
+/* line 24, ../scss/components/modules/_topbar.scss */
+.top-bar ul > li.has-dropdown a:after {
+  display: block;
+}
+/* line 29, ../scss/components/modules/_topbar.scss */
 .top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active, .top-bar ul > li:not(.name):focus, .top-bar ul > li:not(.divider):hover, .top-bar ul > li:not(.divider).active, .top-bar ul > li:not(.divider):focus {
   background: #0c223f;
 }
-/* line 12, ../scss/components/modules/_topbar.scss */
+/* line 30, ../scss/components/modules/_topbar.scss */
 .top-bar ul > li:not(.name):hover a, .top-bar ul > li:not(.name).active a, .top-bar ul > li:not(.name):focus a, .top-bar ul > li:not(.divider):hover a, .top-bar ul > li:not(.divider).active a, .top-bar ul > li:not(.divider):focus a {
   color: #d9d9d9;
+}
+/* line 35, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global {
+  width: 66.66667%;
 }
 
 /* Normal Buttons ---------------------- */
@@ -5971,7 +6000,7 @@ h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
 
 /* line 1, ../scss/_nav.scss */
 .top-bar ul > li.name a {
-  line-height: 45px;
+  line-height: 40px;
 }
 
 /* line 1, ../scss/_screen.scss */
