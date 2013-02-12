@@ -188,10 +188,7 @@ Flexslider
 			post_id: post_id,
 			},
 		success: function(html) {
-			console.log("This was the request: " + request);
 			$currentSlide.html(html);
-			console.log(html);
-			console.log(AjaxResources.post_id);
 		},
 		error: function(response, html, something) {
 			console.log("fail: " + response + html + something );
@@ -242,7 +239,7 @@ Flexslider
 
 		/** Push state Stuff *******************************/
 		
-		// History.pushState(null,title,url);
+		window.history.pushState(null,title,url);
 		
 		e.preventDefault();
 	});
