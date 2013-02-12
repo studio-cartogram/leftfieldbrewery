@@ -188,12 +188,20 @@ Flexslider
 			post_id: post_id,
 			},
 		success: function(html) {
-			$currentSlide.html(html);
+			$(".cartogram-slider-active-slide").html(html);
 		},
 		error: function(response, html, something) {
 			console.log("fail: " + response + html + something );
 		}
 	});
+
+	// $( "#global li" ).each(function( index ) {
+	//     var pageSlider = $('.flexslider').data('flexslider');
+	//       $(this).find('a').click(function(){
+	//         pageSlider.flexAnimate(index);
+	//       return false;
+	//     });
+ //  	});
 
 	/**
 	* On click of a link, make an ajax request and load it into the li
@@ -204,6 +212,8 @@ Flexslider
 	*
 	*/
 	$("#global li").click(function(e) {
+		var index = $(this).index();
+		$('.flexslider').data('flexslider').flexAnimate(index);
 
 		/* The Url of the link that was clicked. */
 		var url = $(this).find("a").attr("href");
@@ -225,7 +235,7 @@ Flexslider
 				url: url
 				},
 			success: function(html) {
-				$currentSlide.html(html);
+				$(".cartogram-slider-active-slide").html(html);
 			},
 			error: function(response, html, something) {
 				console.log("fail: " + response + html + something );
@@ -248,10 +258,13 @@ Flexslider
 	*
 	* State Change Handle. 
 	* Get the current state
-	* This is called when a statechange occurs.
+	* This is called when a statechange occurs like when the user press back or forth.
+	This is the time to request new data based on the state.
 	*/
 
 	$window.bind('statechange',function(){
+
+
 		// console.log("ere");
 		// var
 		// 	State = History.getState(),
@@ -316,17 +329,6 @@ Flexslider
 			})
 		.addClass('state-' + state);
 	}
-
-
-	//This triggers flexslider to update the view. We may not be using it if we're doing this
-	//with push state.
-	// $( "#global li" ).each(function( index ) {
-	// 	var pageSlider = $('.flexslider').data('flexslider');
- //  		$(this).find('a').click(function(){
-	//   		pageSlider.flexAnimate(index);
-	// 		return false;
-	// 	});
-	// });
 
 
 
