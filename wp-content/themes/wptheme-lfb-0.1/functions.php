@@ -78,6 +78,9 @@
 
 		wp_register_script( 'app', get_template_directory_uri().'/javascripts/index-ck.js', array('jquery') );
 		wp_enqueue_script( 'app', array('jquery')  );
+		/* Give index-ck.js access to the variable AjaxResources containg the given info in the array */
+		wp_localize_script('app', 'AjaxResources', array('ajax_url'=> get_site_url() . '/wp-admin/admin-ajax.php',
+		'post_id' => get_the_ID(), 'request_url' => get_permalink(get_the_ID())));
 
 		wp_register_style( 'screen', get_template_directory_uri().'/stylesheets/app.css', '', '', 'screen' );
         wp_enqueue_style( 'screen' );
@@ -169,4 +172,32 @@
 	 **/
 	add_action('comment_post', 'ajaxify_comments',20, 2);
 
+	/****************************************
+	 * Adding actions to response to ajax requests.
+	 *
+	 * Structure the hook as wp_ajax_{url of push state}
+	 * with function gtp_{urlpushstate with _ instead of /}
+	 * example wp_ajax_beer_dark for beer/dark callw gtp_beer_dark
+	 * (gtp: get template part)
+	 ***************************************/
+	function gtp_page() {
+		//If request is made with a post id (through regular loading ex www.lfb.com/about-us)
+		if (isset($_POST["post_id"])){
+			$post_id = $_POST["post_id"];
+		
+		//If request is made with the url. (Perhaps this can be used instead for all cases.)
+		} else if (isset($_POST["url"])){
+			$post_id = url_to_postid($_POST['url']);
+
+		}
+		
+		query_posts('page_id=' . $post_id);
+		
+		while (have_posts()): the_post();
+			get_template_part('parts/content/content');
+		endwhile;
+		
+		die();
+	}
+	add_action('wp_ajax_nopriv_page', 'gtp_page');
 ?>
