@@ -212,8 +212,7 @@ Flexslider
 	*
 	*/
 	$("#global li").click(function(e) {
-		var index = $(this).index();
-		$('.flexslider').data('flexslider').flexAnimate(index);
+
 
 		/* The Url of the link that was clicked. */
 		var url = $(this).find("a").attr("href");
@@ -248,7 +247,8 @@ Flexslider
 
 
 		/** Push state Stuff *******************************/
-		
+		var index = $(this).index();
+		$('.flexslider').data('flexslider').flexAnimate(index);
 		window.history.pushState(null,title,url);
 		
 		e.preventDefault();
