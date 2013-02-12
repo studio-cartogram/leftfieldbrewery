@@ -10,7 +10,7 @@ $posts->query( array(
 		<li>
 			<div class="row slide-row">
 				<div class="columns twelve">
-					<?php get_template_part('parts/content/content', get_post_format() ); ?>	
+					<?php //get_template_part('parts/content/content', get_post_format() ); ?>	
 				</div>
 			</div>
 		</li>		

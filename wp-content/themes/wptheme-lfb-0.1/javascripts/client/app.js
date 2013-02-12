@@ -105,16 +105,6 @@ Flexslider
 	
 	
 
-	//This triggers flexslider to update the view. We may not be using it if we're doing this
-	//with push state.
-	// $( "#global li" ).each(function( index ) {
-	// 	var pageSlider = $('.flexslider').data('flexslider');
- //  		$(this).find('a').click(function(){
-	//   		pageSlider.flexAnimate(index);
-	// 		return false;
-	// 	});
-	// });
-
 /* ========================================================================================================================
   
 	Push State Implementation
@@ -123,29 +113,32 @@ Flexslider
 	
 	var
 		/* Stores the history of the window. */
-		History = window.History,
+		// History = window.History,
 		$window = $(window);
-		$body = $(document.body),
+		// $body = $(document.body),
 
 		/* Causing error. */
 		// rootUrl = History.getRootUrl(),
-		contentSelector = '#content',
-		$content = $(contentSelector).filter(':first'),
-		contentNode = $content.get(0);
+		// contentSelector = '#content',
+		// $content = $(contentSelector).filter(':first'),
+		// contentNode = $content.get(0);
 
 		/* Selecting the items on the global menu. */
-		$menu = $('#global');
+		// $menu = $('#global');
 
 		/* Selecting the individual links on the global menu. */
-		$menuChildren = $menu.find('li a');
+		// $menuChildren = $menu.find('li a');
 
 		/* The current li within the flexslider that is being viewed. */
 		$currentSlide = $(".cartogram-slider-active-slide"),
 
 		/* The array of page names. Used for taking urls and directing them to 
 		the proper ajax calls. */
-		pagesArray = new Array("uncategorized/hello-world", "home", "about-us", "our-beer", "highlights", "fan-shop", "contact-us");
+		pagesArray = new Array("uncategorized_hello-world", "home", "about-us", "our-beer", "highlights", "fan-shop", "contact-us");
 
+	var request = getEnding(AjaxResources.request_url);
+	var url = console.log("request made to : " + AjaxResources.ajax_url);
+	var post_id = AjaxResources.post_id;
 	/**
 	* Parse the Html and give it back to us in a way we can use. 
 	*/
@@ -172,26 +165,33 @@ Flexslider
 		return url.substring(start + 5).replace("/", "_");
 	}
 
-	var request = getEnding(AjaxResources.request_url);
+
+
 	//If the url loaded is a page, set the request as a page.
 	if ($.inArray(request, pagesArray)!== -1) {
 		request = "page";
-	}	
+	}
+
+	if (post_id === "1") {
+		post_id = "4";
+	}
 
 	//Load the content to the page in respect to the url
 	$.ajax({
 		type : "post",
 		dataType : "html",
 		/* Where the request is being sent to. */
-		url: AjaxResources.ajax_url,
+		url: "http://localhost/www.lfb.com/wp-admin/admin-ajax.php",
 		// post_id: AjaxResources.post_id,
 		data: {
 			action: request,
-			post_id: AjaxResources.post_id,
+			post_id: post_id,
 			},
 		success: function(html) {
-			// $currentSlide.html(html);
+			console.log("This was the request: " + request);
+			$currentSlide.html(html);
 			console.log(html);
+			console.log(AjaxResources.post_id);
 		},
 		error: function(response, html, something) {
 			console.log("fail: " + response + html + something );
@@ -216,25 +216,25 @@ Flexslider
 
 		//Flexslider update.
 
-
 		//Load the page.
-		$.ajax({
-			type : "post",
-			dataType : "html",
-			/* Where the request is being sent to. */
-			url: AjaxResources.ajax_url,
-			// post_id: AjaxResources.post_id,
-			data: {
-				action: "page",
-				url: url
-				},
-			success: function(html) {
-				$currentSlide.html(html);
-			},
-			error: function(response, html, something) {
-				console.log("fail: " + response + html + something );
-			}
-		});
+		// $.ajax({
+		// 	type : "post",
+		// 	dataType : "html",
+		// 	/* Where the request is being sent to. */
+		// 	url: AjaxResources.ajax_url,
+		// 	// post_id: AjaxResources.post_id,
+		// 	data: {
+		// 		action: "page",
+		// 		url: url
+		// 		},
+		// 	success: function(html) {
+		// 		$currentSlide.html(html);
+		// 	},
+		// 	error: function(response, html, something) {
+		// 		console.log("fail: " + response + html + something );
+		// 	}
+		// });
+
 
 		/* Need to pass push state a title, not sure what to give it.*/
 		var title = "not sure";
@@ -251,45 +251,47 @@ Flexslider
 	*
 	* State Change Handle. 
 	* Get the current state
-	*
+	* This is called when a statechange occurs.
 	*/
 
 	$window.bind('statechange',function(){
-		var
-			State = History.getState(),
-			url = State.url,
-			relativeUrl = url.replace(rootUrl,'');
+		// console.log("ere");
+		// var
+		// 	State = History.getState(),
+		// 	url = State.url,
+		// 	relativeUrl = url.replace(rootUrl,'');
+		// 	console.log(url);
 		
 		
-		changeView('sidebar');
+		// changeView('sidebar');
 		// start ajax
-		$.ajax({
-			url: url,
-			success: function(data, textStatus, jqXHR){
-				// Prepare
-				var
-					$data = $(documentHtml(data)),
-					$dataBody = $data.find('.document-body:first');
-					$dataContent = $dataBody.find(contentSelector).filter(':first'),
-					// $menuChildren, contentHtml, $scripts;
+		// $.ajax({
+		// 	url: url,
+		// 	success: function(data, textStatus, jqXHR){
+		// 		// Prepare
+		// 		var
+		// 			$data = $(documentHtml(data)),
+		// 			$dataBody = $data.find('.document-body:first');
+		// 			$dataContent = $dataBody.find(contentSelector).filter(':first'),
+		// 			// $menuChildren, contentHtml, $scripts;
 			
-				contentHtml = $dataContent.html()||$data.html();
+		// 		contentHtml = $dataContent.html()||$data.html();
 				
-				// Add some fallback content
-				if (!contentHtml) {
-					contentHtml = "<p>There is nothing here yet.</p>";
-				}
+		// 		// Add some fallback content
+		// 		if (!contentHtml) {
+		// 			contentHtml = "<p>There is nothing here yet.</p>";
+		// 		}
 				
-				$content.html(contentHtml); 
+		// 		$content.html(contentHtml); 
 				
-				// Complete
-				changeView('pres');
-			},
-			error: function(jqXHR, textStatus, errorThrown){
-				document.location.href = url;
-				return false;
-			}
-		}); // end ajax
+		// 		// Complete
+		// 		changeView('pres');
+		// 	},
+		// 	error: function(jqXHR, textStatus, errorThrown){
+		// 		document.location.href = url;
+		// 		return false;
+		// 	}
+		// }); // end ajax
 
 	}); // end statechange
 
@@ -301,11 +303,11 @@ Flexslider
 	*
 	*/
 	
-	$('[data-state]').click(function(e) {
-		state = $(this).attr('data-state');
-		changeView(state);
-		console.log("data state clicked");
-	});
+	// $('[data-state]').click(function(e) {
+	// 	state = $(this).attr('data-state');
+	// 	changeView(state);
+	// 	console.log("data state clicked");
+	// });
 
 	function changeView(state) {
 		$body
@@ -317,5 +319,18 @@ Flexslider
 			})
 		.addClass('state-' + state);
 	}
+
+
+	//This triggers flexslider to update the view. We may not be using it if we're doing this
+	//with push state.
+	// $( "#global li" ).each(function( index ) {
+	// 	var pageSlider = $('.flexslider').data('flexslider');
+ //  		$(this).find('a').click(function(){
+	//   		pageSlider.flexAnimate(index);
+	// 		return false;
+	// 	});
+	// });
+
+
 
 }); // End of document.ready

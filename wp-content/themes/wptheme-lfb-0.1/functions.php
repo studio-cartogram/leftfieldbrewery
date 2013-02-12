@@ -181,22 +181,10 @@
 	 * (gtp: get template part)
 	 ***************************************/
 	function gtp_page() {
-		//If request is made with a post id (through regular loading ex www.lfb.com/about-us)
-		if (isset($_POST["post_id"])){
-			$post_id = $_POST["post_id"];
-		
-		//If request is made with the url. (Perhaps this can be used instead for all cases.)
-		} else if (isset($_POST["url"])){
-			$post_id = url_to_postid($_POST['url']);
-
-		}
-		
-		query_posts('page_id=' . $post_id);
-		
+		query_posts('page_id=' . $_POST["post_id"]);
 		while (have_posts()): the_post();
 			get_template_part('parts/content/content');
-		endwhile;
-		
+		endwhile;		
 		die();
 	}
 	add_action('wp_ajax_nopriv_page', 'gtp_page');
