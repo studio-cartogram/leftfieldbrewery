@@ -181,7 +181,12 @@
 	 * (gtp: get template part)
 	 ***************************************/
 	function gtp_page() {
-		query_posts('page_id=' . $_POST["post_id"]);
+		if (isset($_POST["post_id"])) {
+			$id = $_POST["post_id"];
+		} else if (isset($_POST["url"])){
+			$id = url_to_postid($_POST["url"]);
+		}
+		query_posts('page_id=' . $id);
 		while (have_posts()): the_post();
 			get_template_part('parts/content/content');
 		endwhile;		

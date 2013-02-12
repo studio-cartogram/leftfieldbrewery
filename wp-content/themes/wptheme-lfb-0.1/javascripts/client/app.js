@@ -217,23 +217,23 @@ Flexslider
 		//Flexslider update.
 
 		//Load the page.
-		// $.ajax({
-		// 	type : "post",
-		// 	dataType : "html",
-		// 	/* Where the request is being sent to. */
-		// 	url: AjaxResources.ajax_url,
-		// 	// post_id: AjaxResources.post_id,
-		// 	data: {
-		// 		action: "page",
-		// 		url: url
-		// 		},
-		// 	success: function(html) {
-		// 		$currentSlide.html(html);
-		// 	},
-		// 	error: function(response, html, something) {
-		// 		console.log("fail: " + response + html + something );
-		// 	}
-		// });
+		$.ajax({
+			type : "post",
+			dataType : "html",
+			/* Where the request is being sent to. */
+			url: AjaxResources.ajax_url,
+			// post_id: AjaxResources.post_id,
+			data: {
+				action: "page",
+				url: url
+				},
+			success: function(html) {
+				$currentSlide.html(html);
+			},
+			error: function(response, html, something) {
+				console.log("fail: " + response + html + something );
+			}
+		});
 
 
 		/* Need to pass push state a title, not sure what to give it.*/
