@@ -137,7 +137,7 @@ Flexslider
 		pagesArray = new Array("uncategorized_hello-world", "home", "about-us", "our-beer", "highlights", "fan-shop", "contact-us");
 
 	var request = getEnding(AjaxResources.request_url);
-	var url = console.log("request made to : " + AjaxResources.ajax_url);
+	var url = AjaxResources.ajax_url;
 	var post_id = AjaxResources.post_id;
 	/**
 	* Parse the Html and give it back to us in a way we can use. 
@@ -165,8 +165,6 @@ Flexslider
 		return url.substring(start + 5).replace("/", "_");
 	}
 
-
-
 	//If the url loaded is a page, set the request as a page.
 	if ($.inArray(request, pagesArray)!== -1) {
 		request = "page";
@@ -181,27 +179,24 @@ Flexslider
 		type : "post",
 		dataType : "html",
 		/* Where the request is being sent to. */
-		url: "http://localhost/www.lfb.com/wp-admin/admin-ajax.php",
+		url: url,
 		// post_id: AjaxResources.post_id,
 		data: {
 			action: request,
 			post_id: post_id,
-			},
+		},
 		success: function(html) {
 			$(".cartogram-slider-active-slide").html(html);
+			console.log(html);
+			console.log("url: " + url);
+			console.log("request: " + request);
+			console.log("post_id: " + post_id);
 		},
 		error: function(response, html, something) {
 			console.log("fail: " + response + html + something );
 		}
 	});
 
-	// $( "#global li" ).each(function( index ) {
-	//     var pageSlider = $('.flexslider').data('flexslider');
-	//       $(this).find('a').click(function(){
-	//         pageSlider.flexAnimate(index);
-	//       return false;
-	//     });
- //  	});
 
 	/**
 	* On click of a link, make an ajax request and load it into the li
@@ -213,6 +208,8 @@ Flexslider
 	*/
 	$("#global li").click(function(e) {
 
+		var index = $(this).index();
+		$('.flexslider').data('flexslider').flexAnimate(index);
 
 		/* The Url of the link that was clicked. */
 		var url = $(this).find("a").attr("href");
@@ -224,6 +221,7 @@ Flexslider
 
 		//Load the page.
 		$.ajax({
+			asynch: false,
 			type : "post",
 			dataType : "html",
 			/* Where the request is being sent to. */
@@ -235,9 +233,11 @@ Flexslider
 				},
 			success: function(html) {
 				$(".cartogram-slider-active-slide").html(html);
+				console.log(html);
+
 			},
 			error: function(response, html, something) {
-				console.log("fail: " + response + html + something );
+				console.log("fail: " + response + html + something);
 			}
 		});
 
@@ -247,8 +247,7 @@ Flexslider
 
 
 		/** Push state Stuff *******************************/
-		var index = $(this).index();
-		$('.flexslider').data('flexslider').flexAnimate(index);
+
 		window.history.pushState(null,title,url);
 		
 		e.preventDefault();
