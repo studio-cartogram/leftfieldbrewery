@@ -161,8 +161,8 @@ Flexslider
 	 *
 	 */
 	function getEnding(url) {
-		var start = url.indexOf(".com/");
-		return url.substring(start + 5).replace("/", "_");
+		var start = url.indexOf(".ca/");
+		return url.substring(start + 4).replace("/", "_");
 	}
 
 	//If the url loaded is a page, set the request as a page.
