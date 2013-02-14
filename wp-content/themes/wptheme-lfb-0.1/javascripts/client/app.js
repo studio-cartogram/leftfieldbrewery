@@ -115,73 +115,91 @@ Flexslider
 		/* Stores the history of the window. */
 		History = window.History,
 		$window = $(window);
-		// $body = $(document.body),
 
-		/* Causing error. */
-		// rootUrl = History.getRootUrl(),
-		// contentSelector = '#content',
-		// $content = $(contentSelector).filter(':first'),
-		// contentNode = $content.get(0);
-
-		/* Selecting the items on the global menu. */
-		// $menu = $('#global');
-
-		/* Selecting the individual links on the global menu. */
-		// $menuChildren = $menu.find('li a');
-
-		/* The current li within the flexslider that is being viewed. */
-		$currentSlide = $(".cartogram-slider-active-slide"),
-
-		/* The array of page names. Used for taking urls and directing them to 
-		the proper ajax calls. */
-		pagesArray = new Array("uncategorized_hello-world", "home", "about-us", "our-beer", "highlights", "fan-shop", "contact-us");
-
-	var request = getEnding(AjaxResources.request_url);
+	/* The array of page names. Used for taking urls and directing them to 
+	the proper ajax calls. */
+	var pagesArray = new Array("uncategorized_hello-world", "home", "about-us", "our-beer", "highlights", "fan-shop", "contact-us");
+	/* The ending part of the url being loaded into the browser. */
+	var request_url = getEnding(AjaxResources.request_url);
+	/* This is the url all ajax requests should be made to: managed by word press. */
 	var ajax_url = AjaxResources.ajax_url;
+	/* When loading a page directly, this is the post_id of the page we want to load. */
 	var post_id = AjaxResources.post_id;
-
 	/* The same function is called on loading the first page and
 	when a push state occurs. This helps that function distinguish the two events. */
 	var initialLoad = true;
-	/**
-	* Parse the Html and give it back to us in a way we can use. 
-	*/
-	var documentHtml = function(html){
-		// Prepare
-		var result = String(html)
-			.replace(/<\!DOCTYPE[^>]*>/i, '')
-			.replace(/<(html|head|body|title|meta|script)([\s\>])/gi,'<div class="document-$1"$2')
-			.replace(/<\/(html|head|body|title|meta|script)\>/gi,'</div>')
-		;
-		
-		// Return
-		return result;
-	};
 
 	/**
-	 * Given a url, return the substring of it with only the part after the main url
-	 * and convert the forwardslash to an underscore.
-	 * Ex localhost/www.lfb.com/blog/page1 would return blog/page1
+	*
+	* State Change Handle. 
+	* This function is fired when the page loads and a pushstate happens.
+	* When loading a page from the browser, load the content the is mapped from the url.
+	*/
+	window.addEventListener('popstate', function(event) {
+
+		var request_url;
+		//This function is called when the page is intially loaded by the browser and when
+		//a push state like back or forth is called.
+		//This is the case where the browser is loading the page for the first time.
+		if (initialLoad) {
+			var request_url = getEnding(AjaxResources.request_url);
+
+			initialLoad = false;
+
+			//If the url loaded is a page, set the request as a page.
+			if ($.inArray(request_url, pagesArray)!== -1) {
+				request_url = "page";
+			}
+
+			//If we're loading lfb.ca/ then we want the home page which is has post_id 4
+			if (post_id === "1") {
+				post_id = "4";
+			}
+
+			//Load the content to the page in respect to the url
+			$.ajax({
+				type : "post",
+				dataType : "html",
+				url: ajax_url,
+				data: {
+					action: request_url,
+					post_id: post_id,
+				},
+				success: function(html) {
+					$(".cartogram-slider-active-slide").html(html);
+					console.log(request_url);
+				},
+				error: function(response, html, something) {
+					console.log("fail: " + response + html + something );
+				}
+			});
+
+		//This is case where a pushstate occured and we need to update the page
+		//to reflect the new state.
+		} else {
+
+			/* The request_url pushed most recently. */
+			var request_url = window.history.state.request_url;
+			
+			//Prepare the flexslider 
+			focusFlexSlider(request_url);
+
+			//Make request to update the content
+			updateContent(request_url);
+		}
+	});
+
+	/**
+	 * When a menu item is clicked, update the flexslider to the corresponding
+	 * slide. Make a request to update the content with the corresponding content.
+	 * Update the pushstate with the new state of the site.
 	 *
 	 */
-	function getEnding(url) {
-		var start = url.indexOf(".ca/");
-		return url.substring(start + 4).replace("/", "_");
-	}
-
-
-
-	/**
-	* On click of a link, make an ajax request and load it into the li
-	* after activating the change within the flexslider.
-	* Click Handler. 
-	* Push Url and Title to the browser history.
-	* Pass the data-state attribute to change the view.
-	*
-	*/
 	$("#global li").click(function(e) {
 
+		/* What position link clicked is in */
 		var index = $(this).index();
+		//Update the flexslider
 		$('.flexslider').data('flexslider').flexAnimate(index);
 
 		/* The Url of the link that was clicked. */
@@ -190,15 +208,11 @@ Flexslider
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
 
-		//Flexslider update.
-
 		//Load the page.
 		updateContent(request_url);
 
-
 		/* Need to pass push state a title, not sure what to give it.*/
 		var title = "not sure";
-
 
 		/** Push state Stuff *******************************/
 		//The first parameter is the stateObj retrievable by window.history.state
@@ -209,104 +223,36 @@ Flexslider
 	});
 
 	/**
-	*
-	* State Change Handle. 
-	* This function is fired when the page loads and a pushstate happens.
-	*/
-	window.addEventListener('popstate', function(event) {
-
-		if (initialLoad) {
-			console.log("loading initial page.. ");
-			initialLoad = false;
-			//If the url loaded is a page, set the request as a page.
-			if ($.inArray(request, pagesArray)!== -1) {
-				request = "page";
-			}
-
-			if (post_id === "1") {
-				post_id = "4";
-			}
-
-			//Load the content to the page in respect to the url
-			$.ajax({
-				type : "post",
-				dataType : "html",
-				/* Where the request is being sent to. */
-				url: ajax_url,
-				// post_id: AjaxResources.post_id,
-				data: {
-					action: request,
-					post_id: post_id,
-				},
-				success: function(html) {
-					$(".cartogram-slider-active-slide").html(html);
-				},
-				error: function(response, html, something) {
-					console.log("fail: " + response + html + something );
-				}
-			});
-		} else {
-			//Get the url
-			var request_url = window.history.state.request_url;
-			// update flexslider
-			focusFlexSlider(request_url);
-			//
-			//make ajax call
-			//Does this need to be done if the content is already loaded?
-			updateContent(request_url);
-
-		}
-		
-	});
-
-	
-	/**
-	*
-	* Visual triggers here. 
-	* Change the view by grabbing the state of the clicked link 
-	* and use CSS transitions to slide the content. 
-	*
-	*/
-	
-	// $('[data-state]').click(function(e) {
-	// 	state = $(this).attr('data-state');
-	// 	changeView(state);
-	// 	console.log("data state clicked");
-	// });
-
-	function changeView(state) {
-		$body
-		.removeClass(
-			function(i, c) {
-				var m = c.match(/state\d+/g);
-				if(m != null)
-					return m.join(" ");
-			})
-		.addClass('state-' + state);
+	 * Given a url, return the substring of it with only the part after the main url
+	 * and convert the forwardslash to an underscore.
+	 * Ex localhost/www.lfb.com/blog/page1 would return blog_page1
+	 *
+	 */
+	function getEnding(url) {
+		var start = url.indexOf(".ca/");
+		return url.substring(start + 4).replace("/", "_");
 	}
 
 	/**
-	 * Given a request (in stuff after lfb.ca/) make an
+	 * Given a request_url (the stuff after lfb.ca/) make an
 	 * ajax call for the content for that page and insert it
 	 * into the current li the flexslider is focused on.
 	 *
 	 * Note: This updates content for pages for now.
 	 */
-	function updateContent(request) {
+	function updateContent(request_url) {
 		$.ajax({
 			asynch: false,
 			type : "post",
 			dataType : "html",
 			/* Where the request is being sent to. */
-			url: AjaxResources.ajax_url,
-			// post_id: AjaxResources.post_id,
+			url: ajax_url,
 			data: {
 				action: "page",
-				url: request
+				url: request_url
 			},
 			success: function(html) {
 				$(".cartogram-slider-active-slide").html(html);
-
 			},
 			error: function(response, html, something) {
 				console.log("fail: " + response + html + something);
@@ -315,26 +261,28 @@ Flexslider
 	}
 
 	/*
-	 * Given a request url, if the flexslider is not focused on it already, 
-	 * focus to that slide. This will involve parsing the nav to find out 
-	 * which one the request url matches to.
+	 * Given a request url, if the flexslider is not focused on its 
+	 * corresponding li within the flexslider, focus to that slide. 
 	 */ 
 	function focusFlexSlider(request_url) {
-		//get the first part of the request url (everything between .ca/  and the first /)
-		//index of and substring?
+		
+		//The li the request_url corresponds to is represented in the first string before the "/"
 		request_url.substring(0,request_url.indexOf("/"));
-		//get the index of the request in respect to the flexslider.
+		
+		//Retrieve what index that li is with respect to its ul.
 		var index = $("#global li").index($("li.menu-item").find('a[href*="' + request_url + '"]').parent());
 		
-		//check to see if it is already in focus
-
-		// console.log($("ol.cartogran-slider-control-nav li").index());
+		//Get the index the flexslider is currently focused on.
 		var flexsliderIndex = $("div.cartogram-slider-viewport ul.slides li").index($("div.cartogram-slider-viewport ul.slides li.cartogram-slider-active-slide"));
 
-		//n.b. the ul containing the slides have an initial "unused(?)" li so we need to add 1
+		//The ul containing the slides have an initial "unused(?)" 
+		//li so we need to add 1
 		if (index + 1 !== flexsliderIndex) {
+
+			//If the flexslider isn't focused on the li want, focus it.
 			$('.flexslider').data('flexslider').flexAnimate(index);
-		}
+		} //Do not need to do anything if the flexslider is already focused on
+		//the one we want.
 	}
 
 
