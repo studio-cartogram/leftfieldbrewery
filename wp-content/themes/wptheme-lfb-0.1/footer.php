@@ -32,7 +32,7 @@
 		</div>
 		<div class="columns three">
 			<h4>Chatter</h4>
-			<?php the_widget("TTrust_Twitter"); ?>
+			<?php //the_widget("TTrust_Twitter"); ?>
 		</div>
 	</div>
 	<div class="row">
