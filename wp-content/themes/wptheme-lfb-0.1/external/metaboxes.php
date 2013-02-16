@@ -43,7 +43,7 @@
 	    )
 	);
 
-	$meta_box_groups = array($establishments_options);
+	$meta_box_groups = array($establishments_options, $players_options);
 
 	function new_meta_box($post, $metabox) {	
 		
