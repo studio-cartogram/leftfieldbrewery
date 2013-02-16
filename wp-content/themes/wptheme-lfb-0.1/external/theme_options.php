@@ -89,31 +89,12 @@ function theme_options_do_page() {
 				//																	"description"=>"Describe this field")
 				$textfield_options = array ("email" => array(
 												"title" => "Primary Email",
-												"description" => "Enter your main email."
+												"description" => "Enter your email."
 												),
-											"email2" => array(
-												"title" => "Secondary Email",
-												"description" => "Enter your secondary email."
+											"phone" => array(
+												"title" => " Phone",
+												"description" => "Enter your phone number."
 												),
-											"office_phone" => array(
-												"title" => "Office Phone",
-												"description" => "Enter your office phone number."
-												),
-
-											"mobile_phone" => array(
-												"title" => "Mobile Phone",
-												"description" => "Enter your office mobile number."
-												),
-
-											"address" => array(
-												"title" => "Address",
-												"description" => "Enter your address."
-												),
-
-											"address2" => array(
-												"title" => "Address 2",
-												"description" => "Enter your secondary address."
-												)
 											);
 
 				//Name is the string to use to reference the value int he backend
