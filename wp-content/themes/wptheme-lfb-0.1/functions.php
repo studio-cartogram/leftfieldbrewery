@@ -186,13 +186,14 @@
 		} else if (isset($_POST["url"])){
 			$id = url_to_postid($_POST["url"]);
 		}
-		query_posts('page_id=' . $id);
-		while (have_posts()): the_post();
+		$pages = new WP_Query("page_id=" . $id);
+		while ($pages->have_posts()): $pages->the_post();
 			get_template_part('parts/content/content');
 		endwhile;		
 		die();
 	}
 	add_action('wp_ajax_nopriv_page', 'gtp_page');
+		add_action('wp_ajax_page', 'gtp_page');
 
 	/*******************************************************************
 	 *
