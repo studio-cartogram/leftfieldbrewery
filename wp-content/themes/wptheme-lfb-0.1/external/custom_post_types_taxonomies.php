@@ -8,24 +8,24 @@
 
 	function create_post_types() {
 		
-		$labels = array(
-			'name' => __( 'Programs' ),
-			'singular_name' => __( 'Program' ),
+		$establishmentsLabels = array(
+			'name' => __( 'Establishments' ),
+			'singular_name' => __( 'Establishment' ),
 			'add_new' => __( 'Add New' ),
-			'add_new_item' => __( 'Add New Program' ),
+			'add_new_item' => __( 'Add New Establishment' ),
 			'edit' => __( 'Edit' ),
-			'edit_item' => __( 'Edit Program' ),
-			'new_item' => __( 'New Product' ),
-			'view' => __( 'View Program' ),
-			'view_item' => __( 'View Program' ),
-			'search_items' => __( 'Search Programs' ),
-			'not_found' => __( 'No Programs found' ),
-			'not_found_in_trash' => __( 'No Programs found in Trash' ),
-			'parent' => __( 'Parent Program' ),
+			'edit_item' => __( 'Edit Establishment' ),
+			'new_item' => __( 'New Establishment' ),
+			'view' => __( 'View Establishment' ),
+			'view_item' => __( 'View Establishment' ),
+			'search_items' => __( 'Search Establishments' ),
+			'not_found' => __( 'No Establishments found' ),
+			'not_found_in_trash' => __( 'No Establishments found in Trash' ),
+			'parent' => __( 'Parent Establishment' ),
 		);
 		
-		$args = array(
-			'labels' => $labels,
+		$establishmentsArgs = array(
+			'labels' => $establishmentsLabels,
 			'public' => true,
 			'publicly_queryable' => true,
 			'show_ui' => true,
@@ -39,76 +39,7 @@
 			'supports' => array('title', 'editor', 'thumbnail')
 		); 	
 		
-		register_post_type( 'programs' , $args );
-
-		$labels = array(
-			'name' => __( 'References' ),
-			'singular_name' => __( 'References' ),
-			'add_new' => __( 'Add New' ),
-			'add_new_item' => __( 'Add New References' ),
-			'edit' => __( 'Edit' ),
-			'edit_item' => __( 'Edit References' ),
-			'new_item' => __( 'New Reference' ),
-			'view' => __( 'View References' ),
-			'view_item' => __( 'View References' ),
-			'search_items' => __( 'Search References' ),
-			'not_found' => __( 'No References found' ),
-			'not_found_in_trash' => __( 'No References found in Trash' ),
-			'parent' => __( 'Parent References' ),
-		);
-		
-		$args = array(
-			'labels' => $labels,
-			'public' => true,
-			'publicly_queryable' => true,
-			'show_ui' => true,
-			'query_var' => true,
-			'has_archive' => true,		
-			'rewrite' => true,
-			'capability_type' => 'post',
-			'hierarchical' => false,
-			'taxonomies' => array('category'),
-			'menu_position' => null,
-			'supports' => array('title', 'editor')
-		); 	
-		
-		register_post_type( 'reference' , $args );
-
-
-		/// Creating gallery post type.
-
-		$labels = array(
-			'name' => __( 'Galleries' ),
-			'singular_name' => __( 'Galleries' ),
-			'add_new' => __( 'Add New' ),
-			'add_new_item' => __( 'Add New Galleries' ),
-			'edit' => __( 'Edit' ),
-			'edit_item' => __( 'Edit Galleries' ),
-			'new_item' => __( 'New Gallery' ),
-			'view' => __( 'View Galleries' ),
-			'view_item' => __( 'View Galleries' ),
-			'search_items' => __( 'Search Galleries' ),
-			'not_found' => __( 'No Galleries found' ),
-			'not_found_in_trash' => __( 'No Galleries found in Trash' ),
-			'parent' => __( 'Parent Galleries' ),
-		);
-		
-		$args = array(
-			'labels' => $labels,
-			'public' => true,
-			'publicly_queryable' => true,
-			'show_ui' => true,
-			'query_var' => true,
-			'has_archive' => true,		
-			'rewrite' => true,
-			'capability_type' => 'post',
-			'hierarchical' => false,
-			'taxonomies' => array('category'),
-			'menu_position' => null,
-			'supports' => array('title', 'editor', "thumbnail")
-		); 	
-		
-		register_post_type( 'galleries' , $args );
+		register_post_type( 'establishments' , $establishmentsArgs );
 		flush_rewrite_rules( false );
 	}
 

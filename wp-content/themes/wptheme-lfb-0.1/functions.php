@@ -172,14 +172,14 @@
 	 **/
 	add_action('comment_post', 'ajaxify_comments',20, 2);
 
-	/****************************************
+	/********************************************************************
 	 * Adding actions to response to ajax requests.
 	 *
 	 * Structure the hook as wp_ajax_{url of push state}
 	 * with function gtp_{urlpushstate with _ instead of /}
 	 * example wp_ajax_beer_dark for beer/dark callw gtp_beer_dark
 	 * (gtp: get template part)
-	 ***************************************/
+	 *******************************************************************/
 	function gtp_page() {
 		if (isset($_POST["post_id"])) {
 			$id = $_POST["post_id"];
@@ -193,4 +193,46 @@
 		die();
 	}
 	add_action('wp_ajax_nopriv_page', 'gtp_page');
+
+	/*******************************************************************
+	 *
+	 * Tweaking custom post type: "establishments."
+	 ******************************************************************/
+
+	function change_default_title( $title ){
+	     $screen = get_current_screen();
+	 
+	     if  ( 'establishments' == $screen->post_type ) {
+	          $title = 'Enter establishment name here';
+	     }
+	 
+	     return $title;
+	}
+	 
+	add_filter( 'enter_title_here', 'change_default_title' );
+
+
+
+	/*******************************************************************
+	 *
+	 * Tweaking custom post type default bodies:
+	 * 		-Establishments: Enter address here.
+	 ******************************************************************/
+	function my_editor_content( $content, $post ) {
+
+	    switch( $post->post_type ) {
+	        case 'establishments':
+	            $content = 'Enter address here';
+	        break;
+	        default:
+	        break;
+	    }
+
+	    return $content;
+	}
+
+	add_filter( 'default_content', 'my_editor_content', 10, 2 );
+
+
+
 ?>
