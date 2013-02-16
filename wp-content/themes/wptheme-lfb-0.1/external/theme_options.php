@@ -92,8 +92,24 @@ function theme_options_do_page() {
 												"description" => "Enter your email."
 												),
 											"phone" => array(
-												"title" => " Phone",
+												"title" => "Phone",
 												"description" => "Enter your phone number."
+												),
+											"twitter" => array(
+												"title" => "Twitter",
+												"description" => "Enter your twitter username."
+												),
+											"facebook" => array(
+												"title" => "Facebook",
+												"description" => "Enter your facebook fan page url."
+												),
+											"untappd" => array(
+												"title" => "Untappd",
+												"description" => "Enter your untappd url."
+												),
+											"instagram" => array(
+												"title" => "Instagram",
+												"description" => "Enter your instagram url."
 												),
 											);
 
