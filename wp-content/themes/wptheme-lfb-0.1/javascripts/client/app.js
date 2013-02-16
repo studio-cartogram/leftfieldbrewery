@@ -142,6 +142,8 @@ Flexslider
 		//a push state like back or forth is called.
 		//This is the case where the browser is loading the page for the first time.
 		if (initialLoad) {
+
+			/* This is the ending of the page we are loading. */
 			var request_url = getEnding(AjaxResources.request_url);
 
 			initialLoad = false;
@@ -167,7 +169,6 @@ Flexslider
 				},
 				success: function(html) {
 					$(".cartogram-slider-active-slide").html(html);
-					console.log(request_url);
 				},
 				error: function(response, html, something) {
 					console.log("fail: " + response + html + something );
