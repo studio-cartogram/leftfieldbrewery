@@ -40,6 +40,39 @@
 		); 	
 		
 		register_post_type( 'establishments' , $establishmentsArgs );
+
+		$playersLabels = array(
+			'name' => __( 'Players' ),
+			'singular_name' => __( 'Player' ),
+			'add_new' => __( 'Add New' ),
+			'add_new_item' => __( 'Add New Player' ),
+			'edit' => __( 'Edit' ),
+			'edit_item' => __( 'Edit Player' ),
+			'new_item' => __( 'New Player' ),
+			'view' => __( 'View Player' ),
+			'view_item' => __( 'View Player' ),
+			'search_items' => __( 'Search Players' ),
+			'not_found' => __( 'No Players found' ),
+			'not_found_in_trash' => __( 'No Players found in Trash' ),
+			'parent' => __( 'Parent Player' ),
+		);
+		
+		$playersArgs = array(
+			'labels' => $playersLabels,
+			'public' => true,
+			'publicly_queryable' => true,
+			'show_ui' => true,
+			'query_var' => true,
+			'has_archive' => true,		
+			'rewrite' => true,
+			'capability_type' => 'post',
+			'hierarchical' => false,
+			'taxonomies' => array('category'),
+			'menu_position' => null,
+			'supports' => array('title', 'editor', 'thumbnail')
+		); 	
+		
+		register_post_type( 'players' , $playersArgs );
 		flush_rewrite_rules( false );
 	}
 

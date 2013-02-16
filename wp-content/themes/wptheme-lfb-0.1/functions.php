@@ -202,10 +202,16 @@
 
 	function change_default_title( $title ){
 	     $screen = get_current_screen();
-	 
-	     if  ( 'establishments' == $screen->post_type ) {
-	          $title = 'Enter establishment name here';
-	     }
+	 	switch($screen->post_type){
+	 		case 'establishments':
+	 			$title = 'Enter establishment name here';
+	 		break;
+	 		case 'players':
+	 			$title = "Enter Player's name here.";
+	 		break;
+	 		default:
+	 		break;
+	 	}
 	 
 	     return $title;
 	}
@@ -224,6 +230,9 @@
 	    switch( $post->post_type ) {
 	        case 'establishments':
 	            $content = 'Enter address here';
+	        break;
+	        case 'players':
+	        	$content = 'Enter bio here.';
 	        break;
 	        default:
 	        break;

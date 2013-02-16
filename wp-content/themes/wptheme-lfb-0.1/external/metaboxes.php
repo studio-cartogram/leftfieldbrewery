@@ -32,6 +32,16 @@
 		    	"description" => __('Displays the draft mug icon. ','cartogram')
 		    )
 	);
+	$players_options = array(
+	
+		"email" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."email",
+	    	"std" => "",
+	    	"title" => __('Players contact info.','cartogram'),
+	    	"description" => __('Enter email. ','cartogram')
+	    )
+	);
 
 	$meta_box_groups = array($establishments_options);
 
@@ -88,10 +98,11 @@
 	} // end meta boxes
 
 	function create_meta_box() {	
-		global $establishments_options;	
+		global $establishments_options, $player_options;	
 		
 		if ( function_exists('add_meta_box') ) {				
 			add_meta_box( 'new-meta-boxes-establishments', __('Establishments Options','cartogram'), 'new_meta_box', 'establishments', 'normal', 'high', array('inputs'=>$establishments_options) );
+			add_meta_box( 'new-meta-boxes-players', __('Players Options','cartogram'), 'new_meta_box', 'players', 'normal', 'high', array('inputs'=>$players_options) );
 		}
 	}
 
