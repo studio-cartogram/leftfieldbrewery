@@ -35,4 +35,9 @@
 			<?php the_widget("TTrust_Twitter"); ?>
 		</div>
 	</div>
+	<div class="row">
+		<div class="columns">
+			© 2013 Left Field Brewery - Proudly Brewed in Toronto, ON Canada
+		</div>
+	</div>
 </section>
