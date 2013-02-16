@@ -10,7 +10,7 @@
 //Getting this stuff here first because of weird
 //embedded query behaviour.
 $page_content = get_the_content( );
-$page_title = get_the_title();
+$page_title = str_replace(" ", "-", get_the_title());
 
 ?>
 
