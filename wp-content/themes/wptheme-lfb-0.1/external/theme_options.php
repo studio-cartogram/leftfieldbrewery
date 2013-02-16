@@ -7,7 +7,7 @@ add_action( 'admin_menu', 'theme_options_add_page' );
  * Init plugin options to white list our options
  */
 function theme_options_init(){
-	register_setting( 'rsof_options', 'rsof_theme_options', 'theme_options_validate' );
+	register_setting( 'lfb_options', 'lfb_theme_options', 'theme_options_validate' );
 }
 
 /**
@@ -80,8 +80,8 @@ function theme_options_do_page() {
 		<?php endif; ?>
 
 		<form method="post" action="options.php">
-			<?php settings_fields( 'rsof_options' ); ?>
-			<?php $options = get_option( 'rsof_theme_options' ); ?>
+			<?php settings_fields( 'lfb_options' ); ?>
+			<?php $options = get_option( 'lfb_theme_options' ); ?>
 
 			<table class="form-table">
 				<?php 
@@ -107,8 +107,8 @@ function theme_options_do_page() {
 				<tr valign="top">
 					<th scope="row"><?php _e( $title, 'cartogram' ); ?></th>
 					<td>
-						<input id="rsof_theme_options[<?php echo $name?>]" class="regular-text" type="text" name="rsof_theme_options[<?php echo $name?>]" value="<?php esc_attr_e( $options[$name] ); ?>" />
-						<label class="description" for="rsof_theme_options[<?php echo $name?>]"><?php _e( $description, 'cartogram' ); ?></label>
+						<input id="lfb_theme_options[<?php echo $name?>]" class="regular-text" type="text" name="lfb_theme_options[<?php echo $name?>]" value="<?php esc_attr_e( $options[$name] ); ?>" />
+						<label class="description" for="lfb_theme_options[<?php echo $name?>]"><?php _e( $description, 'cartogram' ); ?></label>
 					</td>
 				</tr>
 				<?php }?>
