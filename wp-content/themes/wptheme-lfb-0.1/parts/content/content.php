@@ -16,7 +16,7 @@ $page_title = get_the_title();
 
 <div class="row collapse">
 	<div class="columns four">
-		<?php get_template_part('parts/content/side-content/side-content', get_the_title());?>
+		<?php get_template_part('parts/content/side-content/side-content', $page_title);?>
 	</div>
 	<div class="columns eight">	
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
