@@ -98,7 +98,7 @@
 	} // end meta boxes
 
 	function create_meta_box() {	
-		global $establishments_options, $player_options;	
+		global $establishments_options, $players_options;	
 		
 		if ( function_exists('add_meta_box') ) {				
 			add_meta_box( 'new-meta-boxes-establishments', __('Establishments Options','cartogram'), 'new_meta_box', 'establishments', 'normal', 'high', array('inputs'=>$establishments_options) );
