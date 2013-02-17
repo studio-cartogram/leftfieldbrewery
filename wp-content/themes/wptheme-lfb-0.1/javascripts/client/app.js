@@ -161,22 +161,6 @@ Flexslider
 
 			//Load the content to the page in respect to the url
 			updateContent(getEnding(document.URL));
-			// $.ajax({
-			// 	type : "post",
-			// 	dataType : "html",
-			// 	url: ajax_url,
-			// 	data: {
-			// 		action: request_url,
-			// 		post_id: post_id,
-			// 	},
-			// 	success: function(html) {
-			// 		$(".cartogram-slider-active-slide").html(html);
-			// 		console.log();
-			// 	},
-			// 	error: function(response, html, something) {
-			// 		console.log("fail: " + response + html + something );
-			// 	}
-			// });
 
 		//This is case where a pushstate occured and we need to update the page
 		//to reflect the new state.
@@ -257,12 +241,26 @@ Flexslider
 			},
 			success: function(html) {
 				$(".cartogram-slider-active-slide").html(html);
+				applyJavascript(request_url);
 			},
 			error: function(response, html, something) {
 				console.log("fail: " + response + html + something);
 			}
 		});
 	}
+
+	/*
+	 * Given a request url, apply javascript needed for that specific page.
+	 */
+	 function applyJavascript(request_url) {
+	 	switch(request_url) {
+	 		case "about-us":
+	 			
+	 			break;
+	 		default:
+	 			break;
+	 	}
+	 }
 
 	/*
 	 * Given a request url, if the flexslider is not focused on its 
