@@ -102,6 +102,7 @@ Flexslider
 	    slideshowSpeed: 5000,
 	    animationLoop: true
 	  });
+
 	
 	
 
@@ -159,21 +160,23 @@ Flexslider
 			}
 
 			//Load the content to the page in respect to the url
-			$.ajax({
-				type : "post",
-				dataType : "html",
-				url: ajax_url,
-				data: {
-					action: request_url,
-					post_id: post_id,
-				},
-				success: function(html) {
-					$(".cartogram-slider-active-slide").html(html);
-				},
-				error: function(response, html, something) {
-					console.log("fail: " + response + html + something );
-				}
-			});
+			updateContent(getEnding(document.URL));
+			// $.ajax({
+			// 	type : "post",
+			// 	dataType : "html",
+			// 	url: ajax_url,
+			// 	data: {
+			// 		action: request_url,
+			// 		post_id: post_id,
+			// 	},
+			// 	success: function(html) {
+			// 		$(".cartogram-slider-active-slide").html(html);
+			// 		console.log();
+			// 	},
+			// 	error: function(response, html, something) {
+			// 		console.log("fail: " + response + html + something );
+			// 	}
+			// });
 
 		//This is case where a pushstate occured and we need to update the page
 		//to reflect the new state.
