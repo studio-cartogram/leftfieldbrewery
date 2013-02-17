@@ -42,8 +42,46 @@
 	    	"description" => __('Enter email. ','cartogram')
 	    )
 	);
+	$beers_options = array(
+	
+		"short_description" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."short_description",
+	    	"std" => "",
+	    	"title" => __('Short Description.','cartogram'),
+	    	"description" => __('Enter the short description for the beer such as "Oatmeal brown ale"','cartogram')
+	    ),
+		"alc" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."alc",
+	    	"std" => "",
+	    	"title" => __('ALC./VOL.','cartogram'),
+	    	"description" => __('ALC./VOL.','cartogram')
+	    ),
+	    "IBU" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."IBU",
+	    	"std" => "",
+	    	"title" => __('IBU','cartogram'),
+	    	"description" => __('IBU','cartogram')
+	    ),
+	    "SRM" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."SRM",
+	    	"std" => "",
+	    	"title" => __('SRM','cartogram'),
+	    	"description" => __('SRM','cartogram')
+	    ),
+	    "food_pairings" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."food_pairings",
+	    	"std" => "",
+	    	"title" => __('Food Pairings','cartogram'),
+	    	"description" => __('Enter food pairings.','cartogram')
+	    ),
+	);
 
-	$meta_box_groups = array($establishments_options, $players_options);
+	$meta_box_groups = array($establishments_options, $players_options, $beers_options);
 
 	function new_meta_box($post, $metabox) {	
 		
@@ -98,11 +136,12 @@
 	} // end meta boxes
 
 	function create_meta_box() {	
-		global $establishments_options, $players_options;	
+		global $establishments_options, $players_options, $beers_options;	
 		
 		if ( function_exists('add_meta_box') ) {				
 			add_meta_box( 'new-meta-boxes-establishments', __('Establishments Options','cartogram'), 'new_meta_box', 'establishments', 'normal', 'high', array('inputs'=>$establishments_options) );
 			add_meta_box( 'new-meta-boxes-players', __('Players Options','cartogram'), 'new_meta_box', 'players', 'normal', 'high', array('inputs'=>$players_options) );
+			add_meta_box( 'new-meta-boxes-beers', __('Beers Options','cartogram'), 'new_meta_box', 'beers', 'normal', 'high', array('inputs'=>$beers_options) );
 		}
 	}
 

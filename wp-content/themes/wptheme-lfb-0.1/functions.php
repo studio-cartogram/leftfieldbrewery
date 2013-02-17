@@ -207,6 +207,9 @@
 	 		case 'players':
 	 			$title = "Enter Player's name here.";
 	 		break;
+	 		case 'beers':
+	 			$title = "Enter beer name here.";
+	 		break;
 	 		default:
 	 		break;
 	 	}
@@ -232,6 +235,8 @@
 	        case 'players':
 	        	$content = 'Enter bio here.';
 	        break;
+	        case 'beers':
+	        	$content = 'Enter beer information here.';
 	        default:
 	        break;
 	    }
