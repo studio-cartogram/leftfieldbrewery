@@ -117,15 +117,10 @@ Flexslider
 		History = window.History,
 		$window = $(window);
 
-	/* The array of page names. Used for taking urls and directing them to 
-	the proper ajax calls. */
-	var pagesArray = new Array("uncategorized_hello-world", "home", "about-us", "our-beer", "highlights", "fan-shop", "contact-us");
 	/* The ending part of the url being loaded into the browser. */
 	var request_url = getEnding(AjaxResources.request_url);
 	/* This is the url all ajax requests should be made to: managed by word press. */
 	var ajax_url = AjaxResources.ajax_url;
-	/* When loading a page directly, this is the post_id of the page we want to load. */
-	var post_id = AjaxResources.post_id;
 	/* The same function is called on loading the first page and
 	when a push state occurs. This helps that function distinguish the two events. */
 	var initialLoad = true;
@@ -145,22 +140,17 @@ Flexslider
 		if (initialLoad) {
 
 			/* This is the ending of the page we are loading. */
-			var request_url = getEnding(AjaxResources.request_url);
+			var request_url = getEnding(getEnding(document.URL));
 
 			initialLoad = false;
 
-			//If the url loaded is a page, set the request as a page.
-			if ($.inArray(request_url, pagesArray)!== -1) {
-				request_url = "page";
+			if (request_url === "") {
+				request_url = "home";
 			}
-
-			//If we're loading lfb.ca/ then we want the home page which is has post_id 4
-			if (post_id === "1") {
-				post_id = "4";
-			}
+			console.log("this is the request url: " + request_url)
 
 			//Load the content to the page in respect to the url
-			updateContent(getEnding(document.URL));
+			updateContent(request_url);
 
 		//This is case where a pushstate occured and we need to update the page
 		//to reflect the new state.
@@ -195,7 +185,6 @@ Flexslider
 
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
-
 		//Load the page.
 		updateContent(request_url);
 
