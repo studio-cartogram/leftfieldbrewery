@@ -140,7 +140,7 @@ Flexslider
 		if (initialLoad) {
 
 			/* This is the ending of the page we are loading. */
-			var request_url = getEnding(getEnding(document.URL));
+			var request_url = getEnding(document.URL);
 
 			initialLoad = false;
 
@@ -157,7 +157,7 @@ Flexslider
 
 			/* The request_url pushed most recently. */
 			var request_url = window.history.state.request_url;
-			
+
 			//Prepare the flexslider 
 			focusFlexSlider(request_url);
 
