@@ -147,8 +147,7 @@ Flexslider
 			if (request_url === "") {
 				request_url = "home";
 			}
-			console.log("this is the request url: " + request_url)
-
+			
 			//Load the content to the page in respect to the url
 			updateContent(request_url);
 
