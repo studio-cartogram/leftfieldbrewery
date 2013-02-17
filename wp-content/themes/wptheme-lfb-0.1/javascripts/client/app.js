@@ -255,7 +255,33 @@ Flexslider
 	 function applyJavascript(request_url) {
 	 	switch(request_url) {
 	 		case "about-us":
-	 			
+	 			//Maybe may direct calls to separate functions and use this 
+	 			//as a routing function only depending on how
+	 			//large it gets.
+ 				$('.playersFlexslider').flexslider({
+				    selector: ".players_slides > li",
+				    animation: "slide",
+				    namespace: "cartogram-slider-players",
+				    prevText: "n>",
+				    nextText: "p<",
+				    directionNav: true,
+				    controlNav: true,
+				    slideshow: false,
+				    pauseOnHover: true,
+				    slideshowSpeed: 5000,
+				    animationLoop: true
+				});
+
+				//By default, back of cards should be display:none
+				//Move this to CSS?
+				$(".backOfCard").toggle(false);
+
+				//Add toggle events for back and front of cards.
+				$(".flip").live("click", function() {
+					// $(this).parent().parent().find("div").toggle();
+					console.log($(this).parent().parent().find(".backOfCard").toggle());
+					console.log($(this).parent().parent().find(".frontOfCard").toggle());
+				});			
 	 			break;
 	 		default:
 	 			break;
