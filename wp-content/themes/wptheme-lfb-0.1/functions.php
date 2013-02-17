@@ -183,7 +183,9 @@
 	function gtp_page() {
 
 		$id = url_to_postid($_POST["url"]);
-
+		if ($id == 0) {
+			$id = 4;
+		}
 		$pages = new WP_Query("page_id=" . $id);
 		while ($pages->have_posts()): $pages->the_post();
 			get_template_part('parts/content/content');
