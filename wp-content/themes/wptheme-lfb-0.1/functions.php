@@ -181,11 +181,9 @@
 	 * (gtp: get template part)
 	 *******************************************************************/
 	function gtp_page() {
-		if (isset($_POST["post_id"])) {
-			$id = $_POST["post_id"];
-		} else if (isset($_POST["url"])){
-			$id = url_to_postid($_POST["url"]);
-		}
+
+		$id = url_to_postid($_POST["url"]);
+
 		$pages = new WP_Query("page_id=" . $id);
 		while ($pages->have_posts()): $pages->the_post();
 			get_template_part('parts/content/content');
@@ -193,7 +191,7 @@
 		die();
 	}
 	add_action('wp_ajax_nopriv_page', 'gtp_page');
-		add_action('wp_ajax_page', 'gtp_page');
+	add_action('wp_ajax_page', 'gtp_page');
 
 	/*******************************************************************
 	 *
