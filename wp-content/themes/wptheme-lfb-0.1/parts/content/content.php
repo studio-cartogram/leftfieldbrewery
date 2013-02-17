@@ -17,7 +17,7 @@ $page_title = str_replace(" ", "-", get_the_title());
 <div class="row collapse">
 	<div class="columns four">
 		<?php echo $page_title ?>
-		<?php get_template_part('parts/content/sidecontent/sidecontent', $page_title);?>
+		<?php get_template_part('parts/content/sidecontent/sidecontent', strtolower($page_title));?>
 	</div>
 	<div class="columns eight">	
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
