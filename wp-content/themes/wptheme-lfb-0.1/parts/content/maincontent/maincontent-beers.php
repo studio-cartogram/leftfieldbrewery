@@ -39,5 +39,16 @@ global $id;
 </div>
 <div class="row">
 	<div class="columns twelve">
+		<?php
+		$fields = array(
+				"ALC./VOL" => "alc",
+				"IBU" => "IBU",
+				"SRM" => "SRM",
+				"Food Pairings" => "food_pairings" 
+			);
+		foreach ($fields as $title => $name) {
+			echo $title . get_post_meta( $id, '_cartogram_'.$name.'_value', TRUE );
+		}
+		?>
 	</div>
 </div>
