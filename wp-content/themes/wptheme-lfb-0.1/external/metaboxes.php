@@ -10,25 +10,25 @@
 
 	$establishments_options = array(
 		
-			"drinks" => array(
+			"bar" => array(
 		    	"type" => "checkbox",
-				"name" => $prefix."drinks",
+				"name" => $prefix."bar",
 		    	"std" => "",
-		    	"title" => __('Establishment has drinks','cartogram'),
-		    	"description" => __('Displays the drink icon. ','cartogram')
+		    	"title" => __('Establishment is a bar.','cartogram'),
+		    	"description" => __('Displays the glass icon. ','cartogram')
 		    ),
-			"food" => array(
+			"restaurant" => array(
 		    	"type" => "checkbox",
-				"name" => $prefix."food",
+				"name" => $prefix."restaurant",
 		    	"std" => "",
-		    	"title" => __('Establishment has food','cartogram'),
+		    	"title" => __('Establishment is a restaurant.','cartogram'),
 		    	"description" => __('Displays the fork and knife icon. ','cartogram')
 		    ),			
-		    "draft" => array(
+		    "brew_pub" => array(
 		    	"type" => "checkbox",
-				"name" => $prefix."draft",
+				"name" => $prefix."brew_pub",
 		    	"std" => "",
-		    	"title" => __('Establishment has LF available on draft. ','cartogram'),
+		    	"title" => __('Establishment is a brew pub. ','cartogram'),
 		    	"description" => __('Displays the draft mug icon. ','cartogram')
 		    )
 	);

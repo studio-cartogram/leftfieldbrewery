@@ -10,9 +10,9 @@
 				<li class="establishment">
 					<article class="content">
 						<?php $icons = array(	
-							"drinks_icon" => get_post_meta( $post->ID, '_cartogram_drinks_value', TRUE ),
-							"food_icon" => get_post_meta( $post->ID, '_cartogram_food_value', TRUE ),
-							"draft_icon" => get_post_meta( $post->ID, '_cartogram_draft_value', TRUE )
+							"glass_icon" => get_post_meta( $post->ID, '_cartogram_bar_value', TRUE ),
+							"restaurant_icon" => get_post_meta( $post->ID, '_cartogram_restaurant_value', TRUE ),
+							"brew_pub_icon" => get_post_meta( $post->ID, '_cartogram_brew_pub_value', TRUE )
 						); ?>
 						<?php foreach ($icons as $type => $value) {
 							if ($value) {
