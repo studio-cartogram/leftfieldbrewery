@@ -242,9 +242,20 @@ Flexslider
 	 * Given a request url, apply javascript needed for that specific page.
 	 */
 	 function applyJavascript(request_url) {
+
+	 	//If the request is layered such as beers_typeofbeer, want to pass only the first part
 	 	var index = request_url.indexOf("_");
-	 	console.log(request_url.substring(0, index));
-	 	switch(request_url.substring(0, index)) {
+
+	 	//Index is 0 if there is no _ in the request_url, so proceed as normal.
+	 	if (index !== -1) {
+	 		request = request_url.substring(0, index)
+	 	} else {
+	 		request = request_url;
+	 	}
+	 	console.log(index);
+	 	console.log(request_url +  " is the request url");
+
+	 	switch(request) {
 	 		case "about-us":
 	 			//Maybe may direct calls to separate functions and use this 
 	 			//as a routing function only depending on how
@@ -290,7 +301,6 @@ Flexslider
 	 		default:
 	 			break;
 	 	}
-	 	console.log(request_url);
 	 }
 
 	/*
