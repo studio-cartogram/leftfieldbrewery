@@ -242,7 +242,9 @@ Flexslider
 	 * Given a request url, apply javascript needed for that specific page.
 	 */
 	 function applyJavascript(request_url) {
-	 	switch(request_url) {
+	 	var index = request_url.indexOf("_");
+	 	console.log(request_url.substring(0, index));
+	 	switch(request_url.substring(0, index)) {
 	 		case "about-us":
 	 			//Maybe may direct calls to separate functions and use this 
 	 			//as a routing function only depending on how
@@ -260,21 +262,21 @@ Flexslider
 				    slideshowSpeed: 5000,
 				    animationLoop: true
 				});
-
-				//By default, back of cards should be display:none
+		
+	 		case "beers":
+	 			//By default, back of cards should be display:none
 				//Move this to CSS?
 				$(".backOfCard").toggle(false);
 
 				//Add toggle events for back and front of cards.
 				$(".flip").live("click", function() {
-					// $(this).parent().parent().find("div").toggle();
-					console.log($(this).parent().parent().find(".backOfCard").toggle());
-					console.log($(this).parent().parent().find(".frontOfCard").toggle());
-				});			
-	 			break;
+					$(this).parent().parent().find("div").toggle();
+				});	
+				break;
 	 		default:
 	 			break;
 	 	}
+	 	console.log(request_url);
 	 }
 
 	/*
