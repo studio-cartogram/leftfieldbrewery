@@ -24,8 +24,7 @@ $page_title = str_replace(" ", "-", get_the_title());
 				<h3 class="entry-title"><?php echo $page_title; ?></a></h3>
 			</header><!-- .entry-header -->
 			<div class="entry-content">
-				<?php echo $page_content ?>
-				<?php //wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+				<?php get_template_part('parts/content/maincontent/maincontent', strtolower($page_title));?>
 			</div><!-- .entry-content -->
 		</article><!-- #post-<?php the_ID(); ?> -->
 	</div>

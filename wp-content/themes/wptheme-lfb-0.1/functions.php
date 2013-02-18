@@ -182,8 +182,9 @@
 	 *******************************************************************/
 	function gtp_page() {
 
-		$id = url_to_postid($_POST["url"]);
-		if ($id == 0) {
+		$urlArray = explode("_", $_POST["url"]);
+		$id = url_to_postid($urlArray[0]);
+		if ($id === 0) {
 			$id = 4;
 		}
 		$pages = new WP_Query("page_id=" . $id);
