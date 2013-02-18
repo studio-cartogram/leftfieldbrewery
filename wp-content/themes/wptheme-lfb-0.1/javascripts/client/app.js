@@ -172,7 +172,7 @@ Flexslider
 	 * Update the pushstate with the new state of the site.
 	 *
 	 */
-	$("#global li").click(function(e) {
+	$("#global li").not("#global li.has-dropdown").click(function(e) {
 
 		/* What position link clicked is in */
 		var index = $(this).index();
@@ -189,6 +189,7 @@ Flexslider
 
 		/* Need to pass push state a title, not sure what to give it.*/
 		var title = "not sure";
+		console.log("pushing this state: " + url);
 
 		/** Push state Stuff *******************************/
 		//The first parameter is the stateObj retrievable by window.history.state
