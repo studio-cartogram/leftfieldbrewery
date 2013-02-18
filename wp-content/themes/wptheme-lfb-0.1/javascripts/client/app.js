@@ -264,6 +264,20 @@ Flexslider
 				});
 		
 	 		case "beers":
+ 				$('.beersFlexslider').flexslider({
+				    selector: ".beers_slides > li",
+				    animation: "slide",
+				    namespace: "cartogram-slider-beers",
+				    prevText: "n>",
+				    nextText: "p<",
+				    directionNav: true,
+				    controlNav: true,
+				    slideshow: false,
+				    pauseOnHover: true,
+				    slideshowSpeed: 5000,
+				    animationLoop: true
+				});
+
 	 			//By default, back of cards should be display:none
 				//Move this to CSS?
 				$(".backOfCard").toggle(false);

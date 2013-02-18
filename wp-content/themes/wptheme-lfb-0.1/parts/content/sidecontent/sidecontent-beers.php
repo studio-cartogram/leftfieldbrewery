@@ -11,6 +11,5 @@ global $id;
 	<span class="flip"> flip this card(>>) </span>
 </div>
 <div class="backOfCard">
-	test
 	<span class="flip"> flip this card(<<) </span>
 </div>
