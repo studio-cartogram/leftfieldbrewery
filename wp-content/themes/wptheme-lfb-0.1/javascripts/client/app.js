@@ -211,6 +211,30 @@ Flexslider
 	});
 
 	/**
+	 * Manage the clicking of the left and right arrows on the slider
+	 */
+	 $(".cartogram-slider-direction-nav li a").click(function(e) {
+	 	var reverseSlideMaps = {	
+	 								"-1": "contact-us",
+	 								0: "home",
+	 								1: "about-us",
+	 								2: "beers_tuborg",
+	 								3: "highlights",
+	 								4: "fan-shop",
+	 								5: "contact-us",
+	 								6: "home"
+	 							}
+	 	var moveRight = -1;
+	 	if($(this).hasClass("cartogram-slider-next")) {
+	 		var moveRight = 1;
+	 	}
+	 	index = document.URL.indexOf(".ca/");
+	 	url = document.URL.substring(0, index + 4) + reverseSlideMaps[currentSliderIndex + moveRight];
+	 	updateContent(reverseSlideMaps[currentSliderIndex + moveRight]);
+	 	window.history.pushState({request_url: reverseSlideMaps[currentSliderIndex + moveRight]},"title",url);
+	 });
+
+	/**
 	 * Given a url, return the substring of it with only the part after the main url
 	 * and convert the forwardslash to an underscore.
 	 * Ex localhost/www.lfb.com/blog/page1 would return blog_page1
