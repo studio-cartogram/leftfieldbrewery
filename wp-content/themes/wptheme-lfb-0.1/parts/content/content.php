@@ -9,7 +9,7 @@
 ?>
 <div class="row collapse">
 	<div class="columns four">
-		left columns
+		<?php get_sidebar() ?>
 	</div>
 	<div class="columns eight">	
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

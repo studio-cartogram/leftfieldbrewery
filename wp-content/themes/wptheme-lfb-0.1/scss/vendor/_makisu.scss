@@ -37,62 +37,25 @@
 }
 
 .list dt, .list dd {
-
     line-height: 18px;
-    background: #f2e4b1;
+    background: $cream;
     margin: 0;
     height: 85px;
     width: 270px;
-    color: #0c223f;
 }
 
 
 
 .list dt {
-
     /* Since we're hiding elements behind here, we need it in 3d */
-    -webkit-transform: translateZ(0.3px);
-    -moz-transform: translateZ(0.3px);
-    -ms-transform: translateZ(0.3px);
-    -o-transform: translateZ(0.3px);
-    transform: translateZ(0.3px);
-
-    font-size: 12px;
-}
-
-.list dt strong, .list dt p {
-    padding:10px 20px 0;
-    margin:0;
-    display: block;
+    @include transform(translateZ(0.3px));
 }
 
 .list dd {
-
-    border-top: 1px solid;
-    line-height: 18px;
-    font-size: 11px;
     height: 55px;
     margin: 0;
 }
 
-/* UI */
-
-.list a.button {
-    color: #f2e4b1;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background: #0c223f;
-    padding:0;
-    text-align: center;
-    height:35px;
-    display: block;
-    font-size:10px;
-    padding-top:20px;
-}
-
-.list a.button:before {
-    display:none;
-}
 /* No CSS 3D support warning */
 .warning {
     @include transform (translateZ(2px));
