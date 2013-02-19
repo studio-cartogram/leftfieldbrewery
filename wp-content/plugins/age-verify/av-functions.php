@@ -243,8 +243,6 @@ function av_get_verify_form() {
 	
 	$form = '';
 	
-	$form .= '<div class="row"><div class="columns three" id="av-digits-m"></div><div class="columns three" id="av-digits-d"></div><div class="columns six" id="av-digits-y"></div></div>';
-
 	$form .= '<form id="av_verify_form" action="' . home_url( '/' ) . '" method="post">';
 	
 	if ( isset( $_GET['verified'] ) && $_GET['verified'] == 'no' )

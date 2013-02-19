@@ -406,4 +406,36 @@
 	    }
 	}
 	
+	/*******************************************************************
+	 * Filter for Age Verify
+	 ******************************************************************/
+	function cartogram_av_filter($form){
+		$prepend = '<div class="row"><div class="columns three" id="av-digits-m"></div><div class="columns three" id="av-digits-d"></div><div class="columns six" id="av-digits-y"></div></div>';
+		return $prepend . $form;
+	}
+	add_filter('av_verify_form', 'cartogram_av_filter');
+
+	function cartogram_pre_av () {
+		global $form;
+		$form .= '<div class="row">						
+						<div class="columns three">
+							<input type="text" name="av_verify_m" id="av_verify_m" maxlength="2" value="" placeholder="MM" />
+						</div>
+						<div class="columns three">
+							<input type="text" name="av_verify_d" id="av_verify_d" maxlength="2" value="" placeholder="DD" />
+						</div>
+						<div class="columns six">
+							<input type="text" name="av_verify_y" id="av_verify_y" maxlength="4" value="" placeholder="YYYY" />
+						</div>';
+		global $input_type;
+		$input = "none";
+	}
+
+	add_action('av_form_before_inputs', 'cartogram_pre_av');
+	function cartogram_post_av() {
+		global $form;
+		$form .= '</div>';
+	}
+	add_action('av_form_after_inputs', 'cartogram_post_av');
+
 ?>
