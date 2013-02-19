@@ -92,7 +92,7 @@
 		);
 		
 		$vendorArgs = array(
-			'labels' => $labels,
+			'labels' => $vendorLabels,
 			'public' => true,
 			'publicly_queryable' => true,
 			'show_ui' => true,
@@ -114,21 +114,21 @@
 
 	function create_taxonomies() {
 		$labels = array(
-	    	'name' => __( 'Restaurant Type' ),
-	    	'singular_name' => __( 'Restaurant Type' ),
-	    	'search_items' =>  __( 'Search Restaurant Types' ),
-	    	'all_items' => __( 'All Restaurant Types' ),
-	    	'parent_item' => __( 'Parent Restaurant Type' ),
-	    	'parent_item_colon' => __( 'Parent Restaurant Type:' ),
-	    	'edit_item' => __( 'Edit Restaurant Type' ),
-	    	'update_item' => __( 'Update Restaurant Type' ),
-	    	'add_new_item' => __( 'Add New Restaurant Type' ),
-	    	'new_item_name' => __( 'New Restaurant Type Name' )
+	    	'name' => __( 'Vendor Type' ),
+	    	'singular_name' => __( 'Vendor Type' ),
+	    	'search_items' =>  __( 'Search Vendor Types' ),
+	    	'all_items' => __( 'All Vendor Types' ),
+	    	'parent_item' => __( 'Parent Vendor Type' ),
+	    	'parent_item_colon' => __( 'Parent Vendor Type:' ),
+	    	'edit_item' => __( 'Edit Vendor Type' ),
+	    	'update_item' => __( 'Update Vendor Type' ),
+	    	'add_new_item' => __( 'Add New Vendor Type' ),
+	    	'new_item_name' => __( 'New Vendor Type Name' )
 	  	); 	
 
-	  	register_taxonomy('type','',array(
+	  	register_taxonomy('type','vendors',array(
 	    	'hierarchical' => false,
-	    	'labels' => $manufacturerlabels
+	    	'labels' => $labels
 	  	));
 
 		flush_rewrite_rules( false );

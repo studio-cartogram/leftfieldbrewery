@@ -12,7 +12,26 @@
 	$vendor_options = array(
 	    	"map" => array(
 	    	"type" => "textfield",
+			"name" => $prefix."email",
 			"name" => $prefix."map",
+	    	"std" => "",
+	    	"title" => __('Vendor Map URL','cartogram'),
+	    	"description" => __('Enter the link to the Google Map URL for this Vendor.','cartogram')
+	    	),
+
+	    	"address" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."address",
+	    	"std" => "",
+	    	"title" => __('Address','cartogram'),
+	    	"description" => __('Enter the quick one line address of this vendor.','cartogram')
+	    	)
+	);
+	$players_options = array(
+	
+		"email" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."email",
 	    	"std" => "",
 	    	"title" => __('Players contact info.','cartogram'),
 	    	"description" => __('Enter email. ','cartogram')
@@ -94,7 +113,7 @@
 			
 			} elseif(isset($meta_box['type']) && $meta_box['type'] == 'textfield')  {			
 				
-				echo'<input style="width:95%" type="textfield"'.$meta_box['name'].'_value" id="'.$meta_box['name'].'_value" name="'.$meta_box['name'].'_value" value="'.$meta_box_value.'"></input>';			
+				echo'<input style="width:95%" type="textfield"'.$meta_box['name'].'_value" id="'.$meta_box['name'].'_value" name="'.$meta_box['name'].'_value" value="'.$meta_box_value.'">';			
 				echo'<p><label for="'.$meta_box['name'].'_value">'.$meta_box['description'].'</label></p><br />';			
 			} else {
 				
@@ -175,4 +194,4 @@
 
 	add_action('admin_menu', 'create_meta_box');
 	add_action('save_post', 'save_postdata');
-	
+?>
