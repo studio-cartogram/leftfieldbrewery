@@ -93,7 +93,7 @@
 	 *
 	 */
 	function excerpt_ellipsis($text) {
-		return str_replace('[...]', '...', $text);
+		return str_replace('[...]', '<a href="'. get_permalink($post->ID) . '">' . '&raquo; Read More.' . '</a>', $text);
 	}
 
 	/**
@@ -124,9 +124,9 @@
 	function cartogram_share() { 
 	global $post;
 		//http://atlchris.com/1665/how-to-create-custom-share-buttons-for-all-the-popular-social-services/
-		$twitter = '<a target="_blank" href="http://twitter.com/home?status=' . get_the_title() . '+' . get_permalink() . '">T</a>';
-		$facebook = '<a target="_blank" href="http://www.facebook.com/share.php?u=' . get_permalink() . '&title='  . get_the_title() . '">F</a>';
-		$mail = '<a href="mailto:?subject=' . get_the_title() . ' at ' . get_permalink() . '">M</a>';
+		$twitter = '<a target="_blank" href="http://twitter.com/home?status=' . get_the_title() . '+' . get_permalink() . '"><i class="foundsocialicon-twitter"></i></a>';
+		$facebook = '<a target="_blank" href="http://www.facebook.com/share.php?u=' . get_permalink() . '&title='  . get_the_title() . '"><i class="foundsocialicon-facebook"></i></a>';
+		$mail = '<a href="mailto:?subject=' . get_the_title() . ' at ' . get_permalink() . '"><i class="foundicon-mail"></i></a>';
 		$content .= '<ul class="link-list social icons"><li>' . $twitter . '</li><li>' . $facebook . '</li><li>' . $mail . '</li></ul>';
 		echo $content;
 	}

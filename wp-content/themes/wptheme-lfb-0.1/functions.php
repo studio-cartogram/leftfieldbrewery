@@ -78,6 +78,9 @@
 
 		wp_register_script( 'app', get_template_directory_uri().'/javascripts/index-ck.js', array('jquery') );
 		wp_enqueue_script( 'app', array('jquery')  );
+		/* Give index-ck.js access to the variable AjaxResources containg the given info in the array */
+		wp_localize_script('app', 'AjaxResources', array('ajax_url'=> get_site_url() . '/wp-admin/admin-ajax.php',
+		'post_id' => get_the_ID(), 'request_url' => get_permalink(get_the_ID())));
 
 		wp_register_style( 'screen', get_template_directory_uri().'/stylesheets/app.css', '', '', 'screen' );
         wp_enqueue_style( 'screen' );
@@ -169,4 +172,238 @@
 	 **/
 	add_action('comment_post', 'ajaxify_comments',20, 2);
 
+	/********************************************************************
+	 * Adding actions to response to ajax requests.
+	 *
+	 * Structure the hook as wp_ajax_{url of push state}
+	 * with function gtp_{urlpushstate with _ instead of /}
+	 * example wp_ajax_beer_dark for beer/dark callw gtp_beer_dark
+	 * (gtp: get template part)
+	 *******************************************************************/
+	function gtp_page() {
+
+		$urlArray = explode("_", $_POST["url"]);
+		//Rooting is different for beers.
+		switch($urlArray[0]) {
+			case "beers":
+				$id = bwp_url_to_postid($urlArray[0] . "/" . $urlArray[1]);
+				$beers = new WP_Query(array("post_type" => "beers", "p" => $id));
+				while ($beers->have_posts()): $beers->the_post();
+					get_template_part('parts/content/content', "beers");
+				endwhile;
+				break;
+
+			//Default is loading a regular page.
+			default:
+				$id = url_to_postid($urlArray[0]);
+				if ($id === 0) {
+					$id = 4;
+				}
+				$query = new WP_Query("page_id=" . $id);
+				while ($query->have_posts()): $query->the_post();
+					get_template_part('parts/content/content');
+				endwhile;	
+				break;
+		}	
+		die();
+	}
+	add_action('wp_ajax_nopriv_page', 'gtp_page');
+	add_action('wp_ajax_page', 'gtp_page');
+
+	/*******************************************************************
+	 *
+	 * Tweaking custom post type: "establishments."
+	 ******************************************************************/
+
+	function change_default_title( $title ){
+	     $screen = get_current_screen();
+	 	switch($screen->post_type){
+	 		case 'establishments':
+	 			$title = 'Enter establishment name here';
+	 		break;
+	 		case 'players':
+	 			$title = "Enter Player's name here.";
+	 		break;
+	 		case 'beers':
+	 			$title = "Enter beer name here.";
+	 		break;
+	 		default:
+	 		break;
+	 	}
+	 
+	     return $title;
+	}
+	 
+	add_filter( 'enter_title_here', 'change_default_title' );
+
+
+
+	/*******************************************************************
+	 *
+	 * Tweaking custom post type default bodies:
+	 * 		-Establishments: Enter address here.
+	 ******************************************************************/
+	function my_editor_content( $content, $post ) {
+
+	    switch( $post->post_type ) {
+	        case 'establishments':
+	            $content = 'Enter address here';
+	        break;
+	        case 'players':
+	        	$content = 'Enter bio here.';
+	        break;
+	        case 'beers':
+	        	$content = 'Enter beer information here.';
+	        default:
+	        break;
+	    }
+
+	    return $content;
+	}
+
+	add_filter( 'default_content', 'my_editor_content', 10, 2 );
+
+	/*******************************************************************
+	 *
+	 * url_to_postid modified for custom post types found on:
+	 * http://betterwp.net/wordpress-tips/url_to_postid-for-custom-post-types/
+	 ******************************************************************/
+	
+	/* Post URLs to IDs function, supports custom post types - borrowed and modified from url_to_postid() in wp-includes/rewrite.php */
+	function bwp_url_to_postid($url) {
+	    global $wp_rewrite;
+	 
+	    $url = apply_filters('url_to_postid', $url);
+	 
+	    // First, check to see if there is a 'p=N' or 'page_id=N' to match against
+	    if ( preg_match('#[?&](p|page_id|attachment_id)=(\d+)#', $url, $values) )   {
+	        $id = absint($values[2]);
+	        if ($id)
+	            return $id;
+	    }
+	 
+	    // Check to see if we are using rewrite rules
+	    $rewrite = $wp_rewrite->wp_rewrite_rules();
+	 
+	    // Not using rewrite rules, and 'p=N' and 'page_id=N' methods failed, so we're out of options
+	    if ( empty($rewrite) )
+	        return 0;
+	 
+	    // Get rid of the #anchor
+	    $url_split = explode('#', $url);
+	    $url = $url_split[0];
+	 
+	    // Get rid of URL ?query=string
+	    $url_split = explode('?', $url);
+	    $url = $url_split[0];
+	 
+	    // Add 'www.' if it is absent and should be there
+	    if ( false !== strpos(home_url(), '://www.') && false === strpos($url, '://www.') )
+	        $url = str_replace('://', '://www.', $url);
+	 
+	    // Strip 'www.' if it is present and shouldn't be
+	    if ( false === strpos(home_url(), '://www.') )
+	        $url = str_replace('://www.', '://', $url);
+	 
+	    // Strip 'index.php/' if we're not using path info permalinks
+	    if ( !$wp_rewrite->using_index_permalinks() )
+	        $url = str_replace('index.php/', '', $url);
+	 
+	    if ( false !== strpos($url, home_url()) ) {
+	        // Chop off http://domain.com
+	        $url = str_replace(home_url(), '', $url);
+	    } else {
+	        // Chop off /path/to/blog
+	        $home_path = parse_url(home_url());
+	        $home_path = isset( $home_path['path'] ) ? $home_path['path'] : '' ;
+	        $url = str_replace($home_path, '', $url);
+	    }
+	 
+	    // Trim leading and lagging slashes
+	    $url = trim($url, '/');
+	 
+	    $request = $url;
+	    // Look for matches.
+	    $request_match = $request;
+	    foreach ( (array)$rewrite as $match => $query) {
+	        // If the requesting file is the anchor of the match, prepend it
+	        // to the path info.
+	        if ( !empty($url) && ($url != $request) && (strpos($match, $url) === 0) )
+	            $request_match = $url . '/' . $request;
+	 
+	        if ( preg_match("!^$match!", $request_match, $matches) ) {
+	            // Got a match.
+	            // Trim the query of everything up to the '?'.
+	            $query = preg_replace("!^.+\?!", '', $query);
+	 
+	            // Substitute the substring matches into the query.
+	            $query = addslashes(WP_MatchesMapRegex::apply($query, $matches));
+	 
+	            // Filter out non-public query vars
+	            global $wp;
+	            parse_str($query, $query_vars);
+	            $query = array();
+	            foreach ( (array) $query_vars as $key => $value ) {
+	                if ( in_array($key, $wp->public_query_vars) )
+	                    $query[$key] = $value;
+	            }
+	 
+	        // Taken from class-wp.php
+	        foreach ( $GLOBALS['wp_post_types'] as $post_type => $t )
+	            if ( $t->query_var )
+	                $post_type_query_vars[$t->query_var] = $post_type;
+	 
+	        foreach ( $wp->public_query_vars as $wpvar ) {
+	            if ( isset( $wp->extra_query_vars[$wpvar] ) )
+	                $query[$wpvar] = $wp->extra_query_vars[$wpvar];
+	            elseif ( isset( $_POST[$wpvar] ) )
+	                $query[$wpvar] = $_POST[$wpvar];
+	            elseif ( isset( $_GET[$wpvar] ) )
+	                $query[$wpvar] = $_GET[$wpvar];
+	            elseif ( isset( $query_vars[$wpvar] ) )
+	                $query[$wpvar] = $query_vars[$wpvar];
+	 
+	            if ( !empty( $query[$wpvar] ) ) {
+	                if ( ! is_array( $query[$wpvar] ) ) {
+	                    $query[$wpvar] = (string) $query[$wpvar];
+	                } else {
+	                    foreach ( $query[$wpvar] as $vkey => $v ) {
+	                        if ( !is_object( $v ) ) {
+	                            $query[$wpvar][$vkey] = (string) $v;
+	                        }
+	                    }
+	                }
+	 
+	                if ( isset($post_type_query_vars[$wpvar] ) ) {
+	                    $query['post_type'] = $post_type_query_vars[$wpvar];
+	                    $query['name'] = $query[$wpvar];
+	                }
+	            }
+	        }
+	 
+	            // Do the query
+	            $query = new WP_Query($query);
+	            if ( !empty($query->posts) && $query->is_singular )
+	                return $query->post->ID;
+	            else
+	                return 0;
+	        }
+	    }
+    	return 0;
+	}
+
+
+
+	//Customizing the blog here
+
+	//Length of the excerpt
+	function custom_excerpt_length($length) {
+		global $myExcerptLength;
+		if ($myExcerptLength) {
+		    return $myExcerptLength;
+		} else {
+		    return 200; //default value
+	    }
+	}
+	
 ?>

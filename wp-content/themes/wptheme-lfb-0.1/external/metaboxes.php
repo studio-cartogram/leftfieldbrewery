@@ -14,34 +14,50 @@
 	    	"type" => "textfield",
 			"name" => $prefix."map",
 	    	"std" => "",
-	    	"title" => __('Vendor Map URL','cartogram'),
-	    	"description" => __('Enter the link to the Google Map URL for this Vendor.','cartogram')),
-
-			"address" => array(
+	    	"title" => __('Players contact info.','cartogram'),
+	    	"description" => __('Enter email. ','cartogram')
+	    )
+	);
+	$beers_options = array(
+	
+		"short_description" => array(
 	    	"type" => "textfield",
-			"name" => $prefix."address",
+			"name" => $prefix."short_description",
 	    	"std" => "",
-	    	"title" => __('Address','cartogram'),
-	    	"description" => __('Enter the quick one line address of this vendor.','cartogram'))
+	    	"title" => __('Short Description.','cartogram'),
+	    	"description" => __('Enter the short description for the beer such as "Oatmeal brown ale"','cartogram')
+	    ),
+		"alc" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."alc",
+	    	"std" => "",
+	    	"title" => __('ALC./VOL.','cartogram'),
+	    	"description" => __('ALC./VOL.','cartogram')
+	    ),
+	    "IBU" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."IBU",
+	    	"std" => "",
+	    	"title" => __('IBU','cartogram'),
+	    	"description" => __('IBU','cartogram')
+	    ),
+	    "SRM" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."SRM",
+	    	"std" => "",
+	    	"title" => __('SRM','cartogram'),
+	    	"description" => __('SRM','cartogram')
+	    ),
+	    "food_pairings" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."food_pairings",
+	    	"std" => "",
+	    	"title" => __('Food Pairings','cartogram'),
+	    	"description" => __('Enter food pairings.','cartogram')
+	    ),
 	);
 
-	$beer_options = array(
-	    	"website" => array(
-	    	"type" => "checkbox",
-			"name" => $prefix."website",
-	    	"std" => "",
-	    	"title" => __('Homepage Bottom','cartogram'),
-	    	"description" => __('Display on the Homepage.','cartogram')),
-
-			"address" => array(
-	    	"type" => "textfield",
-			"name" => $prefix."address",
-	    	"std" => "",
-	    	"title" => __('Address','cartogram'),
-	    	"description" => __('Enter the quick one line address of this vendor.','cartogram'))
-	);
-
-	$meta_box_groups = array($vendor_options, $beer_options);
+	$meta_box_groups = array($vendor_options, $players_options, $beers_options);
 
 	function new_meta_box($post, $metabox) {	
 		
@@ -96,11 +112,12 @@
 	} // end meta boxes
 
 	function create_meta_box() {	
-		global $vendor_options, $beer_options;	
+		global $vendor_options, $players_options, $beers_options;	
 		
 		if ( function_exists('add_meta_box') ) {				
-			add_meta_box( 'new-meta-boxes-vendor', __('Vendor Options','cartogram'), 'new_meta_box', 'vendors', 'normal', 'high', array('inputs'=>$vendor_options) );
-			add_meta_box( 'new-meta-boxes-beer', __('Beer Options','cartogram'), 'new_meta_box', 'beers', 'normal', 'high', array('inputs'=>$beer_options) );
+			add_meta_box( 'new-meta-boxes-vendors', __('Vendor Options','cartogram'), 'new_meta_box', 'vendors', 'normal', 'high', array('inputs'=>$vendor_options) );
+			add_meta_box( 'new-meta-boxes-players', __('Players Options','cartogram'), 'new_meta_box', 'players', 'normal', 'high', array('inputs'=>$players_options) );
+			add_meta_box( 'new-meta-boxes-beers', __('Beers Options','cartogram'), 'new_meta_box', 'beers', 'normal', 'high', array('inputs'=>$beers_options) );
 		}
 	}
 

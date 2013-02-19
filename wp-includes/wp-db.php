@@ -987,12 +987,9 @@ class wpdb {
 	 * @return null|false|string Sanitized query string, null if there is no query, false if there is an error and string
 	 * 	if there was something to prepare
 	 */
-	function prepare( $query, $args = null ) {
+	function prepare( $query, $args ) {
 		if ( is_null( $query ) )
 			return;
-
-		if ( func_num_args() < 2 )
-			_doing_it_wrong( 'wpdb::prepare', 'wpdb::prepare() requires at least two arguments.', '3.5' );
 
 		$args = func_get_args();
 		array_shift( $args );

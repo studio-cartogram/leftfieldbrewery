@@ -1,49 +1,21 @@
-.top-bar { 
+  .top-bar { 
 
-  /* topbar global <ul> styles */
-  ul { 
-    /* Main Navigation links style */
+    /* topbar global <ul> styles */
+    ul { 
+      /* Main Navigation links style */
+      &>li { 
+        &.name a {padding:0 15px;line-height:95px;}
+        &:hover { background: $topBarBgColor; }
+        a:not(.button) { } 
+        &:not(.name), &:not(.divider) {
+          &:hover, &.active, &:focus { background: $topBarBgColor;
+            a { color: darken($topBarLinkColor, 15%); }
+          }
+        }
+
    
-  }
-  ul#global {
-    width:66.66667%;
-     &>li { 
-      width:16.6%;
-      &.name a {padding:0 15px;line-height:95px;}
-      &:hover { background: $topBarBgColor; }
-      a:not(.button) { 
-        text-transform:uppercase;
-        background:$white;
-        color:$mainColor;
-        line-height:$topBarHeight - 10;
-        height: $topBarHeight - 10;
-        margin-top:5px;
-        text-align:center;
-        margin-right:5px;
-        @include font-size(12);
+      }
+    }
 
-      }
-      &.has-dropdown a {
-        padding-right:15px;
-        &:after {
-          display:block;
-        }
-      } 
-      &:not(.name), &:not(.divider) {
-        &:hover, &.active, &:focus { background: $topBarBgColor;
-          a { color: darken($topBarLinkColor, 15%); }
-        }
-      }
-    }
+  
   }
-  ul#social {
-    width:33.33333%;
-    &>li { 
-      width:20%;
-      text-align:center;
-      a {
-        border-right:1px solid;
-      }
-    }
-  }
-}

@@ -7,7 +7,7 @@ add_action( 'admin_menu', 'theme_options_add_page' );
  * Init plugin options to white list our options
  */
 function theme_options_init(){
-	register_setting( 'rsof_options', 'rsof_theme_options', 'theme_options_validate' );
+	register_setting( 'lfb_options', 'lfb_theme_options', 'theme_options_validate' );
 }
 
 /**
@@ -80,8 +80,8 @@ function theme_options_do_page() {
 		<?php endif; ?>
 
 		<form method="post" action="options.php">
-			<?php settings_fields( 'rsof_options' ); ?>
-			<?php $options = get_option( 'rsof_theme_options' ); ?>
+			<?php settings_fields( 'lfb_options' ); ?>
+			<?php $options = get_option( 'lfb_theme_options' ); ?>
 
 			<table class="form-table">
 				<?php 
@@ -89,31 +89,28 @@ function theme_options_do_page() {
 				//																	"description"=>"Describe this field")
 				$textfield_options = array ("email" => array(
 												"title" => "Primary Email",
-												"description" => "Enter your main email."
+												"description" => "Enter your email."
 												),
-											"email2" => array(
-												"title" => "Secondary Email",
-												"description" => "Enter your secondary email."
+											"phone" => array(
+												"title" => "Phone",
+												"description" => "Enter your phone number."
 												),
-											"office_phone" => array(
-												"title" => "Office Phone",
-												"description" => "Enter your office phone number."
+											"twitter" => array(
+												"title" => "Twitter",
+												"description" => "Enter your twitter username."
 												),
-
-											"mobile_phone" => array(
-												"title" => "Mobile Phone",
-												"description" => "Enter your office mobile number."
+											"facebook" => array(
+												"title" => "Facebook",
+												"description" => "Enter your facebook fan page url."
 												),
-
-											"address" => array(
-												"title" => "Address",
-												"description" => "Enter your address."
+											"untappd" => array(
+												"title" => "Untappd",
+												"description" => "Enter your untappd url."
 												),
-
-											"address2" => array(
-												"title" => "Address 2",
-												"description" => "Enter your secondary address."
-												)
+											"instagram" => array(
+												"title" => "Instagram",
+												"description" => "Enter your instagram url."
+												),
 											);
 
 				//Name is the string to use to reference the value int he backend
@@ -126,8 +123,8 @@ function theme_options_do_page() {
 				<tr valign="top">
 					<th scope="row"><?php _e( $title, 'cartogram' ); ?></th>
 					<td>
-						<input id="rsof_theme_options[<?php echo $name?>]" class="regular-text" type="text" name="rsof_theme_options[<?php echo $name?>]" value="<?php esc_attr_e( $options[$name] ); ?>" />
-						<label class="description" for="rsof_theme_options[<?php echo $name?>]"><?php _e( $description, 'cartogram' ); ?></label>
+						<input id="lfb_theme_options[<?php echo $name?>]" class="regular-text" type="text" name="lfb_theme_options[<?php echo $name?>]" value="<?php esc_attr_e( $options[$name] ); ?>" />
+						<label class="description" for="lfb_theme_options[<?php echo $name?>]"><?php _e( $description, 'cartogram' ); ?></label>
 					</td>
 				</tr>
 				<?php }?>

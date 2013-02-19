@@ -1,32 +1,43 @@
-<?php $options = get_option('rsof_theme_options');?> 
-<section class="container bg-main" id="container-footer">
-	<div class="row" id="footer">
-		<div class="columns six">
-				Form
+<?php $options = get_option('lfb_theme_options');?> 
+<section class="container" id="container-footer">
+	<div class="row">
+		<div class="columns six hook">
+			<?php gravity_form('Newsletter', false, false, false, '', true, 300); ?>
 		</div>
 		<div class="columns three">
 			<div class="row">
 				<div class="columns twelve">
-					<h3 class="light">Get In Touch</h3>
+					<h4>Get in touch</h4>
 					<ul class="no-bullet text-small">
-						<li><?php echo $options['office_phone']; ?></li>
 						<li><?php echo '<a href="mailto:'. $options['email'] . '">' . $options['email'] . '</a>' ; ?></li>
-					</ul>
+						<li><?php echo $options['phone']; ?></li>
+					</ul>	
 				</div>
 			</div>
 			<div class="row">
 				<div class="columns twelve">
-					<h3 class="light">Tell All Your Friends</h3>
-					<?php cartogram_share() ?>
+					<h4>Share</h4>
+					<?php $globalnav = array(
+						'theme_location'  => 'social',
+						'container'       => 'false', 
+						'menu_class'      => 'nav-skew', 
+						'menu_id'         => 'nav-social',
+						'echo'            => true,
+						'fallback_cb'     => ''
+						); 
+						wp_nav_menu( $globalnav ); 
+					?>
 				</div>
 			</div>
-
 		</div>
-		<div class="columns three end">
-			<ul class="no-bullet text-small">
-				<li><?php echo '<a href="mailto:'. $options['email'] . '">' . $options['email'] . '</a>' ; ?></li>
-				<li><?php echo '<a href="mailto:'. $options['email2'] . '">' . $options['email2'] . '</a>' ; ?></li>
-			</ul>	
+		<div class="columns three">
+			<h4>Chatter</h4>
+			<?php //the_widget("TTrust_Twitter"); ?>
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns">
+			© 2013 Left Field Brewery - Proudly Brewed in Toronto, ON Canada
 		</div>
 	</div>
 </section>

@@ -9,8 +9,7 @@
 		// outputting the proper object format based on the
 		// attachment's type.
 		props: function( props, attachment ) {
-			var link, linkUrl, size, sizes, fallbacks,
-				defaultProps = wp.media.view.settings.defaultProps;
+			var link, linkUrl, size, sizes, fallbacks;
 
 			// Final fallbacks run after all processing has been completed.
 			fallbacks = function( props ) {
@@ -18,7 +17,6 @@
 				if ( 'image' === props.type && ! props.alt ) {
 					props.alt = props.caption || props.title || '';
 					props.alt = props.alt.replace( /<\/?[^>]+>/g, '' );
-					props.alt = props.alt.replace( /[\r\n]+/g, ' ' );
 				}
 
 				return props;
@@ -31,8 +29,8 @@
 
 			if ( 'image' === props.type ) {
 				props = _.defaults( props || {}, {
-					align:   defaultProps.align || getUserSetting( 'align', 'none' ),
-					size:    defaultProps.size  || getUserSetting( 'imgsize', 'medium' ),
+					align:   getUserSetting( 'align', 'none' ),
+					size:    getUserSetting( 'imgsize', 'medium' ),
 					url:     '',
 					classes: []
 				});
@@ -44,7 +42,7 @@
 
 			props.title = props.title || attachment.title;
 
-			link = props.link || defaultProps.link || getUserSetting( 'urlbutton', 'file' );
+			link = props.link || getUserSetting( 'urlbutton', 'post' );
 			if ( 'file' === link )
 				linkUrl = attachment.url;
 			else if ( 'post' === link )
@@ -169,7 +167,7 @@
 				itemtag:    'dl',
 				icontag:    'dt',
 				captiontag: 'dd',
-				columns:    '3',
+				columns:    3,
 				size:       'thumbnail',
 				orderby:    'menu_order ID'
 			},
