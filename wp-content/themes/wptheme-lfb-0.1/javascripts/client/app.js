@@ -100,7 +100,11 @@ Flexslider
 	    slideshow: false,
 	    pauseOnHover: true,
 	    slideshowSpeed: 5000,
-	    animationLoop: true
+	    animationLoop: true,
+	    after: function (slider) {
+	    	currentSliderIndex = slider.currentSlide;
+	    	console.log("The slider is currently on: " + currentSliderIndex);
+	    }
 	  });
 
 	
@@ -117,6 +121,9 @@ Flexslider
 		History = window.History,
 		$window = $(window);
 
+
+	/* The current slide the flexslider is on.*/
+	var currentSliderIndex = 0;
 	/* The ending part of the url being loaded into the browser. */
 	var request_url = getEnding(AjaxResources.request_url);
 	/* This is the url all ajax requests should be made to: managed by word press. */
@@ -132,12 +139,14 @@ Flexslider
 	* When loading a page from the browser, load the content the is mapped from the url.
 	*/
 	window.addEventListener('popstate', function(event) {
+		console.log("Popstate occured.");
 
 		var request_url;
 		//This function is called when the page is intially loaded by the browser and when
 		//a push state like back or forth is called.
 		//This is the case where the browser is loading the page for the first time.
 		if (initialLoad) {
+			console.log('	Initial load.');
 
 			/* This is the ending of the page we are loading. */
 			var request_url = getEnding(document.URL);
@@ -147,19 +156,23 @@ Flexslider
 			if (request_url === "") {
 				request_url = "home";
 			}
-			
 			//Load the content to the page in respect to the url
 			updateContent(request_url);
 
 		//This is case where a pushstate occured and we need to update the page
 		//to reflect the new state.
 		} else {
+			console.log("	Loading an old state.");
 
 			/* The request_url pushed most recently. */
-			var request_url = window.history.state.request_url;
-
-			//Prepare the flexslider 
-			focusFlexSlider(request_url);
+			if (window.history.state !== null) {
+				var request_url = window.history.state.request_url;
+			} else {
+				var request_url = getEnding(document.URL);
+				if (request_url === "") {
+					request_url = "home";
+				}
+			}
 
 			//Make request to update the content
 			updateContent(request_url);
@@ -176,20 +189,18 @@ Flexslider
 
 		/* What position link clicked is in */
 		var index = $(this).index();
-		//Update the flexslider
-		$('.flexslider').data('flexslider').flexAnimate(index);
 
 		/* The Url of the link that was clicked. */
 		var url = $(this).find("a").attr("href");
 
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
+
 		//Load the page.
 		updateContent(request_url);
 
 		/* Need to pass push state a title, not sure what to give it.*/
 		var title = "not sure";
-		console.log("pushing this state: " + url);
 
 		/** Push state Stuff *******************************/
 		//The first parameter is the stateObj retrievable by window.history.state
@@ -218,6 +229,9 @@ Flexslider
 	 * Note: This updates content for pages for now.
 	 */
 	function updateContent(request_url) {
+
+		console.log("		Calling update content on: " + request_url);
+		focusFlexSlider(request_url);
 		$.ajax({
 			asynch: false,
 			type : "post",
@@ -252,8 +266,6 @@ Flexslider
 	 	} else {
 	 		request = request_url;
 	 	}
-	 	console.log(index);
-	 	console.log(request_url +  " is the request url");
 
 	 	switch(request) {
 	 		case "about-us":
@@ -308,24 +320,40 @@ Flexslider
 	 * corresponding li within the flexslider, focus to that slide. 
 	 */ 
 	function focusFlexSlider(request_url) {
+
+		//Depending on the request URL, we want the flexslider to focus on one of the 6 slides.
+		//Some slides will show multiple pieces of information i.e. highlights
+		var slideMaps = {
+							"home": 0,
+							"about-us": 1,
+							"beers": 2,
+							"highlights":3,
+							"category": 3,
+							"tags": 3,
+							"fan-shop": 4,
+							"contact-us": 5
+						}
 		
-		//The li the request_url corresponds to is represented in the first string before the "/"
-		request_url.substring(0,request_url.indexOf("/"));
-		
+		//The li the request_url corresponds to is represented in the first string before the "_"
+		var indexOfSubstring = request_url.indexOf("_");
+	 	if (indexOfSubstring !== -1) {
+	 		request_part = request_url.substring(0,indexOfSubstring);
+	 	} else {
+	 		request_part = request_url;
+	 	}
+
 		//Retrieve what index that li is with respect to its ul.
-		var index = $("#global li").index($("li.menu-item").find('a[href*="' + request_url + '"]').parent());
-		
-		//Get the index the flexslider is currently focused on.
-		var flexsliderIndex = $("div.cartogram-slider-viewport ul.slides li").index($("div.cartogram-slider-viewport ul.slides li.cartogram-slider-active-slide"));
+		var targetIndex = slideMaps[request_part];
 
-		//The ul containing the slides have an initial "unused(?)" 
-		//li so we need to add 1
-		if (index + 1 !== flexsliderIndex) {
+		if (targetIndex !== currentSliderIndex) {
 
+			console.log("				Focusing flexslider on: " + targetIndex + " from " + currentSliderIndex);
 			//If the flexslider isn't focused on the li want, focus it.
-			$('.flexslider').data('flexslider').flexAnimate(index);
+			$('.flexslider').data('flexslider').flexAnimate(targetIndex);
 		} //Do not need to do anything if the flexslider is already focused on
 		//the one we want.
+
+		console.log("				Request Part determining focus index: " + request_part);
 	}
 
 

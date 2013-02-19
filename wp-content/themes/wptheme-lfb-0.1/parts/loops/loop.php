@@ -1,22 +1,12 @@
-<?php 
-$posts = new WP_Query();
-$posts->query( array(
-	'post_type'=> 'page',
-	'orderby' => 'menu_order',
-	'order' => 'ASC'
-	));
-	if ($posts->have_posts()) : ?>	
-		<?php while ($posts->have_posts()) : $posts->the_post(); ?>
-		<li>
-			<div class="row slide-row">
-				<div class="columns twelve">
-
-					<?php $slug = basename(get_permalink()); 
-					//get_template_part('parts/content/content', $slug ); ?>
-				</div>
+<?php
+for ($i = 0; $i < 6; $i++) {
+?>
+	<li>
+		<div class="row slide-row">
+			<div class="columns twelve">
 			</div>
-			
-		</li>		
-		<?php endwhile; ?>	
-	<?php endif; 
+		</div>			
+	</li>		
+<?php
+}
 ?>
