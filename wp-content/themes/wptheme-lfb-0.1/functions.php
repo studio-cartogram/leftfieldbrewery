@@ -278,7 +278,7 @@
 	    // First, check to see if there is a 'p=N' or 'page_id=N' to match against
 	    if ( preg_match('#[?&](p|page_id|attachment_id)=(\d+)#', $url, $values) )   {
 	        $id = absint($values[2]);
-	        if ( $id )
+	        if ($id)
 	            return $id;
 	    }
 	 
@@ -393,4 +393,17 @@
 	}
 
 
+
+	//Customizing the blog here
+
+	//Length of the excerpt
+	function custom_excerpt_length($length) {
+		global $myExcerptLength;
+		if ($myExcerptLength) {
+		    return $myExcerptLength;
+		} else {
+		    return 200; //default value
+	    }
+	}
+	
 ?>
