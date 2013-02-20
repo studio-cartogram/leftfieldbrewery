@@ -192,9 +192,11 @@
 					get_template_part('parts/content/content', "beers");
 				endwhile;
 				break;
-
-			//Default is loading a regular page.
-			default:
+			case "home":
+			case "about-us":
+			case "highlights":
+			case "fan-shop":
+			case "contact-us":
 				$id = url_to_postid($urlArray[0]);
 				if ($id === 0) {
 					$id = 4;
@@ -203,7 +205,12 @@
 				while ($query->have_posts()): $query->the_post();
 					get_template_part('parts/content/content');
 				endwhile;	
-				break;
+			break;
+			case "tag":
+			break;
+			//Defaults is a category
+			default:
+			break;
 		}	
 		die();
 	}
@@ -411,13 +418,7 @@
 	 ******************************************************************/
 	function cartogram_av_filter($form){
 		$prepend = '<div class="row"><div class="columns three" id="av-digits-m"></div><div class="columns three" id="av-digits-d"></div><div class="columns six" id="av-digits-y"></div></div>';
-		return $prepend . $form;
-	}
-	add_filter('av_verify_form', 'cartogram_av_filter');
-
-	function cartogram_pre_av () {
-		global $form;
-		$form .= '<div class="row">						
+		$newForm = '<div class="row">						
 						<div class="columns three">
 							<input type="text" name="av_verify_m" id="av_verify_m" maxlength="2" value="" placeholder="MM" />
 						</div>
@@ -427,15 +428,10 @@
 						<div class="columns six">
 							<input type="text" name="av_verify_y" id="av_verify_y" maxlength="4" value="" placeholder="YYYY" />
 						</div>';
-		global $input_type;
-		$input = "none";
+		$newForm .= '<p class="submit"><label for="av_verify_remember"><input type="checkbox" name="av_verify_remember" id="av_verify_remember" value="1" /> Remember me</label> ';
+		$append = '</div>';
+		return $prepend . $newForm . $append;
 	}
-
-	add_action('av_form_before_inputs', 'cartogram_pre_av');
-	function cartogram_post_av() {
-		global $form;
-		$form .= '</div>';
-	}
-	add_action('av_form_after_inputs', 'cartogram_post_av');
+	add_filter('av_verify_form', 'cartogram_av_filter');
 
 ?>
