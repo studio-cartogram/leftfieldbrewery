@@ -28,7 +28,7 @@
 	));
 foreach ($categories as $category) {
 	?>
-	<a href="<?php echo get_site_url() . '/highlights/' . $category->cat_name;?>"><?php echo $category->cat_name ?></a>
+	<a href="<?php echo get_site_url() . '/category/' . $category->cat_name;?>"><?php echo $category->cat_name ?></a>
 	<?php
 }
 ?>

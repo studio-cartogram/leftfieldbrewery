@@ -208,8 +208,17 @@
 			break;
 			case "tag":
 			break;
-			//Defaults is a category
+			case "category":
+			break;
+			//Defaults is a single post view
 			default:
+				if (isset($urlArray[1])) {
+					$id = url_to_postid($urlArray[0] . "/" . $urlArray[1]);
+					$query2 = new WP_Query("p=" . $id);
+					while ($query2->have_posts()): $query2->the_post();
+						get_template_part('parts/content/content', 'single-post');
+					endwhile;	
+				}		
 			break;
 		}	
 		die();

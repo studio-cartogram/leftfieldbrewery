@@ -344,19 +344,7 @@ Flexslider
 	 * corresponding li within the flexslider, focus to that slide. 
 	 */ 
 	function focusFlexSlider(request_url) {
-
-		//Depending on the request URL, we want the flexslider to focus on one of the 6 slides.
-		//Some slides will show multiple pieces of information i.e. highlights
-		var slideMaps = {
-							"home": 0,
-							"about-us": 1,
-							"beers": 2,
-							"highlights":3,
-							"category": 3,
-							"tags": 3,
-							"fan-shop": 4,
-							"contact-us": 5
-						}
+		//Parsing request url
 		
 		//The li the request_url corresponds to is represented in the first string before the "_"
 		var indexOfSubstring = request_url.indexOf("_");
@@ -366,9 +354,34 @@ Flexslider
 	 		request_part = request_url;
 	 	}
 
-		//Retrieve what index that li is with respect to its ul.
-		var targetIndex = slideMaps[request_part];
+	 	//Depending on the request URL, we want the flexslider to focus on one of the 6 slides.
+		//Some slides will show multiple pieces of information i.e. highlights
+		switch (request_part) {
+			case "home":
+				var targetIndex = 0;
+				break;
+			case "about-us":
+				var targetIndex = 1;
+				break;
+			case "beers":
+				var targetIndex = 2;
+				break;
+			case "fan-shop":
+				var targetIndex = 4;
+				break;
+			case "contact-us":
+				var targetIndex = 5;
+				break;
+			case "highlights":
+			case "category":
+			case "tags":
+			//Default case is a blog post or pages within the blog.
+			default:
+				var targetIndex = 3;
+			break;
+		}
 
+		//If we're not already focused on the target index, then move to it.
 		if (targetIndex !== currentSliderIndex) {
 
 			console.log("				Focusing flexslider on: " + targetIndex + " from " + currentSliderIndex);
