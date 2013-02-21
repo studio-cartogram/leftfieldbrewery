@@ -14,7 +14,7 @@ $page_title = str_replace(" ", "-", get_the_title());
 
 ?>
 
-<div class="row collapse">
+<div class="row collapse  highlights">
 	<div class="columns four">
 		<?php get_sidebar(strtolower($page_title)) ?>
 	</div>
