@@ -233,10 +233,10 @@
 				$offset = 0 + 6*($page_number - 1);
 				get_template_part('parts/content/content', 'pages');
 				break;
-			case "arch":
+			case "page":
 				global $page_number, $query_part, $offset, $rootURL, $rootURL2;
 				$rootURL = '/highlights';
-				$rootURL2 = '/arch/';
+				$rootURL2 = '/page/';
 				$query_part = 'showposts=2&offset=';
 				$page_number = intval($urlArray[1]);
 				$offset = 3 + 6*($page_number - 2);

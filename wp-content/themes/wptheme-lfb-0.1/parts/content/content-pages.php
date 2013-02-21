@@ -22,9 +22,9 @@
 			</div>
 			<div class="columns five">
 				<?php if ($page_number == 2 || $page_number == 1) {
-					echo '<a href="'.get_site_url(). $rootURL . '" class="highlightPagination">newer</a>';
+					echo '<a href="'.get_site_url(). $rootURL . '">newer</a>';
 				} else {
-					echo '<a href="' . get_site_url() . $rootURL2 . ($page_number - 1) . '" class="highlightsPagination">newer</a>';
+					echo '<a href="' . get_site_url() . $rootURL2 . ($page_number - 1) . '">newer</a>';
 				}  ?>
 			</div>
 			<div class="columns five">

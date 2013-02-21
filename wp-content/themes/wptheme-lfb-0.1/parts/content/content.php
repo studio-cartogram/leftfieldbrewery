@@ -9,14 +9,15 @@
 
 //Getting this stuff here first because of weird
 //embedded query behaviour.
+global $page_content;
 $page_content = get_the_content( );
 $page_title = str_replace(" ", "-", get_the_title());
 
 ?>
 
-<div class="row collapse  highlights">
+<div class="row collapse <?php echo strtolower($page_title); ?>">
 	<div class="columns four">
-		<?php get_sidebar(strtolower($page_title)) ?>
+		<?php get_sidebar(strtolower($page_title)); ?>
 	</div>
 	<div class="columns eight">	
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
