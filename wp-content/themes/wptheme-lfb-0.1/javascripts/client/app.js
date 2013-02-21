@@ -173,7 +173,6 @@ Flexslider
 					request_url = "home";
 				}
 			}
-
 			//Make request to update the content
 			updateContent(request_url);
 		}
@@ -336,14 +335,14 @@ Flexslider
 				break;
 			//Default will be all pages within pagination.
 	 		default:
-	 			console.log("loaded pagination.");
-	 			$(".highlightsPagination").click(function(e) {
+	 			$(".highlights").find("a").click(function(e) {
 
 					/* The Url of the link that was clicked. */
 					var url = $(this).attr("href");
 
 					/* This is the request_url to be used for ajax. */
 					var request_url = getEnding(url);
+					console.log("highlight's a clicked with request_url = " + request_url);
 
 					//Load the page.
 					updateContent(request_url);

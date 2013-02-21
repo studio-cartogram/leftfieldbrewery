@@ -207,12 +207,39 @@
 				endwhile;	
 			break;
 			case "tag":
+				global $page_number, $query_part, $offset, $rootURL, $rootURL2;
+				$rootURL = '/tag/' . $urlArray[1];
+				$rootURL2 = '/tag/' . $urlArray[1] . "/";
+				$query_part = 'tag=' . $urlArray[1] . '&offset=';
+				if (isset($urlArray[2])) {
+					$page_number = intval($urlArray[2]);
+				} else {
+					$page_number = 1;
+				}
+				$offset = 0 + 6*($page_number - 1);
+				get_template_part('parts/content/content', 'pages');
+				break;
 			break;
-			case "category":
-			break;
+			case "category":	
+				global $page_number, $query_part, $offset, $rootURL, $rootURL2;
+				$rootURL = '/category/' . $urlArray[1];
+				$rootURL2 = '/category/' . $urlArray[1]. "/";
+				$query_part = 'category_name=' . $urlArray[1] . '&offset=';
+				if (isset($urlArray[2])) {
+					$page_number = intval($urlArray[2]);
+				} else {
+					$page_number = 1;
+				}
+				$offset = 0 + 6*($page_number - 1);
+				get_template_part('parts/content/content', 'pages');
+				break;
 			case "arch":
-				global $page_number;
+				global $page_number, $query_part, $offset, $rootURL, $rootURL2;
+				$rootURL = '/highlights';
+				$rootURL2 = '/arch/';
+				$query_part = 'showposts=2&offset=';
 				$page_number = intval($urlArray[1]);
+				$offset = 3 + 6*($page_number - 2);
 				get_template_part('parts/content/content', 'pages');
 				break;
 			//Defaults is a single post view
@@ -239,9 +266,6 @@
 	function change_default_title( $title ){
 	     $screen = get_current_screen();
 	 	switch($screen->post_type){
-	 		case 'establishments':
-	 			$title = 'Enter establishment name here';
-	 		break;
 	 		case 'players':
 	 			$title = "Enter Player's name here.";
 	 		break;
@@ -267,9 +291,6 @@
 	function my_editor_content( $content, $post ) {
 
 	    switch( $post->post_type ) {
-	        case 'establishments':
-	            $content = 'Enter address here';
-	        break;
 	        case 'players':
 	        	$content = 'Enter bio here.';
 	        break;
