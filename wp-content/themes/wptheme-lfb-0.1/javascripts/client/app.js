@@ -334,7 +334,30 @@ Flexslider
 					$(this).parent().parent().find("div").toggle();
 				});	
 				break;
+			//Default will be all pages within pagination.
 	 		default:
+	 			console.log("loaded pagination.");
+	 			$(".highlightsPagination").click(function(e) {
+
+					/* The Url of the link that was clicked. */
+					var url = $(this).attr("href");
+
+					/* This is the request_url to be used for ajax. */
+					var request_url = getEnding(url);
+
+					//Load the page.
+					updateContent(request_url);
+
+					/* Need to pass push state a title, not sure what to give it.*/
+					var title = "not sure";
+
+					/** Push state Stuff *******************************/
+					//The first parameter is the stateObj retrievable by window.history.state
+					//Passing in the request_url of the state for reloading it when the user goes "back"/"forth"
+					window.history.pushState({request_url: request_url},title,url);
+					
+					e.preventDefault();
+				});
 	 			break;
 	 	}
 	 }

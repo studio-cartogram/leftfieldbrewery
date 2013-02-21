@@ -24,13 +24,13 @@
 			<div class="columns five">
 				<?php echo $page ?>
 				<?php if ($page == 2) {
-					echo '<a href="'.get_site_url().'/highlights">newer</a>';
+					echo '<a href="'.get_site_url().'/highlights" class="highlightPagination">newer</a>';
 				} else {
-					echo '<a href="' . get_site_url() . '/arch/' . ($page_number - 1) . '">newer</a>';
+					echo '<a href="' . get_site_url() . '/arch/' . ($page_number - 1) . '" class="highlightsPagination">newer</a>';
 				}  ?>
 			</div>
 			<div class="columns five">
-				<a href="<?php echo get_site_url() ?>/arch/<?php echo $page_number + 1 ?>">older</a>
+				<a href="<?php echo get_site_url() ?>/arch/<?php echo $page_number + 1 ?>" class="highlightsPagination">older</a>
 			</div>
 			<div class="columns one">
 				right

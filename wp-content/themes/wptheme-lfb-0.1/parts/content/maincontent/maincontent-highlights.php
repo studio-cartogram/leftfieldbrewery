@@ -38,7 +38,7 @@
 		newer <?php //Will this always be unclickable? ?>
 	</div>
 	<div class="columns five">
-		<a href="<?php echo get_site_url() ?>/arch/2/">older</a>
+		<a href="<?php echo get_site_url() ?>/arch/2/" class="highlightsPagination">older</a>
 	</div>
 	<div class="columns one">
 		right
