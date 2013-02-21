@@ -210,6 +210,11 @@
 			break;
 			case "category":
 			break;
+			case "arch":
+				global $page_number;
+				$page_number = intval($urlArray[1]);
+				get_template_part('parts/content/content', 'pages');
+				break;
 			//Defaults is a single post view
 			default:
 				if (isset($urlArray[1])) {

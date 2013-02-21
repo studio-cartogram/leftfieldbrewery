@@ -25,17 +25,22 @@
 	$myExcerptLength = 20;
 	$query = new WP_Query('showposts=2&offset=1');
 	while ($query->have_posts()): $query->the_post();
-		?>
-		<div class="columns six">
-
-			<?php
-			echo "<p>" . get_the_date('jS F, Y') . "</p>";
-			the_title();
-			the_excerpt();
-			?>
-		</div>
-		<?php
+		get_template_part('parts/content/content', 'summary');
 	endwhile;
 	$myExcerptLength = 0;
 	?>
+</div>
+<div class="row">
+	<div class="columns one">
+		left
+	</div>
+	<div class="columns five">
+		newer <?php //Will this always be unclickable? ?>
+	</div>
+	<div class="columns five">
+		<a href="<?php echo get_site_url() ?>/arch/2/">older</a>
+	</div>
+	<div class="columns one">
+		right
+	</div>
 </div>
