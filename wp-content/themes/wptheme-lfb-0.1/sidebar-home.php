@@ -22,6 +22,7 @@
 
 						<?php the_title('<h7 class="vendor-name">','</h7>') ?>
 						<?php echo $descriptive_address;?>
+						<a class="externalLink" target="_blank" href="<?php echo $map_url; ?>"><div class="fs1"aria-hidden="true" data-icon="&#xe00d;">MAP</div></a>
 					</article>
 				</li>
 			<?php endwhile; ?>	
