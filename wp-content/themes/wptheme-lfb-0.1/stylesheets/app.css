@@ -7355,13 +7355,8 @@ h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 36, ../scss/_screen.scss */
-.card-container .card .front {
-  background: red;
-}
-/* line 40, ../scss/_screen.scss */
+/* line 39, ../scss/_screen.scss */
 .card-container .card .back {
-  background: blue;
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);

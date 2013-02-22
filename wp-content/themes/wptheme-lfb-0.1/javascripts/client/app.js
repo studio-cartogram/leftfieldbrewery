@@ -216,7 +216,6 @@ Flexslider
 
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
-		console.log("highlight's a clicked with request_url = " + request_url);
 
 		//Load the page.
 		updateContent(request_url);
@@ -231,6 +230,29 @@ Flexslider
 		
 		e.preventDefault();
 	});
+
+	$(".mvp").find("a").live("click", function(e) {
+
+		/* The Url of the link that was clicked. */
+		var url = $(this).attr("href");
+
+		/* This is the request_url to be used for ajax. */
+		var request_url = getEnding(url);
+
+		//Load the page.
+		updateContent(request_url);
+
+		/* Need to pass push state a title, not sure what to give it.*/
+		var title = "not sure";
+
+		/** Push state Stuff *******************************/
+		//The first parameter is the stateObj retrievable by window.history.state
+		//Passing in the request_url of the state for reloading it when the user goes "back"/"forth"
+		window.history.pushState({request_url: request_url},title,url);
+		
+		e.preventDefault();
+	});
+
 
 	/**
 	 * Manage the clicking of the left and right arrows on the slider
