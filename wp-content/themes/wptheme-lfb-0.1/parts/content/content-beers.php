@@ -11,7 +11,7 @@
 
 <div class="row collapse">
 	<div class="columns four">
-		<?php get_template_part('parts/content/sidecontent/sidecontent', 'beers');?>
+		<?php get_sidebar('beers');?>
 	</div>
 	<div class="columns eight">	
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

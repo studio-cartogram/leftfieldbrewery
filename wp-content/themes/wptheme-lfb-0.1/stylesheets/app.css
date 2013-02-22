@@ -6328,14 +6328,13 @@ a:hover {
 /* line 39, ../scss/vendor/_makisu.scss */
 .list dt, .list dd {
   line-height: 18px;
-  background: #f2e4b1;
+  background: #fefcf8;
   margin: 0;
   height: 85px;
   width: 270px;
-  color: #0c223f;
 }
 
-/* line 51, ../scss/vendor/_makisu.scss */
+/* line 49, ../scss/vendor/_makisu.scss */
 .list dt {
   /* Since we're hiding elements behind here, we need it in 3d */
   -webkit-transform: translateZ(0.3px);
@@ -6343,47 +6342,16 @@ a:hover {
   -ms-transform: translateZ(0.3px);
   -o-transform: translateZ(0.3px);
   transform: translateZ(0.3px);
-  font-size: 12px;
 }
 
-/* line 63, ../scss/vendor/_makisu.scss */
-.list dt strong, .list dt p {
-  padding: 10px 20px 0;
-  margin: 0;
-  display: block;
-}
-
-/* line 69, ../scss/vendor/_makisu.scss */
+/* line 54, ../scss/vendor/_makisu.scss */
 .list dd {
-  border-top: 1px solid;
-  line-height: 18px;
-  font-size: 11px;
   height: 55px;
   margin: 0;
 }
 
-/* UI */
-/* line 80, ../scss/vendor/_makisu.scss */
-.list a.button {
-  color: #f2e4b1;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background: #0c223f;
-  padding: 0;
-  text-align: center;
-  height: 35px;
-  display: block;
-  font-size: 10px;
-  padding-top: 20px;
-}
-
-/* line 93, ../scss/vendor/_makisu.scss */
-.list a.button:before {
-  display: none;
-}
-
 /* No CSS 3D support warning */
-/* line 97, ../scss/vendor/_makisu.scss */
+/* line 60, ../scss/vendor/_makisu.scss */
 .warning {
   -webkit-transform: translateZ(2px);
   -moz-transform: translateZ(2px);
@@ -6400,7 +6368,7 @@ a:hover {
   top: 0;
 }
 
-/* line 110, ../scss/vendor/_makisu.scss */
+/* line 73, ../scss/vendor/_makisu.scss */
 .warning .message {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
   border-radius: 5px;
@@ -6418,13 +6386,13 @@ a:hover {
   top: 50%;
 }
 
-/* line 128, ../scss/vendor/_makisu.scss */
+/* line 91, ../scss/vendor/_makisu.scss */
 .warning .message h1 {
   font-weight: 300;
   font-size: 14px;
 }
 
-/* line 134, ../scss/vendor/_makisu.scss */
+/* line 97, ../scss/vendor/_makisu.scss */
 .warning .message a {
   text-decoration: none;
   color: #73C8A9;
@@ -6956,14 +6924,29 @@ h2 {
 }
 
 /* line 14, ../scss/_typography.scss */
+h3 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
+}
+
+/* line 18, ../scss/_typography.scss */
+h4 {
+  font-size: 12px;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+/* line 24, ../scss/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
-/* line 16, ../scss/_typography.scss */
+/* line 26, ../scss/_typography.scss */
 h1.collapse, h2.collapse, h3.collapse, h4.collapse, h5.collapse, h6.collapse {
   margin: 0;
 }
-/* line 19, ../scss/_typography.scss */
+/* line 29, ../scss/_typography.scss */
 h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
   color: white;
 }
@@ -7134,7 +7117,69 @@ h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
 }
 
 /* line 1, ../scss/_screen.scss */
-body {
-  overflow-x: hidden;
-  background: #fefcf8;
+.wrap {
+  width: 200px;
+  margin: 0 auto 0px;
+  position: relative;
+}
+
+/* line 6, ../scss/_screen.scss */
+.card-container {
+  width: 200px;
+  height: 260px;
+  position: relative;
+  margin: 0 auto 0px;
+  border: 1px solid #CCC;
+}
+/* line 13, ../scss/_screen.scss */
+.card-container .card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -ms-transition: -ms-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+/* line 21, ../scss/_screen.scss */
+.card-container .card.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* line 25, ../scss/_screen.scss */
+.card-container .card figure {
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+/* line 36, ../scss/_screen.scss */
+.card-container .card .front {
+  background: red;
+}
+/* line 40, ../scss/_screen.scss */
+.card-container .card .back {
+  background: blue;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }

@@ -347,14 +347,10 @@ Flexslider
 				    animationLoop: true
 				});
 
-	 			//By default, back of cards should be display:none
-				//Move this to CSS?
-				$(".backOfCard").toggle(false);
-
 				//Add toggle events for back and front of cards.
 				$(".flip").live("click", function() {
-					$(this).parent().parent().find("div").toggle();
-				});	
+					$(this).siblings('.card-container').find('.card').toggleClass('flipped');
+				});
 				break;
 			//Default will be all pages within pagination.
 	 		default:
