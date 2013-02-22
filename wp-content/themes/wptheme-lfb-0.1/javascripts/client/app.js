@@ -256,6 +256,11 @@ Flexslider
 	 	window.history.pushState({request_url: reverseSlideMaps[currentSliderIndex + moveRight]},"title",url);
 	 });
 
+	//Add toggle events for back and front of cards.
+	$(".flip").live("click", function() {
+		$(this).siblings('.card-container').find('.card').toggleClass('flipped');
+	});
+
 	/**
 	 * Given a url, return the substring of it with only the part after the main url
 	 * and convert the forwardslash to an underscore.
@@ -302,6 +307,7 @@ Flexslider
 	 * Given a request url, apply javascript needed for that specific page.
 	 */
 	 function applyJavascript(request_url) {
+	 	console.log("				Applying Javascript for " + request_url);
 
 	 	//If the request is layered such as beers_typeofbeer, want to pass only the first part
 	 	var index = request_url.indexOf("_");
@@ -345,11 +351,6 @@ Flexslider
 				    pauseOnHover: true,
 				    slideshowSpeed: 5000,
 				    animationLoop: true
-				});
-
-				//Add toggle events for back and front of cards.
-				$(".flip").live("click", function() {
-					$(this).siblings('.card-container').find('.card').toggleClass('flipped');
 				});
 				break;
 			//Default will be all pages within pagination.

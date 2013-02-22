@@ -10,7 +10,7 @@ $players = new WP_Query( array( "post_type" => "players") );
 				<section class="card-container">
 					<div class="card">
 						<figure class="front">
-							<?php the_post_thumbnail();?>							
+							<?php the_post_thumbnail();?>o							
 						</figure>
 						<figure class="back">
 							<?php the_content();?>
