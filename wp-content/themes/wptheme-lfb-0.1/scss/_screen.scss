@@ -41,3 +41,27 @@
     }
    
 }
+
+$navy: #0c223f;
+
+.footer {
+  background-color: $navy;
+}
+
+.gform_body {
+    label {
+      display:none;
+    }
+    input {
+      background-color: transparent; 
+      padding: 0px;
+      margin: 0px;
+    }
+    :active {
+      background-color: transparent;
+    }
+    button {
+      border-color: #ffffff;
+    }
+}
+

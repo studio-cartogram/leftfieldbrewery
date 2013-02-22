@@ -7363,3 +7363,27 @@ h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
+
+/* line 47, ../scss/_screen.scss */
+.footer {
+  background-color: #0c223f;
+}
+
+/* line 52, ../scss/_screen.scss */
+.gform_body label {
+  display: none;
+}
+/* line 55, ../scss/_screen.scss */
+.gform_body input {
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 60, ../scss/_screen.scss */
+.gform_body :active {
+  background-color: transparent;
+}
+/* line 63, ../scss/_screen.scss */
+.gform_body button {
+  border-color: #ffffff;
+}
