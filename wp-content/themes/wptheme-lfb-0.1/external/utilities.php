@@ -93,7 +93,7 @@
 	 *
 	 */
 	function excerpt_ellipsis($text) {
-		return str_replace('[...]', '...', $text);
+		return str_replace('[...]', '<a href="'. get_permalink($post->ID) . '">' . '&raquo; Read More.' . '</a>', $text);
 	}
 
 	/**

@@ -8,281 +8,82 @@
 
 	$prefix = "_cartogram_";
 
-	$home_slideshow_options = array(
-		
-			"in_slideshow" => array(
-	    	"type" => "checkbox",
-			"name" => $prefix."in_home_slideshow",
-	    	"std" => "",
-	    	"title" => __('Include in Home Page Slideshow','cartogram'),
-	    	"description" => __('Display this in the home page slideshow.','cartogram'))	
-	);
 
-
-	$product_options = array(
-	    	"on_hompage" => array(
-	    	"type" => "checkbox",
-			"name" => $prefix."on_hompage",
-	    	"std" => "",
-	    	"title" => __('Homepage Bottom','cartogram'),
-	    	"description" => __('Display on the Homepage.','cartogram')),
-
-			"tagline" => array(
+	$vendor_options = array(
+	    	"map" => array(
 	    	"type" => "textfield",
-			"name" => $prefix."tagline",
+			"name" => $prefix."email",
+			"name" => $prefix."map",
 	    	"std" => "",
-	    	"title" => __('Tagline','cartogram'),
-	    	"description" => __('Enter the tagline of this product.','cartogram')),
+	    	"title" => __('Vendor Map URL','cartogram'),
+	    	"description" => __('Enter the link to the Google Map URL for this Vendor.','cartogram')
+	    	),
 
-	    	"in_clearance" => array(
-	    	"type" => "checkbox",
-			"name" => $prefix."in_clearance",
-	    	"std" => "",
-	    	"title" => __('Clearance','cartogram'),
-	    	"description" => __('Display in the Clearance section.','cartogram'))
-	);
-	$database_options = array(
-	    	"architonic_source" => array(
+	    	"address" => array(
 	    	"type" => "textfield",
-			"name" => $prefix."architonic_source",
+			"name" => $prefix."address",
 	    	"std" => "",
-	    	"title" => __('Architonic Source','cartogram'),
-	    	"description" => __('Paste the Architonic Source into the field above.','cartogram'))
+	    	"title" => __('Address','cartogram'),
+	    	"description" => __('Enter the quick one line address of this vendor.','cartogram')
+	    	)
 	);
-		////////////// galleries metaboxes //////////////
-	$gallery_options = array (
-
-
-	    	"recently_updated" => array(
-		    	"type" => "checkbox",
-				"name" => $prefix."recently_updated",
-		    	"std" => "",
-		    	"title" => __('Recently Updated:','cartogram'),
-		    	"description" => __('Check if recently updated.','cartogram')),
-
-	    	"just_added" => array(
-		    	"type" => "checkbox",
-				"name" => $prefix."just_added",
-		    	"std" => "true",
-		    	"title" => __('Just added/New:','cartogram'),
-		    	"description" => __('Uncheck this gallery if no longer new.','cartogram')),
-	    	);
-	$program_options = array(
-
-////////////// info for browsing programs page //////////////
-			"fashion_level_description" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."fashion_level_description",
-		    	"std" => "",
-		    	"title" => __('Fashion Level Description:','cartogram'),
-		    	"description" => __('This will be the first header when you view a program. Ex. "Fashion Level 1"','cartogram')),
-
-	    	"spaces_available" => array(
-		    	"type" => "checkbox",
-				"name" => $prefix."spaces_available",
-		    	"std" => "",
-		    	"title" => __('Spaces Available:','cartogram'),
-		    	"description" => __('Check if spaces are available.','cartogram')),
-
-	    	"just_added" => array(
-		    	"type" => "checkbox",
-				"name" => $prefix."just_added",
-		    	"std" => "true",
-		    	"title" => __('Just added/New:','cartogram'),
-		    	"description" => __('Uncheck this box once this progarm is no longer new.','cartogram')),
-
-
-
-
-////////////// Monday //////////////
-	    	"monday_start" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."monday_start",
-		    	"std" => "",
-		    	"title" => __('Monday Start Time:','cartogram'),
-		    	"description" => __('monday start time','cartogram')),
-	    	"monday_end" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."monday_end",
-		    	"std" => "",
-		    	"title" => __('Monday End Time:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"monday_closed" => array(
-		    	"type" => "checkbox",
-				"name" => $prefix."monday_closed",
-		    	"std" => "",
-		    	"title" => __('Monday Closed:','cartogram'),
-		    	"description" => __('Check this off is you are closed Monday.','cartogram')),
-	    	
-
-////////////// Tuesday //////////////
-	    	"tuesday_start" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."tuesday_start",
-		    	"std" => "",
-		    	"title" => __('Tuesday Start Time:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"tuesday_end" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."tuesday_end",
-		    	"std" => "",
-		    	"title" => __('Tuesday End Time:','cartogram'),
-		    	"description" => __('','cartogram')),
-			"tuesday_closed" => array(
-		    	"type" => "checkbox",
-				"name" => $prefix."tuesday_closed",
-		    	"std" => "",
-		    	"title" => __('Tuesday Closed:','cartogram'),
-		    	"description" => __('Check this off is you are closed Tuesday.','cartogram')),
-	    	
-
-////////////// Wednesday //////////////
-	    	"wednesday_start" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."wednesday_start",
-		    	"std" => "wednesday",
-		    	"title" => __('Wednesday Start Time:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"wednesday_end" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."wednesday_end",
-		    	"std" => "wednesday",
-		    	"title" => __('Wednesday End Time:','cartogram'),
-		    	"description" => __('','cartogram')),
-			"wednesday_closed" => array(
-		    	"type" => "checkbox",
-				"name" => $prefix."wednesday_closed",
-		    	"std" => "",
-		    	"title" => __('Wednesday Closed:','cartogram'),
-		    	"description" => __('Check this off is you are closed Wednesday.','cartogram')),
-	    	
-
-////////////// Thursday //////////////
-	    	"thursday_start" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."thursday_start",
-		    	"std" => "",
-		    	"title" => __('Thursday Start Time:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"thursday_end" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."thursday_end",
-		    	"std" => "",
-		    	"title" => __('Thursday End Time:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"thursday_closed" => array(
-		    	"type" => "checkbox",
-				"name" => $prefix."thursday_closed",
-		    	"std" => "",
-		    	"title" => __('Thursday Closed:','cartogram'),
-		    	"description" => __('Check this off is you are closed Thursday.','cartogram')),
-	    	
-////////////// Friday //////////////
-	    	"friday_start" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."friday_start",
-		    	"std" => "",
-		    	"title" => __('Friday Start Time:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"friday_end" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."friday_end",
-		    	"std" => "",
-		    	"title" => __('Friday End Time:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"friday_closed" => array(
-		    	"type" => "checkbox",
-				"name" => $prefix."friday_closed",
-		    	"std" => "",
-		    	"title" => __('Friday Closed:','cartogram'),
-		    	"description" => __('Check this off is you are closed Friday.','cartogram')),
-	    	
-
-////////////// Saturday //////////////
-	    	"saturday_start" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."saturday_start",
-		    	"std" => "",
-		    	"title" => __('Saturday Start Time:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"saturday_end" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."saturday_end",
-		    	"std" => "",
-		    	"title" => __('Saturday End Time:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"saturday_closed" => array(
-		    	"type" => "checkbox",
-				"name" => $prefix."saturday_closed",
-		    	"std" => "",
-		    	"title" => __('Saturday Closed:','cartogram'),
-		    	"description" => __('Check this off is you are closed Saturday.','cartogram')),
-	    	
-
-////////////// Sunday //////////////
-	    	"sunday_start" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."sunday_start",
-		    	"std" => "",
-		    	"title" => __('Sunday Start Time:','cartogram'),
-		    	"description" => __('','cartogram')),	    	
-	    	"sunday_end" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."sunday_end",
-		    	"std" => "",
-		    	"title" => __('Sunday End Time:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"sunday_closed" => array(
-		    	"type" => "checkbox",
-				"name" => $prefix."sunday_closed",
-		    	"std" => "",
-		    	"title" => __('Sunday Closed:','cartogram'),
-		    	"description" => __('Check this off is you are closed Sunday.','cartogram')),
-	    	
-////////////// Important Dates //////////////
-	    	"important_date_1" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."important_date_1",
-		    	"std" => "",
-		    	"title" => __('Important Date:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"important_date_2" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."important_date_2",
-		    	"std" => "",
-		    	"title" => __('Important Date:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"important_date_3" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."important_date_3",
-		    	"std" => "",
-		    	"title" => __('Important Date:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"important_date_4" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."important_date_4",
-		    	"std" => "",
-		    	"title" => __('Important Date:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"important_date_5" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."important_date_5",
-		    	"std" => "",
-		    	"title" => __('Important Date:','cartogram'),
-		    	"description" => __('','cartogram')),
-	    	"important_date_6" => array(
-		    	"type" => "textfield",
-				"name" => $prefix."important_date_6",
-		    	"std" => "",
-		    	"title" => __('Important Date:','cartogram'),
-		    	"description" => __('','cartogram')),
-
+	$players_options = array(
+	
+		"email" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."email",
+	    	"std" => "",
+	    	"title" => __('Players contact info.','cartogram'),
+	    	"description" => __('Enter email. ','cartogram')
+	    )
+	);
+	$beers_options = array(
+	
+		"short_description" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."short_description",
+	    	"std" => "",
+	    	"title" => __('Short Description.','cartogram'),
+	    	"description" => __('Enter the short description for the beer such as "Oatmeal brown ale"','cartogram')
+	    ),
+		"alc" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."alc",
+	    	"std" => "",
+	    	"title" => __('ALC./VOL.','cartogram'),
+	    	"description" => __('ALC./VOL.','cartogram')
+	    ),
+	    "IBU" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."IBU",
+	    	"std" => "",
+	    	"title" => __('IBU','cartogram'),
+	    	"description" => __('IBU','cartogram')
+	    ),
+	    "SRM" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."SRM",
+	    	"std" => "",
+	    	"title" => __('SRM','cartogram'),
+	    	"description" => __('SRM','cartogram')
+	    ),
+	    "food_pairings" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."food_pairings",
+	    	"std" => "",
+	    	"title" => __('Food Pairings','cartogram'),
+	    	"description" => __('Enter food pairings.','cartogram')
+	    ),
+	    "mvp" => array(
+	    	"type" => "checkbox",
+			"name" => $prefix."mvp",
+	    	"std" => "",
+	    	"title" => __('MVP','cartogram'),
+	    	"description" => __('Check this box if this beer is to be featured on the home page.','cartogram')
+	    ),
 	);
 
-	$program_schedule = array(
-	    	
-	);
-	$meta_box_groups = array($home_slideshow_options, $product_options, $database_options, $program_options);
+	$meta_box_groups = array($vendor_options, $players_options, $beers_options);
 
 	function new_meta_box($post, $metabox) {	
 		
@@ -319,8 +120,8 @@
 			
 			} elseif(isset($meta_box['type']) && $meta_box['type'] == 'textfield')  {			
 				
-				echo'<input type="textfield"'.$meta_box['name'].'_value" id="'.$meta_box['name'].'_value" name="'.$meta_box['name'].'_value" value="'.$meta_box_value.'"></input>';			
-			
+				echo'<input style="width:95%" type="textfield"'.$meta_box['name'].'_value" id="'.$meta_box['name'].'_value" name="'.$meta_box['name'].'_value" value="'.$meta_box_value.'">';			
+				echo'<p><label for="'.$meta_box['name'].'_value">'.$meta_box['description'].'</label></p><br />';			
 			} else {
 				
 				echo'<p><input style="width:70%"type="text" name="'.$meta_box['name'].'_value" id="'.$meta_box['name'].'_value" value="'.$meta_box_value.'" />';		
@@ -337,15 +138,12 @@
 	} // end meta boxes
 
 	function create_meta_box() {	
-		global $home_slideshow_options, $product_options, $database_options, $program_options, $gallery_options;	
+		global $vendor_options, $players_options, $beers_options;	
 		
 		if ( function_exists('add_meta_box') ) {				
-			add_meta_box( 'new-meta-boxes-home-slideshow', __('Home Slideshow Options','cartogram'), 'new_meta_box', 'products', 'normal', 'high', array('inputs'=>$home_slideshow_options) );
-			add_meta_box( 'new-meta-boxes-video', __('Product Options','cartogram'), 'new_meta_box', 'products', 'normal', 'high', array('inputs'=>$product_options) );
-			add_meta_box( 'new-meta-boxes-video', __('Architonic Options','cartogram'), 'new_meta_box', 'page', 'normal', 'high', array('inputs'=>$database_options) );
-			add_meta_box( 'new-meta-boxes-video', __('Program Options','cartogram'), 'new_meta_box', 'Programs', 'normal', 'high', array('inputs'=>$program_options) );
-			add_meta_box( 'new-meta-boxes-video', __('Gallery Options','cartogram'), 'new_meta_box', 'Galleries', 'normal', 'high', array('inputs'=>$gallery_options) );
-
+			add_meta_box( 'new-meta-boxes-vendors', __('Vendor Options','cartogram'), 'new_meta_box', 'vendors', 'normal', 'high', array('inputs'=>$vendor_options) );
+			add_meta_box( 'new-meta-boxes-players', __('Players Options','cartogram'), 'new_meta_box', 'players', 'normal', 'high', array('inputs'=>$players_options) );
+			add_meta_box( 'new-meta-boxes-beers', __('Beers Options','cartogram'), 'new_meta_box', 'beers', 'normal', 'high', array('inputs'=>$beers_options) );
 		}
 	}
 
@@ -403,4 +201,4 @@
 
 	add_action('admin_menu', 'create_meta_box');
 	add_action('save_post', 'save_postdata');
-	
+?>

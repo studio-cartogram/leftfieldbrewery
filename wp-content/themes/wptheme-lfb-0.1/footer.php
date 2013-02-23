@@ -1,5 +1,5 @@
 <?php $options = get_option('lfb_theme_options');?> 
-<section class="container" id="container-footer">
+<section class="container footer" id="container-footer">
 	<div class="row">
 		<div class="columns six hook">
 			<?php gravity_form('Newsletter', false, false, false, '', true, 300); ?>
@@ -32,7 +32,7 @@
 		</div>
 		<div class="columns three">
 			<h4>Chatter</h4>
-			<?php the_widget("TTrust_Twitter"); ?>
+			<?php //the_widget("TTrust_Twitter"); ?>
 		</div>
 	</div>
 	<div class="row">

@@ -8,24 +8,24 @@
 
 	function create_post_types() {
 		
-		$labels = array(
-			'name' => __( 'Programs' ),
-			'singular_name' => __( 'Program' ),
+		$playersLabels = array(
+			'name' => __( 'Players' ),
+			'singular_name' => __( 'Player' ),
 			'add_new' => __( 'Add New' ),
-			'add_new_item' => __( 'Add New Program' ),
+			'add_new_item' => __( 'Add New Player' ),
 			'edit' => __( 'Edit' ),
-			'edit_item' => __( 'Edit Program' ),
-			'new_item' => __( 'New Product' ),
-			'view' => __( 'View Program' ),
-			'view_item' => __( 'View Program' ),
-			'search_items' => __( 'Search Programs' ),
-			'not_found' => __( 'No Programs found' ),
-			'not_found_in_trash' => __( 'No Programs found in Trash' ),
-			'parent' => __( 'Parent Program' ),
+			'edit_item' => __( 'Edit Player' ),
+			'new_item' => __( 'New Player' ),
+			'view' => __( 'View Player' ),
+			'view_item' => __( 'View Player' ),
+			'search_items' => __( 'Search Players' ),
+			'not_found' => __( 'No Players found' ),
+			'not_found_in_trash' => __( 'No Players found in Trash' ),
+			'parent' => __( 'Parent Player' ),
 		);
 		
-		$args = array(
-			'labels' => $labels,
+		$playersArgs = array(
+			'labels' => $playersLabels,
 			'public' => true,
 			'publicly_queryable' => true,
 			'show_ui' => true,
@@ -39,26 +39,27 @@
 			'supports' => array('title', 'editor', 'thumbnail')
 		); 	
 		
-		register_post_type( 'programs' , $args );
+		register_post_type( 'players' , $playersArgs );
 
-		$labels = array(
-			'name' => __( 'References' ),
-			'singular_name' => __( 'References' ),
+
+		$beersLabels = array(
+			'name' => __( 'Beers' ),
+			'singular_name' => __( 'Beer' ),
 			'add_new' => __( 'Add New' ),
-			'add_new_item' => __( 'Add New References' ),
+			'add_new_item' => __( 'Add New Beer' ),
 			'edit' => __( 'Edit' ),
-			'edit_item' => __( 'Edit References' ),
-			'new_item' => __( 'New Reference' ),
-			'view' => __( 'View References' ),
-			'view_item' => __( 'View References' ),
-			'search_items' => __( 'Search References' ),
-			'not_found' => __( 'No References found' ),
-			'not_found_in_trash' => __( 'No References found in Trash' ),
-			'parent' => __( 'Parent References' ),
+			'edit_item' => __( 'Edit Beer' ),
+			'new_item' => __( 'New Beer' ),
+			'view' => __( 'View Beer' ),
+			'view_item' => __( 'View Beer' ),
+			'search_items' => __( 'Search Beers' ),
+			'not_found' => __( 'No Beers found' ),
+			'not_found_in_trash' => __( 'No Beers found in Trash' ),
+			'parent' => __( 'Parent Beer' ),
 		);
 		
-		$args = array(
-			'labels' => $labels,
+		$beersArgs = array(
+			'labels' => $beersLabels,
 			'public' => true,
 			'publicly_queryable' => true,
 			'show_ui' => true,
@@ -69,32 +70,29 @@
 			'hierarchical' => false,
 			'taxonomies' => array('category'),
 			'menu_position' => null,
-			'supports' => array('title', 'editor')
+			'supports' => array('title', 'editor', 'thumbnail')
 		); 	
 		
-		register_post_type( 'reference' , $args );
+		register_post_type( 'beers' , $beersArgs );
 
-
-		/// Creating gallery post type.
-
-		$labels = array(
-			'name' => __( 'Galleries' ),
-			'singular_name' => __( 'Galleries' ),
+		$vendorLabels = array(
+			'name' => __( 'Vendors' ),
+			'singular_name' => __( 'Vendor' ),
 			'add_new' => __( 'Add New' ),
-			'add_new_item' => __( 'Add New Galleries' ),
+			'add_new_item' => __( 'Add New Vendor' ),
 			'edit' => __( 'Edit' ),
-			'edit_item' => __( 'Edit Galleries' ),
-			'new_item' => __( 'New Gallery' ),
-			'view' => __( 'View Galleries' ),
-			'view_item' => __( 'View Galleries' ),
-			'search_items' => __( 'Search Galleries' ),
-			'not_found' => __( 'No Galleries found' ),
-			'not_found_in_trash' => __( 'No Galleries found in Trash' ),
-			'parent' => __( 'Parent Galleries' ),
+			'edit_item' => __( 'Edit Vendor' ),
+			'new_item' => __( 'New Product' ),
+			'view' => __( 'View Vendor' ),
+			'view_item' => __( 'View Vendor' ),
+			'search_items' => __( 'Search Vendors' ),
+			'not_found' => __( 'No Vendors found' ),
+			'not_found_in_trash' => __( 'No Vendors found in Trash' ),
+			'parent' => __( 'Parent Vendor' ),
 		);
 		
-		$args = array(
-			'labels' => $labels,
+		$vendorArgs = array(
+			'labels' => $vendorLabels,
 			'public' => true,
 			'publicly_queryable' => true,
 			'show_ui' => true,
@@ -105,68 +103,34 @@
 			'hierarchical' => false,
 			'taxonomies' => array('category'),
 			'menu_position' => null,
-			'supports' => array('title', 'editor', "thumbnail")
+			'supports' => array('title')
 		); 	
 		
-		register_post_type( 'galleries' , $args );
+		register_post_type( 'vendors' , $vendorArgs );
+
+
 		flush_rewrite_rules( false );
 	}
 
 	function create_taxonomies() {
 		$labels = array(
-	    	'name' => __( 'Designer' ),
-	    	'singular_name' => __( 'Designer' ),
-	    	'search_items' =>  __( 'Search Designers' ),
-	    	'all_items' => __( 'All Designers' ),
-	    	'parent_item' => __( 'Parent Designer' ),
-	    	'parent_item_colon' => __( 'Parent Designer:' ),
-	    	'edit_item' => __( 'Edit Designer' ),
-	    	'update_item' => __( 'Update Designer' ),
-	    	'add_new_item' => __( 'Add New Designer' ),
-	    	'new_item_name' => __( 'New Designer Name' )
+	    	'name' => __( 'Vendor Type' ),
+	    	'singular_name' => __( 'Vendor Type' ),
+	    	'search_items' =>  __( 'Search Vendor Types' ),
+	    	'all_items' => __( 'All Vendor Types' ),
+	    	'parent_item' => __( 'Parent Vendor Type' ),
+	    	'parent_item_colon' => __( 'Parent Vendor Type:' ),
+	    	'edit_item' => __( 'Edit Vendor Type' ),
+	    	'update_item' => __( 'Update Vendor Type' ),
+	    	'add_new_item' => __( 'Add New Vendor Type' ),
+	    	'new_item_name' => __( 'New Vendor Type Name' )
 	  	); 	
 
-		$manufacturerlabels = array(
-	    	'name' => __( 'Manufacturer' ),
-	    	'singular_name' => __( 'Manufacturer' ),
-	    	'search_items' =>  __( 'Search Manufacturers' ),
-	    	'all_items' => __( 'All Manufacturers' ),
-	    	'parent_item' => __( 'Parent Manufacturer' ),
-	    	'parent_item_colon' => __( 'Parent Manufacturer:' ),
-	    	'edit_item' => __( 'Edit Manufacturer' ),
-	    	'update_item' => __( 'Update Manufacturer' ),
-	    	'add_new_item' => __( 'Add New Manufacturer' ),
-	    	'new_item_name' => __( 'New Manufacturer Name' )
-	  	); 	
-
-	  	register_taxonomy('manufacturer','products',array(
-	    	'hierarchical' => false,
-	    	'labels' => $manufacturerlabels
-	  	));
-
-	  	register_taxonomy('designer','products',array(
+	  	register_taxonomy('type','vendors',array(
 	    	'hierarchical' => false,
 	    	'labels' => $labels
 	  	));
 
-
-///Registering programs taxonomies for gallleries
-		$programlabels = array(
-	    	'name' => __( 'Program' ),
-	    	'singular_name' => __( 'Program' ),
-	    	'search_items' =>  __( 'Search Programs' ),
-	    	'all_items' => __( 'All Programs' ),
-	    	'parent_item' => __( 'Parent Program' ),
-	    	'parent_item_colon' => __( 'Parent Program:' ),
-	    	'edit_item' => __( 'Edit Program' ),
-	    	'update_item' => __( 'Update Program' ),
-	    	'add_new_item' => __( 'Add New Program' ),
-	    	'new_item_name' => __( 'New Program Name' )
-	  	);
-	  	register_taxonomy('programs','galleries',array(
-	    	'hierarchical' => true,
-	    	'labels' => $programlabels
-	  	));
 		flush_rewrite_rules( false );
 	}
 ?>
