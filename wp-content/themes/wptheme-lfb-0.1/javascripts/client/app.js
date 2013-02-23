@@ -305,9 +305,9 @@ Flexslider
 
 		console.log("		Calling update content on: " + request_url);
 		targetIndex = getIndexToFocusOn(request_url);
-		focusFlexSlider(targetIndex);
+		
 		$.ajax({
-			asynch: false,
+			asynch: true,
 			type : "post",
 			dataType : "html",
 			/* Where the request is being sent to. */
@@ -317,7 +317,9 @@ Flexslider
 				url: request_url
 			},
 			success: function(html) {
-				$(".cartogram-slider-active-slide").html(html);
+				$(".slideNum" + targetIndex).not(".clone").html(html);
+
+				focusFlexSlider(targetIndex);
 				applyJavascript(request_url);
 			},
 			error: function(response, html, something) {
