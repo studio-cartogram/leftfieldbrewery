@@ -1,13 +1,18 @@
+<section class="container bordered-main banner">
+  <div class="row ">
+    <div class="columns bg-main twelve"></div>
+  </div>
+</section>
 <section class="container">
 	<header class="row text-center">
 		<div class="columns four mobile-two">
-			<h2>Breweing Since 2013</h2>
+			<i class="icon-toronto"></i>
 		</div>
 		<hgroup class="columns four hide-for-small">
 			<h1><a href=<?php bloginfo( 'url' ); ?>><img class="logo-svg" src="<?php bloginfo('template_directory') ?>/images/logo.svg"></a></h1>
 		</hgroup>
 		<div class="columns four mobile-two">
-			<h2>Toronto &bull; Canada</h2>
+			<i class="icon-est2013"></i>
 		</div>
 	</header>
 	<div class="row">	

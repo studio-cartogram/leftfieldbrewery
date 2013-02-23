@@ -49,7 +49,6 @@
 //Iconfont
 @import "font/classes";
 @import "font/declaration";
-@import "font/icomoon";
 
 //base
 @import "base/links";
@@ -61,6 +60,7 @@
 @import "vendor/digits";
 @import "vendor/digits-default";
 @import "vendor/flexslider";
+//@import "vendor/twitter";
 
 
 
@@ -69,10 +69,11 @@
 @import "components/modules/buttons";
 @import "components/modules/reveal";
 
+//Bits
 
 //Shared
 @import "typography";
-
+@import "mixins";
 @import "helpers";
 @import "nav";
 @import "homepage";

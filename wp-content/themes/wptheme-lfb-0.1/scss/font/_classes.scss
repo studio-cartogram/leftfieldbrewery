@@ -1,3 +1,17 @@
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-phone:before, .icon-twitter:before, .icon-google-plus:before, .icon-facebook:before, .icon-untappd:before, .icon-toronto:before, .icon-tap:before, .icon-restaurant:before, .icon-newletter:before, .icon-logo:before, .icon-instagram:before, .icon-maris:before, .icon-mark:before, .icon-hover-nav:before, .icon-hover-map:before, .icon-flip-right:before, .icon-flip-left:before, .icon-est2013:before, .icon-eephus:before, .icon-close:before, .icon-brewpub:before, .icon-bar-restaurant:before, .icon-bar:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-doubleipa:before, .icon-diamond:before, .icon-diamond-stroke:before, .icon-cross:before, .icon-mail:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
 .icon-phone:before {
 	content: "\e000";
 }
