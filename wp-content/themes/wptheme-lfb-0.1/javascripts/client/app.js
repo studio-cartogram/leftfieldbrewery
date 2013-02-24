@@ -101,8 +101,8 @@ Flexslider
 	    pauseOnHover: true,
 	    slideshowSpeed: 5000,
 	    animationLoop: true,
-	    after: function (slider) {
-	    	currentSliderIndex = slider.currentSlide;
+	    after: function (slider) {	    	
+	    	// $(".flexslider").animate({opacity: 1},3000);	    	currentSliderIndex = slider.currentSlide;
 	    	console.log("The slider is currently on: " + currentSliderIndex);
 	    }
 	  });
@@ -304,9 +304,10 @@ Flexslider
 	function updateContent(request_url) {
 
 		console.log("		Calling update content on: " + request_url);
-		focusFlexSlider(request_url);
+		targetIndex = getIndexToFocusOn(request_url);
+		
 		$.ajax({
-			asynch: false,
+			asynch: true,
 			type : "post",
 			dataType : "html",
 			/* Where the request is being sent to. */
@@ -316,7 +317,9 @@ Flexslider
 				url: request_url
 			},
 			success: function(html) {
-				$(".cartogram-slider-active-slide").html(html);
+				$(".slideNum" + targetIndex).not(".clone").html(html);
+
+				focusFlexSlider(targetIndex);
 				applyJavascript(request_url);
 			},
 			error: function(response, html, something) {
@@ -326,6 +329,7 @@ Flexslider
 	}
 
 	/*
+	 * May not be using this anymore ...
 	 * Given a request url, apply javascript needed for that specific page.
 	 */
 	 function applyJavascript(request_url) {
@@ -346,34 +350,8 @@ Flexslider
 	 			//Maybe may direct calls to separate functions and use this 
 	 			//as a routing function only depending on how
 	 			//large it gets.
- 				$('.playersFlexslider').flexslider({
-				    selector: ".players_slides > li",
-				    animation: "slide",
-				    namespace: "cartogram-slider-players",
-				    prevText: "p>",
-				    nextText: "n<",
-				    directionNav: true,
-				    controlNav: true,
-				    slideshow: false,
-				    pauseOnHover: true,
-				    slideshowSpeed: 5000,
-				    animationLoop: true
-				});
-		
 	 		case "beers":
- 				$('.beersFlexslider').flexslider({
-				    selector: ".beers_slides > li",
-				    animation: "slide",
-				    namespace: "cartogram-slider-beers",
-				    prevText: "p>",
-				    nextText: "n<",
-				    directionNav: true,
-				    controlNav: true,
-				    slideshow: false,
-				    pauseOnHover: true,
-				    slideshowSpeed: 5000,
-				    animationLoop: true
-				});
+
 				break;
 			//Default will be all pages within pagination.
 	 		default:
@@ -381,13 +359,37 @@ Flexslider
 	 			break;
 	 	}
 	 }
+	$('.playersFlexslider').flexslider({
+	    selector: ".players_slides > li",
+	    animation: "slide",
+	    namespace: "cartogram-slider-players",
+	    prevText: "p>",
+	    nextText: "n<",
+	    directionNav: true,
+	    controlNav: true,
+	    slideshow: false,
+	    pauseOnHover: true,
+	    slideshowSpeed: 5000,
+	    animationLoop: true
+	});
+	$('.beersFlexslider').flexslider({
+	    selector: ".beers_slides > li",
+	    animation: "slide",
+	    namespace: "cartogram-slider-beers",
+	    prevText: "p>",
+	    nextText: "n<",
+	    directionNav: true,
+	    controlNav: true,
+	    slideshow: false,
+	    pauseOnHover: true,
+	    slideshowSpeed: 5000,
+	    animationLoop: true
+	});
 
-	/*
-	 * Given a request url, if the flexslider is not focused on its 
-	 * corresponding li within the flexslider, focus to that slide. 
-	 */ 
-	function focusFlexSlider(request_url) {
-		//Parsing request url
+ 	/* Given a request url, return the index at which the flexslider should focus on.
+ 	*/
+ 	function getIndexToFocusOn(request_url) {
+ 		//Parsing request url
 		
 		//The li the request_url corresponds to is represented in the first string before the "_"
 		var indexOfSubstring = request_url.indexOf("_");
@@ -423,6 +425,13 @@ Flexslider
 				var targetIndex = 3;
 			break;
 		}
+		return targetIndex;
+ 	}
+	/*
+	 * Given a request url, if the flexslider is not focused on its 
+	 * corresponding li within the flexslider, focus to that slide. 
+	 */ 
+	function focusFlexSlider(targetIndex) {
 
 		//If we're not already focused on the target index, then move to it.
 		if (targetIndex !== currentSliderIndex) {
@@ -430,6 +439,7 @@ Flexslider
 			console.log("				Focusing flexslider on: " + targetIndex + " from " + currentSliderIndex);
 			//If the flexslider isn't focused on the li want, focus it.
 			$('.flexslider').data('flexslider').flexAnimate(targetIndex);
+			currentSliderIndex=targetIndex;
 		} //Do not need to do anything if the flexslider is already focused on
 		//the one we want.
 

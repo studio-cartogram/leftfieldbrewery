@@ -1,3 +1,10 @@
+body {
+  background:url(../images/bg.png);
+}
+.banner > .row > .columns {
+    height:2px;
+}
+
 .wrap {
   width: 200px;
   margin: 0 auto 0px;
@@ -19,7 +26,7 @@
     }
 
     .card.flipped {
-     @include transform(rotateY( 180deg ));
+      @include transform(rotateY( 180deg ));
     }
 
     .card figure {

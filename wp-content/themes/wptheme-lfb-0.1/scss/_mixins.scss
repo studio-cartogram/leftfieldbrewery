@@ -1,0 +1,93 @@
+@mixin pinstriped {
+  background:url(../images/stripe.png);
+}
+
+@mixin double-bordered {
+  position:relative;
+  &:before, &:after {
+    height:1px;
+    background:blue;
+    content:' ';
+    position:absolute;
+    right:0;
+    left:0;
+    top:-3px;
+  }
+  &:after {
+    top:0px
+  }
+}
+
+@mixin corner($location) {
+    height:1px;
+    width:1px;
+    border-left:20px solid tranparent;
+    border-top:20px solid transparent;
+    border-bottom:20px solid transparent;
+    border-right:20px solid blue;
+    content:' ';
+    position:absolute;
+    @include rotate(45deg);
+    @if $location == top-right {
+      top:-20px;
+      right:-20px;
+      left:auto;
+      border-left:20px solid blue;
+      border-right-color:transparent;
+      @include rotate(-45deg);
+    } @else if $location == top-left {
+      left:-3px;
+      top:-13px;
+    } @else if $location == bottom-right {
+      bottom:-20px;
+      top:auto;
+      right:-20px;
+      left:auto;
+      border-left:20px solid blue;
+      border-right-color:transparent;
+    } @else if $location == bottom-left {
+      top:auto;
+      left:-3px;
+      bottom:-13px;
+      @include rotate(-45deg);
+    }
+}
+
+// .element {
+//   height:50px;
+//   width:300px;
+//   margin:10px auto;
+//   padding:20px;
+//   background:yellow;
+//   @include double-bordered();
+// }
+// .element2 {
+//   height:50px;
+//   width:300px;
+//   margin:10px auto;
+//   padding:20px;
+//   background:yellow;
+//   position:relative;
+//   span.corner-one {
+//     @include corner(top-left);
+//   }
+//   span.corner-two {
+//     @include corner(top-right);
+//   }
+//   span.corner-three {
+//     @include corner(bottom-right);
+
+//   }
+//   span.corner-four {
+//     @include corner(bottom-left);
+
+//   }
+// }
+
+// .element3 {
+//   height:50px;
+//   margin:10px auto;
+//   background:yellow;
+//   position:relative;
+//   @include pinstripe;
+// }
