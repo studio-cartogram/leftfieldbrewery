@@ -50,13 +50,19 @@
 @import "font/classes";
 @import "font/declaration";
 
+//mixins
+@import "mixins";
+
 //base
 @import "base/links";
+@import "base/typography";
 
+//asides 
+@import "asides/asides";
 
 //vendor
 @import "vendor/av-styles";
-@import "vendor/makisu";
+//@import "vendor/makisu";
 @import "vendor/digits";
 @import "vendor/digits-default";
 @import "vendor/flexslider";
@@ -72,10 +78,7 @@
 //Bits
 
 //Shared
-@import "typography";
-@import "mixins";
 @import "helpers";
-@import "nav";
 @import "homepage";
 @import "single";
 @import "screen";

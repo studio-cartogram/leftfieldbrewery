@@ -130,3 +130,41 @@
 		$content .= '<ul class="link-list social icons"><li>' . $twitter . '</li><li>' . $facebook . '</li><li>' . $mail . '</li></ul>';
 		echo $content;
 	}
+	/**
+	 * Add custom taxonomies to the post class
+	 *
+	 */
+
+    add_filter( 'post_class', 'custom_taxonomy_post_class', 10, 3 );
+
+    if( !function_exists( 'custom_taxonomy_post_class' ) ) {
+
+        function custom_taxonomy_post_class( $classes, $class, $ID ) {
+
+			$taxonomies = array('type');
+
+			foreach ($taxonomies as $taxonomy) {	 
+
+	            $terms = get_the_terms( (int) $ID, $taxonomy );
+
+	            if( !empty( $terms ) ) {
+
+	                foreach( (array) $terms as $order => $term ) {
+
+	                    if( !in_array( $term->slug, $classes ) ) {
+
+	                        $classes[] = $term->slug;
+
+	                    }
+
+	                }
+
+	            }
+	        }
+
+            return $classes;
+
+        }
+
+    }
+	

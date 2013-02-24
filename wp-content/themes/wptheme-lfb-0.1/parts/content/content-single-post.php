@@ -1,4 +1,4 @@
-<div class="row collapse highlights">
+<div class="row  highlights">
 	<div class="columns four">
 		<?php get_sidebar('highlights'); ?>
 	</div>

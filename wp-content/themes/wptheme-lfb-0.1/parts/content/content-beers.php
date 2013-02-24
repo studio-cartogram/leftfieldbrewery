@@ -16,7 +16,7 @@
 	<div class="columns eight">	
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
-				<h3 class="entry-title"><?php echo $page_title; ?></a></h3>
+				<h3 class="entry-title"><?php echo $page_title; ?></h3>
 			</header><!-- .entry-header -->
 			<div class="entry-content">
 				<?php get_template_part('parts/content/maincontent/maincontent', 'beers');?>

@@ -9,10 +9,15 @@
 ?>
 <?php $mapurl = get_post_meta($post->ID, '_cartogram_map_value', true); ?>
 <?php $address = get_post_meta($post->ID, '_cartogram_address_value', true); ?>
-
-<a id="post-<?php the_ID(); ?>" <?php post_class(); ?> href="<?php echo $mapurl; ?>" title="<?php get_the_title(); ?>" rel="bookmark">
-	<h4 class="entry-title"><?php the_title(); ?></h4>
-    <p>
-    	<?php echo $address; ?>
-    </p>
-</a>        
+<a class="row collapse flushed-right block-level" id="post-<?php the_ID(); ?>" <?php post_class(); ?> href="<?php echo $mapurl; ?>" title="<?php get_the_title(); ?>" rel="bookmark">
+	<div class="columns two icon-wrap text-center">
+		<i class="icon"></i>
+	</div>	
+	<div class="columns eight rule-right rule-left">
+			<h5><strong><?php the_title(); ?></strong></h5>
+	    	<h6><?php echo $address; ?></h6>       
+	</div>
+	<div class="columns two map-wrap text-center">
+		<h4>MAP</h4>
+	</div>
+</a> 

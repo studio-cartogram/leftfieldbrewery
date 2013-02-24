@@ -101,7 +101,7 @@
 			'rewrite' => true,
 			'capability_type' => 'post',
 			'hierarchical' => false,
-			'taxonomies' => array('category'),
+			'taxonomies' => array(),
 			'menu_position' => null,
 			'supports' => array('title')
 		); 	
@@ -127,7 +127,7 @@
 	  	); 	
 
 	  	register_taxonomy('type','vendors',array(
-	    	'hierarchical' => false,
+	    	'hierarchical' => true,
 	    	'labels' => $labels
 	  	));
 

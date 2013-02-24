@@ -1,32 +1,11 @@
 /* Normal Buttons ---------------------- */
 
   .button { 
-    &.button-outline {
-      background: $white; 
-      @include box-shadow(0 0 0 ); 
-      color: $mainColor; 
-      border:3px solid transparent;
-      @include transition(all 0.3s ease-in-out);
-      &:hover, &:focus { 
-        border: 3px solid darken($mainColor, 15%); 
-        @include transition(all 0.3s ease-in-out);
-      }
-      &.button-download {
-        position:relative;
-        margin:0;
-        border-color:$mainColor;
-        &:hover {
-          background:$mainColor;
-          color:$white;
-          border-color:$mainColor;
-        }
-        &:before {
-          @include font-size(30);
-          position:absolute;
-          left:20px;
-        }
-      }
-    }
+    @include box-shadow(0 0 0);
+    font-family:$headerFontFamily;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+
   }  
 //     /* Hovers */
 //     &:hover, &:focus { color: $white; background-color: darken(($mainColor), 10%); }

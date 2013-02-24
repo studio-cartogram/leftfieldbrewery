@@ -45,28 +45,10 @@
   color:$white;
   }
 }
-.rule {
-  position:relative;
-  &:after {
-      position:absolute;
-      left:0;
-      right:0;
-      top:auto;
-      bottom:0;
-      height:1px;
-      width:auto;
-      background:$darkEdge;
-      content: '';
-    }
-    &.rule-right:before {
-      height:100px;
-      top:0;
-      bottom:0;
-      right:0;
-      left:auto;
-      width:1px;
-    }
-}
+
+
+
+
 .border-right {
   border-right: 1px solid $darkEdge !important;
 }
@@ -87,6 +69,42 @@
   border:1px solid $mainColor;
 }
 
-.bg-main {
-  background:$mainColor;
+.bg-main {background:$mainColor;}
+.bg-cream {background:$cream;}
+.bg-navy {background:$navy;}
+
+/** 
+  * Mixin based classes
+  *
+  */ 
+
+.rule-left { @include rule(left, false) }
+
+.rule-right { @include rule(right, false) }
+
+.rule-outside-right { @include rule(right, true) }
+
+
+.double-bordered { @include double-bordered() }
+
+.double-bordered-inside { @include double-bordered(false, true) }
+
+.double-bordered-outside { @include double-bordered(true, false) }
+
+
+
+/** 
+  * Foundation Grid Hacks
+  *
+  */ 
+
+.row.flushed-right {
+  margin-right:-15px !important;
 }
+
+
+
+
+
+
+

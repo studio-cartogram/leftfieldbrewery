@@ -5,9 +5,9 @@ $vendors->query( array(
 	));
 	if ($vendors->have_posts()) : ?>	
 		<?php while ($vendors->have_posts()) : $vendors->the_post(); ?>
-		<dd>			
+		<li <?php post_class() ?>>			
 			<?php get_template_part('parts/content/content', 'vendor' ); ?>		
-		</dd>		
+		</li>		
 		<?php endwhile; ?>	
 	<?php endif; 
 ?>

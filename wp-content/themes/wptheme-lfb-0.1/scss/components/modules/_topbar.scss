@@ -1,3 +1,7 @@
+.top-bar ul > li.name a  {
+  line-height:$topBarHeightMobile;
+}
+
 .top-bar { 
 
   /* topbar global <ul> styles */
@@ -6,15 +10,16 @@
    
   }
   ul#global {
-    width:66.66667%;
+    width:67.2%;
     padding-left:5px;
      &>li { 
       width:16.66666%;
+      
       &.name a {padding:0 15px;line-height:95px;}
      
       a:not(.button) { 
         text-transform:uppercase;
-        background:$white;
+        background:$cream;
         color:$mainColor;
         line-height:$topBarHeight - 10;
         height: $topBarHeight - 10;
@@ -24,51 +29,80 @@
         @include font-size(12);
         padding:0;
         text-align:center;
+        @include  transition(transform 0.3s);
+        @include transform-style(preserve-3d);
 
       }
-      &.has-dropdown a {
-        padding-right:0;
-        &:after {
-          display:none;
+      &.has-dropdown {
+        a {
+          padding-right:0;
+          &:after {
+            display:none;
+          }
+          
+        }
+        .dropdown {
+          width:auto;
+          padding:0;
+          right:0;
+          left:-5px;
+          border-left:5px solid $navy;
+          li {
+            &:last-child {
+              padding:0;
+            }
+            a {
+              font-weight:bold;
+            }
+            &:hover, &.active, &:focus {
+              > a { 
+                @include transform(rotateX( 180deg ));
+              }
+            }
+          }
         }
       } 
-      &:not(.name), &:not(.divider) {
-        &:hover, &.active, &:focus { 
-          a { 
-            color: darken($navy, 30%);
-            background:url(../images/stripe.png);
- 
+      &:not(.name), &:not(.divider), &:not(.has-dropdown) {
+        &:hover, &.active, &:focus {
+          > a { 
+            color: $black;
+            background:$white;
+            @include transform(rotateX( 180deg ));
           }
+        }
+        &.current-menu-item > a, &.current-menu-item:hover > a {
+          background:url(../images/stripe.png);
+          color: darken($navy, 30%);
+          @include transform(rotateX( 0deg ));
+          cursor:default;
+
         }
       }
     }
   }
   ul#social {
-    width:33.33333%;
+    width:32.8%;
     &>li { 
       width:20%;
       text-align:center;
-      line-height:0;
       position:relative;
       &:hover {
         background:$navy;
       }
       &:before {
         position: absolute;
-        top: -127px;
+        top: 10px;
         left: 50%;
         color: white;
         margin: 0;
         padding: 0;
-        line-height: 0;
-        @include font-size(22);
+        @include font-size(20);
         margin-left: -11px;
       }
       a {
         border-right:1px solid;
         text-indent:-9999px;
         padding:0;
-        line-height:0;
         &:hover {
           background:$navy;
         }

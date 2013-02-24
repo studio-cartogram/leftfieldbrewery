@@ -1,8 +1,16 @@
 body {
   background:url(../images/bg.png);
 }
-.banner > .row > .columns {
-    height:2px;
+.banner > .row {
+  position:relative;
+  height:3px;
+  > .columns {
+    height:3px;
+    right:15px;
+    left:15px;
+    position:absolute;
+    width:auto;
+  }
 }
 
 .wrap {

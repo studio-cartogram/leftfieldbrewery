@@ -45,7 +45,7 @@ html[xmlns] .slides {display: block;}
 .flexslider .slides {zoom: 1;}
 
 .carousel li {margin-right: 5px}
-.flexslider .slides li {
+.flexslider .slides > li {
 	@include opacity(0.5);
 	&.cartogram-slider-active-slide {
 		@include opacity(1);
