@@ -80,33 +80,4 @@
       }
     }
   }
-  ul#social {
-    width:32.8%;
-    &>li { 
-      width:20%;
-      text-align:center;
-      position:relative;
-      &:hover {
-        background:$navy;
-      }
-      &:before {
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        color: white;
-        margin: 0;
-        padding: 0;
-        @include font-size(20);
-        margin-left: -11px;
-      }
-      a {
-        border-right:1px solid;
-        text-indent:-9999px;
-        padding:0;
-        &:hover {
-          background:$navy;
-        }
-      }
-    }
-  }
 }

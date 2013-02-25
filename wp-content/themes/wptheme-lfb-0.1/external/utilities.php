@@ -111,8 +111,8 @@
 	 */
 	 function more_link() {
 		global $post;	
-		$more_link = '<p class="moreLink"><a href="'.get_permalink().'" title="'.get_the_title().'">';
-		$more_link .= '<span>Read More</span>';
+		$more_link = '<p class="link-more"><a href="'.get_permalink().'" title="'.get_the_title().'">';
+		$more_link .= 'Read More';
 		$more_link .= '</a></p>';
 		echo $more_link;	
 	}

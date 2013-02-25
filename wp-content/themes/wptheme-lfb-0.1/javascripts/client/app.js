@@ -11,8 +11,26 @@ Show Splash Page Modal
 		'closeOnBackgroundClick' : false,
 		'animation' : 'fade'
 	});
-  
 
+/* ========================================================================================================================
+  
+Grab The twitter Feed
+
+======================================================================================================================== */
+  
+	$("#twitter").getTwitter({
+		userName: "lfbrewery",
+		numTweets: 1,
+		loaderText: "Loading tweets...",
+		slideIn: false,
+		slideDuration: 750,
+		showHeading: false,
+		headingText: "Latest Tweets",
+		showProfileLink: false,
+		showTimestamp: true,
+		includeRetweets: false,
+		excludeReplies: true
+	});
 
 /* ========================================================================================================================
   
@@ -260,7 +278,7 @@ Flexslider
 
 	//Add toggle events for back and front of cards.
 	$(".flip").live("click", function() {
-		$(this).siblings('.card-container').find('.card').toggleClass('flipped');
+		$(this).parent().toggleClass('flipped');
 	});
 
 	/**
@@ -339,8 +357,8 @@ Flexslider
 	 			break;
 	 	}
 	 }
-	$('.playersFlexslider').flexslider({
-	    selector: ".players_slides > li",
+	$('.flexslider-players').flexslider({
+	    selector: ".slides-players > li",
 	    animation: "slide",
 	    namespace: "cartogram-slider-players",
 	    prevText: "p>",

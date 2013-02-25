@@ -5,6 +5,13 @@
     font-family:$headerFontFamily;
     text-transform:uppercase;
     letter-spacing:0.03em;
+    @include box-shadow(0 0 0);
+    letter-spacing:0.1em;
+    @include font-size(12);
+    &:hover {
+      background:$white;
+      color:$navy;
+    }
 
   }  
 //     /* Hovers */

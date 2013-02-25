@@ -1,4 +1,37 @@
 @charset "UTF-8";
+/* line 51, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
+.gform_body, .gform_body .gform_fields li .ginput_complex span, .gform_footer {
+  float: left;
+}
+
+/* line 55, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
+.gform_wrapper, .gform_body .gform_fields li {
+  *zoom: 1;
+}
+/* line 4, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
+.gform_wrapper:before, .gform_body .gform_fields li:before, .gform_wrapper:after, .gform_body .gform_fields li:after {
+  content: "";
+  display: table;
+}
+/* line 5, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
+.gform_wrapper:after, .gform_body .gform_fields li:after {
+  clear: both;
+}
+
+/* line 59, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
+.gform_wrapper, .gform_body .gform_fields li {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+}
+
+/* line 62, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
+.gform_body, .gform_body .gform_fields li .ginput_complex span, .gform_footer {
+  position: relative;
+  min-height: 1px;
+  padding: 0 15px;
+}
+
 /* Requires: normalize.css */
 /* Global Reset & Standards ---------------------- */
 /* line 5, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_globals.scss */
@@ -17,7 +50,7 @@ html {
 body {
   background: white;
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1;
   color: #222222;
   position: relative;
@@ -127,28 +160,28 @@ figure {
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 12px;
   direction: ltr;
 }
 
 /* line 10, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 p {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 12px;
   line-height: 1.6;
   margin-bottom: 17px;
 }
 /* line 11, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 p.lead {
-  font-size: 17.5px;
+  font-size: 15px;
   line-height: 1.6;
   margin-bottom: 17px;
 }
 
 /* line 13, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 aside p {
-  font-size: 13px;
+  font-size: 11px;
   line-height: 1.35;
   font-style: italic;
 }
@@ -160,8 +193,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #0c223f;
   text-rendering: optimizeLegibility;
   line-height: 1.1;
-  margin-bottom: 14px;
-  margin-top: 14px;
+  margin-bottom: 12px;
+  margin-top: 12px;
 }
 /* line 23, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
@@ -177,7 +210,7 @@ h1 {
 
 /* line 27, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 h2 {
-  font-size: 37px;
+  font-size: 31px;
 }
 
 /* line 28, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
@@ -187,7 +220,7 @@ h3 {
 
 /* line 29, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 h4 {
-  font-size: 23px;
+  font-size: 19px;
 }
 
 /* line 30, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
@@ -197,7 +230,7 @@ h5 {
 
 /* line 31, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 h6 {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* line 33, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
@@ -244,7 +277,7 @@ code {
 /* Lists ---------------------- */
 /* line 43, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 ul, ol {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.6;
   margin-bottom: 17px;
   list-style-position: inside;
@@ -314,7 +347,7 @@ blockquote {
 /* line 70, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
 blockquote cite {
   display: block;
-  font-size: 13px;
+  font-size: 11px;
   color: #1c5095;
 }
 /* line 71, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
@@ -436,16 +469,16 @@ abbr {
 /* Standard Forms ---------------------- */
 /* line 6, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
 form {
-  margin: 0 0 24.27051px;
+  margin: 0 0 32.36068px;
 }
 
 /* line 8, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
 .row form .row, #av-overlay #av_verify_form p form .row, .row form #av-overlay #av_verify_form p, #av-overlay #av_verify_form .row form p, #av-overlay #av_verify_form p form p {
-  margin: 0 -7.5px;
+  margin: 0 -10px;
 }
 /* line 10, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
 .row form .row .column, #av-overlay #av_verify_form p form .row .column, .row form #av-overlay #av_verify_form p .column, #av-overlay #av_verify_form .row form p .column, #av-overlay #av_verify_form p form p .column, .row form .row .columns, #av-overlay #av_verify_form p form .row .columns, .row form #av-overlay #av_verify_form p .columns, #av-overlay #av_verify_form .row form p .columns, #av-overlay #av_verify_form p form p .columns {
-  padding: 0 7.5px;
+  padding: 0 10px;
 }
 /* line 12, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
 .row form .row.collapse, #av-overlay #av_verify_form p form .row.collapse, .row form #av-overlay #av_verify_form p.collapse, #av-overlay #av_verify_form .row form p.collapse, #av-overlay #av_verify_form p form p.collapse {
@@ -458,7 +491,7 @@ form {
 
 /* line 17, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
 label {
-  font-size: 14px;
+  font-size: 12px;
   color: #4d4d4d;
   cursor: pointer;
   display: block;
@@ -472,8 +505,8 @@ label.right {
 }
 /* line 20, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
 label.inline {
-  line-height: 36.5px;
-  margin: 0 0 15px 0;
+  line-height: 42px;
+  margin: 0 0 20px 0;
 }
 
 @media only screen and (max-width: 767px) {
@@ -491,8 +524,8 @@ label.inline {
   width: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  height: 36.5px;
-  line-height: 35.5px;
+  height: 42px;
+  line-height: 41px;
 }
 
 /* line 28, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
@@ -545,10 +578,10 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.75);
   display: block;
-  font-size: 14px;
-  margin: 0 0 15px 0;
-  padding: 7.5px;
-  height: 36.5px;
+  font-size: 12px;
+  margin: 0 0 20px 0;
+  padding: 10px;
+  height: 42px;
   width: 100%;
   -webkit-transition: all 0.15s linear;
   -moz-transition: all 0.15s linear;
@@ -558,7 +591,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 /* line 36, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
 input[type="text"].oversize, input[type="password"].oversize, input[type="date"].oversize, input[type="datetime"].oversize, input[type="email"].oversize, input[type="number"].oversize, input[type="search"].oversize, input[type="tel"].oversize, input[type="time"].oversize, input[type="url"].oversize, textarea.oversize {
   font-size: 17px;
-  padding: 5.5px 7.5px;
+  padding: 8px 10px;
 }
 /* line 38, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
 input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus {
@@ -616,8 +649,8 @@ fieldset legend {
 .error small, small.error {
   display: block;
   padding: 6px 4px;
-  margin-top: -16px;
-  margin-bottom: 15px;
+  margin-top: -21px;
+  margin-bottom: 20px;
   background: #c60f13;
   color: #fff;
   font-size: 12px;
@@ -862,7 +895,7 @@ form.custom div.custom.dropdown ul {
 /* line 105, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
 form.custom div.custom.dropdown ul li {
   color: #555;
-  font-size: 13px;
+  font-size: 11px;
   cursor: pointer;
   padding: 3px;
   padding-left: 6px;
@@ -1531,7 +1564,7 @@ that IE7/8 do not support :nth-child.
   cursor: pointer;
   display: inline-block;
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   line-height: 1;
   margin: 0;
@@ -1576,16 +1609,16 @@ that IE7/8 do not support :nth-child.
 }
 /* line 15, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.medium, #av-overlay .submit input.medium[type=submit] {
-  font-size: 14px;
+  font-size: 12px;
 }
 /* line 16, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.small, #av-overlay .submit input.small[type=submit] {
-  font-size: 11px;
+  font-size: 9px;
   padding: 7px 14px 8px;
 }
 /* line 17, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
 .button.tiny, #av-overlay .submit input.tiny[type=submit] {
-  font-size: 10px;
+  font-size: 8px;
   padding: 5px 10px 6px;
 }
 /* line 18, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
@@ -1869,8 +1902,8 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
 .button.dropdown > ul li a, #av-overlay .submit input.dropdown[type=submit] > ul li a {
   display: block;
   color: #555;
-  font-size: 13px;
-  font-weight: 800;
+  font-size: 11px;
+  font-weight: 500;
   padding: 6px 14px;
   text-align: left;
 }
@@ -2330,7 +2363,7 @@ div.button-bar ul.button-group:last-child {
   padding: 0 20px;
   display: block;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
 }
 /* line 34, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_navbar.scss */
 .nav-bar > li > input {
@@ -2398,7 +2431,7 @@ div.button-bar ul.button-group:last-child {
 /* line 53, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_navbar.scss */
 .flyout p {
   line-height: 1.2;
-  font-size: 13px;
+  font-size: 11px;
 }
 /* line 54, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_navbar.scss */
 .flyout *:first-child {
@@ -2448,7 +2481,7 @@ ul.flyout li a, .nav-bar li ul li a {
   border-width: 1px 1px 0 0;
   color: #555;
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   height: auto;
   line-height: 1;
   padding: 15px 20px;
@@ -2724,7 +2757,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
   float: left;
-  font-size: 13px;
+  font-size: 11px;
   margin-top: -1px;
   height: 19px;
 }
@@ -2738,7 +2771,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
   float: left;
-  font-size: 12px;
+  font-size: 10px;
   margin-top: -1px;
   padding: 5px 12px 4px;
 }
@@ -2819,7 +2852,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 /* line 87, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar ul > li.has-dropdown .dropdown li label {
   color: #2467c0;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: bold;
   margin: 0;
   padding-left: 12.66667px;
@@ -3105,7 +3138,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   .top-bar ul li.has-dropdown.moved .dropdown li label {
     margin-bottom: 6px;
     padding-top: 6px !important;
-    font-size: 11px;
+    font-size: 9px;
   }
   /* line 192, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown.moved .dropdown li:not(.title) {
@@ -3114,7 +3147,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   /* line 193, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown.moved .dropdown li:not(.title) a {
     padding: 8px 19px;
-    font-size: 14px;
+    font-size: 12px;
   }
   /* line 195, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar ul li.has-dropdown.moved .dropdown li a, .top-bar ul li.has-dropdown.moved .dropdown li label {
@@ -3160,7 +3193,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   .top-bar ul li.has-dropdown.moved .back.title h5 a {
     padding-top: 8px;
     padding-bottom: 8px;
-    font-size: 23px;
+    font-size: 19px;
     font-weight: bold;
   }
   /* line 210, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
@@ -3699,7 +3732,7 @@ dl.tabs dt {
   cursor: default;
   display: block;
   float: left;
-  font-size: 12px;
+  font-size: 10px;
   height: 60px;
   line-height: 60px;
   padding: 0;
@@ -3724,7 +3757,7 @@ dl.tabs dd {
 dl.tabs dd a {
   color: #6f6f6f;
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   height: 60px;
   line-height: 60px;
   padding: 0px 23.8px;
@@ -3774,7 +3807,7 @@ dl.tabs.vertical dd a {
   border-width: 1px 1px 0 0;
   color: #555;
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   height: auto;
   line-height: 1;
   padding: 15px 20px;
@@ -4195,7 +4228,7 @@ div.alert-box, #av-overlay .error {
   display: block;
   padding: 6px 7px 7px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   color: white;
   background-color: #0c223f;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -4245,7 +4278,7 @@ div.alert-box a.close:hover, #av-overlay .error a.close:hover, div.alert-box a.c
 /* line 158, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 .label {
   padding: 1px 4px 2px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
@@ -4541,7 +4574,7 @@ ul.side-nav {
 ul.side-nav li {
   display: block;
   list-style: none;
-  margin: 0 0 7px 0;
+  margin: 0 0 6px 0;
 }
 /* line 261, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 ul.side-nav li a {
@@ -4580,7 +4613,7 @@ dl.sub-nav dt, dl.sub-nav dd {
 /* line 272, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 dl.sub-nav dt {
   color: #999;
-  font-weight: 800;
+  font-weight: 500;
 }
 /* line 273, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 dl.sub-nav dd a {
@@ -4613,7 +4646,7 @@ ul.pagination li {
   display: block;
   height: 24px;
   color: #999;
-  font-size: 14px;
+  font-size: 12px;
   margin-left: 5px;
 }
 /* line 284, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
@@ -4736,7 +4769,7 @@ ul.link-list li a {
 /* line 328, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
 .keystroke, kbd {
   font-family: "Consolas", "Menlo", "Courier", monospace;
-  font-size: 13px;
+  font-size: 11px;
   padding: 2px 4px 0px;
   margin: 0;
   background: #ededed;
@@ -4836,7 +4869,7 @@ table tfoot tr th,
 table tbody tr td,
 table tr td,
 table tfoot tr td {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
   text-align: left;
 }
@@ -4845,7 +4878,7 @@ table tfoot tr td {
 table thead tr th,
 table tfoot tr td {
   padding: 8px 10px 9px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #222;
 }
@@ -4981,7 +5014,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
 /* line 7, ../scss/font/_classes.scss */
-.icon-phone:before, .icon-twitter:before, .icon-google-plus:before, .icon-facebook:before, .icon-envelope-alt:before, .icon-map-marker:before, .icon-bubbles:before, .icon-bubbles-2:before, .icon-untappd:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-toronto:before, .icon-tap:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-arrow-left:before, .icon-doubleipa:before, .icon-mark:before, .icon-maris:before, .icon-mail:before, .icon-logo:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-est2013:before, .icon-eephus:before, .icon-diamond:before, .icon-diamond-stroke:before, .icon-cross:before, .icon-close:before {
+.icon-phone:before, .icon-twitter:before, .icon-google-plus:before, .icon-facebook:before, .icon-envelope-alt:before, .icon-map-marker:before, .icon-bubbles:before, .icon-bubbles-2:before, .icon-untappd:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-toronto:before, .icon-tap:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-arrow-left:before, .icon-doubleipa:before, .icon-mark:before, .icon-maris:before, .icon-mail:before, .icon-logo:before, .icon-instagram:before, .icon-flip-right:before, .card-container .card .flip:before, .icon-flip-left:before, .card-container .card.flipped .flip:before, .icon-est2013:before, .icon-eephus:before, .icon-diamond:before, .icon-diamond-stroke:before, .icon-cross:before, .icon-close:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -5111,12 +5144,12 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 87, ../scss/font/_classes.scss */
-.icon-flip-right:before {
+.icon-flip-right:before, .card-container .card .flip:before {
   content: "\e014";
 }
 
 /* line 90, ../scss/font/_classes.scss */
-.icon-flip-left:before {
+.icon-flip-left:before, .card-container .card.flipped .flip:before {
   content: "\e015";
 }
 
@@ -5171,87 +5204,249 @@ you can use the generic selector below, but it's slower:
 
 /* line 2, ../scss/base/_links.scss */
 a:hover {
-  color: #546478;
+  color: #ff4337;
 }
 
-/* line 1, ../scss/base/_typography.scss */
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
+/* line 7, ../scss/base/_links.scss */
+p a {
+  border-bottom: 1px solid;
 }
-/* line 3, ../scss/base/_typography.scss */
-h1.collapse, h2.collapse, h3.collapse, h4.collapse, h5.collapse, h6.collapse {
+
+/* line 2, ../scss/base/_typography.scss */
+h1.collapse, h2.collapse, h3.collapse, h4.collapse, h5.collapse, h6.collapse, p.collapse, span.collapse, a.collapse {
   margin: 0;
 }
-/* line 6, ../scss/base/_typography.scss */
-h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
+/* line 5, ../scss/base/_typography.scss */
+h1.light, h2.light, h3.light, h4.light, h5.light, h6.light, p.light, span.light, a.light {
   color: white;
 }
+/* line 8, ../scss/base/_typography.scss */
+h1.text-small, h2.text-small, h3.text-small, h4.text-small, h5.text-small, h6.text-small, p.text-small, span.text-small, a.text-small {
+  font-size: 11px;
+  font-size: 1.1rem;
+}
 
-/* line 12, ../scss/base/_typography.scss */
+/* line 14, ../scss/base/_typography.scss */
 p.lead {
   font-weight: 500;
   line-height: 1.4;
 }
 
-/* line 18, ../scss/base/_typography.scss */
+/* line 20, ../scss/base/_typography.scss */
 h1 {
   font-size: 18px;
   font-size: 1.8rem;
   letter-spacing: 0.03em;
 }
-/* line 21, ../scss/base/_typography.scss */
+/* line 23, ../scss/base/_typography.scss */
 h1.title {
   margin-top: 50px;
 }
 
-/* line 26, ../scss/base/_typography.scss */
+/* line 28, ../scss/base/_typography.scss */
 h2 {
-  font-size: 16px;
-  font-size: 1.6rem;
-  letter-spacing: 0.03em;
+  font-size: 24px;
+  font-size: 2.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-/* line 31, ../scss/base/_typography.scss */
+/* line 34, ../scss/base/_typography.scss */
 h3 {
   font-size: 12px;
   font-size: 1.2rem;
   letter-spacing: 0.03em;
-  text-align: center;
   margin: 0;
-  padding: 10px;
+  padding: 10px 0;
+  text-transform: uppercase;
 }
 
-/* line 39, ../scss/base/_typography.scss */
+/* line 42, ../scss/base/_typography.scss */
 h4 {
   font-size: 12px;
   font-size: 1.2rem;
-  letter-spacing: 0.03em;
-  margin: 0;
+  text-transform: none;
+  margin: 0 0 0;
   padding: 10px;
 }
 
-/* line 45, ../scss/base/_typography.scss */
+/* line 48, ../scss/base/_typography.scss */
 h5 {
-  font-size: 11px;
-  font-size: 1.1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: none;
   margin: 15px 0 0 0;
-  padding: 0 15px;
 }
 
-/* line 53, ../scss/base/_typography.scss */
+/* line 55, ../scss/base/_typography.scss */
 h6 {
-  font-size: 11px;
-  font-size: 1.1rem;
+  line-height: 1.6;
+  font-size: 12px;
+  font-size: 1.2rem;
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: none;
   margin: 0 0 15px;
-  padding: 3px 15px;
+  padding-top: 5px;
   font-weight: normal;
 }
 
-/* line 1, ../scss/asides/_asides.scss */
+/* line 66, ../scss/base/_typography.scss */
+.icon-with-space {
+  position: relative;
+  padding-left: 20px;
+}
+/* line 69, ../scss/base/_typography.scss */
+.icon-with-space:before {
+  font-size: 14px;
+  font-size: 1.4rem;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+/* line 78, ../scss/base/_typography.scss */
+.inner-text {
+  padding: 0 20px;
+}
+
+/* line 83, ../scss/base/_typography.scss */
+.format-text h1, .format-text h2, .format-text h3, .format-text h4, .format-text h5, .format-text h6, .format-text p {
+  padding: 0 20px;
+}
+
+/* line 88, ../scss/base/_typography.scss */
+.post-text {
+  padding-bottom: 20px;
+  background: #fefcf8;
+}
+/* line 93, ../scss/base/_typography.scss */
+.post-text h2 {
+  position: relative;
+  padding: 30px 40px 10px;
+  margin-top: 40px;
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+/* line 3, ../scss/_mixins.scss */
+.post-text h2:before, .post-text h2:after {
+  height: 1px;
+  background: #0c223f;
+  content: ' ';
+  position: absolute;
+  right: 0px;
+  left: 0;
+  top: -3px;
+}
+/* line 24, ../scss/_mixins.scss */
+.post-text h2:after {
+  top: 0px;
+}
+/* line 99, ../scss/base/_typography.scss */
+.post-text h2:first-of-type {
+  margin-top: 0;
+}
+/* line 103, ../scss/base/_typography.scss */
+.post-text p {
+  font-size: 16px;
+  font-size: 1.6rem;
+  padding: 0 40px;
+}
+
+/* line 1, ../scss/parts/_footer.scss */
+.footer {
+  background-color: #0c223f;
+  color: white;
+}
+/* line 4, ../scss/parts/_footer.scss */
+.footer h3, .footer a {
+  color: white;
+}
+/* line 7, ../scss/parts/_footer.scss */
+.footer h3 {
+  padding-top: 25px;
+}
+
+/* line 12, ../scss/parts/_footer.scss */
+.credit {
+  background-color: #0c223f;
+  color: white;
+  border-top: 1px solid white;
+}
+/* line 16, ../scss/parts/_footer.scss */
+.credit p {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+
+/* line 1, ../scss/parts/_social.scss */
+ul#social {
+  width: 32.8%;
+}
+/* line 3, ../scss/parts/_social.scss */
+ul#social > li {
+  width: 20%;
+  text-align: center;
+  position: relative;
+}
+/* line 7, ../scss/parts/_social.scss */
+ul#social > li:hover {
+  background: #0c223f;
+}
+/* line 10, ../scss/parts/_social.scss */
+ul#social > li:before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-size: 2rem;
+  margin-left: -11px;
+}
+/* line 20, ../scss/parts/_social.scss */
+ul#social > li a {
+  border-right: 1px solid;
+  text-indent: -9999px;
+  padding: 0;
+}
+/* line 24, ../scss/parts/_social.scss */
+ul#social > li a:hover {
+  background: #0c223f;
+}
+
+/* line 30, ../scss/parts/_social.scss */
+.footer ul#social {
+  width: 100%;
+  padding-bottom: 20px;
+  *zoom: 1;
+}
+/* line 4, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
+.footer ul#social:before, .footer ul#social:after {
+  content: "";
+  display: table;
+}
+/* line 5, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
+.footer ul#social:after {
+  clear: both;
+}
+/* line 34, ../scss/parts/_social.scss */
+.footer ul#social > li {
+  display: block;
+  float: left;
+}
+/* line 37, ../scss/parts/_social.scss */
+.footer ul#social > li a {
+  border-right: none;
+  display: block;
+}
+
+/* line 1, ../scss/parts/_asides.scss */
 .vendor-listing {
   position: relative;
   background: #fefcf8;
@@ -5273,40 +5468,27 @@ h6 {
 .vendor-listing:after {
   top: 0px;
 }
-/* line 6, ../scss/asides/_asides.scss */
+/* line 6, ../scss/parts/_asides.scss */
 .vendor-listing .lead {
   position: relative;
   padding: 20px 0 20px 80px;
   margin: 0;
   position: relative;
-  position: relative;
   color: #0c223f;
 }
-/* line 67, ../scss/_mixins.scss */
+/* line 68, ../scss/_mixins.scss */
 .vendor-listing .lead:before {
   position: absolute;
   content: '';
   height: auto;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: -1px;
+  z-index: 10;
   width: 1px;
   background: #0c223f;
 }
-/* line 82, ../scss/_mixins.scss */
-.vendor-listing .lead:after {
-  position: absolute;
-  content: '';
-  height: auto;
-  top: 0;
-  bottom: 0;
-  left: auto;
-  right: 0px;
-  width: 1px;
-  background: #0c223f;
-  right: -15px;
-}
-/* line 15, ../scss/asides/_asides.scss */
+/* line 14, ../scss/parts/_asides.scss */
 .vendor-listing .icon-tap {
   font-size: 60px;
   font-size: 6rem;
@@ -5315,17 +5497,17 @@ h6 {
   top: 5px;
   color: #0c223f;
 }
-/* line 22, ../scss/asides/_asides.scss */
+/* line 21, ../scss/parts/_asides.scss */
 .vendor-listing ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 26, ../scss/asides/_asides.scss */
+/* line 25, ../scss/parts/_asides.scss */
 .vendor-listing ul li {
   position: relative;
 }
-/* line 28, ../scss/asides/_asides.scss */
+/* line 27, ../scss/parts/_asides.scss */
 .vendor-listing ul li a.block-level {
   display: block;
   overflow: hidden;
@@ -5346,11 +5528,11 @@ h6 {
 .vendor-listing ul li:after {
   top: 0px;
 }
-/* line 34, ../scss/asides/_asides.scss */
+/* line 33, ../scss/parts/_asides.scss */
 .vendor-listing ul li .icon-wrap {
   position: relative;
 }
-/* line 82, ../scss/_mixins.scss */
+/* line 87, ../scss/_mixins.scss */
 .vendor-listing ul li .icon-wrap:after {
   position: absolute;
   content: '';
@@ -5362,7 +5544,7 @@ h6 {
   width: 1px;
   background: #0c223f;
 }
-/* line 37, ../scss/asides/_asides.scss */
+/* line 36, ../scss/parts/_asides.scss */
 .vendor-listing ul li .icon {
   font-size: 20px;
   font-size: 2rem;
@@ -5371,15 +5553,15 @@ h6 {
   margin: auto;
   display: block;
 }
-/* line 48, ../scss/asides/_asides.scss */
+/* line 47, ../scss/parts/_asides.scss */
 .vendor-listing ul li .rule-right {
   position: static;
 }
-/* line 50, ../scss/asides/_asides.scss */
+/* line 49, ../scss/parts/_asides.scss */
 .vendor-listing ul li .rule-right:after {
   right: -15px;
 }
-/* line 54, ../scss/asides/_asides.scss */
+/* line 53, ../scss/parts/_asides.scss */
 .vendor-listing ul li .map-wrap {
   height: 52px;
   opacity: 0;
@@ -5391,13 +5573,235 @@ h6 {
   position: relative;
   left: -2px;
 }
-/* line 61, ../scss/asides/_asides.scss */
+/* line 60, ../scss/parts/_asides.scss */
 .vendor-listing ul li .map-wrap h4 {
   padding: 20px 0;
 }
-/* line 65, ../scss/asides/_asides.scss */
+/* line 64, ../scss/parts/_asides.scss */
 .vendor-listing ul li:hover .map-wrap {
   opacity: 1;
+}
+
+/* line 71, ../scss/parts/_asides.scss */
+.slides-players {
+  margin: 0;
+  list-style: none;
+}
+
+/* line 75, ../scss/parts/_asides.scss */
+.card-container {
+  position: relative;
+  margin: 0 auto 0px;
+  height: 500px;
+  width: 100%;
+}
+/* line 80, ../scss/parts/_asides.scss */
+.card-container .card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+/* line 87, ../scss/parts/_asides.scss */
+.card-container .card .flip {
+  position: absolute;
+  z-index: 10;
+  font-size: 23px;
+  font-size: 2.3rem;
+  color: white;
+  position: absolute;
+  right: 4px;
+}
+/* line 97, ../scss/parts/_asides.scss */
+.card-container .card figure {
+  display: block;
+  height: 100%;
+  width: auto;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+/* line 109, ../scss/parts/_asides.scss */
+.card-container .card.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* line 111, ../scss/parts/_asides.scss */
+.card-container .card.flipped .flip {
+  -webkit-transform: rotateY(185deg);
+  -moz-transform: rotateY(185deg);
+  -ms-transform: rotateY(185deg);
+  -o-transform: rotateY(185deg);
+  transform: rotateY(185deg);
+}
+/* line 117, ../scss/parts/_asides.scss */
+.card-container .card .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  padding: 20px;
+  background: #0c223f;
+  text-align: center;
+}
+/* line 122, ../scss/parts/_asides.scss */
+.card-container .card .back p, .card-container .card .back h2 {
+  color: white;
+}
+/* line 126, ../scss/parts/_asides.scss */
+.card-container .button, .card-container #av-overlay .submit input[type=submit], #av-overlay .submit .card-container input[type=submit] {
+  top: 100%;
+  margin-top: -100px;
+  width: 100%;
+}
+
+/* line 1, ../scss/parts/_gravity-forms.scss */
+.gform_wrapper {
+  margin: 0;
+}
+/* line 3, ../scss/parts/_gravity-forms.scss */
+.gform_wrapper form {
+  *zoom: 1;
+}
+/* line 4, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
+.gform_wrapper form:before, .gform_wrapper form:after {
+  content: "";
+  display: table;
+}
+/* line 5, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
+.gform_wrapper form:after {
+  clear: both;
+}
+
+/* line 8, ../scss/parts/_gravity-forms.scss */
+.gform_body {
+  width: 75%;
+  position: relative;
+  padding: 0;
+}
+/* line 87, ../scss/_mixins.scss */
+.gform_body:after {
+  position: absolute;
+  content: '';
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0px;
+  width: 1px;
+  background: white;
+}
+/* line 14, ../scss/parts/_gravity-forms.scss */
+.gform_body .gform_fields {
+  list-style: none;
+  margin: 0;
+}
+/* line 17, ../scss/parts/_gravity-forms.scss */
+.gform_body .gform_fields li {
+  margin: 0;
+}
+/* line 19, ../scss/parts/_gravity-forms.scss */
+.gform_body .gform_fields li .ginput_complex {
+  *zoom: 1;
+}
+/* line 4, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
+.gform_body .gform_fields li .ginput_complex:before, .gform_body .gform_fields li .ginput_complex:after {
+  content: "";
+  display: table;
+}
+/* line 5, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
+.gform_body .gform_fields li .ginput_complex:after {
+  clear: both;
+}
+/* line 21, ../scss/parts/_gravity-forms.scss */
+.gform_body .gform_fields li .ginput_complex span {
+  width: 50%;
+  padding: 0;
+}
+/* line 28, ../scss/parts/_gravity-forms.scss */
+.gform_body label {
+  display: none;
+}
+/* line 31, ../scss/parts/_gravity-forms.scss */
+.gform_body input {
+  background-color: transparent;
+  margin: 0px;
+  border: none;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+  color: white;
+}
+/* line 40, ../scss/parts/_gravity-forms.scss */
+.gform_body input:active, .gform_body input:focus {
+  background-color: white;
+  color: #0c223f;
+  border-color: white;
+}
+
+/* line 49, ../scss/parts/_gravity-forms.scss */
+.gform_footer {
+  padding: 0;
+  width: 25%;
+}
+/* line 53, ../scss/parts/_gravity-forms.scss */
+.gform_footer .button, .gform_footer #av-overlay .submit input[type=submit], #av-overlay .submit .gform_footer input[type=submit] {
+  height: 85px;
+  border: 1px solid white;
+  border-left: none;
+  width: 100%;
+  font-weight: normal;
+}
+/* line 59, ../scss/parts/_gravity-forms.scss */
+.gform_footer .button:hover, .gform_footer #av-overlay .submit input[type=submit]:hover, #av-overlay .submit .gform_footer input[type=submit]:hover {
+  background: white;
+  color: #0c223f;
+}
+/* line 64, ../scss/parts/_gravity-forms.scss */
+.gform_footer img {
+  position: absolute;
+  bottom: -25px;
+  left: 10px;
+}
+
+/* line 71, ../scss/parts/_gravity-forms.scss */
+.validation_message {
+  background: white;
+  color: #0c223f;
+  padding: 0 9px;
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+
+/* line 79, ../scss/parts/_gravity-forms.scss */
+.validation_error {
+  font-weight: bold;
+  line-height: 1.4;
 }
 
 /* line 1, ../scss/vendor/_av-styles.scss */
@@ -5628,15 +6032,17 @@ h6 {
  * Contributing author: Tyler Smith (@mbmufffin)
  */
 /* Browser Resets */
-/* line 17, ../scss/vendor/_flexslider.scss */
+/* line 20, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-container a:active,
 .flexslider a:active,
 .cartogram-slider-container a:focus,
-.flexslider a:focus {
+.flexslider a:focus,
+.cartogram-slider-players-container a:active,
+.cartogram-slider-players a:active {
   outline: none;
 }
 
-/* line 20, ../scss/vendor/_flexslider.scss */
+/* line 23, ../scss/vendor/_flexslider.scss */
 .slides,
 .cartogram-slider-control-nav,
 .cartogram-slider-direction-nav {
@@ -5647,33 +6053,33 @@ h6 {
 
 /* FlexSlider Necessary Styles
 *********************************/
-/* line 24, ../scss/vendor/_flexslider.scss */
-.flexslider {
+/* line 27, ../scss/vendor/_flexslider.scss */
+.flexslider, .flexslider-players {
   margin: 0;
   padding: 0;
 }
 
-/* line 25, ../scss/vendor/_flexslider.scss */
-.flexslider .slides > li {
+/* line 28, ../scss/vendor/_flexslider.scss */
+.flexslider .slides > li, .cartogram-slider-players .slides-players > li {
   position: relative;
   display: none;
   -webkit-backface-visibility: hidden;
 }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
-/* line 26, ../scss/vendor/_flexslider.scss */
-.flexslider .slides img {
+/* line 29, ../scss/vendor/_flexslider.scss */
+.flexslider .slides img, .cartogram-slider-players .slides-players img {
   width: 100%;
   display: block;
 }
 
-/* line 27, ../scss/vendor/_flexslider.scss */
+/* line 30, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-pauseplay span {
   text-transform: capitalize;
 }
 
 /* Clearfix for the .slides element */
-/* line 30, ../scss/vendor/_flexslider.scss */
+/* line 33, ../scss/vendor/_flexslider.scss */
 .slides:after {
   content: ".";
   display: block;
@@ -5683,12 +6089,12 @@ h6 {
   height: 0;
 }
 
-/* line 31, ../scss/vendor/_flexslider.scss */
+/* line 34, ../scss/vendor/_flexslider.scss */
 html[xmlns] .slides {
   display: block;
 }
 
-/* line 32, ../scss/vendor/_flexslider.scss */
+/* line 35, ../scss/vendor/_flexslider.scss */
 * html .slides {
   height: 1%;
 }
@@ -5696,22 +6102,22 @@ html[xmlns] .slides {
 /* No JavaScript Fallback */
 /* If you are not using another script, such as Modernizr, make sure you
  * include js that eliminates this class on page load */
-/* line 37, ../scss/vendor/_flexslider.scss */
+/* line 40, ../scss/vendor/_flexslider.scss */
 .no-js .slides > li:first-child {
   display: block;
 }
 
 /* FlexSlider Default Theme
 *********************************/
-/* line 42, ../scss/vendor/_flexslider.scss */
-.flexslider {
+/* line 45, ../scss/vendor/_flexslider.scss */
+.flexslider, .cartogram-slider-players {
   margin: 0 0 80px;
   position: relative;
   zoom: 1;
 }
 
-/* line 43, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-viewport {
+/* line 46, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-viewport, .cartogram-slider-players-viewport {
   overflow: visible !important;
   max-height: 2000px;
   -webkit-transition: all 1s ease;
@@ -5719,34 +6125,34 @@ html[xmlns] .slides {
   transition: all 1s ease;
 }
 
-/* line 44, ../scss/vendor/_flexslider.scss */
+/* line 47, ../scss/vendor/_flexslider.scss */
 .loading .cartogram-slider-viewport {
   max-height: 300px;
 }
 
-/* line 45, ../scss/vendor/_flexslider.scss */
-.flexslider .slides {
+/* line 48, ../scss/vendor/_flexslider.scss */
+.flexslider .slides, .cartogram-slider-players .slides-players {
   zoom: 1;
 }
 
-/* line 47, ../scss/vendor/_flexslider.scss */
+/* line 50, ../scss/vendor/_flexslider.scss */
 .carousel li {
   margin-right: 5px;
 }
 
-/* line 48, ../scss/vendor/_flexslider.scss */
+/* line 51, ../scss/vendor/_flexslider.scss */
 .flexslider .slides > li {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 50, ../scss/vendor/_flexslider.scss */
+/* line 53, ../scss/vendor/_flexslider.scss */
 .flexslider .slides > li.cartogram-slider-active-slide {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
 /* Control Nav */
-/* line 56, ../scss/vendor/_flexslider.scss */
+/* line 59, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-nav {
   width: 100%;
   position: absolute;
@@ -5755,7 +6161,7 @@ html[xmlns] .slides {
   z-index: 1000;
 }
 
-/* line 57, ../scss/vendor/_flexslider.scss */
+/* line 60, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-nav li {
   margin: 0 4px;
   display: inline-block;
@@ -5763,7 +6169,7 @@ html[xmlns] .slides {
   *display: inline;
 }
 
-/* line 58, ../scss/vendor/_flexslider.scss */
+/* line 61, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li a {
   width: 15px;
   height: 15px;
@@ -5782,19 +6188,19 @@ html[xmlns] .slides {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
-/* line 59, ../scss/vendor/_flexslider.scss */
+/* line 62, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li a:hover {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* line 60, ../scss/vendor/_flexslider.scss */
+/* line 63, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li a.cartogram-slider-active {
   background: rgba(0, 0, 0, 0.9);
   cursor: default;
 }
 
 /* captions */
-/* line 64, ../scss/vendor/_flexslider.scss */
+/* line 67, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-caption {
   position: absolute;
   bottom: 20px;
@@ -5804,54 +6210,69 @@ html[xmlns] .slides {
   padding: 10px;
   z-index: 10000;
   margin: 0;
-  font-size: 37px;
+  font-size: 31px;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 /* Direction Nav */
-/* line 80, ../scss/vendor/_flexslider.scss */
+/* line 83, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav {
   *height: 0;
 }
-/* line 82, ../scss/vendor/_flexslider.scss */
+/* line 85, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav a {
   position: absolute;
   top: 20%;
 }
-/* line 85, ../scss/vendor/_flexslider.scss */
+/* line 88, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav a.cartogram-slider-next {
   right: 0;
 }
-/* line 89, ../scss/vendor/_flexslider.scss */
+/* line 92, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav a.cartogram-slider-prev {
   left: 0;
 }
 
-/* line 96, ../scss/vendor/_flexslider.scss */
+/* line 99, ../scss/vendor/_flexslider.scss */
 .slide-row {
   height: 1000px;
   background: #e6e6e6;
   margin: 0 !important;
 }
-/* line 100, ../scss/vendor/_flexslider.scss */
+/* line 103, ../scss/vendor/_flexslider.scss */
 .slide-row article {
   border: 1px solid #0c223f;
   margin: 10px;
   padding: 10px;
 }
 
-/* line 107, ../scss/vendor/_flexslider.scss */
+/* line 110, ../scss/vendor/_flexslider.scss */
 .flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {
   opacity: 1;
 }
 
-/* line 108, ../scss/vendor/_flexslider.scss */
+/* line 111, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav .cartogram-slider-disabled {
   opacity: .3!important;
   filter: alpha(opacity=30);
   cursor: default;
+}
+
+/* line 1, ../scss/vendor/_twitter.scss */
+#twitter_update_list {
+  list-style: none;
+}
+/* line 3, ../scss/vendor/_twitter.scss */
+#twitter_update_list span {
+  display: block;
+}
+/* line 6, ../scss/vendor/_twitter.scss */
+#twitter_update_list a {
+  display: block;
+  font-weight: bold;
+  margin: 20px 0 20px 0;
 }
 
 /* line 1, ../scss/components/modules/_topbar.scss */
@@ -5958,42 +6379,6 @@ html[xmlns] .slides {
   transform: rotateX(0deg);
   cursor: default;
 }
-/* line 83, ../scss/components/modules/_topbar.scss */
-.top-bar ul#social {
-  width: 32.8%;
-}
-/* line 85, ../scss/components/modules/_topbar.scss */
-.top-bar ul#social > li {
-  width: 20%;
-  text-align: center;
-  position: relative;
-}
-/* line 89, ../scss/components/modules/_topbar.scss */
-.top-bar ul#social > li:hover {
-  background: #0c223f;
-}
-/* line 92, ../scss/components/modules/_topbar.scss */
-.top-bar ul#social > li:before {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  color: white;
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-  font-size: 2rem;
-  margin-left: -11px;
-}
-/* line 102, ../scss/components/modules/_topbar.scss */
-.top-bar ul#social > li a {
-  border-right: 1px solid;
-  text-indent: -9999px;
-  padding: 0;
-}
-/* line 106, ../scss/components/modules/_topbar.scss */
-.top-bar ul#social > li a:hover {
-  background: #0c223f;
-}
 
 /* Normal Buttons ---------------------- */
 /* line 3, ../scss/components/modules/_buttons.scss */
@@ -6004,6 +6389,17 @@ html[xmlns] .slides {
   font-family: "kulturista-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+/* line 11, ../scss/components/modules/_buttons.scss */
+.button:hover, #av-overlay .submit input[type=submit]:hover {
+  background: white;
+  color: #0c223f;
 }
 
 /* CSS for jQuery Reveal Plugin
@@ -6030,7 +6426,7 @@ html[xmlns] .slides {
 
 /* Space ---------------------- */
 /* line 2, ../scss/_helpers.scss */
-.space-top {
+.space-top, .gform_body, .gform_footer, .validation_error {
   margin-top: 15px !important;
 }
 
@@ -6080,101 +6476,149 @@ html[xmlns] .slides {
 }
 
 /* line 32, ../scss/_helpers.scss */
-.space-bottom-inner-large {
-  padding-bottom: 35px !important;
+.space-inner-bottom {
+  padding-bottom: 15px !important;
 }
 
 /* line 35, ../scss/_helpers.scss */
-.space-bottom-inner-xlarge {
-  padding-bottom: 55px !important;
+.space-inner-bottom-large {
+  padding-bottom: 35px !important;
 }
 
 /* line 38, ../scss/_helpers.scss */
+.space-inner-bottom-xlarge {
+  padding-bottom: 55px !important;
+}
+
+/* line 41, ../scss/_helpers.scss */
 .space-bottom-small {
   margin-bottom: 15px !important;
 }
 
-/* line 41, ../scss/_helpers.scss */
+/* line 44, ../scss/_helpers.scss */
 .bg-maincolor {
   background: #0c223f;
   color: white;
 }
-/* line 44, ../scss/_helpers.scss */
+/* line 47, ../scss/_helpers.scss */
 .bg-maincolor h1, .bg-maincolor h2, .bg-maincolor h3, .bg-maincolor h4, .bg-maincolor h5, .bg-maincolor h6, .bg-maincolor p, .bg-maincolor a {
   color: white;
 }
 
+/* line 51, ../scss/_helpers.scss */
+.bg-cream {
+  background: #fefcf8;
+}
+
 /* line 52, ../scss/_helpers.scss */
-.border-right {
-  border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+.bg-navy {
+  background: #0c223f;
 }
 
+/* line 53, ../scss/_helpers.scss */
+.bg-blue {
+  background: #005cb8;
+}
 /* line 55, ../scss/_helpers.scss */
-.border-left {
-  border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
+.bg-blue h1, .bg-blue h2, .bg-blue h3, .bg-blue h4, .bg-blue h5, .bg-blue h6, .bg-blue p, .bg-blue a {
+  color: white;
 }
 
-/* line 58, ../scss/_helpers.scss */
-.border-bottom {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+/* line 59, ../scss/_helpers.scss */
+.bg-red {
+  background: #ff4337;
 }
-
 /* line 61, ../scss/_helpers.scss */
-.border-top {
-  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+.bg-red h1, .bg-red h2, .bg-red h3, .bg-red h4, .bg-red h5, .bg-red h6, .bg-red p, .bg-red a {
+  color: white;
 }
 
-/* line 64, ../scss/_helpers.scss */
+/* line 65, ../scss/_helpers.scss */
+.bg-green {
+  background: #009844;
+}
+/* line 67, ../scss/_helpers.scss */
+.bg-green h1, .bg-green h2, .bg-green h3, .bg-green h4, .bg-green h5, .bg-green h6, .bg-green p, .bg-green a {
+  color: white;
+}
+
+/* line 75, ../scss/_helpers.scss */
+.border-right {
+  border-right: 1px solid #0c223f !important;
+}
+
+/* line 78, ../scss/_helpers.scss */
+.border-left {
+  border-left: 1px solid #0c223f !important;
+}
+
+/* line 81, ../scss/_helpers.scss */
+.border-bottom, .post-text {
+  border-bottom: 1px solid #0c223f !important;
+}
+
+/* line 84, ../scss/_helpers.scss */
+.border-top, .validation_message {
+  border-top: 1px solid #0c223f !important;
+}
+
+/* line 87, ../scss/_helpers.scss */
+.border-right-white {
+  border-right: 1px solid white !important;
+}
+
+/* line 90, ../scss/_helpers.scss */
+.border-left-white {
+  border-left: 1px solid white !important;
+}
+
+/* line 93, ../scss/_helpers.scss */
+.border-bottom-white, .gform_body {
+  border-bottom: 1px solid white !important;
+}
+
+/* line 96, ../scss/_helpers.scss */
+.border-top-white {
+  border-top: 1px solid white !important;
+}
+
+/* line 102, ../scss/_helpers.scss */
 .text-small {
   font-size: 12px;
   font-size: 1.2rem;
 }
 
-/* line 68, ../scss/_helpers.scss */
+/* line 106, ../scss/_helpers.scss */
 .bordered-main {
   border: 1px solid #0c223f;
-}
-
-/* line 72, ../scss/_helpers.scss */
-.bg-main {
-  background: #0c223f;
-}
-
-/* line 73, ../scss/_helpers.scss */
-.bg-cream {
-  background: #fefcf8;
-}
-
-/* line 74, ../scss/_helpers.scss */
-.bg-navy {
-  background: #0c223f;
 }
 
 /** 
   * Mixin based classes
   *
   */
-/* line 81, ../scss/_helpers.scss */
+/* line 116, ../scss/_helpers.scss */
 .rule-left {
   position: relative;
 }
-/* line 67, ../scss/_mixins.scss */
+/* line 68, ../scss/_mixins.scss */
 .rule-left:before {
   position: absolute;
   content: '';
   height: auto;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: -1px;
+  z-index: 10;
   width: 1px;
   background: #0c223f;
 }
 
-/* line 83, ../scss/_helpers.scss */
+/* line 118, ../scss/_helpers.scss */
 .rule-right {
   position: relative;
 }
-/* line 82, ../scss/_mixins.scss */
+/* line 87, ../scss/_mixins.scss */
 .rule-right:after {
   position: absolute;
   content: '';
@@ -6187,11 +6631,11 @@ html[xmlns] .slides {
   background: #0c223f;
 }
 
-/* line 85, ../scss/_helpers.scss */
+/* line 120, ../scss/_helpers.scss */
 .rule-outside-right {
   position: relative;
 }
-/* line 82, ../scss/_mixins.scss */
+/* line 87, ../scss/_mixins.scss */
 .rule-outside-right:after {
   position: absolute;
   content: '';
@@ -6205,7 +6649,78 @@ html[xmlns] .slides {
   right: -15px;
 }
 
-/* line 88, ../scss/_helpers.scss */
+/* line 122, ../scss/_helpers.scss */
+.rule-inside-right {
+  position: relative;
+}
+/* line 87, ../scss/_mixins.scss */
+.rule-inside-right:after {
+  position: absolute;
+  content: '';
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0px;
+  width: 1px;
+  background: #0c223f;
+  right: -15px;
+  right: 15px;
+}
+
+/* line 125, ../scss/_helpers.scss */
+.rule-left-white {
+  position: relative;
+}
+/* line 68, ../scss/_mixins.scss */
+.rule-left-white:before {
+  position: absolute;
+  content: '';
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+  z-index: 10;
+  width: 1px;
+  background: white;
+}
+
+/* line 127, ../scss/_helpers.scss */
+.rule-right-white {
+  position: relative;
+}
+/* line 87, ../scss/_mixins.scss */
+.rule-right-white:after {
+  position: absolute;
+  content: '';
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0px;
+  width: 1px;
+  background: white;
+}
+
+/* line 129, ../scss/_helpers.scss */
+.rule-outside-right-white {
+  position: relative;
+}
+/* line 87, ../scss/_mixins.scss */
+.rule-outside-right-white:after {
+  position: absolute;
+  content: '';
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0px;
+  width: 1px;
+  background: #0c223f;
+  right: -15px;
+}
+
+/* line 132, ../scss/_helpers.scss */
 .double-bordered {
   position: relative;
 }
@@ -6224,7 +6739,7 @@ html[xmlns] .slides {
   top: 0px;
 }
 
-/* line 90, ../scss/_helpers.scss */
+/* line 134, ../scss/_helpers.scss */
 .double-bordered-inside {
   position: relative;
 }
@@ -6244,7 +6759,7 @@ html[xmlns] .slides {
   top: 0px;
 }
 
-/* line 92, ../scss/_helpers.scss */
+/* line 136, ../scss/_helpers.scss */
 .double-bordered-outside {
   position: relative;
 }
@@ -6264,13 +6779,116 @@ html[xmlns] .slides {
   top: 0px;
 }
 
+/* line 139, ../scss/_helpers.scss */
+span.corner-one {
+  height: 1px;
+  width: 1px;
+  border-left: 30px solid tranparent;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid #0c223f;
+  content: ' ';
+  position: absolute;
+  z-index: 10;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: -5px;
+  top: -19px;
+}
+
+/* line 142, ../scss/_helpers.scss */
+span.corner-two {
+  height: 1px;
+  width: 1px;
+  border-left: 30px solid tranparent;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid #0c223f;
+  content: ' ';
+  position: absolute;
+  z-index: 10;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -30px;
+  right: -30px;
+  left: auto;
+  border-left: 30px solid #0c223f;
+  border-right-color: transparent;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 145, ../scss/_helpers.scss */
+span.corner-three {
+  height: 1px;
+  width: 1px;
+  border-left: 30px solid tranparent;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid #0c223f;
+  content: ' ';
+  position: absolute;
+  z-index: 10;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  bottom: -30px;
+  top: auto;
+  right: -30px;
+  left: auto;
+  border-left: 30px solid #0c223f;
+  border-right-color: transparent;
+}
+
+/* line 149, ../scss/_helpers.scss */
+span.corner-four {
+  height: 1px;
+  width: 1px;
+  border-left: 30px solid tranparent;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid #0c223f;
+  content: ' ';
+  position: absolute;
+  z-index: 10;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: auto;
+  left: -5px;
+  bottom: -19px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
 /** 
   * Foundation Grid Hacks
   *
   */
-/* line 101, ../scss/_helpers.scss */
+/* line 159, ../scss/_helpers.scss */
 .row.flushed-right, #av-overlay #av_verify_form p.flushed-right {
   margin-right: -15px !important;
+}
+
+/* line 162, ../scss/_helpers.scss */
+.row.flushed-left, #av-overlay #av_verify_form p.flushed-left {
+  margin-left: -15px !important;
 }
 
 /* line 1, ../scss/_screen.scss */
@@ -6290,90 +6908,4 @@ body {
   left: 15px;
   position: absolute;
   width: auto;
-}
-
-/* line 16, ../scss/_screen.scss */
-.wrap {
-  width: 200px;
-  margin: 0 auto 0px;
-  position: relative;
-}
-
-/* line 21, ../scss/_screen.scss */
-.card-container {
-  width: 200px;
-  height: 260px;
-  position: relative;
-  margin: 0 auto 0px;
-  border: 1px solid #CCC;
-}
-/* line 28, ../scss/_screen.scss */
-.card-container .card {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-transition: -webkit-transform 1s;
-  -moz-transition: -moz-transform 1s;
-  -o-transition: -o-transform 1s;
-  transition: transform 1s;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-/* line 36, ../scss/_screen.scss */
-.card-container .card.flipped {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-/* line 40, ../scss/_screen.scss */
-.card-container .card figure {
-  display: block;
-  height: 100%;
-  width: 100%;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  position: absolute;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-/* line 54, ../scss/_screen.scss */
-.card-container .card .back {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-
-/* line 62, ../scss/_screen.scss */
-.footer {
-  background-color: #0c223f;
-}
-
-/* line 67, ../scss/_screen.scss */
-.gform_body label {
-  display: none;
-}
-/* line 70, ../scss/_screen.scss */
-.gform_body input {
-  background-color: transparent;
-  padding: 0px;
-  margin: 0px;
-}
-/* line 75, ../scss/_screen.scss */
-.gform_body :active {
-  background-color: transparent;
-}
-/* line 78, ../scss/_screen.scss */
-.gform_body button {
-  border-color: #ffffff;
 }
