@@ -349,7 +349,34 @@ Flexslider
 	 			//Maybe may direct calls to separate functions and use this 
 	 			//as a routing function only depending on how
 	 			//large it gets.
+ 				$('.flexslider-players').flexslider({
+				    selector: ".slides-players > li",
+				    animation: "slide",
+				    namespace: "cartogram-slider-players",
+				    prevText: "p>",
+				    nextText: "n<",
+				    directionNav: true,
+				    controlNav: true,
+				    slideshow: false,
+				    pauseOnHover: true,
+				    slideshowSpeed: 5000,
+				    animationLoop: true
+				});
+				break;
 	 		case "beers":
+		 		$('.beersFlexslider').flexslider({
+				    selector: ".beers_slides > li",
+				    animation: "slide",
+				    namespace: "cartogram-slider-beers",
+				    prevText: "p>",
+				    nextText: "n<",
+				    directionNav: true,
+				    controlNav: true,
+				    slideshow: false,
+				    pauseOnHover: true,
+				    slideshowSpeed: 5000,
+				    animationLoop: true
+				});
 
 				break;
 			//Default will be all pages within pagination.
@@ -357,33 +384,7 @@ Flexslider
 
 	 			break;
 	 	}
-	 }
-	$('.flexslider-players').flexslider({
-	    selector: ".slides-players > li",
-	    animation: "slide",
-	    namespace: "cartogram-slider-players",
-	    prevText: "p>",
-	    nextText: "n<",
-	    directionNav: true,
-	    controlNav: true,
-	    slideshow: false,
-	    pauseOnHover: true,
-	    slideshowSpeed: 5000,
-	    animationLoop: true
-	});
-	$('.beersFlexslider').flexslider({
-	    selector: ".beers_slides > li",
-	    animation: "slide",
-	    namespace: "cartogram-slider-beers",
-	    prevText: "p>",
-	    nextText: "n<",
-	    directionNav: true,
-	    controlNav: true,
-	    slideshow: false,
-	    pauseOnHover: true,
-	    slideshowSpeed: 5000,
-	    animationLoop: true
-	});
+	 }	
 
  	/* Given a request url, return the index at which the flexslider should focus on.
  	*/
