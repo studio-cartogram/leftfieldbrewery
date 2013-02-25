@@ -6178,37 +6178,52 @@ html[xmlns] .slides {
 }
 
 /* line 61, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging {
+  padding: 0;
+  list-syle: none;
+}
+/* line 64, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging li {
+  list-style: none;
+  display: inline-block;
+}
+/* line 67, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li a {
-  width: 15px;
-  height: 15px;
-  text-align: center;
-  display: block;
-  background: #0c223f;
-  border: 3px solid #0c223f;
-  cursor: pointer;
+  color: #0c223f;
   text-indent: -9999px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  display: block;
+  border: 2px solid;
+  height: 10px;
+  width: 10px;
+  line-height: 0;
+  margin: 0 2px;
+  cursor: pointer;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-
-/* line 62, ../scss/vendor/_flexslider.scss */
+/* line 79, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li a:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: #0c223f;
 }
-
-/* line 63, ../scss/vendor/_flexslider.scss */
+/* line 82, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li a.cartogram-slider-active {
-  background: rgba(0, 0, 0, 0.9);
-  cursor: default;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  background: #0c223f;
 }
 
 /* captions */
-/* line 67, ../scss/vendor/_flexslider.scss */
+/* line 91, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-caption {
   position: absolute;
   bottom: 20px;
@@ -6225,43 +6240,51 @@ html[xmlns] .slides {
 }
 
 /* Direction Nav */
-/* line 83, ../scss/vendor/_flexslider.scss */
+/* line 107, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav {
   *height: 0;
 }
-/* line 85, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav a {
+/* line 111, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a {
   position: absolute;
-  top: 20%;
+  color: #fefcf8;
+  background: #0c223f;
+  height: 38px;
+  width: 38px;
+  top: -38px;
+  line-height: 40px;
+  font-size: 20px;
+  font-size: 2rem;
+  text-align: center;
 }
-/* line 88, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav a.cartogram-slider-next {
-  right: 0;
+/* line 121, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a.cartogram-slider-next {
+  right: -45px;
 }
-/* line 92, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav a.cartogram-slider-prev {
-  left: 0;
+/* line 125, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a.cartogram-slider-prev {
+  left: -45px;
 }
 
-/* line 99, ../scss/vendor/_flexslider.scss */
+/* line 133, ../scss/vendor/_flexslider.scss */
 .slide-row {
   height: 1000px;
   background: #e6e6e6;
   margin: 0 !important;
 }
-/* line 103, ../scss/vendor/_flexslider.scss */
+/* line 137, ../scss/vendor/_flexslider.scss */
 .slide-row article {
   border: 1px solid #0c223f;
   margin: 10px;
   padding: 10px;
 }
 
-/* line 110, ../scss/vendor/_flexslider.scss */
+/* line 144, ../scss/vendor/_flexslider.scss */
 .flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {
   opacity: 1;
 }
 
-/* line 111, ../scss/vendor/_flexslider.scss */
+/* line 145, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav .cartogram-slider-disabled {
   opacity: .3!important;
   filter: alpha(opacity=30);
