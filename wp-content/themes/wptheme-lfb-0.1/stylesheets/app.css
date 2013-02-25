@@ -5191,8 +5191,16 @@ you can use the generic selector below, but it's slower:
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'haymakerregular';
+  src: url("../fonts/haymaker-webfont.eot");
+  src: url("../fonts/haymaker-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/haymaker-webfont.woff") format("woff"), url("../fonts/haymaker-webfont.ttf") format("truetype"), url("../fonts/haymaker-webfont.svg#haymakerregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
-/* line 13, ../scss/font/_declaration.scss */
+/* line 25, ../scss/font/_declaration.scss */
 [data-icon]:before {
   font-family: 'icomoon';
   content: attr(data-icon);
