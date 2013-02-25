@@ -108,6 +108,40 @@
 		
 		register_post_type( 'vendors' , $vendorArgs );
 
+		$instagramLabels = array(
+			'name' => __( 'Instagrams' ),
+			'singular_name' => __( 'Instagram' ),
+			'add_new' => __( 'Add New' ),
+			'add_new_item' => __( 'Add New Instagram' ),
+			'edit' => __( 'Edit' ),
+			'edit_item' => __( 'Edit Instagram' ),
+			'new_item' => __( 'New Product' ),
+			'view' => __( 'View Instagram' ),
+			'view_item' => __( 'View Instagram' ),
+			'search_items' => __( 'Search Instagrams' ),
+			'not_found' => __( 'No Instagrams found' ),
+			'not_found_in_trash' => __( 'No Instagrams found in Trash' ),
+			'parent' => __( 'Parent Instagram' ),
+		);
+		
+		$instagramArgs = array(
+			'labels' => $instagramLabels,
+			'public' => true,
+			'publicly_queryable' => true,
+			'show_ui' => true,
+			'query_var' => true,
+			'has_archive' => true,		
+			'rewrite' => true,
+			'capability_type' => 'post',
+			'hierarchical' => false,
+			'taxonomies' => array(),
+			'menu_position' => null,
+			'supports' => array('title', 'editor', 'thumbnail')
+		); 	
+		
+		register_post_type( 'instagrams' , $instagramArgs );
+
+
 
 		flush_rewrite_rules( false );
 	}
