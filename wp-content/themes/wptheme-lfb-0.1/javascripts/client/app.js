@@ -194,7 +194,6 @@ Flexslider
 
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
-
 		//Load the page.
 		updateContent(request_url);
 
@@ -238,7 +237,6 @@ Flexslider
 
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
-
 		//Load the page.
 		updateContent(request_url);
 
@@ -292,26 +290,6 @@ Flexslider
 	       	break;
 	    }
 	});
-	 $(".cartogram-slider-direction-nav li a").click(function(e) {
-	 	var reverseSlideMaps = {	
-	 								"-1": "contact-us",
-	 								0: "home",
-	 								1: "about-us",
-	 								2: "beers_tuborg",
-	 								3: "highlights",
-	 								4: "fan-shop",
-	 								5: "contact-us",
-	 								6: "home"
-	 							}
-	 	var moveRight = -1;
-	 	if($(this).hasClass("cartogram-slider-next")) {
-	 		var moveRight = 1;
-	 	}
-	 	index = document.URL.indexOf(".ca/");
-	 	url = document.URL.substring(0, index + 4) + reverseSlideMaps[currentSliderIndex + moveRight];
-	 	updateContent(reverseSlideMaps[currentSliderIndex + moveRight]);
-	 	window.history.pushState({request_url: reverseSlideMaps[currentSliderIndex + moveRight]},"title",url);
-	 });
 
 	//Add toggle events for back and front of cards.
 	$(".flip").live("click", function() {
@@ -414,7 +392,6 @@ Flexslider
 				    animationLoop: true,
 				    keyboard: false
 				});
-
 				break;
 			//Default will be all pages within pagination.
 	 		default:
