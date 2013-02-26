@@ -453,8 +453,14 @@ Flexslider
 			//If the flexslider isn't focused on the li want, focus it.
 			$('.flexslider').data('flexslider').flexAnimate(targetIndex);
 			currentSliderIndex=targetIndex;
+
 		} //Do not need to do anything if the flexslider is already focused on
 		//the one we want.
+
+		
+			//Toggle class "current_page_item" for nav <a>'s
+			$('.current_page_item').toggleClass("current_page_item");
+			$('#global > li:eq(' + targetIndex + ')').toggleClass("current_page_item");
 
 		console.log("				Request Part determining focus index: " + request_part);
 	}
