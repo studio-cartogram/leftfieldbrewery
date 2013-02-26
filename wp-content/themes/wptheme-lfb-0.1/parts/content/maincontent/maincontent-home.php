@@ -11,7 +11,7 @@
 				<h3>Highlight Reel</h3>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row homehighlightreel">
 			<div class="columns twelve">
 				<?php
 				global $myExcerptLength;

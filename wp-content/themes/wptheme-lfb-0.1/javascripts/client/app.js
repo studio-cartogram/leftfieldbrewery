@@ -100,6 +100,7 @@ Flexslider
 	    pauseOnHover: true,
 	    slideshowSpeed: 5000,
 	    animationLoop: true,
+	    keyboard: false,
 	    after: function (slider) {	    	
 	    	// $(".flexslider").animate({opacity: 1},3000);	    	currentSliderIndex = slider.currentSlide;
 	    	console.log("The slider is currently on: " + currentSliderIndex);
@@ -193,7 +194,6 @@ Flexslider
 
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
-
 		//Load the page.
 		updateContent(request_url);
 
@@ -215,7 +215,6 @@ Flexslider
 
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
-
 		//Load the page.
 		updateContent(request_url);
 
@@ -230,18 +229,17 @@ Flexslider
 		e.preventDefault();
 	});
 
-	$(".mvp").find("a").live("click", function(e) {
+	$(".mvp, .homehighlightreel").find("a").live("click", function(e) {
 
 		/* The Url of the link that was clicked. */
 		var url = $(this).attr("href");
 
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
-
 		//Load the page.
 		updateContent(request_url);
 
-		/* Need to pass push state a title, not sure what to give it.*/
+		// Need to pass push state a title, not sure what to give it.
 		var title = "not sure";
 
 		/** Push state Stuff *******************************/
@@ -277,6 +275,21 @@ Flexslider
 	 	window.history.pushState({request_url: reverseSlideMaps[currentSliderIndex + moveRight]},"title",url);
 	 });
 
+	/**
+	* Handle the clicking of left or right keyboard keys.
+	*/
+	$(document).keydown(function(e){
+		e.preventDefault();
+	    switch (e.keyCode) { 
+	       	case 37:
+	       		$(".cartogram-slider-prev").trigger("click");
+	        break;
+	        case 39:
+	       		$(".cartogram-slider-next").trigger("click");
+	       	break;
+	    }
+	});
+
 	//Add toggle events for back and front of cards.
 	$(".flip").live("click", function() {
 		$(this).parent().toggleClass('flipped');
@@ -306,7 +319,7 @@ Flexslider
 		targetIndex = getIndexToFocusOn(request_url);
 		
 		$.ajax({
-			asynch: true,
+			asynch: false,
 			type : "post",
 			dataType : "html",
 			/* Where the request is being sent to. */
@@ -331,7 +344,7 @@ Flexslider
 	 * May not be using this anymore ...
 	 * Given a request url, apply javascript needed for that specific page.
 	 */
-	 function applyJavascript(request_url) {
+	function applyJavascript(request_url) {
 	 	console.log("				Applying Javascript for " + request_url);
 
 	 	//If the request is layered such as beers_typeofbeer, want to pass only the first part
@@ -360,9 +373,9 @@ Flexslider
 				    slideshow: false,
 				    pauseOnHover: true,
 				    slideshowSpeed: 5000,
-				    animationLoop: true
+				    animationLoop: true,
+				    keyboard: false
 				});
-				break;
 	 		case "beers":
 		 		$('.beersFlexslider').flexslider({
 				    selector: ".beers_slides > li",
@@ -375,9 +388,9 @@ Flexslider
 				    slideshow: false,
 				    pauseOnHover: true,
 				    slideshowSpeed: 5000,
-				    animationLoop: true
+				    animationLoop: true,
+				    keyboard: false
 				});
-
 				break;
 			//Default will be all pages within pagination.
 	 		default:
