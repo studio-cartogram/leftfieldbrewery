@@ -5336,12 +5336,12 @@ h6 {
   padding-bottom: 20px;
   background: #fefcf8;
 }
-/* line 100, ../scss/base/_typography.scss */
+/* line 99, ../scss/base/_typography.scss */
 .post-text h1, .post-text .gform_heading h3.gform_title, .post-text h2, .post-text p, .post-text .gform_heading span.gform_description, .post-text ul {
   padding-left: 40px;
   padding-right: 40px;
 }
-/* line 104, ../scss/base/_typography.scss */
+/* line 103, ../scss/base/_typography.scss */
 .post-text h2 {
   position: relative;
   padding: 30px 40px 10px;
@@ -5364,26 +5364,26 @@ h6 {
 .post-text h2:after {
   top: 0px;
 }
-/* line 110, ../scss/base/_typography.scss */
+/* line 109, ../scss/base/_typography.scss */
 .post-text h2:first-of-type {
   margin-top: 0;
 }
-/* line 114, ../scss/base/_typography.scss */
+/* line 113, ../scss/base/_typography.scss */
 .post-text h4 {
   margin: 30px 40px 10px;
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 118, ../scss/base/_typography.scss */
+/* line 117, ../scss/base/_typography.scss */
 .post-text p, .post-text .gform_heading span.gform_description {
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 121, ../scss/base/_typography.scss */
+/* line 120, ../scss/base/_typography.scss */
 .post-text ul.link-list {
   margin-left: -5px;
 }
-/* line 123, ../scss/base/_typography.scss */
+/* line 122, ../scss/base/_typography.scss */
 .post-text ul.link-list li {
   margin-left: 5px;
 }
