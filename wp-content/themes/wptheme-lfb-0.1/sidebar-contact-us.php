@@ -18,6 +18,7 @@
 					case "talk":
 						$open_wrapper = '<a href="tel:' . $options[$medium] . '">';
 						$closing_wrapper = '</a>';
+						break;
 					case "write":			
 						$open_wrapper = '<a href="mailto:' . $options[$medium] . '">';
 						$closing_wrapper = '</a>';
