@@ -12,7 +12,15 @@
       background:$white;
       color:$navy;
     }
-
+    &.button-link {
+      background:$cream;
+      color:$navy;
+      padding:15px ;
+      border:none;
+      &:hover {
+        color:$red;
+      }
+    }
   }  
 //     /* Hovers */
 //     &:hover, &:focus { color: $white; background-color: darken(($mainColor), 10%); }

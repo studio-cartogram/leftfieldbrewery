@@ -5336,12 +5336,12 @@ h6 {
   padding-bottom: 20px;
   background: #fefcf8;
 }
-/* line 101, ../scss/base/_typography.scss */
+/* line 100, ../scss/base/_typography.scss */
 .post-text h1, .post-text .gform_heading h3.gform_title, .post-text h2, .post-text p, .post-text .gform_heading span.gform_description, .post-text ul {
   padding-left: 40px;
   padding-right: 40px;
 }
-/* line 105, ../scss/base/_typography.scss */
+/* line 104, ../scss/base/_typography.scss */
 .post-text h2 {
   position: relative;
   padding: 30px 40px 10px;
@@ -5364,26 +5364,26 @@ h6 {
 .post-text h2:after {
   top: 0px;
 }
-/* line 111, ../scss/base/_typography.scss */
+/* line 110, ../scss/base/_typography.scss */
 .post-text h2:first-of-type {
   margin-top: 0;
 }
-/* line 115, ../scss/base/_typography.scss */
+/* line 114, ../scss/base/_typography.scss */
 .post-text h4 {
   margin: 30px 40px 10px;
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 119, ../scss/base/_typography.scss */
+/* line 118, ../scss/base/_typography.scss */
 .post-text p, .post-text .gform_heading span.gform_description {
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 122, ../scss/base/_typography.scss */
+/* line 121, ../scss/base/_typography.scss */
 .post-text ul.link-list {
   margin-left: -5px;
 }
-/* line 124, ../scss/base/_typography.scss */
+/* line 123, ../scss/base/_typography.scss */
 .post-text ul.link-list li {
   margin-left: 5px;
 }
@@ -6459,47 +6459,48 @@ html[xmlns] .slides {
   color: #fefcf8;
   background: #0c223f;
   height: 47px;
-  width: 47px;
+  width: 55px;
   top: -3px;
   line-height: 48px;
   font-size: 16px;
   font-size: 1.6rem;
   text-align: center;
   z-index: 10;
+  border: 1px solid #0c223f;
 }
-/* line 147, ../scss/vendor/_flexslider.scss */
+/* line 148, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav li a:hover {
   background: #fefcf8;
   color: #0c223f;
 }
-/* line 151, ../scss/vendor/_flexslider.scss */
+/* line 152, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav li a.cartogram-slider-next {
-  right: -62px;
+  right: -70px;
 }
-/* line 155, ../scss/vendor/_flexslider.scss */
+/* line 156, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav li a.cartogram-slider-prev {
-  left: -62px;
+  left: -70px;
 }
 
-/* line 163, ../scss/vendor/_flexslider.scss */
+/* line 164, ../scss/vendor/_flexslider.scss */
 .slide-row {
   height: 1000px;
   background: #e6e6e6;
   margin: 0 !important;
 }
-/* line 167, ../scss/vendor/_flexslider.scss */
+/* line 168, ../scss/vendor/_flexslider.scss */
 .slide-row article {
   border: 1px solid #0c223f;
   margin: 10px;
   padding: 10px;
 }
 
-/* line 174, ../scss/vendor/_flexslider.scss */
+/* line 175, ../scss/vendor/_flexslider.scss */
 .flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {
   opacity: 1;
 }
 
-/* line 175, ../scss/vendor/_flexslider.scss */
+/* line 176, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav .cartogram-slider-disabled {
   opacity: .3!important;
   filter: alpha(opacity=30);
@@ -6648,6 +6649,17 @@ html[xmlns] .slides {
 .button:hover, #av-overlay .submit input[type=submit]:hover {
   background: white;
   color: #0c223f;
+}
+/* line 15, ../scss/components/modules/_buttons.scss */
+.button.button-link, #av-overlay .submit input.button-link[type=submit] {
+  background: #fefcf8;
+  color: #0c223f;
+  padding: 15px;
+  border: none;
+}
+/* line 20, ../scss/components/modules/_buttons.scss */
+.button.button-link:hover, #av-overlay .submit input.button-link[type=submit]:hover {
+  color: #ff4337;
 }
 
 /* CSS for jQuery Reveal Plugin
@@ -6801,7 +6813,7 @@ html[xmlns] .slides {
 }
 
 /* line 81, ../scss/_helpers.scss */
-.border-bottom, .post-text, .list-contact h5, .boxed {
+.border-bottom, .list-contact h5, .boxed {
   border-bottom: 1px solid #0c223f !important;
 }
 
@@ -7156,4 +7168,19 @@ body {
   left: 15px;
   position: absolute;
   width: auto;
+}
+
+/* line 17, ../scss/_screen.scss */
+.direction-nav {
+  color: #fefcf8;
+  line-height: 46px;
+  font-size: 16px;
+  font-size: 1.6rem;
+  text-align: center;
+  display: block;
+}
+/* line 23, ../scss/_screen.scss */
+.direction-nav:hover {
+  background: #fefcf8;
+  color: #0c223f;
 }

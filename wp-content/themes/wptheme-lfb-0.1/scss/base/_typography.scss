@@ -41,8 +41,8 @@ h3 {
 	padding:15px 0;
 	text-transform:uppercase;
 	&.bg-navy {
-	font-family:$bodyFontFamily;
-}
+		font-family:$bodyFontFamily;
+	}
 }
 
 h4 {
@@ -96,7 +96,6 @@ h6 {
 .post-text {
 
 	padding-bottom:20px;
-	@extend .border-bottom;
 	background:$cream;
 	h1, h2, p, ul {
 		padding-left:40px;

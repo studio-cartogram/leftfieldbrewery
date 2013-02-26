@@ -138,22 +138,23 @@ html[xmlns] .slides {display: block;}
 			color:$cream;
 			background:$navy;
 			height:47px;
-			width:47px;
+			width:55px;
 			top:-3px;
 			line-height:48px;
 			@include font-size(16);
 			text-align:center;
 			z-index:10;
+			border:1px solid $navy;
 			&:hover {
 				background:$cream;
 				color:$navy;
 			}
 			&.cartogram-slider-next  {
-				right:-62px;
+				right:-70px;
 
 			}
 			&.cartogram-slider-prev  {
-				left:-62px;
+				left:-70px;
 
 			}
 		}
