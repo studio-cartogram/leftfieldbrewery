@@ -56,14 +56,20 @@ html[xmlns] .slides {display: block;}
 }
 
 /* Control Nav */
-.cartogram-slider-control-nav {width: 100%; position: absolute; bottom: -45px; text-align: center;z-index: 1000;}
-.cartogram-slider-control-nav li {margin: 0 4px; display: inline-block; zoom: 1; *display: inline;}
-.cartogram-slider-control-paging{
+.cartogram-slider-control-paging, .cartogram-slider-playerscontrol-paging {
   padding:0;
-  list-syle:none;
+  list-style:none;
+  text-align:center;
+  width: 100%; 
+  position: absolute; 
+  bottom: -45px;
+  z-index: 1000;
   li {
      list-style:none;
      display:inline-block;
+     margin: 0 4px; 
+     zoom: 1; 
+     *display: inline;
     a {
       color:$navy;
       text-indent:-9999px;
@@ -79,7 +85,7 @@ html[xmlns] .slides {display: block;}
       &:hover {
         background:$navy;
       }
-      &.cartogram-slider-active {
+      &.cartogram-slider-active, &.cartogram-slider-playersactive {
         @include transform(translateZ(0));  
         background:$navy;
       }
@@ -106,24 +112,48 @@ html[xmlns] .slides {display: block;}
 /* Direction Nav */
 .cartogram-slider-direction-nav {
 	*height: 0;
+	width:100%;
+	li:nth-child(1) {
+		&:after, &:before {
+			left:auto;
+			right:-15px;
+		}
+	}
 	li {
+		&:after, &:before {
+			height:1px;
+			width:15px;
+			content: ' ';
+			background:$navy;
+			position:absolute;
+			top:43px;
+			left:-15px;
+		}
+		&:before {
+			top:40px;
+		}
 		
 		a {
 			position:absolute;
 			color:$cream;
 			background:$navy;
-			height:38px;
-			width:38px;
-			top:-38px;
-			line-height:40px;
-			@include font-size(20);
+			height:47px;
+			width:47px;
+			top:-3px;
+			line-height:48px;
+			@include font-size(16);
 			text-align:center;
+			z-index:10;
+			&:hover {
+				background:$cream;
+				color:$navy;
+			}
 			&.cartogram-slider-next  {
-				right:-45px;
+				right:-62px;
 
 			}
 			&.cartogram-slider-prev  {
-				left:-45px;
+				left:-62px;
 
 			}
 		}

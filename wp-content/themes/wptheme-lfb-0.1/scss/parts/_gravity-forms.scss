@@ -82,3 +82,19 @@
   line-height:1.4;
 }
 
+.post-text {
+  .gform_heading {
+    @include double-bordered();
+    text-align:center;
+
+    h3.gform_title {
+      @extend h1;
+    }
+    span.gform_description {
+      @extend p;
+      padding:0 60px;
+      display:block;
+    }
+  }
+}
+

@@ -1,3 +1,8 @@
+/** 
+  * Home Page
+  *
+  */ 
+
 .vendor-listing {
 	@include double-bordered(true, false, false, false);
 	background:$cream;
@@ -68,6 +73,11 @@
 	}
 }	
 
+/** 
+  * About Page
+  *
+  */ 
+
 .slides-players {
 	margin:0;
 	list-style:none;
@@ -130,3 +140,64 @@
     }
    
 }
+
+/** 
+  * Contact Page
+  *
+  */ 
+
+
+.list-contact {
+	list-style:none;
+	margin:0;
+	h5 {
+		padding-bottom:8px;
+		margin-top:10px;
+		@extend .border-bottom;
+	}
+	li:last-child .border-bottom-white {
+		border-color:$navy !important;
+	}
+}
+
+/** 
+  * Highlights Page
+  *
+  */ 
+
+.tags-wrap {
+	@include double-bordered(false, false, false, false,  $white);
+	padding-top:3px;
+	color:$white;
+	a {
+		color:$white;
+	}
+	.tag-cloud {
+		@include double-bordered(false, false, false, false,  $white);
+	}
+}
+
+.categories-wrap {
+	@include double-bordered();
+}
+
+.list-categories {
+	margin:-3px 0 0 0 !important;
+	@extend .bg-navy;
+	padding-bottom: 2px;
+	@include double-bordered(false, false, false, false,  $white);
+	&:before {
+		top:3px;
+	}
+	li {
+		padding-top:8px !important;
+		padding-bottom:8px !important;
+		@extend .border-bottom-white;
+		@include rule(right, false, $white);
+		text-align:center;
+	}
+	li:nth-child(2), li:nth-child(1) {
+		margin-top:3px;
+	}
+}
+

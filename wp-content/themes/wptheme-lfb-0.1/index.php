@@ -8,8 +8,8 @@
 <?php get_header() ?> 
 <div class="container">
 	<div class="row">
-		<div class="columns twelve">
-			<div class="flexslider">
+		<div class="columns twelve double-bordered-outside">
+			<div class="flexslider double-bordered">
 				<ul class="slides">
 			    	<?php get_template_part('parts/loops/loop', 'page') ?> 	
 			  	</ul>

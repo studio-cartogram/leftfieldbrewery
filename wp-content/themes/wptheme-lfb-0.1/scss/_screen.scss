@@ -5,6 +5,7 @@ body {
   position:relative;
   height:3px;
   > .columns {
+    @extend .bg-navy;
     height:3px;
     right:15px;
     left:15px;

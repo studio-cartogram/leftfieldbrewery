@@ -3,7 +3,8 @@
 }
 
 .top-bar { 
-
+  position: relative;
+  z-index: 10;
   /* topbar global <ul> styles */
   ul { 
     /* Main Navigation links style */
