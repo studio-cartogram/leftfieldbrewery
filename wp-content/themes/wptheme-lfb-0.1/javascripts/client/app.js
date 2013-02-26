@@ -215,7 +215,6 @@ Flexslider
 
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
-
 		//Load the page.
 		updateContent(request_url);
 
@@ -230,7 +229,7 @@ Flexslider
 		e.preventDefault();
 	});
 
-	$(".home").find("a").live("click", function(e) {
+	$(".mvp, .homehighlightreel").find("a").live("click", function(e) {
 
 		/* The Url of the link that was clicked. */
 		var url = $(this).attr("href");
@@ -240,7 +239,7 @@ Flexslider
 		//Load the page.
 		updateContent(request_url);
 
-		/* Need to pass push state a title, not sure what to give it.*/
+		// Need to pass push state a title, not sure what to give it.
 		var title = "not sure";
 
 		/** Push state Stuff *******************************/
@@ -330,7 +329,6 @@ Flexslider
 				url: request_url
 			},
 			success: function(html) {
-				console.log("updated content successs");
 				$(".slideNum" + targetIndex).not(".clone").html(html);
 
 				focusFlexSlider(targetIndex);
