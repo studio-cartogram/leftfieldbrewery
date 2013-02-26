@@ -54,11 +54,18 @@ $gf_recaptcha_public_key = "";
 //define('GF_RECAPTCHA_PUBLIC_KEY','YOUR_PUBLIC_KEY_GOES_HERE');
 //------------------------------------------------------------------------------------------------------------------
 
+
 if(!defined("RG_CURRENT_PAGE"))
     define("RG_CURRENT_PAGE", basename($_SERVER['PHP_SELF']));
 
-if(!defined("IS_ADMIN"))
-    define("IS_ADMIN",  is_admin());
+if(!defined("IS_ADMIN") && RG_CURRENT_PAGE != 'admin-ajax.php') {
+  define("IS_ADMIN",  is_admin());
+} else if (RG_CURRENT_PAGE === 'admin-ajax.php') {
+  define("IS_ADMIN",  false);
+}
+
+// if(!defined("IS_ADMIN"))
+//     define("IS_ADMIN",  is_admin());
 
 define("RG_CURRENT_VIEW", RGForms::get("view"));
 define("GF_MIN_WP_VERSION", '3.2');
