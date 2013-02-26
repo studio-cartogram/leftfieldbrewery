@@ -100,6 +100,7 @@ Flexslider
 	    pauseOnHover: true,
 	    slideshowSpeed: 5000,
 	    animationLoop: true,
+	    keyboard: false,
 	    after: function (slider) {	    	
 	    	// $(".flexslider").animate({opacity: 1},3000);	    	currentSliderIndex = slider.currentSlide;
 	    	console.log("The slider is currently on: " + currentSliderIndex);
@@ -277,6 +278,41 @@ Flexslider
 	 	window.history.pushState({request_url: reverseSlideMaps[currentSliderIndex + moveRight]},"title",url);
 	 });
 
+	/**
+	* Handle the clicking of left or right keyboard keys.
+	*/
+	$(document).keydown(function(e){
+		e.preventDefault();
+	    switch (e.keyCode) { 
+	       	case 37:
+	       		$(".cartogram-slider-prev").trigger("click");
+	        break;
+	        case 39:
+	       		$(".cartogram-slider-next").trigger("click");
+	       	break;
+	    }
+	});
+	 $(".cartogram-slider-direction-nav li a").click(function(e) {
+	 	var reverseSlideMaps = {	
+	 								"-1": "contact-us",
+	 								0: "home",
+	 								1: "about-us",
+	 								2: "beers_tuborg",
+	 								3: "highlights",
+	 								4: "fan-shop",
+	 								5: "contact-us",
+	 								6: "home"
+	 							}
+	 	var moveRight = -1;
+	 	if($(this).hasClass("cartogram-slider-next")) {
+	 		var moveRight = 1;
+	 	}
+	 	index = document.URL.indexOf(".ca/");
+	 	url = document.URL.substring(0, index + 4) + reverseSlideMaps[currentSliderIndex + moveRight];
+	 	updateContent(reverseSlideMaps[currentSliderIndex + moveRight]);
+	 	window.history.pushState({request_url: reverseSlideMaps[currentSliderIndex + moveRight]},"title",url);
+	 });
+
 	//Add toggle events for back and front of cards.
 	$(".flip").live("click", function() {
 		$(this).parent().toggleClass('flipped');
@@ -360,7 +396,8 @@ Flexslider
 				    slideshow: false,
 				    pauseOnHover: true,
 				    slideshowSpeed: 5000,
-				    animationLoop: true
+				    animationLoop: true,
+				    keyboard: false
 				});
 	 		case "beers":
 		 		$('.beersFlexslider').flexslider({
@@ -374,7 +411,8 @@ Flexslider
 				    slideshow: false,
 				    pauseOnHover: true,
 				    slideshowSpeed: 5000,
-				    animationLoop: true
+				    animationLoop: true,
+				    keyboard: false
 				});
 
 				break;
