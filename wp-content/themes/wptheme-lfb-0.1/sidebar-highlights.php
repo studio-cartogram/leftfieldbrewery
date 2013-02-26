@@ -8,7 +8,7 @@
 				if ($categories) {
 					echo '<ul class="block-grid two-up list-categories">';
 					foreach ($categories as $category) {
-						echo '<li><a class=" light" href="' . ' get_site_url()' . '/category/' . $category->cat_name . '">' . $category->cat_name . '</a></li>';
+						echo '<li><a class=" light" href="' . get_site_url() . '/category/' . $category->cat_name . '">' . $category->cat_name . '</a></li>';
 					}
 					echo '</ul>';
 				}	
