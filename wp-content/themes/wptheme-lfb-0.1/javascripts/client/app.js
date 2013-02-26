@@ -457,10 +457,10 @@ Flexslider
 		} //Do not need to do anything if the flexslider is already focused on
 		//the one we want.
 
-		
-			//Toggle class "current_page_item" for nav <a>'s
-			$('.current_page_item').toggleClass("current_page_item");
-			$('#global > li:eq(' + targetIndex + ')').toggleClass("current_page_item");
+
+		//Toggle class "current_page_item" for nav <a>'s
+		$('.current-menu-item').removeClass("current-menu-item");
+		$('#global > li:eq(' + targetIndex + ')').toggleClass("current-menu-item");
 
 		console.log("				Request Part determining focus index: " + request_part);
 	}
