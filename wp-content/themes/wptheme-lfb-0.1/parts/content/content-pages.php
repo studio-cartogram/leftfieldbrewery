@@ -6,32 +6,36 @@
 	</div>
 	<div class="columns eight">	
 		<?php for ($i = 0; $i < 3; $i++) { ?>
-			<div class="row">
+			<div class="row flushed-left collapse">
 				<?php
 				$offset += $i*2;
 				$query = new WP_Query($query_part . $offset);
-				while ($query->have_posts()): $query->the_post();
-					get_template_part("parts/content/content", "summary");
-				endwhile;
+				while ($query->have_posts()): $query->the_post(); ?>
+					<div class="columns six format-text rule-right bg-cream">
+						<?php get_template_part("parts/content/content", "summary"); ?>
+					</div>	
+				<?php endwhile;
 				?>
 			</div>
 		<?php }	?>
-		<div class="row">
-			<div class="columns one">
-				left
+		<div class="row flushed-left collapse border-top border-bottom">
+			<div class="columns one rule-right bg-navy">
+				<a class="direction-nav"><i class="icon-arrow-left"></i></a>
 			</div>
-			<div class="columns five">
+			<div class="columns five rule-right border-bottom bg-cream">
 				<?php if ($page_number == 2 || $page_number == 1) {
-					echo '<a href="'.get_site_url(). $rootURL . '">newer</a>';
+					echo '<a class="button-link expand button" href="'.get_site_url(). $rootURL . '">newer</a>';
 				} else {
-					echo '<a href="' . get_site_url() . $rootURL2 . ($page_number - 1) . '">newer</a>';
+					echo '<a class="button-link expand button" href="' . get_site_url() . $rootURL2 . ($page_number - 1) . '">newer</a>';
 				}  ?>
 			</div>
-			<div class="columns five">
-				<a href="<?php echo get_site_url() ?><?php echo $rootURL2 ?><?php echo $page_number + 1 ?>" class="highlightsPagination">older</a>
+			<div class="columns five rule-right border-bottom bg-cream">
+				<a class="button-link expand button" href="<?php echo get_site_url() ?><?php echo $rootURL2 ?><?php echo $page_number + 1 ?>" class="highlightsPagination">
+					Older
+				</a>
 			</div>
-			<div class="columns one">
-				right
+			<div class="columns one rule-right rule-left bg-navy">
+				<a class="direction-nav" href="<?php echo get_site_url() ?>/page/2/" class="highlightsPagination"><i class="icon-arrow-right"></i></a>
 			</div>
 		</div>
 	</div>
