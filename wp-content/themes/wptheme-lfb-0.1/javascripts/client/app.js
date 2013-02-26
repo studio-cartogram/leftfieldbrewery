@@ -320,7 +320,7 @@ Flexslider
 		targetIndex = getIndexToFocusOn(request_url);
 		
 		$.ajax({
-			asynch: true,
+			asynch: false,
 			type : "post",
 			dataType : "html",
 			/* Where the request is being sent to. */
@@ -330,6 +330,7 @@ Flexslider
 				url: request_url
 			},
 			success: function(html) {
+				console.log("updated content successs");
 				$(".slideNum" + targetIndex).not(".clone").html(html);
 
 				focusFlexSlider(targetIndex);
