@@ -1,10 +1,15 @@
 <?php global $myExcerptLength, $page_number, $offset, $query_part, $rootURL, $rootURL2;?>
 <?php $myExcerptLength = 20; ?>
-<div class="row collapse highlights">
-	<div class="columns four">
-		<?php get_sidebar('highlights'); ?>
-	</div>
-	<div class="columns eight">	
+<div class="row  highlights ">
+	
+	<div class="columns eight push-four rule-left" id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>	
+		<h3 class="rule-right text-center">Latest News, Brews &amp; Events</h3>
+		<div class="row collapse flushed-left">
+			<div class="columns twelve bg-cream post-meta double-bordered">
+				<h4 class="rule-right"> Category <span>Events</span></h4>
+			</div>
+		</div>
+
 		<?php for ($i = 0; $i < 3; $i++) { ?>
 			<div class="row flushed-left collapse">
 				<?php
@@ -38,6 +43,9 @@
 				<a class="direction-nav" href="<?php echo get_site_url() ?>/page/2/" class="highlightsPagination"><i class="icon-arrow-right"></i></a>
 			</div>
 		</div>
+	</div>
+	<div class="columns pull-eight four">
+		<?php get_sidebar('highlights'); ?>
 	</div>
 </div>
 <?php $myExcerptLength = 0; ?>
