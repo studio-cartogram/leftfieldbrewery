@@ -6589,17 +6589,22 @@ html[xmlns] .slides {
   padding: 0;
   right: 0;
   left: -5px;
+  height: auto;
   border-left: 5px solid #0c223f;
 }
 /* line 52, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li.has-dropdown .dropdown li:last-child {
-  padding: 0;
+.top-bar ul#global > li.has-dropdown .dropdown li {
+  padding-bottom: 0;
 }
-/* line 55, ../scss/components/modules/_topbar.scss */
+/* line 54, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li.has-dropdown .dropdown li:last-child {
+  padding-bottom: 5px;
+}
+/* line 57, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li a {
   font-weight: bold;
 }
-/* line 59, ../scss/components/modules/_topbar.scss */
+/* line 61, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li:hover > a, .top-bar ul#global > li.has-dropdown .dropdown li.active > a, .top-bar ul#global > li.has-dropdown .dropdown li:focus > a {
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
@@ -6607,7 +6612,7 @@ html[xmlns] .slides {
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
-/* line 68, ../scss/components/modules/_topbar.scss */
+/* line 70, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li:not(.name):hover > a, .top-bar ul#global > li:not(.name).active > a, .top-bar ul#global > li:not(.name):focus > a, .top-bar ul#global > li:not(.divider):hover > a, .top-bar ul#global > li:not(.divider).active > a, .top-bar ul#global > li:not(.divider):focus > a, .top-bar ul#global > li:not(.has-dropdown):hover > a, .top-bar ul#global > li:not(.has-dropdown).active > a, .top-bar ul#global > li:not(.has-dropdown):focus > a {
   color: black;
   background: white;
@@ -6617,7 +6622,7 @@ html[xmlns] .slides {
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
-/* line 74, ../scss/components/modules/_topbar.scss */
+/* line 76, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li:not(.name).current-menu-item > a, .top-bar ul#global > li:not(.name).current-menu-item:hover > a, .top-bar ul#global > li:not(.divider).current-menu-item > a, .top-bar ul#global > li:not(.divider).current-menu-item:hover > a, .top-bar ul#global > li:not(.has-dropdown).current-menu-item > a, .top-bar ul#global > li:not(.has-dropdown).current-menu-item:hover > a {
   background: url(../images/stripe.png);
   color: black;
