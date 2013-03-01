@@ -5014,7 +5014,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
 /* line 7, ../scss/font/_classes.scss */
-.icon-phone:before, .icon-twitter:before, .icon-google-plus:before, .icon-facebook:before, .icon-envelope-alt:before, .icon-map-marker:before, .icon-bubbles:before, .icon-bubbles-2:before, .icon-untappd:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-toronto:before, .icon-tap:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-arrow-left:before, .icon-doubleipa:before, .icon-mark:before, .icon-maris:before, .icon-mail:before, .icon-logo:before, .icon-instagram:before, .icon-flip-right:before, .card-container .card .flip:before, .icon-flip-left:before, .card-container .card.flipped .flip:before, .icon-est2013:before, .icon-eephus:before, .icon-diamond:before, .icon-diamond-stroke:before, .icon-cross:before, .icon-close:before {
+.icon-phone:before, .icon-twitter:before, .icon-google-plus:before, .icon-facebook:before, .icon-envelope-alt:before, .icon-map-marker:before, .icon-bubbles:before, .icon-bubbles-2:before, .icon-untappd:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-toronto:before, .icon-tap:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-arrow-left:before, .icon-doubleipa:before, .icon-mark:before, .icon-maris:before, .icon-mail:before, .icon-logo:before, .icon-instagram:before, .icon-flip-right:before, .card-container .card .flip:before, .icon-flip-left:before, .card-container .card.flipped .flip:before, .icon-est2013:before, .icon-eephus:before, .icon-diamond:before, h2.beer-name.beer-block:before, .icon-diamond-stroke:before, .icon-cross:before, .icon-close:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -5164,7 +5164,7 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 99, ../scss/font/_classes.scss */
-.icon-diamond:before {
+.icon-diamond:before, h2.beer-name.beer-block:before {
   content: "\e018";
 }
 
@@ -5261,8 +5261,31 @@ h2 {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+/* line 35, ../scss/base/_typography.scss */
+h2.beer-name {
+  font-family: "haymakerregular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 35px;
+  font-size: 3.5rem;
+}
+/* line 39, ../scss/base/_typography.scss */
+h2.beer-name.beer-block {
+  position: relative;
+  padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+/* line 45, ../scss/base/_typography.scss */
+h2.beer-name.beer-block:before {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  font-size: 6px;
+  font-size: 0.6rem;
+  margin-left: -5px;
+}
 
-/* line 37, ../scss/base/_typography.scss */
+/* line 56, ../scss/base/_typography.scss */
 h3 {
   font-size: 12px;
   font-size: 1.2rem;
@@ -5271,12 +5294,32 @@ h3 {
   padding: 15px 0;
   text-transform: uppercase;
 }
-/* line 43, ../scss/base/_typography.scss */
+/* line 62, ../scss/base/_typography.scss */
 h3.bg-navy, h3.list-categories, .banner > .row > h3.columns, #av-overlay #av_verify_form .banner > p > h3.columns, #av-overlay #av_verify_form .post-text .gform_heading .banner > span.gform_description > h3.columns, .post-text .gform_heading #av-overlay #av_verify_form .banner > span.gform_description > h3.columns {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
+/* line 65, ../scss/base/_typography.scss */
+h3.beer-tagline {
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  position: relative;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+/* line 71, ../scss/base/_typography.scss */
+h3.beer-tagline:after {
+  content: ' ';
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background: white;
+  left: 50%;
+  bottom: 0;
+  margin-left: -5px;
+}
 
-/* line 48, ../scss/base/_typography.scss */
+/* line 84, ../scss/base/_typography.scss */
 h4 {
   font-size: 10px;
   font-size: 1rem;
@@ -5286,7 +5329,7 @@ h4 {
   letter-spacing: 0.03em;
 }
 
-/* line 55, ../scss/base/_typography.scss */
+/* line 91, ../scss/base/_typography.scss */
 h5 {
   font-size: 12px;
   font-size: 1.2rem;
@@ -5295,7 +5338,7 @@ h5 {
   margin: 15px 0 0 0;
 }
 
-/* line 62, ../scss/base/_typography.scss */
+/* line 98, ../scss/base/_typography.scss */
 h6 {
   line-height: 1.6;
   font-size: 12px;
@@ -5307,12 +5350,12 @@ h6 {
   font-weight: normal;
 }
 
-/* line 74, ../scss/base/_typography.scss */
+/* line 110, ../scss/base/_typography.scss */
 .icon-with-space {
   position: relative;
   padding-left: 20px;
 }
-/* line 77, ../scss/base/_typography.scss */
+/* line 113, ../scss/base/_typography.scss */
 .icon-with-space:before {
   font-size: 14px;
   font-size: 1.4rem;
@@ -5321,27 +5364,27 @@ h6 {
   top: 2px;
 }
 
-/* line 86, ../scss/base/_typography.scss */
+/* line 122, ../scss/base/_typography.scss */
 .inner-text {
   padding: 0 20px;
 }
 
-/* line 91, ../scss/base/_typography.scss */
+/* line 127, ../scss/base/_typography.scss */
 .format-text h1, .format-text .post-text .gform_heading h3.gform_title, .post-text .gform_heading .format-text h3.gform_title, .format-text h2, .format-text h3, .format-text h4, .format-text h5, .format-text h6, .format-text p, .format-text .post-text .gform_heading span.gform_description, .post-text .gform_heading .format-text span.gform_description {
   padding: 0 20px;
 }
 
-/* line 96, ../scss/base/_typography.scss */
+/* line 132, ../scss/base/_typography.scss */
 .post-text {
   padding-bottom: 20px;
   background: #fefcf8;
 }
-/* line 99, ../scss/base/_typography.scss */
+/* line 135, ../scss/base/_typography.scss */
 .post-text h1, .post-text .gform_heading h3.gform_title, .post-text h2, .post-text p, .post-text .gform_heading span.gform_description, .post-text ul {
   padding-left: 40px;
   padding-right: 40px;
 }
-/* line 103, ../scss/base/_typography.scss */
+/* line 139, ../scss/base/_typography.scss */
 .post-text h2 {
   position: relative;
   padding: 30px 40px 10px;
@@ -5364,26 +5407,26 @@ h6 {
 .post-text h2:after {
   top: 0px;
 }
-/* line 109, ../scss/base/_typography.scss */
+/* line 145, ../scss/base/_typography.scss */
 .post-text h2:first-of-type {
   margin-top: 0;
 }
-/* line 113, ../scss/base/_typography.scss */
+/* line 149, ../scss/base/_typography.scss */
 .post-text h4 {
   margin: 30px 40px 10px;
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 117, ../scss/base/_typography.scss */
+/* line 153, ../scss/base/_typography.scss */
 .post-text p, .post-text .gform_heading span.gform_description {
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 120, ../scss/base/_typography.scss */
+/* line 156, ../scss/base/_typography.scss */
 .post-text ul.link-list {
   margin-left: -5px;
 }
-/* line 122, ../scss/base/_typography.scss */
+/* line 158, ../scss/base/_typography.scss */
 .post-text ul.link-list li {
   margin-left: 5px;
 }

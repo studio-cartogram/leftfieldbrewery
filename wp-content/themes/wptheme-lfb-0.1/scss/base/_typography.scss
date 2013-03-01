@@ -32,6 +32,25 @@ h2 {
 	@include font-size(24);
 	letter-spacing:0.05em;
 	text-transform:uppercase;
+	&.beer-name {
+		font-family:$beerFontFamily;
+		font-weight:normal;
+		@include font-size(35);
+		&.beer-block {
+			position:relative;
+			padding-top:20px;
+			margin-top:20px;
+			margin-bottom:0;
+			@extend .icon-diamond;
+			&:before {
+				position:absolute;
+				left:50%;
+				top:0px;
+				@include font-size(6);
+				margin-left:-5px;
+			}
+		}
+	}
 }
 
 h3 {
@@ -42,6 +61,23 @@ h3 {
 	text-transform:uppercase;
 	&.bg-navy {
 		font-family:$bodyFontFamily;
+	}
+	&.beer-tagline {
+		font-family:$bodyFontFamily;
+		@include font-size(14);
+		position:relative;
+		padding-top:5px;
+		margin-bottom:10px;
+		&:after {
+			content:' ';
+			position:absolute;
+			width:10px;
+			height:1px;
+			background:$white;
+			left:50%;
+			bottom:0;
+			margin-left:-5px;
+		}
 	}
 }
 
@@ -123,10 +159,5 @@ h6 {
 			margin-left:5px;
 		}
 	}
-	// .post-meta {
-	// 	h4 {
-	// 		font-size:15px;
-	// 	}
-	// }
 
 }

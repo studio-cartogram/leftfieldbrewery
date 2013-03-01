@@ -1,9 +1,4 @@
-
-<div class="row bg-cream ">
-	<div class="columns twelve double-bordered-inside">
-		INstagram goes here:
-	</div>
-</div>
+<?php get_template_part('parts/slideshows/slideshow'); ?>
 <div class="row">
 	<div class="columns seven rule-right">
 		<div class="row">
@@ -53,9 +48,10 @@
 					}
 				endwhile;
 				?>
-			<div class="columns twelve mvp text-center bg-blue" style="background-image: url('<?php echo $image[0]; ?>')">
-					<h2><?php the_title(); ?></h2>
-					<p><a href="<?php echo $permalink; ?>">Learn More</a></p>
+			<div class="columns twelve mvp space-inner-bottom text-center bg-blue" style="background-image: url('<?php echo $image[0]; ?>')">
+					<h2 class="beer-name beer-block"><?php the_title(); ?></h2>
+					<h3 class="beer-tagline">Beer Tagline</h3>
+					<?php more_link() ?>
 			</div>
 		</div>
 	</div>

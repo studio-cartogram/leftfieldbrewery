@@ -101,6 +101,7 @@ Flexslider
 	    slideshowSpeed: 5000,
 	    animationLoop: true,
 	    keyboard: false,
+	    smoothHeight: true,
 	    after: function (slider) {	    	
 	    	// $(".flexslider").animate({opacity: 1},3000);	    	currentSliderIndex = slider.currentSlide;
 	    	console.log("The slider is currently on: " + currentSliderIndex);
