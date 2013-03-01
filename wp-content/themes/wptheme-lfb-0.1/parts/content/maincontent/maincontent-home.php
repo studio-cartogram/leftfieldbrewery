@@ -10,7 +10,6 @@
 			<div class="columns twelve">
 				<?php
 				global $myExcerptLength;
-				$myExcerptLength = 20;
 				$query = new WP_Query('showposts=1');
 				while ($query->have_posts()): $query->the_post();?>
 					<div class="row border-top border-bottom ">
@@ -22,11 +21,10 @@
 						<div class="columns format-text twelve rule-right bg-cream">
 							<h5><a href="the_permalink() ?>"><?php the_title(); ?></a></h5>
 							<?php the_excerpt(); ?>
-							<?php more_link(); ?>
+							<?php  more_link(); ?>
 						</div>
 					</div>		
 				<?php endwhile;
-				$myExcerptLength = 0;
 				?>
 			</div>
 		</div>
@@ -48,7 +46,7 @@
 					}
 				endwhile;
 				?>
-			<div class="columns twelve mvp space-inner-bottom text-center bg-blue" style="background-image: url('<?php echo $image[0]; ?>')">
+			<div class="columns twelve mvp space-inner-bottom text-center border-top bg-blue" style="background-image: url('<?php echo $image[0]; ?>')">
 					<h2 class="beer-name beer-block"><?php the_title(); ?></h2>
 					<h3 class="beer-tagline">Beer Tagline</h3>
 					<?php more_link() ?>

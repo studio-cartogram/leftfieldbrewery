@@ -2623,7 +2623,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 /* Element that controls breakpoint, no need to change this ever */
 /* line 16, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar-js-breakpoint {
-  width: 940px !important;
+  width: 768px !important;
   visibility: hidden;
 }
 
@@ -2979,7 +2979,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 768px) {
   /* line 142, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar {
     margin-bottom: 0;
@@ -5222,25 +5222,29 @@ p a, .post-text .gform_heading span.gform_description a {
 
 /* line 2, ../scss/base/_typography.scss */
 h1.collapse, .post-text .gform_heading h3.collapse.gform_title, h2.collapse, h3.collapse, h4.collapse, h5.collapse, h6.collapse, p.collapse, .post-text .gform_heading span.collapse.gform_description, span.collapse, a.collapse {
-  margin: 0;
+  margin: 0 !important;
 }
 /* line 5, ../scss/base/_typography.scss */
+h1.collapse-inner, .post-text .gform_heading h3.collapse-inner.gform_title, h2.collapse-inner, h3.collapse-inner, h4.collapse-inner, h5.collapse-inner, h6.collapse-inner, p.collapse-inner, .post-text .gform_heading span.collapse-inner.gform_description, span.collapse-inner, a.collapse-inner {
+  padding: 0;
+}
+/* line 8, ../scss/base/_typography.scss */
 h1.light, .post-text .gform_heading h3.light.gform_title, h2.light, h3.light, h4.light, h5.light, h6.light, p.light, .post-text .gform_heading span.light.gform_description, span.light, a.light {
   color: white;
 }
-/* line 8, ../scss/base/_typography.scss */
+/* line 11, ../scss/base/_typography.scss */
 h1.text-small, .post-text .gform_heading h3.text-small.gform_title, h2.text-small, h3.text-small, h4.text-small, h5.text-small, h6.text-small, p.text-small, .post-text .gform_heading span.text-small.gform_description, span.text-small, a.text-small {
   font-size: 11px;
   font-size: 1.1rem;
 }
 
-/* line 14, ../scss/base/_typography.scss */
+/* line 17, ../scss/base/_typography.scss */
 p.lead, .post-text .gform_heading span.lead.gform_description {
   font-weight: 500;
   line-height: 1.4;
 }
 
-/* line 20, ../scss/base/_typography.scss */
+/* line 23, ../scss/base/_typography.scss */
 h1, .post-text .gform_heading h3.gform_title {
   font-size: 30px;
   font-size: 3rem;
@@ -5249,33 +5253,33 @@ h1, .post-text .gform_heading h3.gform_title {
   margin: 0;
   padding: 40px 0 10px 0;
 }
-/* line 26, ../scss/base/_typography.scss */
+/* line 29, ../scss/base/_typography.scss */
 h1.post-title, .post-text .gform_heading h3.post-title.gform_title {
   padding-top: 20px;
 }
 
-/* line 31, ../scss/base/_typography.scss */
+/* line 34, ../scss/base/_typography.scss */
 h2 {
   font-size: 24px;
   font-size: 2.4rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-/* line 35, ../scss/base/_typography.scss */
+/* line 38, ../scss/base/_typography.scss */
 h2.beer-name {
   font-family: "haymakerregular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 35px;
   font-size: 3.5rem;
 }
-/* line 39, ../scss/base/_typography.scss */
+/* line 42, ../scss/base/_typography.scss */
 h2.beer-name.beer-block {
   position: relative;
   padding-top: 20px;
   margin-top: 20px;
   margin-bottom: 0;
 }
-/* line 45, ../scss/base/_typography.scss */
+/* line 48, ../scss/base/_typography.scss */
 h2.beer-name.beer-block:before {
   position: absolute;
   left: 50%;
@@ -5285,7 +5289,7 @@ h2.beer-name.beer-block:before {
   margin-left: -5px;
 }
 
-/* line 56, ../scss/base/_typography.scss */
+/* line 59, ../scss/base/_typography.scss */
 h3 {
   font-size: 12px;
   font-size: 1.2rem;
@@ -5294,11 +5298,11 @@ h3 {
   padding: 15px 0;
   text-transform: uppercase;
 }
-/* line 62, ../scss/base/_typography.scss */
+/* line 65, ../scss/base/_typography.scss */
 h3.bg-navy, h3.list-categories, .banner > .row > h3.columns, #av-overlay #av_verify_form .banner > p > h3.columns, #av-overlay #av_verify_form .post-text .gform_heading .banner > span.gform_description > h3.columns, .post-text .gform_heading #av-overlay #av_verify_form .banner > span.gform_description > h3.columns {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
-/* line 65, ../scss/base/_typography.scss */
+/* line 68, ../scss/base/_typography.scss */
 h3.beer-tagline {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -5307,7 +5311,7 @@ h3.beer-tagline {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 71, ../scss/base/_typography.scss */
+/* line 74, ../scss/base/_typography.scss */
 h3.beer-tagline:after {
   content: ' ';
   position: absolute;
@@ -5319,7 +5323,7 @@ h3.beer-tagline:after {
   margin-left: -5px;
 }
 
-/* line 84, ../scss/base/_typography.scss */
+/* line 87, ../scss/base/_typography.scss */
 h4 {
   font-size: 10px;
   font-size: 1rem;
@@ -5329,7 +5333,7 @@ h4 {
   letter-spacing: 0.03em;
 }
 
-/* line 91, ../scss/base/_typography.scss */
+/* line 94, ../scss/base/_typography.scss */
 h5 {
   font-size: 12px;
   font-size: 1.2rem;
@@ -5338,7 +5342,7 @@ h5 {
   margin: 15px 0 0 0;
 }
 
-/* line 98, ../scss/base/_typography.scss */
+/* line 101, ../scss/base/_typography.scss */
 h6 {
   line-height: 1.6;
   font-size: 12px;
@@ -5350,12 +5354,12 @@ h6 {
   font-weight: normal;
 }
 
-/* line 110, ../scss/base/_typography.scss */
+/* line 113, ../scss/base/_typography.scss */
 .icon-with-space {
   position: relative;
   padding-left: 20px;
 }
-/* line 113, ../scss/base/_typography.scss */
+/* line 116, ../scss/base/_typography.scss */
 .icon-with-space:before {
   font-size: 14px;
   font-size: 1.4rem;
@@ -5364,27 +5368,27 @@ h6 {
   top: 2px;
 }
 
-/* line 122, ../scss/base/_typography.scss */
+/* line 125, ../scss/base/_typography.scss */
 .inner-text {
   padding: 0 20px;
 }
 
-/* line 127, ../scss/base/_typography.scss */
+/* line 130, ../scss/base/_typography.scss */
 .format-text h1, .format-text .post-text .gform_heading h3.gform_title, .post-text .gform_heading .format-text h3.gform_title, .format-text h2, .format-text h3, .format-text h4, .format-text h5, .format-text h6, .format-text p, .format-text .post-text .gform_heading span.gform_description, .post-text .gform_heading .format-text span.gform_description {
   padding: 0 20px;
 }
 
-/* line 132, ../scss/base/_typography.scss */
+/* line 135, ../scss/base/_typography.scss */
 .post-text {
   padding-bottom: 20px;
   background: #fefcf8;
 }
-/* line 135, ../scss/base/_typography.scss */
+/* line 138, ../scss/base/_typography.scss */
 .post-text h1, .post-text .gform_heading h3.gform_title, .post-text h2, .post-text p, .post-text .gform_heading span.gform_description, .post-text ul {
   padding-left: 40px;
   padding-right: 40px;
 }
-/* line 139, ../scss/base/_typography.scss */
+/* line 142, ../scss/base/_typography.scss */
 .post-text h2 {
   position: relative;
   padding: 30px 40px 10px;
@@ -5407,26 +5411,26 @@ h6 {
 .post-text h2:after {
   top: 0px;
 }
-/* line 145, ../scss/base/_typography.scss */
+/* line 148, ../scss/base/_typography.scss */
 .post-text h2:first-of-type {
   margin-top: 0;
 }
-/* line 149, ../scss/base/_typography.scss */
+/* line 152, ../scss/base/_typography.scss */
 .post-text h4 {
   margin: 30px 40px 10px;
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 153, ../scss/base/_typography.scss */
+/* line 156, ../scss/base/_typography.scss */
 .post-text p, .post-text .gform_heading span.gform_description {
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 156, ../scss/base/_typography.scss */
+/* line 159, ../scss/base/_typography.scss */
 .post-text ul.link-list {
   margin-left: -5px;
 }
-/* line 158, ../scss/base/_typography.scss */
+/* line 161, ../scss/base/_typography.scss */
 .post-text ul.link-list li {
   margin-left: 5px;
 }
@@ -5473,14 +5477,15 @@ ul#social {
 /* line 3, ../scss/parts/_social.scss */
 ul#social > li {
   width: 20%;
+  float: left;
   text-align: center;
   position: relative;
 }
-/* line 7, ../scss/parts/_social.scss */
+/* line 8, ../scss/parts/_social.scss */
 ul#social > li:hover {
   background: #0c223f;
 }
-/* line 10, ../scss/parts/_social.scss */
+/* line 11, ../scss/parts/_social.scss */
 ul#social > li:before {
   position: absolute;
   top: 10px;
@@ -5492,18 +5497,18 @@ ul#social > li:before {
   font-size: 2rem;
   margin-left: -11px;
 }
-/* line 20, ../scss/parts/_social.scss */
+/* line 21, ../scss/parts/_social.scss */
 ul#social > li a {
   border-right: 1px solid;
   text-indent: -9999px;
   padding: 0;
 }
-/* line 24, ../scss/parts/_social.scss */
+/* line 25, ../scss/parts/_social.scss */
 ul#social > li a:hover {
   background: #0c223f;
 }
 
-/* line 30, ../scss/parts/_social.scss */
+/* line 31, ../scss/parts/_social.scss */
 .footer ul#social {
   width: 100%;
   padding-bottom: 20px;
@@ -5518,12 +5523,12 @@ ul#social > li a:hover {
 .footer ul#social:after {
   clear: both;
 }
-/* line 34, ../scss/parts/_social.scss */
+/* line 35, ../scss/parts/_social.scss */
 .footer ul#social > li {
   display: block;
   float: left;
 }
-/* line 37, ../scss/parts/_social.scss */
+/* line 38, ../scss/parts/_social.scss */
 .footer ul#social > li a {
   border-right: none;
   display: block;
@@ -6386,7 +6391,7 @@ html[xmlns] .slides {
 *********************************/
 /* line 48, ../scss/vendor/_flexslider.scss */
 .flexslider, .cartogram-slider-players {
-  margin: 0 0 80px;
+  margin: 0 0 0px;
   position: relative;
   zoom: 1;
 }
@@ -6616,173 +6621,6 @@ html[xmlns] .slides {
   display: block;
   font-weight: bold;
   margin: 20px 0 20px 0;
-}
-
-/* line 1, ../scss/components/modules/_topbar.scss */
-.top-bar ul > li.name a {
-  line-height: 38px;
-}
-
-/* line 5, ../scss/components/modules/_topbar.scss */
-.top-bar {
-  position: relative;
-  z-index: 10;
-  /* topbar global <ul> styles */
-}
-/* line 9, ../scss/components/modules/_topbar.scss */
-.top-bar ul {
-  /* Main Navigation links style */
-}
-/* line 13, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global {
-  width: 67.2%;
-  padding-left: 5px;
-}
-/* line 16, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li {
-  width: 16.66666%;
-}
-/* line 19, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li.name a {
-  padding: 0 15px;
-  line-height: 95px;
-}
-/* line 21, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li a:not(.button) {
-  text-transform: uppercase;
-  background: #fefcf8;
-  color: #0c223f;
-  line-height: 28px;
-  height: 28px;
-  margin-top: 5px;
-  text-align: center;
-  margin-right: 5px;
-  font-size: 12px;
-  font-size: 1.2rem;
-  padding: 0;
-  text-align: center;
-  -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
-  -o-transition: -o-transform 0.3s;
-  transition: transform 0.3s;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-/* line 38, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li.has-dropdown a {
-  padding-right: 0;
-}
-/* line 40, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li.has-dropdown a:after {
-  display: none;
-}
-/* line 45, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li.has-dropdown .dropdown {
-  width: auto;
-  padding: 0;
-  right: 0;
-  left: -5px;
-  height: auto;
-  border-left: 5px solid #0c223f;
-}
-/* line 52, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li.has-dropdown .dropdown li {
-  padding-bottom: 0;
-}
-/* line 54, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li.has-dropdown .dropdown li:last-child {
-  padding-bottom: 5px;
-}
-/* line 57, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li.has-dropdown .dropdown li a {
-  font-weight: bold;
-}
-/* line 61, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li.has-dropdown .dropdown li:hover > a, .top-bar ul#global > li.has-dropdown .dropdown li.active > a, .top-bar ul#global > li.has-dropdown .dropdown li:focus > a {
-  -webkit-transform: rotateX(180deg);
-  -moz-transform: rotateX(180deg);
-  -ms-transform: rotateX(180deg);
-  -o-transform: rotateX(180deg);
-  transform: rotateX(180deg);
-}
-/* line 70, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li:not(.name):hover > a, .top-bar ul#global > li:not(.name).active > a, .top-bar ul#global > li:not(.name):focus > a, .top-bar ul#global > li:not(.divider):hover > a, .top-bar ul#global > li:not(.divider).active > a, .top-bar ul#global > li:not(.divider):focus > a, .top-bar ul#global > li:not(.has-dropdown):hover > a, .top-bar ul#global > li:not(.has-dropdown).active > a, .top-bar ul#global > li:not(.has-dropdown):focus > a {
-  color: black;
-  background: white;
-  -webkit-transform: rotateX(180deg);
-  -moz-transform: rotateX(180deg);
-  -ms-transform: rotateX(180deg);
-  -o-transform: rotateX(180deg);
-  transform: rotateX(180deg);
-}
-/* line 76, ../scss/components/modules/_topbar.scss */
-.top-bar ul#global > li:not(.name).current-menu-item > a, .top-bar ul#global > li:not(.name).current-menu-item:hover > a, .top-bar ul#global > li:not(.divider).current-menu-item > a, .top-bar ul#global > li:not(.divider).current-menu-item:hover > a, .top-bar ul#global > li:not(.has-dropdown).current-menu-item > a, .top-bar ul#global > li:not(.has-dropdown).current-menu-item:hover > a {
-  background: url(../images/stripe.png);
-  color: black;
-  -webkit-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
-  -ms-transform: rotateX(0deg);
-  -o-transform: rotateX(0deg);
-  transform: rotateX(0deg);
-  cursor: default;
-}
-
-/* Normal Buttons ---------------------- */
-/* line 3, ../scss/components/modules/_buttons.scss */
-.button, #av-overlay .submit input[type=submit] {
-  -webkit-box-shadow: 0 0 0;
-  -moz-box-shadow: 0 0 0;
-  box-shadow: 0 0 0;
-  font-family: "kulturista-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  -webkit-box-shadow: 0 0 0;
-  -moz-box-shadow: 0 0 0;
-  box-shadow: 0 0 0;
-  letter-spacing: 0.1em;
-  font-size: 12px;
-  font-size: 1.2rem;
-}
-/* line 11, ../scss/components/modules/_buttons.scss */
-.button:hover, #av-overlay .submit input[type=submit]:hover {
-  background: white;
-  color: #0c223f;
-}
-/* line 15, ../scss/components/modules/_buttons.scss */
-.button.button-link, #av-overlay .submit input.button-link[type=submit] {
-  background: #fefcf8;
-  color: #0c223f;
-  padding: 15px;
-  border: none;
-}
-/* line 20, ../scss/components/modules/_buttons.scss */
-.button.button-link:hover, #av-overlay .submit input.button-link[type=submit]:hover {
-  color: #ff4337;
-}
-
-/* CSS for jQuery Reveal Plugin
- * Maintained for Foundation. foundation.zurb.com
- * Free to use under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- */
-/* Reveal Modals ---------------------- */
-/* line 9, ../scss/components/modules/_reveal.scss */
-.reveal-modal-bg, #av-overlay-wrap {
-  background: transparent;
-  background: #fefcf8;
-}
-
-/* line 15, ../scss/components/modules/_reveal.scss */
-.reveal-modal.transparent, .transparent#av-overlay {
-  -webkit-box-shadow: 0 0 0;
-  -moz-box-shadow: 0 0 0;
-  box-shadow: 0 0 0;
-  text-align: center;
-  border: none;
-  background: transparent;
 }
 
 /* Space ---------------------- */
@@ -7284,4 +7122,2072 @@ body {
 .direction-nav:hover {
   background: #fefcf8;
   color: #0c223f;
+}
+
+/* line 29, ../scss/_screen.scss */
+.homehighlightreel .format-text.twelve, .homehighlightreel .row .format-text.twelve, .row .homehighlightreel .format-text.twelve, .homehighlightreel #av-overlay #av_verify_form p .format-text.twelve, #av-overlay #av_verify_form p .homehighlightreel .format-text.twelve, .homehighlightreel #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .format-text.twelve, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .homehighlightreel .format-text.twelve, .homehighlightreel .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .format-text.twelve, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .homehighlightreel .format-text.twelve {
+  min-height: 155px;
+}
+
+/* line 33, ../scss/_screen.scss */
+#container-slider {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 3px;
+  margin-top: -4px;
+}
+
+/* line 40, ../scss/_screen.scss */
+#container-navigation {
+  position: relative;
+  position: relative;
+}
+/* line 3, ../scss/_mixins.scss */
+#container-navigation:before, #container-navigation:after {
+  height: 1px;
+  background: #0c223f;
+  content: ' ';
+  position: absolute;
+  right: 0px;
+  left: 0;
+  top: -3px;
+}
+/* line 24, ../scss/_mixins.scss */
+#container-navigation:after {
+  top: 0px;
+}
+/* line 43, ../scss/_screen.scss */
+#container-navigation:before {
+  bottom: 0;
+  top: auto;
+  z-index: 9;
+}
+/* line 48, ../scss/_screen.scss */
+#container-navigation:after {
+  top: auto;
+  bottom: 3px;
+}
+
+/* line 1, ../scss/components/modules/_topbar.scss */
+.top-bar ul > li.name a {
+  line-height: 60px;
+}
+
+/* line 5, ../scss/components/modules/_topbar.scss */
+.top-bar {
+  position: relative;
+  z-index: 10;
+}
+/* line 8, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global {
+  width: 67.2%;
+  padding-left: 5px;
+}
+/* line 11, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li {
+  width: 16.66666%;
+}
+/* line 14, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li.name a {
+  padding: 0 15px;
+  line-height: 95px;
+}
+/* line 16, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li a:not(.button) {
+  text-transform: uppercase;
+  background: #fefcf8;
+  color: #0c223f;
+  line-height: 28px;
+  height: 28px;
+  margin-top: 5px;
+  text-align: center;
+  margin-right: 5px;
+  font-size: 12px;
+  font-size: 1.2rem;
+  padding: 0;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+/* line 33, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li.has-dropdown a {
+  padding-right: 0;
+}
+/* line 35, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li.has-dropdown a:after {
+  display: none;
+}
+/* line 40, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li.has-dropdown .dropdown {
+  width: auto;
+  padding: 0;
+  right: 0;
+  left: -5px;
+  height: auto;
+  border-left: 5px solid #0c223f;
+}
+/* line 47, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li.has-dropdown .dropdown li {
+  padding-bottom: 0;
+}
+/* line 49, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li.has-dropdown .dropdown li:last-child {
+  padding-bottom: 5px;
+}
+/* line 52, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li.has-dropdown .dropdown li a {
+  font-weight: bold;
+}
+/* line 56, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li.has-dropdown .dropdown li:hover > a, .top-bar ul#global > li.has-dropdown .dropdown li.active > a, .top-bar ul#global > li.has-dropdown .dropdown li:focus > a {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+/* line 65, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li:not(.name):hover > a, .top-bar ul#global > li:not(.name).active > a, .top-bar ul#global > li:not(.name):focus > a, .top-bar ul#global > li:not(.divider):hover > a, .top-bar ul#global > li:not(.divider).active > a, .top-bar ul#global > li:not(.divider):focus > a, .top-bar ul#global > li:not(.has-dropdown):hover > a, .top-bar ul#global > li:not(.has-dropdown).active > a, .top-bar ul#global > li:not(.has-dropdown):focus > a {
+  color: black;
+  background: white;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+/* line 71, ../scss/components/modules/_topbar.scss */
+.top-bar ul#global > li:not(.name).current-menu-item > a, .top-bar ul#global > li:not(.name).current-menu-item:hover > a, .top-bar ul#global > li:not(.divider).current-menu-item > a, .top-bar ul#global > li:not(.divider).current-menu-item:hover > a, .top-bar ul#global > li:not(.has-dropdown).current-menu-item > a, .top-bar ul#global > li:not(.has-dropdown).current-menu-item:hover > a {
+  background: url(../images/stripe.png);
+  color: black;
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  cursor: default;
+}
+
+/* Normal Buttons ---------------------- */
+/* line 3, ../scss/components/modules/_buttons.scss */
+.button, #av-overlay .submit input[type=submit] {
+  -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+  font-family: "kulturista-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+/* line 11, ../scss/components/modules/_buttons.scss */
+.button:hover, #av-overlay .submit input[type=submit]:hover {
+  background: white;
+  color: #0c223f;
+}
+/* line 15, ../scss/components/modules/_buttons.scss */
+.button.button-link, #av-overlay .submit input.button-link[type=submit] {
+  background: #fefcf8;
+  color: #0c223f;
+  padding: 15px;
+  border: none;
+}
+/* line 20, ../scss/components/modules/_buttons.scss */
+.button.button-link:hover, #av-overlay .submit input.button-link[type=submit]:hover {
+  color: #ff4337;
+}
+
+/* CSS for jQuery Reveal Plugin
+ * Maintained for Foundation. foundation.zurb.com
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+/* Reveal Modals ---------------------- */
+/* line 9, ../scss/components/modules/_reveal.scss */
+.reveal-modal-bg, #av-overlay-wrap {
+  background: transparent;
+  background: #fefcf8;
+}
+
+/* line 15, ../scss/components/modules/_reveal.scss */
+.reveal-modal.transparent, .transparent#av-overlay {
+  -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+  text-align: center;
+  border: none;
+  background: transparent;
+}
+
+/* Visibility Classes ---------------------- */
+/*                                           */
+/* Standard (large) display targeting */
+/* line 10, ../scss/components/modules/_mqueries.scss */
+.show-for-small,
+.show-for-medium,
+.show-for-medium-down,
+.hide-for-large,
+.hide-for-large-up,
+.show-for-xlarge,
+.show-for-print {
+  display: none !important;
+}
+
+/* line 18, ../scss/components/modules/_mqueries.scss */
+.hide-for-small,
+.hide-for-medium,
+.hide-for-medium-down,
+.show-for-large,
+.show-for-large-up,
+.hide-for-xlarge,
+.hide-for-print {
+  display: inherit !important;
+}
+
+/* Very large display targeting */
+@media only screen and (min-width: 1441px) {
+  /* line 27, ../scss/components/modules/_mqueries.scss */
+  .hide-for-small,
+  .hide-for-medium,
+  .hide-for-medium-down,
+  .hide-for-large,
+  .show-for-large-up,
+  .show-for-xlarge {
+    display: inherit !important;
+  }
+
+  /* line 34, ../scss/components/modules/_mqueries.scss */
+  .show-for-small,
+  .show-for-medium,
+  .show-for-medium-down,
+  .show-for-large,
+  .hide-for-large-up,
+  .hide-for-xlarge {
+    display: none !important;
+  }
+}
+/* Medium display targeting */
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  /* line 44, ../scss/components/modules/_mqueries.scss */
+  .hide-for-small,
+  .show-for-medium,
+  .show-for-medium-down,
+  .hide-for-large,
+  .hide-for-large-up,
+  .hide-for-xlarge {
+    display: inherit !important;
+  }
+
+  /* line 51, ../scss/components/modules/_mqueries.scss */
+  .show-for-small,
+  .hide-for-medium,
+  .hide-for-medium-down,
+  .show-for-large,
+  .show-for-large-up,
+  .show-for-xlarge {
+    display: none !important;
+  }
+}
+/* Small display targeting */
+@media only screen and (max-width: 767px) {
+  /* line 61, ../scss/components/modules/_mqueries.scss */
+  .show-for-small,
+  .hide-for-medium,
+  .show-for-medium-down,
+  .hide-for-large,
+  .hide-for-large-up,
+  .hide-for-xlarge {
+    display: inherit !important;
+  }
+
+  /* line 68, ../scss/components/modules/_mqueries.scss */
+  .hide-for-small,
+  .show-for-medium,
+  .hide-for-medium-down,
+  .show-for-large,
+  .show-for-large-up,
+  .show-for-xlarge {
+    display: none !important;
+  }
+}
+/* Orientation targeting */
+/* line 73, ../scss/components/modules/_mqueries.scss */
+.show-for-landscape,
+.hide-for-portrait {
+  display: inherit !important;
+}
+
+/* line 75, ../scss/components/modules/_mqueries.scss */
+.hide-for-landscape,
+.show-for-portrait {
+  display: none !important;
+}
+
+@media screen and (orientation: landscape) {
+  /* line 79, ../scss/components/modules/_mqueries.scss */
+  .show-for-landscape,
+  .hide-for-portrait {
+    display: inherit !important;
+  }
+
+  /* line 81, ../scss/components/modules/_mqueries.scss */
+  .hide-for-landscape,
+  .show-for-portrait {
+    display: none !important;
+  }
+}
+@media screen and (orientation: portrait) {
+  /* line 86, ../scss/components/modules/_mqueries.scss */
+  .show-for-portrait,
+  .hide-for-landscape {
+    display: inherit !important;
+  }
+
+  /* line 88, ../scss/components/modules/_mqueries.scss */
+  .hide-for-portrait,
+  .show-for-landscape {
+    display: none !important;
+  }
+}
+/* Touch-enabled device targeting */
+/* line 92, ../scss/components/modules/_mqueries.scss */
+.show-for-touch {
+  display: none !important;
+}
+
+/* line 93, ../scss/components/modules/_mqueries.scss */
+.hide-for-touch {
+  display: inherit !important;
+}
+
+/* line 94, ../scss/components/modules/_mqueries.scss */
+.touch .show-for-touch {
+  display: inherit !important;
+}
+
+/* line 95, ../scss/components/modules/_mqueries.scss */
+.touch .hide-for-touch {
+  display: none !important;
+}
+
+/* Specific overrides for elements that require something other than display: block */
+/* line 102, ../scss/components/modules/_mqueries.scss */
+table.show-for-xlarge,
+table.show-for-large,
+table.hide-for-small,
+table.hide-for-medium {
+  display: table !important;
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  /* line 108, ../scss/components/modules/_mqueries.scss */
+  .touch table.hide-for-xlarge,
+  .touch table.hide-for-large,
+  .touch table.hide-for-small,
+  .touch table.show-for-medium {
+    display: table !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 115, ../scss/components/modules/_mqueries.scss */
+  table.hide-for-xlarge,
+  table.hide-for-large,
+  table.hide-for-medium,
+  table.show-for-small {
+    display: table !important;
+  }
+}
+/* 1280 tablet ------------ */
+@media only screen and (max-device-width: 1280px) {
+  /* NavBar --- */
+  /*            */
+  /* line 124, ../scss/components/modules/_mqueries.scss */
+  .touch .nav-bar li.has-flyout > a {
+    padding-right: 36px !important;
+  }
+}
+/* Covering almost all ----- */
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+  /* line 130, ../scss/components/modules/_mqueries.scss */
+  .flex-video {
+    padding-top: 0;
+  }
+}
+/* Between Medium and Small */
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  /* NavBar --- */
+  /*            */
+  /* line 139, ../scss/components/modules/_mqueries.scss */
+  .touch .nav-bar li a {
+    font-size: 11px;
+  }
+  /* line 141, ../scss/components/modules/_mqueries.scss */
+  .touch .nav-bar li.has-flyout > a.flyout-toggle {
+    padding: 20px !important;
+  }
+  /* line 142, ../scss/components/modules/_mqueries.scss */
+  .touch .nav-bar li.has-flyout > a {
+    padding-right: 36px !important;
+  }
+
+  /* Clearing --- */
+  /*              */
+  /* line 148, ../scss/components/modules/_mqueries.scss */
+  .clearing-main-right, .clearing-main-left {
+    height: 100%;
+    width: 40px;
+    top: 0;
+    border: none;
+  }
+  /* line 153, ../scss/components/modules/_mqueries.scss */
+  .clearing-main-right:before, .clearing-main-left:before {
+    position: absolute;
+    top: 50%;
+  }
+
+  /* line 155, ../scss/components/modules/_mqueries.scss */
+  .clearing-main-left {
+    left: 0;
+  }
+  /* line 157, ../scss/components/modules/_mqueries.scss */
+  .clearing-main-left:before {
+    left: 5px;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 16px;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* line 159, ../scss/components/modules/_mqueries.scss */
+  .clearing-main-right {
+    height: 100%;
+    right: 0;
+  }
+  /* line 162, ../scss/components/modules/_mqueries.scss */
+  .clearing-main-right:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 16px;
+    border-color: transparent transparent transparent white;
+  }
+}
+/* Small Devices ------------ */
+@media only screen and (max-width: 767px) {
+  /* Global Misc --- */
+  /*                 */
+  /* line 172, ../scss/components/modules/_mqueries.scss */
+  .left, .right {
+    float: none;
+  }
+
+  /* line 173, ../scss/components/modules/_mqueries.scss */
+  body {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* The Grid --- */
+  /*              */
+  /* line 177, ../scss/components/modules/_mqueries.scss */
+  .row, #av-overlay #av_verify_form p, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description {
+    width: auto;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 178, ../scss/components/modules/_mqueries.scss */
+  .column, .columns {
+    width: auto !important;
+    float: none;
+  }
+
+  /* line 179, ../scss/components/modules/_mqueries.scss */
+  .column:last-child, .columns:last-child {
+    float: none;
+  }
+
+  /* line 180, ../scss/components/modules/_mqueries.scss */
+  [class*="column"] + [class*="column"]:last-child {
+    float: none;
+  }
+
+  /* line 181, ../scss/components/modules/_mqueries.scss */
+  .column:before, .columns:before, .column:after, .columns:after {
+    content: "";
+    display: table;
+  }
+
+  /* line 182, ../scss/components/modules/_mqueries.scss */
+  .column:after, .columns:after {
+    clear: both;
+  }
+
+  /* line 185, ../scss/components/modules/_mqueries.scss */
+  .offset-by-one, .offset-by-two, .offset-by-three, .offset-by-four, .offset-by-five, .offset-by-six, .offset-by-seven, .offset-by-eight, .offset-by-nine, .offset-by-ten {
+    margin-left: 0 !important;
+  }
+
+  /* line 186, ../scss/components/modules/_mqueries.scss */
+  .push-two, .push-three, .push-four, .push-five, .push-six, .push-seven, .push-eight, .push-nine, .push-ten {
+    left: auto;
+  }
+
+  /* line 187, ../scss/components/modules/_mqueries.scss */
+  .pull-two, .pull-three, .pull-four, .pull-five, .pull-six, .pull-seven, .pull-eight, .pull-nine, .pull-ten {
+    right: auto;
+  }
+
+  /* Mobile 4-column Grid */
+  /* line 200, ../scss/components/modules/_mqueries.scss */
+  .row .mobile-one, #av-overlay #av_verify_form p .mobile-one, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .mobile-one, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .mobile-one {
+    width: 25% !important;
+    float: left;
+    padding: 0 15px;
+  }
+  /* line 201, ../scss/components/modules/_mqueries.scss */
+  .row .mobile-one:last-child, #av-overlay #av_verify_form p .mobile-one:last-child, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .mobile-one:last-child, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .mobile-one:last-child {
+    float: right;
+  }
+  /* line 202, ../scss/components/modules/_mqueries.scss */
+  .row .mobile-one.end, #av-overlay #av_verify_form p .mobile-one.end, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .mobile-one.end, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .mobile-one.end {
+    float: left;
+  }
+  /* line 205, ../scss/components/modules/_mqueries.scss */
+  .row.collapse .mobile-one, #av-overlay #av_verify_form p.collapse .mobile-one, #av-overlay #av_verify_form .post-text .gform_heading span.collapse.gform_description .mobile-one, .post-text .gform_heading #av-overlay #av_verify_form span.collapse.gform_description .mobile-one {
+    padding: 0;
+  }
+
+  /* line 200, ../scss/components/modules/_mqueries.scss */
+  .row .mobile-two, #av-overlay #av_verify_form p .mobile-two, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .mobile-two, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .mobile-two {
+    width: 50% !important;
+    float: left;
+    padding: 0 15px;
+  }
+  /* line 201, ../scss/components/modules/_mqueries.scss */
+  .row .mobile-two:last-child, #av-overlay #av_verify_form p .mobile-two:last-child, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .mobile-two:last-child, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .mobile-two:last-child {
+    float: right;
+  }
+  /* line 202, ../scss/components/modules/_mqueries.scss */
+  .row .mobile-two.end, #av-overlay #av_verify_form p .mobile-two.end, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .mobile-two.end, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .mobile-two.end {
+    float: left;
+  }
+  /* line 205, ../scss/components/modules/_mqueries.scss */
+  .row.collapse .mobile-two, #av-overlay #av_verify_form p.collapse .mobile-two, #av-overlay #av_verify_form .post-text .gform_heading span.collapse.gform_description .mobile-two, .post-text .gform_heading #av-overlay #av_verify_form span.collapse.gform_description .mobile-two {
+    padding: 0;
+  }
+
+  /* line 200, ../scss/components/modules/_mqueries.scss */
+  .row .mobile-three, #av-overlay #av_verify_form p .mobile-three, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .mobile-three, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .mobile-three {
+    width: 75% !important;
+    float: left;
+    padding: 0 15px;
+  }
+  /* line 201, ../scss/components/modules/_mqueries.scss */
+  .row .mobile-three:last-child, #av-overlay #av_verify_form p .mobile-three:last-child, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .mobile-three:last-child, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .mobile-three:last-child {
+    float: right;
+  }
+  /* line 202, ../scss/components/modules/_mqueries.scss */
+  .row .mobile-three.end, #av-overlay #av_verify_form p .mobile-three.end, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .mobile-three.end, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .mobile-three.end {
+    float: left;
+  }
+  /* line 205, ../scss/components/modules/_mqueries.scss */
+  .row.collapse .mobile-three, #av-overlay #av_verify_form p.collapse .mobile-three, #av-overlay #av_verify_form .post-text .gform_heading span.collapse.gform_description .mobile-three, .post-text .gform_heading #av-overlay #av_verify_form span.collapse.gform_description .mobile-three {
+    padding: 0;
+  }
+
+  /* line 200, ../scss/components/modules/_mqueries.scss */
+  .row .mobile-four, #av-overlay #av_verify_form p .mobile-four, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .mobile-four, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .mobile-four {
+    width: 100% !important;
+    float: left;
+    padding: 0 15px;
+  }
+  /* line 201, ../scss/components/modules/_mqueries.scss */
+  .row .mobile-four:last-child, #av-overlay #av_verify_form p .mobile-four:last-child, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .mobile-four:last-child, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .mobile-four:last-child {
+    float: right;
+  }
+  /* line 202, ../scss/components/modules/_mqueries.scss */
+  .row .mobile-four.end, #av-overlay #av_verify_form p .mobile-four.end, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .mobile-four.end, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .mobile-four.end {
+    float: left;
+  }
+  /* line 205, ../scss/components/modules/_mqueries.scss */
+  .row.collapse .mobile-four, #av-overlay #av_verify_form p.collapse .mobile-four, #av-overlay #av_verify_form .post-text .gform_heading span.collapse.gform_description .mobile-four, .post-text .gform_heading #av-overlay #av_verify_form span.collapse.gform_description .mobile-four {
+    padding: 0;
+  }
+
+  /* line 210, ../scss/components/modules/_mqueries.scss */
+  .push-one-mobile {
+    left: 25%;
+  }
+
+  /* line 211, ../scss/components/modules/_mqueries.scss */
+  .pull-one-mobile {
+    right: 25%;
+  }
+
+  /* line 210, ../scss/components/modules/_mqueries.scss */
+  .push-two-mobile {
+    left: 50%;
+  }
+
+  /* line 211, ../scss/components/modules/_mqueries.scss */
+  .pull-two-mobile {
+    right: 50%;
+  }
+
+  /* line 210, ../scss/components/modules/_mqueries.scss */
+  .push-three-mobile {
+    left: 75%;
+  }
+
+  /* line 211, ../scss/components/modules/_mqueries.scss */
+  .pull-three-mobile {
+    right: 75%;
+  }
+
+  /* Block Grids --- */
+  /*                 */
+  /* line 217, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile > li {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* line 221, ../scss/components/modules/_mqueries.scss */
+  .block-grid > li {
+    clear: none;
+  }
+  /* line 223, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-one-up > li {
+    width: 100%;
+  }
+  /* line 223, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-two-up > li {
+    width: 50%;
+  }
+  /* line 225, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-two-up > li:nth-child(2n+1) {
+    clear: both;
+  }
+  /* line 223, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-three-up > li {
+    width: 33.33333%;
+  }
+  /* line 225, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-three-up > li:nth-child(3n+1) {
+    clear: both;
+  }
+  /* line 223, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-four-up > li {
+    width: 25%;
+  }
+  /* line 225, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-four-up > li:nth-child(4n+1) {
+    clear: both;
+  }
+  /* line 223, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-five-up > li {
+    width: 20%;
+  }
+  /* line 225, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-five-up > li:nth-child(5n+1) {
+    clear: both;
+  }
+  /* line 223, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-six-up > li {
+    width: 16.66667%;
+  }
+  /* line 225, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-six-up > li:nth-child(6n+1) {
+    clear: both;
+  }
+  /* line 223, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-seven-up > li {
+    width: 14.28571%;
+  }
+  /* line 225, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-seven-up > li:nth-child(7n+1) {
+    clear: both;
+  }
+  /* line 223, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-eight-up > li {
+    width: 12.5%;
+  }
+  /* line 225, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-eight-up > li:nth-child(8n+1) {
+    clear: both;
+  }
+  /* line 223, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-nine-up > li {
+    width: 11.11111%;
+  }
+  /* line 225, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-nine-up > li:nth-child(9n+1) {
+    clear: both;
+  }
+  /* line 223, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-ten-up > li {
+    width: 10%;
+  }
+  /* line 225, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-ten-up > li:nth-child(10n+1) {
+    clear: both;
+  }
+  /* line 223, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-eleven-up > li {
+    width: 9.09091%;
+  }
+  /* line 225, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-eleven-up > li:nth-child(11n+1) {
+    clear: both;
+  }
+  /* line 223, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-twelve-up > li {
+    width: 8.33333%;
+  }
+  /* line 225, ../scss/components/modules/_mqueries.scss */
+  .block-grid.mobile-twelve-up > li:nth-child(12n+1) {
+    clear: both;
+  }
+
+  /* Forms --- */
+  /*           */
+  /* Label alignment */
+  /* line 234, ../scss/components/modules/_mqueries.scss */
+  label.right {
+    text-align: left;
+  }
+
+  /* Extend width of all inputs */
+  /* line 247, ../scss/components/modules/_mqueries.scss */
+  input[type="text"].one, .row input[type="text"].one, #av-overlay #av_verify_form p input[type="text"].one, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="text"].one, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="text"].one,
+  input[type="password"].one,
+  .row input[type="password"].one,
+  #av-overlay #av_verify_form p input[type="password"].one,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="password"].one,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="password"].one,
+  input[type="date"].one,
+  .row input[type="date"].one,
+  #av-overlay #av_verify_form p input[type="date"].one,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="date"].one,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="date"].one,
+  input[type="datetime"].one,
+  .row input[type="datetime"].one,
+  #av-overlay #av_verify_form p input[type="datetime"].one,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="datetime"].one,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="datetime"].one,
+  input[type="email"].one,
+  .row input[type="email"].one,
+  #av-overlay #av_verify_form p input[type="email"].one,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="email"].one,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="email"].one,
+  input[type="number"].one,
+  .row input[type="number"].one,
+  #av-overlay #av_verify_form p input[type="number"].one,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="number"].one,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="number"].one,
+  input[type="search"].one,
+  .row input[type="search"].one,
+  #av-overlay #av_verify_form p input[type="search"].one,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="search"].one,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="search"].one,
+  input[type="tel"].one,
+  .row input[type="tel"].one,
+  #av-overlay #av_verify_form p input[type="tel"].one,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="tel"].one,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="tel"].one,
+  input[type="time"].one,
+  .row input[type="time"].one,
+  #av-overlay #av_verify_form p input[type="time"].one,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="time"].one,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="time"].one,
+  input[type="url"].one,
+  .row input[type="url"].one,
+  #av-overlay #av_verify_form p input[type="url"].one,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="url"].one,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="url"].one,
+  textarea.one,
+  .row textarea.one,
+  #av-overlay #av_verify_form p textarea.one,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description textarea.one,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description textarea.one {
+    width: 100% !important;
+  }
+
+  /* line 247, ../scss/components/modules/_mqueries.scss */
+  input[type="text"].two, .row input[type="text"].two, #av-overlay #av_verify_form p input[type="text"].two, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="text"].two, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="text"].two,
+  input[type="password"].two,
+  .row input[type="password"].two,
+  #av-overlay #av_verify_form p input[type="password"].two,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="password"].two,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="password"].two,
+  input[type="date"].two,
+  .row input[type="date"].two,
+  #av-overlay #av_verify_form p input[type="date"].two,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="date"].two,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="date"].two,
+  input[type="datetime"].two,
+  .row input[type="datetime"].two,
+  #av-overlay #av_verify_form p input[type="datetime"].two,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="datetime"].two,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="datetime"].two,
+  input[type="email"].two,
+  .row input[type="email"].two,
+  #av-overlay #av_verify_form p input[type="email"].two,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="email"].two,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="email"].two,
+  input[type="number"].two,
+  .row input[type="number"].two,
+  #av-overlay #av_verify_form p input[type="number"].two,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="number"].two,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="number"].two,
+  input[type="search"].two,
+  .row input[type="search"].two,
+  #av-overlay #av_verify_form p input[type="search"].two,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="search"].two,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="search"].two,
+  input[type="tel"].two,
+  .row input[type="tel"].two,
+  #av-overlay #av_verify_form p input[type="tel"].two,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="tel"].two,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="tel"].two,
+  input[type="time"].two,
+  .row input[type="time"].two,
+  #av-overlay #av_verify_form p input[type="time"].two,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="time"].two,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="time"].two,
+  input[type="url"].two,
+  .row input[type="url"].two,
+  #av-overlay #av_verify_form p input[type="url"].two,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="url"].two,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="url"].two,
+  textarea.two,
+  .row textarea.two,
+  #av-overlay #av_verify_form p textarea.two,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description textarea.two,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description textarea.two {
+    width: 100% !important;
+  }
+
+  /* line 247, ../scss/components/modules/_mqueries.scss */
+  input[type="text"].three, .row input[type="text"].three, #av-overlay #av_verify_form p input[type="text"].three, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="text"].three, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="text"].three,
+  input[type="password"].three,
+  .row input[type="password"].three,
+  #av-overlay #av_verify_form p input[type="password"].three,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="password"].three,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="password"].three,
+  input[type="date"].three,
+  .row input[type="date"].three,
+  #av-overlay #av_verify_form p input[type="date"].three,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="date"].three,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="date"].three,
+  input[type="datetime"].three,
+  .row input[type="datetime"].three,
+  #av-overlay #av_verify_form p input[type="datetime"].three,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="datetime"].three,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="datetime"].three,
+  input[type="email"].three,
+  .row input[type="email"].three,
+  #av-overlay #av_verify_form p input[type="email"].three,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="email"].three,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="email"].three,
+  input[type="number"].three,
+  .row input[type="number"].three,
+  #av-overlay #av_verify_form p input[type="number"].three,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="number"].three,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="number"].three,
+  input[type="search"].three,
+  .row input[type="search"].three,
+  #av-overlay #av_verify_form p input[type="search"].three,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="search"].three,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="search"].three,
+  input[type="tel"].three,
+  .row input[type="tel"].three,
+  #av-overlay #av_verify_form p input[type="tel"].three,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="tel"].three,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="tel"].three,
+  input[type="time"].three,
+  .row input[type="time"].three,
+  #av-overlay #av_verify_form p input[type="time"].three,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="time"].three,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="time"].three,
+  input[type="url"].three,
+  .row input[type="url"].three,
+  #av-overlay #av_verify_form p input[type="url"].three,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="url"].three,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="url"].three,
+  textarea.three,
+  .row textarea.three,
+  #av-overlay #av_verify_form p textarea.three,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description textarea.three,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description textarea.three {
+    width: 100% !important;
+  }
+
+  /* line 247, ../scss/components/modules/_mqueries.scss */
+  input[type="text"].four, .row input[type="text"].four, #av-overlay #av_verify_form p input[type="text"].four, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="text"].four, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="text"].four,
+  input[type="password"].four,
+  .row input[type="password"].four,
+  #av-overlay #av_verify_form p input[type="password"].four,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="password"].four,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="password"].four,
+  input[type="date"].four,
+  .row input[type="date"].four,
+  #av-overlay #av_verify_form p input[type="date"].four,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="date"].four,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="date"].four,
+  input[type="datetime"].four,
+  .row input[type="datetime"].four,
+  #av-overlay #av_verify_form p input[type="datetime"].four,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="datetime"].four,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="datetime"].four,
+  input[type="email"].four,
+  .row input[type="email"].four,
+  #av-overlay #av_verify_form p input[type="email"].four,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="email"].four,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="email"].four,
+  input[type="number"].four,
+  .row input[type="number"].four,
+  #av-overlay #av_verify_form p input[type="number"].four,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="number"].four,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="number"].four,
+  input[type="search"].four,
+  .row input[type="search"].four,
+  #av-overlay #av_verify_form p input[type="search"].four,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="search"].four,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="search"].four,
+  input[type="tel"].four,
+  .row input[type="tel"].four,
+  #av-overlay #av_verify_form p input[type="tel"].four,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="tel"].four,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="tel"].four,
+  input[type="time"].four,
+  .row input[type="time"].four,
+  #av-overlay #av_verify_form p input[type="time"].four,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="time"].four,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="time"].four,
+  input[type="url"].four,
+  .row input[type="url"].four,
+  #av-overlay #av_verify_form p input[type="url"].four,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="url"].four,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="url"].four,
+  textarea.four,
+  .row textarea.four,
+  #av-overlay #av_verify_form p textarea.four,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description textarea.four,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description textarea.four {
+    width: 100% !important;
+  }
+
+  /* line 247, ../scss/components/modules/_mqueries.scss */
+  input[type="text"].five, .row input[type="text"].five, #av-overlay #av_verify_form p input[type="text"].five, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="text"].five, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="text"].five,
+  input[type="password"].five,
+  .row input[type="password"].five,
+  #av-overlay #av_verify_form p input[type="password"].five,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="password"].five,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="password"].five,
+  input[type="date"].five,
+  .row input[type="date"].five,
+  #av-overlay #av_verify_form p input[type="date"].five,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="date"].five,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="date"].five,
+  input[type="datetime"].five,
+  .row input[type="datetime"].five,
+  #av-overlay #av_verify_form p input[type="datetime"].five,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="datetime"].five,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="datetime"].five,
+  input[type="email"].five,
+  .row input[type="email"].five,
+  #av-overlay #av_verify_form p input[type="email"].five,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="email"].five,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="email"].five,
+  input[type="number"].five,
+  .row input[type="number"].five,
+  #av-overlay #av_verify_form p input[type="number"].five,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="number"].five,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="number"].five,
+  input[type="search"].five,
+  .row input[type="search"].five,
+  #av-overlay #av_verify_form p input[type="search"].five,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="search"].five,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="search"].five,
+  input[type="tel"].five,
+  .row input[type="tel"].five,
+  #av-overlay #av_verify_form p input[type="tel"].five,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="tel"].five,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="tel"].five,
+  input[type="time"].five,
+  .row input[type="time"].five,
+  #av-overlay #av_verify_form p input[type="time"].five,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="time"].five,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="time"].five,
+  input[type="url"].five,
+  .row input[type="url"].five,
+  #av-overlay #av_verify_form p input[type="url"].five,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="url"].five,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="url"].five,
+  textarea.five,
+  .row textarea.five,
+  #av-overlay #av_verify_form p textarea.five,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description textarea.five,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description textarea.five {
+    width: 100% !important;
+  }
+
+  /* line 247, ../scss/components/modules/_mqueries.scss */
+  input[type="text"].six, .row input[type="text"].six, #av-overlay #av_verify_form p input[type="text"].six, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="text"].six, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="text"].six,
+  input[type="password"].six,
+  .row input[type="password"].six,
+  #av-overlay #av_verify_form p input[type="password"].six,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="password"].six,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="password"].six,
+  input[type="date"].six,
+  .row input[type="date"].six,
+  #av-overlay #av_verify_form p input[type="date"].six,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="date"].six,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="date"].six,
+  input[type="datetime"].six,
+  .row input[type="datetime"].six,
+  #av-overlay #av_verify_form p input[type="datetime"].six,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="datetime"].six,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="datetime"].six,
+  input[type="email"].six,
+  .row input[type="email"].six,
+  #av-overlay #av_verify_form p input[type="email"].six,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="email"].six,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="email"].six,
+  input[type="number"].six,
+  .row input[type="number"].six,
+  #av-overlay #av_verify_form p input[type="number"].six,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="number"].six,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="number"].six,
+  input[type="search"].six,
+  .row input[type="search"].six,
+  #av-overlay #av_verify_form p input[type="search"].six,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="search"].six,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="search"].six,
+  input[type="tel"].six,
+  .row input[type="tel"].six,
+  #av-overlay #av_verify_form p input[type="tel"].six,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="tel"].six,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="tel"].six,
+  input[type="time"].six,
+  .row input[type="time"].six,
+  #av-overlay #av_verify_form p input[type="time"].six,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="time"].six,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="time"].six,
+  input[type="url"].six,
+  .row input[type="url"].six,
+  #av-overlay #av_verify_form p input[type="url"].six,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="url"].six,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="url"].six,
+  textarea.six,
+  .row textarea.six,
+  #av-overlay #av_verify_form p textarea.six,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description textarea.six,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description textarea.six {
+    width: 100% !important;
+  }
+
+  /* line 247, ../scss/components/modules/_mqueries.scss */
+  input[type="text"].seven, .row input[type="text"].seven, #av-overlay #av_verify_form p input[type="text"].seven, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="text"].seven, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="text"].seven,
+  input[type="password"].seven,
+  .row input[type="password"].seven,
+  #av-overlay #av_verify_form p input[type="password"].seven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="password"].seven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="password"].seven,
+  input[type="date"].seven,
+  .row input[type="date"].seven,
+  #av-overlay #av_verify_form p input[type="date"].seven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="date"].seven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="date"].seven,
+  input[type="datetime"].seven,
+  .row input[type="datetime"].seven,
+  #av-overlay #av_verify_form p input[type="datetime"].seven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="datetime"].seven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="datetime"].seven,
+  input[type="email"].seven,
+  .row input[type="email"].seven,
+  #av-overlay #av_verify_form p input[type="email"].seven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="email"].seven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="email"].seven,
+  input[type="number"].seven,
+  .row input[type="number"].seven,
+  #av-overlay #av_verify_form p input[type="number"].seven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="number"].seven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="number"].seven,
+  input[type="search"].seven,
+  .row input[type="search"].seven,
+  #av-overlay #av_verify_form p input[type="search"].seven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="search"].seven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="search"].seven,
+  input[type="tel"].seven,
+  .row input[type="tel"].seven,
+  #av-overlay #av_verify_form p input[type="tel"].seven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="tel"].seven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="tel"].seven,
+  input[type="time"].seven,
+  .row input[type="time"].seven,
+  #av-overlay #av_verify_form p input[type="time"].seven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="time"].seven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="time"].seven,
+  input[type="url"].seven,
+  .row input[type="url"].seven,
+  #av-overlay #av_verify_form p input[type="url"].seven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="url"].seven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="url"].seven,
+  textarea.seven,
+  .row textarea.seven,
+  #av-overlay #av_verify_form p textarea.seven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description textarea.seven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description textarea.seven {
+    width: 100% !important;
+  }
+
+  /* line 247, ../scss/components/modules/_mqueries.scss */
+  input[type="text"].eight, .row input[type="text"].eight, #av-overlay #av_verify_form p input[type="text"].eight, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="text"].eight, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="text"].eight,
+  input[type="password"].eight,
+  .row input[type="password"].eight,
+  #av-overlay #av_verify_form p input[type="password"].eight,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="password"].eight,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="password"].eight,
+  input[type="date"].eight,
+  .row input[type="date"].eight,
+  #av-overlay #av_verify_form p input[type="date"].eight,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="date"].eight,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="date"].eight,
+  input[type="datetime"].eight,
+  .row input[type="datetime"].eight,
+  #av-overlay #av_verify_form p input[type="datetime"].eight,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="datetime"].eight,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="datetime"].eight,
+  input[type="email"].eight,
+  .row input[type="email"].eight,
+  #av-overlay #av_verify_form p input[type="email"].eight,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="email"].eight,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="email"].eight,
+  input[type="number"].eight,
+  .row input[type="number"].eight,
+  #av-overlay #av_verify_form p input[type="number"].eight,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="number"].eight,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="number"].eight,
+  input[type="search"].eight,
+  .row input[type="search"].eight,
+  #av-overlay #av_verify_form p input[type="search"].eight,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="search"].eight,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="search"].eight,
+  input[type="tel"].eight,
+  .row input[type="tel"].eight,
+  #av-overlay #av_verify_form p input[type="tel"].eight,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="tel"].eight,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="tel"].eight,
+  input[type="time"].eight,
+  .row input[type="time"].eight,
+  #av-overlay #av_verify_form p input[type="time"].eight,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="time"].eight,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="time"].eight,
+  input[type="url"].eight,
+  .row input[type="url"].eight,
+  #av-overlay #av_verify_form p input[type="url"].eight,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="url"].eight,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="url"].eight,
+  textarea.eight,
+  .row textarea.eight,
+  #av-overlay #av_verify_form p textarea.eight,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description textarea.eight,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description textarea.eight {
+    width: 100% !important;
+  }
+
+  /* line 247, ../scss/components/modules/_mqueries.scss */
+  input[type="text"].nine, .row input[type="text"].nine, #av-overlay #av_verify_form p input[type="text"].nine, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="text"].nine, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="text"].nine,
+  input[type="password"].nine,
+  .row input[type="password"].nine,
+  #av-overlay #av_verify_form p input[type="password"].nine,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="password"].nine,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="password"].nine,
+  input[type="date"].nine,
+  .row input[type="date"].nine,
+  #av-overlay #av_verify_form p input[type="date"].nine,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="date"].nine,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="date"].nine,
+  input[type="datetime"].nine,
+  .row input[type="datetime"].nine,
+  #av-overlay #av_verify_form p input[type="datetime"].nine,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="datetime"].nine,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="datetime"].nine,
+  input[type="email"].nine,
+  .row input[type="email"].nine,
+  #av-overlay #av_verify_form p input[type="email"].nine,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="email"].nine,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="email"].nine,
+  input[type="number"].nine,
+  .row input[type="number"].nine,
+  #av-overlay #av_verify_form p input[type="number"].nine,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="number"].nine,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="number"].nine,
+  input[type="search"].nine,
+  .row input[type="search"].nine,
+  #av-overlay #av_verify_form p input[type="search"].nine,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="search"].nine,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="search"].nine,
+  input[type="tel"].nine,
+  .row input[type="tel"].nine,
+  #av-overlay #av_verify_form p input[type="tel"].nine,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="tel"].nine,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="tel"].nine,
+  input[type="time"].nine,
+  .row input[type="time"].nine,
+  #av-overlay #av_verify_form p input[type="time"].nine,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="time"].nine,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="time"].nine,
+  input[type="url"].nine,
+  .row input[type="url"].nine,
+  #av-overlay #av_verify_form p input[type="url"].nine,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="url"].nine,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="url"].nine,
+  textarea.nine,
+  .row textarea.nine,
+  #av-overlay #av_verify_form p textarea.nine,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description textarea.nine,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description textarea.nine {
+    width: 100% !important;
+  }
+
+  /* line 247, ../scss/components/modules/_mqueries.scss */
+  input[type="text"].ten, .row input[type="text"].ten, #av-overlay #av_verify_form p input[type="text"].ten, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="text"].ten, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="text"].ten,
+  input[type="password"].ten,
+  .row input[type="password"].ten,
+  #av-overlay #av_verify_form p input[type="password"].ten,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="password"].ten,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="password"].ten,
+  input[type="date"].ten,
+  .row input[type="date"].ten,
+  #av-overlay #av_verify_form p input[type="date"].ten,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="date"].ten,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="date"].ten,
+  input[type="datetime"].ten,
+  .row input[type="datetime"].ten,
+  #av-overlay #av_verify_form p input[type="datetime"].ten,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="datetime"].ten,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="datetime"].ten,
+  input[type="email"].ten,
+  .row input[type="email"].ten,
+  #av-overlay #av_verify_form p input[type="email"].ten,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="email"].ten,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="email"].ten,
+  input[type="number"].ten,
+  .row input[type="number"].ten,
+  #av-overlay #av_verify_form p input[type="number"].ten,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="number"].ten,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="number"].ten,
+  input[type="search"].ten,
+  .row input[type="search"].ten,
+  #av-overlay #av_verify_form p input[type="search"].ten,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="search"].ten,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="search"].ten,
+  input[type="tel"].ten,
+  .row input[type="tel"].ten,
+  #av-overlay #av_verify_form p input[type="tel"].ten,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="tel"].ten,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="tel"].ten,
+  input[type="time"].ten,
+  .row input[type="time"].ten,
+  #av-overlay #av_verify_form p input[type="time"].ten,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="time"].ten,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="time"].ten,
+  input[type="url"].ten,
+  .row input[type="url"].ten,
+  #av-overlay #av_verify_form p input[type="url"].ten,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="url"].ten,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="url"].ten,
+  textarea.ten,
+  .row textarea.ten,
+  #av-overlay #av_verify_form p textarea.ten,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description textarea.ten,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description textarea.ten {
+    width: 100% !important;
+  }
+
+  /* line 247, ../scss/components/modules/_mqueries.scss */
+  input[type="text"].eleven, .row input[type="text"].eleven, #av-overlay #av_verify_form p input[type="text"].eleven, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="text"].eleven, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="text"].eleven,
+  input[type="password"].eleven,
+  .row input[type="password"].eleven,
+  #av-overlay #av_verify_form p input[type="password"].eleven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="password"].eleven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="password"].eleven,
+  input[type="date"].eleven,
+  .row input[type="date"].eleven,
+  #av-overlay #av_verify_form p input[type="date"].eleven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="date"].eleven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="date"].eleven,
+  input[type="datetime"].eleven,
+  .row input[type="datetime"].eleven,
+  #av-overlay #av_verify_form p input[type="datetime"].eleven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="datetime"].eleven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="datetime"].eleven,
+  input[type="email"].eleven,
+  .row input[type="email"].eleven,
+  #av-overlay #av_verify_form p input[type="email"].eleven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="email"].eleven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="email"].eleven,
+  input[type="number"].eleven,
+  .row input[type="number"].eleven,
+  #av-overlay #av_verify_form p input[type="number"].eleven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="number"].eleven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="number"].eleven,
+  input[type="search"].eleven,
+  .row input[type="search"].eleven,
+  #av-overlay #av_verify_form p input[type="search"].eleven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="search"].eleven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="search"].eleven,
+  input[type="tel"].eleven,
+  .row input[type="tel"].eleven,
+  #av-overlay #av_verify_form p input[type="tel"].eleven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="tel"].eleven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="tel"].eleven,
+  input[type="time"].eleven,
+  .row input[type="time"].eleven,
+  #av-overlay #av_verify_form p input[type="time"].eleven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="time"].eleven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="time"].eleven,
+  input[type="url"].eleven,
+  .row input[type="url"].eleven,
+  #av-overlay #av_verify_form p input[type="url"].eleven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="url"].eleven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="url"].eleven,
+  textarea.eleven,
+  .row textarea.eleven,
+  #av-overlay #av_verify_form p textarea.eleven,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description textarea.eleven,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description textarea.eleven {
+    width: 100% !important;
+  }
+
+  /* line 247, ../scss/components/modules/_mqueries.scss */
+  input[type="text"].twelve, .row input[type="text"].twelve, #av-overlay #av_verify_form p input[type="text"].twelve, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="text"].twelve, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="text"].twelve,
+  input[type="password"].twelve,
+  .row input[type="password"].twelve,
+  #av-overlay #av_verify_form p input[type="password"].twelve,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="password"].twelve,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="password"].twelve,
+  input[type="date"].twelve,
+  .row input[type="date"].twelve,
+  #av-overlay #av_verify_form p input[type="date"].twelve,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="date"].twelve,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="date"].twelve,
+  input[type="datetime"].twelve,
+  .row input[type="datetime"].twelve,
+  #av-overlay #av_verify_form p input[type="datetime"].twelve,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="datetime"].twelve,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="datetime"].twelve,
+  input[type="email"].twelve,
+  .row input[type="email"].twelve,
+  #av-overlay #av_verify_form p input[type="email"].twelve,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="email"].twelve,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="email"].twelve,
+  input[type="number"].twelve,
+  .row input[type="number"].twelve,
+  #av-overlay #av_verify_form p input[type="number"].twelve,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="number"].twelve,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="number"].twelve,
+  input[type="search"].twelve,
+  .row input[type="search"].twelve,
+  #av-overlay #av_verify_form p input[type="search"].twelve,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="search"].twelve,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="search"].twelve,
+  input[type="tel"].twelve,
+  .row input[type="tel"].twelve,
+  #av-overlay #av_verify_form p input[type="tel"].twelve,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="tel"].twelve,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="tel"].twelve,
+  input[type="time"].twelve,
+  .row input[type="time"].twelve,
+  #av-overlay #av_verify_form p input[type="time"].twelve,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="time"].twelve,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="time"].twelve,
+  input[type="url"].twelve,
+  .row input[type="url"].twelve,
+  #av-overlay #av_verify_form p input[type="url"].twelve,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description input[type="url"].twelve,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description input[type="url"].twelve,
+  textarea.twelve,
+  .row textarea.twelve,
+  #av-overlay #av_verify_form p textarea.twelve,
+  #av-overlay #av_verify_form .post-text .gform_heading span.gform_description textarea.twelve,
+  .post-text .gform_heading #av-overlay #av_verify_form span.gform_description textarea.twelve {
+    width: 100% !important;
+  }
+
+  /* Buttons --- */
+  /*             */
+  /* Basic overrides */
+  /* line 261, ../scss/components/modules/_mqueries.scss */
+  .button, #av-overlay .submit input[type=submit] {
+    display: block;
+  }
+
+  /* line 262, ../scss/components/modules/_mqueries.scss */
+  button.button, input[type="submit"].button, #av-overlay .submit input[type="submit"][type=submit], input[type="reset"].button, #av-overlay .submit input[type="reset"][type=submit] {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Button Groups */
+  /* line 265, ../scss/components/modules/_mqueries.scss */
+  .button-group button.button, .button-group input[type="submit"].button, .button-group #av-overlay .submit input[type="submit"][type=submit], #av-overlay .submit .button-group input[type="submit"][type=submit] {
+    width: auto;
+    padding: 10px 20px 11px;
+  }
+  /* line 266, ../scss/components/modules/_mqueries.scss */
+  .button-group button.button.large, .button-group input[type="submit"].button.large, .button-group #av-overlay .submit input[type="submit"].large[type=submit], #av-overlay .submit .button-group input[type="submit"].large[type=submit] {
+    padding: 15px 30px 16px;
+  }
+  /* line 267, ../scss/components/modules/_mqueries.scss */
+  .button-group button.button.medium, .button-group input[type="submit"].button.medium, .button-group #av-overlay .submit input[type="submit"].medium[type=submit], #av-overlay .submit .button-group input[type="submit"].medium[type=submit] {
+    padding: 10px 20px 11px;
+  }
+  /* line 268, ../scss/components/modules/_mqueries.scss */
+  .button-group button.button.small, .button-group input[type="submit"].button.small, .button-group #av-overlay .submit input[type="submit"].small[type=submit], #av-overlay .submit .button-group input[type="submit"].small[type=submit] {
+    padding: 7px 14px 8px;
+  }
+  /* line 269, ../scss/components/modules/_mqueries.scss */
+  .button-group button.button.tiny, .button-group input[type="submit"].button.tiny, .button-group #av-overlay .submit input[type="submit"].tiny[type=submit], #av-overlay .submit .button-group input[type="submit"].tiny[type=submit] {
+    padding: 5px 10px 6px;
+  }
+  /* line 271, ../scss/components/modules/_mqueries.scss */
+  .button-group.even button.button, .button-group.even input[type="submit"].button, .button-group.even #av-overlay .submit input[type="submit"][type=submit], #av-overlay .submit .button-group.even input[type="submit"][type=submit] {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Navbar --- */
+  /*            */
+  /* line 276, ../scss/components/modules/_mqueries.scss */
+  .nav-bar {
+    height: auto;
+  }
+  /* line 277, ../scss/components/modules/_mqueries.scss */
+  .nav-bar > li {
+    float: none;
+    display: block;
+    border-right: none;
+  }
+  /* line 278, ../scss/components/modules/_mqueries.scss */
+  .nav-bar > li > a.main {
+    text-align: left;
+    border-top: 1px solid #ddd;
+    border-right: none;
+  }
+  /* line 279, ../scss/components/modules/_mqueries.scss */
+  .nav-bar > li:first-child > a.main {
+    border-top: none;
+  }
+  /* line 280, ../scss/components/modules/_mqueries.scss */
+  .nav-bar > li.has-flyout > a.flyout-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 22px;
+    z-index: 2;
+    display: block;
+  }
+  /* line 281, ../scss/components/modules/_mqueries.scss */
+  .nav-bar > li.has-flyout.is-touch > a.flyout-toggle span {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+  }
+  /* line 282, ../scss/components/modules/_mqueries.scss */
+  .nav-bar > li.has-flyout > a.flyout-toggle:hover span {
+    border-top-color: #141414;
+  }
+  /* line 283, ../scss/components/modules/_mqueries.scss */
+  .nav-bar.vertical > li.has-flyout > .flyout {
+    left: 0;
+  }
+
+  /* line 285, ../scss/components/modules/_mqueries.scss */
+  .flyout {
+    position: relative;
+    width: 100% !important;
+    top: auto;
+    margin-right: -2px;
+    border-width: 1px 1px 0 1px;
+  }
+  /* line 286, ../scss/components/modules/_mqueries.scss */
+  .flyout.right {
+    float: none;
+    right: auto;
+    left: -1px;
+  }
+  /* line 287, ../scss/components/modules/_mqueries.scss */
+  .flyout.small, .flyout.large {
+    width: 100% !important;
+  }
+  /* line 288, ../scss/components/modules/_mqueries.scss */
+  .flyout p:last-child, .flyout .post-text .gform_heading span.gform_description:last-child, .post-text .gform_heading .flyout span.gform_description:last-child {
+    margin-bottom: 18px;
+  }
+
+  /* Reveal --- */
+  /*            */
+  /* line 293, ../scss/components/modules/_mqueries.scss */
+  .reveal-modal-bg, #av-overlay-wrap {
+    position: absolute;
+  }
+
+  /* line 298, ../scss/components/modules/_mqueries.scss */
+  .reveal-modal, #av-overlay,
+  .reveal-modal.small,
+  .small#av-overlay,
+  .reveal-modal.medium,
+  .medium#av-overlay,
+  .reveal-modal.large,
+  .large#av-overlay,
+  .reveal-modal.xlarge,
+  .xlarge#av-overlay {
+    width: 80%;
+    top: 15px;
+    left: 50%;
+    margin-left: -40%;
+    padding: 20px;
+    height: auto;
+  }
+
+  /* Clearing --- */
+  /*              */
+  /* line 302, ../scss/components/modules/_mqueries.scss */
+  .clearing-container {
+    margin: 0;
+  }
+
+  /* line 303, ../scss/components/modules/_mqueries.scss */
+  .clearing-close {
+    z-index: 99;
+    font-size: 31px;
+    top: 0px;
+    right: 5px;
+  }
+
+  /* line 304, ../scss/components/modules/_mqueries.scss */
+  .clearing-caption {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px !important;
+    line-height: 1.3;
+  }
+
+  /* line 305, ../scss/components/modules/_mqueries.scss */
+  .clearing-main-right, .clearing-main-left {
+    display: none;
+  }
+
+  /* line 307, ../scss/components/modules/_mqueries.scss */
+  .clearing-blackout.clearing-assembled .visible-img, .clearing-blackout.clearing-assembled .clearing-container {
+    height: 100%;
+  }
+  /* line 308, ../scss/components/modules/_mqueries.scss */
+  .clearing-blackout.clearing-assembled ul[data-clearing] {
+    display: none;
+  }
+
+  /* Joyride --- */
+  /*             */
+  /* line 313, ../scss/components/modules/_mqueries.scss */
+  .joyride-tip-guide {
+    width: 95% !important;
+    left: 2.5% !important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+  }
+
+  /* line 314, ../scss/components/modules/_mqueries.scss */
+  .joyride-tip-guide-wrapper {
+    width: 100%;
+  }
+
+  /* Tabs --- */
+  /*          */
+  /* line 318, ../scss/components/modules/_mqueries.scss */
+  .tabs.mobile {
+    width: auto;
+    margin: 20px -20px 40px;
+    border-bottom: solid 1px #ccc;
+    height: auto;
+    margin: 20px -15px 0px -15px;
+  }
+  /* line 319, ../scss/components/modules/_mqueries.scss */
+  .tabs.mobile dt, .tabs.mobile li, .tabs.mobile dd {
+    float: none;
+    height: auto;
+  }
+  /* line 320, ../scss/components/modules/_mqueries.scss */
+  .tabs.mobile dd a, .tabs.mobile li a {
+    font-size: 13px;
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 18px 20px;
+    margin: 0;
+    color: #555;
+    line-height: 1;
+    border: none;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #ccc;
+    background: #fff;
+  }
+  /* line 321, ../scss/components/modules/_mqueries.scss */
+  .tabs.mobile dd a.active, .tabs.mobile li a.active {
+    border: none;
+    background: #0c223f;
+    color: #fff;
+    margin: 0;
+    position: static;
+    top: 0;
+    height: auto;
+  }
+  /* line 322, ../scss/components/modules/_mqueries.scss */
+  .tabs.mobile dd:first-child a.active, .tabs.mobile li:first-child a.active {
+    margin: 0;
+  }
+  /* line 323, ../scss/components/modules/_mqueries.scss */
+  .tabs.mobile + .tabs-content.contained {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 324, ../scss/components/modules/_mqueries.scss */
+  .tabs.mobile .section-title {
+    padding-left: 20px !important;
+  }
+
+  /* line 327, ../scss/components/modules/_mqueries.scss */
+  .contained.mobile {
+    margin-bottom: 0;
+  }
+
+  /* line 328, ../scss/components/modules/_mqueries.scss */
+  .contained.tabs.mobile dd a, .contained.tabs.mobile li a {
+    padding: 18px 20px;
+  }
+
+  /* line 329, ../scss/components/modules/_mqueries.scss */
+  .tabs.mobile + ul.contained {
+    margin-left: -20px;
+    margin-right: -20px;
+    border-width: 0 0 1px 0;
+  }
+
+  /* UI Elements --- */
+  /*                 */
+  /* Tooltips */
+  /* line 334, ../scss/components/modules/_mqueries.scss */
+  .tooltip {
+    font-size: 14;
+    line-height: 1.4;
+    padding: 7px 10px 9px 10px;
+    left: 50% !important;
+    max-width: 80% !important;
+    margin-left: -40%;
+    font-size: 110%;
+  }
+
+  /* line 343, ../scss/components/modules/_mqueries.scss */
+  .tooltip > .nub, .tooltip.top > .nub, .tooltip.left > .nub, .tooltip.right > .nub {
+    border-color: transparent transparent black transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent;
+    top: -12px;
+    left: 10px;
+  }
+}
+/* Topbar Specific Breakpoint that you can customize */
+@media only screen and (max-width: 768px) {
+  /* line 354, ../scss/components/modules/_mqueries.scss */
+  .top-bar {
+    margin-bottom: 0;
+    overflow: hidden;
+    height: 60px;
+    background: #0c223f;
+    /* Override contain to grid stuff for breakpoint */
+    /* Setting up the sliding area */
+    /* When the Small Nav is Showing */
+  }
+  /* line 355, ../scss/components/modules/_mqueries.scss */
+  .top-bar .js-generated {
+    display: block;
+  }
+  /* line 358, ../scss/components/modules/_mqueries.scss */
+  .contain-to-grid .top-bar {
+    width: auto;
+  }
+  /* line 361, ../scss/components/modules/_mqueries.scss */
+  .top-bar section {
+    left: 0;
+    position: relative;
+    width: auto;
+    -webkit-transition: left 300ms 0;
+    -moz-transition: left 300ms 0;
+    -o-transition: left 300ms 0;
+    transition: left 300ms 0;
+  }
+  /* line 362, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    display: block;
+  }
+  /* line 363, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li {
+    float: none;
+    /* Branding and name */
+    /* Dropdown Toggle */
+    /* Divider for breakpoint */
+    /* Search Overrides for breakpoint size */
+    /* Dropdown Level 1 */
+    /* Dropdown Level 2 */
+  }
+  /* line 364, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.active, .top-bar ul > li:hover {
+    background: #08162a;
+  }
+  /* line 366, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.name {
+    height: 60px;
+  }
+  /* line 367, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.name h1, .top-bar ul > li.name .post-text .gform_heading h3.gform_title, .post-text .gform_heading .top-bar ul > li.name h3.gform_title {
+    line-height: 1;
+  }
+  /* line 368, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.name h1 a, .top-bar ul > li.name .post-text .gform_heading h3.gform_title a, .post-text .gform_heading .top-bar ul > li.name h3.gform_title a {
+    color: white;
+    display: block;
+    line-height: 60px !important;
+    padding-left: 20px;
+    height: 60px;
+  }
+  /* line 371, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li:hover a, .top-bar ul > li.active a {
+    color: #0c223f;
+  }
+  /* line 372, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li a:not(.button) {
+    color: #0c223f;
+  }
+  /* line 375, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.toggle-topbar {
+    cursor: pointer;
+    display: block;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+  }
+  /* line 376, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.toggle-topbar a {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 8px;
+    border-color: #fefcf8 transparent transparent transparent;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    margin-top: -4px;
+  }
+  /* line 378, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.toggle-topbar:hover {
+    background: inherit;
+  }
+  /* line 380, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.toggle-topbar a {
+    padding: 0 !important;
+  }
+  /* line 383, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.divider {
+    border-bottom: solid 1px #14396a;
+    border-top: solid 1px black;
+    clear: both;
+    height: 1px !important;
+    margin: 8px 0 !important;
+    width: 100%;
+  }
+  /* line 386, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.search {
+    padding: 0 19px;
+  }
+  /* line 387, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.search form {
+    width: 100%;
+  }
+  /* line 388, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.search form input[type=text] {
+    width: 75%;
+  }
+  /* line 389, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.search form .button, .top-bar ul > li.search form #av-overlay .submit input[type=submit], #av-overlay .submit .top-bar ul > li.search form input[type=submit] {
+    top: -1px;
+    width: 25%;
+  }
+  /* line 395, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown a {
+    padding-right: 28.5px;
+  }
+  /* line 396, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 5px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
+    margin-right: 12.66667px;
+    margin-top: -4.5px;
+    position: absolute;
+    top: 50%;
+  }
+  /* line 398, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown:hover > .dropdown {
+    display: block;
+    visibility: hidden;
+  }
+  /* line 399, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown .dropdown {
+    visibility: hidden;
+    z-index: 0 !important;
+  }
+  /* line 400, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown.moved {
+    position: static;
+  }
+  /* line 401, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown.moved > .dropdown {
+    top: 0;
+    visibility: visible;
+  }
+  /* line 403, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown.moved > .dropdown li label {
+    margin-bottom: 6px;
+    padding-top: 6px !important;
+    font-size: 9px;
+  }
+  /* line 404, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown.moved > .dropdown li:not(.title) {
+    padding-bottom: 0;
+  }
+  /* line 405, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown.moved > .dropdown li:not(.title) a {
+    padding: 8px 30px;
+    font-size: 12px;
+  }
+  /* line 407, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown.moved > .dropdown li a, .top-bar ul > li.has-dropdown.moved > .dropdown li label {
+    padding: 0 19px;
+  }
+  /* line 408, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown.moved > .dropdown li a:hover {
+    background: #14396a;
+    display: block;
+  }
+  /* line 409, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown.moved > .dropdown li.divider {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+  }
+  /* line 412, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown.moved .back.title {
+    padding-bottom: 0;
+  }
+  /* line 413, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown.moved .back.title a:before {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    margin-top: -5px;
+    width: 0;
+    height: 0;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 5px;
+    border-color: transparent white transparent transparent;
+  }
+  /* line 414, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown.moved .back.title h5 {
+    margin: 0;
+    padding-left: 15px;
+    position: relative;
+  }
+  /* line 415, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown.moved .back.title h5 a {
+    background: transparent;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 19px;
+    font-weight: bold;
+  }
+  /* line 422, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown .dropdown li {
+    background: transparent;
+  }
+  /* line 424, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown .dropdown li.has-dropdown .dropdown {
+    left: 100% !important;
+    top: 0;
+    right: auto !important;
+  }
+  /* line 425, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown .dropdown li.has-dropdown > a {
+    padding-right: 28.5px;
+  }
+  /* line 426, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown .dropdown li.has-dropdown > a:after {
+    content: "";
+    margin-right: 20px;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 5px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 50%;
+    margin-top: -4.5px;
+  }
+  /* line 428, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown .dropdown li.has-dropdown > a li a:hover {
+    background: #14396a;
+  }
+  /* line 431, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown .dropdown li.has-dropdown.moved {
+    position: static;
+  }
+  /* line 432, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown .dropdown li.has-dropdown.moved .dropdown {
+    top: 0;
+    visibility: visible;
+  }
+  /* line 434, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-dropdown .dropdown li.has-dropdown:hover {
+    display: block;
+  }
+  /* line 438, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul.left, .top-bar ul.right {
+    float: none;
+    width: 100%;
+  }
+  /* line 439, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul.left > li, .top-bar ul.right > li {
+    display: block;
+    float: none;
+    margin: 0 !important;
+  }
+  /* line 441, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul.left > li.has-dropdown .dropdown, .top-bar ul.right > li.has-dropdown .dropdown {
+    left: 100% !important;
+    top: 0;
+    right: auto !important;
+  }
+  /* line 446, ../scss/components/modules/_mqueries.scss */
+  .top-bar section > ul li a:not(.button) {
+    padding-left: 30px !important;
+  }
+  /* line 449, ../scss/components/modules/_mqueries.scss */
+  .top-bar.expanded {
+    height: 100%;
+  }
+  /* line 450, ../scss/components/modules/_mqueries.scss */
+  .top-bar.expanded ul li.toggle-topbar a {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 8px;
+    border-color: transparent transparent #f1d69f transparent;
+    top: auto;
+    bottom: 50%;
+    margin-bottom: -4px;
+  }
+
+  /* line 453, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul li.has-button {
+    padding: 5px 20px;
+  }
+
+  /* line 454, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul li .button.small, .top-bar ul li #av-overlay .submit input.small[type=submit], #av-overlay .submit .top-bar ul li input.small[type=submit] {
+    margin: 0 !important;
+    display: inline-block;
+    width: 100%;
+  }
+
+  /* line 456, ../scss/components/modules/_mqueries.scss */
+  .top-bar ul > li.has-button a.button {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 3, ../scss/components/modules/_mqueries-overrides.scss */
+  .top-bar ul li.name {
+    background: #0c223f;
+  }
+  /* line 6, ../scss/components/modules/_mqueries-overrides.scss */
+  .top-bar ul#global {
+    width: 100%;
+  }
+  /* line 8, ../scss/components/modules/_mqueries-overrides.scss */
+  .top-bar ul#global li, .top-bar ul#global li.has-dropdown .dropdown {
+    width: 100%;
+  }
+  /* line 10, ../scss/components/modules/_mqueries-overrides.scss */
+  .top-bar ul#global li h5 a, .top-bar ul#global li.has-dropdown .dropdown h5 a {
+    background: none;
+    color: #fefcf8;
+    text-align: left;
+  }
+  /* line 17, ../scss/components/modules/_mqueries-overrides.scss */
+  .top-bar ul#social {
+    width: 100%;
+  }
+
+  /* line 21, ../scss/components/modules/_mqueries-overrides.scss */
+  .header-text {
+    margin: 10px 0;
+  }
 }

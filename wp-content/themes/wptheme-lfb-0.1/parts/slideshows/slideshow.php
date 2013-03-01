@@ -1,10 +1,3 @@
-<?php
-$instagram = new WP_Query('showposts=1');
-while ($instagram->have_posts()): $instagram->the_post();?>
-
-<?php endwhile;
-?>
-
 <?php 
 $instagram = new WP_Query();
 $instagram->query( array(
@@ -22,9 +15,9 @@ $instagram->query( array(
 						<?php endwhile; ?>	
 					</ul>
 					  <span class="corner-one"></span>
-  <span class="corner-two"></span>
-  <span class="corner-three"></span>
-  <span class="corner-four"></span>
+					  <span class="corner-two"></span>
+					  <span class="corner-three"></span>
+					  <span class="corner-four"></span>
 				</div>
 			</div>
 		</div>

@@ -95,7 +95,7 @@ Flexslider
 	    prevText: "<i class='icon-arrow-left'></i>",
 	    nextText: "<i class='icon-arrow-right'></i>",
 	    directionNav: true,
-	    controlNav: true,
+	    controlNav: false,
 	    slideshow: false,
 	    pauseOnHover: true,
 	    slideshowSpeed: 5000,
