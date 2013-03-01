@@ -5470,6 +5470,12 @@ h6 {
   display: block;
 }
 
+/* line 5, ../scss/parts/_header.scss */
+h1 a.icon-logo, .post-text .gform_heading h3.gform_title a.icon-logo {
+  font-size: 160px;
+  font-size: 16rem;
+}
+
 /* line 1, ../scss/parts/_social.scss */
 ul#social {
   width: 32.8%;
@@ -7168,31 +7174,37 @@ body {
   bottom: 3px;
 }
 
-/* line 1, ../scss/components/modules/_topbar.scss */
+/* line 2, ../scss/components/modules/_topbar.scss */
 .top-bar ul > li.name a {
   line-height: 60px;
 }
 
-/* line 5, ../scss/components/modules/_topbar.scss */
+/* line 7, ../scss/components/modules/_topbar.scss */
+.top-bar > ul .name h1 a, .top-bar > ul .name .post-text .gform_heading h3.gform_title a, .post-text .gform_heading .top-bar > ul .name h3.gform_title a {
+  font-size: 200px !important;
+}
+
+/* line 12, ../scss/components/modules/_topbar.scss */
 .top-bar {
   position: relative;
   z-index: 10;
 }
-/* line 8, ../scss/components/modules/_topbar.scss */
+/* line 15, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global {
   width: 67.2%;
   padding-left: 5px;
 }
-/* line 11, ../scss/components/modules/_topbar.scss */
+/* line 18, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li {
   width: 16.66666%;
 }
-/* line 14, ../scss/components/modules/_topbar.scss */
+/* line 21, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.name a {
   padding: 0 15px;
   line-height: 95px;
+  font-size: 80px !important;
 }
-/* line 16, ../scss/components/modules/_topbar.scss */
+/* line 26, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li a:not(.button) {
   text-transform: uppercase;
   background: #fefcf8;
@@ -7216,15 +7228,15 @@ body {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 33, ../scss/components/modules/_topbar.scss */
+/* line 43, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown a {
   padding-right: 0;
 }
-/* line 35, ../scss/components/modules/_topbar.scss */
+/* line 45, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown a:after {
   display: none;
 }
-/* line 40, ../scss/components/modules/_topbar.scss */
+/* line 50, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown {
   width: auto;
   padding: 0;
@@ -7233,19 +7245,19 @@ body {
   height: auto;
   border-left: 5px solid #0c223f;
 }
-/* line 47, ../scss/components/modules/_topbar.scss */
+/* line 57, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li {
   padding-bottom: 0;
 }
-/* line 49, ../scss/components/modules/_topbar.scss */
+/* line 59, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li:last-child {
   padding-bottom: 5px;
 }
-/* line 52, ../scss/components/modules/_topbar.scss */
+/* line 62, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li a {
   font-weight: bold;
 }
-/* line 56, ../scss/components/modules/_topbar.scss */
+/* line 66, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li:hover > a, .top-bar ul#global > li.has-dropdown .dropdown li.active > a, .top-bar ul#global > li.has-dropdown .dropdown li:focus > a {
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
@@ -7253,7 +7265,7 @@ body {
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
-/* line 65, ../scss/components/modules/_topbar.scss */
+/* line 75, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li:not(.name):hover > a, .top-bar ul#global > li:not(.name).active > a, .top-bar ul#global > li:not(.name):focus > a, .top-bar ul#global > li:not(.divider):hover > a, .top-bar ul#global > li:not(.divider).active > a, .top-bar ul#global > li:not(.divider):focus > a, .top-bar ul#global > li:not(.has-dropdown):hover > a, .top-bar ul#global > li:not(.has-dropdown).active > a, .top-bar ul#global > li:not(.has-dropdown):focus > a {
   color: black;
   background: white;
@@ -7263,7 +7275,7 @@ body {
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
-/* line 71, ../scss/components/modules/_topbar.scss */
+/* line 81, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li:not(.name).current-menu-item > a, .top-bar ul#global > li:not(.name).current-menu-item:hover > a, .top-bar ul#global > li:not(.divider).current-menu-item > a, .top-bar ul#global > li:not(.divider).current-menu-item:hover > a, .top-bar ul#global > li:not(.has-dropdown).current-menu-item > a, .top-bar ul#global > li:not(.has-dropdown).current-menu-item:hover > a {
   background: url(../images/stripe.png);
   color: black;
