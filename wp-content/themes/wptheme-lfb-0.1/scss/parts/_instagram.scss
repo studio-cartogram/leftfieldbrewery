@@ -1,0 +1,20 @@
+.flexslider-instagram {
+	padding:40px;
+	position:relative;
+}
+
+
+.image-wrap {
+	position:relative;
+	.image-caption {
+		padding:15px;
+		position:absolute;
+		bottom:0;
+		right:0;
+		left:0;
+		width:auto;
+		background:rgba($navy, 0.8);
+		color:$cream;
+		text-align:center;
+	}
+}

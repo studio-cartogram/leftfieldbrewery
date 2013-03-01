@@ -6053,6 +6053,29 @@ ul#social > li a:hover {
   display: block;
 }
 
+/* line 1, ../scss/parts/_instagram.scss */
+.flexslider-instagram {
+  padding: 40px;
+  position: relative;
+}
+
+/* line 7, ../scss/parts/_instagram.scss */
+.image-wrap {
+  position: relative;
+}
+/* line 9, ../scss/parts/_instagram.scss */
+.image-wrap .image-caption {
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: auto;
+  background: rgba(12, 34, 63, 0.8);
+  color: #fefcf8;
+  text-align: center;
+}
+
 /* line 1, ../scss/vendor/_av-styles.scss */
 #av-overlay-wrap {
   background: rgba(12, 34, 63, 0.95);
@@ -6281,20 +6304,23 @@ ul#social > li a:hover {
  * Contributing author: Tyler Smith (@mbmufffin)
  */
 /* Browser Resets */
-/* line 20, ../scss/vendor/_flexslider.scss */
+/* line 21, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-container a:active,
 .flexslider a:active,
 .cartogram-slider-container a:focus,
 .flexslider a:focus,
 .cartogram-slider-players-container a:active,
-.cartogram-slider-players a:active {
+.cartogram-slider-players a:active,
+.cartogram-slider-instagramviewport a:active,
+.cartogram-slider-instagramviewport a:fcus {
   outline: none;
 }
 
-/* line 23, ../scss/vendor/_flexslider.scss */
+/* line 26, ../scss/vendor/_flexslider.scss */
 .slides,
 .cartogram-slider-control-nav,
-.cartogram-slider-direction-nav {
+.cartogram-slider-direction-nav,
+.slides-instagram {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -6302,33 +6328,33 @@ ul#social > li a:hover {
 
 /* FlexSlider Necessary Styles
 *********************************/
-/* line 27, ../scss/vendor/_flexslider.scss */
-.flexslider, .flexslider-players {
+/* line 30, ../scss/vendor/_flexslider.scss */
+.flexslider, .flexslider-players, .cartogram-slider-instagram {
   margin: 0;
   padding: 0;
 }
 
-/* line 28, ../scss/vendor/_flexslider.scss */
-.flexslider .slides > li, .cartogram-slider-players .slides-players > li {
+/* line 31, ../scss/vendor/_flexslider.scss */
+.flexslider .slides > li, .cartogram-slider-players .slides-players > li, .cartogram-slider-instgram .slides-instagram > li {
   position: relative;
   display: none;
   -webkit-backface-visibility: hidden;
 }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
-/* line 29, ../scss/vendor/_flexslider.scss */
+/* line 32, ../scss/vendor/_flexslider.scss */
 .flexslider .slides img, .cartogram-slider-players .slides-players img {
   width: 100%;
   display: block;
 }
 
-/* line 30, ../scss/vendor/_flexslider.scss */
+/* line 33, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-pauseplay span {
   text-transform: capitalize;
 }
 
 /* Clearfix for the .slides element */
-/* line 33, ../scss/vendor/_flexslider.scss */
+/* line 36, ../scss/vendor/_flexslider.scss */
 .slides:after {
   content: ".";
   display: block;
@@ -6338,12 +6364,12 @@ ul#social > li a:hover {
   height: 0;
 }
 
-/* line 34, ../scss/vendor/_flexslider.scss */
+/* line 37, ../scss/vendor/_flexslider.scss */
 html[xmlns] .slides {
   display: block;
 }
 
-/* line 35, ../scss/vendor/_flexslider.scss */
+/* line 38, ../scss/vendor/_flexslider.scss */
 * html .slides {
   height: 1%;
 }
@@ -6351,21 +6377,21 @@ html[xmlns] .slides {
 /* No JavaScript Fallback */
 /* If you are not using another script, such as Modernizr, make sure you
  * include js that eliminates this class on page load */
-/* line 40, ../scss/vendor/_flexslider.scss */
+/* line 43, ../scss/vendor/_flexslider.scss */
 .no-js .slides > li:first-child {
   display: block;
 }
 
 /* FlexSlider Default Theme
 *********************************/
-/* line 45, ../scss/vendor/_flexslider.scss */
+/* line 48, ../scss/vendor/_flexslider.scss */
 .flexslider, .cartogram-slider-players {
   margin: 0 0 80px;
   position: relative;
   zoom: 1;
 }
 
-/* line 46, ../scss/vendor/_flexslider.scss */
+/* line 49, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-viewport, .cartogram-slider-players-viewport {
   overflow: visible !important;
   max-height: 2000px;
@@ -6374,34 +6400,34 @@ html[xmlns] .slides {
   transition: all 1s ease;
 }
 
-/* line 47, ../scss/vendor/_flexslider.scss */
+/* line 50, ../scss/vendor/_flexslider.scss */
 .loading .cartogram-slider-viewport {
   max-height: 300px;
 }
 
-/* line 48, ../scss/vendor/_flexslider.scss */
+/* line 51, ../scss/vendor/_flexslider.scss */
 .flexslider .slides, .cartogram-slider-players .slides-players {
   zoom: 1;
 }
 
-/* line 50, ../scss/vendor/_flexslider.scss */
+/* line 53, ../scss/vendor/_flexslider.scss */
 .carousel li {
   margin-right: 5px;
 }
 
-/* line 51, ../scss/vendor/_flexslider.scss */
+/* line 54, ../scss/vendor/_flexslider.scss */
 .flexslider .slides > li {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 53, ../scss/vendor/_flexslider.scss */
+/* line 56, ../scss/vendor/_flexslider.scss */
 .flexslider .slides > li.cartogram-slider-active-slide {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
 /* Control Nav */
-/* line 59, ../scss/vendor/_flexslider.scss */
+/* line 62, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging, .cartogram-slider-playerscontrol-paging {
   padding: 0;
   list-style: none;
@@ -6411,7 +6437,7 @@ html[xmlns] .slides {
   bottom: -45px;
   z-index: 1000;
 }
-/* line 67, ../scss/vendor/_flexslider.scss */
+/* line 70, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li, .cartogram-slider-playerscontrol-paging li {
   list-style: none;
   display: inline-block;
@@ -6419,7 +6445,7 @@ html[xmlns] .slides {
   zoom: 1;
   *display: inline;
 }
-/* line 73, ../scss/vendor/_flexslider.scss */
+/* line 76, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li a, .cartogram-slider-playerscontrol-paging li a {
   color: #0c223f;
   text-indent: -9999px;
@@ -6440,11 +6466,11 @@ html[xmlns] .slides {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 85, ../scss/vendor/_flexslider.scss */
+/* line 88, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li a:hover, .cartogram-slider-playerscontrol-paging li a:hover {
   background: #0c223f;
 }
-/* line 88, ../scss/vendor/_flexslider.scss */
+/* line 91, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li a.cartogram-slider-active, .cartogram-slider-control-paging li a.cartogram-slider-playersactive, .cartogram-slider-playerscontrol-paging li a.cartogram-slider-active, .cartogram-slider-playerscontrol-paging li a.cartogram-slider-playersactive {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -6455,7 +6481,7 @@ html[xmlns] .slides {
 }
 
 /* captions */
-/* line 97, ../scss/vendor/_flexslider.scss */
+/* line 100, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-caption {
   position: absolute;
   bottom: 20px;
@@ -6472,18 +6498,19 @@ html[xmlns] .slides {
 }
 
 /* Direction Nav */
-/* line 113, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav {
+/* line 116, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav, .cartogram-slider-instagramdirection-nav {
   *height: 0;
   width: 100%;
+  list-style: none;
 }
-/* line 117, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li:nth-child(1):after, .cartogram-slider-direction-nav li:nth-child(1):before {
+/* line 121, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li:nth-child(1):after, .cartogram-slider-direction-nav li:nth-child(1):before, .cartogram-slider-instagramdirection-nav li:nth-child(1):after, .cartogram-slider-instagramdirection-nav li:nth-child(1):before {
   left: auto;
   right: -15px;
 }
-/* line 123, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li:after, .cartogram-slider-direction-nav li:before {
+/* line 127, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li:after, .cartogram-slider-direction-nav li:before, .cartogram-slider-instagramdirection-nav li:after, .cartogram-slider-instagramdirection-nav li:before {
   height: 1px;
   width: 15px;
   content: ' ';
@@ -6492,12 +6519,12 @@ html[xmlns] .slides {
   top: 43px;
   left: -15px;
 }
-/* line 132, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li:before {
+/* line 136, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li:before, .cartogram-slider-instagramdirection-nav li:before {
   top: 40px;
 }
-/* line 136, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li a {
+/* line 140, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a, .cartogram-slider-instagramdirection-nav li a {
   position: absolute;
   color: #fefcf8;
   background: #0c223f;
@@ -6511,39 +6538,65 @@ html[xmlns] .slides {
   z-index: 10;
   border: 1px solid #0c223f;
 }
-/* line 148, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li a:hover {
+/* line 152, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a:hover, .cartogram-slider-instagramdirection-nav li a:hover {
   background: #fefcf8;
   color: #0c223f;
 }
-/* line 152, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li a.cartogram-slider-next {
+/* line 156, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a.cartogram-slider-next, .cartogram-slider-instagramdirection-nav li a.cartogram-slider-next {
   right: -70px;
 }
-/* line 156, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li a.cartogram-slider-prev {
+/* line 160, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a.cartogram-slider-prev, .cartogram-slider-instagramdirection-nav li a.cartogram-slider-prev {
   left: -70px;
 }
 
-/* line 164, ../scss/vendor/_flexslider.scss */
+/* line 169, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-instagramdirection-nav li:before, .cartogram-slider-instagramdirection-nav li:after {
+  display: none;
+}
+/* line 172, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-instagramdirection-nav li a {
+  background: none;
+  border: none;
+}
+/* line 175, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-instagramdirection-nav li a.cartogram-slider-instagramprev {
+  left: 40px;
+  top: 50%;
+  margin-top: -20px;
+}
+/* line 180, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-instagramdirection-nav li a.cartogram-slider-instagramnext {
+  right: 40px;
+  top: 50%;
+  margin-top: -20px;
+}
+/* line 185, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-instagramdirection-nav li a:hover {
+  background: none;
+}
+
+/* line 192, ../scss/vendor/_flexslider.scss */
 .slide-row {
   height: 1000px;
   background: #e6e6e6;
   margin: 0 !important;
 }
-/* line 168, ../scss/vendor/_flexslider.scss */
+/* line 196, ../scss/vendor/_flexslider.scss */
 .slide-row article {
   border: 1px solid #0c223f;
   margin: 10px;
   padding: 10px;
 }
 
-/* line 175, ../scss/vendor/_flexslider.scss */
+/* line 203, ../scss/vendor/_flexslider.scss */
 .flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {
   opacity: 1;
 }
 
-/* line 176, ../scss/vendor/_flexslider.scss */
+/* line 204, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav .cartogram-slider-disabled {
   opacity: .3!important;
   filter: alpha(opacity=30);
@@ -7103,8 +7156,8 @@ span.corner-one {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  left: -5px;
-  top: -19px;
+  left: 25px;
+  top: 11px;
 }
 
 /* line 149, ../scss/_helpers.scss */
@@ -7123,8 +7176,8 @@ span.corner-two {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: -30px;
-  right: -30px;
+  top: 0px;
+  right: 0px;
   left: auto;
   border-left: 30px solid #0c223f;
   border-right-color: transparent;
@@ -7151,9 +7204,9 @@ span.corner-three {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  bottom: -30px;
+  bottom: 0px;
   top: auto;
-  right: -30px;
+  right: 0px;
   left: auto;
   border-left: 30px solid #0c223f;
   border-right-color: transparent;
@@ -7176,8 +7229,8 @@ span.corner-four {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
   top: auto;
-  left: -5px;
-  bottom: -19px;
+  left: 25px;
+  bottom: 11px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
