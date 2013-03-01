@@ -6,13 +6,13 @@
 <section class="container">
 	<header class="row text-center">
 		<div class="columns four mobile-two">
-			<i class="icon-toronto"></i>
+			<i class="header-text icon-toronto"></i>
 		</div>
 		<hgroup class="columns four hide-for-small">
 			<h1><a href=<?php bloginfo( 'url' ); ?>><img class="logo-svg" src="<?php bloginfo('template_directory') ?>/images/logo.svg"></a></h1>
 		</hgroup>
 		<div class="columns four mobile-two">
-			<i class="icon-est2013"></i>
+			<i class="header-text icon-est2013"></i>
 		</div>
 	</header>
 	<div class="row">	

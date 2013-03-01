@@ -1,15 +1,9 @@
 <div class="row  highlights">
-	<div class="columns four">
-		<?php get_sidebar('highlights'); ?>
-	</div>
-	<div class="columns eight">	
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<header class="entry-header">
-				<h3 class="entry-title"><?php echo $page_title; ?></h3>
-			</header><!-- .entry-header -->
-			<div class="entry-content">
-				<div class="row">
-					<div class="columns twelve">
+	<div class="columns eight push-four rule-left">	
+		<?php the_title('<h3 class="rule-right text-center">','</h3>') ?>
+			<div class="row flushed-left collapse">
+				<div class="column twelve rule-right">
+					<div class="post-text double-bordered">
 						<?php
 						global $post;
 						the_post_thumbnail();
@@ -20,7 +14,6 @@
 						the_content();
 						?>
 					</div>
-				</div>
 				<div class="row">
 					<div class="columns one">
 						left
@@ -35,7 +28,10 @@
 						right
 					</div>
 				</div>
-			</div><!-- .entry-content -->
-		</article><!-- #post-<?php the_ID(); ?> -->
+			</div>
+		</div>	
+	</div>
+	<div class="columns pull-eight four">
+		<?php get_sidebar('highlights'); ?>
 	</div>
 </div>

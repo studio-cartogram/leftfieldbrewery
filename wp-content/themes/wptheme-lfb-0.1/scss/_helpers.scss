@@ -29,10 +29,13 @@
 .space-bottom-large {
   margin-bottom:35px !important;
 }
-.space-bottom-inner-large {
+.space-inner-bottom {
+  padding-bottom:15px !important;
+}
+.space-inner-bottom-large {
   padding-bottom:35px !important;
 }
-.space-bottom-inner-xlarge {
+.space-inner-bottom-xlarge {
   padding-bottom:55px !important;
 }
 .space-bottom-small {
@@ -45,22 +48,64 @@
   color:$white;
   }
 }
+.bg-cream {background:$cream;}
+.bg-navy {background:$navy;}
+.bg-blue {
+    background:$blue;
+    h1, h2, h3, h4, h5, h6, p , a {
+      color:$white;
+    }
+  }
+.bg-red {
+    background:$red;
+    h1, h2, h3, h4, h5, h6, p , a {
+      color:$white;
+    }
+  }
+.bg-green {
+    background:$green;
+    h1, h2, h3, h4, h5, h6, p , a {
+      color:$white;
+    }
+  }
 
 
 
 
 .border-right {
-  border-right: 1px solid $darkEdge !important;
+  border-right: 1px solid $navy !important;
 }
 .border-left {
-  border-left: 1px solid $darkEdge !important;
+  border-left: 1px solid $navy !important;
 }
 .border-bottom {
-  border-bottom: 1px solid $darkEdge !important;
+  border-bottom: 1px solid $navy !important;
 }
 .border-top {
-  border-top: 1px solid $darkEdge !important;
+  border-top: 1px solid $navy !important;
 }
+.border-right-white {
+  border-right: 1px solid $white !important;
+}
+.border-left-white {
+  border-left: 1px solid $white !important;
+}
+.border-bottom-white {
+  border-bottom: 1px solid $white !important;
+}
+.border-top-white {
+  border-top: 1px solid $white !important;
+}
+
+.boxed {
+  @extend .border-right;
+  @extend .border-top;
+  @extend .border-bottom;
+  @extend .border-left;
+
+}
+
+
 .text-small {
   @include font-size(12);
 }
@@ -69,9 +114,6 @@
   border:1px solid $mainColor;
 }
 
-.bg-main {background:$mainColor;}
-.bg-cream {background:$cream;}
-.bg-navy {background:$navy;}
 
 /** 
   * Mixin based classes
@@ -84,6 +126,15 @@
 
 .rule-outside-right { @include rule(right, true) }
 
+.rule-inside-right { @include rule(right, true, $navy, true) }
+
+
+.rule-left-white { @include rule(left, false, $white) }
+
+.rule-right-white { @include rule(right, false, $white) }
+
+.rule-outside-right-white { @include rule(right, true) }
+
 
 .double-bordered { @include double-bordered() }
 
@@ -91,6 +142,20 @@
 
 .double-bordered-outside { @include double-bordered(true, false) }
 
+
+span.corner-one {
+  @include corner(top-left);
+}
+span.corner-two {
+  @include corner(top-right);
+}
+span.corner-three {
+  @include corner(bottom-right);
+
+}
+span.corner-four {
+  @include corner(bottom-left);
+}
 
 
 /** 
@@ -101,7 +166,9 @@
 .row.flushed-right {
   margin-right:-15px !important;
 }
-
+.row.flushed-left {
+  margin-left:-15px !important;
+}
 
 
 

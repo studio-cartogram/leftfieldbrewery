@@ -1,10 +1,12 @@
-h1, h2, h3, h4, h5, h6 {
-	text-transform:uppercase;
+h1, h2, h3, h4, h5, h6, p, span, a {
 	&.collapse {
 		margin:0;
 	}
 	&.light {
 		color:$white;
+	}
+	&.text-small {
+		@include font-size(11);
 	}
 }
 
@@ -16,50 +18,115 @@ p {
 }
 
 h1 {
-	@include font-size(18);
-	letter-spacing:0.03em;
-	&.title {
-		margin-top:50px;
+	@include font-size(30);
+	letter-spacing:0.07em;
+	text-transform:uppercase;
+	margin:0;
+	padding:40px 0 10px 0;
+	&.post-title {
+		padding-top:20px;
 	}
 }
 
 h2 {
-	@include font-size(16);
-	letter-spacing:0.03em;
+	@include font-size(24);
+	letter-spacing:0.05em;
+	text-transform:uppercase;
 }
 
 h3 {
 	@include font-size(12);
 	letter-spacing:0.03em;
-	text-align:center;
 	margin:0;
-	padding:10px;
-	
+	padding:15px 0;
+	text-transform:uppercase;
+	&.bg-navy {
+		font-family:$bodyFontFamily;
+	}
 }
+
 h4 {
-	@include font-size(12);
-	letter-spacing:0.03em;
-	margin:0;
+	@include font-size(10);
+	text-transform:uppercase;
+	margin: 0 0 0;
 	padding:10px;
+	letter-spacing:0.03em;
 }
 h5 {
-	@include font-size(11);
+	@include font-size(12);
 	font-family:$bodyFontFamily;
 	text-transform:none;
 	margin:15px 0 0 0;
-	padding:0 15px;
 }
 
 h6 {
-	@include font-size(11);
+	line-height:1.6;
+	@include font-size(12);
 	font-family:$bodyFontFamily;
 	text-transform:none;
 	margin:0 0 15px;
-	padding:3px 15px;
+	padding-top:5px;
 	font-weight:normal;
 }
 
 
 
+.icon-with-space {
+	position:relative;
+	padding-left:20px;
+	&:before {
+		@include font-size(14);
+		position:absolute;
+		left:0;
+		top:2px;
+	}
+}
 
 
+.inner-text {
+	padding:0 20px;
+}
+
+.format-text {
+	h1, h2, h3, h4, h5, h6, p {
+		padding:0 20px;
+	}
+}
+
+.post-text {
+	padding-bottom:20px;
+	background:$cream;
+	h1, h2, p, ul {
+		padding-left:40px;
+		padding-right:40px;
+	}
+	h2 {
+		@include double-bordered();
+		padding:30px 40px 10px;
+		margin-top:40px;
+		font-family:$bodyFontFamily;
+		@include font-size(16);
+		&:first-of-type {
+			margin-top:0;
+		}
+	}
+	h4 {
+		margin:30px 40px 10px;
+		@include font-size(14);
+	}
+	p {
+		@include font-size(14);
+	}
+	ul.link-list {
+		margin-left:-5px;
+		li {
+			margin-left:5px;
+		}
+	}
+	// .post-meta {
+	// 	h4 {
+	// 		font-size:15px;
+	// 	}
+	// }
+
+}

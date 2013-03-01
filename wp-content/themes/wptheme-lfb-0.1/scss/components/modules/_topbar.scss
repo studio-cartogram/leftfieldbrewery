@@ -3,7 +3,8 @@
 }
 
 .top-bar { 
-
+  position: relative;
+  z-index: 10;
   /* topbar global <ul> styles */
   ul { 
     /* Main Navigation links style */
@@ -46,10 +47,12 @@
           padding:0;
           right:0;
           left:-5px;
+          height:auto;
           border-left:5px solid $navy;
-          li {
+          li { 
+            padding-bottom:0;
             &:last-child {
-              padding:0;
+              padding-bottom:5px;
             }
             a {
               font-weight:bold;
@@ -76,35 +79,6 @@
           @include transform(rotateX( 0deg ));
           cursor:default;
 
-        }
-      }
-    }
-  }
-  ul#social {
-    width:32.8%;
-    &>li { 
-      width:20%;
-      text-align:center;
-      position:relative;
-      &:hover {
-        background:$navy;
-      }
-      &:before {
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        color: white;
-        margin: 0;
-        padding: 0;
-        @include font-size(20);
-        margin-left: -11px;
-      }
-      a {
-        border-right:1px solid;
-        text-indent:-9999px;
-        padding:0;
-        &:hover {
-          background:$navy;
         }
       }
     }

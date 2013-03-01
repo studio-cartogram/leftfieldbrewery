@@ -1,0 +1,203 @@
+/** 
+  * Home Page
+  *
+  */ 
+
+.vendor-listing {
+	@include double-bordered(true, false, false, false);
+	background:$cream;
+	margin-right:-15px;
+	padding-right:15px;
+	.lead {
+		position:relative;
+		padding:20px 0 20px 80px;
+		margin:0 ;
+		@include rule(left);
+		color:$navy;
+		
+	}
+	.icon-tap {
+		@include font-size(60);
+		position:absolute;
+		left:15px;
+		top:5px;
+		color:$navy;
+	}
+	ul {
+		margin:0;
+		padding:0;
+		list-style:none;
+		li {
+
+			a.block-level {
+			  display:block;
+			  overflow:hidden;
+			  height:55px;
+			}
+			@include double-bordered(true, false);
+			.icon-wrap {
+				@include rule(right);			
+			}
+			.icon {
+				@include font-size(20);
+				color:$navy;
+				padding:10px 0px;
+				margin:auto;
+				display:block;
+			}
+			&.bar .icon { @extend .icon-bar;}
+			&.brew-pub .icon { @extend .icon-brewpub;}
+			&.restaurant .icon { @extend .icon-restaurant;}
+			&.bar-restaurant .icon { @extend .icon-bar-restaurant;}
+			.rule-right {
+				position:static;
+				&:after {
+					right:-15px;
+				}
+			}
+			.map-wrap {
+				height:52px;
+				opacity:0;
+				@include transition(0.3s opacity ease);
+				background:url(../images/stripe.png);
+				position:relative;
+				left:-2px;
+				h4 {
+					padding:20px 0;
+				}
+			}
+			&:hover .map-wrap {
+				opacity:1;
+			}
+		}
+	}
+}	
+
+/** 
+  * About Page
+  *
+  */ 
+
+.slides-players {
+	margin:0;
+	list-style:none;
+}
+.card-container {
+	position: relative;
+	margin: 0 auto 0px; 
+	height:500px; 
+	width:100%;
+	.card {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		@include  transition(transform 1s);
+		@include transform-style(preserve-3d);
+	    
+	    .flip {
+	  		position:absolute;
+	  		z-index:10;
+			@include font-size(23);
+			color: white;
+			position: absolute;
+			right: 4px;
+			@extend .icon-flip-right;
+	  	}
+	  	
+	  	figure {
+			display: block;
+			height: 100%;
+			width: auto;
+			right:0;
+			top:0;
+			bottom:0; 
+			position:absolute;
+			@include backface-visibility(hidden);
+	    }	
+    }
+
+    .card.flipped {
+      @include transform(rotateY( 180deg ));
+      .flip {
+     		@include transform(rotateY( 185deg ));
+			@extend .icon-flip-left;
+	  	}
+    }
+
+    .card .back {
+      	@include transform(rotateY( 180deg ));
+      	padding:20px;
+      	background:$navy;
+      	text-align:center;
+      	p, h2  {
+      		color:$white;
+    	}
+    }
+    .button {
+    	top:100%;
+    	margin-top:-100px;
+    	width:100%;
+    }
+   
+}
+
+/** 
+  * Contact Page
+  *
+  */ 
+
+
+.list-contact {
+	list-style:none;
+	margin:0;
+	h5 {
+		padding-bottom:8px;
+		margin-top:10px;
+		@extend .border-bottom;
+	}
+	li:last-child .border-bottom-white {
+		border-color:$navy !important;
+	}
+}
+
+/** 
+  * Highlights Page
+  *
+  */ 
+
+.tags-wrap {
+	@include double-bordered(false, false, false, false,  $white);
+	padding-top:3px;
+	color:$white;
+	a {
+		color:$white;
+	}
+	.tag-cloud {
+		@include double-bordered(false, false, false, false,  $white);
+	}
+}
+
+.categories-wrap {
+	@include double-bordered();
+}
+
+.list-categories {
+	margin:-3px 0 0 0 !important;
+	@extend .bg-navy;
+	padding-bottom: 2px;
+	@include double-bordered(false, false, false, false,  $white);
+	&:before {
+		top:3px;
+	}
+	li {
+		padding-top:8px !important;
+		padding-bottom:8px !important;
+		@extend .border-bottom-white;
+		@include rule(right, false, $white);
+		text-align:center;
+	}
+	li:nth-child(2), li:nth-child(1) {
+		margin-top:3px;
+	}
+}
+

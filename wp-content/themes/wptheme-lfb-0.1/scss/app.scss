@@ -49,7 +49,7 @@
 //Iconfont
 @import "font/classes";
 @import "font/declaration";
-
+ 
 //mixins
 @import "mixins";
 
@@ -57,8 +57,14 @@
 @import "base/links";
 @import "base/typography";
 
-//asides 
-@import "asides/asides";
+//parts 
+@import "parts/footer";
+@import "parts/header";
+@import "parts/social";
+@import "parts/asides";
+@import "parts/gravity-forms";
+
+
 
 //vendor
 @import "vendor/av-styles";
@@ -66,7 +72,7 @@
 @import "vendor/digits";
 @import "vendor/digits-default";
 @import "vendor/flexslider";
-//@import "vendor/twitter";
+@import "vendor/twitter";
 
 
 

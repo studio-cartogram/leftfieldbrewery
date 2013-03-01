@@ -14,16 +14,19 @@
 .cartogram-slider-container a:active,
 .flexslider a:active,
 .cartogram-slider-container a:focus,
-.flexslider a:focus  {outline: none;}
+.flexslider a:focus, 
+.cartogram-slider-players-container a:active,
+.cartogram-slider-players a:active,
+  {outline: none;}
 .slides,
 .cartogram-slider-control-nav,
 .cartogram-slider-direction-nav {margin: 0; padding: 0; list-style: none;} 
 
 /* FlexSlider Necessary Styles
 *********************************/ 
-.flexslider {margin: 0; padding: 0;}
-.flexslider .slides > li {position:relative;display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides img {width: 100%; display: block;}
+.flexslider, .flexslider-players {margin: 0; padding: 0;}
+.flexslider .slides > li, .cartogram-slider-players .slides-players > li {position:relative;display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img, .cartogram-slider-players .slides-players img {width: 100%; display: block;}
 .cartogram-slider-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .slides element */
@@ -39,10 +42,10 @@ html[xmlns] .slides {display: block;}
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider {margin: 0 0 80px;  position: relative; zoom: 1;}
-.cartogram-slider-viewport {overflow:visible !important; max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.flexslider, .cartogram-slider-players {margin: 0 0 80px;  position: relative; zoom: 1;}
+.cartogram-slider-viewport, .cartogram-slider-players-viewport {overflow:visible !important; max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
 .loading .cartogram-slider-viewport {max-height: 300px;}
-.flexslider .slides {zoom: 1;}
+.flexslider .slides, .cartogram-slider-players .slides-players{zoom: 1;}
 
 .carousel li {margin-right: 5px}
 .flexslider .slides > li {
@@ -53,12 +56,42 @@ html[xmlns] .slides {display: block;}
 }
 
 /* Control Nav */
-.cartogram-slider-control-nav {width: 100%; position: absolute; bottom: -45px; text-align: center;z-index: 1000;}
-.cartogram-slider-control-nav li {margin: 0 4px; display: inline-block; zoom: 1; *display: inline;}
-.cartogram-slider-control-paging li a {width: 15px; height: 15px;  text-align: center; display: block; background: $mainColor; border:3px solid $mainColor; cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; @include box-shadow( 0 0 1px rgba(0,0,0,0.5));}
-.cartogram-slider-control-paging li a:hover {  background: rgba(0,0,0,0.7); }
-.cartogram-slider-control-paging li a.cartogram-slider-active {  background: rgba(0,0,0,0.9); cursor: default; }
-
+.cartogram-slider-control-paging, .cartogram-slider-playerscontrol-paging {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  width: 100%; 
+  position: absolute; 
+  bottom: -45px;
+  z-index: 1000;
+  li {
+     list-style:none;
+     display:inline-block;
+     margin: 0 4px; 
+     zoom: 1; 
+     *display: inline;
+    a {
+      color:$navy;
+      text-indent:-9999px;
+      display:block;
+      border:2px solid;
+      height:10px;
+      width:10px;
+      line-height:0;
+      margin:0 2px;
+      cursor:pointer;
+      @include transform(rotate(-45deg));  
+      @include transition(all 0.5s ease);  
+      &:hover {
+        background:$navy;
+      }
+      &.cartogram-slider-active, &.cartogram-slider-playersactive {
+        @include transform(translateZ(0));  
+        background:$navy;
+      }
+    }
+  }
+}
 /* captions */
 
 .cartogram-slider-caption {
@@ -79,16 +112,51 @@ html[xmlns] .slides {display: block;}
 /* Direction Nav */
 .cartogram-slider-direction-nav {
 	*height: 0;
-	a {
-		position:absolute;
-		top:20%;
-		&.cartogram-slider-next  {
-			right:0;
-
+	width:100%;
+	li:nth-child(1) {
+		&:after, &:before {
+			left:auto;
+			right:-15px;
 		}
-		&.cartogram-slider-prev  {
-			left:0;
+	}
+	li {
+		&:after, &:before {
+			height:1px;
+			width:15px;
+			content: ' ';
+			background:$navy;
+			position:absolute;
+			top:43px;
+			left:-15px;
+		}
+		&:before {
+			top:40px;
+		}
+		
+		a {
+			position:absolute;
+			color:$cream;
+			background:$navy;
+			height:47px;
+			width:55px;
+			top:-3px;
+			line-height:48px;
+			@include font-size(16);
+			text-align:center;
+			z-index:10;
+			border:1px solid $navy;
+			&:hover {
+				background:$cream;
+				color:$navy;
+			}
+			&.cartogram-slider-next  {
+				right:-70px;
 
+			}
+			&.cartogram-slider-prev  {
+				left:-70px;
+
+			}
 		}
 	}
 }

@@ -11,8 +11,26 @@ Show Splash Page Modal
 		'closeOnBackgroundClick' : false,
 		'animation' : 'fade'
 	});
-  
 
+/* ========================================================================================================================
+  
+Grab The twitter Feed
+
+======================================================================================================================== */
+  
+	$("#twitter").getTwitter({
+		userName: "lfbrewery",
+		numTweets: 1,
+		loaderText: "Loading tweets...",
+		slideIn: false,
+		slideDuration: 750,
+		showHeading: false,
+		headingText: "Latest Tweets",
+		showProfileLink: false,
+		showTimestamp: true,
+		includeRetweets: false,
+		excludeReplies: true
+	});
 
 /* ========================================================================================================================
   
@@ -74,13 +92,15 @@ Flexslider
 	$('.flexslider').flexslider({
 	    animation: "slide",
 	    namespace: "cartogram-slider-",
-	    prevText: "Prev",
+	    prevText: "<i class='icon-arrow-left'></i>",
+	    nextText: "<i class='icon-arrow-right'></i>",
 	    directionNav: true,
 	    controlNav: true,
 	    slideshow: false,
 	    pauseOnHover: true,
 	    slideshowSpeed: 5000,
 	    animationLoop: true,
+	    keyboard: false,
 	    after: function (slider) {	    	
 	    	// $(".flexslider").animate({opacity: 1},3000);	    	currentSliderIndex = slider.currentSlide;
 	    	console.log("The slider is currently on: " + currentSliderIndex);
@@ -174,7 +194,6 @@ Flexslider
 
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
-
 		//Load the page.
 		updateContent(request_url);
 
@@ -196,7 +215,6 @@ Flexslider
 
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
-
 		//Load the page.
 		updateContent(request_url);
 
@@ -211,18 +229,17 @@ Flexslider
 		e.preventDefault();
 	});
 
-	$(".mvp").find("a").live("click", function(e) {
+	$(".mvp, .homehighlightreel").find("a").live("click", function(e) {
 
 		/* The Url of the link that was clicked. */
 		var url = $(this).attr("href");
 
 		/* This is the request_url to be used for ajax. */
 		var request_url = getEnding(url);
-
 		//Load the page.
 		updateContent(request_url);
 
-		/* Need to pass push state a title, not sure what to give it.*/
+		// Need to pass push state a title, not sure what to give it.
 		var title = "not sure";
 
 		/** Push state Stuff *******************************/
@@ -258,9 +275,26 @@ Flexslider
 	 	window.history.pushState({request_url: reverseSlideMaps[currentSliderIndex + moveRight]},"title",url);
 	 });
 
+	/**
+	* Handle the clicking of left or right keyboard keys.
+	*/
+	$(document).keydown(function(e){
+	    switch (e.keyCode) { 
+	       	case 37:
+	       		$(".cartogram-slider-prev").trigger("click");
+	       		
+		e.preventDefault();
+	        break;
+	        case 39:
+	       		$(".cartogram-slider-next").trigger("click");
+		e.preventDefault();
+	       	break;
+	    }
+	});
+
 	//Add toggle events for back and front of cards.
 	$(".flip").live("click", function() {
-		$(this).siblings('.card-container').find('.card').toggleClass('flipped');
+		$(this).parent().toggleClass('flipped');
 	});
 
 	/**
@@ -287,7 +321,7 @@ Flexslider
 		targetIndex = getIndexToFocusOn(request_url);
 		
 		$.ajax({
-			asynch: true,
+			asynch: false,
 			type : "post",
 			dataType : "html",
 			/* Where the request is being sent to. */
@@ -312,7 +346,7 @@ Flexslider
 	 * May not be using this anymore ...
 	 * Given a request url, apply javascript needed for that specific page.
 	 */
-	 function applyJavascript(request_url) {
+	function applyJavascript(request_url) {
 	 	console.log("				Applying Javascript for " + request_url);
 
 	 	//If the request is layered such as beers_typeofbeer, want to pass only the first part
@@ -330,41 +364,42 @@ Flexslider
 	 			//Maybe may direct calls to separate functions and use this 
 	 			//as a routing function only depending on how
 	 			//large it gets.
+ 				$('.flexslider-players').flexslider({
+				    selector: ".slides-players > li",
+				    animation: "slide",
+				    namespace: "cartogram-slider-players",
+				    prevText: "<i class='icon-arrow-left'></i>",
+	    			nextText: "<i class='icon-arrow-right'></i>",
+				    directionNav: true,
+				    controlNav: true,
+				    slideshow: false,
+				    pauseOnHover: true,
+				    slideshowSpeed: 5000,
+				    animationLoop: true,
+				    keyboard: false
+				});
 	 		case "beers":
-
+		 		$('.beersFlexslider').flexslider({
+				    selector: ".beers_slides > li",
+				    animation: "slide",
+				    namespace: "cartogram-slider-beers",
+				    prevText: "<i class='icon-arrow-left'></i>",
+	    			nextText: "<i class='icon-arrow-right'></i>",
+				    directionNav: true,
+				    controlNav: true,
+				    slideshow: false,
+				    pauseOnHover: true,
+				    slideshowSpeed: 5000,
+				    animationLoop: true,
+				    keyboard: false
+				});
 				break;
 			//Default will be all pages within pagination.
 	 		default:
 
 	 			break;
 	 	}
-	 }
-	$('.playersFlexslider').flexslider({
-	    selector: ".players_slides > li",
-	    animation: "slide",
-	    namespace: "cartogram-slider-players",
-	    prevText: "p>",
-	    nextText: "n<",
-	    directionNav: true,
-	    controlNav: true,
-	    slideshow: false,
-	    pauseOnHover: true,
-	    slideshowSpeed: 5000,
-	    animationLoop: true
-	});
-	$('.beersFlexslider').flexslider({
-	    selector: ".beers_slides > li",
-	    animation: "slide",
-	    namespace: "cartogram-slider-beers",
-	    prevText: "p>",
-	    nextText: "n<",
-	    directionNav: true,
-	    controlNav: true,
-	    slideshow: false,
-	    pauseOnHover: true,
-	    slideshowSpeed: 5000,
-	    animationLoop: true
-	});
+	 }	
 
  	/* Given a request url, return the index at which the flexslider should focus on.
  	*/
@@ -420,8 +455,14 @@ Flexslider
 			//If the flexslider isn't focused on the li want, focus it.
 			$('.flexslider').data('flexslider').flexAnimate(targetIndex);
 			currentSliderIndex=targetIndex;
+
 		} //Do not need to do anything if the flexslider is already focused on
 		//the one we want.
+
+
+		//Toggle class "current_page_item" for nav <a>'s
+		$('.current-menu-item').removeClass("current-menu-item");
+		$('#global > li:eq(' + targetIndex + ')').toggleClass("current-menu-item");
 
 		console.log("				Request Part determining focus index: " + request_part);
 	}

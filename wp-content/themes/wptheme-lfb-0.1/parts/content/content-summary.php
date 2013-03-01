@@ -1,7 +1,6 @@
-<div class="columns six">
-	<?php
-	echo "<p>" . get_the_date('jS F, Y') . "</p>";
-	the_title();
-	the_excerpt();
-	?>
-</div>
+<p class="border-bottom border-top collapse text-small">
+	<strong><?php the_time('jS F, Y'); ?></strong>
+</p>
+<h5><a href="the_permalink() ?>"><?php the_title(); ?></a></h5>
+<?php the_excerpt(); ?>
+<?php more_link(); ?>

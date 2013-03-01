@@ -1,6 +1,8 @@
-<?php global $page_content; ?>
-<div class="row">
-	<div class="columms twelve">
-		<?php echo $page_content;?>
+<div class="row flushed-left collapse">
+	<div class="column twelve rule-right">
+		<div class="post-text">
+			<?php the_content(); ?>
+		</div>
 	</div>
 </div>
+<?php edit_post_link(); ?>

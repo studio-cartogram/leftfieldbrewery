@@ -1,4 +1,4 @@
-<h3 class="rule-left rule-outside-right">Try LeftField </h3>
+<h3 class="rule-left text-center">Try LeftField </h3>
 <section class="vendor-listing bg-cream">		
 	<p class="lead"><i class="icon-tap"></i>Find out beer at these all-star establishments.</p>
 	<ul>

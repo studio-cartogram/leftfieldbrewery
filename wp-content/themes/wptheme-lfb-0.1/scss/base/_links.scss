@@ -1,5 +1,9 @@
 a {
 	&:hover {
-		color:	$navyLight;
+		color:	$red;
 	}
 }	
+
+p a {
+	border-bottom:1px solid;
+}

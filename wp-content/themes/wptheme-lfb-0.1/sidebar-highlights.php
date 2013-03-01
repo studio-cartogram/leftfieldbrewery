@@ -1,53 +1,44 @@
-<h5>Sort & Filter</h5>
-<h5>Categories</h5>
-<?php $categories = get_categories(array(
-	'show_option_all'    => '',
-	'orderby'            => 'name',
-	'order'              => 'ASC',
-	'style'              => 'list',
-	'show_count'         => 0,
-	'hide_empty'         => 0,
-	'use_desc_for_title' => 1,
-	'child_of'           => 0,
-	'feed'               => '',
-	'feed_type'          => '',
-	'feed_image'         => '',
-	'exclude'            => '',
-	'exclude_tree'       => '',
-	'include'            => '',
-	'hierarchical'       => 1,
-	'title_li'           => __( 'Categories' ),
-	'show_option_none'   => __('No categories'),
-	'number'             => null,
-	'echo'               => 1,
-	'depth'              => 0,
-	'current_category'   => 0,
-	'pad_counts'         => 0,
-	'taxonomy'           => 'category',
-	'walker'             => null
-	));
-foreach ($categories as $category) {
-	?>
-	<a href="<?php echo get_site_url() . '/category/' . $category->cat_name;?>"><?php echo $category->cat_name ?></a>
-	<?php
-}
-?>
-<h5>Tags</h5>
-<?php
-wp_tag_cloud(array(
-	 'smallest'                  => 10, 
-    'largest'                   => 10,
-    'unit'                      => 'pt', 
-    'number'                    => 45,  
-    'format'                    => 'flat',
-    'separator'                 => "\n",
-    'orderby'                   => 'name', 
-    'order'                     => 'ASC',
-    'exclude'                   => null, 
-    'include'                   => null, 
-    'topic_count_text_callback' => default_topic_count_text,
-    'link'                      => 'view', 
-    'taxonomy'                  => 'post_tag', 
-    'echo'                      => true
-));
-?>
+<h3 class="rule-left text-center ">Sort &amp; Filter </h3>
+<div class="row collapse flushed-right">
+	<div class="columns twelve rule-left ">
+		<div class="row collapse">
+			<div class="columns twelve categories-wrap">
+				<h3 class="space-inner-top bg-navy light text-center">Categories</h3>
+				<?php $categories = get_categories();
+				if ($categories) {
+					echo '<ul class="block-grid two-up list-categories">';
+					foreach ($categories as $category) {
+						echo '<li><a class=" light" href="' . get_site_url() . '/category/' . $category->cat_name . '">' . $category->cat_name . '</a></li>';
+					}
+					echo '</ul>';
+				}	
+				?>
+			</div>
+		</div>	
+		<div class="row collapse">
+			<div class="columns twelve tags-wrap">	
+				<h3 class="space-inner-top bg-navy light text-center rule-left ">Tags</h3>
+				<div class="inner-text bg-navy light tag-cloud space-inner-top space-inner-bottom">
+					<?php
+						wp_tag_cloud(array(
+							'smallest'                  => 12, 
+						    'largest'                   => 12,
+						    'unit'                      => 'px', 
+						    'number'                    => 45,  
+						    'format'                    => 'flat',
+						    'separator'                 => ", ",
+						    'orderby'                   => 'name', 
+						    'order'                     => 'ASC',
+						    'exclude'                   => null, 
+						    'include'                   => null, 
+						    'topic_count_text_callback' => default_topic_count_text,
+						    'link'                      => 'view', 
+						    'taxonomy'                  => 'post_tag', 
+						    'echo'                      => true
+						));
+					?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>		

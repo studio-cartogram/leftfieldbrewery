@@ -1,8 +1,8 @@
-@mixin double-bordered($outside-right:false, $inside-right:false, $outside-left:false, $inside-left:false) {
+@mixin double-bordered($outside-right:false, $inside-right:false, $outside-left:false, $inside-left:false, $color:$navy) {
   position:relative;
   &:before, &:after {
     height:1px;
-    background:$navy;
+    background:$color;
     content:' ';
     position:absolute;
     right:0px;
@@ -29,39 +29,40 @@
 @mixin corner($location) {
   height:1px;
   width:1px;
-  border-left:20px solid tranparent;
-  border-top:20px solid transparent;
-  border-bottom:20px solid transparent;
-  border-right:20px solid blue;
+  border-left:30px solid tranparent;
+  border-top:30px solid transparent;
+  border-bottom:30px solid transparent;
+  border-right:30px solid $navy;
   content:' ';
   position:absolute;
+  z-index:10;
   @include rotate(45deg);
   @if $location == top-right {
-    top:-20px;
-    right:-20px;
+    top:-30px;
+    right:-30px;
     left:auto;
-    border-left:20px solid blue;
+    border-left:30px solid $navy;
     border-right-color:transparent;
     @include rotate(-45deg);
   } @else if $location == top-left {
-    left:-3px;
-    top:-13px;
+    left:-5px;
+    top:-19px;
   } @else if $location == bottom-right {
-    bottom:-20px;
+    bottom:-30px;
     top:auto;
-    right:-20px;
+    right:-30px;
     left:auto;
-    border-left:20px solid blue;
+    border-left:30px solid $navy;
     border-right-color:transparent;
   } @else if $location == bottom-left {
     top:auto;
-    left:-3px;
-    bottom:-13px;
+    left:-5px;
+    bottom:-19px;
     @include rotate(-45deg);
   }
 }
 
-@mixin rule($location, $outside:false) {
+@mixin rule($location, $outside:false, $color:$navy, $inside:false) {
   position:relative;
   @if $location == left {
     &:before {
@@ -70,11 +71,15 @@
       height:auto;
       top:0;
       bottom:0;
-      left:0;
+      left:-1px;
+      z-index:10;
       width:1px;
-      background:$navy;
+      background:$color;
       @if $outside == true {
         left:-15px;
+      }
+      @if $inside == true {
+        left:15px;
       }
     }
   }
@@ -88,9 +93,12 @@
       left:auto;
       right:0px;
       width:1px;
-      background:$navy;
+      background:$color;
       @if $outside == true {
         right:-15px;
+      }
+      @if $inside == true {
+        right:15px;
       }
     }
   }

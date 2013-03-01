@@ -13,9 +13,9 @@
 	<div class="columns two icon-wrap text-center">
 		<i class="icon"></i>
 	</div>	
-	<div class="columns eight rule-right rule-left">
-			<h5><strong><?php the_title(); ?></strong></h5>
-	    	<h6><?php echo $address; ?></h6>       
+	<div class="columns format-text eight rule-right rule-left">
+		<h5 class="text-small"><strong><?php the_title(); ?></strong></h5>
+    	<h6 class="text-small"><?php echo $address; ?></h6>       
 	</div>
 	<div class="columns two map-wrap text-center">
 		<h4>MAP</h4>
