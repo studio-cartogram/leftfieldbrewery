@@ -279,13 +279,15 @@ Flexslider
 	* Handle the clicking of left or right keyboard keys.
 	*/
 	$(document).keydown(function(e){
-		e.preventDefault();
 	    switch (e.keyCode) { 
 	       	case 37:
 	       		$(".cartogram-slider-prev").trigger("click");
+	       		
+		e.preventDefault();
 	        break;
 	        case 39:
 	       		$(".cartogram-slider-next").trigger("click");
+		e.preventDefault();
 	       	break;
 	    }
 	});
