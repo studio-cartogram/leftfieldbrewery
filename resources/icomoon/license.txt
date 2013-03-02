@@ -1,5 +1,5 @@
-Icon Set:	Font Awesome -- http://fortawesome.github.com/Font-Awesome/
-License:	CC BY 3.0 -- http://creativecommons.org/licenses/by/3.0/
+Icon Set:	IcoMoon - Free -- http://keyamoon.com/icomoon/
+License:	CC BY 3.0 -- http://creativecommons.org/licenses/by/3.0/enses/by/3.0/
 
 
 Icon Set:	IcoMoon - Free -- http://keyamoon.com/icomoon/
