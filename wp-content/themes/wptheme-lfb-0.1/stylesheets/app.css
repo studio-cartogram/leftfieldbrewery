@@ -5819,19 +5819,18 @@ ul#social > li a:hover {
   width: 200px;
   line-height: 0;
   position: relative;
-  padding-top: 50px;
 }
-/* line 254, ../scss/parts/_asides.scss */
+/* line 253, ../scss/parts/_asides.scss */
 .back p, .back .post-text .gform_heading span.gform_description, .post-text .gform_heading .back span.gform_description {
   color: white;
   padding: 15px 30px;
 }
-/* line 258, ../scss/parts/_asides.scss */
+/* line 257, ../scss/parts/_asides.scss */
 .back h2 {
   color: white;
 }
 
-/* line 263, ../scss/parts/_asides.scss */
+/* line 262, ../scss/parts/_asides.scss */
 .front .name {
   bottom: 0px;
   left: 0;
@@ -5843,17 +5842,17 @@ ul#social > li a:hover {
   * Contact Page
   *
   */
-/* line 275, ../scss/parts/_asides.scss */
+/* line 274, ../scss/parts/_asides.scss */
 .list-contact {
   list-style: none;
   margin: 0;
 }
-/* line 278, ../scss/parts/_asides.scss */
+/* line 277, ../scss/parts/_asides.scss */
 .list-contact h5 {
   padding-bottom: 8px;
   margin-top: 10px;
 }
-/* line 283, ../scss/parts/_asides.scss */
+/* line 282, ../scss/parts/_asides.scss */
 .list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .gform_body {
   border-color: #0c223f !important;
 }
@@ -5862,7 +5861,7 @@ ul#social > li a:hover {
   * Highlights Page
   *
   */
-/* line 293, ../scss/parts/_asides.scss */
+/* line 292, ../scss/parts/_asides.scss */
 .tags-wrap {
   position: relative;
   padding-top: 3px;
@@ -5882,11 +5881,11 @@ ul#social > li a:hover {
 .tags-wrap:after {
   top: 0px;
 }
-/* line 297, ../scss/parts/_asides.scss */
+/* line 296, ../scss/parts/_asides.scss */
 .tags-wrap a {
   color: white;
 }
-/* line 300, ../scss/parts/_asides.scss */
+/* line 299, ../scss/parts/_asides.scss */
 .tags-wrap .tag-cloud {
   position: relative;
 }
@@ -5905,7 +5904,7 @@ ul#social > li a:hover {
   top: 0px;
 }
 
-/* line 305, ../scss/parts/_asides.scss */
+/* line 304, ../scss/parts/_asides.scss */
 .categories-wrap {
   position: relative;
 }
@@ -5924,7 +5923,7 @@ ul#social > li a:hover {
   top: 0px;
 }
 
-/* line 309, ../scss/parts/_asides.scss */
+/* line 308, ../scss/parts/_asides.scss */
 .list-categories {
   margin: -3px 0 0 0 !important;
   padding-bottom: 2px;
@@ -5944,11 +5943,11 @@ ul#social > li a:hover {
 .list-categories:after {
   top: 0px;
 }
-/* line 314, ../scss/parts/_asides.scss */
+/* line 313, ../scss/parts/_asides.scss */
 .list-categories:before {
   top: 3px;
 }
-/* line 317, ../scss/parts/_asides.scss */
+/* line 316, ../scss/parts/_asides.scss */
 .list-categories li {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
@@ -5967,7 +5966,7 @@ ul#social > li a:hover {
   width: 1px;
   background: white;
 }
-/* line 324, ../scss/parts/_asides.scss */
+/* line 323, ../scss/parts/_asides.scss */
 .list-categories li:nth-child(2), .list-categories li:nth-child(1) {
   margin-top: 3px;
 }

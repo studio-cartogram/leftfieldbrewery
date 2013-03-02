@@ -187,7 +187,7 @@
 		}
 		@include transition(all 0.3s ease);
 		&#to-front {
-	 		opacity:0;
+	 		opacity:0; 
 	 		left:0;
 	 		@include backface-visibility(visible);
 	 	}
@@ -249,7 +249,6 @@
 		width:200px;
 		line-height:0;
 		position:relative;
-		padding-top:50px;
 	}
 	p {
 		color:$white;

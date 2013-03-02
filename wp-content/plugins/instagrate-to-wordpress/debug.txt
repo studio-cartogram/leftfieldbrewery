@@ -41574,3 +41574,281 @@ Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/theme
 Current page is: 
 ------------------------------------------------------------------------------------------------------------------------------------------
 --END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:36 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:48:46 +0000
+PAGE LOAD Sat, 02 Mar 13 04:48:46 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:48:46 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:48:46 +0000
+PAGE LOAD Sat, 02 Mar 13 04:48:46 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:48:46 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:48:58 +0000
+PAGE LOAD Sat, 02 Mar 13 04:48:58 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:48:58 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:49:54 +0000
+PAGE LOAD Sat, 02 Mar 13 04:49:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--START Blog is_home() check TRUE Sat, 02 Mar 13 04:49:54 +0000
+--CHECK is_home() override not set Sat, 02 Mar 13 04:49:54 +0000
+--START Auto post function START Sat, 02 Mar 13 04:49:54 +0000
+--Marker: 
+----START Auto post function: Sat, 02 Mar 13 04:49:54 +0000
+----Marker: processing
+----Last ID:378205426917811290_296366000
+----Count of Images: 12
+------START Auto post function Image Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------0: Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------CHECK If image exists:  FALSE Sat, 02 Mar 13 04:49:54 +0000
+--------378205426917811290_296366000 == 378205426917811290_296366000
+--------Image Id already exists FALSE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:49:54 +0000
+--------1: Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:49:54 +0000
+--------397766873662334287_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:49:54 +0000
+--------2: Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:49:54 +0000
+--------397767684194805094_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:49:54 +0000
+--------3: Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:49:54 +0000
+--------397768185330247024_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:49:54 +0000
+--------4: Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:49:54 +0000
+--------397768552122131829_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:49:54 +0000
+--------5: Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:49:54 +0000
+--------397768800206824827_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:49:54 +0000
+--------6: Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:49:54 +0000
+--------397769179615176066_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:49:54 +0000
+--------7: Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:49:54 +0000
+--------397769607526458762_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:49:54 +0000
+--------8: Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:49:54 +0000
+--------398482649784493227_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:49:54 +0000
+--------9: Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:49:54 +0000
+--------401035843232310707_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:49:54 +0000
+--------10: Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:49:54 +0000
+--------401499504799360232_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:49:54 +0000
+--------11: Loop:  Sat, 02 Mar 13 04:49:54 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:49:54 +0000
+--------401753060727039590_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:49:54 +0000
+------END Auto post function Image Loop:  Sat, 02 Mar 13 04:49:54 +0000
+------Marker:  done
+--END Auto post function END Sat, 02 Mar 13 04:49:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:49:55 +0000
+PAGE LOAD Sat, 02 Mar 13 04:49:55 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:49:55 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:49:56 +0000
+PAGE LOAD Sat, 02 Mar 13 04:49:56 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:49:56 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:49:59 +0000
+PAGE LOAD Sat, 02 Mar 13 04:49:59 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:49:59 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:50:18 +0000
+PAGE LOAD Sat, 02 Mar 13 04:50:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:50:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:50:19 +0000
+PAGE LOAD Sat, 02 Mar 13 04:50:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:50:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:51:14 +0000
+PAGE LOAD Sat, 02 Mar 13 04:51:14 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--START Blog is_home() check TRUE Sat, 02 Mar 13 04:51:14 +0000
+--CHECK is_home() override not set Sat, 02 Mar 13 04:51:14 +0000
+--START Auto post function START Sat, 02 Mar 13 04:51:14 +0000
+--Marker: done
+----START Auto post function: Sat, 02 Mar 13 04:51:14 +0000
+----Marker: processing
+----Last ID:378205426917811290_296366000
+----Count of Images: 12
+------START Auto post function Image Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------0: Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------CHECK If image exists:  FALSE Sat, 02 Mar 13 04:51:14 +0000
+--------378205426917811290_296366000 == 378205426917811290_296366000
+--------Image Id already exists FALSE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:51:14 +0000
+--------1: Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:51:14 +0000
+--------397766873662334287_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:51:14 +0000
+--------2: Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:51:14 +0000
+--------397767684194805094_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:51:14 +0000
+--------3: Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:51:14 +0000
+--------397768185330247024_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:51:14 +0000
+--------4: Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:51:14 +0000
+--------397768552122131829_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:51:14 +0000
+--------5: Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:51:14 +0000
+--------397768800206824827_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:51:14 +0000
+--------6: Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:51:14 +0000
+--------397769179615176066_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:51:14 +0000
+--------7: Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:51:14 +0000
+--------397769607526458762_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:51:14 +0000
+--------8: Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:51:14 +0000
+--------398482649784493227_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:51:14 +0000
+--------9: Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:51:14 +0000
+--------401035843232310707_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:51:14 +0000
+--------10: Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:51:14 +0000
+--------401499504799360232_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:51:14 +0000
+--------11: Loop:  Sat, 02 Mar 13 04:51:14 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 04:51:14 +0000
+--------401753060727039590_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 04:51:14 +0000
+------END Auto post function Image Loop:  Sat, 02 Mar 13 04:51:14 +0000
+------Marker:  done
+--END Auto post function END Sat, 02 Mar 13 04:51:14 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:51:15 +0000
+PAGE LOAD Sat, 02 Mar 13 04:51:15 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:51:15 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:51:15 +0000
+PAGE LOAD Sat, 02 Mar 13 04:51:15 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:51:15 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:51:18 +0000
+PAGE LOAD Sat, 02 Mar 13 04:51:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:51:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:55:17 +0000
+PAGE LOAD Sat, 02 Mar 13 04:55:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:55:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:55:19 +0000
+PAGE LOAD Sat, 02 Mar 13 04:55:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:55:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:55:27 +0000
+PAGE LOAD Sat, 02 Mar 13 04:55:27 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:55:27 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:55:28 +0000
+PAGE LOAD Sat, 02 Mar 13 04:55:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:55:28 +0000
