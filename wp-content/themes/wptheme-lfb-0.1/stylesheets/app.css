@@ -5448,14 +5448,23 @@ h6 {
 .footer h3 {
   padding-top: 25px;
 }
-
+/* line 10, ../scss/parts/_footer.scss */
+.footer > .row, #av-overlay #av_verify_form .footer > p, #av-overlay #av_verify_form .post-text .gform_heading .footer > span.gform_description, .post-text .gform_heading #av-overlay #av_verify_form .footer > span.gform_description {
+  overflow: hidden;
+}
 /* line 12, ../scss/parts/_footer.scss */
+.footer > .row > .columns, #av-overlay #av_verify_form .footer > p > .columns, #av-overlay #av_verify_form .post-text .gform_heading .footer > span.gform_description > .columns, .post-text .gform_heading #av-overlay #av_verify_form .footer > span.gform_description > .columns {
+  margin-bottom: -99px;
+  padding-bottom: 99px;
+}
+
+/* line 19, ../scss/parts/_footer.scss */
 .credit {
   background-color: #0c223f;
   color: white;
   border-top: 1px solid white;
 }
-/* line 16, ../scss/parts/_footer.scss */
+/* line 23, ../scss/parts/_footer.scss */
 .credit p, .credit .post-text .gform_heading span.gform_description, .post-text .gform_heading .credit span.gform_description {
   padding-top: 10px;
   margin-bottom: 10px;
@@ -6925,7 +6934,26 @@ html[xmlns] .slides {
   right: -15px;
 }
 
-/* line 139, ../scss/_helpers.scss */
+/* line 138, ../scss/_helpers.scss */
+.rule-inside-right-white {
+  position: relative;
+}
+/* line 87, ../scss/_mixins.scss */
+.rule-inside-right-white:after {
+  position: absolute;
+  content: '';
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0px;
+  width: 1px;
+  background: white;
+  right: -15px;
+  right: 15px;
+}
+
+/* line 141, ../scss/_helpers.scss */
 .double-bordered {
   position: relative;
 }
@@ -6944,7 +6972,7 @@ html[xmlns] .slides {
   top: 0px;
 }
 
-/* line 141, ../scss/_helpers.scss */
+/* line 143, ../scss/_helpers.scss */
 .double-bordered-inside {
   position: relative;
 }
@@ -6964,7 +6992,7 @@ html[xmlns] .slides {
   top: 0px;
 }
 
-/* line 143, ../scss/_helpers.scss */
+/* line 145, ../scss/_helpers.scss */
 .double-bordered-outside {
   position: relative;
 }
@@ -6984,7 +7012,7 @@ html[xmlns] .slides {
   top: 0px;
 }
 
-/* line 146, ../scss/_helpers.scss */
+/* line 148, ../scss/_helpers.scss */
 span.corner-one {
   height: 1px;
   width: 1px;
@@ -7004,7 +7032,7 @@ span.corner-one {
   top: 11px;
 }
 
-/* line 149, ../scss/_helpers.scss */
+/* line 151, ../scss/_helpers.scss */
 span.corner-two {
   height: 1px;
   width: 1px;
@@ -7032,7 +7060,7 @@ span.corner-two {
   transform: rotate(-45deg);
 }
 
-/* line 152, ../scss/_helpers.scss */
+/* line 154, ../scss/_helpers.scss */
 span.corner-three {
   height: 1px;
   width: 1px;
@@ -7056,7 +7084,7 @@ span.corner-three {
   border-right-color: transparent;
 }
 
-/* line 156, ../scss/_helpers.scss */
+/* line 158, ../scss/_helpers.scss */
 span.corner-four {
   height: 1px;
   width: 1px;
@@ -7086,12 +7114,12 @@ span.corner-four {
   * Foundation Grid Hacks
   *
   */
-/* line 166, ../scss/_helpers.scss */
+/* line 168, ../scss/_helpers.scss */
 .row.flushed-right, #av-overlay #av_verify_form p.flushed-right, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-right.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-right.gform_description {
   margin-right: -15px !important;
 }
 
-/* line 169, ../scss/_helpers.scss */
+/* line 171, ../scss/_helpers.scss */
 .row.flushed-left, #av-overlay #av_verify_form p.flushed-left, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-left.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-left.gform_description {
   margin-left: -15px !important;
 }
