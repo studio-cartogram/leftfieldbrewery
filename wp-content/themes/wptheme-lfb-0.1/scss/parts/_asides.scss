@@ -170,14 +170,16 @@
 		@include font-size(23);
 		color: white;
 		position: absolute;
-		right: 4px;
+		padding: 10px;
 		@extend .icon-flip-right;
+		cursor:pointer;
+		right:0; 
   	}
 }
 
 .flip-container, .front, .back {
 	width: 100%;
-	height: 350px;
+	height: 500px;
 }
 
 .flipper {
@@ -201,6 +203,17 @@
 .back {
 	@include transform(rotateY(180deg));
 	background: $navy;
+	.back-logo {
+		@include font-size(130);
+		margin:auto;
+		color:$white;
+		display:block;
+		height:200px;
+		width:200px;
+		line-height:0;
+		position:relative;
+		padding-top:50px;
+	}
 	p {
 		color:$white;
 		padding:15px 30px;
@@ -208,6 +221,7 @@
 	h2 {
 		color:$white;
 	}
+
 }
 
 .front .name {

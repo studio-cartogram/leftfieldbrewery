@@ -28,9 +28,10 @@ $players = new WP_Query( array( "post_type" => "players") );
 									
 								</div>
 								<div class="back">
-									<div class="back-logo"></div>
-									<?php the_title('<h2>', '</h2>') ?>
-									<?php the_content();?>
+									<?php echo '<div class="back-logo icon-' . $icon . '"></div>';
+									 	the_title('<h2>', '</h2>');
+										the_content();
+									?>
 								</div>
 							</div>
 						</div>
