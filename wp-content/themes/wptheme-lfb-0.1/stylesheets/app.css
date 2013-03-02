@@ -1,32 +1,32 @@
 @charset "UTF-8";
 /* line 51, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
-.gform_body, .gform_body .gform_fields li .ginput_complex span, .gform_footer {
+.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer {
   float: left;
 }
 
 /* line 55, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
-.gform_wrapper, .gform_body .gform_fields li {
+.footer .gform_wrapper, .footer .gform_body .gform_fields li {
   *zoom: 1;
 }
 /* line 4, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
-.gform_wrapper:before, .gform_body .gform_fields li:before, .gform_wrapper:after, .gform_body .gform_fields li:after {
+.footer .gform_wrapper:before, .footer .gform_body .gform_fields li:before, .footer .gform_wrapper:after, .footer .gform_body .gform_fields li:after {
   content: "";
   display: table;
 }
 /* line 5, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
-.gform_wrapper:after, .gform_body .gform_fields li:after {
+.footer .gform_wrapper:after, .footer .gform_body .gform_fields li:after {
   clear: both;
 }
 
 /* line 59, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
-.gform_wrapper, .gform_body .gform_fields li {
+.footer .gform_wrapper, .footer .gform_body .gform_fields li {
   width: auto;
   max-width: none;
   min-width: 0;
 }
 
 /* line 62, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
-.gform_body, .gform_body .gform_fields li .ginput_complex span, .gform_footer {
+.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer {
   position: relative;
   min-height: 1px;
   padding: 0 15px;
@@ -5014,7 +5014,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
 /* line 7, ../scss/font/_classes.scss */
-.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .icon-logo:before, .icon-loader-simple:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before {
+.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .icon-logo:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -5084,7 +5084,7 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 51, ../scss/font/_classes.scss */
-.icon-loader-simple:before {
+.icon-loader-simple:before, #loader span:before {
   content: "\e00c";
 }
 
@@ -5864,7 +5864,7 @@ ul#social > li a:hover {
   margin-top: 10px;
 }
 /* line 282, ../scss/parts/_asides.scss */
-.list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .gform_body {
+.list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .footer .gform_body, .footer .list-contact li:last-child .gform_body {
   border-color: #0c223f !important;
 }
 
@@ -5982,32 +5982,31 @@ ul#social > li a:hover {
   margin-top: 3px;
 }
 
-/* line 1, ../scss/parts/_gravity-forms.scss */
-.gform_wrapper {
+/* line 2, ../scss/parts/_gravity-forms.scss */
+.footer .gform_wrapper {
   margin: 0;
 }
-/* line 3, ../scss/parts/_gravity-forms.scss */
-.gform_wrapper form {
+/* line 4, ../scss/parts/_gravity-forms.scss */
+.footer .gform_wrapper form {
   *zoom: 1;
 }
 /* line 4, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
-.gform_wrapper form:before, .gform_wrapper form:after {
+.footer .gform_wrapper form:before, .footer .gform_wrapper form:after {
   content: "";
   display: table;
 }
 /* line 5, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
-.gform_wrapper form:after {
+.footer .gform_wrapper form:after {
   clear: both;
 }
-
-/* line 8, ../scss/parts/_gravity-forms.scss */
-.gform_body {
+/* line 9, ../scss/parts/_gravity-forms.scss */
+.footer .gform_body {
   width: 75%;
   position: relative;
   padding: 0;
 }
 /* line 87, ../scss/_mixins.scss */
-.gform_body:after {
+.footer .gform_body:after {
   position: absolute;
   content: '';
   height: auto;
@@ -6018,39 +6017,39 @@ ul#social > li a:hover {
   width: 1px;
   background: white;
 }
-/* line 14, ../scss/parts/_gravity-forms.scss */
-.gform_body .gform_fields {
+/* line 15, ../scss/parts/_gravity-forms.scss */
+.footer .gform_body .gform_fields {
   list-style: none;
   margin: 0;
 }
-/* line 17, ../scss/parts/_gravity-forms.scss */
-.gform_body .gform_fields li {
+/* line 18, ../scss/parts/_gravity-forms.scss */
+.footer .gform_body .gform_fields li {
   margin: 0;
 }
-/* line 19, ../scss/parts/_gravity-forms.scss */
-.gform_body .gform_fields li .ginput_complex {
+/* line 20, ../scss/parts/_gravity-forms.scss */
+.footer .gform_body .gform_fields li .ginput_complex {
   *zoom: 1;
 }
 /* line 4, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
-.gform_body .gform_fields li .ginput_complex:before, .gform_body .gform_fields li .ginput_complex:after {
+.footer .gform_body .gform_fields li .ginput_complex:before, .footer .gform_body .gform_fields li .ginput_complex:after {
   content: "";
   display: table;
 }
 /* line 5, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
-.gform_body .gform_fields li .ginput_complex:after {
+.footer .gform_body .gform_fields li .ginput_complex:after {
   clear: both;
 }
-/* line 21, ../scss/parts/_gravity-forms.scss */
-.gform_body .gform_fields li .ginput_complex span {
+/* line 22, ../scss/parts/_gravity-forms.scss */
+.footer .gform_body .gform_fields li .ginput_complex span {
   width: 50%;
   padding: 0;
 }
-/* line 28, ../scss/parts/_gravity-forms.scss */
-.gform_body label {
+/* line 29, ../scss/parts/_gravity-forms.scss */
+.footer .gform_body label {
   display: none;
 }
-/* line 31, ../scss/parts/_gravity-forms.scss */
-.gform_body input {
+/* line 32, ../scss/parts/_gravity-forms.scss */
+.footer .gform_body input {
   background-color: transparent;
   margin: 0px;
   border: none;
@@ -6066,39 +6065,38 @@ ul#social > li a:hover {
   box-shadow: 0 0 0;
   color: white;
 }
-/* line 40, ../scss/parts/_gravity-forms.scss */
-.gform_body input:active, .gform_body input:focus {
+/* line 41, ../scss/parts/_gravity-forms.scss */
+.footer .gform_body input:active, .footer .gform_body input:focus {
   background-color: white;
   color: #0c223f;
   border-color: white;
 }
-
-/* line 49, ../scss/parts/_gravity-forms.scss */
-.gform_footer {
+/* line 50, ../scss/parts/_gravity-forms.scss */
+.footer .gform_footer {
   padding: 0;
   width: 25%;
 }
-/* line 53, ../scss/parts/_gravity-forms.scss */
-.gform_footer .button, .gform_footer #av-overlay .submit input[type=submit], #av-overlay .submit .gform_footer input[type=submit] {
+/* line 54, ../scss/parts/_gravity-forms.scss */
+.footer .gform_footer .button, .footer .gform_footer #av-overlay .submit input[type=submit], #av-overlay .submit .footer .gform_footer input[type=submit] {
   height: 85px;
   border: 1px solid white;
   border-left: none;
   width: 100%;
   font-weight: normal;
 }
-/* line 59, ../scss/parts/_gravity-forms.scss */
-.gform_footer .button:hover, .gform_footer #av-overlay .submit input[type=submit]:hover, #av-overlay .submit .gform_footer input[type=submit]:hover {
+/* line 60, ../scss/parts/_gravity-forms.scss */
+.footer .gform_footer .button:hover, .footer .gform_footer #av-overlay .submit input[type=submit]:hover, #av-overlay .submit .footer .gform_footer input[type=submit]:hover {
   background: white;
   color: #0c223f;
 }
-/* line 64, ../scss/parts/_gravity-forms.scss */
-.gform_footer img {
+/* line 65, ../scss/parts/_gravity-forms.scss */
+.footer .gform_footer img {
   position: absolute;
   bottom: -25px;
   left: 10px;
 }
 
-/* line 71, ../scss/parts/_gravity-forms.scss */
+/* line 73, ../scss/parts/_gravity-forms.scss */
 .validation_message {
   background: white;
   color: #0c223f;
@@ -6107,13 +6105,13 @@ ul#social > li a:hover {
   font-size: 1.1rem;
 }
 
-/* line 79, ../scss/parts/_gravity-forms.scss */
+/* line 81, ../scss/parts/_gravity-forms.scss */
 .validation_error {
   font-weight: bold;
   line-height: 1.4;
 }
 
-/* line 86, ../scss/parts/_gravity-forms.scss */
+/* line 88, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_heading {
   position: relative;
   text-align: center;
@@ -6132,13 +6130,13 @@ ul#social > li a:hover {
 .post-text .gform_heading:after {
   top: 0px;
 }
-/* line 93, ../scss/parts/_gravity-forms.scss */
+/* line 95, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_heading span.gform_description {
   padding: 0 60px;
   display: block;
 }
 
-/* line 101, ../scss/parts/_gravity-forms.scss */
+/* line 103, ../scss/parts/_gravity-forms.scss */
 .gforms_confirmation_message {
   padding: 20px;
 }
@@ -6164,6 +6162,28 @@ ul#social > li a:hover {
   background: rgba(12, 34, 63, 0.8);
   color: #fefcf8;
   text-align: center;
+}
+
+/* line 1, ../scss/parts/_loader.scss */
+#loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+/* line 12, ../scss/parts/_loader.scss */
+#loader span {
+  font-size: 30px;
+  font-size: 3rem;
+  top: 50%;
+  left: 50%;
+  position: absolute;
 }
 
 /* line 1, ../scss/vendor/_av-styles.scss */
@@ -6740,7 +6760,7 @@ html[xmlns] .slides {
 
 /* Space ---------------------- */
 /* line 2, ../scss/_helpers.scss */
-.space-top, .gform_body, .gform_footer, .validation_error {
+.space-top, .footer .gform_body, .footer .gform_footer, .validation_error {
   margin-top: 15px !important;
 }
 
@@ -6887,7 +6907,7 @@ html[xmlns] .slides {
 }
 
 /* line 93, ../scss/_helpers.scss */
-.border-bottom-white, .list-categories li, .gform_body {
+.border-bottom-white, .list-categories li, .footer .gform_body {
   border-bottom: 1px solid white !important;
 }
 
@@ -7309,30 +7329,31 @@ body {
 
 /* line 7, ../scss/components/modules/_topbar.scss */
 .top-bar > ul .name h1 a, .top-bar > ul .name .post-text .gform_heading h3.gform_title a, .post-text .gform_heading .top-bar > ul .name h3.gform_title a {
-  font-size: 200px !important;
+  font-size: 45px !important;
+  padding-top: 5px;
 }
 
-/* line 12, ../scss/components/modules/_topbar.scss */
+/* line 13, ../scss/components/modules/_topbar.scss */
 .top-bar {
   position: relative;
   z-index: 10;
 }
-/* line 15, ../scss/components/modules/_topbar.scss */
+/* line 16, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global {
   width: 67.2%;
   padding-left: 5px;
 }
-/* line 18, ../scss/components/modules/_topbar.scss */
+/* line 19, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li {
   width: 16.66666%;
 }
-/* line 21, ../scss/components/modules/_topbar.scss */
+/* line 22, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.name a {
   padding: 0 15px;
   line-height: 95px;
   font-size: 80px !important;
 }
-/* line 26, ../scss/components/modules/_topbar.scss */
+/* line 27, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li a:not(.button) {
   text-transform: uppercase;
   background: #fefcf8;
@@ -7356,15 +7377,15 @@ body {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 43, ../scss/components/modules/_topbar.scss */
+/* line 44, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown a {
   padding-right: 0;
 }
-/* line 45, ../scss/components/modules/_topbar.scss */
+/* line 46, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown a:after {
   display: none;
 }
-/* line 50, ../scss/components/modules/_topbar.scss */
+/* line 51, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown {
   width: auto;
   padding: 0;
@@ -7373,19 +7394,19 @@ body {
   height: auto;
   border-left: 5px solid #0c223f;
 }
-/* line 57, ../scss/components/modules/_topbar.scss */
+/* line 58, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li {
   padding-bottom: 0;
 }
-/* line 59, ../scss/components/modules/_topbar.scss */
+/* line 60, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li:last-child {
   padding-bottom: 5px;
 }
-/* line 62, ../scss/components/modules/_topbar.scss */
+/* line 63, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li a {
   font-weight: bold;
 }
-/* line 66, ../scss/components/modules/_topbar.scss */
+/* line 67, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li:hover > a, .top-bar ul#global > li.has-dropdown .dropdown li.active > a, .top-bar ul#global > li.has-dropdown .dropdown li:focus > a {
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
@@ -7393,7 +7414,7 @@ body {
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
-/* line 75, ../scss/components/modules/_topbar.scss */
+/* line 76, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li:not(.name):hover > a, .top-bar ul#global > li:not(.name).active > a, .top-bar ul#global > li:not(.name):focus > a, .top-bar ul#global > li:not(.divider):hover > a, .top-bar ul#global > li:not(.divider).active > a, .top-bar ul#global > li:not(.divider):focus > a, .top-bar ul#global > li:not(.has-dropdown):hover > a, .top-bar ul#global > li:not(.has-dropdown).active > a, .top-bar ul#global > li:not(.has-dropdown):focus > a {
   color: black;
   background: white;
@@ -7403,7 +7424,7 @@ body {
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
-/* line 81, ../scss/components/modules/_topbar.scss */
+/* line 82, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li:not(.name).current-menu-item > a, .top-bar ul#global > li:not(.name).current-menu-item:hover > a, .top-bar ul#global > li:not(.divider).current-menu-item > a, .top-bar ul#global > li:not(.divider).current-menu-item:hover > a, .top-bar ul#global > li:not(.has-dropdown).current-menu-item > a, .top-bar ul#global > li:not(.has-dropdown).current-menu-item:hover > a {
   background: url(../images/stripe.png);
   color: black;
@@ -9342,7 +9363,7 @@ table.hide-for-medium {
   }
 
   /* line 21, ../scss/components/modules/_mqueries-overrides.scss */
-  .header-text {
+  h2.header-text {
     margin: 10px 0;
   }
 }
