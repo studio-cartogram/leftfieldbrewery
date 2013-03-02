@@ -30,7 +30,8 @@ window.onload = function() {
 			'icon-arrow-right' : '&#xe015;',
 			'icon-arrow-left' : '&#xe016;',
 			'icon-mark-mug' : '&#xe017;',
-			'icon-mandie-wheat' : '&#xe018;'
+			'icon-mandie-wheat' : '&#xe018;',
+			'icon-icon-mandie' : '&#xe019;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;
@@ -46,9 +47,7 @@ window.onload = function() {
 			addIcon(el, icons[c[0]]);
 		}
 	}
-};ength; i += 1) {
-		el = els[i];
-		attr = el.getAttribute('data-icon');
+};tr = el.getAttribute('data-icon');
 		if (attr) {
 			addIcon(el, attr);
 		}
