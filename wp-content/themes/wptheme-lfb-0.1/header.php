@@ -5,14 +5,14 @@
 </section>
 <section class="container" id="container-header">
 	<header class="row text-center">
-		<div class="columns four mobile-two">
-			<i class="header-text icon-toronto"></i>
+		<div class="columns four mobile-two text-right">
+			<h2 class="header-text">Toronto <span class="split">◆</span> Canada</h2>
 		</div>
 		<hgroup class="columns four hide-for-small">
 			<h1><a class="icon-logo" href=<?php bloginfo( 'url' ); ?>></a></h1>
 		</hgroup>
-		<div class="columns four mobile-two">
-			<i class="header-text icon-est2013"></i>
+		<div class="columns four mobile-two text-left">
+			<h2 class="header-text">Est. 2013</h2>
 		</div>
 	</header>
 </section>	

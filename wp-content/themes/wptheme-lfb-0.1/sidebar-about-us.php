@@ -38,7 +38,7 @@ $players = new WP_Query( array( "post_type" => "players") );
 									?>
 								</div>
 							</div>
-									<a class="name double-bordered expand medium white button" href="mailto:<?php echo $email ?>">Contact <?php echo $first_name[0]; ?></a>
+							<a class="name double-bordered expand medium white button" href="mailto:<?php echo $email ?>">Contact <?php echo $first_name[0]; ?></a>
 						</div>
 					</li>
 				<?php endwhile; ?>

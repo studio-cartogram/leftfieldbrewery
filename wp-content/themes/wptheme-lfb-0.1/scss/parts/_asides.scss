@@ -207,8 +207,13 @@
 	 		opacity:0;
   	 	}
   	}
-  	
-  	
+  	.name {
+		left: -1px;
+		bottom:1px;
+		border:none;
+		position: absolute;
+		border-top:none;
+	} 	
 }
 
 .flip-container, .front, .back {
@@ -237,6 +242,7 @@
 	}
 }
 
+
 .back {
 	@include transform(rotateY(180deg));
 	background: $navy;
@@ -258,13 +264,7 @@
 		color:$white;
 	}
 }
-
-.front .name {
-	bottom: 0px;
-	left: 0;
-	position: absolute;
-	border-top:none;
-}
+ 
 /** 
   * Contact Page
   *
