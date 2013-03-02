@@ -6338,7 +6338,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
 /* line 7, ../scss/font/_classes.scss */
-.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .icon-logo:before, .icon-loader-simple:before, .icon-instagram:before, .icon-flip-right:before, .flip-container .flip:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before {
+.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .icon-logo:before, .icon-loader-simple:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -6418,7 +6418,7 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 57, ../scss/font/_classes.scss */
-.icon-flip-right:before, .flip-container .flip:before {
+.icon-flip-right:before {
   content: "\e00e";
 }
 
@@ -7004,7 +7004,7 @@ ul#social > li a:hover {
   width: 100%;
 }
 /* line 148, ../scss/parts/_asides.scss */
-.flip-container.hover .flipper, .flip-container:hover .flipper {
+.flip-container.hover .flipper {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
@@ -7034,23 +7034,28 @@ ul#social > li a:hover {
 /* line 167, ../scss/parts/_asides.scss */
 .flip-container .flip {
   position: absolute;
-  z-index: 11;
+  z-index: 1000;
   font-size: 23px;
   font-size: 2.3rem;
   color: white;
   position: absolute;
-  padding: 10px;
+  padding: 20px;
   cursor: pointer;
   right: 0;
+  display: block;
+}
+/* line 177, ../scss/parts/_asides.scss */
+.flip-container .flip i {
+  display: block;
 }
 
-/* line 180, ../scss/parts/_asides.scss */
+/* line 183, ../scss/parts/_asides.scss */
 .flip-container, .front, .back {
   width: 100%;
   height: 500px;
 }
 
-/* line 185, ../scss/parts/_asides.scss */
+/* line 188, ../scss/parts/_asides.scss */
 .flipper {
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
@@ -7064,7 +7069,7 @@ ul#social > li a:hover {
   position: relative;
 }
 
-/* line 191, ../scss/parts/_asides.scss */
+/* line 194, ../scss/parts/_asides.scss */
 .front, .back {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -7077,12 +7082,12 @@ ul#social > li a:hover {
   text-align: center;
 }
 
-/* line 199, ../scss/parts/_asides.scss */
+/* line 202, ../scss/parts/_asides.scss */
 .front {
   z-index: 2;
 }
 
-/* line 203, ../scss/parts/_asides.scss */
+/* line 209, ../scss/parts/_asides.scss */
 .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -7091,7 +7096,7 @@ ul#social > li a:hover {
   transform: rotateY(180deg);
   background: #0c223f;
 }
-/* line 206, ../scss/parts/_asides.scss */
+/* line 212, ../scss/parts/_asides.scss */
 .back .back-logo {
   font-size: 130px;
   font-size: 13rem;
@@ -7104,17 +7109,17 @@ ul#social > li a:hover {
   position: relative;
   padding-top: 50px;
 }
-/* line 217, ../scss/parts/_asides.scss */
+/* line 223, ../scss/parts/_asides.scss */
 .back p, .back .post-text .gform_heading span.gform_description, .post-text .gform_heading .back span.gform_description {
   color: white;
   padding: 15px 30px;
 }
-/* line 221, ../scss/parts/_asides.scss */
+/* line 227, ../scss/parts/_asides.scss */
 .back h2 {
   color: white;
 }
 
-/* line 227, ../scss/parts/_asides.scss */
+/* line 232, ../scss/parts/_asides.scss */
 .front .name {
   bottom: 0px;
   left: 0;
@@ -7125,17 +7130,17 @@ ul#social > li a:hover {
   * Contact Page
   *
   */
-/* line 242, ../scss/parts/_asides.scss */
+/* line 247, ../scss/parts/_asides.scss */
 .list-contact {
   list-style: none;
   margin: 0;
 }
-/* line 245, ../scss/parts/_asides.scss */
+/* line 250, ../scss/parts/_asides.scss */
 .list-contact h5 {
   padding-bottom: 8px;
   margin-top: 10px;
 }
-/* line 250, ../scss/parts/_asides.scss */
+/* line 255, ../scss/parts/_asides.scss */
 .list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .gform_body {
   border-color: #0c223f !important;
 }
@@ -7144,7 +7149,7 @@ ul#social > li a:hover {
   * Highlights Page
   *
   */
-/* line 260, ../scss/parts/_asides.scss */
+/* line 265, ../scss/parts/_asides.scss */
 .tags-wrap {
   position: relative;
   padding-top: 3px;
@@ -7164,11 +7169,11 @@ ul#social > li a:hover {
 .tags-wrap:after {
   top: 0px;
 }
-/* line 264, ../scss/parts/_asides.scss */
+/* line 269, ../scss/parts/_asides.scss */
 .tags-wrap a {
   color: white;
 }
-/* line 267, ../scss/parts/_asides.scss */
+/* line 272, ../scss/parts/_asides.scss */
 .tags-wrap .tag-cloud {
   position: relative;
 }
@@ -7187,7 +7192,7 @@ ul#social > li a:hover {
   top: 0px;
 }
 
-/* line 272, ../scss/parts/_asides.scss */
+/* line 277, ../scss/parts/_asides.scss */
 .categories-wrap {
   position: relative;
 }
@@ -7206,7 +7211,7 @@ ul#social > li a:hover {
   top: 0px;
 }
 
-/* line 276, ../scss/parts/_asides.scss */
+/* line 281, ../scss/parts/_asides.scss */
 .list-categories {
   margin: -3px 0 0 0 !important;
   padding-bottom: 2px;
@@ -7226,11 +7231,11 @@ ul#social > li a:hover {
 .list-categories:after {
   top: 0px;
 }
-/* line 281, ../scss/parts/_asides.scss */
+/* line 286, ../scss/parts/_asides.scss */
 .list-categories:before {
   top: 3px;
 }
-/* line 284, ../scss/parts/_asides.scss */
+/* line 289, ../scss/parts/_asides.scss */
 .list-categories li {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
@@ -7249,7 +7254,7 @@ ul#social > li a:hover {
   width: 1px;
   background: white;
 }
-/* line 291, ../scss/parts/_asides.scss */
+/* line 296, ../scss/parts/_asides.scss */
 .list-categories li:nth-child(2), .list-categories li:nth-child(1) {
   margin-top: 3px;
 }
