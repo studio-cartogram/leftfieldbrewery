@@ -11,8 +11,9 @@ $players = new WP_Query( array( "post_type" => "players") );
 							$icon = get_post_meta( $post->ID, '_cartogram_icon_value', TRUE );?>
 
 					<li class="card-players wrap">
-						<div class="flip-container" >
-							<a class="flip" href="javascript:void();"><i class="icon-flip-right"></i></a>
+						<div class="flip-container">
+							<a class="flip" id="to-back" href="#"><i class="icon-flip-right"></i></a>
+							<a class="flip" id="to-front" href="#"><i class="icon-flip-left"></i></a>
 							<span class="corner-one"></span>
 							<span class="corner-two "></span>
 							<span class="corner-three"></span>
@@ -22,9 +23,13 @@ $players = new WP_Query( array( "post_type" => "players") );
 								<?php if (has_post_thumbnail()) { 
 											the_post_thumbnail();
 										} else {
-											echo '<div class="placeholder-players"></div>';
-									} ?>
-									<a class="name large expand white button" href="mailto:<?php echo $email ?>">Contact <?php the_title() ?></a>
+											echo '<img src="' . get_bloginfo("stylesheet_directory") . '/images/placeholder.png" class="placeholder-players"/>';
+									} 
+									$first_name = preg_split("/[\s,]+/", get_the_title());
+								?>
+
+
+									<a class="name double-bordered expand medium white button" href="mailto:<?php echo $email ?>">Contact <?php echo $first_name[0]; ?></a>
 									
 								</div>
 								<div class="back">

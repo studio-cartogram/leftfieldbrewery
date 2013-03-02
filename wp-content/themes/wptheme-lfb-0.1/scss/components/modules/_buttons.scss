@@ -21,6 +21,18 @@
         color:$red;
       }
     }
+    &.white {
+      background:$white;
+      color:$navy;
+      &:hover {
+        color:$white;
+        background:$navy;
+      }
+    }
+    &.medium {
+      padding-top:15px;
+      padding-bottom:15px;
+    }
   }  
 //     /* Hovers */
 //     &:hover, &:focus { color: $white; background-color: darken(($mainColor), 10%); }
