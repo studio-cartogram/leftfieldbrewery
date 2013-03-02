@@ -141,48 +141,79 @@
    
 //}
 
-.flip-container {
-  	@include perspective(1000);
-  	background:$navy;
-  	width:100%;
-  	&.hover .flipper {
-  	 	@include transform(rotateY(180deg));
-  	}
-  	.corner-one {
+.flexslider-players {
+	.corner-one {
   		top: -20px;
 		left: -6px;
+		z-index:1;
   	}
   	.corner-two {
   		top: -31px; 
 		right: -31px;
+		z-index:1;
   	}
   	.corner-three {
   		bottom:13px;
-  		right:-31px;	
+  		right:-31px;
+		z-index:1;
   	}
   	.corner-four {
   		left: -5px;
 		bottom: 23px;
+		z-index:1;
   	}
+}
+
+.flip-container {
+  	@include perspective(1000);
+  	background:$navy;
+  	width:100%;
+  	overflow:hidden;
   	.flip {
   		position:absolute;
   		z-index:1000;
-		@include font-size(23);
-		color: white;
+		@include font-size(16);
+		color: $white;
 		position: absolute;
-		padding: 20px;
+		padding: 0px 10px 30px;
 		cursor:pointer;
-		right:0;  
+		right: 0px;
 		display:block;
+		&:hover, &:hover i {
+	 		color:$red;
+		}
 		i {
 			display:block;
 		}
+		@include transition(all 0.3s ease);
+		&#to-front {
+	 		opacity:0;
+	 		left:0;
+	 		@include backface-visibility(visible);
+	 	}
+	 	&#to-back {
+	 		opacity:1;
+	 	}
+	 	
   	}
+  	&.hover {
+  		.flipper {
+  	 		@include transform(rotateY(180deg));
+  	 	}
+  	 	.flip#to-front {
+	 		opacity:1;
+  	 	}
+  	 	.flip#to-back {
+	 		opacity:0;
+  	 	}
+  	}
+  	
+  	
 }
 
 .flip-container, .front, .back {
 	width: 100%;
-	height: 500px;
+	height: 450px;
 } 
  
 .flipper {
@@ -233,13 +264,8 @@
 	bottom: 0px;
 	left: 0;
 	position: absolute;
-	padding-top:15px;
-	padding-bottom:15px;
+	border-top:none;
 }
-
-
-
-
 /** 
   * Contact Page
   *

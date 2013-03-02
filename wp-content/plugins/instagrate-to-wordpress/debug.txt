@@ -39688,3 +39688,1889 @@ Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/theme
 Current page is: 
 ------------------------------------------------------------------------------------------------------------------------------------------
 --END Blog is_home() check FALSE Sat, 02 Mar 13 03:38:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:39:33 +0000
+PAGE LOAD Sat, 02 Mar 13 03:39:33 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:39:33 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:39:40 +0000
+PAGE LOAD Sat, 02 Mar 13 03:39:40 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:39:40 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:39:44 +0000
+PAGE LOAD Sat, 02 Mar 13 03:39:44 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:39:44 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:41:10 +0000
+PAGE LOAD Sat, 02 Mar 13 03:41:10 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:41:10 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:41:12 +0000
+PAGE LOAD Sat, 02 Mar 13 03:41:12 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:41:12 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:41:19 +0000
+PAGE LOAD Sat, 02 Mar 13 03:41:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:41:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:41:23 +0000
+PAGE LOAD Sat, 02 Mar 13 03:41:23 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:41:23 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:41:24 +0000
+PAGE LOAD Sat, 02 Mar 13 03:41:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:41:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:41:24 +0000
+PAGE LOAD Sat, 02 Mar 13 03:41:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:41:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:41:24 +0000
+PAGE LOAD Sat, 02 Mar 13 03:41:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:41:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:41:40 +0000
+PAGE LOAD Sat, 02 Mar 13 03:41:40 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:41:40 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:46:49 +0000
+PAGE LOAD Sat, 02 Mar 13 03:46:49 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--START Blog is_home() check TRUE Sat, 02 Mar 13 03:46:49 +0000
+--CHECK is_home() override not set Sat, 02 Mar 13 03:46:49 +0000
+--START Auto post function START Sat, 02 Mar 13 03:46:49 +0000
+--Marker: 
+----START Auto post function: Sat, 02 Mar 13 03:46:49 +0000
+----Marker: processing
+----Last ID:378205426917811290_296366000
+----Count of Images: 12
+------START Auto post function Image Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------0: Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------CHECK If image exists:  FALSE Sat, 02 Mar 13 03:46:50 +0000
+--------378205426917811290_296366000 == 378205426917811290_296366000
+--------Image Id already exists FALSE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:46:50 +0000
+--------1: Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:46:50 +0000
+--------397766873662334287_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:46:50 +0000
+--------2: Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:46:50 +0000
+--------397767684194805094_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:46:50 +0000
+--------3: Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:46:50 +0000
+--------397768185330247024_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:46:50 +0000
+--------4: Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:46:50 +0000
+--------397768552122131829_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:46:50 +0000
+--------5: Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:46:50 +0000
+--------397768800206824827_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:46:50 +0000
+--------6: Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:46:50 +0000
+--------397769179615176066_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:46:50 +0000
+--------7: Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:46:50 +0000
+--------397769607526458762_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:46:50 +0000
+--------8: Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:46:50 +0000
+--------398482649784493227_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:46:50 +0000
+--------9: Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:46:50 +0000
+--------401035843232310707_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:46:50 +0000
+--------10: Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:46:50 +0000
+--------401499504799360232_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:46:50 +0000
+--------11: Loop:  Sat, 02 Mar 13 03:46:50 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:46:50 +0000
+--------401753060727039590_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:46:50 +0000
+------END Auto post function Image Loop:  Sat, 02 Mar 13 03:46:50 +0000
+------Marker:  done
+--END Auto post function END Sat, 02 Mar 13 03:46:50 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:46:51 +0000
+PAGE LOAD Sat, 02 Mar 13 03:46:51 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:46:51 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:46:51 +0000
+PAGE LOAD Sat, 02 Mar 13 03:46:51 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:46:51 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:47:01 +0000
+PAGE LOAD Sat, 02 Mar 13 03:47:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:47:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:49:28 +0000
+PAGE LOAD Sat, 02 Mar 13 03:49:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:49:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:49:28 +0000
+PAGE LOAD Sat, 02 Mar 13 03:49:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:49:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:49:29 +0000
+PAGE LOAD Sat, 02 Mar 13 03:49:29 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:49:29 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:49:29 +0000
+PAGE LOAD Sat, 02 Mar 13 03:49:29 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:49:29 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:49:48 +0000
+PAGE LOAD Sat, 02 Mar 13 03:49:48 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:49:48 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:49:49 +0000
+PAGE LOAD Sat, 02 Mar 13 03:49:49 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:49:49 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:49:49 +0000
+PAGE LOAD Sat, 02 Mar 13 03:49:49 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:49:49 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:52:11 +0000
+PAGE LOAD Sat, 02 Mar 13 03:52:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:52:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:52:11 +0000
+PAGE LOAD Sat, 02 Mar 13 03:52:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:52:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:52:12 +0000
+PAGE LOAD Sat, 02 Mar 13 03:52:12 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:52:12 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:53:54 +0000
+PAGE LOAD Sat, 02 Mar 13 03:53:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:53:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:53:54 +0000
+PAGE LOAD Sat, 02 Mar 13 03:53:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:53:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:53:54 +0000
+PAGE LOAD Sat, 02 Mar 13 03:53:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:53:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:53:54 +0000
+PAGE LOAD Sat, 02 Mar 13 03:53:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:53:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:55:01 +0000
+PAGE LOAD Sat, 02 Mar 13 03:55:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--START Blog is_home() check TRUE Sat, 02 Mar 13 03:55:01 +0000
+--CHECK is_home() override not set Sat, 02 Mar 13 03:55:01 +0000
+--START Auto post function START Sat, 02 Mar 13 03:55:01 +0000
+--Marker: 
+----START Auto post function: Sat, 02 Mar 13 03:55:01 +0000
+----Marker: processing
+----Last ID:378205426917811290_296366000
+----Count of Images: 12
+------START Auto post function Image Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------0: Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------CHECK If image exists:  FALSE Sat, 02 Mar 13 03:55:03 +0000
+--------378205426917811290_296366000 == 378205426917811290_296366000
+--------Image Id already exists FALSE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:55:03 +0000
+--------1: Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:55:03 +0000
+--------397766873662334287_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:55:03 +0000
+--------2: Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:55:03 +0000
+--------397767684194805094_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:55:03 +0000
+--------3: Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:55:03 +0000
+--------397768185330247024_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:55:03 +0000
+--------4: Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:55:03 +0000
+--------397768552122131829_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:55:03 +0000
+--------5: Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:55:03 +0000
+--------397768800206824827_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:55:03 +0000
+--------6: Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:55:03 +0000
+--------397769179615176066_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:55:03 +0000
+--------7: Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:55:03 +0000
+--------397769607526458762_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:55:03 +0000
+--------8: Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:55:03 +0000
+--------398482649784493227_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:55:03 +0000
+--------9: Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:55:03 +0000
+--------401035843232310707_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:55:03 +0000
+--------10: Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:55:03 +0000
+--------401499504799360232_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:55:03 +0000
+--------11: Loop:  Sat, 02 Mar 13 03:55:03 +0000
+--------CHECK If image exists:  TRUE Sat, 02 Mar 13 03:55:03 +0000
+--------401753060727039590_296366000 == 378205426917811290_296366000
+--------Image Id already exists TRUE
+--------END Auto post function STOP as last ID already posted Sat, 02 Mar 13 03:55:03 +0000
+------END Auto post function Image Loop:  Sat, 02 Mar 13 03:55:03 +0000
+------Marker:  done
+--END Auto post function END Sat, 02 Mar 13 03:55:03 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:55:03 +0000
+PAGE LOAD Sat, 02 Mar 13 03:55:03 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:55:03 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:55:03 +0000
+PAGE LOAD Sat, 02 Mar 13 03:55:03 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:55:03 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:55:36 +0000
+PAGE LOAD Sat, 02 Mar 13 03:55:36 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:55:36 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:55:46 +0000
+PAGE LOAD Sat, 02 Mar 13 03:55:46 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:55:46 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:56:57 +0000
+PAGE LOAD Sat, 02 Mar 13 03:56:57 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:56:57 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:56:57 +0000
+PAGE LOAD Sat, 02 Mar 13 03:56:57 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:56:57 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:56:58 +0000
+PAGE LOAD Sat, 02 Mar 13 03:56:58 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:56:58 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:57:11 +0000
+PAGE LOAD Sat, 02 Mar 13 03:57:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:57:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:57:11 +0000
+PAGE LOAD Sat, 02 Mar 13 03:57:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:57:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:57:12 +0000
+PAGE LOAD Sat, 02 Mar 13 03:57:12 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:57:12 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:57:29 +0000
+PAGE LOAD Sat, 02 Mar 13 03:57:29 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:57:29 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:57:29 +0000
+PAGE LOAD Sat, 02 Mar 13 03:57:29 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:57:29 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 03:57:29 +0000
+PAGE LOAD Sat, 02 Mar 13 03:57:29 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 03:57:29 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:01:14 +0000
+PAGE LOAD Sat, 02 Mar 13 04:01:14 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:01:14 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:01:15 +0000
+PAGE LOAD Sat, 02 Mar 13 04:01:15 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:01:15 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:04:56 +0000
+PAGE LOAD Sat, 02 Mar 13 04:04:56 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:04:56 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:04:57 +0000
+PAGE LOAD Sat, 02 Mar 13 04:04:57 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:04:57 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:08:07 +0000
+PAGE LOAD Sat, 02 Mar 13 04:08:07 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:08:07 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:08:07 +0000
+PAGE LOAD Sat, 02 Mar 13 04:08:07 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:08:07 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:08:08 +0000
+PAGE LOAD Sat, 02 Mar 13 04:08:08 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:08:08 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:08:34 +0000
+PAGE LOAD Sat, 02 Mar 13 04:08:34 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:08:34 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:08:35 +0000
+PAGE LOAD Sat, 02 Mar 13 04:08:35 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:08:35 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:09:17 +0000
+PAGE LOAD Sat, 02 Mar 13 04:09:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:09:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:09:17 +0000
+PAGE LOAD Sat, 02 Mar 13 04:09:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:09:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:09:18 +0000
+PAGE LOAD Sat, 02 Mar 13 04:09:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:09:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:10:09 +0000
+PAGE LOAD Sat, 02 Mar 13 04:10:09 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:10:09 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:10:09 +0000
+PAGE LOAD Sat, 02 Mar 13 04:10:09 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:10:09 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:10:10 +0000
+PAGE LOAD Sat, 02 Mar 13 04:10:10 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:10:10 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:13:38 +0000
+PAGE LOAD Sat, 02 Mar 13 04:13:38 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:13:38 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:13:38 +0000
+PAGE LOAD Sat, 02 Mar 13 04:13:38 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:13:38 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:13:39 +0000
+PAGE LOAD Sat, 02 Mar 13 04:13:39 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:13:39 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:15:11 +0000
+PAGE LOAD Sat, 02 Mar 13 04:15:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:15:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:15:12 +0000
+PAGE LOAD Sat, 02 Mar 13 04:15:12 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:15:12 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:15:22 +0000
+PAGE LOAD Sat, 02 Mar 13 04:15:22 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:15:22 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:15:23 +0000
+PAGE LOAD Sat, 02 Mar 13 04:15:23 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:15:23 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:05 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:05 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:05 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:05 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:05 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:05 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:06 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:06 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:06 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:09 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:09 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:09 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:09 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:09 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:09 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:10 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:10 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:10 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:17 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:17 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:18 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:28 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:28 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:29 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:29 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:29 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:47 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:47 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:47 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:47 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:47 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:47 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:16:49 +0000
+PAGE LOAD Sat, 02 Mar 13 04:16:49 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:16:49 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:17:13 +0000
+PAGE LOAD Sat, 02 Mar 13 04:17:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:17:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:17:13 +0000
+PAGE LOAD Sat, 02 Mar 13 04:17:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:17:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:17:13 +0000
+PAGE LOAD Sat, 02 Mar 13 04:17:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:17:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:17:24 +0000
+PAGE LOAD Sat, 02 Mar 13 04:17:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:17:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:17:24 +0000
+PAGE LOAD Sat, 02 Mar 13 04:17:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:17:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:17:25 +0000
+PAGE LOAD Sat, 02 Mar 13 04:17:25 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:17:25 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:19:46 +0000
+PAGE LOAD Sat, 02 Mar 13 04:19:46 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:19:46 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:19:46 +0000
+PAGE LOAD Sat, 02 Mar 13 04:19:46 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:19:46 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:19:49 +0000
+PAGE LOAD Sat, 02 Mar 13 04:19:49 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:19:49 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:20:03 +0000
+PAGE LOAD Sat, 02 Mar 13 04:20:03 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:20:03 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:20:03 +0000
+PAGE LOAD Sat, 02 Mar 13 04:20:03 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:20:03 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:20:04 +0000
+PAGE LOAD Sat, 02 Mar 13 04:20:04 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:20:04 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:20:08 +0000
+PAGE LOAD Sat, 02 Mar 13 04:20:08 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:20:08 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:20:30 +0000
+PAGE LOAD Sat, 02 Mar 13 04:20:30 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:20:30 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:20:30 +0000
+PAGE LOAD Sat, 02 Mar 13 04:20:30 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:20:30 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:20:31 +0000
+PAGE LOAD Sat, 02 Mar 13 04:20:31 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:20:31 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:21:18 +0000
+PAGE LOAD Sat, 02 Mar 13 04:21:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:21:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:21:18 +0000
+PAGE LOAD Sat, 02 Mar 13 04:21:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:21:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:21:18 +0000
+PAGE LOAD Sat, 02 Mar 13 04:21:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:21:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:21:31 +0000
+PAGE LOAD Sat, 02 Mar 13 04:21:31 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:21:31 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:21:31 +0000
+PAGE LOAD Sat, 02 Mar 13 04:21:31 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:21:31 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:21:32 +0000
+PAGE LOAD Sat, 02 Mar 13 04:21:32 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:21:32 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:21:47 +0000
+PAGE LOAD Sat, 02 Mar 13 04:21:47 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:21:47 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:21:47 +0000
+PAGE LOAD Sat, 02 Mar 13 04:21:47 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:21:47 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:21:48 +0000
+PAGE LOAD Sat, 02 Mar 13 04:21:48 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:21:48 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:23:20 +0000
+PAGE LOAD Sat, 02 Mar 13 04:23:20 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:23:20 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:23:20 +0000
+PAGE LOAD Sat, 02 Mar 13 04:23:20 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:23:20 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:23:21 +0000
+PAGE LOAD Sat, 02 Mar 13 04:23:21 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:23:21 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:23:24 +0000
+PAGE LOAD Sat, 02 Mar 13 04:23:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:23:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:23:24 +0000
+PAGE LOAD Sat, 02 Mar 13 04:23:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:23:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:23:41 +0000
+PAGE LOAD Sat, 02 Mar 13 04:23:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:23:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:23:41 +0000
+PAGE LOAD Sat, 02 Mar 13 04:23:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:23:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:23:42 +0000
+PAGE LOAD Sat, 02 Mar 13 04:23:42 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:23:42 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:24:13 +0000
+PAGE LOAD Sat, 02 Mar 13 04:24:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:24:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:24:13 +0000
+PAGE LOAD Sat, 02 Mar 13 04:24:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:24:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:24:14 +0000
+PAGE LOAD Sat, 02 Mar 13 04:24:14 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:24:14 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:24:23 +0000
+PAGE LOAD Sat, 02 Mar 13 04:24:23 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:24:23 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:24:24 +0000
+PAGE LOAD Sat, 02 Mar 13 04:24:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:24:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:24:24 +0000
+PAGE LOAD Sat, 02 Mar 13 04:24:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:24:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:24:33 +0000
+PAGE LOAD Sat, 02 Mar 13 04:24:33 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:24:33 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:24:33 +0000
+PAGE LOAD Sat, 02 Mar 13 04:24:33 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:24:33 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:24:34 +0000
+PAGE LOAD Sat, 02 Mar 13 04:24:34 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:24:34 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:25:16 +0000
+PAGE LOAD Sat, 02 Mar 13 04:25:16 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:25:16 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:25:17 +0000
+PAGE LOAD Sat, 02 Mar 13 04:25:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:25:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:25:54 +0000
+PAGE LOAD Sat, 02 Mar 13 04:25:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:25:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:25:54 +0000
+PAGE LOAD Sat, 02 Mar 13 04:25:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:25:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:25:55 +0000
+PAGE LOAD Sat, 02 Mar 13 04:25:55 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:25:55 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:26:25 +0000
+PAGE LOAD Sat, 02 Mar 13 04:26:25 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:26:25 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:26:26 +0000
+PAGE LOAD Sat, 02 Mar 13 04:26:26 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:26:26 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:28:23 +0000
+PAGE LOAD Sat, 02 Mar 13 04:28:23 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:28:23 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:28:23 +0000
+PAGE LOAD Sat, 02 Mar 13 04:28:23 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:28:23 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:28:24 +0000
+PAGE LOAD Sat, 02 Mar 13 04:28:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:28:24 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:28:37 +0000
+PAGE LOAD Sat, 02 Mar 13 04:28:37 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:28:37 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:28:38 +0000
+PAGE LOAD Sat, 02 Mar 13 04:28:38 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:28:38 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:28:39 +0000
+PAGE LOAD Sat, 02 Mar 13 04:28:39 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:28:39 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:28:39 +0000
+PAGE LOAD Sat, 02 Mar 13 04:28:39 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:28:39 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:28:40 +0000
+PAGE LOAD Sat, 02 Mar 13 04:28:40 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:28:40 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:28:52 +0000
+PAGE LOAD Sat, 02 Mar 13 04:28:52 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:28:52 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:28:52 +0000
+PAGE LOAD Sat, 02 Mar 13 04:28:52 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:28:52 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:28:53 +0000
+PAGE LOAD Sat, 02 Mar 13 04:28:53 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:28:53 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:29:11 +0000
+PAGE LOAD Sat, 02 Mar 13 04:29:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:29:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:29:11 +0000
+PAGE LOAD Sat, 02 Mar 13 04:29:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:29:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:29:11 +0000
+PAGE LOAD Sat, 02 Mar 13 04:29:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:29:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:34:55 +0000
+PAGE LOAD Sat, 02 Mar 13 04:34:55 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:34:55 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:34:57 +0000
+PAGE LOAD Sat, 02 Mar 13 04:34:57 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:34:57 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:35:01 +0000
+PAGE LOAD Sat, 02 Mar 13 04:35:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:35:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:35:02 +0000
+PAGE LOAD Sat, 02 Mar 13 04:35:02 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:35:02 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:36:14 +0000
+PAGE LOAD Sat, 02 Mar 13 04:36:14 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:36:14 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:36:15 +0000
+PAGE LOAD Sat, 02 Mar 13 04:36:15 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:36:15 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:36:15 +0000
+PAGE LOAD Sat, 02 Mar 13 04:36:15 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:36:15 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:36:19 +0000
+PAGE LOAD Sat, 02 Mar 13 04:36:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:36:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:36:23 +0000
+PAGE LOAD Sat, 02 Mar 13 04:36:23 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:36:23 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:36:54 +0000
+PAGE LOAD Sat, 02 Mar 13 04:36:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:36:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:36:54 +0000
+PAGE LOAD Sat, 02 Mar 13 04:36:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:36:54 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:36:55 +0000
+PAGE LOAD Sat, 02 Mar 13 04:36:55 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:36:55 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:04 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:04 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:04 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:04 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:04 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:04 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:25 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:25 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:25 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:25 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:25 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:25 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:26 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:26 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:26 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:28 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:28 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:28 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:36 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:36 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:36 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:36 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:36 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:36 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:37 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:37 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:37 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:41 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:41 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:43 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:43 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:43 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:45 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:45 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:45 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:45 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:45 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:45 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:48 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:48 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:48 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:37:51 +0000
+PAGE LOAD Sat, 02 Mar 13 04:37:51 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:37:51 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:38:41 +0000
+PAGE LOAD Sat, 02 Mar 13 04:38:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:38:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:38:41 +0000
+PAGE LOAD Sat, 02 Mar 13 04:38:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:38:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:38:46 +0000
+PAGE LOAD Sat, 02 Mar 13 04:38:46 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:38:46 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:38:52 +0000
+PAGE LOAD Sat, 02 Mar 13 04:38:52 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:38:52 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:39:11 +0000
+PAGE LOAD Sat, 02 Mar 13 04:39:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:39:11 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:39:12 +0000
+PAGE LOAD Sat, 02 Mar 13 04:39:12 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:39:12 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:39:13 +0000
+PAGE LOAD Sat, 02 Mar 13 04:39:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:39:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:39:13 +0000
+PAGE LOAD Sat, 02 Mar 13 04:39:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:39:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:39:13 +0000
+PAGE LOAD Sat, 02 Mar 13 04:39:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:39:13 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:39:16 +0000
+PAGE LOAD Sat, 02 Mar 13 04:39:16 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:39:16 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:39:17 +0000
+PAGE LOAD Sat, 02 Mar 13 04:39:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:39:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:40:40 +0000
+PAGE LOAD Sat, 02 Mar 13 04:40:40 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:40:40 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:40:41 +0000
+PAGE LOAD Sat, 02 Mar 13 04:40:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:40:41 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:41:17 +0000
+PAGE LOAD Sat, 02 Mar 13 04:41:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:41:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:41:17 +0000
+PAGE LOAD Sat, 02 Mar 13 04:41:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:41:17 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:42:07 +0000
+PAGE LOAD Sat, 02 Mar 13 04:42:07 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:42:07 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:42:08 +0000
+PAGE LOAD Sat, 02 Mar 13 04:42:08 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:42:08 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:42:32 +0000
+PAGE LOAD Sat, 02 Mar 13 04:42:32 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:42:32 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:42:32 +0000
+PAGE LOAD Sat, 02 Mar 13 04:42:32 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:42:32 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:42:35 +0000
+PAGE LOAD Sat, 02 Mar 13 04:42:35 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:42:35 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:43:50 +0000
+PAGE LOAD Sat, 02 Mar 13 04:43:50 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:43:50 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:43:51 +0000
+PAGE LOAD Sat, 02 Mar 13 04:43:51 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:43:51 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:45:00 +0000
+PAGE LOAD Sat, 02 Mar 13 04:45:00 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:45:00 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:45:04 +0000
+PAGE LOAD Sat, 02 Mar 13 04:45:04 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:45:04 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:45:27 +0000
+PAGE LOAD Sat, 02 Mar 13 04:45:27 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:45:27 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:45:27 +0000
+PAGE LOAD Sat, 02 Mar 13 04:45:27 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:45:27 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:45:59 +0000
+PAGE LOAD Sat, 02 Mar 13 04:45:59 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:45:59 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:00 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:00 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:00 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:01 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:01 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:01 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:01 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:01 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:01 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:04 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:04 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:04 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:06 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:06 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:06 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:06 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:06 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:06 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:18 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:18 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:19 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:19 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:19 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:19 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:19 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:20 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:20 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:20 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:20 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:20 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:20 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:27 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:27 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:27 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:36 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:36 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:36 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Instagrate to WordPress - Plugin Debug Output: Sat, 02 Mar 13 04:46:36 +0000
+PAGE LOAD Sat, 02 Mar 13 04:46:36 +0000
+------------------------------------------------------------------------------------------------------------------------------------------
+Home page is: /Applications/MAMP/htdocs/www.leftfieldbrewery.ca/wp-content/themes/wptheme-lfb-0.1/index.php
+Current page is: 
+------------------------------------------------------------------------------------------------------------------------------------------
+--END Blog is_home() check FALSE Sat, 02 Mar 13 04:46:36 +0000

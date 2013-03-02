@@ -295,8 +295,7 @@ Flexslider
 
 	//Add toggle events for back and front of cards.
 	$(".flip").live("click", function() {
-		$(this).parent().toggleClass('hover');
-		console.log('test');
+		$(this).parents('.flip-container').toggleClass('hover');
 		return false;
 	});
 

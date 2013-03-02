@@ -5669,7 +5669,32 @@ ul#social > li a:hover {
   list-style: none;
 }
 
-/* line 144, ../scss/parts/_asides.scss */
+/* line 145, ../scss/parts/_asides.scss */
+.flexslider-players .corner-one {
+  top: -20px;
+  left: -6px;
+  z-index: 1;
+}
+/* line 150, ../scss/parts/_asides.scss */
+.flexslider-players .corner-two {
+  top: -31px;
+  right: -31px;
+  z-index: 1;
+}
+/* line 155, ../scss/parts/_asides.scss */
+.flexslider-players .corner-three {
+  bottom: 13px;
+  right: -31px;
+  z-index: 1;
+}
+/* line 160, ../scss/parts/_asides.scss */
+.flexslider-players .corner-four {
+  left: -5px;
+  bottom: 23px;
+  z-index: 1;
+}
+
+/* line 167, ../scss/parts/_asides.scss */
 .flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
@@ -5678,8 +5703,48 @@ ul#social > li a:hover {
   perspective: 1000;
   background: #0c223f;
   width: 100%;
+  overflow: hidden;
 }
-/* line 148, ../scss/parts/_asides.scss */
+/* line 172, ../scss/parts/_asides.scss */
+.flip-container .flip {
+  position: absolute;
+  z-index: 1000;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: white;
+  position: absolute;
+  padding: 0px 10px 30px;
+  cursor: pointer;
+  right: 0px;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 182, ../scss/parts/_asides.scss */
+.flip-container .flip:hover, .flip-container .flip:hover i {
+  color: #ff4337;
+}
+/* line 185, ../scss/parts/_asides.scss */
+.flip-container .flip i {
+  display: block;
+}
+/* line 189, ../scss/parts/_asides.scss */
+.flip-container .flip#to-front {
+  opacity: 0;
+  left: 0;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/* line 194, ../scss/parts/_asides.scss */
+.flip-container .flip#to-back {
+  opacity: 1;
+}
+/* line 200, ../scss/parts/_asides.scss */
 .flip-container.hover .flipper {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -5687,51 +5752,22 @@ ul#social > li a:hover {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-/* line 151, ../scss/parts/_asides.scss */
-.flip-container .corner-one {
-  top: -20px;
-  left: -6px;
+/* line 203, ../scss/parts/_asides.scss */
+.flip-container.hover .flip#to-front {
+  opacity: 1;
 }
-/* line 155, ../scss/parts/_asides.scss */
-.flip-container .corner-two {
-  top: -31px;
-  right: -31px;
-}
-/* line 159, ../scss/parts/_asides.scss */
-.flip-container .corner-three {
-  bottom: 13px;
-  right: -31px;
-}
-/* line 163, ../scss/parts/_asides.scss */
-.flip-container .corner-four {
-  left: -5px;
-  bottom: 23px;
-}
-/* line 167, ../scss/parts/_asides.scss */
-.flip-container .flip {
-  position: absolute;
-  z-index: 1000;
-  font-size: 23px;
-  font-size: 2.3rem;
-  color: white;
-  position: absolute;
-  padding: 20px;
-  cursor: pointer;
-  right: 0;
-  display: block;
-}
-/* line 177, ../scss/parts/_asides.scss */
-.flip-container .flip i {
-  display: block;
+/* line 206, ../scss/parts/_asides.scss */
+.flip-container.hover .flip#to-back {
+  opacity: 0;
 }
 
-/* line 183, ../scss/parts/_asides.scss */
+/* line 214, ../scss/parts/_asides.scss */
 .flip-container, .front, .back {
   width: 100%;
-  height: 500px;
+  height: 450px;
 }
 
-/* line 188, ../scss/parts/_asides.scss */
+/* line 219, ../scss/parts/_asides.scss */
 .flipper {
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
@@ -5745,7 +5781,7 @@ ul#social > li a:hover {
   position: relative;
 }
 
-/* line 194, ../scss/parts/_asides.scss */
+/* line 225, ../scss/parts/_asides.scss */
 .front, .back {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -5758,12 +5794,12 @@ ul#social > li a:hover {
   text-align: center;
 }
 
-/* line 202, ../scss/parts/_asides.scss */
+/* line 233, ../scss/parts/_asides.scss */
 .front {
   z-index: 2;
 }
 
-/* line 209, ../scss/parts/_asides.scss */
+/* line 240, ../scss/parts/_asides.scss */
 .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -5772,7 +5808,7 @@ ul#social > li a:hover {
   transform: rotateY(180deg);
   background: #0c223f;
 }
-/* line 212, ../scss/parts/_asides.scss */
+/* line 243, ../scss/parts/_asides.scss */
 .back .back-logo {
   font-size: 130px;
   font-size: 13rem;
@@ -5785,40 +5821,39 @@ ul#social > li a:hover {
   position: relative;
   padding-top: 50px;
 }
-/* line 223, ../scss/parts/_asides.scss */
+/* line 254, ../scss/parts/_asides.scss */
 .back p, .back .post-text .gform_heading span.gform_description, .post-text .gform_heading .back span.gform_description {
   color: white;
   padding: 15px 30px;
 }
-/* line 227, ../scss/parts/_asides.scss */
+/* line 258, ../scss/parts/_asides.scss */
 .back h2 {
   color: white;
 }
 
-/* line 232, ../scss/parts/_asides.scss */
+/* line 263, ../scss/parts/_asides.scss */
 .front .name {
   bottom: 0px;
   left: 0;
   position: absolute;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  border-top: none;
 }
 
 /** 
   * Contact Page
   *
   */
-/* line 249, ../scss/parts/_asides.scss */
+/* line 275, ../scss/parts/_asides.scss */
 .list-contact {
   list-style: none;
   margin: 0;
 }
-/* line 252, ../scss/parts/_asides.scss */
+/* line 278, ../scss/parts/_asides.scss */
 .list-contact h5 {
   padding-bottom: 8px;
   margin-top: 10px;
 }
-/* line 257, ../scss/parts/_asides.scss */
+/* line 283, ../scss/parts/_asides.scss */
 .list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .gform_body {
   border-color: #0c223f !important;
 }
@@ -5827,7 +5862,7 @@ ul#social > li a:hover {
   * Highlights Page
   *
   */
-/* line 267, ../scss/parts/_asides.scss */
+/* line 293, ../scss/parts/_asides.scss */
 .tags-wrap {
   position: relative;
   padding-top: 3px;
@@ -5847,11 +5882,11 @@ ul#social > li a:hover {
 .tags-wrap:after {
   top: 0px;
 }
-/* line 271, ../scss/parts/_asides.scss */
+/* line 297, ../scss/parts/_asides.scss */
 .tags-wrap a {
   color: white;
 }
-/* line 274, ../scss/parts/_asides.scss */
+/* line 300, ../scss/parts/_asides.scss */
 .tags-wrap .tag-cloud {
   position: relative;
 }
@@ -5870,7 +5905,7 @@ ul#social > li a:hover {
   top: 0px;
 }
 
-/* line 279, ../scss/parts/_asides.scss */
+/* line 305, ../scss/parts/_asides.scss */
 .categories-wrap {
   position: relative;
 }
@@ -5889,7 +5924,7 @@ ul#social > li a:hover {
   top: 0px;
 }
 
-/* line 283, ../scss/parts/_asides.scss */
+/* line 309, ../scss/parts/_asides.scss */
 .list-categories {
   margin: -3px 0 0 0 !important;
   padding-bottom: 2px;
@@ -5909,11 +5944,11 @@ ul#social > li a:hover {
 .list-categories:after {
   top: 0px;
 }
-/* line 288, ../scss/parts/_asides.scss */
+/* line 314, ../scss/parts/_asides.scss */
 .list-categories:before {
   top: 3px;
 }
-/* line 291, ../scss/parts/_asides.scss */
+/* line 317, ../scss/parts/_asides.scss */
 .list-categories li {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
@@ -5932,7 +5967,7 @@ ul#social > li a:hover {
   width: 1px;
   background: white;
 }
-/* line 298, ../scss/parts/_asides.scss */
+/* line 324, ../scss/parts/_asides.scss */
 .list-categories li:nth-child(2), .list-categories li:nth-child(1) {
   margin-top: 3px;
 }
@@ -7406,6 +7441,16 @@ body {
 .button.white, #av-overlay .submit input.white[type=submit] {
   background: white;
   color: #0c223f;
+}
+/* line 27, ../scss/components/modules/_buttons.scss */
+.button.white:hover, #av-overlay .submit input.white[type=submit]:hover {
+  color: white;
+  background: #0c223f;
+}
+/* line 32, ../scss/components/modules/_buttons.scss */
+.button.medium, #av-overlay .submit input.medium[type=submit] {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 /* CSS for jQuery Reveal Plugin
