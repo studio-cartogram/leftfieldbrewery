@@ -21,6 +21,10 @@
         color:$red;
       }
     }
+    &.white {
+      background:$white;
+      color:$navy;
+    }
   }  
 //     /* Hovers */
 //     &:hover, &:focus { color: $white; background-color: darken(($mainColor), 10%); }

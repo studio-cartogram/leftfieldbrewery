@@ -153,16 +153,16 @@
 		left: -6px;
   	}
   	.corner-two {
-  		top: -31px;
+  		top: -31px; 
 		right: -31px;
   	}
   	.corner-three {
-  		bottom:-6px;
+  		bottom:13px;
   		right:-31px;	
   	}
   	.corner-four {
   		left: -5px;
-		bottom: 4px;
+		bottom: 23px;
   	}
   	.flip {
   		position:absolute;
@@ -233,6 +233,8 @@
 	bottom: 0px;
 	left: 0;
 	position: absolute;
+	padding-top:15px;
+	padding-bottom:15px;
 }
 
 
