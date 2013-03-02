@@ -5014,7 +5014,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
 /* line 7, ../scss/font/_classes.scss */
-.icon-phone:before, .icon-twitter:before, .icon-google-plus:before, .icon-facebook:before, .icon-envelope-alt:before, .icon-map-marker:before, .icon-bubbles:before, .icon-bubbles-2:before, .icon-untappd:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-toronto:before, .icon-tap:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-arrow-left:before, .icon-doubleipa:before, .icon-mark:before, .icon-maris:before, .icon-mail:before, .icon-logo:before, .icon-instagram:before, .icon-flip-right:before, .card-container .card .flip:before, .icon-flip-left:before, .card-container .card.flipped .flip:before, .icon-est2013:before, .icon-eephus:before, .icon-diamond:before, h2.beer-name.beer-block:before, .icon-diamond-stroke:before, .icon-cross:before, .icon-close:before {
+.icon-phone:before, .icon-twitter:before, .icon-google-plus:before, .icon-facebook:before, .icon-envelope-alt:before, .icon-map-marker:before, .icon-bubbles:before, .icon-bubbles-2:before, .icon-untappd:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-toronto:before, .icon-tap:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-arrow-left:before, .icon-doubleipa:before, .icon-mark:before, .icon-maris:before, .icon-mail:before, .icon-logo:before, .icon-instagram:before, .icon-flip-right:before, .flip-container .flip:before, .icon-flip-left:before, .icon-est2013:before, .icon-eephus:before, .icon-diamond:before, h2.beer-name.beer-block:before, .icon-diamond-stroke:before, .icon-cross:before, .icon-close:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -5144,12 +5144,12 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 87, ../scss/font/_classes.scss */
-.icon-flip-right:before, .card-container .card .flip:before {
+.icon-flip-right:before, .flip-container .flip:before {
   content: "\e014";
 }
 
 /* line 90, ../scss/font/_classes.scss */
-.icon-flip-left:before, .card-container .card.flipped .flip:before {
+.icon-flip-left:before {
   content: "\e015";
 }
 
@@ -5699,106 +5699,134 @@ ul#social > li a:hover {
   list-style: none;
 }
 
-/* line 85, ../scss/parts/_asides.scss */
-.card-container {
-  position: relative;
-  margin: 0 auto 0px;
-  height: 500px;
+/* line 144, ../scss/parts/_asides.scss */
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+  background: #0c223f;
   width: 100%;
 }
-/* line 90, ../scss/parts/_asides.scss */
-.card-container .card {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-transition: -webkit-transform 1s;
-  -moz-transition: -moz-transform 1s;
-  -o-transition: -o-transform 1s;
-  transition: transform 1s;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+/* line 148, ../scss/parts/_asides.scss */
+.flip-container.hover .flipper, .flip-container:hover .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
-/* line 97, ../scss/parts/_asides.scss */
-.card-container .card .flip {
+/* line 151, ../scss/parts/_asides.scss */
+.flip-container .corner-one {
+  top: -20px;
+  left: -6px;
+}
+/* line 155, ../scss/parts/_asides.scss */
+.flip-container .corner-two {
+  top: -31px;
+  right: -31px;
+}
+/* line 159, ../scss/parts/_asides.scss */
+.flip-container .corner-three {
+  bottom: -6px;
+  right: -31px;
+}
+/* line 163, ../scss/parts/_asides.scss */
+.flip-container .corner-four {
+  left: -5px;
+  bottom: 4px;
+}
+/* line 167, ../scss/parts/_asides.scss */
+.flip-container .flip {
   position: absolute;
-  z-index: 10;
+  z-index: 11;
   font-size: 23px;
   font-size: 2.3rem;
   color: white;
   position: absolute;
   right: 4px;
 }
-/* line 107, ../scss/parts/_asides.scss */
-.card-container .card figure {
-  display: block;
-  height: 100%;
-  width: auto;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
+
+/* line 178, ../scss/parts/_asides.scss */
+.flip-container, .front, .back {
+  width: 100%;
+  height: 350px;
+}
+
+/* line 183, ../scss/parts/_asides.scss */
+.flipper {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* line 189, ../scss/parts/_asides.scss */
+.front, .back {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
-}
-/* line 119, ../scss/parts/_asides.scss */
-.card-container .card.flipped {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-/* line 121, ../scss/parts/_asides.scss */
-.card-container .card.flipped .flip {
-  -webkit-transform: rotateY(185deg);
-  -moz-transform: rotateY(185deg);
-  -ms-transform: rotateY(185deg);
-  -o-transform: rotateY(185deg);
-  transform: rotateY(185deg);
-}
-/* line 127, ../scss/parts/_asides.scss */
-.card-container .card .back {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  padding: 20px;
-  background: #0c223f;
+  position: absolute;
+  top: 0;
+  left: 0;
   text-align: center;
 }
-/* line 132, ../scss/parts/_asides.scss */
-.card-container .card .back p, .card-container .card .back .post-text .gform_heading span.gform_description, .post-text .gform_heading .card-container .card .back span.gform_description, .card-container .card .back h2 {
+
+/* line 197, ../scss/parts/_asides.scss */
+.front {
+  z-index: 2;
+}
+
+/* line 201, ../scss/parts/_asides.scss */
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background: #0c223f;
+}
+/* line 204, ../scss/parts/_asides.scss */
+.back p, .back .post-text .gform_heading span.gform_description, .post-text .gform_heading .back span.gform_description {
+  color: white;
+  padding: 15px 30px;
+}
+/* line 208, ../scss/parts/_asides.scss */
+.back h2 {
   color: white;
 }
-/* line 136, ../scss/parts/_asides.scss */
-.card-container .button, .card-container #av-overlay .submit input[type=submit], #av-overlay .submit .card-container input[type=submit] {
-  top: 100%;
-  margin-top: -100px;
-  width: 100%;
+
+/* line 213, ../scss/parts/_asides.scss */
+.front .name {
+  bottom: 0px;
+  left: 0;
+  position: absolute;
 }
 
 /** 
   * Contact Page
   *
   */
-/* line 150, ../scss/parts/_asides.scss */
+/* line 228, ../scss/parts/_asides.scss */
 .list-contact {
   list-style: none;
   margin: 0;
 }
-/* line 153, ../scss/parts/_asides.scss */
+/* line 231, ../scss/parts/_asides.scss */
 .list-contact h5 {
   padding-bottom: 8px;
   margin-top: 10px;
 }
-/* line 158, ../scss/parts/_asides.scss */
+/* line 236, ../scss/parts/_asides.scss */
 .list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .gform_body {
   border-color: #0c223f !important;
 }
@@ -5807,7 +5835,7 @@ ul#social > li a:hover {
   * Highlights Page
   *
   */
-/* line 168, ../scss/parts/_asides.scss */
+/* line 246, ../scss/parts/_asides.scss */
 .tags-wrap {
   position: relative;
   padding-top: 3px;
@@ -5827,11 +5855,11 @@ ul#social > li a:hover {
 .tags-wrap:after {
   top: 0px;
 }
-/* line 172, ../scss/parts/_asides.scss */
+/* line 250, ../scss/parts/_asides.scss */
 .tags-wrap a {
   color: white;
 }
-/* line 175, ../scss/parts/_asides.scss */
+/* line 253, ../scss/parts/_asides.scss */
 .tags-wrap .tag-cloud {
   position: relative;
 }
@@ -5850,7 +5878,7 @@ ul#social > li a:hover {
   top: 0px;
 }
 
-/* line 180, ../scss/parts/_asides.scss */
+/* line 258, ../scss/parts/_asides.scss */
 .categories-wrap {
   position: relative;
 }
@@ -5869,7 +5897,7 @@ ul#social > li a:hover {
   top: 0px;
 }
 
-/* line 184, ../scss/parts/_asides.scss */
+/* line 262, ../scss/parts/_asides.scss */
 .list-categories {
   margin: -3px 0 0 0 !important;
   padding-bottom: 2px;
@@ -5889,11 +5917,11 @@ ul#social > li a:hover {
 .list-categories:after {
   top: 0px;
 }
-/* line 189, ../scss/parts/_asides.scss */
+/* line 267, ../scss/parts/_asides.scss */
 .list-categories:before {
   top: 3px;
 }
-/* line 192, ../scss/parts/_asides.scss */
+/* line 270, ../scss/parts/_asides.scss */
 .list-categories li {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
@@ -5912,7 +5940,7 @@ ul#social > li a:hover {
   width: 1px;
   background: white;
 }
-/* line 199, ../scss/parts/_asides.scss */
+/* line 277, ../scss/parts/_asides.scss */
 .list-categories li:nth-child(2), .list-categories li:nth-child(1) {
   margin-top: 3px;
 }
@@ -6454,10 +6482,11 @@ html[xmlns] .slides {
   text-align: center;
   width: 100%;
   position: absolute;
-  bottom: -45px;
-  z-index: 1000;
+  bottom: -30px;
+  z-index: 10;
+  margin: 0;
 }
-/* line 70, ../scss/vendor/_flexslider.scss */
+/* line 71, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li, .cartogram-slider-playerscontrol-paging li {
   list-style: none;
   display: inline-block;
@@ -6465,7 +6494,7 @@ html[xmlns] .slides {
   zoom: 1;
   *display: inline;
 }
-/* line 76, ../scss/vendor/_flexslider.scss */
+/* line 77, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li a, .cartogram-slider-playerscontrol-paging li a {
   color: #0c223f;
   text-indent: -9999px;
@@ -6486,11 +6515,11 @@ html[xmlns] .slides {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 88, ../scss/vendor/_flexslider.scss */
+/* line 89, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li a:hover, .cartogram-slider-playerscontrol-paging li a:hover {
   background: #0c223f;
 }
-/* line 91, ../scss/vendor/_flexslider.scss */
+/* line 92, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging li a.cartogram-slider-active, .cartogram-slider-control-paging li a.cartogram-slider-playersactive, .cartogram-slider-playerscontrol-paging li a.cartogram-slider-active, .cartogram-slider-playerscontrol-paging li a.cartogram-slider-playersactive {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -6501,7 +6530,7 @@ html[xmlns] .slides {
 }
 
 /* captions */
-/* line 100, ../scss/vendor/_flexslider.scss */
+/* line 101, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-caption {
   position: absolute;
   bottom: 20px;
@@ -6518,19 +6547,19 @@ html[xmlns] .slides {
 }
 
 /* Direction Nav */
-/* line 116, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav, .cartogram-slider-instagramdirection-nav {
+/* line 117, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav, .cartogram-slider-instagramdirection-nav, .cartogram-slider-playersdirection-nav {
   *height: 0;
   width: 100%;
   list-style: none;
 }
-/* line 121, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li:nth-child(1):after, .cartogram-slider-direction-nav li:nth-child(1):before, .cartogram-slider-instagramdirection-nav li:nth-child(1):after, .cartogram-slider-instagramdirection-nav li:nth-child(1):before {
+/* line 122, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li:nth-child(1):after, .cartogram-slider-direction-nav li:nth-child(1):before, .cartogram-slider-instagramdirection-nav li:nth-child(1):after, .cartogram-slider-instagramdirection-nav li:nth-child(1):before, .cartogram-slider-playersdirection-nav li:nth-child(1):after, .cartogram-slider-playersdirection-nav li:nth-child(1):before {
   left: auto;
   right: -15px;
 }
-/* line 127, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li:after, .cartogram-slider-direction-nav li:before, .cartogram-slider-instagramdirection-nav li:after, .cartogram-slider-instagramdirection-nav li:before {
+/* line 128, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li:after, .cartogram-slider-direction-nav li:before, .cartogram-slider-instagramdirection-nav li:after, .cartogram-slider-instagramdirection-nav li:before, .cartogram-slider-playersdirection-nav li:after, .cartogram-slider-playersdirection-nav li:before {
   height: 1px;
   width: 15px;
   content: ' ';
@@ -6539,12 +6568,12 @@ html[xmlns] .slides {
   top: 43px;
   left: -15px;
 }
-/* line 136, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li:before, .cartogram-slider-instagramdirection-nav li:before {
+/* line 137, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li:before, .cartogram-slider-instagramdirection-nav li:before, .cartogram-slider-playersdirection-nav li:before {
   top: 40px;
 }
-/* line 140, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li a, .cartogram-slider-instagramdirection-nav li a {
+/* line 141, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a, .cartogram-slider-instagramdirection-nav li a, .cartogram-slider-playersdirection-nav li a {
   position: absolute;
   color: #fefcf8;
   background: #0c223f;
@@ -6558,65 +6587,94 @@ html[xmlns] .slides {
   z-index: 10;
   border: 1px solid #0c223f;
 }
-/* line 152, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li a:hover, .cartogram-slider-instagramdirection-nav li a:hover {
+/* line 153, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a:hover, .cartogram-slider-instagramdirection-nav li a:hover, .cartogram-slider-playersdirection-nav li a:hover {
   background: #fefcf8;
   color: #0c223f;
 }
-/* line 156, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li a.cartogram-slider-next, .cartogram-slider-instagramdirection-nav li a.cartogram-slider-next {
+/* line 157, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a.cartogram-slider-next, .cartogram-slider-instagramdirection-nav li a.cartogram-slider-next, .cartogram-slider-playersdirection-nav li a.cartogram-slider-next {
   right: -70px;
 }
-/* line 160, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li a.cartogram-slider-prev, .cartogram-slider-instagramdirection-nav li a.cartogram-slider-prev {
+/* line 161, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a.cartogram-slider-prev, .cartogram-slider-instagramdirection-nav li a.cartogram-slider-prev, .cartogram-slider-playersdirection-nav li a.cartogram-slider-prev {
   left: -70px;
 }
 
-/* line 169, ../scss/vendor/_flexslider.scss */
+/* line 170, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-instagramdirection-nav li:before, .cartogram-slider-instagramdirection-nav li:after {
   display: none;
 }
-/* line 172, ../scss/vendor/_flexslider.scss */
+/* line 173, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-instagramdirection-nav li a {
   background: none;
   border: none;
 }
-/* line 175, ../scss/vendor/_flexslider.scss */
+/* line 176, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-instagramdirection-nav li a.cartogram-slider-instagramprev {
   left: 40px;
   top: 50%;
   margin-top: -20px;
 }
-/* line 180, ../scss/vendor/_flexslider.scss */
+/* line 181, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-instagramdirection-nav li a.cartogram-slider-instagramnext {
   right: 40px;
   top: 50%;
   margin-top: -20px;
 }
-/* line 185, ../scss/vendor/_flexslider.scss */
+/* line 186, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-instagramdirection-nav li a:hover {
   background: none;
 }
 
-/* line 192, ../scss/vendor/_flexslider.scss */
+/* line 196, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-playersdirection-nav li:before, .cartogram-slider-playersdirection-nav li:after {
+  display: none;
+}
+/* line 199, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-playersdirection-nav li a {
+  background: none;
+  border: none;
+  color: #0c223f;
+  z-index: 11;
+}
+/* line 204, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-playersdirection-nav li a.cartogram-slider-playersprev {
+  left: 0px;
+  top: 100%;
+  margin-top: 0px;
+}
+/* line 209, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-playersdirection-nav li a.cartogram-slider-playersnext {
+  right: 0px;
+  top: 100%;
+  margin-top: 0px;
+}
+/* line 214, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-playersdirection-nav li a:hover {
+  background: none;
+  color: #ff4337;
+}
+
+/* line 223, ../scss/vendor/_flexslider.scss */
 .slide-row {
   height: 1000px;
   background: #e6e6e6;
   margin: 0 !important;
 }
-/* line 196, ../scss/vendor/_flexslider.scss */
+/* line 227, ../scss/vendor/_flexslider.scss */
 .slide-row article {
   border: 1px solid #0c223f;
   margin: 10px;
   padding: 10px;
 }
 
-/* line 203, ../scss/vendor/_flexslider.scss */
+/* line 234, ../scss/vendor/_flexslider.scss */
 .flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {
   opacity: 1;
 }
 
-/* line 204, ../scss/vendor/_flexslider.scss */
+/* line 235, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav .cartogram-slider-disabled {
   opacity: .3!important;
   filter: alpha(opacity=30);

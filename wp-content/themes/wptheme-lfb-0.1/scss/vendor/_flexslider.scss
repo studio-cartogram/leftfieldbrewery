@@ -65,8 +65,9 @@ html[xmlns] .slides {display: block;}
   text-align:center;
   width: 100%; 
   position: absolute; 
-  bottom: -45px;
-  z-index: 1000;
+  bottom: -30px;
+  z-index: 10;
+  margin:0;
   li {
      list-style:none;
      display:inline-block;
@@ -113,7 +114,7 @@ html[xmlns] .slides {display: block;}
 }
 
 /* Direction Nav */
-.cartogram-slider-direction-nav, .cartogram-slider-instagramdirection-nav {
+.cartogram-slider-direction-nav, .cartogram-slider-instagramdirection-nav, .cartogram-slider-playersdirection-nav {
 	*height: 0;
 	width:100%;
 	list-style:none;
@@ -184,10 +185,40 @@ html[xmlns] .slides {display: block;}
 			}
 			&:hover {
 				background:none;
+
 			}
 		}
 	}
 }
+
+.cartogram-slider-playersdirection-nav {
+	li {
+		&:before,  &:after {
+			display:none;
+		}
+		a {
+			background:none;
+			border:none;
+			color:$navy;
+			z-index:11;
+			&.cartogram-slider-playersprev {
+				left:0px;
+				top:100%;
+				margin-top:0px;
+			}
+			&.cartogram-slider-playersnext {
+				right:0px;
+				top:100%;
+				margin-top:0px;
+			}
+			&:hover {
+				background:none;
+				color:$red;
+			}
+		}
+	}
+}
+
 
 .slide-row {
 	height:1000px;
