@@ -35,6 +35,13 @@
 	    	"std" => "",
 	    	"title" => __('Players contact info.','cartogram'),
 	    	"description" => __('Enter email. ','cartogram')
+	    ),
+	    "icon" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."icon",
+	    	"std" => "",
+	    	"title" => __('Player Icon.','cartogram'),
+	    	"description" => __('Enter icon name. ','cartogram')
 	    )
 	);
 	$beers_options = array(
