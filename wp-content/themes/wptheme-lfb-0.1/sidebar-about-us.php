@@ -11,12 +11,12 @@ $players = new WP_Query( array( "post_type" => "players") );
 							$icon = get_post_meta( $post->ID, '_cartogram_icon_value', TRUE );?>
 
 					<li class="card-players wrap">
-						<div class="flip-container hover" ontouchstart="this.classList.toggle('hover');">
+						<div class="flip-container" >
+							<a class="flip" href="javascript:void();"><i class="icon-flip-right"></i></a>
 							<span class="corner-one"></span>
 							<span class="corner-two "></span>
 							<span class="corner-three"></span>
 							<span class="corner-four "></span>
-							<a class="flip icon-flip-right" href="javascript:void();"> </a>
 							<div class="flipper">
 								<div class="front">
 								<?php if (has_post_thumbnail()) { 
@@ -24,7 +24,7 @@ $players = new WP_Query( array( "post_type" => "players") );
 										} else {
 											echo '<div class="placeholder-players"></div>';
 									} ?>
-									<a class="name large expand button" href="mailto:<?php echo $email ?>">Contact <?php the_title() ?></a>
+									<a class="name large expand white button" href="mailto:<?php echo $email ?>">Contact <?php the_title() ?></a>
 									
 								</div>
 								<div class="back">
