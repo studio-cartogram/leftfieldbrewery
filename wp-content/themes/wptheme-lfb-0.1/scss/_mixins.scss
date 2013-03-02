@@ -38,26 +38,26 @@
   z-index:10;
   @include rotate(45deg);
   @if $location == top-right {
-    top:-30px;
-    right:-30px;
+    top:0px;
+    right:0px;
     left:auto;
     border-left:30px solid $navy;
     border-right-color:transparent;
     @include rotate(-45deg);
   } @else if $location == top-left {
-    left:-5px;
-    top:-19px;
+    left: 25px;
+    top: 11px;
   } @else if $location == bottom-right {
-    bottom:-30px;
+    bottom:0px;
     top:auto;
-    right:-30px;
+    right:0px;
     left:auto;
     border-left:30px solid $navy;
     border-right-color:transparent;
   } @else if $location == bottom-left {
     top:auto;
-    left:-5px;
-    bottom:-19px;
+    left:25px;
+    bottom:11px;
     @include rotate(-45deg);
   }
 }

@@ -17,15 +17,18 @@
 .flexslider a:focus, 
 .cartogram-slider-players-container a:active,
 .cartogram-slider-players a:active,
-  {outline: none;}
+.cartogram-slider-instagramviewport a:active,
+.cartogram-slider-instagramviewport a:fcus,  {
+	outline: none;}
 .slides,
 .cartogram-slider-control-nav,
-.cartogram-slider-direction-nav {margin: 0; padding: 0; list-style: none;} 
+.cartogram-slider-direction-nav,
+.slides-instagram{margin: 0; padding: 0; list-style: none;} 
 
 /* FlexSlider Necessary Styles
 *********************************/ 
-.flexslider, .flexslider-players {margin: 0; padding: 0;}
-.flexslider .slides > li, .cartogram-slider-players .slides-players > li {position:relative;display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider, .flexslider-players, .cartogram-slider-instagram {margin: 0; padding: 0;}
+.flexslider .slides > li, .cartogram-slider-players .slides-players > li, .cartogram-slider-instgram .slides-instagram > li {position:relative;display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img, .cartogram-slider-players .slides-players img {width: 100%; display: block;}
 .cartogram-slider-pauseplay span {text-transform: capitalize;}
 
@@ -42,7 +45,7 @@ html[xmlns] .slides {display: block;}
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider, .cartogram-slider-players {margin: 0 0 80px;  position: relative; zoom: 1;}
+.flexslider, .cartogram-slider-players {margin: 0 0 0px;  position: relative; zoom: 1;}
 .cartogram-slider-viewport, .cartogram-slider-players-viewport {overflow:visible !important; max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
 .loading .cartogram-slider-viewport {max-height: 300px;}
 .flexslider .slides, .cartogram-slider-players .slides-players{zoom: 1;}
@@ -110,9 +113,10 @@ html[xmlns] .slides {display: block;}
 }
 
 /* Direction Nav */
-.cartogram-slider-direction-nav {
+.cartogram-slider-direction-nav, .cartogram-slider-instagramdirection-nav {
 	*height: 0;
 	width:100%;
+	list-style:none;
 	li:nth-child(1) {
 		&:after, &:before {
 			left:auto;
@@ -155,7 +159,31 @@ html[xmlns] .slides {display: block;}
 			}
 			&.cartogram-slider-prev  {
 				left:-70px;
+			}
+		}
+	}
+}
 
+.cartogram-slider-instagramdirection-nav {
+	li {
+		&:before,  &:after {
+			display:none;
+		}
+		a {
+			background:none;
+			border:none;
+			&.cartogram-slider-instagramprev {
+				left:40px;
+				top:50%;
+				margin-top:-20px;
+			}
+			&.cartogram-slider-instagramnext {
+				right:40px;
+				top:50%;
+				margin-top:-20px;
+			}
+			&:hover {
+				background:none;
 			}
 		}
 	}

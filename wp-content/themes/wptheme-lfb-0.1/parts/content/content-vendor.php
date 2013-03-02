@@ -10,7 +10,7 @@
 <?php $mapurl = get_post_meta($post->ID, '_cartogram_map_value', true); ?>
 <?php $address = get_post_meta($post->ID, '_cartogram_address_value', true); ?>
 <a class="row collapse flushed-right block-level" id="post-<?php the_ID(); ?>" <?php post_class(); ?> href="<?php echo $mapurl; ?>" title="<?php get_the_title(); ?>" rel="bookmark">
-	<div class="columns two icon-wrap text-center">
+	<div class="columns two icon-wrap mobile-one text-center">
 		<i class="icon"></i>
 	</div>	
 	<div class="columns format-text eight rule-right rule-left">

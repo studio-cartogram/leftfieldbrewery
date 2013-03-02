@@ -135,6 +135,8 @@
 
 .rule-outside-right-white { @include rule(right, true) }
 
+.rule-inside-right-white { @include rule(right, true, $white, true) }
+
 
 .double-bordered { @include double-bordered() }
 

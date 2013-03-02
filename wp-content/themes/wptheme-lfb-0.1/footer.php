@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="columns three mobile-two rule-right-white">
+		<div class="columns three mobile-two rule-inside-right-white">
 			<h3><a class="icon-twitter icon-with-space" href="">Chatter</a></h3>
 			<div id='twitter'></div>
 		</div>

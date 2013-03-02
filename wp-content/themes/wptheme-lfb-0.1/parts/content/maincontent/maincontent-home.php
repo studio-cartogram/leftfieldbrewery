@@ -1,9 +1,4 @@
-
-<div class="row bg-cream ">
-	<div class="columns twelve double-bordered-inside">
-		INstagram goes here:
-	</div>
-</div>
+<?php get_template_part('parts/slideshows/slideshow'); ?>
 <div class="row">
 	<div class="columns seven rule-right">
 		<div class="row">
@@ -15,7 +10,6 @@
 			<div class="columns twelve">
 				<?php
 				global $myExcerptLength;
-				$myExcerptLength = 20;
 				$query = new WP_Query('showposts=1');
 				while ($query->have_posts()): $query->the_post();?>
 					<div class="row border-top border-bottom ">
@@ -27,11 +21,10 @@
 						<div class="columns format-text twelve rule-right bg-cream">
 							<h5><a href="the_permalink() ?>"><?php the_title(); ?></a></h5>
 							<?php the_excerpt(); ?>
-							<?php more_link(); ?>
+							<?php  more_link(); ?>
 						</div>
 					</div>		
 				<?php endwhile;
-				$myExcerptLength = 0;
 				?>
 			</div>
 		</div>
@@ -53,9 +46,10 @@
 					}
 				endwhile;
 				?>
-			<div class="columns twelve mvp text-center bg-blue" style="background-image: url('<?php echo $image[0]; ?>')">
-					<h2><?php the_title(); ?></h2>
-					<p><a href="<?php echo $permalink; ?>">Learn More</a></p>
+			<div class="columns twelve mvp space-inner-bottom text-center border-top bg-blue" style="background-image: url('<?php echo $image[0]; ?>')">
+					<h2 class="beer-name beer-block"><?php the_title(); ?></h2>
+					<h3 class="beer-tagline">Beer Tagline</h3>
+					<?php more_link() ?>
 			</div>
 		</div>
 	</div>

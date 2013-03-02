@@ -95,12 +95,13 @@ Flexslider
 	    prevText: "<i class='icon-arrow-left'></i>",
 	    nextText: "<i class='icon-arrow-right'></i>",
 	    directionNav: true,
-	    controlNav: true,
+	    controlNav: false,
 	    slideshow: false,
 	    pauseOnHover: true,
 	    slideshowSpeed: 5000,
 	    animationLoop: true,
 	    keyboard: false,
+	    smoothHeight: true,
 	    after: function (slider) {	    	
 	    	// $(".flexslider").animate({opacity: 1},3000);	    	currentSliderIndex = slider.currentSlide;
 	    	console.log("The slider is currently on: " + currentSliderIndex);
@@ -360,6 +361,24 @@ Flexslider
 	 	}
 
 	 	switch(request) {
+	 		case "home":
+	 			//Maybe may direct calls to separate functions and use this 
+	 			//as a routing function only depending on how
+	 			//large it gets.
+ 				$('.flexslider-instagram').flexslider({
+				    selector: ".slides-instagram > li",
+				    animation: "slide",
+				    namespace: "cartogram-slider-instagram",
+				    prevText: "<i class='icon-arrow-left'></i>",
+	    			nextText: "<i class='icon-arrow-right'></i>",
+				    directionNav: true,
+				    controlNav: false,
+				    slideshow: false,
+				    pauseOnHover: true,
+				    slideshowSpeed: 5000,
+				    animationLoop: true,
+				    keyboard: false
+				});
 	 		case "about-us":
 	 			//Maybe may direct calls to separate functions and use this 
 	 			//as a routing function only depending on how

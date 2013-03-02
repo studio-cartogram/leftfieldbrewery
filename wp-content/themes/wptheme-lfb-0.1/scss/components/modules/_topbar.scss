@@ -1,22 +1,27 @@
+
 .top-bar ul > li.name a  {
   line-height:$topBarHeightMobile;
+
 }
+
+.top-bar > ul .name h1 a {
+  font-size:200px !important;
+}
+
 
 .top-bar { 
   position: relative;
   z-index: 10;
-  /* topbar global <ul> styles */
-  ul { 
-    /* Main Navigation links style */
-   
-  }
   ul#global {
     width:67.2%;
     padding-left:5px;
      &>li { 
       width:16.66666%;
       
-      &.name a {padding:0 15px;line-height:95px;}
+      &.name a {
+        padding:0 15px;line-height:95px;
+        font-size:80px !important;
+      }
      
       a:not(.button) { 
         text-transform:uppercase;
@@ -84,3 +89,5 @@
     }
   }
 }
+
+

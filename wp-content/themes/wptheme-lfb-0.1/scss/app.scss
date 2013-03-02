@@ -63,6 +63,7 @@
 @import "parts/social";
 @import "parts/asides";
 @import "parts/gravity-forms";
+@import "parts/instagram";
 
 
 
@@ -74,17 +75,17 @@
 @import "vendor/flexslider";
 @import "vendor/twitter";
 
-
-
-//modules (foundation overides)
-@import "components/modules/topbar";
-@import "components/modules/buttons";
-@import "components/modules/reveal";
-
-//Bits
-
 //Shared
 @import "helpers";
 @import "homepage";
 @import "single";
 @import "screen";
+
+//modules (foundation overides)
+@import "components/modules/topbar";
+@import "components/modules/buttons";
+@import "components/modules/reveal";
+@import "components/modules/mqueries";
+@import "components/modules/mqueries-overrides";
+
+

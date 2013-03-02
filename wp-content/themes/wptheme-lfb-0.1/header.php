@@ -3,23 +3,25 @@
     <div class="columns bg-main twelve"></div>
   </div>
 </section>
-<section class="container">
+<section class="container" id="container-header">
 	<header class="row text-center">
 		<div class="columns four mobile-two">
 			<i class="header-text icon-toronto"></i>
 		</div>
 		<hgroup class="columns four hide-for-small">
-			<h1><a href=<?php bloginfo( 'url' ); ?>><img class="logo-svg" src="<?php bloginfo('template_directory') ?>/images/logo.svg"></a></h1>
+			<h1><a class="icon-logo" href=<?php bloginfo( 'url' ); ?>></a></h1>
 		</hgroup>
 		<div class="columns four mobile-two">
 			<i class="header-text icon-est2013"></i>
 		</div>
 	</header>
+</section>	
+<section class="container" id="container-navigation">
 	<div class="row">	
 		<div class="columns twelve">
 			<nav class="top-bar">
 				<ul class="show-for-small">
-					<li class="name"><h1><a href="#">Left Field</a></h1></li>
+					<li class="name"><h1 class="collapse-inner"><a class="icon-logo" href="#"></a></h1></li>
 					<li class="toggle-topbar"><a href="#"></a></li>
 				 </ul>
 				  <section>
