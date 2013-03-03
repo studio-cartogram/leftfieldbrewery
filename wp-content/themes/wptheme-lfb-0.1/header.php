@@ -1,14 +1,14 @@
-<section class="container bordered-main banner">
+<section class="container hide-for-small bordered-main banner">
   <div class="row ">
     <div class="columns bg-main twelve"></div>
   </div>
 </section>
-<section class="container" id="container-header">
+<section class="container hide-for-small" id="container-header">
 	<header class="row text-center">
 		<div class="columns four mobile-two text-right">
 			<h2 class="header-text">Toronto <span class="split">◆</span> Canada</h2>
 		</div>
-		<hgroup class="columns four hide-for-small">
+		<hgroup class="columns four ">
 			<h1><a class="icon-logo" href=<?php bloginfo( 'url' ); ?>></a></h1>
 		</hgroup>
 		<div class="columns four mobile-two text-left">

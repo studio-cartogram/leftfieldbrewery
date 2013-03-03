@@ -1,32 +1,32 @@
 @charset "UTF-8";
 /* line 51, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
-.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer {
+.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer, .post-text .gform_body .gform_fields li .ginput_complex span, .post-text .gform_body .gform_fields li .ginput_complex span:first-child {
   float: left;
 }
 
 /* line 55, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
-.footer .gform_wrapper, .footer .gform_body .gform_fields li {
+.footer .gform_wrapper, .footer .gform_body .gform_fields li, .post-text .gform_body .gform_fields li {
   *zoom: 1;
 }
 /* line 4, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
-.footer .gform_wrapper:before, .footer .gform_body .gform_fields li:before, .footer .gform_wrapper:after, .footer .gform_body .gform_fields li:after {
+.footer .gform_wrapper:before, .footer .gform_body .gform_fields li:before, .post-text .gform_body .gform_fields li:before, .footer .gform_wrapper:after, .footer .gform_body .gform_fields li:after, .post-text .gform_body .gform_fields li:after {
   content: "";
   display: table;
 }
 /* line 5, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
-.footer .gform_wrapper:after, .footer .gform_body .gform_fields li:after {
+.footer .gform_wrapper:after, .footer .gform_body .gform_fields li:after, .post-text .gform_body .gform_fields li:after {
   clear: both;
 }
 
 /* line 59, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
-.footer .gform_wrapper, .footer .gform_body .gform_fields li {
+.footer .gform_wrapper, .footer .gform_body .gform_fields li, .post-text .gform_body .gform_fields li {
   width: auto;
   max-width: none;
   min-width: 0;
 }
 
 /* line 62, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
-.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer {
+.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer, .post-text .gform_body .gform_fields li .ginput_complex span, .post-text .gform_body .gform_fields li .ginput_complex span:first-child {
   position: relative;
   min-height: 1px;
   padding: 0 15px;
@@ -157,7 +157,7 @@ figure {
 
 /* Base Type Styles Using Modular Scale ---------------------- */
 /* line 3, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
-body, div, dl, dt, dd, ul, ol, li, h1, .post-text .gform_heading h3.gform_title, h2, h3, h4, h5, h6, pre, form, p, .post-text .gform_heading span.gform_description, blockquote, th, td {
+body, div, dl, dt, dd, ul, ol, li, h1, .post-text .gform_heading h3.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, h2, h3, .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_3 label, h4, h5, h6, pre, form, p, .post-text .gform_heading span.gform_description, blockquote, th, td {
   margin: 0;
   padding: 0;
   font-size: 12px;
@@ -187,7 +187,7 @@ aside p, aside .post-text .gform_heading span.gform_description, .post-text .gfo
 }
 
 /* line 15, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
-h1, .post-text .gform_heading h3.gform_title, h2, h3, h4, h5, h6 {
+h1, .post-text .gform_heading h3.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, h2, h3, .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_3 label, h4, h5, h6 {
   font-family: "kulturista-web", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #0c223f;
@@ -197,14 +197,14 @@ h1, .post-text .gform_heading h3.gform_title, h2, h3, h4, h5, h6 {
   margin-top: 12px;
 }
 /* line 23, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
-h1 small, .post-text .gform_heading h3.gform_title small, h2 small, h3 small, h4 small, h5 small, h6 small {
+h1 small, .post-text .gform_heading h3.gform_title small, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child small, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child small, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title small, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title small, h2 small, h3 small, .post-text .gform_body .gform_fields li#field_2_1 label:first-child small, .post-text .gform_body .gform_fields li#field_2_3 label small, h4 small, h5 small, h6 small {
   font-size: 60%;
   color: #2467c0;
   line-height: 0;
 }
 
 /* line 26, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
-h1, .post-text .gform_heading h3.gform_title {
+h1, .post-text .gform_heading h3.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title {
   font-size: 44px;
 }
 
@@ -214,7 +214,7 @@ h2 {
 }
 
 /* line 28, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
-h3 {
+h3, .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_3 label {
   font-size: 27px;
 }
 
@@ -444,13 +444,13 @@ abbr {
 }
 
   /* line 97, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
-  p, .post-text .gform_heading span.gform_description, h2, h3 {
+  p, .post-text .gform_heading span.gform_description, h2, h3, .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_3 label {
     orphans: 3;
     widows: 3;
   }
 
   /* line 98, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_typography.scss */
-  h2, h3 {
+  h2, h3, .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_3 label {
     page-break-after: avoid;
   }
 
@@ -485,7 +485,7 @@ form {
   margin: 0;
 }
 /* line 13, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
-.row form .row.collapse .column, #av-overlay #av_verify_form p form .row.collapse .column, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form .row.collapse .column, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form .row.collapse .column, .row form #av-overlay #av_verify_form p.collapse .column, #av-overlay #av_verify_form .row form p.collapse .column, #av-overlay #av_verify_form p form p.collapse .column, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form p.collapse .column, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form p.collapse .column, .row form #av-overlay #av_verify_form .post-text .gform_heading span.collapse.gform_description .column, #av-overlay #av_verify_form .post-text .gform_heading .row form span.collapse.gform_description .column, #av-overlay #av_verify_form p form .post-text .gform_heading span.collapse.gform_description .column, #av-overlay #av_verify_form .post-text .gform_heading p form span.collapse.gform_description .column, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form span.collapse.gform_description .column, .row form .post-text .gform_heading #av-overlay #av_verify_form span.collapse.gform_description .column, .post-text .gform_heading #av-overlay #av_verify_form .row form span.collapse.gform_description .column, .post-text .gform_heading #av-overlay #av_verify_form p form span.collapse.gform_description .column, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form span.collapse.gform_description .column, .row form .row.collapse .columns, #av-overlay #av_verify_form p form .row.collapse .columns, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form .row.collapse .columns, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form .row.collapse .columns, .row form #av-overlay #av_verify_form p.collapse .columns, #av-overlay #av_verify_form .row form p.collapse .columns, #av-overlay #av_verify_form p form p.collapse .columns, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form p.collapse .columns, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form p.collapse .columns, .row form #av-overlay #av_verify_form .post-text .gform_heading span.collapse.gform_description .columns, #av-overlay #av_verify_form .post-text .gform_heading .row form span.collapse.gform_description .columns, #av-overlay #av_verify_form p form .post-text .gform_heading span.collapse.gform_description .columns, #av-overlay #av_verify_form .post-text .gform_heading p form span.collapse.gform_description .columns, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form span.collapse.gform_description .columns, .row form .post-text .gform_heading #av-overlay #av_verify_form span.collapse.gform_description .columns, .post-text .gform_heading #av-overlay #av_verify_form .row form span.collapse.gform_description .columns, .post-text .gform_heading #av-overlay #av_verify_form p form span.collapse.gform_description .columns, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form span.collapse.gform_description .columns {
+.row form .row.collapse .column, #av-overlay #av_verify_form p form .row.collapse .column, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form .row.collapse .column, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form .row.collapse .column, .row form #av-overlay #av_verify_form p.collapse .column, #av-overlay #av_verify_form .row form p.collapse .column, #av-overlay #av_verify_form p form p.collapse .column, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form p.collapse .column, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form p.collapse .column, .row form #av-overlay #av_verify_form .post-text .gform_heading span.collapse.gform_description .column, #av-overlay #av_verify_form .post-text .gform_heading .row form span.collapse.gform_description .column, #av-overlay #av_verify_form p form .post-text .gform_heading span.collapse.gform_description .column, #av-overlay #av_verify_form .post-text .gform_heading p form span.collapse.gform_description .column, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form span.collapse.gform_description .column, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form .post-text .gform_heading span.collapse.gform_description .column, .post-text .gform_heading #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form span.collapse.gform_description .column, .row form .post-text .gform_heading #av-overlay #av_verify_form span.collapse.gform_description .column, .post-text .gform_heading #av-overlay #av_verify_form .row form span.collapse.gform_description .column, .post-text .gform_heading #av-overlay #av_verify_form p form span.collapse.gform_description .column, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form #av-overlay #av_verify_form span.collapse.gform_description .column, #av-overlay #av_verify_form .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form span.collapse.gform_description .column, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form span.collapse.gform_description .column, .row form .row.collapse .columns, #av-overlay #av_verify_form p form .row.collapse .columns, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form .row.collapse .columns, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form .row.collapse .columns, .row form #av-overlay #av_verify_form p.collapse .columns, #av-overlay #av_verify_form .row form p.collapse .columns, #av-overlay #av_verify_form p form p.collapse .columns, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form p.collapse .columns, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form p.collapse .columns, .row form #av-overlay #av_verify_form .post-text .gform_heading span.collapse.gform_description .columns, #av-overlay #av_verify_form .post-text .gform_heading .row form span.collapse.gform_description .columns, #av-overlay #av_verify_form p form .post-text .gform_heading span.collapse.gform_description .columns, #av-overlay #av_verify_form .post-text .gform_heading p form span.collapse.gform_description .columns, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form span.collapse.gform_description .columns, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form .post-text .gform_heading span.collapse.gform_description .columns, .post-text .gform_heading #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form span.collapse.gform_description .columns, .row form .post-text .gform_heading #av-overlay #av_verify_form span.collapse.gform_description .columns, .post-text .gform_heading #av-overlay #av_verify_form .row form span.collapse.gform_description .columns, .post-text .gform_heading #av-overlay #av_verify_form p form span.collapse.gform_description .columns, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description form #av-overlay #av_verify_form span.collapse.gform_description .columns, #av-overlay #av_verify_form .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form span.collapse.gform_description .columns, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description form span.collapse.gform_description .columns {
   padding: 0;
 }
 
@@ -2663,12 +2663,12 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   margin: 0 auto;
 }
 /* line 33, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
-.top-bar > ul .name h1, .top-bar > ul .name .post-text .gform_heading h3.gform_title, .post-text .gform_heading .top-bar > ul .name h3.gform_title {
+.top-bar > ul .name h1, .top-bar > ul .name .post-text .gform_heading h3.gform_title, .post-text .gform_heading .top-bar > ul .name h3.gform_title, .top-bar > ul .name .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .top-bar > ul .name label.gform_title:first-child, .top-bar > ul .name .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .top-bar > ul .name label.gform_title:first-child, .top-bar > ul .name .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .top-bar > ul .name label.gform_title, .top-bar > ul .name .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .top-bar > ul .name label.gform_title {
   line-height: 38px;
   margin: 0;
 }
 /* line 34, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
-.top-bar > ul .name h1 a, .top-bar > ul .name .post-text .gform_heading h3.gform_title a, .post-text .gform_heading .top-bar > ul .name h3.gform_title a {
+.top-bar > ul .name h1 a, .top-bar > ul .name .post-text .gform_heading h3.gform_title a, .post-text .gform_heading .top-bar > ul .name h3.gform_title a, .top-bar > ul .name .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child a, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .top-bar > ul .name label.gform_title:first-child a, .top-bar > ul .name .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child a, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .top-bar > ul .name label.gform_title:first-child a, .top-bar > ul .name .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title a, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .top-bar > ul .name label.gform_title a, .top-bar > ul .name .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title a, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .top-bar > ul .name label.gform_title a {
   font-weight: bold;
   padding: 0 19px;
   font-size: 20px !important;
@@ -3033,11 +3033,11 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
     background: black;
   }
   /* line 157, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
-  .top-bar ul li.name h1, .top-bar ul li.name .post-text .gform_heading h3.gform_title, .post-text .gform_heading .top-bar ul li.name h3.gform_title {
+  .top-bar ul li.name h1, .top-bar ul li.name .post-text .gform_heading h3.gform_title, .post-text .gform_heading .top-bar ul li.name h3.gform_title, .top-bar ul li.name .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .top-bar ul li.name label.gform_title:first-child, .top-bar ul li.name .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .top-bar ul li.name label.gform_title:first-child, .top-bar ul li.name .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .top-bar ul li.name label.gform_title, .top-bar ul li.name .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .top-bar ul li.name label.gform_title {
     line-height: 1;
   }
   /* line 158, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
-  .top-bar ul li.name h1 a, .top-bar ul li.name .post-text .gform_heading h3.gform_title a, .post-text .gform_heading .top-bar ul li.name h3.gform_title a {
+  .top-bar ul li.name h1 a, .top-bar ul li.name .post-text .gform_heading h3.gform_title a, .post-text .gform_heading .top-bar ul li.name h3.gform_title a, .top-bar ul li.name .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child a, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .top-bar ul li.name label.gform_title:first-child a, .top-bar ul li.name .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child a, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .top-bar ul li.name label.gform_title:first-child a, .top-bar ul li.name .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title a, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .top-bar ul li.name label.gform_title a, .top-bar ul li.name .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title a, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .top-bar ul li.name label.gform_title a {
     padding-left: 19px;
   }
   /* line 163, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
@@ -4516,7 +4516,7 @@ ul.accordion > li .title {
   transition: 0.15s background linear;
 }
 /* line 236, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
-ul.accordion > li .title h1, ul.accordion > li .title .post-text .gform_heading h3.gform_title, .post-text .gform_heading ul.accordion > li .title h3.gform_title, ul.accordion > li .title h2, ul.accordion > li .title h3, ul.accordion > li .title h4, ul.accordion > li .title h5 {
+ul.accordion > li .title h1, ul.accordion > li .title .post-text .gform_heading h3.gform_title, .post-text .gform_heading ul.accordion > li .title h3.gform_title, ul.accordion > li .title .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 ul.accordion > li .title label.gform_title:first-child, ul.accordion > li .title .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading ul.accordion > li .title label.gform_title:first-child, ul.accordion > li .title .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 ul.accordion > li .title label.gform_title, ul.accordion > li .title .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading ul.accordion > li .title label.gform_title, ul.accordion > li .title h2, ul.accordion > li .title h3, ul.accordion > li .title .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 ul.accordion > li .title label:first-child, ul.accordion > li .title .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 ul.accordion > li .title label, ul.accordion > li .title h4, ul.accordion > li .title h5 {
   margin: 0;
 }
 /* line 237, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
@@ -5191,19 +5191,19 @@ p a, .post-text .gform_heading span.gform_description a {
 }
 
 /* line 2, ../scss/base/_typography.scss */
-h1.collapse, .post-text .gform_heading h3.collapse.gform_title, h2.collapse, h3.collapse, h4.collapse, h5.collapse, h6.collapse, p.collapse, .post-text .gform_heading span.collapse.gform_description, span.collapse, a.collapse {
+h1.collapse, .post-text .gform_heading h3.collapse.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.collapse.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.collapse.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.collapse.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.collapse.gform_title, h2.collapse, h3.collapse, .post-text .gform_body .gform_fields li#field_2_1 label.collapse:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.collapse, h4.collapse, h5.collapse, h6.collapse, p.collapse, .post-text .gform_heading span.collapse.gform_description, span.collapse, a.collapse {
   margin: 0 !important;
 }
 /* line 5, ../scss/base/_typography.scss */
-h1.collapse-inner, .post-text .gform_heading h3.collapse-inner.gform_title, h2.collapse-inner, h3.collapse-inner, h4.collapse-inner, h5.collapse-inner, h6.collapse-inner, p.collapse-inner, .post-text .gform_heading span.collapse-inner.gform_description, span.collapse-inner, a.collapse-inner {
+h1.collapse-inner, .post-text .gform_heading h3.collapse-inner.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.collapse-inner.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.collapse-inner.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.collapse-inner.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.collapse-inner.gform_title, h2.collapse-inner, h3.collapse-inner, .post-text .gform_body .gform_fields li#field_2_1 label.collapse-inner:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.collapse-inner, h4.collapse-inner, h5.collapse-inner, h6.collapse-inner, p.collapse-inner, .post-text .gform_heading span.collapse-inner.gform_description, span.collapse-inner, a.collapse-inner {
   padding: 0;
 }
 /* line 8, ../scss/base/_typography.scss */
-h1.light, .post-text .gform_heading h3.light.gform_title, h2.light, h3.light, h4.light, h5.light, h6.light, p.light, .post-text .gform_heading span.light.gform_description, span.light, a.light {
+h1.light, .post-text .gform_heading h3.light.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.light.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.light.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.light.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.light.gform_title, h2.light, h3.light, .post-text .gform_body .gform_fields li#field_2_1 label.light:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.light, h4.light, h5.light, h6.light, p.light, .post-text .gform_heading span.light.gform_description, span.light, a.light {
   color: white;
 }
 /* line 11, ../scss/base/_typography.scss */
-h1.text-small, .post-text .gform_heading h3.text-small.gform_title, h2.text-small, h3.text-small, h4.text-small, h5.text-small, h6.text-small, p.text-small, .post-text .gform_heading span.text-small.gform_description, span.text-small, a.text-small {
+h1.text-small, .post-text .gform_heading h3.text-small.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.text-small.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.text-small.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.text-small.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.text-small.gform_title, h2.text-small, h3.text-small, .post-text .gform_body .gform_fields li#field_2_1 label.text-small:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.text-small, h4.text-small, h5.text-small, h6.text-small, p.text-small, .post-text .gform_heading span.text-small.gform_description, span.text-small, a.text-small {
   font-size: 11px;
   font-size: 1.1rem;
 }
@@ -5215,7 +5215,7 @@ p.lead, .post-text .gform_heading span.lead.gform_description {
 }
 
 /* line 23, ../scss/base/_typography.scss */
-h1, .post-text .gform_heading h3.gform_title {
+h1, .post-text .gform_heading h3.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title {
   font-size: 30px;
   font-size: 3rem;
   letter-spacing: 0.07em;
@@ -5224,7 +5224,7 @@ h1, .post-text .gform_heading h3.gform_title {
   padding: 40px 0 10px 0;
 }
 /* line 29, ../scss/base/_typography.scss */
-h1.post-title, .post-text .gform_heading h3.post-title.gform_title {
+h1.post-title, .post-text .gform_heading h3.post-title.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.post-title.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.post-title.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.post-title.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.post-title.gform_title {
   padding-top: 20px;
 }
 
@@ -5260,7 +5260,7 @@ h2.beer-name.beer-block:before {
 }
 
 /* line 59, ../scss/base/_typography.scss */
-h3 {
+h3, .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_3 label {
   font-size: 12px;
   font-size: 1.2rem;
   letter-spacing: 0.03em;
@@ -5269,11 +5269,11 @@ h3 {
   text-transform: uppercase;
 }
 /* line 65, ../scss/base/_typography.scss */
-h3.bg-navy, h3.list-categories, .banner > .row > h3.columns, #av-overlay #av_verify_form .banner > p > h3.columns, #av-overlay #av_verify_form .post-text .gform_heading .banner > span.gform_description > h3.columns, .post-text .gform_heading #av-overlay #av_verify_form .banner > span.gform_description > h3.columns {
+h3.bg-navy, h3.list-categories, .post-text .gform_body .gform_fields li#field_2_1 label.list-categories:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.list-categories, .post-text .gform_body .gform_fields li#field_2_1 label.bg-navy:first-child, .post-text .gform_body .gform_fields li#field_2_1 .banner > .row > label.columns:first-child, .post-text .gform_body .gform_fields li#field_2_1 #av-overlay #av_verify_form .banner > p > label.columns:first-child, #av-overlay #av_verify_form .post-text .gform_body .gform_fields li#field_2_1 .banner > p > label.columns:first-child, #av-overlay #av_verify_form .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .banner > span.gform_description > label.columns:first-child, #av-overlay #av_verify_form .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .banner > span.gform_description > label.columns:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay #av_verify_form .banner > span.gform_description > label.columns:first-child, .post-text .gform_heading #av-overlay #av_verify_form .gform_body .gform_fields li#field_2_1 .banner > span.gform_description > label.columns:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.bg-navy, .post-text .gform_body .gform_fields li#field_2_3 .banner > .row > label.columns, .post-text .gform_body .gform_fields li#field_2_3 #av-overlay #av_verify_form .banner > p > label.columns, #av-overlay #av_verify_form .post-text .gform_body .gform_fields li#field_2_3 .banner > p > label.columns, #av-overlay #av_verify_form .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .banner > span.gform_description > label.columns, #av-overlay #av_verify_form .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .banner > span.gform_description > label.columns, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay #av_verify_form .banner > span.gform_description > label.columns, .post-text .gform_heading #av-overlay #av_verify_form .gform_body .gform_fields li#field_2_3 .banner > span.gform_description > label.columns, .banner > .row > h3.columns, #av-overlay #av_verify_form .banner > p > h3.columns, #av-overlay #av_verify_form .post-text .gform_heading .banner > span.gform_description > h3.columns, .post-text .gform_heading #av-overlay #av_verify_form .banner > span.gform_description > h3.columns {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 /* line 68, ../scss/base/_typography.scss */
-h3.beer-tagline {
+h3.beer-tagline, .post-text .gform_body .gform_fields li#field_2_1 label.beer-tagline:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.beer-tagline {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-size: 1.4rem;
@@ -5282,7 +5282,7 @@ h3.beer-tagline {
   margin-bottom: 10px;
 }
 /* line 74, ../scss/base/_typography.scss */
-h3.beer-tagline:after {
+h3.beer-tagline:after, .post-text .gform_body .gform_fields li#field_2_1 label.beer-tagline:first-child:after, .post-text .gform_body .gform_fields li#field_2_3 label.beer-tagline:after {
   content: ' ';
   position: absolute;
   width: 10px;
@@ -5344,7 +5344,7 @@ h6 {
 }
 
 /* line 130, ../scss/base/_typography.scss */
-.format-text h1, .format-text .post-text .gform_heading h3.gform_title, .post-text .gform_heading .format-text h3.gform_title, .format-text h2, .format-text h3, .format-text h4, .format-text h5, .format-text h6, .format-text p, .format-text .post-text .gform_heading span.gform_description, .post-text .gform_heading .format-text span.gform_description {
+.format-text h1, .format-text .post-text .gform_heading h3.gform_title, .post-text .gform_heading .format-text h3.gform_title, .format-text .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .format-text label.gform_title:first-child, .format-text .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .format-text label.gform_title:first-child, .format-text .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .format-text label.gform_title, .format-text .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .format-text label.gform_title, .format-text h2, .format-text h3, .format-text .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 .format-text label:first-child, .format-text .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 .format-text label, .format-text h4, .format-text h5, .format-text h6, .format-text p, .format-text .post-text .gform_heading span.gform_description, .post-text .gform_heading .format-text span.gform_description {
   padding: 0 20px;
 }
 
@@ -5354,7 +5354,7 @@ h6 {
   background: #fefcf8;
 }
 /* line 138, ../scss/base/_typography.scss */
-.post-text h1, .post-text .gform_heading h3.gform_title, .post-text h2, .post-text p, .post-text .gform_heading span.gform_description, .post-text ul {
+.post-text h1, .post-text .gform_heading h3.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text h2, .post-text p, .post-text .gform_heading span.gform_description, .post-text ul {
   padding-left: 40px;
   padding-right: 40px;
 }
@@ -5411,11 +5411,11 @@ h6 {
   color: white;
 }
 /* line 4, ../scss/parts/_footer.scss */
-.footer h3, .footer a {
+.footer h3, .footer .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 .footer label:first-child, .footer .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 .footer label, .footer a {
   color: white;
 }
 /* line 7, ../scss/parts/_footer.scss */
-.footer h3 {
+.footer h3, .footer .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 .footer label:first-child, .footer .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 .footer label {
   padding-top: 25px;
 }
 /* line 10, ../scss/parts/_footer.scss */
@@ -5461,7 +5461,7 @@ h2.header-text .split {
 }
 
 /* line 13, ../scss/parts/_header.scss */
-h1 a.icon-logo, .post-text .gform_heading h3.gform_title a.icon-logo {
+h1 a.icon-logo, .post-text .gform_heading h3.gform_title a.icon-logo, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child a.icon-logo, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child a.icon-logo, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title a.icon-logo, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title a.icon-logo {
   font-size: 160px;
   font-size: 16rem;
 }
@@ -6135,8 +6135,160 @@ ul#social > li a:hover {
   padding: 0 60px;
   display: block;
 }
-
+/* line 101, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body {
+  padding: 0;
+}
 /* line 103, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields {
+  list-style: none;
+  margin: 50px 0 0 0;
+  padding: 0;
+}
+/* line 107, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields label {
+  display: none;
+}
+/* line 110, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields input, .post-text .gform_body .gform_fields textarea {
+  background-color: transparent;
+  margin: 0px;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+  color: white;
+}
+/* line 118, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields input:active, .post-text .gform_body .gform_fields input:focus, .post-text .gform_body .gform_fields textarea:active, .post-text .gform_body .gform_fields textarea:focus {
+  background-color: white;
+  color: #0c223f;
+  border-color: white;
+}
+/* line 125, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li {
+  margin: 0;
+}
+/* line 127, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li .ginput_complex {
+  *zoom: 1;
+}
+/* line 4, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
+.post-text .gform_body .gform_fields li .ginput_complex:before, .post-text .gform_body .gform_fields li .ginput_complex:after {
+  content: "";
+  display: table;
+}
+/* line 5, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
+.post-text .gform_body .gform_fields li .ginput_complex:after {
+  clear: both;
+}
+/* line 130, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li .ginput_complex span {
+  position: relative;
+  width: 66.66667%;
+  padding: 0;
+}
+/* line 3, ../scss/_mixins.scss */
+.post-text .gform_body .gform_fields li .ginput_complex span:before, .post-text .gform_body .gform_fields li .ginput_complex span:after {
+  height: 1px;
+  background: #0c223f;
+  content: ' ';
+  position: absolute;
+  right: 0px;
+  left: 0;
+  top: -3px;
+}
+/* line 24, ../scss/_mixins.scss */
+.post-text .gform_body .gform_fields li .ginput_complex span:after {
+  top: 0px;
+}
+/* line 134, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li .ginput_complex span:first-child {
+  width: 33.33333%;
+  padding: 0;
+}
+/* line 141, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li .ginput_complex span label {
+  display: none;
+}
+/* line 148, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li#field_2_1 label:first-child {
+  display: block;
+  text-align: center;
+  position: relative;
+}
+/* line 3, ../scss/_mixins.scss */
+.post-text .gform_body .gform_fields li#field_2_1 label:first-child:before, .post-text .gform_body .gform_fields li#field_2_1 label:first-child:after {
+  height: 1px;
+  background: #0c223f;
+  content: ' ';
+  position: absolute;
+  right: 0px;
+  left: 0;
+  top: -3px;
+}
+/* line 24, ../scss/_mixins.scss */
+.post-text .gform_body .gform_fields li#field_2_1 label:first-child:after {
+  top: 0px;
+}
+/* line 156, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li#field_2_3 label {
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+/* line 163, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li#field_2_3 .ginput_container {
+  position: relative;
+}
+/* line 3, ../scss/_mixins.scss */
+.post-text .gform_body .gform_fields li#field_2_3 .ginput_container:before, .post-text .gform_body .gform_fields li#field_2_3 .ginput_container:after {
+  height: 1px;
+  background: #0c223f;
+  content: ' ';
+  position: absolute;
+  right: 0px;
+  left: 0;
+  top: -3px;
+}
+/* line 24, ../scss/_mixins.scss */
+.post-text .gform_body .gform_fields li#field_2_3 .ginput_container:after {
+  top: 0px;
+}
+/* line 167, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li .gfield_checkbox {
+  list-style: none;
+  margin: 2px 0 0 0;
+  padding: 0;
+}
+/* line 172, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li .gfield_checkbox input {
+  float: left;
+  height: 50px;
+  width: 50px;
+}
+/* line 177, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li .gfield_checkbox label {
+  display: block;
+  float: left;
+  padding: 15px;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+/* line 187, ../scss/parts/_gravity-forms.scss */
+.post-text .button, .post-text #av-overlay .submit input[type=submit], #av-overlay .submit .post-text input[type=submit] {
+  padding: 25px 0;
+  left: -1px;
+  border-left: none;
+  border-right: none;
+}
+
+/* line 195, ../scss/parts/_gravity-forms.scss */
 .gforms_confirmation_message {
   padding: 20px;
 }
@@ -6205,7 +6357,7 @@ ul#social > li a:hover {
   display: block;
 }
 /* line 17, ../scss/vendor/_av-styles.scss */
-#av-overlay p, #av-overlay .post-text .gform_heading span.gform_description, .post-text .gform_heading #av-overlay span.gform_description, #av-overlay h1, #av-overlay .post-text .gform_heading h3.gform_title, .post-text .gform_heading #av-overlay h3.gform_title, #av-overlay h3, #av-overlay h4, #av-overlay h5, #av-overlay h6, #av-overlay h6, #av-overlay label {
+#av-overlay p, #av-overlay .post-text .gform_heading span.gform_description, .post-text .gform_heading #av-overlay span.gform_description, #av-overlay h1, #av-overlay .post-text .gform_heading h3.gform_title, .post-text .gform_heading #av-overlay h3.gform_title, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 #av-overlay label.gform_title:first-child, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay label.gform_title:first-child, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 #av-overlay label.gform_title, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay label.gform_title, #av-overlay h3, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 #av-overlay label:first-child, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 #av-overlay label, #av-overlay h4, #av-overlay h5, #av-overlay h6, #av-overlay h6, #av-overlay label {
   color: white;
 }
 /* line 32, ../scss/vendor/_av-styles.scss */
@@ -6835,7 +6987,7 @@ html[xmlns] .slides {
   color: white;
 }
 /* line 47, ../scss/_helpers.scss */
-.bg-maincolor h1, .bg-maincolor .post-text .gform_heading h3.gform_title, .post-text .gform_heading .bg-maincolor h3.gform_title, .bg-maincolor h2, .bg-maincolor h3, .bg-maincolor h4, .bg-maincolor h5, .bg-maincolor h6, .bg-maincolor p, .bg-maincolor .post-text .gform_heading span.gform_description, .post-text .gform_heading .bg-maincolor span.gform_description, .bg-maincolor a {
+.bg-maincolor h1, .bg-maincolor .post-text .gform_heading h3.gform_title, .post-text .gform_heading .bg-maincolor h3.gform_title, .bg-maincolor .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .bg-maincolor label.gform_title:first-child, .bg-maincolor .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .bg-maincolor label.gform_title:first-child, .bg-maincolor .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .bg-maincolor label.gform_title, .bg-maincolor .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .bg-maincolor label.gform_title, .bg-maincolor h2, .bg-maincolor h3, .bg-maincolor .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 .bg-maincolor label:first-child, .bg-maincolor .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 .bg-maincolor label, .bg-maincolor h4, .bg-maincolor h5, .bg-maincolor h6, .bg-maincolor p, .bg-maincolor .post-text .gform_heading span.gform_description, .post-text .gform_heading .bg-maincolor span.gform_description, .bg-maincolor a {
   color: white;
 }
 
@@ -6854,7 +7006,7 @@ html[xmlns] .slides {
   background: #005cb8;
 }
 /* line 55, ../scss/_helpers.scss */
-.bg-blue h1, .bg-blue .post-text .gform_heading h3.gform_title, .post-text .gform_heading .bg-blue h3.gform_title, .bg-blue h2, .bg-blue h3, .bg-blue h4, .bg-blue h5, .bg-blue h6, .bg-blue p, .bg-blue .post-text .gform_heading span.gform_description, .post-text .gform_heading .bg-blue span.gform_description, .bg-blue a {
+.bg-blue h1, .bg-blue .post-text .gform_heading h3.gform_title, .post-text .gform_heading .bg-blue h3.gform_title, .bg-blue .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .bg-blue label.gform_title:first-child, .bg-blue .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .bg-blue label.gform_title:first-child, .bg-blue .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .bg-blue label.gform_title, .bg-blue .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .bg-blue label.gform_title, .bg-blue h2, .bg-blue h3, .bg-blue .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 .bg-blue label:first-child, .bg-blue .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 .bg-blue label, .bg-blue h4, .bg-blue h5, .bg-blue h6, .bg-blue p, .bg-blue .post-text .gform_heading span.gform_description, .post-text .gform_heading .bg-blue span.gform_description, .bg-blue a {
   color: white;
 }
 
@@ -6863,7 +7015,7 @@ html[xmlns] .slides {
   background: #ff4337;
 }
 /* line 61, ../scss/_helpers.scss */
-.bg-red h1, .bg-red .post-text .gform_heading h3.gform_title, .post-text .gform_heading .bg-red h3.gform_title, .bg-red h2, .bg-red h3, .bg-red h4, .bg-red h5, .bg-red h6, .bg-red p, .bg-red .post-text .gform_heading span.gform_description, .post-text .gform_heading .bg-red span.gform_description, .bg-red a {
+.bg-red h1, .bg-red .post-text .gform_heading h3.gform_title, .post-text .gform_heading .bg-red h3.gform_title, .bg-red .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .bg-red label.gform_title:first-child, .bg-red .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .bg-red label.gform_title:first-child, .bg-red .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .bg-red label.gform_title, .bg-red .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .bg-red label.gform_title, .bg-red h2, .bg-red h3, .bg-red .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 .bg-red label:first-child, .bg-red .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 .bg-red label, .bg-red h4, .bg-red h5, .bg-red h6, .bg-red p, .bg-red .post-text .gform_heading span.gform_description, .post-text .gform_heading .bg-red span.gform_description, .bg-red a {
   color: white;
 }
 
@@ -6872,12 +7024,12 @@ html[xmlns] .slides {
   background: #009844;
 }
 /* line 67, ../scss/_helpers.scss */
-.bg-green h1, .bg-green .post-text .gform_heading h3.gform_title, .post-text .gform_heading .bg-green h3.gform_title, .bg-green h2, .bg-green h3, .bg-green h4, .bg-green h5, .bg-green h6, .bg-green p, .bg-green .post-text .gform_heading span.gform_description, .post-text .gform_heading .bg-green span.gform_description, .bg-green a {
+.bg-green h1, .bg-green .post-text .gform_heading h3.gform_title, .post-text .gform_heading .bg-green h3.gform_title, .bg-green .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .bg-green label.gform_title:first-child, .bg-green .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .bg-green label.gform_title:first-child, .bg-green .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .bg-green label.gform_title, .bg-green .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .bg-green label.gform_title, .bg-green h2, .bg-green h3, .bg-green .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 .bg-green label:first-child, .bg-green .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 .bg-green label, .bg-green h4, .bg-green h5, .bg-green h6, .bg-green p, .bg-green .post-text .gform_heading span.gform_description, .post-text .gform_heading .bg-green span.gform_description, .bg-green a {
   color: white;
 }
 
 /* line 75, ../scss/_helpers.scss */
-.border-right, .boxed {
+.border-right, .post-text .gform_body .gform_fields li .ginput_complex span:first-child input, .boxed {
   border-right: 1px solid #0c223f !important;
 }
 
@@ -6887,12 +7039,12 @@ html[xmlns] .slides {
 }
 
 /* line 81, ../scss/_helpers.scss */
-.border-bottom, .list-contact h5, .boxed {
+.border-bottom, .list-contact h5, .post-text .gform_body .gform_fields input, .post-text .gform_body .gform_fields textarea, .boxed {
   border-bottom: 1px solid #0c223f !important;
 }
 
 /* line 84, ../scss/_helpers.scss */
-.border-top, .validation_message, .boxed {
+.border-top, .validation_message, .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li .gfield_checkbox, .boxed {
   border-top: 1px solid #0c223f !important;
 }
 
@@ -7328,7 +7480,7 @@ body {
 }
 
 /* line 7, ../scss/components/modules/_topbar.scss */
-.top-bar > ul .name h1 a, .top-bar > ul .name .post-text .gform_heading h3.gform_title a, .post-text .gform_heading .top-bar > ul .name h3.gform_title a {
+.top-bar > ul .name h1 a, .top-bar > ul .name .post-text .gform_heading h3.gform_title a, .post-text .gform_heading .top-bar > ul .name h3.gform_title a, .top-bar > ul .name .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child a, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .top-bar > ul .name label.gform_title:first-child a, .top-bar > ul .name .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child a, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .top-bar > ul .name label.gform_title:first-child a, .top-bar > ul .name .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title a, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .top-bar > ul .name label.gform_title a, .top-bar > ul .name .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title a, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .top-bar > ul .name label.gform_title a {
   font-size: 45px !important;
   padding-top: 5px;
 }
@@ -9062,11 +9214,11 @@ table.hide-for-medium {
     height: 60px;
   }
   /* line 367, ../scss/components/modules/_mqueries.scss */
-  .top-bar ul > li.name h1, .top-bar ul > li.name .post-text .gform_heading h3.gform_title, .post-text .gform_heading .top-bar ul > li.name h3.gform_title {
+  .top-bar ul > li.name h1, .top-bar ul > li.name .post-text .gform_heading h3.gform_title, .post-text .gform_heading .top-bar ul > li.name h3.gform_title, .top-bar ul > li.name .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .top-bar ul > li.name label.gform_title:first-child, .top-bar ul > li.name .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .top-bar ul > li.name label.gform_title:first-child, .top-bar ul > li.name .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .top-bar ul > li.name label.gform_title, .top-bar ul > li.name .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .top-bar ul > li.name label.gform_title {
     line-height: 1;
   }
   /* line 368, ../scss/components/modules/_mqueries.scss */
-  .top-bar ul > li.name h1 a, .top-bar ul > li.name .post-text .gform_heading h3.gform_title a, .post-text .gform_heading .top-bar ul > li.name h3.gform_title a {
+  .top-bar ul > li.name h1 a, .top-bar ul > li.name .post-text .gform_heading h3.gform_title a, .post-text .gform_heading .top-bar ul > li.name h3.gform_title a, .top-bar ul > li.name .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child a, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .top-bar ul > li.name label.gform_title:first-child a, .top-bar ul > li.name .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child a, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .top-bar ul > li.name label.gform_title:first-child a, .top-bar ul > li.name .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title a, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .top-bar ul > li.name label.gform_title a, .top-bar ul > li.name .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title a, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .top-bar ul > li.name label.gform_title a {
     color: white;
     display: block;
     line-height: 60px !important;
