@@ -1,4 +1,4 @@
- jQuery(document).ready(function ($) {
+jQuery(document).ready(function ($) {
 
 /* ========================================================================================================================
   
@@ -67,9 +67,7 @@ if ( $.fn.Digits ) {
   		wrapper: '#av-digits-y', 
   		mode: 'statistics', 
   		value: 1992 
-  	});  
-  
-  
+  	});
   
   	// Change value when the input changes 
 
@@ -94,7 +92,7 @@ Flexslider
 	    namespace: "cartogram-slider-",
 	    prevText: "<i class='icon-arrow-left'></i>",
 	    nextText: "<i class='icon-arrow-right'></i>",
-	    directionNav: true,
+	    directionNav: false,
 	    controlNav: false,
 	    slideshow: false,
 	    pauseOnHover: true,
@@ -102,16 +100,10 @@ Flexslider
 	    animationLoop: true,
 	    keyboard: false,
 	    smoothHeight: true,
-	    before: function() {
-
-	    },
 	    after: function (slider) {	    	
 	    	console.log("The slider is currently on: " + currentSliderIndex);
 	    }
 	  });
-
-	
-	
 
 /* ========================================================================================================================
   
@@ -245,7 +237,7 @@ Flexslider
 		// Need to pass push state a title, not sure what to give it.
 		var title = "not sure";
 
-		/** Push state Stuff *******************************/
+		// * Push state Stuff ******************************
 		//The first parameter is the stateObj retrievable by window.history.state
 		//Passing in the request_url of the state for reloading it when the user goes "back"/"forth"
 		window.history.pushState({request_url: request_url},title,url);
@@ -258,15 +250,15 @@ Flexslider
 	 * Manage the clicking of the left and right arrows on the slider
 	 */
 	 $(".cartogram-slider-direction-nav li a").click(function(e) {
+
 	 	var reverseSlideMaps = {	
 	 								"-1": "contact-us",
 	 								0: "home",
 	 								1: "about-us",
 	 								2: "beers_eephus",
 	 								3: "highlights",
-	 								4: "fan-shop",
-	 								5: "contact-us",
-	 								6: "home"
+	 								4: "contact-us",
+	 								5: "home"
 	 							}
 	 	var moveRight = -1;
 	 	if($(this).hasClass("cartogram-slider-next")) {
@@ -284,14 +276,15 @@ Flexslider
 	$(document).keydown(function(e){
 	    switch (e.keyCode) { 
 	       	case 37:
+	       		e.preventDefault();
 	       		$(".cartogram-slider-prev").trigger("click");
-	       		
-		e.preventDefault();
-	        break;
-	        case 39:
+	       		break;
+	        case 39:	        
+				e.preventDefault();
 	       		$(".cartogram-slider-next").trigger("click");
-		e.preventDefault();
-	       	break;
+	       		break;
+	       	default:
+	       		break;
 	    }
 	});
 
@@ -320,14 +313,14 @@ Flexslider
 	 * Note: This updates content for pages for now.
 	 */
 	function updateContent(request_url) {
-		console.log("toggling classes");
-    	$(".slides").toggleClass("loadingContent", true);
-    	$("#loader").toggle(true);
+
+	    $("#container-slider").toggleClass("loadingContent", true);
+    	$("#loader").toggleClass("showLoader", true);
 		console.log("		Calling update content on: " + request_url);
 		targetIndex = getIndexToFocusOn(request_url);
 		
 		$.ajax({
-			// async: false,
+			async: false,
 			type : "post",
 			dataType : "html",
 			/* Where the request is being sent to. */
@@ -342,15 +335,13 @@ Flexslider
 				.html(html)
 				.promise()
 				.done(function(){
-					
+
 					focusFlexSlider(targetIndex);
 					applyJavascript(request_url);
 
-			    	$("#loader").toggle(false);
-			    	$(".slides").toggleClass("loadingContent", false);
+			    	$("#loader").toggleClass("showLoader", false);
+			    	$("#container-slider").toggleClass("loadingContent", false);
 				});
-
-
 			},
 			error: function(response, html, something) {
 				console.log("fail: " + response + html + something);
@@ -460,11 +451,8 @@ Flexslider
 			case "beers":
 				var targetIndex = 2;
 				break;
-			case "fan-shop":
-				var targetIndex = 4;
-				break;
 			case "contact-us":
-				var targetIndex = 5;
+				var targetIndex = 4;
 				break;
 			case "highlights":
 			case "category":
@@ -499,6 +487,25 @@ Flexslider
 		$('#global > li:eq(' + targetIndex + ')').toggleClass("current-menu-item");
 
 		console.log("				Request Part determining focus index: " + request_part);
+	}
+
+	//Helper function to determine what type of event to listen for 
+	//depending on the browser. Used for CSS transition "callbacks".
+	function whichTransitionEvent() {
+	    var t;
+	    var el = document.createElement('fakeelement');
+	    var transitions = {
+	      'transition':'transitionend',
+	      'OTransition':'oTransitionEnd',
+	      'MozTransition':'transitionend',
+	      'WebkitTransition':'webkitTransitionEnd'
+	    }
+
+	    for(t in transitions){
+	        if( el.style[t] !== undefined ){
+	            return transitions[t];
+	        }
+	    }
 	}
 
 

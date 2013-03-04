@@ -50,13 +50,3 @@ body {
     bottom:3px;
   }
  }
-
- .slider {
-  opacity: 1;
-  @include transition(10s opacity linear);
- }
-
-.loadingContent {
-  opacity: 0.5;
-  @include transition(10s opacity linear);
- }

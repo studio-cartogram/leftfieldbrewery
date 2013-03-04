@@ -7748,14 +7748,41 @@ ul#social > li a:hover {
   right: 0;
   bottom: 0;
   display: none;
+  opacity: 0;
+  -webkit-transition: 3s opacity linear;
+  -moz-transition: 3s opacity linear;
+  -ms-transition: 3s opacity linear;
+  -o-transition: 3s opacity linear;
+  transition: 3s opacity linear;
 }
-/* line 12, ../scss/parts/_loader.scss */
+/* line 13, ../scss/parts/_loader.scss */
 #loader span {
   font-size: 30px;
   font-size: 3rem;
   top: 50%;
   left: 50%;
   position: absolute;
+}
+
+/* line 24, ../scss/parts/_loader.scss */
+.showLoader {
+  opacity: 1;
+  display: block;
+}
+
+/* line 29, ../scss/parts/_loader.scss */
+#container-slider {
+  opacity: 1;
+  -webkit-transition: 3s opacity linear;
+  -moz-transition: 3s opacity linear;
+  -ms-transition: 3s opacity linear;
+  -o-transition: 3s opacity linear;
+  transition: 3s opacity linear;
+}
+
+/* line 34, ../scss/parts/_loader.scss */
+.loadingContent {
+  opacity: 0.5;
 }
 
 /* line 1, ../scss/vendor/_av-styles.scss */
@@ -8893,26 +8920,6 @@ body {
 #container-navigation:after {
   top: auto;
   bottom: 3px;
-}
-
-/* line 54, ../scss/_screen.scss */
-.slider {
-  opacity: 1;
-  -webkit-transition: 10s opacity linear;
-  -moz-transition: 10s opacity linear;
-  -ms-transition: 10s opacity linear;
-  -o-transition: 10s opacity linear;
-  transition: 10s opacity linear;
-}
-
-/* line 59, ../scss/_screen.scss */
-.loadingContent {
-  opacity: 0.5;
-  -webkit-transition: 10s opacity linear;
-  -moz-transition: 10s opacity linear;
-  -ms-transition: 10s opacity linear;
-  -o-transition: 10s opacity linear;
-  transition: 10s opacity linear;
 }
 
 /* line 2, ../scss/components/modules/_topbar.scss */

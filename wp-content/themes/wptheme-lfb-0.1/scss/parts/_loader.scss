@@ -9,6 +9,7 @@
 	right:0;
 	bottom:0;
 	display:none;
+	opacity: 0;
 	span {
 		@extend .icon-loader-simple;
 		@include font-size(30);
@@ -17,7 +18,22 @@
 		position:absolute;
 	
 	}
+	@include transition(3s opacity linear);
 }
 
- 
+.showLoader {
+	opacity: 1;
+	display: block;
+}
+
+#container-slider {
+	opacity: 1;
+	@include transition(3s opacity linear);
+}
+
+.loadingContent {
+	opacity: 0.5;
+	//@include transition(10s opacity linear);
+}
+  
 
