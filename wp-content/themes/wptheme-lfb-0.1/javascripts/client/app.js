@@ -102,8 +102,10 @@ Flexslider
 	    animationLoop: true,
 	    keyboard: false,
 	    smoothHeight: true,
+	    before: function() {
+
+	    },
 	    after: function (slider) {	    	
-	    	// $(".flexslider").animate({opacity: 1},3000);	    	currentSliderIndex = slider.currentSlide;
 	    	console.log("The slider is currently on: " + currentSliderIndex);
 	    }
 	  });
@@ -318,12 +320,14 @@ Flexslider
 	 * Note: This updates content for pages for now.
 	 */
 	function updateContent(request_url) {
-
+		console.log("toggling classes");
+    	$(".slides").toggleClass("loadingContent", true);
+    	$("#loader").toggle(true);
 		console.log("		Calling update content on: " + request_url);
 		targetIndex = getIndexToFocusOn(request_url);
 		
 		$.ajax({
-			asynch: false,
+			// async: false,
 			type : "post",
 			dataType : "html",
 			/* Where the request is being sent to. */
@@ -333,10 +337,20 @@ Flexslider
 				url: request_url
 			},
 			success: function(html) {
-				$(".slideNum" + targetIndex).not(".clone").html(html);
+				$(".slideNum" + targetIndex)
+				.not(".clone")
+				.html(html)
+				.promise()
+				.done(function(){
+					
+					focusFlexSlider(targetIndex);
+					applyJavascript(request_url);
 
-				focusFlexSlider(targetIndex);
-				applyJavascript(request_url);
+			    	$("#loader").toggle(false);
+			    	$(".slides").toggleClass("loadingContent", false);
+				});
+
+
 			},
 			error: function(response, html, something) {
 				console.log("fail: " + response + html + something);
