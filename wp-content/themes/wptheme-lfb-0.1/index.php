@@ -16,6 +16,7 @@
 			</div>
 		</div>
 	</div>	
+	<div id="loader"><span>LOADING</span></div>
 </div>
 
 <?php get_footer() ?>
