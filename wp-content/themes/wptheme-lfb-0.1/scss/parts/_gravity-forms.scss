@@ -115,6 +115,8 @@
         @include box-shadow(0 0 0);
         @extend .border-bottom;
         color:$white;
+        @include font-size(16);
+        padding:25px;
         &:active, &:focus {
           background-color: $white;
           color:$navy;
@@ -141,7 +143,46 @@
             label {
               display:none;
             }
-            
+          }
+        }
+        &.label-icon {
+          position:relative;
+          label {
+            display:block;
+            position: absolute;
+            left: 0px;
+            height:100%;
+            top: 0px;
+            width: 50px;
+            @extend .icon-mail;
+            visibility:hidden;
+            &:before {
+              visibility:visible;
+              position:absolute;
+              text-align:center;
+              width:70px;
+              top:-1px;
+              left:-1px;
+              bottom:0;
+              height:auto;
+              background: $cream;
+              display:block;
+              border:1px solid $navy;
+              text-align:center;
+              color:$navy;
+              @include font-size(16);
+              line-height:3;
+            }
+          }
+          input {
+            padding-left:80px;
+          }
+          &#field_2_4 label  {
+            @extend .icon-phone;
+            &:before {
+              @include font-size(16);
+              line-height:3;
+            }
           }
         }
         &#field_2_1 {
@@ -169,10 +210,12 @@
           margin:2px 0 0 0;
           padding:0;
           @extend .border-top;
+
           input {
             float:left;
             height:50px;
             width:50px;
+
           }
           label {
             display:block;

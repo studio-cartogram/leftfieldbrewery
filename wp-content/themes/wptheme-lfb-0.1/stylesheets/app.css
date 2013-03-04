@@ -5014,7 +5014,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
 /* line 7, ../scss/font/_classes.scss */
-.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .icon-logo:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before {
+.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .post-text .gform_body .gform_fields li.label-icon label:before, .icon-logo:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -5039,7 +5039,7 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 24, ../scss/font/_classes.scss */
-.icon-phone:before {
+.icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before {
   content: "\e003";
 }
 
@@ -5074,7 +5074,7 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 45, ../scss/font/_classes.scss */
-.icon-mail:before {
+.icon-mail:before, .post-text .gform_body .gform_fields li.label-icon label:before {
   content: "\e00a";
 }
 
@@ -6163,18 +6163,21 @@ ul#social > li a:hover {
   -moz-box-shadow: 0 0 0;
   box-shadow: 0 0 0;
   color: white;
+  font-size: 16px;
+  font-size: 1.6rem;
+  padding: 25px;
 }
-/* line 118, ../scss/parts/_gravity-forms.scss */
+/* line 120, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields input:active, .post-text .gform_body .gform_fields input:focus, .post-text .gform_body .gform_fields textarea:active, .post-text .gform_body .gform_fields textarea:focus {
   background-color: white;
   color: #0c223f;
   border-color: white;
 }
-/* line 125, ../scss/parts/_gravity-forms.scss */
+/* line 127, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li {
   margin: 0;
 }
-/* line 127, ../scss/parts/_gravity-forms.scss */
+/* line 129, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .ginput_complex {
   *zoom: 1;
 }
@@ -6187,7 +6190,7 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li .ginput_complex:after {
   clear: both;
 }
-/* line 130, ../scss/parts/_gravity-forms.scss */
+/* line 132, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .ginput_complex span {
   position: relative;
   width: 66.66667%;
@@ -6207,16 +6210,59 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li .ginput_complex span:after {
   top: 0px;
 }
-/* line 134, ../scss/parts/_gravity-forms.scss */
+/* line 136, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .ginput_complex span:first-child {
   width: 33.33333%;
   padding: 0;
 }
-/* line 141, ../scss/parts/_gravity-forms.scss */
+/* line 143, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .ginput_complex span label {
   display: none;
 }
 /* line 148, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li.label-icon {
+  position: relative;
+}
+/* line 150, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li.label-icon label {
+  display: block;
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  top: 0px;
+  width: 50px;
+  visibility: hidden;
+}
+/* line 159, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li.label-icon label:before {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  width: 70px;
+  top: -1px;
+  left: -1px;
+  bottom: 0;
+  height: auto;
+  background: #fefcf8;
+  display: block;
+  border: 1px solid #0c223f;
+  text-align: center;
+  color: #0c223f;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 3;
+}
+/* line 177, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li.label-icon input {
+  padding-left: 80px;
+}
+/* line 182, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 3;
+}
+/* line 189, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li#field_2_1 label:first-child {
   display: block;
   text-align: center;
@@ -6236,13 +6282,13 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li#field_2_1 label:first-child:after {
   top: 0px;
 }
-/* line 156, ../scss/parts/_gravity-forms.scss */
+/* line 197, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li#field_2_3 label {
   display: block;
   text-align: center;
   margin-top: 2px;
 }
-/* line 163, ../scss/parts/_gravity-forms.scss */
+/* line 204, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li#field_2_3 .ginput_container {
   position: relative;
 }
@@ -6260,19 +6306,19 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li#field_2_3 .ginput_container:after {
   top: 0px;
 }
-/* line 167, ../scss/parts/_gravity-forms.scss */
+/* line 208, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .gfield_checkbox {
   list-style: none;
   margin: 2px 0 0 0;
   padding: 0;
 }
-/* line 172, ../scss/parts/_gravity-forms.scss */
+/* line 214, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .gfield_checkbox input {
   float: left;
   height: 50px;
   width: 50px;
 }
-/* line 177, ../scss/parts/_gravity-forms.scss */
+/* line 220, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .gfield_checkbox label {
   display: block;
   float: left;
@@ -6280,7 +6326,7 @@ ul#social > li a:hover {
   font-size: 16px;
   font-size: 1.6rem;
 }
-/* line 187, ../scss/parts/_gravity-forms.scss */
+/* line 230, ../scss/parts/_gravity-forms.scss */
 .post-text .button, .post-text #av-overlay .submit input[type=submit], #av-overlay .submit .post-text input[type=submit] {
   padding: 25px 0;
   left: -1px;
@@ -6288,7 +6334,7 @@ ul#social > li a:hover {
   border-right: none;
 }
 
-/* line 195, ../scss/parts/_gravity-forms.scss */
+/* line 238, ../scss/parts/_gravity-forms.scss */
 .gforms_confirmation_message {
   padding: 20px;
 }
