@@ -262,7 +262,7 @@ Flexslider
 	 								"-1": "contact-us",
 	 								0: "home",
 	 								1: "about-us",
-	 								2: "beers_tuborg",
+	 								2: "beers_eephus",
 	 								3: "highlights",
 	 								4: "fan-shop",
 	 								5: "contact-us",
