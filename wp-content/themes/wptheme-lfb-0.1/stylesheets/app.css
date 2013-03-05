@@ -6154,6 +6154,13 @@ ul#social > li a:hover {
 }
 
 /* line 87, ../scss/parts/_gravity-forms.scss */
+.post-text .validation_error {
+  color: #ff4337;
+  text-align: center;
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+/* line 92, ../scss/parts/_gravity-forms.scss */
 .post-text .validation_message {
   position: absolute;
   z-index: 1;
@@ -6168,7 +6175,7 @@ ul#social > li a:hover {
   font-size: 13px;
   font-size: 1.3rem;
 }
-/* line 99, ../scss/parts/_gravity-forms.scss */
+/* line 104, ../scss/parts/_gravity-forms.scss */
 .post-text .validation_message:before {
   position: absolute;
   left: 10px;
@@ -6180,13 +6187,13 @@ ul#social > li a:hover {
   border: solid 4px;
   border-color: transparent transparent #ff4337 transparent;
 }
-/* line 107, ../scss/parts/_gravity-forms.scss */
+/* line 112, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields .gfield_error input {
   border-bottom-color: #ff4337 !important;
   background: white;
 }
 
-/* line 117, ../scss/parts/_gravity-forms.scss */
+/* line 122, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_heading {
   position: relative;
   text-align: center;
@@ -6205,26 +6212,26 @@ ul#social > li a:hover {
 .post-text .gform_heading:after {
   top: 0px;
 }
-/* line 124, ../scss/parts/_gravity-forms.scss */
+/* line 129, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_heading span.gform_description {
   padding: 0 60px;
   display: block;
 }
-/* line 130, ../scss/parts/_gravity-forms.scss */
+/* line 135, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body {
   padding: 0;
 }
-/* line 132, ../scss/parts/_gravity-forms.scss */
+/* line 137, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields {
   list-style: none;
   margin: 50px 0 0 0;
   padding: 0;
 }
-/* line 136, ../scss/parts/_gravity-forms.scss */
+/* line 141, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields label {
   display: none;
 }
-/* line 139, ../scss/parts/_gravity-forms.scss */
+/* line 144, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields input, .post-text .gform_body .gform_fields textarea {
   background-color: transparent;
   margin: 0px;
@@ -6242,17 +6249,17 @@ ul#social > li a:hover {
   font-size: 1.6rem;
   padding: 25px;
 }
-/* line 149, ../scss/parts/_gravity-forms.scss */
+/* line 154, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields input:active, .post-text .gform_body .gform_fields input:focus, .post-text .gform_body .gform_fields textarea:active, .post-text .gform_body .gform_fields textarea:focus {
   background-color: white;
   color: #0c223f;
   border-color: white;
 }
-/* line 156, ../scss/parts/_gravity-forms.scss */
+/* line 161, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li {
   margin: 0;
 }
-/* line 158, ../scss/parts/_gravity-forms.scss */
+/* line 163, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .ginput_complex {
   *zoom: 1;
 }
@@ -6265,7 +6272,7 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li .ginput_complex:after {
   clear: both;
 }
-/* line 161, ../scss/parts/_gravity-forms.scss */
+/* line 166, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .ginput_complex span {
   position: relative;
   width: 66.66667%;
@@ -6285,20 +6292,20 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li .ginput_complex span:after {
   top: 0px;
 }
-/* line 165, ../scss/parts/_gravity-forms.scss */
+/* line 170, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .ginput_complex span:first-child {
   width: 33.33333%;
   padding: 0;
 }
-/* line 172, ../scss/parts/_gravity-forms.scss */
+/* line 177, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .ginput_complex span label {
   display: none;
 }
-/* line 177, ../scss/parts/_gravity-forms.scss */
+/* line 182, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li.label-icon {
   position: relative;
 }
-/* line 179, ../scss/parts/_gravity-forms.scss */
+/* line 184, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li.label-icon label {
   display: block !important;
   position: absolute;
@@ -6308,7 +6315,7 @@ ul#social > li a:hover {
   width: 50px;
   visibility: hidden;
 }
-/* line 188, ../scss/parts/_gravity-forms.scss */
+/* line 193, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li.label-icon label:before {
   visibility: visible;
   position: absolute;
@@ -6327,17 +6334,17 @@ ul#social > li a:hover {
   font-size: 1.6rem;
   line-height: 3;
 }
-/* line 206, ../scss/parts/_gravity-forms.scss */
+/* line 211, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li.label-icon input {
   padding-left: 80px;
 }
-/* line 211, ../scss/parts/_gravity-forms.scss */
+/* line 216, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before {
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 3;
 }
-/* line 218, ../scss/parts/_gravity-forms.scss */
+/* line 223, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li#field_2_1 label:first-child {
   display: block !important;
   text-align: center;
@@ -6357,13 +6364,13 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li#field_2_1 label:first-child:after {
   top: 0px;
 }
-/* line 226, ../scss/parts/_gravity-forms.scss */
+/* line 231, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li#field_2_3 label {
   display: block !important;
   text-align: center;
   margin-top: 2px;
 }
-/* line 233, ../scss/parts/_gravity-forms.scss */
+/* line 238, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li#field_2_3 .ginput_container {
   position: relative;
 }
@@ -6381,19 +6388,19 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li#field_2_3 .ginput_container:after {
   top: 0px;
 }
-/* line 237, ../scss/parts/_gravity-forms.scss */
+/* line 242, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .gfield_checkbox {
   list-style: none;
   margin: 2px 0 0 0;
   padding: 0;
 }
-/* line 243, ../scss/parts/_gravity-forms.scss */
+/* line 248, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .gfield_checkbox input {
   float: left;
   height: 50px;
   width: 50px;
 }
-/* line 249, ../scss/parts/_gravity-forms.scss */
+/* line 254, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .gfield_checkbox label {
   display: block !important;
   float: left;
@@ -6401,14 +6408,14 @@ ul#social > li a:hover {
   font-size: 16px;
   font-size: 1.6rem;
 }
-/* line 259, ../scss/parts/_gravity-forms.scss */
+/* line 264, ../scss/parts/_gravity-forms.scss */
 .post-text .button, .post-text #pagination .pagination-link a, #pagination .pagination-link .post-text a, .post-text #av-overlay .submit input[type=submit], #av-overlay .submit .post-text input[type=submit] {
   padding: 25px 0;
   left: -1px;
   border-left: none;
   border-right: none;
 }
-/* line 265, ../scss/parts/_gravity-forms.scss */
+/* line 270, ../scss/parts/_gravity-forms.scss */
 .post-text form.custom ul li span.custom {
   display: inline-block;
   width: 46px;
@@ -6423,7 +6430,7 @@ ul#social > li a:hover {
   cursor: pointer;
   margin-bottom: -2px;
 }
-/* line 279, ../scss/parts/_gravity-forms.scss */
+/* line 284, ../scss/parts/_gravity-forms.scss */
 .post-text form.custom ul li span.custom.checkbox.checked:before {
   font-size: 45px;
   font-size: 4.5rem;
@@ -6432,7 +6439,7 @@ ul#social > li a:hover {
   top: 2px;
 }
 
-/* line 288, ../scss/parts/_gravity-forms.scss */
+/* line 293, ../scss/parts/_gravity-forms.scss */
 .gforms_confirmation_message {
   padding: 20px;
 }

@@ -84,6 +84,11 @@
   line-height:1.4;
 }
 .post-text {
+  .validation_error {
+    color:$red;
+    text-align:center;
+    @include font-size(13);
+  }
   .validation_message {
     position: absolute;
     z-index: 1;
