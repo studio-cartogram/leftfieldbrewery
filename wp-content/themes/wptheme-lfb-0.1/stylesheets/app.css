@@ -6444,8 +6444,15 @@ ul#social > li a:hover {
   content: "\e010";
   top: 2px;
 }
+/* line 297, ../scss/parts/_gravity-forms.scss */
+.post-text .gform_confirmation_message_2 {
+  position: relative;
+  padding: 70px;
+  text-align: center;
+  font-size: 14px;
+}
 
-/* line 303, ../scss/parts/_gravity-forms.scss */
+/* line 306, ../scss/parts/_gravity-forms.scss */
 .gforms_confirmation_message {
   padding: 20px;
 }

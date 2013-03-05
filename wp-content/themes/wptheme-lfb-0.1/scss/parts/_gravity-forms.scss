@@ -296,7 +296,10 @@
   }
   .gform_confirmation_message_2 {
     @extend .double-bordered;
-  
+    position: relative;
+    padding: 70px;
+    text-align: center;
+    font-size: 14px;
   }
 }
 
