@@ -11,9 +11,7 @@
 	<div class="row">
 		<div class="columns twelve double-bordered-outside">
 			<div class="flexslider double-bordered">
-				<ul class="slides">
-			    	<?php get_template_part('parts/loops/loop', 'front-page') ?> 	
-			  	</ul>
+		    	<?php get_template_part('parts/loops/loop', 'front-page') ?> 	
 			</div>
 		</div>
 	</div>	

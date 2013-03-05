@@ -82,64 +82,6 @@
 	margin:0;
 	list-style:none;
 }
-// .card-container {
-// 	position: relative;
-// 	margin: 0 auto 0px; 
-// 	height:500px; 
-// 	width:100%;
-// 	.card {
-// 		width: 100%;
-// 		height: 100%;
-// 		position: absolute;
-// 		@include  transition(transform 1s);
-// 		@include transform-style(preserve-3d);
-	    
-// 	    .flip {
-// 	  		position:absolute;
-// 	  		z-index:10;
-// 			@include font-size(23);
-// 			color: white;
-// 			position: absolute;
-// 			right: 4px;
-// 			@extend .icon-flip-right;
-// 	  	}
-	  	
-// 	  	figure {
-// 			display: block;
-// 			height: 100%;
-// 			width: auto;
-// 			right:0;
-// 			top:0;
-// 			bottom:0; 
-// 			position:absolute;
-// 			@include backface-visibility(hidden);
-// 	    }	
-//     }
-
-//     .card.flipped {
-//       @include transform(rotateY( 180deg ));
-//       .flip {
-//      		@include transform(rotateY( 185deg ));
-// 			@extend .icon-flip-left;
-// 	  	}
-//     }
-
-//     .card .back {
-//       	@include transform(rotateY( 180deg ));
-//       	padding:20px;
-//       	background:$navy;
-//       	text-align:center;
-//       	p, h2  {
-//       		color:$white;
-//     	}
-//     }
-//     .button {
-//     	top:100%;
-//     	margin-top:-100px;
-//     	width:100%;
-//     }
-   
-//}
 
 .flexslider-players {
 	.corner-one {
@@ -319,9 +261,22 @@
 		@extend .border-bottom-white;
 		@include rule(right, false, $white);
 		text-align:center;
+		&.active a:after {
+			content: ' ';
+			position:absolute;
+			width:305px;
+			border-bottom:1px solid white;
+			@include transform(rotate(-12deg));
+			left:-4px;
+			top:2px;
+			z-index:0;
+
+		}
 	}
 	li:nth-child(2), li:nth-child(1) {
 		margin-top:3px;
 	}
 }
+
+
 

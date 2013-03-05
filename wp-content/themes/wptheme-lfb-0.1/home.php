@@ -10,15 +10,11 @@
 <div class="container" id="container-slider">
 	<div class="row">
 		<div class="columns twelve double-bordered-outside">
-			<div class="flexslider double-bordered">
-				<ul class="slides">
-					<?php if(is_paged()) {
-			    		get_template_part('parts/loops/loop', 'archive');
-			    	} else {
-			    		get_template_part('parts/loops/loop', 'home');
-			    	} ?> 	
-			  	</ul>
-			</div>
+			<?php if(is_paged()) {
+	    		get_template_part('parts/loops/loop', 'archive');
+	    	} else {
+	    		get_template_part('parts/loops/loop', 'home');
+	    	} ?> 	
 		</div>
 	</div>	
 	<div id="loader"><span>loading</span></div>
