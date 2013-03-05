@@ -8,6 +8,7 @@ App.init = function () {
 	App.cache();
 	App.bindListeners();
 	App.flexsliderInit();
+	App.addFlipEvents();
 };
 
 /* 
@@ -20,22 +21,7 @@ App.cache = function () {
 	//Example:
 	//App.dom.page = $(".page");
 
-	/* Store global variables. */
-	App.vars = {};
-
-	/* These are the request to be made */
-	App.vars.request_urls = [
-		"home",
-		"about-us",
-		"beers",
-		"highlights",
-		"contact-us"
-	];
-
-	// 	/* The current slide the flexslider is on.*/
-	App.vars.currentSliderIndex = 0;
-
-}; //End App.cache();
+}; // App.cache();
 
 /*
 	For now, the bind listeners will be all the init functions
@@ -122,8 +108,9 @@ App.bindListeners = function () {
 		$('#av_verify_y').change(function() {
 	  		year.changeValue($(this).val());
 		});
-	}
-}; //End App.bindListeners().
+	};
+
+}; // App.bindListeners().
 
 /*
 	Apply the flexslider.
@@ -135,508 +122,66 @@ App.flexsliderInit = function () {
 	Flexslider: Call and focus on relevant slide.
 
 	======================================================================================================================== */
-	
-	//Initiate flexslider.
-	$('.flexslider').flexslider({
+	$('.flexslider-instagram').flexslider({
+	    selector: ".slides-instagram > li",
 	    animation: "slide",
-	    namespace: "cartogram-slider-",
+	    namespace: "cartogram-slider-instagram",
 	    prevText: "<i class='icon-arrow-left'></i>",
-	    nextText: "<i class='icon-arrow-right'></i>",
+		nextText: "<i class='icon-arrow-right'></i>",
 	    directionNav: true,
 	    controlNav: false,
 	    slideshow: false,
 	    pauseOnHover: true,
 	    slideshowSpeed: 5000,
 	    animationLoop: true,
-	    keyboard: false,
-	    smoothHeight: true,
-	    start: function (slider) {
-	    	$("#container-slider").toggleClass("loading", true);
-	    	/* Note the page already loaded. */
-	    	var loaded = getEnding(document.URL);
-	    	/* Will be prepending slides until we reach the slide that is already loaded. */
-	    	var prepend = true;
-	    	if (loaded == "") {
-	    		//lfb.ca/ should point to home.
-	    		loaded = "home";
-	    	}
-
-	    	/* If loaded page is highlights/___ or beers/__, want to route it. */
-	    	var underscoreIndex = loaded.indexOf("_");
-	    	if (underscoreIndex !== -1) {
-	    		loaded = loaded.substring(0, underscoreIndex);
-	    	}
-
-	    	//Request all the pages. Prepend them or append them to .slides
-	    	for (var i = 0; i < App.vars.request_urls.length; i++) {
-	    		console.log(i);
-	    		/* The request to be made. */
-	    		var request_url = App.vars.request_urls[i];
-	    		
-	    		//Prepend/append determined:
-	    		if (loaded === request_url) {
-	    			prepend = false;
-	    			console.log('skipping and switching to append: ' + request_url);
-	    			continue;
-	    		}
-				$.ajax({
-					async: false,
-					type : "post",
-					dataType : "html",
-					url: AjaxResources.ajax_url,
-					data: {
-						action: "page",
-						url: request_url
-					},
-					success: function(html) {
-
-						var newSlide = '<li class="slide' + i + '">' + html + "</li>";
-						if (prepend) {
-							$(".slides").prepend(newSlide);
-						} else {
-							$(".slides").append(newSlide);
-						}
-						slider.addSlide(".slide" + i);
-					},
-					error: function(response, html, something) {
-						console.log("fail: " + response + html + something);
-					}
-				});
-	    	}
-
-	    	$("#container-slider").toggleClass("loading", false);
-	    },
-	    after: function (slider) {
-	    	console.log("The slider is currently on: " + App.vars.currentSliderIndex);
-	    }
+	    keyboard: false
 	});
-	//Focus flexslider on appropriate slide.
-	var request_url = getEnding(document.URL);
-	if (request_url == "") {
-		var targetIndex = 0;
-	} else {
-		var targetIndex = getIndexToFocusOn(request_url);	
-	}
 
-	// focusFlexSlider(targetIndex);
+	$('.flexslider-players').flexslider({
+	    selector: ".slides-players > li",
+	    animation: "slide",
+	    namespace: "cartogram-slider-players",
+	    prevText: "<i class='icon-arrow-left'></i>",
+		nextText: "<i class='icon-arrow-right'></i>",
+	    directionNav: true,
+	    controlNav: true,
+	    slideshow: false,
+	    pauseOnHover: true,
+	    slideshowSpeed: 5000,
+	    animationLoop: true,
+	    keyboard: false
+	});
 
-};//End App.addFlexslider().
+	$('.beersFlexslider').flexslider({
+	    selector: ".beers_slides > li",
+	    animation: "slide",
+	    namespace: "cartogram-slider-beers",
+	    prevText: "<i class='icon-arrow-left'></i>",
+		nextText: "<i class='icon-arrow-right'></i>",
+	    directionNav: true,
+	    controlNav: true,
+	    slideshow: false,
+	    pauseOnHover: true,
+	    slideshowSpeed: 5000,
+	    animationLoop: true,
+	    keyboard: false
+	});
+
+};// App.addFlexslider().
+
+/*
+	Add the click events for flipping the about us cards and the beer cards.
+*/
+App.addFlipEvents = function () {
+
+	//Add toggle events for back and front of cards.
+	$(".flip").on("click", function() {
+		$(this).parents('.flip-container').toggleClass('hover');
+		return false;
+	});
+}// App.addFlipEvents.
 
 //On document ready, run App's init function.
 jQuery(document).ready(function ($) { 
 	App.init();
 });
-
-//Helpers
-
-	/**
-	 * Given a url, return the substring of it with only the part after the main url
-	 * and convert the forwardslash to an underscore.
-	 * Ex localhost/www.lfb.com/blog/page1 would return blog_page1
-	 *
-	 */
-	function getEnding(url) {
-		var start = url.indexOf(".ca/");
-		return url.substring(start + 4).replace("/", "_");
-	}
-	/* Given a request url, return the index at which the flexslider should focus on.
- 	*/
- 	function getIndexToFocusOn(request_url) {
- 		//Parsing request url
-
-		//The li the request_url corresponds to is represented in the first string before the "_"
-		var indexOfSubstring = request_url.indexOf("_");
-	 	if (indexOfSubstring !== -1) {
-	 		request_part = request_url.substring(0,indexOfSubstring);
-	 	} else {
-	 		request_part = request_url;
-	 	}
-
-	 	//Depending on the request URL, we want the flexslider to focus on one of the 6 slides.
-		//Some slides will show multiple pieces of information i.e. highlights
-		switch (request_part) {
-			case "home":
-				var targetIndex = 0;
-				break;
-			case "about-us":
-				var targetIndex = 1;
-				break;
-			case "beers":
-				var targetIndex = 2;
-				break;
-			case "contact-us":
-				var targetIndex = 4;
-				break;
-			case "highlights":
-			case "category":
-			case "tags":
-			//Default case is a blog post or pages within the blog.
-			default:
-				var targetIndex = 3;
-			break;
-		}
-		console.log("				Request Part determining focus index: " + request_part);
-		return targetIndex;
- 	}
-	/*
-	 * Given a request url, if the flexslider is not focused on its 
-	 * corresponding li within the flexslider, focus to that slide. 
-	 */ 
-	function focusFlexSlider(targetIndex) {
-
-		//If we're not already focused on the target index, then move to it.
-		if (targetIndex !== App.vars.currentSliderIndex) {
-
-			console.log("				Focusing flexslider on: " + targetIndex + " from " + App.vars.currentSliderIndex);
-			//If the flexslider isn't focused on the li want, focus it.
-			$('.flexslider').data('flexslider').flexAnimate(targetIndex);
-			App.vars.currentSliderIndex=targetIndex;
-
-		} //Do not need to do anything if the flexslider is already focused on
-		//the one we want.
-
-		//Toggle class "current_page_item" for nav <a>'s
-		$('.current-menu-item').removeClass("current-menu-item");
-		$('#global > li:eq(' + targetIndex + ')').toggleClass("current-menu-item");
-	}
-
-
-
-// jQuery(document).ready(function ($) {
-
-
-
-
-// /* ========================================================================================================================
-  
-// 	Push State Implementation
-
-// ======================================================================================================================== */
-	
-// 	var
-// 		/* Stores the history of the window. */
-// 		History = window.History,
-// 		$window = $(window);
-
-
-// 	/* The ending part of the url being loaded into the browser. */
-// 	var request_url = getEnding(AjaxResources.request_url);
-// 	/* This is the url all ajax requests should be made to: managed by word press. */
-// 	var ajax_url = AjaxResources.ajax_url;
-// 	/* The same function is called on loading the first page and
-// 	when a push state occurs. This helps that function distinguish the two events. */
-// 	var initialLoad = true;
-
-// 	/**
-// 	*
-// 	* State Change Handle. 
-// 	* This function is fired when the page loads and a pushstate happens.
-// 	* When loading a page from the browser, load the content the is mapped from the url.
-// 	*/
-// 	window.addEventListener('popstate', function(event) {
-// 		console.log("Popstate occured.");
-
-// 		var request_url;
-// 		//This function is called when the page is intially loaded by the browser and when
-// 		//a push state like back or forth is called.
-// 		//This is the case where the browser is loading the page for the first time.
-// 		if (initialLoad) {
-// 			console.log('	Initial load.');
-
-// 			/* This is the ending of the page we are loading. */
-// 			var request_url = getEnding(document.URL);
-
-// 			initialLoad = false;
-
-// 			if (request_url === "") {
-// 				request_url = "home";
-// 			}
-// 			//Load the content to the page in respect to the url
-// 			updateContent(request_url);
-
-// 		//This is case where a pushstate occured and we need to update the page
-// 		//to reflect the new state.
-// 		} else {
-// 			console.log("	Loading an old state.");
-
-// 			/* The request_url pushed most recently. */
-// 			if (window.history.state !== null) {
-// 				var request_url = window.history.state.request_url;
-// 			} else {
-// 				var request_url = getEnding(document.URL);
-// 				if (request_url === "") {
-// 					request_url = "home";
-// 				}
-// 			}
-// 			//Make request to update the content
-// 			updateContent(request_url);
-// 		}
-// 	});
-
-// 	/**
-// 	 * When a menu item is clicked, update the flexslider to the corresponding
-// 	 * slide. Make a request to update the content with the corresponding content.
-// 	 * Update the pushstate with the new state of the site.
-// 	 *
-// 	 */
-// 	$("#global li").not("#global li.has-dropdown").click(function(e) {
-
-// 		/* What position link clicked is in */
-// 		var index = $(this).index();
-
-// 		/* The Url of the link that was clicked. */
-// 		var url = $(this).find("a").attr("href");
-
-// 		/* This is the request_url to be used for ajax. */
-// 		var request_url = getEnding(url);
-// 		//Load the page.
-// 		updateContent(request_url);
-
-// 		/* Need to pass push state a title, not sure what to give it.*/
-// 		var title = "not sure";
-
-// 		/** Push state Stuff *******************************/
-// 		//The first parameter is the stateObj retrievable by window.history.state
-// 		//Passing in the request_url of the state for reloading it when the user goes "back"/"forth"
-// 		window.history.pushState({request_url: request_url},title,url);
-		
-// 		e.preventDefault();
-// 	});
-	
-// 	$(".highlights").find("a").live("click", function(e) {
-
-// 		/* The Url of the link that was clicked. */
-// 		var url = $(this).attr("href");
-
-// 		/* This is the request_url to be used for ajax. */
-// 		var request_url = getEnding(url);
-// 		//Load the page.
-// 		updateContent(request_url);
-
-// 		/* Need to pass push state a title, not sure what to give it.*/
-// 		var title = "not sure";
-
-// 		/** Push state Stuff *******************************/
-// 		//The first parameter is the stateObj retrievable by window.history.state
-// 		//Passing in the request_url of the state for reloading it when the user goes "back"/"forth"
-// 		window.history.pushState({request_url: request_url},title,url);
-		
-// 		e.preventDefault();
-// 	});
-
-// 	$(".mvp, .homehighlightreel").find("a").live("click", function(e) {
-
-// 		/* The Url of the link that was clicked. */
-// 		var url = $(this).attr("href");
-
-// 		/* This is the request_url to be used for ajax. */
-// 		var request_url = getEnding(url);
-// 		//Load the page.
-// 		updateContent(request_url);
-
-// 		// Need to pass push state a title, not sure what to give it.
-// 		var title = "not sure";
-
-// 		// * Push state Stuff ******************************
-// 		//The first parameter is the stateObj retrievable by window.history.state
-// 		//Passing in the request_url of the state for reloading it when the user goes "back"/"forth"
-// 		window.history.pushState({request_url: request_url},title,url);
-		
-// 		e.preventDefault();
-// 	});
-
-
-// 	*
-// 	 * Manage the clicking of the left and right arrows on the slider
-	 
-// 	 $(".cartogram-slider-direction-nav li a").click(function(e) {
-
-// 	 	var reverseSlideMaps = {	
-// 	 								"-1": "contact-us",
-// 	 								0: "home",
-// 	 								1: "about-us",
-// 	 								2: "beers_eephus",
-// 	 								3: "highlights",
-// 	 								4: "contact-us",
-// 	 								5: "home"
-// 	 							}
-// 	 	var moveRight = -1;
-// 	 	if($(this).hasClass("cartogram-slider-next")) {
-// 	 		var moveRight = 1;
-// 	 	}
-// 	 	index = document.URL.indexOf(".ca/");
-// 	 	url = document.URL.substring(0, index + 4) + reverseSlideMaps[currentSliderIndex + moveRight];
-// 	 	updateContent(reverseSlideMaps[currentSliderIndex + moveRight]);
-// 	 	window.history.pushState({request_url: reverseSlideMaps[currentSliderIndex + moveRight]},"title",url);
-// 	 });
-
-// 	/**
-// 	* Handle the clicking of left or right keyboard keys.
-// 	*/
-// 	$(document).keydown(function(e){
-// 	    switch (e.keyCode) { 
-// 	       	case 37:
-// 	       		e.preventDefault();
-// 	       		$(".cartogram-slider-prev").trigger("click");
-// 	       		break;
-// 	        case 39:	        
-// 				e.preventDefault();
-// 	       		$(".cartogram-slider-next").trigger("click");
-// 	       		break;
-// 	       	default:
-// 	       		break;
-// 	    }
-// 	});
-
-// 	//Add toggle events for back and front of cards.
-// 	$(".flip").live("click", function() {
-// 		$(this).parents('.flip-container').toggleClass('hover');
-// 		return false;
-// 	});
-
-
-
-// 	/**
-// 	 * Given a request_url (the stuff after lfb.ca/) make an
-// 	 * ajax call for the content for that page and insert it
-// 	 * into the current li the flexslider is focused on.
-// 	 *
-// 	 * Note: This updates content for pages for now.
-// 	 */
-// 	function updateContent(request_url) {
-
-// 	    $("#container-slider").toggleClass("loadingContent", true);
-//     	$("#loader").toggleClass("showLoader", true);
-// 		console.log("		Calling update content on: " + request_url);
-// 		targetIndex = getIndexToFocusOn(request_url);
-		
-// 		$.ajax({
-// 			async: false,
-// 			type : "post",
-// 			dataType : "html",
-// 			/* Where the request is being sent to. */
-// 			url: ajax_url,
-// 			data: {
-// 				action: "page",
-// 				url: request_url
-// 			},
-// 			success: function(html) {
-// 				$(".slideNum" + targetIndex)
-// 				.not(".clone")
-// 				.html(html)
-// 				.promise()
-// 				.done(function(){
-
-// 					focusFlexSlider(targetIndex);
-// 					applyJavascript(request_url);
-
-// 			    	$("#loader").toggleClass("showLoader", false);
-// 			    	$("#container-slider").toggleClass("loadingContent", false);
-// 				});
-// 			},
-// 			error: function(response, html, something) {
-// 				console.log("fail: " + response + html + something);
-// 			}
-// 		});
-// 	}
-
-// 	/*
-// 	 * May not be using this anymore ...
-// 	 * Given a request url, apply javascript needed for that specific page.
-// 	 */
-// 	function applyJavascript(request_url) {
-// 	 	console.log("				Applying Javascript for " + request_url);
-
-// 	 	//If the request is layered such as beers_typeofbeer, want to pass only the first part
-// 	 	var index = request_url.indexOf("_");
-
-// 	 	//Index is 0 if there is no _ in the request_url, so proceed as normal.
-// 	 	if (index !== -1) {
-// 	 		request = request_url.substring(0, index)
-// 	 	} else {
-// 	 		request = request_url;
-// 	 	}
-
-// 	 	switch(request) {
-// 	 		case "home":
-// 	 			//Maybe may direct calls to separate functions and use this 
-// 	 			//as a routing function only depending on how
-// 	 			//large it gets.
-//  				$('.flexslider-instagram').flexslider({
-// 				    selector: ".slides-instagram > li",
-// 				    animation: "slide",
-// 				    namespace: "cartogram-slider-instagram",
-// 				    prevText: "<i class='icon-arrow-left'></i>",
-// 	    			nextText: "<i class='icon-arrow-right'></i>",
-// 				    directionNav: true,
-// 				    controlNav: false,
-// 				    slideshow: false,
-// 				    pauseOnHover: true,
-// 				    slideshowSpeed: 5000,
-// 				    animationLoop: true,
-// 				    keyboard: false
-// 				});
-// 	 		case "about-us":
-// 	 			//Maybe may direct calls to separate functions and use this 
-// 	 			//as a routing function only depending on how
-// 	 			//large it gets.
-//  				$('.flexslider-players').flexslider({
-// 				    selector: ".slides-players > li",
-// 				    animation: "slide",
-// 				    namespace: "cartogram-slider-players",
-// 				    prevText: "<i class='icon-arrow-left'></i>",
-// 	    			nextText: "<i class='icon-arrow-right'></i>",
-// 				    directionNav: true,
-// 				    controlNav: true,
-// 				    slideshow: false,
-// 				    pauseOnHover: true,
-// 				    slideshowSpeed: 5000,
-// 				    animationLoop: true,
-// 				    keyboard: false
-// 				});
-// 	 		case "beers":
-// 		 		$('.beersFlexslider').flexslider({
-// 				    selector: ".beers_slides > li",
-// 				    animation: "slide",
-// 				    namespace: "cartogram-slider-beers",
-// 				    prevText: "<i class='icon-arrow-left'></i>",
-// 	    			nextText: "<i class='icon-arrow-right'></i>",
-// 				    directionNav: true,
-// 				    controlNav: true,
-// 				    slideshow: false,
-// 				    pauseOnHover: true,
-// 				    slideshowSpeed: 5000,
-// 				    animationLoop: true,
-// 				    keyboard: false
-// 				});
-// 				break;
-// 			//Default will be all pages within pagination.
-// 	 		default:
-
-// 	 			break;
-// 	 	}
-// 	 }	
-
-
-
-// 	//Helper function to determine what type of event to listen for 
-// 	//depending on the browser. Used for CSS transition "callbacks".
-// 	function whichTransitionEvent() {
-// 	    var t;
-// 	    var el = document.createElement('fakeelement');
-// 	    var transitions = {
-// 	      'transition':'transitionend',
-// 	      'OTransition':'oTransitionEnd',
-// 	      'MozTransition':'transitionend',
-// 	      'WebkitTransition':'webkitTransitionEnd'
-// 	    }
-
-// 	    for(t in transitions){
-// 	        if( el.style[t] !== undefined ){
-// 	            return transitions[t];
-// 	        }
-// 	    }
-// 	}
-
-
-// }); // End of document.ready
