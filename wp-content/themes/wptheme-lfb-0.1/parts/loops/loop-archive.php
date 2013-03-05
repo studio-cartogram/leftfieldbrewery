@@ -38,7 +38,7 @@ global $slug; ?>
 								echo'<div class="row  bg-cream collapse">';
 							} ?>
 
-							<div class="columns six format-text rule-right bg-cream">
+							<div class="columns six format-text rule-right bg-cream post-small">
 								<?php get_template_part('parts/content/content', 'excerpt'); ?>
 							</div>
 							<?php if (($count % 2 == 0) || ($count == $total)) {
