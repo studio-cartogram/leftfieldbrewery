@@ -6377,7 +6377,6 @@ ul#social > li a:hover {
   opacity: 0;
   -webkit-transition: 3s opacity linear;
   -moz-transition: 3s opacity linear;
-  -ms-transition: 3s opacity linear;
   -o-transition: 3s opacity linear;
   transition: 3s opacity linear;
 }
@@ -6390,35 +6389,26 @@ ul#social > li a:hover {
   position: absolute;
 }
 
-<<<<<<< HEAD
-/* line 24, ../scss/parts/_loader.scss */
+/* line 25, ../scss/parts/_loader.scss */
 .showLoader {
   opacity: 1;
   display: block;
 }
 
-/* line 29, ../scss/parts/_loader.scss */
+/* line 30, ../scss/parts/_loader.scss */
 #container-slider {
   opacity: 1;
   -webkit-transition: 3s opacity linear;
   -moz-transition: 3s opacity linear;
-  -ms-transition: 3s opacity linear;
   -o-transition: 3s opacity linear;
   transition: 3s opacity linear;
 }
 
-/* line 34, ../scss/parts/_loader.scss */
+/* line 35, ../scss/parts/_loader.scss */
 .loadingContent {
   opacity: 0.5;
 }
 
-=======
-/* line 21, ../scss/parts/_loader.scss */
-.loading #loader {
-  display: block;
-}
-
->>>>>>> 65d9e1edcf685562c1d48eb2c8f1f9b854387725
 /* line 1, ../scss/vendor/_av-styles.scss */
 #av-overlay-wrap {
   background: rgba(12, 34, 63, 0.95);
@@ -7555,27 +7545,6 @@ body {
   bottom: 3px;
 }
 
-<<<<<<< HEAD
-=======
-/* line 54, ../scss/_screen.scss */
-.slider {
-  opacity: 1;
-  -webkit-transition: 10s opacity linear;
-  -moz-transition: 10s opacity linear;
-  -o-transition: 10s opacity linear;
-  transition: 10s opacity linear;
-}
-
-/* line 59, ../scss/_screen.scss */
-.loadingContent {
-  opacity: 0.5;
-  -webkit-transition: 10s opacity linear;
-  -moz-transition: 10s opacity linear;
-  -o-transition: 10s opacity linear;
-  transition: 10s opacity linear;
-}
-
->>>>>>> 65d9e1edcf685562c1d48eb2c8f1f9b854387725
 /* line 2, ../scss/components/modules/_topbar.scss */
 .top-bar ul > li.name a {
   line-height: 60px;
