@@ -20,21 +20,6 @@
 	}
 	@include transition(3s opacity linear);
 }
-
-
-.showLoader {
-	opacity: 1;
-	display: block;
+.loading #loader {
+	display:block;
 }
-
-#container-slider {
-	opacity: 1;
-	@include transition(3s opacity linear);
-}
-
-.loadingContent {
-	opacity: 0.5;
-	//@include transition(10s opacity linear);
-}
-  
-
