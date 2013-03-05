@@ -83,6 +83,35 @@
   font-weight:bold;
   line-height:1.4;
 }
+.post-text {
+  .validation_message {
+    position: absolute;
+    z-index: 1;
+    background: $white;
+    right: 15px;
+    margin-top:-1px;
+    color: $red;
+    font-weight:bold;
+    border:1px solid $red;
+    border-top:1px solid $white !important;
+    padding:2px 25px;
+    @include font-size(13);
+    &:before {
+      position:absolute;
+      left:10px;
+      top:5px;
+      @include cssTriangle(4px, $red, bottom);
+    }
+  }
+  .gform_body .gform_fields .gfield_error {
+    input {
+      border-bottom-color:$red !important;
+      background:$white;
+    }
+    
+  }
+  
+}
 
 .post-text {
   .gform_heading {

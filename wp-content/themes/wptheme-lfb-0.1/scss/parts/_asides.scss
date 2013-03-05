@@ -261,6 +261,7 @@
 		@extend .border-bottom-white;
 		@include rule(right, false, $white);
 		text-align:center;
+		overflow:hidden;
 		&.active a:after {
 			content: ' ';
 			position:absolute;
