@@ -220,7 +220,7 @@
           label {
             display:block;
             float:left;
-            padding:15px;
+            padding:10px 0 0 20px ;
             @include font-size(16)
           }
         }
@@ -233,6 +233,27 @@
     border-left:none;
     border-right:none;
   } 
+  form.custom ul li span.custom {
+    display: inline-block;
+    width: 46px;
+    left: -1px;
+    height: 46px;
+    position: relative;
+    top: -1px;
+    color:$navy;
+    border: solid 1px;
+    background: none;
+    float:left;
+    @extend .icon-cross;
+    cursor:pointer;
+    margin-bottom:-2px;
+    &.checkbox.checked:before {
+      @include font-size(45);
+      color:$navy;
+      content: "\e010";
+      top: 2px;
+    }
+  }
 }
 
 .gforms_confirmation_message {

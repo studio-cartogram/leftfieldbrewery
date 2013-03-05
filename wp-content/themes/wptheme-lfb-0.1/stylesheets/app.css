@@ -5014,7 +5014,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
 /* line 7, ../scss/font/_classes.scss */
-.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .post-text .gform_body .gform_fields li.label-icon label:before, .icon-logo:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before {
+.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .post-text .gform_body .gform_fields li.label-icon label:before, .icon-logo:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .post-text form.custom ul li span.custom:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -5104,7 +5104,7 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 63, ../scss/font/_classes.scss */
-.icon-cross:before {
+.icon-cross:before, .post-text form.custom ul li span.custom:before {
   content: "\e010";
 }
 
@@ -6322,7 +6322,7 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li .gfield_checkbox label {
   display: block;
   float: left;
-  padding: 15px;
+  padding: 10px 0 0 20px;
   font-size: 16px;
   font-size: 1.6rem;
 }
@@ -6333,8 +6333,31 @@ ul#social > li a:hover {
   border-left: none;
   border-right: none;
 }
+/* line 236, ../scss/parts/_gravity-forms.scss */
+.post-text form.custom ul li span.custom {
+  display: inline-block;
+  width: 46px;
+  left: -1px;
+  height: 46px;
+  position: relative;
+  top: -1px;
+  color: #0c223f;
+  border: solid 1px;
+  background: none;
+  float: left;
+  cursor: pointer;
+  margin-bottom: -2px;
+}
+/* line 250, ../scss/parts/_gravity-forms.scss */
+.post-text form.custom ul li span.custom.checkbox.checked:before {
+  font-size: 45px;
+  font-size: 4.5rem;
+  color: #0c223f;
+  content: "\e010";
+  top: 2px;
+}
 
-/* line 238, ../scss/parts/_gravity-forms.scss */
+/* line 259, ../scss/parts/_gravity-forms.scss */
 .gforms_confirmation_message {
   padding: 20px;
 }
