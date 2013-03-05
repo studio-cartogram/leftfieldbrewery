@@ -125,7 +125,7 @@ App.flexsliderInit = function () {
 	$('.flexslider-instagram').flexslider({
 	    selector: ".slides-instagram > li",
 	    animation: "slide",
-	    namespace: "cartogram-slider-instagram",
+	    namespace: "cartogram-slider-internal-",
 	    prevText: "<i class='icon-arrow-left'></i>",
 		nextText: "<i class='icon-arrow-right'></i>",
 	    directionNav: true,
@@ -140,7 +140,7 @@ App.flexsliderInit = function () {
 	$('.flexslider-players').flexslider({
 	    selector: ".slides-players > li",
 	    animation: "slide",
-	    namespace: "cartogram-slider-players",
+	    namespace: "cartogram-slider-sidebar-",
 	    prevText: "<i class='icon-arrow-left'></i>",
 		nextText: "<i class='icon-arrow-right'></i>",
 	    directionNav: true,
@@ -152,10 +152,10 @@ App.flexsliderInit = function () {
 	    keyboard: false
 	});
 
-	$('.beersFlexslider').flexslider({
+	$('.flexslider-beers').flexslider({
 	    selector: ".beers_slides > li",
 	    animation: "slide",
-	    namespace: "cartogram-slider-beers",
+	    namespace: "cartogram-slider-internal-",
 	    prevText: "<i class='icon-arrow-left'></i>",
 		nextText: "<i class='icon-arrow-right'></i>",
 	    directionNav: true,
@@ -164,7 +164,10 @@ App.flexsliderInit = function () {
 	    pauseOnHover: true,
 	    slideshowSpeed: 5000,
 	    animationLoop: true,
-	    keyboard: false
+	    keyboard: false,
+	    smoothHeight: true,            //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode  
+
+
 	});
 
 };// App.addFlexslider().

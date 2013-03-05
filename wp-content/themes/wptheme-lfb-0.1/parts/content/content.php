@@ -10,7 +10,6 @@
 				</div>
 			</div>
 		</div>
-		<?php edit_post_link(); ?>
 	</div>
 	<div class="columns four pull-eight">
 		<?php if (is_front_page()) {

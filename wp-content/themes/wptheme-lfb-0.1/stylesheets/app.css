@@ -5350,7 +5350,7 @@ h6 {
 
 /* line 135, ../scss/base/_typography.scss */
 .post-text {
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   background: #fefcf8;
 }
 /* line 138, ../scss/base/_typography.scss */
@@ -6218,20 +6218,26 @@ ul#social > li a:hover {
   display: block;
 }
 /* line 135, ../scss/parts/_gravity-forms.scss */
+.post-text form {
+  margin: 0;
+  padding: 0 0 80px;
+  background: #fefcf8;
+}
+/* line 140, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body {
   padding: 0;
 }
-/* line 137, ../scss/parts/_gravity-forms.scss */
+/* line 143, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields {
   list-style: none;
   margin: 50px 0 0 0;
   padding: 0;
 }
-/* line 141, ../scss/parts/_gravity-forms.scss */
+/* line 147, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields label {
   display: none;
 }
-/* line 144, ../scss/parts/_gravity-forms.scss */
+/* line 150, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields input, .post-text .gform_body .gform_fields textarea {
   background-color: transparent;
   margin: 0px;
@@ -6244,22 +6250,22 @@ ul#social > li a:hover {
   -webkit-box-shadow: 0 0 0;
   -moz-box-shadow: 0 0 0;
   box-shadow: 0 0 0;
-  color: white;
+  color: #0c223f;
   font-size: 16px;
   font-size: 1.6rem;
   padding: 25px;
 }
-/* line 154, ../scss/parts/_gravity-forms.scss */
+/* line 160, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields input:active, .post-text .gform_body .gform_fields input:focus, .post-text .gform_body .gform_fields textarea:active, .post-text .gform_body .gform_fields textarea:focus {
   background-color: white;
   color: #0c223f;
   border-color: white;
 }
-/* line 161, ../scss/parts/_gravity-forms.scss */
+/* line 167, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li {
   margin: 0;
 }
-/* line 163, ../scss/parts/_gravity-forms.scss */
+/* line 169, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .ginput_complex {
   *zoom: 1;
 }
@@ -6272,7 +6278,7 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li .ginput_complex:after {
   clear: both;
 }
-/* line 166, ../scss/parts/_gravity-forms.scss */
+/* line 172, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .ginput_complex span {
   position: relative;
   width: 66.66667%;
@@ -6292,20 +6298,20 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li .ginput_complex span:after {
   top: 0px;
 }
-/* line 170, ../scss/parts/_gravity-forms.scss */
+/* line 176, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .ginput_complex span:first-child {
   width: 33.33333%;
   padding: 0;
 }
-/* line 177, ../scss/parts/_gravity-forms.scss */
+/* line 183, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .ginput_complex span label {
   display: none;
 }
-/* line 182, ../scss/parts/_gravity-forms.scss */
+/* line 188, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li.label-icon {
   position: relative;
 }
-/* line 184, ../scss/parts/_gravity-forms.scss */
+/* line 190, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li.label-icon label {
   display: block !important;
   position: absolute;
@@ -6315,7 +6321,7 @@ ul#social > li a:hover {
   width: 50px;
   visibility: hidden;
 }
-/* line 193, ../scss/parts/_gravity-forms.scss */
+/* line 199, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li.label-icon label:before {
   visibility: visible;
   position: absolute;
@@ -6334,17 +6340,17 @@ ul#social > li a:hover {
   font-size: 1.6rem;
   line-height: 3;
 }
-/* line 211, ../scss/parts/_gravity-forms.scss */
+/* line 217, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li.label-icon input {
   padding-left: 80px;
 }
-/* line 216, ../scss/parts/_gravity-forms.scss */
+/* line 222, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before {
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 3;
 }
-/* line 223, ../scss/parts/_gravity-forms.scss */
+/* line 229, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li#field_2_1 label:first-child {
   display: block !important;
   text-align: center;
@@ -6364,13 +6370,13 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li#field_2_1 label:first-child:after {
   top: 0px;
 }
-/* line 231, ../scss/parts/_gravity-forms.scss */
+/* line 237, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li#field_2_3 label {
   display: block !important;
   text-align: center;
   margin-top: 2px;
 }
-/* line 238, ../scss/parts/_gravity-forms.scss */
+/* line 244, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li#field_2_3 .ginput_container {
   position: relative;
 }
@@ -6388,19 +6394,19 @@ ul#social > li a:hover {
 .post-text .gform_body .gform_fields li#field_2_3 .ginput_container:after {
   top: 0px;
 }
-/* line 242, ../scss/parts/_gravity-forms.scss */
+/* line 248, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .gfield_checkbox {
   list-style: none;
   margin: 2px 0 0 0;
   padding: 0;
 }
-/* line 248, ../scss/parts/_gravity-forms.scss */
+/* line 254, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .gfield_checkbox input {
   float: left;
   height: 50px;
   width: 50px;
 }
-/* line 254, ../scss/parts/_gravity-forms.scss */
+/* line 260, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_body .gform_fields li .gfield_checkbox label {
   display: block !important;
   float: left;
@@ -6408,14 +6414,14 @@ ul#social > li a:hover {
   font-size: 16px;
   font-size: 1.6rem;
 }
-/* line 264, ../scss/parts/_gravity-forms.scss */
+/* line 270, ../scss/parts/_gravity-forms.scss */
 .post-text .button, .post-text #pagination .pagination-link a, #pagination .pagination-link .post-text a, .post-text #av-overlay .submit input[type=submit], #av-overlay .submit .post-text input[type=submit] {
   padding: 25px 0;
   left: -1px;
   border-left: none;
   border-right: none;
 }
-/* line 270, ../scss/parts/_gravity-forms.scss */
+/* line 276, ../scss/parts/_gravity-forms.scss */
 .post-text form.custom ul li span.custom {
   display: inline-block;
   width: 46px;
@@ -6430,7 +6436,7 @@ ul#social > li a:hover {
   cursor: pointer;
   margin-bottom: -2px;
 }
-/* line 284, ../scss/parts/_gravity-forms.scss */
+/* line 290, ../scss/parts/_gravity-forms.scss */
 .post-text form.custom ul li span.custom.checkbox.checked:before {
   font-size: 45px;
   font-size: 4.5rem;
@@ -6439,7 +6445,7 @@ ul#social > li a:hover {
   top: 2px;
 }
 
-/* line 293, ../scss/parts/_gravity-forms.scss */
+/* line 303, ../scss/parts/_gravity-forms.scss */
 .gforms_confirmation_message {
   padding: 20px;
 }
@@ -6748,10 +6754,10 @@ ul.block-grid.excerpt-loop li {
 .flexslider a:active,
 .cartogram-slider-container a:focus,
 .flexslider a:focus,
-.cartogram-slider-players-container a:active,
-.cartogram-slider-players a:active,
-.cartogram-slider-instagramviewport a:active,
-.cartogram-slider-instagramviewport a:focus {
+.cartogram-slider-sidebar-container a:active,
+.cartogram-slider-sidebar- a:active,
+.cartogram-slider-internal-viewport a:active,
+.cartogram-slider-internal-viewport a:focus {
   outline: none;
 }
 
@@ -6768,13 +6774,13 @@ ul.block-grid.excerpt-loop li {
 /* FlexSlider Necessary Styles
 *********************************/
 /* line 30, ../scss/vendor/_flexslider.scss */
-.flexslider, .flexslider-players, .cartogram-slider-instagram {
+.flexslider, .flexslider-sidebar-, .cartogram-slider-internal- {
   margin: 0;
   padding: 0;
 }
 
 /* line 31, ../scss/vendor/_flexslider.scss */
-.flexslider .slides > li, .cartogram-slider-players .slides-players > li, .cartogram-slider-instgram .slides-instagram > li {
+.flexslider .slides > li, .cartogram-slider-sidebar-viewport > ul > li, .cartogram-slider-internal-viewport > ul > li {
   position: relative;
   display: none;
   -webkit-backface-visibility: hidden;
@@ -6782,7 +6788,7 @@ ul.block-grid.excerpt-loop li {
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 /* line 32, ../scss/vendor/_flexslider.scss */
-.flexslider .slides img, .cartogram-slider-players .slides-players img {
+.flexslider .slides img, .cartogram-slider-sidebar-viewport > ul img, .cartogram-slider-internal-viewport > ul img {
   width: 100%;
   display: block;
 }
@@ -6824,16 +6830,14 @@ html[xmlns] .slides {
 /* FlexSlider Default Theme
 *********************************/
 /* line 48, ../scss/vendor/_flexslider.scss */
-.flexslider, .cartogram-slider-players {
+.flexslider, .cartogram-slider-sidebar-viewport {
   margin: 0 0 0px;
   position: relative;
   zoom: 1;
 }
 
 /* line 49, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-viewport, .cartogram-slider-players-viewport {
-  overflow: visible !important;
-  max-height: 2000px;
+.cartogram-slider-viewport, .cartogram-slider-sidebar-viewport {
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   transition: all 1s ease;
@@ -6845,17 +6849,23 @@ html[xmlns] .slides {
 }
 
 /* line 51, ../scss/vendor/_flexslider.scss */
-.flexslider .slides, .cartogram-slider-players .slides-players {
+.flexslider .slides, .cartogram-slider-sidebar-viewport > ul {
   zoom: 1;
 }
 
-/* line 53, ../scss/vendor/_flexslider.scss */
+/* FlexSlider Siedbar Theme */
+/* line 55, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-sidebar-viewport {
+  margin: 0 0 50px;
+}
+
+/* line 59, ../scss/vendor/_flexslider.scss */
 .carousel li {
   margin-right: 5px;
 }
 
-/* line 62, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-control-paging, .cartogram-slider-playerscontrol-paging {
+/* line 68, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging, .cartogram-slider-sidebar-control-paging, .cartogram-slider-internal-control-paging {
   padding: 0;
   list-style: none;
   text-align: center;
@@ -6865,16 +6875,16 @@ html[xmlns] .slides {
   z-index: 10;
   margin: 0;
 }
-/* line 71, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-control-paging li, .cartogram-slider-playerscontrol-paging li {
+/* line 77, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging li, .cartogram-slider-sidebar-control-paging li, .cartogram-slider-internal-control-paging li {
   list-style: none;
   display: inline-block;
   margin: 0 4px;
   zoom: 1;
   *display: inline;
 }
-/* line 77, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-control-paging li a, .cartogram-slider-playerscontrol-paging li a {
+/* line 83, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging li a, .cartogram-slider-sidebar-control-paging li a, .cartogram-slider-internal-control-paging li a {
   color: #0c223f;
   text-indent: -9999px;
   display: block;
@@ -6894,12 +6904,12 @@ html[xmlns] .slides {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 89, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-control-paging li a:hover, .cartogram-slider-playerscontrol-paging li a:hover {
+/* line 95, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging li a:hover, .cartogram-slider-sidebar-control-paging li a:hover, .cartogram-slider-internal-control-paging li a:hover {
   background: #0c223f;
 }
-/* line 92, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-control-paging li a.cartogram-slider-active, .cartogram-slider-control-paging li a.cartogram-slider-playersactive, .cartogram-slider-playerscontrol-paging li a.cartogram-slider-active, .cartogram-slider-playerscontrol-paging li a.cartogram-slider-playersactive {
+/* line 98, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-control-paging li a.cartogram-slider-active, .cartogram-slider-control-paging li a.cartogram-slider-sidebar-active, .cartogram-slider-sidebar-control-paging li a.cartogram-slider-active, .cartogram-slider-sidebar-control-paging li a.cartogram-slider-sidebar-active, .cartogram-slider-internal-control-paging li a.cartogram-slider-active, .cartogram-slider-internal-control-paging li a.cartogram-slider-sidebar-active {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -6909,7 +6919,7 @@ html[xmlns] .slides {
 }
 
 /* captions */
-/* line 101, ../scss/vendor/_flexslider.scss */
+/* line 107, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-caption {
   position: absolute;
   bottom: 20px;
@@ -6926,19 +6936,19 @@ html[xmlns] .slides {
 }
 
 /* Direction Nav */
-/* line 117, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav, .cartogram-slider-instagramdirection-nav, .cartogram-slider-playersdirection-nav {
+/* line 123, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav, .cartogram-slider-internal-direction-nav, .cartogram-slider-sidebar-direction-nav {
   *height: 0;
   width: 100%;
   list-style: none;
 }
-/* line 122, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li:nth-child(1):after, .cartogram-slider-direction-nav li:nth-child(1):before, .cartogram-slider-instagramdirection-nav li:nth-child(1):after, .cartogram-slider-instagramdirection-nav li:nth-child(1):before, .cartogram-slider-playersdirection-nav li:nth-child(1):after, .cartogram-slider-playersdirection-nav li:nth-child(1):before {
+/* line 128, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li:nth-child(1):after, .cartogram-slider-direction-nav li:nth-child(1):before, .cartogram-slider-internal-direction-nav li:nth-child(1):after, .cartogram-slider-internal-direction-nav li:nth-child(1):before, .cartogram-slider-sidebar-direction-nav li:nth-child(1):after, .cartogram-slider-sidebar-direction-nav li:nth-child(1):before {
   left: auto;
   right: -15px;
 }
-/* line 128, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li:after, .cartogram-slider-direction-nav li:before, .cartogram-slider-instagramdirection-nav li:after, .cartogram-slider-instagramdirection-nav li:before, .cartogram-slider-playersdirection-nav li:after, .cartogram-slider-playersdirection-nav li:before {
+/* line 134, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li:after, .cartogram-slider-direction-nav li:before, .cartogram-slider-internal-direction-nav li:after, .cartogram-slider-internal-direction-nav li:before, .cartogram-slider-sidebar-direction-nav li:after, .cartogram-slider-sidebar-direction-nav li:before {
   height: 1px;
   width: 15px;
   content: ' ';
@@ -6947,12 +6957,12 @@ html[xmlns] .slides {
   top: 43px;
   left: -15px;
 }
-/* line 137, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li:before, .cartogram-slider-instagramdirection-nav li:before, .cartogram-slider-playersdirection-nav li:before {
+/* line 143, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li:before, .cartogram-slider-internal-direction-nav li:before, .cartogram-slider-sidebar-direction-nav li:before {
   top: 40px;
 }
-/* line 141, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li a, .cartogram-slider-instagramdirection-nav li a, .cartogram-slider-playersdirection-nav li a {
+/* line 147, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a, .cartogram-slider-internal-direction-nav li a, .cartogram-slider-sidebar-direction-nav li a {
   position: absolute;
   color: #fefcf8;
   background: #0c223f;
@@ -6966,81 +6976,81 @@ html[xmlns] .slides {
   z-index: 10;
   border: 1px solid #0c223f;
 }
-/* line 153, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li a:hover, .cartogram-slider-instagramdirection-nav li a:hover, .cartogram-slider-playersdirection-nav li a:hover {
+/* line 159, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a:hover, .cartogram-slider-internal-direction-nav li a:hover, .cartogram-slider-sidebar-direction-nav li a:hover {
   background: #fefcf8;
   color: #0c223f;
 }
-/* line 157, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li a.cartogram-slider-next, .cartogram-slider-instagramdirection-nav li a.cartogram-slider-next, .cartogram-slider-playersdirection-nav li a.cartogram-slider-next {
+/* line 163, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a.cartogram-slider-next, .cartogram-slider-internal-direction-nav li a.cartogram-slider-next, .cartogram-slider-sidebar-direction-nav li a.cartogram-slider-next {
   right: -70px;
 }
-/* line 161, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav li a.cartogram-slider-prev, .cartogram-slider-instagramdirection-nav li a.cartogram-slider-prev, .cartogram-slider-playersdirection-nav li a.cartogram-slider-prev {
+/* line 167, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-direction-nav li a.cartogram-slider-prev, .cartogram-slider-internal-direction-nav li a.cartogram-slider-prev, .cartogram-slider-sidebar-direction-nav li a.cartogram-slider-prev {
   left: -70px;
 }
 
-/* line 170, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-instagramdirection-nav li:before, .cartogram-slider-instagramdirection-nav li:after {
+/* line 176, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-internal-direction-nav li:before, .cartogram-slider-internal-direction-nav li:after {
   display: none;
 }
-/* line 173, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-instagramdirection-nav li a {
+/* line 179, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-internal-direction-nav li a {
   background: none;
   border: none;
 }
-/* line 176, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-instagramdirection-nav li a.cartogram-slider-instagramprev {
+/* line 182, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-internal-direction-nav li a.cartogram-slider-internal-prev {
   left: 40px;
   top: 50%;
   margin-top: -20px;
 }
-/* line 181, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-instagramdirection-nav li a.cartogram-slider-instagramnext {
+/* line 187, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-internal-direction-nav li a.cartogram-slider-internal-next {
   right: 40px;
   top: 50%;
   margin-top: -20px;
 }
-/* line 186, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-instagramdirection-nav li a:hover {
+/* line 192, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-internal-direction-nav li a:hover {
   background: none;
 }
 
-/* line 196, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-playersdirection-nav li:before, .cartogram-slider-playersdirection-nav li:after {
+/* line 202, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-sidebar-direction-nav li:before, .cartogram-slider-sidebar-direction-nav li:after {
   display: none;
 }
-/* line 199, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-playersdirection-nav li a {
+/* line 205, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-sidebar-direction-nav li a {
   background: none;
   border: none;
   color: #0c223f;
   z-index: 11;
 }
-/* line 204, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-playersdirection-nav li a.cartogram-slider-playersprev {
+/* line 210, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-sidebar-direction-nav li a.cartogram-slider-sidebar-prev {
   left: 0px;
   top: 100%;
   margin-top: 0px;
 }
-/* line 209, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-playersdirection-nav li a.cartogram-slider-playersnext {
+/* line 215, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-sidebar-direction-nav li a.cartogram-slider-sidebar-next {
   right: 0px;
   top: 100%;
   margin-top: 0px;
 }
-/* line 214, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-playersdirection-nav li a:hover {
+/* line 220, ../scss/vendor/_flexslider.scss */
+.cartogram-slider-sidebar-direction-nav li a:hover {
   background: none;
   color: #ff4337;
 }
 
-/* line 223, ../scss/vendor/_flexslider.scss */
+/* line 229, ../scss/vendor/_flexslider.scss */
 .flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {
   opacity: 1;
 }
 
-/* line 224, ../scss/vendor/_flexslider.scss */
+/* line 230, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav .cartogram-slider-disabled, .cartogram-slider-disabled, .cartogram-slider-disabled:hover {
   opacity: .3!important;
   filter: alpha(opacity=30);
@@ -7380,11 +7390,11 @@ html[xmlns] .slides {
 }
 
 /* line 141, ../scss/_helpers.scss */
-.double-bordered {
+.double-bordered, .post-text .gform_confirmation_message_2 {
   position: relative;
 }
 /* line 3, ../scss/_mixins.scss */
-.double-bordered:before, .double-bordered:after {
+.double-bordered:before, .post-text .gform_confirmation_message_2:before, .double-bordered:after, .post-text .gform_confirmation_message_2:after {
   height: 1px;
   background: #0c223f;
   content: ' ';
@@ -7394,7 +7404,7 @@ html[xmlns] .slides {
   top: -3px;
 }
 /* line 24, ../scss/_mixins.scss */
-.double-bordered:after {
+.double-bordered:after, .post-text .gform_confirmation_message_2:after {
   top: 0px;
 }
 
