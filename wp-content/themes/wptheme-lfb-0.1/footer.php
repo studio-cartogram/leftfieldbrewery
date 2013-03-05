@@ -55,4 +55,3 @@
 		</div>
 	</div>
 </section>	
-<div id="loader"><span>LOADING</span></div>

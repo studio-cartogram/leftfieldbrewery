@@ -18,6 +18,7 @@
 			<ul class="cartogram-slider-direction-nav"><li><a class="cartogram-slider-prev" href="#"><i class="icon-arrow-left"></i></a></li><li><a class="cartogram-slider-next" href="#"><i class="icon-arrow-right"></i></a></li></ul>
 		</div>
 	</div>	
+	<div id="loader"><span>LOADING</span></div>
 </div>
 <?php get_footer() ?>
 <?php get_template_part('parts/shared/html-footer'); ?>
