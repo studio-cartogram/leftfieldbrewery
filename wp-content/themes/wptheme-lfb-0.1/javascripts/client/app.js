@@ -23,6 +23,15 @@ App.cache = function () {
 	/* Store global variables. */
 	App.vars = {};
 
+	/* These are the request to be made */
+	App.vars.request_urls = [
+		"home",
+		"about-us",
+		"beers",
+		"highlights",
+		"contact-us"
+	];
+
 	// 	/* The current slide the flexslider is on.*/
 	App.vars.currentSliderIndex = 0;
 
@@ -133,7 +142,7 @@ App.flexsliderInit = function () {
 	    namespace: "cartogram-slider-",
 	    prevText: "<i class='icon-arrow-left'></i>",
 	    nextText: "<i class='icon-arrow-right'></i>",
-	    directionNav: false,
+	    directionNav: true,
 	    controlNav: false,
 	    slideshow: false,
 	    pauseOnHover: true,
@@ -141,6 +150,62 @@ App.flexsliderInit = function () {
 	    animationLoop: true,
 	    keyboard: false,
 	    smoothHeight: true,
+	    start: function (slider) {
+	    	$("#container-slider").toggleClass("loading", true);
+	    	/* Note the page already loaded. */
+	    	var loaded = getEnding(document.URL);
+	    	/* Will be prepending slides until we reach the slide that is already loaded. */
+	    	var prepend = true;
+	    	if (loaded == "") {
+	    		//lfb.ca/ should point to home.
+	    		loaded = "home";
+	    	}
+
+	    	/* If loaded page is highlights/___ or beers/__, want to route it. */
+	    	var underscoreIndex = loaded.indexOf("_");
+	    	if (underscoreIndex !== -1) {
+	    		loaded = loaded.substring(0, underscoreIndex);
+	    	}
+
+	    	//Request all the pages. Prepend them or append them to .slides
+	    	for (var i = 0; i < App.vars.request_urls.length; i++) {
+	    		console.log(i);
+	    		/* The request to be made. */
+	    		var request_url = App.vars.request_urls[i];
+	    		
+	    		//Prepend/append determined:
+	    		if (loaded === request_url) {
+	    			prepend = false;
+	    			console.log('skipping and switching to append: ' + request_url);
+	    			continue;
+	    		}
+				$.ajax({
+					async: false,
+					type : "post",
+					dataType : "html",
+					url: AjaxResources.ajax_url,
+					data: {
+						action: "page",
+						url: request_url
+					},
+					success: function(html) {
+
+						var newSlide = '<li class="slide' + i + '">' + html + "</li>";
+						if (prepend) {
+							$(".slides").prepend(newSlide);
+						} else {
+							$(".slides").append(newSlide);
+						}
+						slider.addSlide(".slide" + i);
+					},
+					error: function(response, html, something) {
+						console.log("fail: " + response + html + something);
+					}
+				});
+	    	}
+
+	    	$("#container-slider").toggleClass("loading", false);
+	    },
 	    after: function (slider) {
 	    	console.log("The slider is currently on: " + App.vars.currentSliderIndex);
 	    }
@@ -153,9 +218,7 @@ App.flexsliderInit = function () {
 		var targetIndex = getIndexToFocusOn(request_url);	
 	}
 
-	console.log("initass");
-
-	focusFlexSlider(targetIndex);
+	// focusFlexSlider(targetIndex);
 
 };//End App.addFlexslider().
 
@@ -231,7 +294,6 @@ jQuery(document).ready(function ($) {
 
 		} //Do not need to do anything if the flexslider is already focused on
 		//the one we want.
-
 
 		//Toggle class "current_page_item" for nav <a>'s
 		$('.current-menu-item').removeClass("current-menu-item");
