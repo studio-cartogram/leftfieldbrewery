@@ -6412,24 +6412,15 @@ ul#social > li a:hover {
   position: absolute;
 }
 
-/* line 25, ../scss/parts/_loader.scss */
-.showLoader {
-  opacity: 1;
+/* line 23, ../scss/parts/_loader.scss */
+.loading #loader {
   display: block;
 }
 
-/* line 30, ../scss/parts/_loader.scss */
-#container-slider {
-  opacity: 1;
-  -webkit-transition: 3s opacity linear;
-  -moz-transition: 3s opacity linear;
-  -o-transition: 3s opacity linear;
-  transition: 3s opacity linear;
-}
-
-/* line 35, ../scss/parts/_loader.scss */
-.loadingContent {
-  opacity: 0.5;
+/* line 1, ../scss/parts/_archives.scss */
+ul.block-grid.excerpt-loop {
+  margin: 0;
+  padding: 0;
 }
 
 /* line 1, ../scss/vendor/_av-styles.scss */
