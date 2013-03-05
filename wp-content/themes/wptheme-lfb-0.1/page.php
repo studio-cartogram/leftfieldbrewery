@@ -15,7 +15,6 @@
 			    	<?php get_template_part('parts/loops/loop', 'page') ?> 	
 			  	</ul>
 			</div>
-			<ul class="cartogram-slider-direction-nav"><li><a class="cartogram-slider-prev" href="#"><i class="icon-arrow-left"></i></a></li><li><a class="cartogram-slider-next" href="#"><i class="icon-arrow-right"></i></a></li></ul>
 		</div>
 	</div>	
 </div>

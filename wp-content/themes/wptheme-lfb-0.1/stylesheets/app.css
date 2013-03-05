@@ -6645,7 +6645,7 @@ ul#social > li a:hover {
 .cartogram-slider-players-container a:active,
 .cartogram-slider-players a:active,
 .cartogram-slider-instagramviewport a:active,
-.cartogram-slider-instagramviewport a:fcus {
+.cartogram-slider-instagramviewport a:focus {
   outline: none;
 }
 
@@ -6748,18 +6748,6 @@ html[xmlns] .slides {
   margin-right: 5px;
 }
 
-/* line 54, ../scss/vendor/_flexslider.scss */
-.flexslider .slides > li {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
-}
-/* line 56, ../scss/vendor/_flexslider.scss */
-.flexslider .slides > li.cartogram-slider-active-slide {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-/* Control Nav */
 /* line 62, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-control-paging, .cartogram-slider-playerscontrol-paging {
   padding: 0;
@@ -6942,24 +6930,11 @@ html[xmlns] .slides {
 }
 
 /* line 223, ../scss/vendor/_flexslider.scss */
-.slide-row {
-  height: 1000px;
-  background: #e6e6e6;
-  margin: 0 !important;
-}
-/* line 227, ../scss/vendor/_flexslider.scss */
-.slide-row article {
-  border: 1px solid #0c223f;
-  margin: 10px;
-  padding: 10px;
-}
-
-/* line 234, ../scss/vendor/_flexslider.scss */
 .flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {
   opacity: 1;
 }
 
-/* line 235, ../scss/vendor/_flexslider.scss */
+/* line 224, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav .cartogram-slider-disabled {
   opacity: .3!important;
   filter: alpha(opacity=30);

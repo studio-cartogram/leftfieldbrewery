@@ -18,7 +18,7 @@
 .cartogram-slider-players-container a:active,
 .cartogram-slider-players a:active,
 .cartogram-slider-instagramviewport a:active,
-.cartogram-slider-instagramviewport a:fcus,  {
+.cartogram-slider-instagramviewport a:focus,  {
 	outline: none;}
 .slides,
 .cartogram-slider-control-nav,
@@ -51,14 +51,14 @@ html[xmlns] .slides {display: block;}
 .flexslider .slides, .cartogram-slider-players .slides-players{zoom: 1;}
 
 .carousel li {margin-right: 5px}
-.flexslider .slides > li {
-	@include opacity(0.5);
-	&.cartogram-slider-active-slide {
-		@include opacity(1);
-	}
-}
+// .flexslider .slides > li {
+// 	@include opacity(0.5);
+// 	&.cartogram-slider-active-slide {
+// 		@include opacity(1);
+// 	}
+// }
 
-/* Control Nav */
+// /* Control Nav */
 .cartogram-slider-control-paging, .cartogram-slider-playerscontrol-paging {
   padding:0;
   list-style:none;
@@ -219,17 +219,6 @@ html[xmlns] .slides {display: block;}
 	}
 }
 
-
-.slide-row {
-	height:1000px;
-	background:darken($white, 10%);
-	margin:0 !important;
-	article {
-		border:1px solid $mainColor;
-		margin:10px;
-		padding:10px;
-	}
-}
 
 .flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {opacity: 1;}
 .cartogram-slider-direction-nav .cartogram-slider-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
