@@ -529,7 +529,7 @@ label.inline {
 }
 
 /* line 28, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_forms.scss */
-a.button.prefix, a.button.postfix {
+a.button.prefix, #pagination .pagination-link a.prefix, a.button.postfix, #pagination .pagination-link a.postfix {
   padding-left: 0;
   padding-right: 0;
   text-align: center;
@@ -1553,7 +1553,7 @@ that IE7/8 do not support :nth-child.
    globals.css */
 /* Normal Buttons ---------------------- */
 /* line 6, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button, #av-overlay .submit input[type=submit] {
+.button, #pagination .pagination-link a, #av-overlay .submit input[type=submit] {
   width: auto;
   background: #0c223f;
   border: 1px solid black;
@@ -1585,110 +1585,110 @@ that IE7/8 do not support :nth-child.
   /* Disabled ---------- */
 }
 /* line 9, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button:hover, #av-overlay .submit input[type=submit]:hover {
+.button:hover, #pagination .pagination-link a:hover, #av-overlay .submit input[type=submit]:hover {
   color: white;
   background-color: #040b14;
 }
 /* line 10, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button:active, #av-overlay .submit input[type=submit]:active {
+.button:active, #pagination .pagination-link a:active, #av-overlay .submit input[type=submit]:active {
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) inset;
 }
 /* line 11, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button:focus, #av-overlay .submit input[type=submit]:focus {
+.button:focus, #pagination .pagination-link a:focus, #av-overlay .submit input[type=submit]:focus {
   -webkit-box-shadow: 0 0 4px #0c223f, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 0 4px #0c223f, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 0 4px #0c223f, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   color: white;
 }
 /* line 14, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.large, #av-overlay .submit input.large[type=submit] {
+.button.large, #pagination .pagination-link a.large, #av-overlay .submit input.large[type=submit] {
   font-size: 17px;
   padding: 15px 30px 16px;
 }
 /* line 15, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.medium, #av-overlay .submit input.medium[type=submit] {
+.button.medium, #pagination .pagination-link a.medium, #av-overlay .submit input.medium[type=submit] {
   font-size: 12px;
 }
 /* line 16, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.small, #av-overlay .submit input.small[type=submit] {
+.button.small, #pagination .pagination-link a.small, #av-overlay .submit input.small[type=submit] {
   font-size: 9px;
   padding: 7px 14px 8px;
 }
 /* line 17, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.tiny, #av-overlay .submit input.tiny[type=submit] {
+.button.tiny, #pagination .pagination-link a.tiny, #av-overlay .submit input.tiny[type=submit] {
   font-size: 8px;
   padding: 5px 10px 6px;
 }
 /* line 18, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.expand, .button#av-overlay, #av-overlay .submit input#av-overlay[type=submit], #av-overlay .submit input.expand[type=submit] {
+.button.expand, #pagination .pagination-link a, .button#av-overlay, #pagination .pagination-link a#av-overlay, #av-overlay .submit input#av-overlay[type=submit], #av-overlay .submit input.expand[type=submit] {
   width: 100%;
   text-align: center;
 }
 /* line 21, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.primary, #av-overlay .submit input.primary[type=submit] {
+.button.primary, #pagination .pagination-link a.primary, #av-overlay .submit input.primary[type=submit] {
   background-color: #0c223f;
   border: 1px solid black;
 }
 /* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.primary:hover, #av-overlay .submit input.primary[type=submit]:hover {
+.button.primary:hover, #pagination .pagination-link a.primary:hover, #av-overlay .submit input.primary[type=submit]:hover {
   background-color: #040b14;
 }
 /* line 23, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.primary:focus, #av-overlay .submit input.primary[type=submit]:focus {
+.button.primary:focus, #pagination .pagination-link a.primary:focus, #av-overlay .submit input.primary[type=submit]:focus {
   -webkit-box-shadow: 0 0 4px #0c223f, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 0 4px #0c223f, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 0 4px #0c223f, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 /* line 25, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.success, #av-overlay .submit input.success[type=submit] {
+.button.success, #pagination .pagination-link a.success, #av-overlay .submit input.success[type=submit] {
   background-color: #5da423;
   border: 1px solid #396516;
 }
 /* line 26, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.success:hover, #av-overlay .submit input.success[type=submit]:hover {
+.button.success:hover, #pagination .pagination-link a.success:hover, #av-overlay .submit input.success[type=submit]:hover {
   background-color: #457a1a;
 }
 /* line 27, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.success:focus, #av-overlay .submit input.success[type=submit]:focus {
+.button.success:focus, #pagination .pagination-link a.success:focus, #av-overlay .submit input.success[type=submit]:focus {
   -webkit-box-shadow: 0 0 5px #5da423, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 0 5px #5da423, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 0 5px #5da423, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 /* line 29, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.alert, #av-overlay .submit input.alert[type=submit] {
+.button.alert, #pagination .pagination-link a.alert, #av-overlay .submit input.alert[type=submit] {
   background-color: #c60f13;
   border: 1px solid #7f0a0c;
 }
 /* line 30, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.alert:hover, #av-overlay .submit input.alert[type=submit]:hover {
+.button.alert:hover, #pagination .pagination-link a.alert:hover, #av-overlay .submit input.alert[type=submit]:hover {
   background-color: #970b0e;
 }
 /* line 31, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.alert:focus, #av-overlay .submit input.alert[type=submit]:focus {
+.button.alert:focus, #pagination .pagination-link a.alert:focus, #av-overlay .submit input.alert[type=submit]:focus {
   -webkit-box-shadow: 0 0 4px #c60f13, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 0 4px #c60f13, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 0 4px #c60f13, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 /* line 33, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.secondary, #av-overlay .submit input[type=submit], #av-overlay .button.error, #av-overlay .submit input.error[type=submit] {
+.button.secondary, #pagination .pagination-link a.secondary, #pagination .pagination-link #av-overlay a.error, #av-overlay #pagination .pagination-link a.error, #av-overlay .submit input[type=submit], #av-overlay .button.error, #av-overlay .submit input.error[type=submit] {
   background-color: #fefcf8;
   color: #523b0c;
   border: 1px solid #f4dfb5;
 }
 /* line 34, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.secondary:hover, #av-overlay .submit input[type=submit]:hover, #av-overlay .button.error:hover, #av-overlay .submit input.error[type=submit]:hover {
+.button.secondary:hover, #pagination .pagination-link a.secondary:hover, #pagination .pagination-link #av-overlay a.error:hover, #av-overlay #pagination .pagination-link a.error:hover, #av-overlay .submit input[type=submit]:hover, #av-overlay .button.error:hover, #av-overlay .submit input.error[type=submit]:hover {
   background-color: #f8e9cb;
 }
 /* line 35, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.secondary:focus, #av-overlay .submit input[type=submit]:focus, #av-overlay .button.error:focus, #av-overlay .submit input.error[type=submit]:focus {
+.button.secondary:focus, #pagination .pagination-link a.secondary:focus, #pagination .pagination-link #av-overlay a.error:focus, #av-overlay #pagination .pagination-link a.error:focus, #av-overlay .submit input[type=submit]:focus, #av-overlay .button.error:focus, #av-overlay .submit input.error[type=submit]:focus {
   -webkit-box-shadow: 0 0 5px #fefcf8, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 0 5px #fefcf8, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 0 5px #fefcf8, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 /* line 39, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.radius, #av-overlay .submit input[type=submit] {
+.button.radius, #pagination .pagination-link a.radius, #av-overlay .submit input[type=submit] {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -1696,7 +1696,7 @@ that IE7/8 do not support :nth-child.
   border-radius: 3px;
 }
 /* line 40, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.round, #av-overlay .submit input.round[type=submit] {
+.button.round, #pagination .pagination-link a.round, #av-overlay .submit input.round[type=submit] {
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
   -ms-border-radius: 1000px;
@@ -1704,19 +1704,19 @@ that IE7/8 do not support :nth-child.
   border-radius: 1000px;
 }
 /* line 43, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.full-width, #av-overlay .submit input.full-width[type=submit] {
+.button.full-width, #pagination .pagination-link a.full-width, #av-overlay .submit input.full-width[type=submit] {
   width: 100%;
   text-align: center;
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
 /* line 44, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.left-align, #av-overlay .submit input.left-align[type=submit] {
+.button.left-align, #pagination .pagination-link a.left-align, #av-overlay .submit input.left-align[type=submit] {
   text-align: left;
   text-indent: 12px;
 }
 /* line 47, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.disabled, #av-overlay .submit input.disabled[type=submit], .button[disabled], #av-overlay .submit input[disabled][type=submit] {
+.button.disabled, #pagination .pagination-link a.disabled, #av-overlay .submit input.disabled[type=submit], .button[disabled], #pagination .pagination-link a[disabled], #av-overlay .submit input[disabled][type=submit] {
   opacity: 0.6;
   cursor: default;
   background: #0c223f;
@@ -1725,31 +1725,31 @@ that IE7/8 do not support :nth-child.
   box-shadow: none;
 }
 /* line 48, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.disabled :hover, #av-overlay .submit input.disabled[type=submit] :hover, .button[disabled] :hover, #av-overlay .submit input[disabled][type=submit] :hover {
+.button.disabled :hover, #pagination .pagination-link a.disabled :hover, #av-overlay .submit input.disabled[type=submit] :hover, .button[disabled] :hover, #pagination .pagination-link a[disabled] :hover, #av-overlay .submit input[disabled][type=submit] :hover {
   background: #0c223f;
 }
 /* line 50, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.success, #av-overlay .submit input.disabled.success[type=submit], .button[disabled].success, #av-overlay .submit input[disabled].success[type=submit] {
+.button.disabled.success, #pagination .pagination-link a.disabled.success, #av-overlay .submit input.disabled.success[type=submit], .button[disabled].success, #pagination .pagination-link a[disabled].success, #av-overlay .submit input[disabled].success[type=submit] {
   background-color: #5da423;
 }
 /* line 51, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.success:hover, #av-overlay .submit input.disabled.success[type=submit]:hover, .button[disabled].success:hover, #av-overlay .submit input[disabled].success[type=submit]:hover {
+.button.disabled.success:hover, #pagination .pagination-link a.disabled.success:hover, #av-overlay .submit input.disabled.success[type=submit]:hover, .button[disabled].success:hover, #pagination .pagination-link a[disabled].success:hover, #av-overlay .submit input[disabled].success[type=submit]:hover {
   background-color: #5da423;
 }
 /* line 53, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.alert, #av-overlay .submit input.disabled.alert[type=submit], .button[disabled].alert, #av-overlay .submit input[disabled].alert[type=submit] {
+.button.disabled.alert, #pagination .pagination-link a.disabled.alert, #av-overlay .submit input.disabled.alert[type=submit], .button[disabled].alert, #pagination .pagination-link a[disabled].alert, #av-overlay .submit input[disabled].alert[type=submit] {
   background-color: #c60f13;
 }
 /* line 54, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.alert:hover, #av-overlay .submit input.disabled.alert[type=submit]:hover, .button[disabled].alert:hover, #av-overlay .submit input[disabled].alert[type=submit]:hover {
+.button.disabled.alert:hover, #pagination .pagination-link a.disabled.alert:hover, #av-overlay .submit input.disabled.alert[type=submit]:hover, .button[disabled].alert:hover, #pagination .pagination-link a[disabled].alert:hover, #av-overlay .submit input[disabled].alert[type=submit]:hover {
   background-color: #c60f13;
 }
 /* line 56, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.secondary, #av-overlay .submit input.disabled[type=submit], #av-overlay .button.disabled.error, #av-overlay .submit input.disabled.error[type=submit], .button[disabled].secondary, #av-overlay .submit input[disabled][type=submit], #av-overlay .button[disabled].error, #av-overlay .submit input[disabled].error[type=submit] {
+.button.disabled.secondary, #pagination .pagination-link a.disabled.secondary, #pagination .pagination-link #av-overlay a.disabled.error, #av-overlay #pagination .pagination-link a.disabled.error, #av-overlay .submit input.disabled[type=submit], #av-overlay .button.disabled.error, #av-overlay .submit input.disabled.error[type=submit], .button[disabled].secondary, #pagination .pagination-link a[disabled].secondary, #pagination .pagination-link #av-overlay a[disabled].error, #av-overlay #pagination .pagination-link a[disabled].error, #av-overlay .submit input[disabled][type=submit], #av-overlay .button[disabled].error, #av-overlay .submit input[disabled].error[type=submit] {
   background-color: #fefcf8;
 }
 /* line 57, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.secondary:hover, #av-overlay .submit input.disabled[type=submit]:hover, #av-overlay .button.disabled.error:hover, #av-overlay .submit input.disabled.error[type=submit]:hover, .button[disabled].secondary:hover, #av-overlay .submit input[disabled][type=submit]:hover, #av-overlay .button[disabled].error:hover, #av-overlay .submit input[disabled].error[type=submit]:hover {
+.button.disabled.secondary:hover, #pagination .pagination-link a.disabled.secondary:hover, #pagination .pagination-link #av-overlay a.disabled.error:hover, #av-overlay #pagination .pagination-link a.disabled.error:hover, #av-overlay .submit input.disabled[type=submit]:hover, #av-overlay .button.disabled.error:hover, #av-overlay .submit input.disabled.error[type=submit]:hover, .button[disabled].secondary:hover, #pagination .pagination-link a[disabled].secondary:hover, #pagination .pagination-link #av-overlay a[disabled].error:hover, #av-overlay #pagination .pagination-link a[disabled].error:hover, #av-overlay .submit input[disabled][type=submit]:hover, #av-overlay .button[disabled].error:hover, #av-overlay .submit input[disabled].error[type=submit]:hover {
   background-color: #fefcf8;
 }
 
@@ -1761,7 +1761,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
 
 @media only screen and (max-width: 767px) {
   /* line 66, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-  .button, #av-overlay .submit input[type=submit] {
+  .button, #pagination .pagination-link a, #av-overlay .submit input[type=submit] {
     display: block;
   }
 
@@ -1803,7 +1803,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
 
 /* Buttons with Dropdowns ---------------------- */
 /* line 81, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown, #av-overlay .submit input.dropdown[type=submit] {
+.button.dropdown, #pagination .pagination-link a.dropdown, #av-overlay .submit input.dropdown[type=submit] {
   position: relative;
   padding-right: 44px;
   /* Sizes */
@@ -1812,19 +1812,19 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   /* Split Dropdown Buttons */
 }
 /* line 84, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.large, #av-overlay .submit input.dropdown.large[type=submit] {
+.button.dropdown.large, #pagination .pagination-link a.dropdown.large, #av-overlay .submit input.dropdown.large[type=submit] {
   padding-right: 60px;
 }
 /* line 85, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.small, #av-overlay .submit input.dropdown.small[type=submit] {
+.button.dropdown.small, #pagination .pagination-link a.dropdown.small, #av-overlay .submit input.dropdown.small[type=submit] {
   padding-right: 28px;
 }
 /* line 86, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.tiny, #av-overlay .submit input.dropdown.tiny[type=submit] {
+.button.dropdown.tiny, #pagination .pagination-link a.dropdown.tiny, #av-overlay .submit input.dropdown.tiny[type=submit] {
   padding-right: 20px;
 }
 /* line 89, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown:after, #av-overlay .submit input.dropdown[type=submit]:after {
+.button.dropdown:after, #pagination .pagination-link a.dropdown:after, #av-overlay .submit input.dropdown[type=submit]:after {
   content: "";
   display: block;
   width: 0;
@@ -1837,7 +1837,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   margin-top: -2px;
 }
 /* line 90, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.large:after, #av-overlay .submit input.dropdown.large[type=submit]:after {
+.button.dropdown.large:after, #pagination .pagination-link a.dropdown.large:after, #av-overlay .submit input.dropdown.large[type=submit]:after {
   content: "";
   display: block;
   width: 0;
@@ -1848,7 +1848,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   right: 30px;
 }
 /* line 91, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.small:after, #av-overlay .submit input.dropdown.small[type=submit]:after {
+.button.dropdown.small:after, #pagination .pagination-link a.dropdown.small:after, #av-overlay .submit input.dropdown.small[type=submit]:after {
   content: "";
   display: block;
   width: 0;
@@ -1859,7 +1859,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   right: 14px;
 }
 /* line 92, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.tiny:after, #av-overlay .submit input.dropdown.tiny[type=submit]:after {
+.button.dropdown.tiny:after, #pagination .pagination-link a.dropdown.tiny:after, #av-overlay .submit input.dropdown.tiny[type=submit]:after {
   content: "";
   display: block;
   width: 0;
@@ -1870,7 +1870,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   right: 10px;
 }
 /* line 95, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown > ul, #av-overlay .submit input.dropdown[type=submit] > ul {
+.button.dropdown > ul, #pagination .pagination-link a.dropdown > ul, #av-overlay .submit input.dropdown[type=submit] > ul {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -1888,7 +1888,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   z-index: 40;
 }
 /* line 97, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown > ul li, #av-overlay .submit input.dropdown[type=submit] > ul li {
+.button.dropdown > ul li, #pagination .pagination-link a.dropdown > ul li, #av-overlay .submit input.dropdown[type=submit] > ul li {
   width: 100%;
   cursor: pointer;
   padding: 0;
@@ -1899,7 +1899,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   list-style: none;
 }
 /* line 98, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown > ul li a, #av-overlay .submit input.dropdown[type=submit] > ul li a {
+.button.dropdown > ul li a, #pagination .pagination-link a.dropdown > ul li a, #av-overlay .submit input.dropdown[type=submit] > ul li a {
   display: block;
   color: #555;
   font-size: 11px;
@@ -1908,12 +1908,12 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   text-align: left;
 }
 /* line 99, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown > ul li:hover, #av-overlay .submit input.dropdown[type=submit] > ul li:hover {
+.button.dropdown > ul li:hover, #pagination .pagination-link a.dropdown > ul li:hover, #av-overlay .submit input.dropdown[type=submit] > ul li:hover {
   background-color: #528fde;
   color: #222;
 }
 /* line 100, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown > ul li.divider, #av-overlay .submit input.dropdown[type=submit] > ul li.divider {
+.button.dropdown > ul li.divider, #pagination .pagination-link a.dropdown > ul li.divider, #av-overlay .submit input.dropdown[type=submit] > ul li.divider {
   min-height: 0;
   padding: 0;
   height: 1px;
@@ -1921,20 +1921,20 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   background: #ededed;
 }
 /* line 104, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.up > ul, #av-overlay .submit input.dropdown.up[type=submit] > ul {
+.button.dropdown.up > ul, #pagination .pagination-link a.dropdown.up > ul, #av-overlay .submit input.dropdown.up[type=submit] > ul {
   border-top: 1px solid #cccccc;
   border-bottom: none;
 }
 /* line 106, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown ul.no-hover.show-dropdown, #av-overlay .submit input.dropdown[type=submit] ul.no-hover.show-dropdown {
+.button.dropdown ul.no-hover.show-dropdown, #pagination .pagination-link a.dropdown ul.no-hover.show-dropdown, #av-overlay .submit input.dropdown[type=submit] ul.no-hover.show-dropdown {
   display: block !important;
 }
 /* line 108, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown:hover > ul.no-hover, #av-overlay .submit input.dropdown[type=submit]:hover > ul.no-hover {
+.button.dropdown:hover > ul.no-hover, #pagination .pagination-link a.dropdown:hover > ul.no-hover, #av-overlay .submit input.dropdown[type=submit]:hover > ul.no-hover {
   display: none;
 }
 /* line 114, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split, #av-overlay .submit input.dropdown.split[type=submit] {
+.button.dropdown.split, #pagination .pagination-link a.dropdown.split, #av-overlay .submit input.dropdown.split[type=submit] {
   padding: 0;
   position: relative;
   /* Sizes */
@@ -1942,27 +1942,27 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   /* Colors */
 }
 /* line 116, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split:after, #av-overlay .submit input.dropdown.split[type=submit]:after {
+.button.dropdown.split:after, #pagination .pagination-link a.dropdown.split:after, #av-overlay .submit input.dropdown.split[type=submit]:after {
   display: none;
 }
 /* line 117, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split:hover, #av-overlay .submit input.dropdown.split[type=submit]:hover {
+.button.dropdown.split:hover, #pagination .pagination-link a.dropdown.split:hover, #av-overlay .submit input.dropdown.split[type=submit]:hover {
   background-color: #0c223f;
 }
 /* line 118, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.alert:hover, #av-overlay .submit input.dropdown.split.alert[type=submit]:hover {
+.button.dropdown.split.alert:hover, #pagination .pagination-link a.dropdown.split.alert:hover, #av-overlay .submit input.dropdown.split.alert[type=submit]:hover {
   background-color: #c60f13;
 }
 /* line 119, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.success:hover, #av-overlay .submit input.dropdown.split.success[type=submit]:hover {
+.button.dropdown.split.success:hover, #pagination .pagination-link a.dropdown.split.success:hover, #av-overlay .submit input.dropdown.split.success[type=submit]:hover {
   background-color: #5da423;
 }
 /* line 120, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary:hover, #av-overlay .submit input.dropdown.split[type=submit]:hover, #av-overlay .button.dropdown.split.error:hover, #av-overlay .submit input.dropdown.split.error[type=submit]:hover {
+.button.dropdown.split.secondary:hover, #pagination .pagination-link a.dropdown.split.secondary:hover, #pagination .pagination-link #av-overlay a.dropdown.split.error:hover, #av-overlay #pagination .pagination-link a.dropdown.split.error:hover, #av-overlay .submit input.dropdown.split[type=submit]:hover, #av-overlay .button.dropdown.split.error:hover, #av-overlay .submit input.dropdown.split.error[type=submit]:hover {
   background-color: #fefcf8;
 }
 /* line 123, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split > a, #av-overlay .submit input.dropdown.split[type=submit] > a {
+.button.dropdown.split > a, #pagination .pagination-link a.dropdown.split > a, #av-overlay .submit input.dropdown.split[type=submit] > a {
   color: white;
   display: block;
   padding: 10px 50px 11px 20px;
@@ -1974,29 +1974,29 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   transition: background-color 0.15s ease-in-out;
 }
 /* line 124, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split > a:hover, #av-overlay .submit input.dropdown.split[type=submit] > a:hover {
+.button.dropdown.split > a:hover, #pagination .pagination-link a.dropdown.split > a:hover, #av-overlay .submit input.dropdown.split[type=submit] > a:hover {
   background-color: #040b14;
 }
 /* line 126, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.large > a, #av-overlay .submit input.dropdown.split.large[type=submit] > a {
+.button.dropdown.split.large > a, #pagination .pagination-link a.dropdown.split.large > a, #av-overlay .submit input.dropdown.split.large[type=submit] > a {
   padding: 15px 75px 16px 30px;
   padding-left: 30px;
   padding-right: 75px;
 }
 /* line 127, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.small > a, #av-overlay .submit input.dropdown.split.small[type=submit] > a {
+.button.dropdown.split.small > a, #pagination .pagination-link a.dropdown.split.small > a, #av-overlay .submit input.dropdown.split.small[type=submit] > a {
   padding: 7px 35px 8px 14px;
   padding-left: 14px;
   padding-right: 35px;
 }
 /* line 128, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.tiny > a, #av-overlay .submit input.dropdown.split.tiny[type=submit] > a {
+.button.dropdown.split.tiny > a, #pagination .pagination-link a.dropdown.split.tiny > a, #av-overlay .submit input.dropdown.split.tiny[type=submit] > a {
   padding: 5px 25px 6px 10px;
   padding-left: 10px;
   padding-right: 25px;
 }
 /* line 131, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split > span, #av-overlay .submit input.dropdown.split[type=submit] > span {
+.button.dropdown.split > span, #pagination .pagination-link a.dropdown.split > span, #av-overlay .submit input.dropdown.split[type=submit] > span {
   background-color: #0c223f;
   position: absolute;
   right: 0;
@@ -2013,11 +2013,11 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   transition: background-color 0.15s ease-in-out;
 }
 /* line 132, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split > span:hover, #av-overlay .submit input.dropdown.split[type=submit] > span:hover {
+.button.dropdown.split > span:hover, #pagination .pagination-link a.dropdown.split > span:hover, #av-overlay .submit input.dropdown.split[type=submit] > span:hover {
   background-color: #040b14;
 }
 /* line 133, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split > span:after, #av-overlay .submit input.dropdown.split[type=submit] > span:after {
+.button.dropdown.split > span:after, #pagination .pagination-link a.dropdown.split > span:after, #av-overlay .submit input.dropdown.split[type=submit] > span:after {
   content: "";
   display: block;
   width: 0;
@@ -2031,7 +2031,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   margin-top: -2px;
 }
 /* line 135, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary > span:after, #av-overlay .submit input.dropdown.split[type=submit] > span:after, #av-overlay .button.dropdown.split.error > span:after, #av-overlay .submit input.dropdown.split.error[type=submit] > span:after {
+.button.dropdown.split.secondary > span:after, #pagination .pagination-link a.dropdown.split.secondary > span:after, #pagination .pagination-link #av-overlay a.dropdown.split.error > span:after, #av-overlay #pagination .pagination-link a.dropdown.split.error > span:after, #av-overlay .submit input.dropdown.split[type=submit] > span:after, #av-overlay .button.dropdown.split.error > span:after, #av-overlay .submit input.dropdown.split.error[type=submit] > span:after {
   content: "";
   display: block;
   width: 0;
@@ -2040,19 +2040,19 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   border-color: #523b0c transparent transparent transparent;
 }
 /* line 137, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.large span, #av-overlay .submit input.dropdown.split.large[type=submit] span {
+.button.dropdown.split.large span, #pagination .pagination-link a.dropdown.split.large span, #av-overlay .submit input.dropdown.split.large[type=submit] span {
   width: 45px;
 }
 /* line 138, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.small span, #av-overlay .submit input.dropdown.split.small[type=submit] span {
+.button.dropdown.split.small span, #pagination .pagination-link a.dropdown.split.small span, #av-overlay .submit input.dropdown.split.small[type=submit] span {
   width: 21px;
 }
 /* line 139, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.tiny span, #av-overlay .submit input.dropdown.split.tiny[type=submit] span {
+.button.dropdown.split.tiny span, #pagination .pagination-link a.dropdown.split.tiny span, #av-overlay .submit input.dropdown.split.tiny[type=submit] span {
   width: 15px;
 }
 /* line 141, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.large span:after, #av-overlay .submit input.dropdown.split.large[type=submit] span:after {
+.button.dropdown.split.large span:after, #pagination .pagination-link a.dropdown.split.large span:after, #av-overlay .submit input.dropdown.split.large[type=submit] span:after {
   content: "";
   display: block;
   width: 0;
@@ -2063,7 +2063,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   margin-left: -7px;
 }
 /* line 142, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.small span:after, #av-overlay .submit input.dropdown.split.small[type=submit] span:after {
+.button.dropdown.split.small span:after, #pagination .pagination-link a.dropdown.split.small span:after, #av-overlay .submit input.dropdown.split.small[type=submit] span:after {
   content: "";
   display: block;
   width: 0;
@@ -2074,7 +2074,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   margin-left: -4px;
 }
 /* line 143, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.tiny span:after, #av-overlay .submit input.dropdown.split.tiny[type=submit] span:after {
+.button.dropdown.split.tiny span:after, #pagination .pagination-link a.dropdown.split.tiny span:after, #av-overlay .submit input.dropdown.split.tiny[type=submit] span:after {
   content: "";
   display: block;
   width: 0;
@@ -2085,34 +2085,34 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   margin-left: -3px;
 }
 /* line 146, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.alert > span, #av-overlay .submit input.dropdown.split.alert[type=submit] > span {
+.button.dropdown.split.alert > span, #pagination .pagination-link a.dropdown.split.alert > span, #av-overlay .submit input.dropdown.split.alert[type=submit] > span {
   background-color: #c60f13;
   border-left-color: #7f0a0c;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.success > span, #av-overlay .submit input.dropdown.split.success[type=submit] > span {
+.button.dropdown.split.success > span, #pagination .pagination-link a.dropdown.split.success > span, #av-overlay .submit input.dropdown.split.success[type=submit] > span {
   background-color: #5da423;
   border-left-color: #396516;
 }
 /* line 148, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary > span, #av-overlay .submit input.dropdown.split[type=submit] > span, #av-overlay .button.dropdown.split.error > span, #av-overlay .submit input.dropdown.split.error[type=submit] > span {
+.button.dropdown.split.secondary > span, #pagination .pagination-link a.dropdown.split.secondary > span, #pagination .pagination-link #av-overlay a.dropdown.split.error > span, #av-overlay #pagination .pagination-link a.dropdown.split.error > span, #av-overlay .submit input.dropdown.split[type=submit] > span, #av-overlay .button.dropdown.split.error > span, #av-overlay .submit input.dropdown.split.error[type=submit] > span {
   background-color: #fefcf8;
   border-left-color: #f4dfb5;
 }
 /* line 149, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary > a, #av-overlay .submit input.dropdown.split[type=submit] > a, #av-overlay .button.dropdown.split.error > a, #av-overlay .submit input.dropdown.split.error[type=submit] > a {
+.button.dropdown.split.secondary > a, #pagination .pagination-link a.dropdown.split.secondary > a, #pagination .pagination-link #av-overlay a.dropdown.split.error > a, #av-overlay #pagination .pagination-link a.dropdown.split.error > a, #av-overlay .submit input.dropdown.split[type=submit] > a, #av-overlay .button.dropdown.split.error > a, #av-overlay .submit input.dropdown.split.error[type=submit] > a {
   color: #523b0c;
 }
 /* line 151, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.alert > a:hover, #av-overlay .submit input.dropdown.split.alert[type=submit] > a:hover, .button.dropdown.split.alert > span:hover, #av-overlay .submit input.dropdown.split.alert[type=submit] > span:hover {
+.button.dropdown.split.alert > a:hover, #pagination .pagination-link a.dropdown.split.alert > a:hover, #av-overlay .submit input.dropdown.split.alert[type=submit] > a:hover, .button.dropdown.split.alert > span:hover, #pagination .pagination-link a.dropdown.split.alert > span:hover, #av-overlay .submit input.dropdown.split.alert[type=submit] > span:hover {
   background-color: #970b0e;
 }
 /* line 152, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.success > a:hover, #av-overlay .submit input.dropdown.split.success[type=submit] > a:hover, .button.dropdown.split.success > span:hover, #av-overlay .submit input.dropdown.split.success[type=submit] > span:hover {
+.button.dropdown.split.success > a:hover, #pagination .pagination-link a.dropdown.split.success > a:hover, #av-overlay .submit input.dropdown.split.success[type=submit] > a:hover, .button.dropdown.split.success > span:hover, #pagination .pagination-link a.dropdown.split.success > span:hover, #av-overlay .submit input.dropdown.split.success[type=submit] > span:hover {
   background-color: #457a1a;
 }
 /* line 153, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary > a:hover, #av-overlay .submit input.dropdown.split[type=submit] > a:hover, #av-overlay .button.dropdown.split.error > a:hover, #av-overlay .submit input.dropdown.split.error[type=submit] > a:hover, .button.dropdown.split.secondary > span:hover, #av-overlay .submit input.dropdown.split[type=submit] > span:hover, #av-overlay .button.dropdown.split.error > span:hover, #av-overlay .submit input.dropdown.split.error[type=submit] > span:hover {
+.button.dropdown.split.secondary > a:hover, #pagination .pagination-link a.dropdown.split.secondary > a:hover, #pagination .pagination-link #av-overlay a.dropdown.split.error > a:hover, #av-overlay #pagination .pagination-link a.dropdown.split.error > a:hover, #av-overlay .submit input.dropdown.split[type=submit] > a:hover, #av-overlay .button.dropdown.split.error > a:hover, #av-overlay .submit input.dropdown.split.error[type=submit] > a:hover, .button.dropdown.split.secondary > span:hover, #pagination .pagination-link a.dropdown.split.secondary > span:hover, #pagination .pagination-link #av-overlay a.dropdown.split.error > span:hover, #av-overlay #pagination .pagination-link a.dropdown.split.error > span:hover, #av-overlay .submit input.dropdown.split[type=submit] > span:hover, #av-overlay .button.dropdown.split.error > span:hover, #av-overlay .submit input.dropdown.split.error[type=submit] > span:hover {
   background-color: #f8e9cb;
 }
 
@@ -2144,7 +2144,7 @@ ul.button-group li:first-child {
   margin-left: 0;
 }
 /* line 167, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-ul.button-group.radius li a.button, ul.button-group.radius li a.button.radius, ul.button-group.radius li a.button-rounded {
+ul.button-group.radius li a.button, ul.button-group.radius li #pagination .pagination-link a, #pagination .pagination-link ul.button-group.radius li a, ul.button-group.radius li a.button.radius, ul.button-group.radius li #pagination .pagination-link a.radius, #pagination .pagination-link ul.button-group.radius li a.radius, ul.button-group.radius li a.button-rounded {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
@@ -2152,7 +2152,7 @@ ul.button-group.radius li a.button, ul.button-group.radius li a.button.radius, u
   border-radius: 0px;
 }
 /* line 170, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-ul.button-group.radius li:first-child a.button, ul.button-group.radius li:first-child a.button.radius {
+ul.button-group.radius li:first-child a.button, ul.button-group.radius li:first-child #pagination .pagination-link a, #pagination .pagination-link ul.button-group.radius li:first-child a, ul.button-group.radius li:first-child a.button.radius, ul.button-group.radius li:first-child #pagination .pagination-link a.radius, #pagination .pagination-link ul.button-group.radius li:first-child a.radius {
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
   border-top-left-radius: 3px;
@@ -2161,7 +2161,7 @@ ul.button-group.radius li:first-child a.button, ul.button-group.radius li:first-
   border-bottom-left-radius: 3px;
 }
 /* line 171, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-ul.button-group.radius li:first-child a.button.rounded {
+ul.button-group.radius li:first-child a.button.rounded, ul.button-group.radius li:first-child #pagination .pagination-link a.rounded, #pagination .pagination-link ul.button-group.radius li:first-child a.rounded {
   -moz-border-radius-topleft: 1000px;
   -webkit-border-top-left-radius: 1000px;
   border-top-left-radius: 1000px;
@@ -2170,7 +2170,7 @@ ul.button-group.radius li:first-child a.button.rounded {
   border-bottom-left-radius: 1000px;
 }
 /* line 174, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-ul.button-group.radius li:last-child a.button, ul.button-group.radius li:last-child a.button.radius {
+ul.button-group.radius li:last-child a.button, ul.button-group.radius li:last-child #pagination .pagination-link a, #pagination .pagination-link ul.button-group.radius li:last-child a, ul.button-group.radius li:last-child a.button.radius, ul.button-group.radius li:last-child #pagination .pagination-link a.radius, #pagination .pagination-link ul.button-group.radius li:last-child a.radius {
   -moz-border-radius-topright: 3px;
   -webkit-border-top-right-radius: 3px;
   border-top-right-radius: 3px;
@@ -2179,7 +2179,7 @@ ul.button-group.radius li:last-child a.button, ul.button-group.radius li:last-ch
   border-bottom-right-radius: 3px;
 }
 /* line 175, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-ul.button-group.radius li:last-child a.button.rounded {
+ul.button-group.radius li:last-child a.button.rounded, ul.button-group.radius li:last-child #pagination .pagination-link a.rounded, #pagination .pagination-link ul.button-group.radius li:last-child a.rounded {
   -moz-border-radius-topright: 1000px;
   -webkit-border-top-right-radius: 1000px;
   border-top-right-radius: 1000px;
@@ -2188,7 +2188,7 @@ ul.button-group.radius li:last-child a.button.rounded {
   border-bottom-right-radius: 1000px;
 }
 /* line 180, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-ul.button-group.even a.button {
+ul.button-group.even a.button, ul.button-group.even #pagination .pagination-link a, #pagination .pagination-link ul.button-group.even a {
   width: 100%;
 }
 /* line 181, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
@@ -2726,7 +2726,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   width: 1px;
 }
 /* line 55, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
-.top-bar ul > li.has-button a.button {
+.top-bar ul > li.has-button a.button, .top-bar ul > li.has-button #pagination .pagination-link a, #pagination .pagination-link .top-bar ul > li.has-button a {
   margin: 0 9.5px;
 }
 /* line 56, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
@@ -2762,7 +2762,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   height: 19px;
 }
 /* line 65, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
-.top-bar ul > li.search form input[type=text] + .button, .top-bar ul > li.search form #av-overlay .submit input[type=text] + input[type=submit], #av-overlay .submit .top-bar ul > li.search form input[type=text] + input[type=submit] {
+.top-bar ul > li.search form input[type=text] + .button, .top-bar ul > li.search form #pagination .pagination-link input[type=text] + a, #pagination .pagination-link .top-bar ul > li.search form input[type=text] + a, .top-bar ul > li.search form #av-overlay .submit input[type=text] + input[type=submit], #av-overlay .submit .top-bar ul > li.search form input[type=text] + input[type=submit] {
   border-left: none;
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
@@ -2925,7 +2925,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 /* Firefox Fixes */
 @-moz-document url-prefix() {
   /* line 123, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
-  .top-bar ul li .button.small, .top-bar ul li #av-overlay .submit input.small[type=submit], #av-overlay .submit .top-bar ul li input.small[type=submit] {
+  .top-bar ul li .button.small, .top-bar ul li #pagination .pagination-link a.small, #pagination .pagination-link .top-bar ul li a.small, .top-bar ul li #av-overlay .submit input.small[type=submit], #av-overlay .submit .top-bar ul li input.small[type=submit] {
     padding-bottom: 6px;
   }
 
@@ -2949,7 +2949,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   padding: 0 12.66667px;
 }
 /* line 129, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
-.lt-ie9 .top-bar ul li a.button {
+.lt-ie9 .top-bar ul li a.button, .lt-ie9 .top-bar ul li #pagination .pagination-link a, #pagination .pagination-link .lt-ie9 .top-bar ul li a {
   height: auto;
   line-height: 30px;
   margin-top: 7px;
@@ -3094,7 +3094,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
     width: 75%;
   }
   /* line 177, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
-  .top-bar ul li.search form .button, .top-bar ul li.search form #av-overlay .submit input[type=submit], #av-overlay .submit .top-bar ul li.search form input[type=submit] {
+  .top-bar ul li.search form .button, .top-bar ul li.search form #pagination .pagination-link a, #pagination .pagination-link .top-bar ul li.search form a, .top-bar ul li.search form #av-overlay .submit input[type=submit], #av-overlay .submit .top-bar ul li.search form input[type=submit] {
     top: 0;
     width: 25%;
   }
@@ -3281,7 +3281,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   }
 
   /* line 239, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
-  .top-bar ul li .button.small, .top-bar ul li #av-overlay .submit input.small[type=submit], #av-overlay .submit .top-bar ul li input.small[type=submit] {
+  .top-bar ul li .button.small, .top-bar ul li #pagination .pagination-link a.small, #pagination .pagination-link .top-bar ul li a.small, .top-bar ul li #av-overlay .submit input.small[type=submit], #av-overlay .submit .top-bar ul li input.small[type=submit] {
     margin: 0 !important;
     display: inline-block;
     width: 100%;
@@ -3665,7 +3665,7 @@ ul.orbit-bullets li.active.has-thumb {
   margin-left: -35%;
 }
 /* line 29, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_reveal.scss */
-.reveal-modal.expand, #av-overlay {
+.reveal-modal.expand, #pagination .pagination-link a.reveal-modal, #pagination .pagination-link a#av-overlay, #av-overlay {
   width: 90%;
   margin-left: -45%;
 }
@@ -4469,14 +4469,14 @@ div.alert-box a.close:hover, #av-overlay .error a.close:hover, div.alert-box a.c
   color: #fff;
 }
 /* line 219, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
-.panel.callout .button, .panel.callout #av-overlay .submit input[type=submit], #av-overlay .submit .panel.callout input[type=submit] {
+.panel.callout .button, .panel.callout #pagination .pagination-link a, #pagination .pagination-link .panel.callout a, .panel.callout #av-overlay .submit input[type=submit], #av-overlay .submit .panel.callout input[type=submit] {
   background: white;
   border: none;
   color: #0c223f;
   text-shadow: none;
 }
 /* line 221, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
-.panel.callout .button:hover, .panel.callout #av-overlay .submit input[type=submit]:hover, #av-overlay .submit .panel.callout input[type=submit]:hover {
+.panel.callout .button:hover, .panel.callout #pagination .pagination-link a:hover, #pagination .pagination-link .panel.callout a:hover, .panel.callout #av-overlay .submit input[type=submit]:hover, #av-overlay .submit .panel.callout input[type=submit]:hover {
   background: rgba(255, 255, 255, 0.8);
 }
 /* line 225, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
@@ -6077,7 +6077,7 @@ ul#social > li a:hover {
   width: 25%;
 }
 /* line 54, ../scss/parts/_gravity-forms.scss */
-.footer .gform_footer .button, .footer .gform_footer #av-overlay .submit input[type=submit], #av-overlay .submit .footer .gform_footer input[type=submit] {
+.footer .gform_footer .button, .footer .gform_footer #pagination .pagination-link a, #pagination .pagination-link .footer .gform_footer a, .footer .gform_footer #av-overlay .submit input[type=submit], #av-overlay .submit .footer .gform_footer input[type=submit] {
   height: 85px;
   border: 1px solid white;
   border-left: none;
@@ -6085,7 +6085,7 @@ ul#social > li a:hover {
   font-weight: normal;
 }
 /* line 60, ../scss/parts/_gravity-forms.scss */
-.footer .gform_footer .button:hover, .footer .gform_footer #av-overlay .submit input[type=submit]:hover, #av-overlay .submit .footer .gform_footer input[type=submit]:hover {
+.footer .gform_footer .button:hover, .footer .gform_footer #pagination .pagination-link a:hover, #pagination .pagination-link .footer .gform_footer a:hover, .footer .gform_footer #av-overlay .submit input[type=submit]:hover, #av-overlay .submit .footer .gform_footer input[type=submit]:hover {
   background: white;
   color: #0c223f;
 }
@@ -6327,7 +6327,7 @@ ul#social > li a:hover {
   font-size: 1.6rem;
 }
 /* line 230, ../scss/parts/_gravity-forms.scss */
-.post-text .button, .post-text #av-overlay .submit input[type=submit], #av-overlay .submit .post-text input[type=submit] {
+.post-text .button, .post-text #pagination .pagination-link a, #pagination .pagination-link .post-text a, .post-text #av-overlay .submit input[type=submit], #av-overlay .submit .post-text input[type=submit] {
   padding: 25px 0;
   left: -1px;
   border-left: none;
@@ -6421,6 +6421,16 @@ ul#social > li a:hover {
 ul.block-grid.excerpt-loop {
   margin: 0;
   padding: 0;
+}
+/* line 4, ../scss/parts/_archives.scss */
+ul.block-grid.excerpt-loop li {
+  padding: 0;
+}
+
+/* line 6, ../scss/parts/_pagination.scss */
+#pagination .pagination-link a {
+  padding: 0;
+  left: auto;
 }
 
 /* line 1, ../scss/vendor/_av-styles.scss */
@@ -6949,10 +6959,12 @@ html[xmlns] .slides {
 }
 
 /* line 224, ../scss/vendor/_flexslider.scss */
-.cartogram-slider-direction-nav .cartogram-slider-disabled {
+.cartogram-slider-direction-nav .cartogram-slider-disabled, .cartogram-slider-disabled, .cartogram-slider-disabled:hover {
   opacity: .3!important;
   filter: alpha(opacity=30);
   cursor: default;
+  background: #0c223f !important;
+  color: #fefcf8 !important;
 }
 
 /* line 1, ../scss/vendor/_twitter.scss */
@@ -7476,7 +7488,7 @@ body {
 }
 
 /* line 17, ../scss/_screen.scss */
-.direction-nav {
+.direction-nav, #pagination .pagination-arrow a {
   color: #fefcf8;
   line-height: 46px;
   font-size: 16px;
@@ -7485,7 +7497,7 @@ body {
   display: block;
 }
 /* line 23, ../scss/_screen.scss */
-.direction-nav:hover {
+.direction-nav:hover, #pagination .pagination-arrow a:hover {
   background: #fefcf8;
   color: #0c223f;
 }
@@ -7650,7 +7662,7 @@ body {
 
 /* Normal Buttons ---------------------- */
 /* line 3, ../scss/components/modules/_buttons.scss */
-.button, #av-overlay .submit input[type=submit] {
+.button, #pagination .pagination-link a, #av-overlay .submit input[type=submit] {
   -webkit-box-shadow: 0 0 0;
   -moz-box-shadow: 0 0 0;
   box-shadow: 0 0 0;
@@ -7665,33 +7677,39 @@ body {
   font-size: 1.2rem;
 }
 /* line 11, ../scss/components/modules/_buttons.scss */
-.button:hover, #av-overlay .submit input[type=submit]:hover {
+.button:hover, #pagination .pagination-link a:hover, #av-overlay .submit input[type=submit]:hover {
   background: white;
   color: #0c223f;
 }
 /* line 15, ../scss/components/modules/_buttons.scss */
-.button.button-link, #av-overlay .submit input.button-link[type=submit] {
+.button.button-link, #pagination .pagination-link a, #av-overlay .submit input.button-link[type=submit] {
   background: #fefcf8;
   color: #0c223f;
   padding: 15px;
   border: none;
 }
 /* line 20, ../scss/components/modules/_buttons.scss */
-.button.button-link:hover, #av-overlay .submit input.button-link[type=submit]:hover {
+.button.button-link:hover, #pagination .pagination-link a:hover, #av-overlay .submit input.button-link[type=submit]:hover {
   color: #ff4337;
 }
-/* line 24, ../scss/components/modules/_buttons.scss */
-.button.white, #av-overlay .submit input.white[type=submit] {
+/* line 23, ../scss/components/modules/_buttons.scss */
+.button.button-link.disabled, #pagination .pagination-link a.disabled, #av-overlay .submit input.button-link.disabled[type=submit] {
+  opacity: 0.3;
+  background: #fefcf8;
+  color: #0c223f;
+}
+/* line 29, ../scss/components/modules/_buttons.scss */
+.button.white, #pagination .pagination-link a.white, #av-overlay .submit input.white[type=submit] {
   background: white;
   color: #0c223f;
 }
-/* line 27, ../scss/components/modules/_buttons.scss */
-.button.white:hover, #av-overlay .submit input.white[type=submit]:hover {
+/* line 32, ../scss/components/modules/_buttons.scss */
+.button.white:hover, #pagination .pagination-link a.white:hover, #av-overlay .submit input.white[type=submit]:hover {
   color: white;
   background: #0c223f;
 }
-/* line 32, ../scss/components/modules/_buttons.scss */
-.button.medium, #av-overlay .submit input.medium[type=submit] {
+/* line 37, ../scss/components/modules/_buttons.scss */
+.button.medium, #pagination .pagination-link a.medium, #av-overlay .submit input.medium[type=submit] {
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -8933,7 +8951,7 @@ table.hide-for-medium {
   /*             */
   /* Basic overrides */
   /* line 261, ../scss/components/modules/_mqueries.scss */
-  .button, #av-overlay .submit input[type=submit] {
+  .button, #pagination .pagination-link a, #av-overlay .submit input[type=submit] {
     display: block;
   }
 
@@ -9347,7 +9365,7 @@ table.hide-for-medium {
     width: 75%;
   }
   /* line 389, ../scss/components/modules/_mqueries.scss */
-  .top-bar ul > li.search form .button, .top-bar ul > li.search form #av-overlay .submit input[type=submit], #av-overlay .submit .top-bar ul > li.search form input[type=submit] {
+  .top-bar ul > li.search form .button, .top-bar ul > li.search form #pagination .pagination-link a, #pagination .pagination-link .top-bar ul > li.search form a, .top-bar ul > li.search form #av-overlay .submit input[type=submit], #av-overlay .submit .top-bar ul > li.search form input[type=submit] {
     top: -1px;
     width: 25%;
   }
@@ -9539,14 +9557,14 @@ table.hide-for-medium {
   }
 
   /* line 454, ../scss/components/modules/_mqueries.scss */
-  .top-bar ul li .button.small, .top-bar ul li #av-overlay .submit input.small[type=submit], #av-overlay .submit .top-bar ul li input.small[type=submit] {
+  .top-bar ul li .button.small, .top-bar ul li #pagination .pagination-link a.small, #pagination .pagination-link .top-bar ul li a.small, .top-bar ul li #av-overlay .submit input.small[type=submit], #av-overlay .submit .top-bar ul li input.small[type=submit] {
     margin: 0 !important;
     display: inline-block;
     width: 100%;
   }
 
   /* line 456, ../scss/components/modules/_mqueries.scss */
-  .top-bar ul > li.has-button a.button {
+  .top-bar ul > li.has-button a.button, .top-bar ul > li.has-button #pagination .pagination-link a, #pagination .pagination-link .top-bar ul > li.has-button a {
     margin: 0;
   }
 }

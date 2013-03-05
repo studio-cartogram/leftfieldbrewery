@@ -1,4 +1,5 @@
 <?php global $slug;
+global $query_string;
 ?>
 
 <div class="row  <?php echo $slug; ?>">
@@ -8,8 +9,9 @@
 			<div class="column twelve rule-right">
 				<div class="post-text double-bordered">
 					<?php
-					$query = new WP_Query('showposts=1');
-					while ($query->have_posts()): $query->the_post(); ?>
+						query_posts( $query_string . '&posts_per_page=1' );
+					if (have_posts()) : 	
+					while (have_posts()): the_post(); ?>
 						<div class="row collapse">
 							<div class="columns five post-meta">
 								<h4 class="boxed"> <?php the_date('jS F, Y'); ?></h4>
@@ -43,6 +45,7 @@
 						the_excerpt();
 						more_link();
 					endwhile;
+					endif;
 					?>
 				</div>
 			</div>
@@ -53,36 +56,20 @@
 			</div>
 		</div>
 		<div class="row flushed-left collapse">
-			<?php global $myExcerptLength;
-					$myExcerptLength = 20;
-				$query = new WP_Query('showposts=2&offset=1');
-				while ($query->have_posts()): $query->the_post(); ?>
+			<?php query_posts( $query_string . '&posts_per_page=2&offset=1' );
+				if (have_posts()) : 	
+				while (have_posts()): the_post(); ?>
 					<div class="columns six format-text rule-right bg-cream">
 						<?php get_template_part('parts/content/content', 'summary'); ?>
 					</div>		
-
-				<?php endwhile;
-			$myExcerptLength = 0;
+				<?php endwhile; 
+			endif;
 			?>
 		</div>	
-		<div class="row flushed-left collapse border-top border-bottom">
-			<div class="columns one rule-right bg-navy">
-				<a class="direction-nav"><i class="icon-arrow-left"></i></a>
-			</div>
-			<div class="columns five rule-right border-bottom bg-cream">
-				<a class="button-link expand button disabled" href="<?php echo get_site_url() ?>/page/2/" class="highlightsPagination">
-					Newer <?php //Will this always be unclickable? ?>
-				</a>
-			</div>
-			<div class="columns five rule-right border-bottom bg-cream">
-				<a class="button-link expand button" href="<?php echo get_site_url() ?>/page/2/" class="highlightsPagination">
-					Older
-				</a>
-			</div>
-			<div class="columns one rule-right rule-left bg-navy">
-				<a class="direction-nav" href="<?php echo get_site_url() ?>/page/2/" class="highlightsPagination"><i class="icon-arrow-right"></i></a>
-			</div>
-		</div>
+		<?php get_template_part('parts/navigation/pagination'); ?>
+
+		
+
 
 	</div>
 	<div class="columns four pull-eight">

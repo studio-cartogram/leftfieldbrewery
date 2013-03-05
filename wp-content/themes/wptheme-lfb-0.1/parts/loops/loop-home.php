@@ -5,6 +5,6 @@ global $slug; ?>
 		<div class="columns twelve">
 			<?php get_template_part('parts/content/content', 'home'); ?>
 		</div>
-	</div>			
+	</div>
 </li>
 	

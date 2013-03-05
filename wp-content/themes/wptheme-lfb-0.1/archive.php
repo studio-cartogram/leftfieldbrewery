@@ -12,7 +12,7 @@
 		<div class="columns twelve double-bordered-outside">
 			<div class="flexslider double-bordered">
 				<ul class="slides">
-			    	<?php get_template_part('parts/loops/loop', 'archive') ?> 	
+			    	<?php // get_template_part('parts/loops/loop', 'archive') ?> 	
 			  	</ul>
 			</div>
 		</div>

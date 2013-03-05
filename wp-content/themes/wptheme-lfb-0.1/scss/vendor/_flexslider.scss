@@ -221,4 +221,10 @@ html[xmlns] .slides {display: block;}
 
 
 .flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {opacity: 1;}
-.cartogram-slider-direction-nav .cartogram-slider-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
+.cartogram-slider-direction-nav .cartogram-slider-disabled, .cartogram-slider-disabled , .cartogram-slider-disabled:hover{
+	opacity: .3!important; 
+	filter:alpha(opacity=30); 
+	cursor: default;
+	background:$navy!important;
+	color:$cream !important;
+}

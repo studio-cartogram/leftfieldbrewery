@@ -6,10 +6,11 @@ global $slug; ?>
 			<div class="row  <?php echo $slug; ?>">
 				<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four rule-left"); ?>>	
 					<?php the_title('<h3 class="rule-right text-center">','</h3>') ?>
-					<div class="row flushed-left collapse">
+					<div id="content" class="row flushed-left collapse">
 						<div class="column twelve rule-right">
-							<div class="post-text">
+							
 								<?php if ( have_posts() ) : ?>
+								<div class="post-text">
 									<ul class="block-grid two-up excerpt-loop">
 										<?php while ( have_posts() ) : the_post(); ?>
 											<li>
@@ -17,10 +18,13 @@ global $slug; ?>
 											</li>
 										<?php endwhile; ?>
 									</ul>
+								</div>
+								
 								<?php endif; ?>	
-							</div>
+							
 						</div>
 					</div>
+					<?php get_template_part('parts/navigation/pagination'); ?>	
 				</div>
 				<div class="columns four pull-eight">
 					<?php if (is_front_page()) {

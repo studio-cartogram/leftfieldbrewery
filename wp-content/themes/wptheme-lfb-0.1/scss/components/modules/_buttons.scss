@@ -20,6 +20,11 @@
       &:hover {
         color:$red;
       }
+      &.disabled {
+        opacity:0.3;
+        background:$cream;
+         color:$navy;
+      }
     }
     &.white {
       background:$white;
