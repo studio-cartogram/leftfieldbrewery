@@ -7,7 +7,7 @@ if ( have_posts() ) :
 				<h3 class="rule-right text-center"><?php echo get_the_title(get_option('page_for_posts')) ?></h3>
 				<div class="row flushed-left collapse">
 					<div class="column twelve rule-right">
-						<div class="post-text double-bordered">
+						<div class="post-text double-bordered space-inner-bottom-xlarge">
 							<div class="row collapse">
 								<div class="columns seven post-meta">
 									<h4 class="boxed"> <span><?php the_date('jS F, Y'); ?></span></h4>

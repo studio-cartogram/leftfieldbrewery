@@ -34,14 +34,14 @@ global $slug; ?>
 				<?php if ( have_posts() ) : $count=0 ?>
 					
 						<?php while ( have_posts() ) : the_post(); $count++;
-							if ($count % 2 != 0) {
+							if ($count % 2 != 0 ) {
 								echo'<div class="row  bg-cream collapse">';
 							} ?>
 
 							<div class="columns six format-text rule-right bg-cream post-small">
 								<?php get_template_part('parts/content/content', 'excerpt'); ?>
 							</div>
-							<?php if (($count % 2 == 0) || ($count == $total)) {
+							<?php if (($count % 2 == 0) || ($count == $total) || $total == 1  ) {
 								echo '</div>';
 							} ?>
 						<?php endwhile; ?>
