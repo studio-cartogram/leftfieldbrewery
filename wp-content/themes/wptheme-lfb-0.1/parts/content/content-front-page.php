@@ -1,7 +1,7 @@
 <?php global $slug;
 ?>
 <div class="row  <?php echo $slug; ?>">
-	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four rule-left"); ?>>	
+	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four mobile-flush rule-left"); ?>>	
 		<?php the_title('<h3 class="rule-right text-center">','</h3>') ?>
 		<?php get_template_part('parts/slideshows/slideshow'); ?>
 		<div class="row">
@@ -51,16 +51,16 @@
 							}
 						endwhile;
 						?>
-					<div class="columns twelve mvp space-inner-bottom text-center border-top bg-blue" style="background-image: url('<?php echo $image[0]; ?>')">
+					<div class="mobile-flush columns twelve mvp space-inner-bottom text-center border-top bg-blue" style="background-image: url('<?php echo $image[0]; ?>')">
 							<h2 class="beer-name beer-block"><?php the_title(); ?></h2>
-							<h3 class="beer-tagline">Beer Tagline</h3>
+							<?php echo '<h3 class="light beer-tagline">' . get_post_meta( $id, '_cartogram_short_description_value', TRUE ) . '</h3>';?>
 							<?php more_link() ?>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="columns four pull-eight">
+	<div class="columns four pull-eight mobile-flush">
 		<?php if (is_front_page()) {
 			get_sidebar('front-page'); 
 		} elseif (is_home()) { 

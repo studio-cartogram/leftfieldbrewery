@@ -44,13 +44,16 @@ h2 {
 			padding-top:20px;
 			margin-top:20px;
 			margin-bottom:0;
-			@extend .icon-diamond;
 			&:before {
+				height:4px;
+				width:4px;
+				border:1px solid;
 				position:absolute;
 				left:50%;
 				top:0px;
-				@include font-size(6);
-				margin-left:-5px;
+				content: ' ';
+				margin-left:-2px;
+				@include transform(rotate(-45deg));
 			}
 		}
 	}
@@ -133,7 +136,7 @@ h6 {
 }
 
 .post-text {
-	padding-bottom:50px;
+	padding-bottom:0px;
 	background:$cream;
 	h1, h2, p, ul {
 		padding-left:40px;

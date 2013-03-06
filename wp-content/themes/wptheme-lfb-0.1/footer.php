@@ -4,7 +4,7 @@
 		<div class="columns six hook rule-right-white">
 			<?php gravity_form('Newsletter', true, true, false, '', true, 300); ?>
 		</div>
-		<div class="columns three mobile-two">
+		<div class="columns three ">
 			<div class="row">
 				<div class="columns twelve ">
 					<h3>Get in touch</h3>
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="columns three mobile-two rule-left-white rule-inside-right-white">
+		<div class="columns three rule-left-white rule-inside-right-white">
 			<h3><a class="icon-twitter icon-with-space" href="">Chatter</a></h3>
 			<div id='twitter'></div>
 		</div>

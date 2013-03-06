@@ -1,3 +1,5 @@
+//Nav Changes
+
 @media only screen and (max-width: $topBarBreakPoint) {
   .top-bar {
     ul li.name {
@@ -20,5 +22,28 @@
   }  
   h2.header-text {
     margin:10px 0;
+  }
+}
+
+//Small Screen Changes
+@media only screen and (max-width: $screenSmall) {
+  body {
+    overflow-x:hidden;
+    width:auto;
+   
+  }
+  .row.flushed-right {
+    margin-right:0 !important;
+  }
+  .row.flushed-left {
+    margin-left:0 !important;
+  }
+  .post-text, .mobile-flush {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+  #container-navigation .row .twelve {
+    margin:0;
+    padding:0;
   }
 }

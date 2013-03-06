@@ -3,7 +3,7 @@ global $slug;
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post(); ?>
 		<div class="row  <?php echo $slug; ?>">
-			<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four rule-left"); ?>>	
+			<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight mobile-flush push-four rule-left"); ?>>	
 				<h3 class="rule-right text-center"><?php echo get_the_title(get_option('page_for_posts')) ?></h3>
 				<div class="row flushed-left collapse">
 					<div class="column twelve rule-right">
@@ -47,7 +47,7 @@ if ( have_posts() ) :
 				</div>
 			<?php get_template_part('parts/navigation/pagination','single') ?>
 			</div>
-			<div class="columns four pull-eight">
+			<div class="columns mobile-flush four pull-eight">
 				<?php get_sidebar(get_post_type()); ?>
 			</div>
 		</div>

@@ -3,7 +3,7 @@ global $query_string;
 ?>
 
 <div class="row  <?php echo $slug; ?>">
-	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four rule-left"); ?>>	
+	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four mobile-flush rule-left"); ?>>	
 		<h3 class="rule-right text-center"><?php echo get_the_title(get_option('page_for_posts')) ?></h3>
 		<div class="row flushed-left collapse">
 			<div class="column twelve rule-right">
@@ -72,7 +72,7 @@ global $query_string;
 
 
 	</div>
-	<div class="columns four pull-eight">
+	<div class="columns four mobile-flush pull-eight">
 			<?php get_sidebar('home'); ?>
 	</div>
 </div>

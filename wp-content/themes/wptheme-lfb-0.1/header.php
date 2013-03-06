@@ -16,15 +16,15 @@
 		</div>
 	</header>
 </section>	
-<section class="container" id="container-navigation">
+<section class="container " id="container-navigation">
 	<div class="row">	
-		<div class="columns twelve">
-			<nav class="top-bar">
+		<div class="columns twelve ">
+			<nav class="top-bar ">
 				<ul class="show-for-small">
 					<li class="name"><h1 class="collapse-inner"><a class="icon-wordmark" href="#"></a></h1></li>
 					<li class="toggle-topbar"><a href="#"></a></li>
 				 </ul>
-				  <section>
+				  <section class="">
 					<?php $headernav = array(
 						'theme_location'  => 'global',
 						'container'       => false, 

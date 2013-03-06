@@ -1,19 +1,39 @@
 .beer-stats {
 	@extend .border-bottom;
-	.alc {
-		@include column(3);
-		@include rule(right);
-	}
-	.IBU {
-		@include column(1);
-		@include rule(right);
+	.columns {
+		&.alc {
+			@include column(3);
+			@include mobileColumn(4);
+			@include rule(right);
 
+		}
+		&.IBU {
+			@include column(1);
+			@include rule(right);
+			@include mobileColumn(4);
+
+		}
+		&.SRM {
+			@include column(3);
+			@include rule(right);
+		}
+		&.food_pairings {
+			@include column(5);
+		}
 	}
-	.SRM {
-		@include column(3);
-		@include rule(right);
-	}
-	.food_pairings {
-		@include column(5);
+	@media only screen and (max-width: $screenSmall) {
+		padding:25px 0 20px 0;
+		.columns { 
+			width:auto !important;
+			float:none !important;
+			padding: 0 0 5px 0  !important;
+			text-align:center;
+			.border-bottom {
+				border:none !important;
+			}
+			h5, h6 {
+				display:inline;
+			}
+		}	
 	}
 }

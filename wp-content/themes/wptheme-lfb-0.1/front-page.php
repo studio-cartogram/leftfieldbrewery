@@ -15,7 +15,6 @@
 			</div>
 		</div>
 	</div>	
-	<div id="loader"><span>loading</span></div>
 </div>
 <?php get_footer() ?>
 <?php get_template_part('parts/shared/html-footer'); ?>

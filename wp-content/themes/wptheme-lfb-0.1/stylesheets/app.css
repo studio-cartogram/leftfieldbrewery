@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 51, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
-.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer, .post-text .gform_body .gform_fields li .ginput_complex span, .post-text .gform_body .gform_fields li .ginput_complex span:first-child, .beer-stats .alc, .beer-stats .IBU, .beer-stats .SRM, .beer-stats .food_pairings {
+.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer, .post-text .gform_body .gform_fields li .ginput_complex span, .post-text .gform_body .gform_fields li .ginput_complex span:first-child, .beer-stats .columns.alc, .beer-stats .columns.IBU, .beer-stats .columns.SRM, .beer-stats .columns.food_pairings {
   float: left;
 }
 
@@ -26,7 +26,7 @@
 }
 
 /* line 62, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
-.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer, .post-text .gform_body .gform_fields li .ginput_complex span, .post-text .gform_body .gform_fields li .ginput_complex span:first-child, .beer-stats .alc, .beer-stats .IBU, .beer-stats .SRM, .beer-stats .food_pairings {
+.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer, .post-text .gform_body .gform_fields li .ginput_complex span, .post-text .gform_body .gform_fields li .ginput_complex span:first-child, .beer-stats .columns.alc, .beer-stats .columns.IBU, .beer-stats .columns.SRM, .beer-stats .columns.food_pairings {
   position: relative;
   min-height: 1px;
   padding: 0 15px;
@@ -5014,143 +5014,175 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
 /* line 7, ../scss/font/_classes.scss */
-.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .post-text .gform_body .gform_fields li.label-icon label:before, .icon-logo:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .post-text form.custom ul li span.custom:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before {
+.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .post-text .gform_body .gform_fields li.label-icon label:before, .icon-logo:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .post-text form.custom ul li span.custom:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-maris-b:before, .icon-maris-a:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
   font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 15, ../scss/font/_classes.scss */
+/* line 17, ../scss/font/_classes.scss */
 .icon-twitter:before {
   content: "\e000";
 }
 
-/* line 18, ../scss/font/_classes.scss */
+/* line 20, ../scss/font/_classes.scss */
 .icon-facebook:before {
   content: "\e001";
 }
 
-/* line 21, ../scss/font/_classes.scss */
+/* line 23, ../scss/font/_classes.scss */
 .icon-google-plus:before {
   content: "\e002";
 }
 
-/* line 24, ../scss/font/_classes.scss */
+/* line 26, ../scss/font/_classes.scss */
 .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before {
   content: "\e003";
 }
 
-/* line 27, ../scss/font/_classes.scss */
+/* line 29, ../scss/font/_classes.scss */
 .icon-wordmark:before {
   content: "\e004";
 }
 
-/* line 30, ../scss/font/_classes.scss */
+/* line 32, ../scss/font/_classes.scss */
 .icon-untappd:before {
   content: "\e006";
 }
 
-/* line 33, ../scss/font/_classes.scss */
+/* line 35, ../scss/font/_classes.scss */
 .icon-tap:before {
   content: "\e007";
 }
 
-/* line 36, ../scss/font/_classes.scss */
+/* line 38, ../scss/font/_classes.scss */
 .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before {
   content: "\e008";
 }
 
-/* line 39, ../scss/font/_classes.scss */
+/* line 41, ../scss/font/_classes.scss */
 .icon-newletter:before {
   content: "\e005";
 }
 
-/* line 42, ../scss/font/_classes.scss */
+/* line 44, ../scss/font/_classes.scss */
 .icon-mark:before {
   content: "\e009";
 }
 
-/* line 45, ../scss/font/_classes.scss */
+/* line 47, ../scss/font/_classes.scss */
 .icon-mail:before, .post-text .gform_body .gform_fields li.label-icon label:before {
   content: "\e00a";
 }
 
-/* line 48, ../scss/font/_classes.scss */
+/* line 50, ../scss/font/_classes.scss */
 .icon-logo:before {
   content: "\e00b";
 }
 
-/* line 51, ../scss/font/_classes.scss */
+/* line 53, ../scss/font/_classes.scss */
 .icon-loader-simple:before, #loader span:before {
   content: "\e00c";
 }
 
-/* line 54, ../scss/font/_classes.scss */
+/* line 56, ../scss/font/_classes.scss */
 .icon-instagram:before {
   content: "\e00d";
 }
 
-/* line 57, ../scss/font/_classes.scss */
+/* line 59, ../scss/font/_classes.scss */
 .icon-flip-right:before {
   content: "\e00e";
 }
 
-/* line 60, ../scss/font/_classes.scss */
+/* line 62, ../scss/font/_classes.scss */
 .icon-flip-left:before {
   content: "\e00f";
 }
 
-/* line 63, ../scss/font/_classes.scss */
+/* line 65, ../scss/font/_classes.scss */
 .icon-cross:before, .post-text form.custom ul li span.custom:before {
   content: "\e010";
 }
 
-/* line 66, ../scss/font/_classes.scss */
+/* line 68, ../scss/font/_classes.scss */
 .icon-close:before {
   content: "\e011";
 }
 
-/* line 69, ../scss/font/_classes.scss */
+/* line 71, ../scss/font/_classes.scss */
 .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before {
   content: "\e012";
 }
 
-/* line 72, ../scss/font/_classes.scss */
+/* line 74, ../scss/font/_classes.scss */
 .icon-bar:before, .vendor-listing ul li.bar .icon:before {
   content: "\e013";
 }
 
-/* line 75, ../scss/font/_classes.scss */
+/* line 77, ../scss/font/_classes.scss */
 .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before {
   content: "\e014";
 }
 
-/* line 78, ../scss/font/_classes.scss */
+/* line 80, ../scss/font/_classes.scss */
 .icon-arrow-right:before {
   content: "\e015";
 }
 
-/* line 81, ../scss/font/_classes.scss */
+/* line 83, ../scss/font/_classes.scss */
 .icon-arrow-left:before {
   content: "\e016";
 }
 
-/* line 84, ../scss/font/_classes.scss */
+/* line 86, ../scss/font/_classes.scss */
 .icon-mark-mug:before {
   content: "\e017";
 }
 
-/* line 87, ../scss/font/_classes.scss */
+/* line 89, ../scss/font/_classes.scss */
 .icon-mandie-wheat:before {
   content: "\e018";
 }
 
-/* line 90, ../scss/font/_classes.scss */
+/* line 92, ../scss/font/_classes.scss */
 .icon-icon-mandie:before {
   content: "\e019";
+}
+
+/* line 95, ../scss/font/_classes.scss */
+.icon-maris-b:before {
+  content: "\e01a";
+}
+
+/* line 98, ../scss/font/_classes.scss */
+.icon-maris-a:before {
+  content: "\e01b";
+}
+
+/* line 101, ../scss/font/_classes.scss */
+.icon-eephus-b:before {
+  content: "\e01c";
+}
+
+/* line 104, ../scss/font/_classes.scss */
+.icon-eephus-a:before {
+  content: "\e01d";
+}
+
+/* line 107, ../scss/font/_classes.scss */
+.icon-doubleipa-b:before {
+  content: "\e01e";
+}
+
+/* line 110, ../scss/font/_classes.scss */
+.icon-doubleipa-a:before {
+  content: "\e01f";
 }
 
 @font-face {
@@ -5249,17 +5281,24 @@ h2.beer-name.beer-block {
   margin-top: 20px;
   margin-bottom: 0;
 }
-/* line 48, ../scss/base/_typography.scss */
+/* line 47, ../scss/base/_typography.scss */
 h2.beer-name.beer-block:before {
+  height: 4px;
+  width: 4px;
+  border: 1px solid;
   position: absolute;
   left: 50%;
   top: 0px;
-  font-size: 6px;
-  font-size: 0.6rem;
-  margin-left: -5px;
+  content: ' ';
+  margin-left: -2px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
-/* line 59, ../scss/base/_typography.scss */
+/* line 62, ../scss/base/_typography.scss */
 h3, .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_3 label {
   font-size: 12px;
   font-size: 1.2rem;
@@ -5268,11 +5307,11 @@ h3, .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-t
   padding: 15px 0;
   text-transform: uppercase;
 }
-/* line 65, ../scss/base/_typography.scss */
+/* line 68, ../scss/base/_typography.scss */
 h3.bg-navy, h3.list-categories, .post-text .gform_body .gform_fields li#field_2_1 label.list-categories:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.list-categories, .post-text .gform_body .gform_fields li#field_2_1 label.bg-navy:first-child, .post-text .gform_body .gform_fields li#field_2_1 .banner > .row > label.columns:first-child, .post-text .gform_body .gform_fields li#field_2_1 #av-overlay #av_verify_form .banner > p > label.columns:first-child, #av-overlay #av_verify_form .post-text .gform_body .gform_fields li#field_2_1 .banner > p > label.columns:first-child, #av-overlay #av_verify_form .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .banner > span.gform_description > label.columns:first-child, #av-overlay #av_verify_form .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .banner > span.gform_description > label.columns:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay #av_verify_form .banner > span.gform_description > label.columns:first-child, .post-text .gform_heading #av-overlay #av_verify_form .gform_body .gform_fields li#field_2_1 .banner > span.gform_description > label.columns:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.bg-navy, .post-text .gform_body .gform_fields li#field_2_3 .banner > .row > label.columns, .post-text .gform_body .gform_fields li#field_2_3 #av-overlay #av_verify_form .banner > p > label.columns, #av-overlay #av_verify_form .post-text .gform_body .gform_fields li#field_2_3 .banner > p > label.columns, #av-overlay #av_verify_form .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .banner > span.gform_description > label.columns, #av-overlay #av_verify_form .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .banner > span.gform_description > label.columns, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay #av_verify_form .banner > span.gform_description > label.columns, .post-text .gform_heading #av-overlay #av_verify_form .gform_body .gform_fields li#field_2_3 .banner > span.gform_description > label.columns, .banner > .row > h3.columns, #av-overlay #av_verify_form .banner > p > h3.columns, #av-overlay #av_verify_form .post-text .gform_heading .banner > span.gform_description > h3.columns, .post-text .gform_heading #av-overlay #av_verify_form .banner > span.gform_description > h3.columns {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
-/* line 68, ../scss/base/_typography.scss */
+/* line 71, ../scss/base/_typography.scss */
 h3.beer-tagline, .post-text .gform_body .gform_fields li#field_2_1 label.beer-tagline:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.beer-tagline {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -5281,7 +5320,7 @@ h3.beer-tagline, .post-text .gform_body .gform_fields li#field_2_1 label.beer-ta
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 74, ../scss/base/_typography.scss */
+/* line 77, ../scss/base/_typography.scss */
 h3.beer-tagline:after, .post-text .gform_body .gform_fields li#field_2_1 label.beer-tagline:first-child:after, .post-text .gform_body .gform_fields li#field_2_3 label.beer-tagline:after {
   content: ' ';
   position: absolute;
@@ -5293,7 +5332,7 @@ h3.beer-tagline:after, .post-text .gform_body .gform_fields li#field_2_1 label.b
   margin-left: -5px;
 }
 
-/* line 87, ../scss/base/_typography.scss */
+/* line 90, ../scss/base/_typography.scss */
 h4 {
   font-size: 10px;
   font-size: 1rem;
@@ -5303,7 +5342,7 @@ h4 {
   letter-spacing: 0.03em;
 }
 
-/* line 94, ../scss/base/_typography.scss */
+/* line 97, ../scss/base/_typography.scss */
 h5 {
   font-size: 12px;
   font-size: 1.2rem;
@@ -5312,7 +5351,7 @@ h5 {
   margin: 15px 0 0 0;
 }
 
-/* line 101, ../scss/base/_typography.scss */
+/* line 104, ../scss/base/_typography.scss */
 h6 {
   line-height: 1.6;
   font-size: 12px;
@@ -5324,12 +5363,12 @@ h6 {
   font-weight: normal;
 }
 
-/* line 113, ../scss/base/_typography.scss */
+/* line 116, ../scss/base/_typography.scss */
 .icon-with-space {
   position: relative;
   padding-left: 20px;
 }
-/* line 116, ../scss/base/_typography.scss */
+/* line 119, ../scss/base/_typography.scss */
 .icon-with-space:before {
   font-size: 14px;
   font-size: 1.4rem;
@@ -5338,27 +5377,27 @@ h6 {
   top: 2px;
 }
 
-/* line 125, ../scss/base/_typography.scss */
+/* line 128, ../scss/base/_typography.scss */
 .inner-text {
   padding: 0 20px;
 }
 
-/* line 130, ../scss/base/_typography.scss */
+/* line 133, ../scss/base/_typography.scss */
 .format-text h1, .format-text .post-text .gform_heading h3.gform_title, .post-text .gform_heading .format-text h3.gform_title, .format-text .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .format-text label.gform_title:first-child, .format-text .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .format-text label.gform_title:first-child, .format-text .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .format-text label.gform_title, .format-text .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .format-text label.gform_title, .format-text h2, .format-text h3, .format-text .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 .format-text label:first-child, .format-text .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 .format-text label, .format-text h4, .format-text h5, .format-text h6, .format-text p, .format-text .post-text .gform_heading span.gform_description, .post-text .gform_heading .format-text span.gform_description {
   padding: 0 20px;
 }
 
-/* line 135, ../scss/base/_typography.scss */
+/* line 138, ../scss/base/_typography.scss */
 .post-text {
-  padding-bottom: 50px;
+  padding-bottom: 0px;
   background: #fefcf8;
 }
-/* line 138, ../scss/base/_typography.scss */
+/* line 141, ../scss/base/_typography.scss */
 .post-text h1, .post-text .gform_heading h3.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text h2, .post-text p, .post-text .gform_heading span.gform_description, .post-text ul {
   padding-left: 40px;
   padding-right: 40px;
 }
-/* line 142, ../scss/base/_typography.scss */
+/* line 145, ../scss/base/_typography.scss */
 .post-text h2 {
   position: relative;
   padding: 30px 40px 10px;
@@ -5381,30 +5420,30 @@ h6 {
 .post-text h2:after {
   top: 0px;
 }
-/* line 148, ../scss/base/_typography.scss */
+/* line 151, ../scss/base/_typography.scss */
 .post-text h2:first-of-type {
   margin-top: 0;
 }
-/* line 153, ../scss/base/_typography.scss */
+/* line 156, ../scss/base/_typography.scss */
 .post-text h4 {
   margin: 30px 40px 10px;
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 157, ../scss/base/_typography.scss */
+/* line 160, ../scss/base/_typography.scss */
 .post-text h4.boxed {
   padding: 0;
   overflow: hidden;
   font-size: 12px;
   font-size: 1.2rem;
 }
-/* line 161, ../scss/base/_typography.scss */
+/* line 164, ../scss/base/_typography.scss */
 .post-text h4.boxed span {
   padding: 10px;
   display: block;
   float: left;
 }
-/* line 168, ../scss/base/_typography.scss */
+/* line 171, ../scss/base/_typography.scss */
 .post-text h5 {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -5412,32 +5451,32 @@ h6 {
   padding-bottom: 15px;
   text-transform: uppercase;
 }
-/* line 174, ../scss/base/_typography.scss */
+/* line 177, ../scss/base/_typography.scss */
 .post-text h6 {
   font-size: 16px;
   font-size: 1.6rem;
   font-weight: normal;
   padding-left: 20px;
 }
-/* line 179, ../scss/base/_typography.scss */
+/* line 182, ../scss/base/_typography.scss */
 .post-text p, .post-text .gform_heading span.gform_description {
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 182, ../scss/base/_typography.scss */
+/* line 185, ../scss/base/_typography.scss */
 .post-text ul.link-list {
   margin-left: -5px;
 }
-/* line 184, ../scss/base/_typography.scss */
+/* line 187, ../scss/base/_typography.scss */
 .post-text ul.link-list li {
   margin-left: 5px;
 }
-/* line 188, ../scss/base/_typography.scss */
+/* line 191, ../scss/base/_typography.scss */
 .post-text .wp-caption {
   padding: 20px 40px;
   width: 100%;
 }
-/* line 191, ../scss/base/_typography.scss */
+/* line 194, ../scss/base/_typography.scss */
 .post-text .wp-caption p, .post-text .wp-caption .gform_heading span.gform_description, .post-text .gform_heading .wp-caption span.gform_description {
   border: 1px solid;
   text-align: center;
@@ -5618,6 +5657,12 @@ ul#social > li a:hover {
   width: 1px;
   background: #0c223f;
 }
+@media only screen and (max-width: 768px) {
+  /* line 68, ../scss/_mixins.scss */
+  .vendor-listing .lead:before {
+    display: none;
+  }
+}
 /* line 19, ../scss/parts/_asides.scss */
 .vendor-listing .icon-tap {
   font-size: 60px;
@@ -5662,7 +5707,7 @@ ul#social > li a:hover {
 .vendor-listing ul li .icon-wrap {
   position: relative;
 }
-/* line 87, ../scss/_mixins.scss */
+/* line 92, ../scss/_mixins.scss */
 .vendor-listing ul li .icon-wrap:after {
   position: absolute;
   content: '';
@@ -5673,6 +5718,12 @@ ul#social > li a:hover {
   right: 0px;
   width: 1px;
   background: #0c223f;
+}
+@media only screen and (max-width: 768px) {
+  /* line 92, ../scss/_mixins.scss */
+  .vendor-listing ul li .icon-wrap:after {
+    display: none;
+  }
 }
 /* line 41, ../scss/parts/_asides.scss */
 .vendor-listing ul li .icon {
@@ -5854,13 +5905,31 @@ ul#social > li a:hover {
   left: 0;
   text-align: center;
 }
+/* line 178, ../scss/parts/_asides.scss */
+.front .back-logo, .front .big-icon, .back .back-logo, .back .big-icon {
+  font-size: 130px;
+  font-size: 13rem;
+  margin: auto;
+  color: white;
+  display: block;
+  height: 120px;
+  margin-top: 20px;
+  width: 200px;
+  line-height: 0;
+  position: relative;
+}
+/* line 189, ../scss/parts/_asides.scss */
+.front p, .front .post-text .gform_heading span.gform_description, .post-text .gform_heading .front span.gform_description, .back p, .back .post-text .gform_heading span.gform_description, .post-text .gform_heading .back span.gform_description {
+  color: white;
+  padding: 15px 30px;
+}
 
-/* line 180, ../scss/parts/_asides.scss */
+/* line 195, ../scss/parts/_asides.scss */
 .front {
   z-index: 2;
 }
 
-/* line 188, ../scss/parts/_asides.scss */
+/* line 202, ../scss/parts/_asides.scss */
 .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -5869,43 +5938,38 @@ ul#social > li a:hover {
   transform: rotateY(180deg);
   background: #0c223f;
 }
-/* line 191, ../scss/parts/_asides.scss */
-.back .back-logo {
-  font-size: 130px;
-  font-size: 13rem;
-  margin: auto;
-  color: white;
-  display: block;
-  height: 200px;
-  width: 200px;
-  line-height: 0;
-  position: relative;
-}
-/* line 201, ../scss/parts/_asides.scss */
-.back p, .back .post-text .gform_heading span.gform_description, .post-text .gform_heading .back span.gform_description {
-  color: white;
-  padding: 15px 30px;
-}
-/* line 205, ../scss/parts/_asides.scss */
+/* line 207, ../scss/parts/_asides.scss */
 .back h2 {
   color: white;
+}
+
+/** 
+  * Beers Page
+  *
+  */
+/* line 218, ../scss/parts/_asides.scss */
+.sidebar-beer .corner-two {
+  top: -31px;
+  right: -31px;
+  z-index: 1;
+  border-color: white;
 }
 
 /** 
   * Contact Page
   *
   */
-/* line 216, ../scss/parts/_asides.scss */
+/* line 233, ../scss/parts/_asides.scss */
 .list-contact {
   list-style: none;
   margin: 0;
 }
-/* line 219, ../scss/parts/_asides.scss */
+/* line 236, ../scss/parts/_asides.scss */
 .list-contact h5 {
   padding-bottom: 8px;
   margin-top: 10px;
 }
-/* line 224, ../scss/parts/_asides.scss */
+/* line 241, ../scss/parts/_asides.scss */
 .list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .footer .gform_body, .footer .list-contact li:last-child .gform_body {
   border-color: #0c223f !important;
 }
@@ -5914,7 +5978,7 @@ ul#social > li a:hover {
   * Highlights Page
   *
   */
-/* line 234, ../scss/parts/_asides.scss */
+/* line 251, ../scss/parts/_asides.scss */
 .tags-wrap {
   position: relative;
   padding-top: 3px;
@@ -5934,11 +5998,11 @@ ul#social > li a:hover {
 .tags-wrap:after {
   top: 0px;
 }
-/* line 238, ../scss/parts/_asides.scss */
+/* line 255, ../scss/parts/_asides.scss */
 .tags-wrap a {
   color: white;
 }
-/* line 241, ../scss/parts/_asides.scss */
+/* line 258, ../scss/parts/_asides.scss */
 .tags-wrap .tag-cloud {
   position: relative;
 }
@@ -5957,7 +6021,7 @@ ul#social > li a:hover {
   top: 0px;
 }
 
-/* line 246, ../scss/parts/_asides.scss */
+/* line 263, ../scss/parts/_asides.scss */
 .categories-wrap {
   position: relative;
 }
@@ -5976,7 +6040,7 @@ ul#social > li a:hover {
   top: 0px;
 }
 
-/* line 250, ../scss/parts/_asides.scss */
+/* line 267, ../scss/parts/_asides.scss */
 .list-categories {
   margin: -3px 0 0 0 !important;
   padding-bottom: 2px;
@@ -5996,11 +6060,11 @@ ul#social > li a:hover {
 .list-categories:after {
   top: 0px;
 }
-/* line 255, ../scss/parts/_asides.scss */
+/* line 272, ../scss/parts/_asides.scss */
 .list-categories:before {
   top: 3px;
 }
-/* line 258, ../scss/parts/_asides.scss */
+/* line 275, ../scss/parts/_asides.scss */
 .list-categories li {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
@@ -6008,7 +6072,7 @@ ul#social > li a:hover {
   text-align: center;
   overflow: hidden;
 }
-/* line 87, ../scss/_mixins.scss */
+/* line 92, ../scss/_mixins.scss */
 .list-categories li:after {
   position: absolute;
   content: '';
@@ -6020,7 +6084,13 @@ ul#social > li a:hover {
   width: 1px;
   background: white;
 }
-/* line 265, ../scss/parts/_asides.scss */
+@media only screen and (max-width: 768px) {
+  /* line 92, ../scss/_mixins.scss */
+  .list-categories li:after {
+    display: none;
+  }
+}
+/* line 282, ../scss/parts/_asides.scss */
 .list-categories li.active a:after {
   content: ' ';
   position: absolute;
@@ -6035,7 +6105,7 @@ ul#social > li a:hover {
   top: 2px;
   z-index: 0;
 }
-/* line 277, ../scss/parts/_asides.scss */
+/* line 294, ../scss/parts/_asides.scss */
 .list-categories li:nth-child(2), .list-categories li:nth-child(1) {
   margin-top: 3px;
 }
@@ -6063,7 +6133,7 @@ ul#social > li a:hover {
   position: relative;
   padding: 0;
 }
-/* line 87, ../scss/_mixins.scss */
+/* line 92, ../scss/_mixins.scss */
 .footer .gform_body:after {
   position: absolute;
   content: '';
@@ -6236,7 +6306,7 @@ ul#social > li a:hover {
 /* line 135, ../scss/parts/_gravity-forms.scss */
 .post-text form {
   margin: 0;
-  padding: 0 0 80px;
+  padding: 0 0 0px;
   background: #fefcf8;
 }
 /* line 140, ../scss/parts/_gravity-forms.scss */
@@ -6544,13 +6614,21 @@ ul.block-grid.excerpt-loop li {
   left: auto;
 }
 
-/* line 3, ../scss/parts/_stats.scss */
-.beer-stats .alc {
+/* line 4, ../scss/parts/_stats.scss */
+.beer-stats .columns.alc {
   width: 25%;
   position: relative;
 }
-/* line 87, ../scss/_mixins.scss */
-.beer-stats .alc:after {
+@media only screen and (max-width: 767px) {
+  /* line 4, ../scss/parts/_stats.scss */
+  .beer-stats .columns.alc {
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+/* line 92, ../scss/_mixins.scss */
+.beer-stats .columns.alc:after {
   position: absolute;
   content: '';
   height: auto;
@@ -6561,13 +6639,19 @@ ul.block-grid.excerpt-loop li {
   width: 1px;
   background: #0c223f;
 }
-/* line 7, ../scss/parts/_stats.scss */
-.beer-stats .IBU {
+@media only screen and (max-width: 768px) {
+  /* line 92, ../scss/_mixins.scss */
+  .beer-stats .columns.alc:after {
+    display: none;
+  }
+}
+/* line 10, ../scss/parts/_stats.scss */
+.beer-stats .columns.IBU {
   width: 8.33333%;
   position: relative;
 }
-/* line 87, ../scss/_mixins.scss */
-.beer-stats .IBU:after {
+/* line 92, ../scss/_mixins.scss */
+.beer-stats .columns.IBU:after {
   position: absolute;
   content: '';
   height: auto;
@@ -6578,13 +6662,27 @@ ul.block-grid.excerpt-loop li {
   width: 1px;
   background: #0c223f;
 }
-/* line 12, ../scss/parts/_stats.scss */
-.beer-stats .SRM {
+@media only screen and (max-width: 768px) {
+  /* line 92, ../scss/_mixins.scss */
+  .beer-stats .columns.IBU:after {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 10, ../scss/parts/_stats.scss */
+  .beer-stats .columns.IBU {
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+/* line 16, ../scss/parts/_stats.scss */
+.beer-stats .columns.SRM {
   width: 25%;
   position: relative;
 }
-/* line 87, ../scss/_mixins.scss */
-.beer-stats .SRM:after {
+/* line 92, ../scss/_mixins.scss */
+.beer-stats .columns.SRM:after {
   position: absolute;
   content: '';
   height: auto;
@@ -6595,9 +6693,36 @@ ul.block-grid.excerpt-loop li {
   width: 1px;
   background: #0c223f;
 }
-/* line 16, ../scss/parts/_stats.scss */
-.beer-stats .food_pairings {
+@media only screen and (max-width: 768px) {
+  /* line 92, ../scss/_mixins.scss */
+  .beer-stats .columns.SRM:after {
+    display: none;
+  }
+}
+/* line 20, ../scss/parts/_stats.scss */
+.beer-stats .columns.food_pairings {
   width: 41.66667%;
+}
+@media only screen and (max-width: 768px) {
+  /* line 1, ../scss/parts/_stats.scss */
+  .beer-stats {
+    padding: 25px 0 20px 0;
+  }
+  /* line 26, ../scss/parts/_stats.scss */
+  .beer-stats .columns {
+    width: auto !important;
+    float: none !important;
+    padding: 0 0 5px 0  !important;
+    text-align: center;
+  }
+  /* line 31, ../scss/parts/_stats.scss */
+  .beer-stats .columns .border-bottom, .beer-stats .columns .list-contact h5, .list-contact .beer-stats .columns h5, .beer-stats .columns .post-text .gform_body .gform_fields input, .post-text .gform_body .gform_fields .beer-stats .columns input, .beer-stats .columns .post-text .gform_body .gform_fields textarea, .post-text .gform_body .gform_fields .beer-stats .columns textarea, .beer-stats .columns .beer-stats, .beer-stats .columns .boxed span, .boxed .beer-stats .columns span {
+    border: none !important;
+  }
+  /* line 34, ../scss/parts/_stats.scss */
+  .beer-stats .columns h5, .beer-stats .columns h6 {
+    display: inline;
+  }
 }
 
 /* line 1, ../scss/vendor/_av-styles.scss */
@@ -7342,12 +7467,18 @@ html[xmlns] .slides {
   width: 1px;
   background: #0c223f;
 }
+@media only screen and (max-width: 768px) {
+  /* line 68, ../scss/_mixins.scss */
+  .rule-left:before {
+    display: none;
+  }
+}
 
 /* line 125, ../scss/_helpers.scss */
 .rule-right {
   position: relative;
 }
-/* line 87, ../scss/_mixins.scss */
+/* line 92, ../scss/_mixins.scss */
 .rule-right:after {
   position: absolute;
   content: '';
@@ -7359,12 +7490,18 @@ html[xmlns] .slides {
   width: 1px;
   background: #0c223f;
 }
+@media only screen and (max-width: 768px) {
+  /* line 92, ../scss/_mixins.scss */
+  .rule-right:after {
+    display: none;
+  }
+}
 
 /* line 127, ../scss/_helpers.scss */
 .rule-outside-right {
   position: relative;
 }
-/* line 87, ../scss/_mixins.scss */
+/* line 92, ../scss/_mixins.scss */
 .rule-outside-right:after {
   position: absolute;
   content: '';
@@ -7377,12 +7514,18 @@ html[xmlns] .slides {
   background: #0c223f;
   right: -15px;
 }
+@media only screen and (max-width: 768px) {
+  /* line 92, ../scss/_mixins.scss */
+  .rule-outside-right:after {
+    display: none;
+  }
+}
 
 /* line 129, ../scss/_helpers.scss */
 .rule-inside-right {
   position: relative;
 }
-/* line 87, ../scss/_mixins.scss */
+/* line 92, ../scss/_mixins.scss */
 .rule-inside-right:after {
   position: absolute;
   content: '';
@@ -7395,6 +7538,12 @@ html[xmlns] .slides {
   background: #0c223f;
   right: -15px;
   right: 15px;
+}
+@media only screen and (max-width: 768px) {
+  /* line 92, ../scss/_mixins.scss */
+  .rule-inside-right:after {
+    display: none;
+  }
 }
 
 /* line 132, ../scss/_helpers.scss */
@@ -7413,12 +7562,18 @@ html[xmlns] .slides {
   width: 1px;
   background: white;
 }
+@media only screen and (max-width: 768px) {
+  /* line 68, ../scss/_mixins.scss */
+  .rule-left-white:before {
+    display: none;
+  }
+}
 
 /* line 134, ../scss/_helpers.scss */
 .rule-right-white {
   position: relative;
 }
-/* line 87, ../scss/_mixins.scss */
+/* line 92, ../scss/_mixins.scss */
 .rule-right-white:after {
   position: absolute;
   content: '';
@@ -7430,12 +7585,18 @@ html[xmlns] .slides {
   width: 1px;
   background: white;
 }
+@media only screen and (max-width: 768px) {
+  /* line 92, ../scss/_mixins.scss */
+  .rule-right-white:after {
+    display: none;
+  }
+}
 
 /* line 136, ../scss/_helpers.scss */
 .rule-outside-right-white {
   position: relative;
 }
-/* line 87, ../scss/_mixins.scss */
+/* line 92, ../scss/_mixins.scss */
 .rule-outside-right-white:after {
   position: absolute;
   content: '';
@@ -7448,12 +7609,18 @@ html[xmlns] .slides {
   background: #0c223f;
   right: -15px;
 }
+@media only screen and (max-width: 768px) {
+  /* line 92, ../scss/_mixins.scss */
+  .rule-outside-right-white:after {
+    display: none;
+  }
+}
 
 /* line 138, ../scss/_helpers.scss */
 .rule-inside-right-white {
   position: relative;
 }
-/* line 87, ../scss/_mixins.scss */
+/* line 92, ../scss/_mixins.scss */
 .rule-inside-right-white:after {
   position: absolute;
   content: '';
@@ -7466,6 +7633,12 @@ html[xmlns] .slides {
   background: white;
   right: -15px;
   right: 15px;
+}
+@media only screen and (max-width: 768px) {
+  /* line 92, ../scss/_mixins.scss */
+  .rule-inside-right-white:after {
+    display: none;
+  }
 }
 
 /* line 141, ../scss/_helpers.scss */
@@ -9745,31 +9918,60 @@ table.hide-for-medium {
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 3, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 5, ../scss/components/modules/_mqueries-overrides.scss */
   .top-bar ul li.name {
     background: #0c223f;
   }
-  /* line 6, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 8, ../scss/components/modules/_mqueries-overrides.scss */
   .top-bar ul#global {
     width: 100%;
   }
-  /* line 8, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 10, ../scss/components/modules/_mqueries-overrides.scss */
   .top-bar ul#global li, .top-bar ul#global li.has-dropdown .dropdown {
     width: 100%;
   }
-  /* line 10, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 12, ../scss/components/modules/_mqueries-overrides.scss */
   .top-bar ul#global li h5 a, .top-bar ul#global li.has-dropdown .dropdown h5 a {
     background: none;
     color: #fefcf8;
     text-align: left;
   }
-  /* line 17, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 19, ../scss/components/modules/_mqueries-overrides.scss */
   .top-bar ul#social {
     width: 100%;
   }
 
-  /* line 21, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 23, ../scss/components/modules/_mqueries-overrides.scss */
   h2.header-text {
     margin: 10px 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 30, ../scss/components/modules/_mqueries-overrides.scss */
+  body {
+    overflow-x: hidden;
+    width: auto;
+  }
+
+  /* line 35, ../scss/components/modules/_mqueries-overrides.scss */
+  .row.flushed-right, #av-overlay #av_verify_form p.flushed-right, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-right.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-right.gform_description {
+    margin-right: 0 !important;
+  }
+
+  /* line 38, ../scss/components/modules/_mqueries-overrides.scss */
+  .row.flushed-left, #av-overlay #av_verify_form p.flushed-left, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-left.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-left.gform_description {
+    margin-left: 0 !important;
+  }
+
+  /* line 41, ../scss/components/modules/_mqueries-overrides.scss */
+  .post-text, .mobile-flush {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+
+  /* line 45, ../scss/components/modules/_mqueries-overrides.scss */
+  #container-navigation .row .twelve, #container-navigation #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve, #container-navigation #av-overlay #av_verify_form p .row .twelve, .row #container-navigation #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form #container-navigation p .row .twelve, .row #av-overlay #av_verify_form #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .row .twelve, .row #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .row .twelve, .row #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .row .twelve, .row #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .row .twelve, .row .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve, #container-navigation .row #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form p #container-navigation .row .twelve, #container-navigation #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description p .twelve, #container-navigation #av-overlay #av_verify_form p .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description p .twelve, #av-overlay #av_verify_form p .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description p .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form p span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description p .twelve, .post-text .gform_heading #av-overlay #av_verify_form p #container-navigation span.gform_description .twelve, #container-navigation .row #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description #container-navigation .row .twelve, #container-navigation #av-overlay #av_verify_form p .post-text .gform_heading span.gform_description .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description p .twelve, #av-overlay #av_verify_form #container-navigation p .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation .post-text .gform_heading span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .row .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description #container-navigation .row .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form p span.gform_description .twelve, .post-text .gform_heading #container-navigation #av-overlay #av_verify_form p span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description p .twelve, .post-text .gform_heading #container-navigation #av-overlay #av_verify_form span.gform_description p .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation p span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation #av-overlay #av_verify_form span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve {
+    margin: 0;
+    padding: 0;
   }
 }

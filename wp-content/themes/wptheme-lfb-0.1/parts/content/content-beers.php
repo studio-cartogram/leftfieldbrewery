@@ -29,7 +29,7 @@ if ( have_posts() ) :
 					</div>
 				</div>
 			</div>			
-			<div class="columns four pull-eight">
+			<div class="columns four pull-eight mobile-flush">
 				<?php get_sidebar('beers'); ?>
 			</div>
 		</div>

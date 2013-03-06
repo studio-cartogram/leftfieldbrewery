@@ -175,6 +175,21 @@
 	top: 0;
 	left: 0;
 	text-align:center;
+	.back-logo, .big-icon {
+		@include font-size(130);
+		margin:auto;
+		color:$white;
+		display:block;
+		height:120px;
+		margin-top:20px;
+		width:200px;
+		line-height:0;
+		position:relative;
+	}
+	p {
+		color:$white;
+		padding:15px 30px;
+	}
 }
 
 .front {
@@ -184,29 +199,31 @@
 	}
 }
 
-
 .back {
 	@include transform(rotateY(180deg));
 	background: $navy;
-	.back-logo {
-		@include font-size(130);
-		margin:auto;
-		color:$white;
-		display:block;
-		height:200px;
-		width:200px;
-		line-height:0;
-		position:relative;
-	}
-	p {
-		color:$white;
-		padding:15px 30px;
-	}
+	
+	
 	h2 {
 		color:$white;
 	}
 }
  
+
+/** 
+  * Beers Page
+  *
+  */ 
+
+.sidebar-beer .corner-two {
+	top: -31px; 
+	right: -31px;
+	z-index:1;
+	border-color:$white;
+}
+
+
+
 /** 
   * Contact Page
   *

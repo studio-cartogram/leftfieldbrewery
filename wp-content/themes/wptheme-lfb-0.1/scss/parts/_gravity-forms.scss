@@ -10,7 +10,7 @@
     @extend .space-top;
     @extend .border-bottom-white;
     @include column(9);
-    @include rule(right, false, $white);
+    @include rule(right, false, $white, false, true);
     padding:0;
     .gform_fields {
       list-style:none;
@@ -134,7 +134,7 @@
   }
   form {
       margin:0;
-      padding:0 0 80px;
+      padding:0 0 0px;
       background:$cream;
     }
   .gform_body {

@@ -1,7 +1,7 @@
 <?php
 global $slug; ?>
 <div class="row">
-	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four rule-left"); ?>>	
+	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight mobile-flush push-four rule-left"); ?>>	
 		<h3 class="rule-right text-center"><?php echo get_the_title(get_option('page_for_posts')) ?></h3>
 		<div id="content" class="row flushed-left  collapse">
 			<div class="column twelve rule-right ">
@@ -53,7 +53,7 @@ global $slug; ?>
 		</div>
 		<?php get_template_part('parts/navigation/pagination'); ?>	
 	</div>
-	<div class="columns four pull-eight">
+	<div class="columns mobile-flush four pull-eight">
 		<?php if (is_front_page()) {
 			get_sidebar('front-page'); 
 		} elseif (is_home()) { 
