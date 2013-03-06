@@ -3,11 +3,11 @@ global $slug;
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post(); ?>
 		<div class="row  <?php echo $slug; ?>">
-			<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four rule-left"); ?>>	
+			<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four mobile-flush rule-left"); ?>>	
 				<h3 class="rule-right text-center">A Distinctive League of Delicious Brews</h3>
+				<?php get_template_part('parts/slideshows/slideshow', 'beers'); ?>
 				<div class="row flushed-left collapse">
 					<div class="column twelve rule-right">
-						<?php get_template_part('parts/slideshows/slideshow', 'beers'); ?>
 						<div class="post-text double-bordered">
 							<div class="row collapse beer-stats">					
 								<?php

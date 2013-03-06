@@ -46,4 +46,10 @@
     margin:0;
     padding:0;
   }
+  .flexslider-instagram, .flexslider-beers {
+    padding:0;
+    .corner-one, .corner-two, .corner-three, .corner-four {
+      display:none;
+    }
+  }
 }

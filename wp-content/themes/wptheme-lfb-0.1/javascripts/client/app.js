@@ -153,7 +153,7 @@ App.flexsliderInit = function () {
 	});
 
 	$('.flexslider-beers').flexslider({
-	    selector: ".beers_slides > li",
+	    selector: ".slides-beers > li",
 	    animation: "slide",
 	    namespace: "cartogram-slider-internal-",
 	    prevText: "<i class='icon-arrow-left'></i>",
