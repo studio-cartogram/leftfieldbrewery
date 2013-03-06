@@ -31,23 +31,19 @@ window.onload = function() {
 			'icon-arrow-left' : '&#xe016;',
 			'icon-mark-mug' : '&#xe017;',
 			'icon-mandie-wheat' : '&#xe018;',
-			'icon-icon-mandie' : '&#xe019;'
+			'icon-icon-mandie' : '&#xe019;',
+			'icon-maris-b' : '&#xe01a;',
+			'icon-maris-a' : '&#xe01b;',
+			'icon-eephus-b' : '&#xe01c;',
+			'icon-eephus-a' : '&#xe01d;',
+			'icon-doubleipa-b' : '&#xe01e;',
+			'icon-doubleipa-a' : '&#xe01f;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;
 	for (i = 0; i < els.length; i += 1) {
 		el = els[i];
 		attr = el.getAttribute('data-icon');
-		if (attr) {
-			addIcon(el, attr);
-		}
-		c = el.className;
-		c = c.match(/icon-[^\s'"]+/);
-		if (c && icons[c[0]]) {
-			addIcon(el, icons[c[0]]);
-		}
-	}
-};tr = el.getAttribute('data-icon');
 		if (attr) {
 			addIcon(el, attr);
 		}
