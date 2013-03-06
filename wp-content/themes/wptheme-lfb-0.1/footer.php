@@ -6,7 +6,7 @@
 		</div>
 		<div class="columns three mobile-two">
 			<div class="row">
-				<div class="columns twelve rule-right-white">
+				<div class="columns twelve ">
 					<h3>Get in touch</h3>
 					<ul class="no-bullet text-small">
 						<li><?php echo '<a href="mailto:'. $options['email'] . '">' . $options['email'] . '</a>' ; ?></li>
@@ -15,7 +15,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="columns twelve rule-right-white border-top-white">
+				<div class="columns twelve  border-top-white">
 					<h3>Share</h3>
 					<?php $socialnav = array(
 						'theme_location'  => 'social',
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="columns three mobile-two rule-inside-right-white">
+		<div class="columns three mobile-two rule-left-white rule-inside-right-white">
 			<h3><a class="icon-twitter icon-with-space" href="">Chatter</a></h3>
 			<div id='twitter'></div>
 		</div>

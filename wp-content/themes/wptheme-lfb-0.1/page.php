@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home
+ * Template Name: Page
  */
 ?>
 
@@ -8,9 +8,11 @@
 <?php get_template_part('parts/shared/html-header'); ?>
 <?php get_header(); ?> 
 <div class="container" id="container-slider">
-	
-			    	<?php // get_template_part('parts/loops/loop', 'archive') ?> 	
-		
+	<div class="row">
+		<div class="columns twelve double-bordered-outside">
+			<?php get_template_part('parts/loops/loop', 'page') ?> 	
+		</div>
+	</div>	
 </div>
 <?php get_footer() ?>
 <?php get_template_part('parts/shared/html-footer'); ?>

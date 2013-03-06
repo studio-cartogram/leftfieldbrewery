@@ -1,7 +1,6 @@
 <?php global $myExcerptLength, $page_number, $offset, $query_part, $rootURL, $rootURL2;?>
 <?php $myExcerptLength = 20; ?>
 <div class="row  highlights ">
-	
 	<div class="columns eight push-four rule-left" id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>	
 		<h3 class="rule-right text-center">Latest News, Brews &amp; Events</h3>
 		<div class="row collapse flushed-left">

@@ -878,11 +878,12 @@
         var $this = $(this),
             selector = (options.selector) ? options.selector : ".slides > li",
             $slides = $this.find(selector);
-
-        if ($slides.length === 1) {
-          $slides.fadeIn(400);
-          if (options.start) options.start($this);
-        } else if ($this.data('flexslider') == undefined) {
+        //This prevents single slide flexsliders.
+        // if ($slides.length === 1) {
+        //   $slides.fadeIn(400);
+        //   if (options.start) options.start($this);
+        // } else 
+        if ($this.data('flexslider') == undefined) {
           new $.flexslider(this, options);
         }
       });

@@ -1,6 +1,14 @@
-.header-text {
+h2.header-text {
 	margin-top:110px;
 	display:block;
+	@include font-size(18);
+	font-weight:normal;
+	font-family:$beerFontFamily;
+	.split {
+		@include font-size(12);
+		top:-3px;
+		position:relative;
+	}
 }
 h1 a.icon-logo {
 	@include font-size(160)

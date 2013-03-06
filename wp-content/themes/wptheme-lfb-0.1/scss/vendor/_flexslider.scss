@@ -15,10 +15,10 @@
 .flexslider a:active,
 .cartogram-slider-container a:focus,
 .flexslider a:focus, 
-.cartogram-slider-players-container a:active,
-.cartogram-slider-players a:active,
-.cartogram-slider-instagramviewport a:active,
-.cartogram-slider-instagramviewport a:fcus,  {
+.cartogram-slider-sidebar-container a:active,
+.cartogram-slider-sidebar- a:active,
+.cartogram-slider-internal-viewport a:active,
+.cartogram-slider-internal-viewport a:focus,  {
 	outline: none;}
 .slides,
 .cartogram-slider-control-nav,
@@ -27,9 +27,9 @@
 
 /* FlexSlider Necessary Styles
 *********************************/ 
-.flexslider, .flexslider-players, .cartogram-slider-instagram {margin: 0; padding: 0;}
-.flexslider .slides > li, .cartogram-slider-players .slides-players > li, .cartogram-slider-instgram .slides-instagram > li {position:relative;display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides img, .cartogram-slider-players .slides-players img {width: 100%; display: block;}
+.flexslider, .flexslider-sidebar-, .cartogram-slider-internal- {margin: 0; padding: 0;}
+.flexslider .slides > li, .cartogram-slider-sidebar-viewport >ul > li, .cartogram-slider-internal-viewport > ul > li {position:relative;display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img, .cartogram-slider-sidebar-viewport >ul img, .cartogram-slider-internal-viewport >ul img {width: 100%; display: block;}
 .cartogram-slider-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .slides element */
@@ -45,21 +45,27 @@ html[xmlns] .slides {display: block;}
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider, .cartogram-slider-players {margin: 0 0 0px;  position: relative; zoom: 1;}
-.cartogram-slider-viewport, .cartogram-slider-players-viewport {overflow:visible !important; max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.flexslider, .cartogram-slider-sidebar-viewport {margin: 0 0 0px;  position: relative; zoom: 1;}
+.cartogram-slider-viewport, .cartogram-slider-sidebar-viewport { -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
 .loading .cartogram-slider-viewport {max-height: 300px;}
-.flexslider .slides, .cartogram-slider-players .slides-players{zoom: 1;}
+.flexslider .slides, .cartogram-slider-sidebar-viewport > ul{zoom: 1;}
 
-.carousel li {margin-right: 5px}
-.flexslider .slides > li {
-	@include opacity(0.5);
-	&.cartogram-slider-active-slide {
-		@include opacity(1);
-	}
+
+/* FlexSlider Siedbar Theme */
+.cartogram-slider-sidebar-viewport {
+	margin:0 0 50px;
 }
 
-/* Control Nav */
-.cartogram-slider-control-paging, .cartogram-slider-playerscontrol-paging {
+.carousel li {margin-right: 5px}
+// .flexslider .slides > li {
+// 	@include opacity(0.5);
+// 	&.cartogram-slider-active-slide {
+// 		@include opacity(1);
+// 	}
+// }
+
+// /* Control Nav */
+.cartogram-slider-control-paging, .cartogram-slider-sidebar-control-paging, .cartogram-slider-internal-control-paging {
   padding:0;
   list-style:none;
   text-align:center;
@@ -89,7 +95,7 @@ html[xmlns] .slides {display: block;}
       &:hover {
         background:$navy;
       }
-      &.cartogram-slider-active, &.cartogram-slider-playersactive {
+      &.cartogram-slider-active, &.cartogram-slider-sidebar-active {
         @include transform(translateZ(0));  
         background:$navy;
       }
@@ -114,7 +120,7 @@ html[xmlns] .slides {display: block;}
 }
 
 /* Direction Nav */
-.cartogram-slider-direction-nav, .cartogram-slider-instagramdirection-nav, .cartogram-slider-playersdirection-nav {
+.cartogram-slider-direction-nav, .cartogram-slider-internal-direction-nav, .cartogram-slider-sidebar-direction-nav {
 	*height: 0;
 	width:100%;
 	list-style:none;
@@ -165,7 +171,7 @@ html[xmlns] .slides {display: block;}
 	}
 }
 
-.cartogram-slider-instagramdirection-nav {
+.cartogram-slider-internal-direction-nav {
 	li {
 		&:before,  &:after {
 			display:none;
@@ -173,12 +179,12 @@ html[xmlns] .slides {display: block;}
 		a {
 			background:none;
 			border:none;
-			&.cartogram-slider-instagramprev {
+			&.cartogram-slider-internal-prev {
 				left:40px;
 				top:50%;
 				margin-top:-20px;
 			}
-			&.cartogram-slider-instagramnext {
+			&.cartogram-slider-internal-next {
 				right:40px;
 				top:50%;
 				margin-top:-20px;
@@ -191,7 +197,7 @@ html[xmlns] .slides {display: block;}
 	}
 }
 
-.cartogram-slider-playersdirection-nav {
+.cartogram-slider-sidebar-direction-nav {
 	li {
 		&:before,  &:after {
 			display:none;
@@ -201,12 +207,12 @@ html[xmlns] .slides {display: block;}
 			border:none;
 			color:$navy;
 			z-index:11;
-			&.cartogram-slider-playersprev {
+			&.cartogram-slider-sidebar-prev {
 				left:0px;
 				top:100%;
 				margin-top:0px;
 			}
-			&.cartogram-slider-playersnext {
+			&.cartogram-slider-sidebar-next {
 				right:0px;
 				top:100%;
 				margin-top:0px;
@@ -220,16 +226,11 @@ html[xmlns] .slides {display: block;}
 }
 
 
-.slide-row {
-	height:1000px;
-	background:darken($white, 10%);
-	margin:0 !important;
-	article {
-		border:1px solid $mainColor;
-		margin:10px;
-		padding:10px;
-	}
-}
-
 .flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {opacity: 1;}
-.cartogram-slider-direction-nav .cartogram-slider-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
+.cartogram-slider-direction-nav .cartogram-slider-disabled, .cartogram-slider-disabled , .cartogram-slider-disabled:hover{
+	opacity: .3!important; 
+	filter:alpha(opacity=30); 
+	cursor: default;
+	background:$navy!important;
+	color:$cream !important;
+}

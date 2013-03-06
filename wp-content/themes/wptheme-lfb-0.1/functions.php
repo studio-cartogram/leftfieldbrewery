@@ -255,8 +255,8 @@
 		}	
 		die();
 	}
-	add_action('wp_ajax_nopriv_page', 'gtp_page');
-	add_action('wp_ajax_page', 'gtp_page');
+//	add_action('wp_ajax_nopriv_page', 'gtp_page');
+//	add_action('wp_ajax_page', 'gtp_page');
 
 	/*******************************************************************
 	 *

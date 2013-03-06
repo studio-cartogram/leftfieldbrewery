@@ -1,19 +1,34 @@
-<?php
-global $id;
-$image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'single-post-thumbnail' );
-?>
-<div class="wrap">
-	<span class="flip"> flip this card </span>
-	<section class="card-container">
-		<div class="card" style="background-image: url('<?php echo $image[0]; ?>')">
-			<figure class="front">
-				<?php the_title();?>
-				<?php echo get_post_meta( $id, '_cartogram_short_description_value', TRUE );?>		
-				<?php the_content();?>
-			</figure>
-			<figure class="back">
-				Squeeze extra innings hot dog cup of coffee pinch runner fan designated hitter triple-A bandbox. Grass starter moneyball visitors play, mustard small ball. Flyout run wins alley breaking ball catcher run batted in rotation. Retire bases loaded 1-2-3 basehit out earned run reliever. Wrigley good eye left field cork rally streak foul pole blue. Slugging strike zone cookie sweep strike zone foul pole passed ball.
-			</figure>
+
+<h3 class="rule-left text-center ">An Unusual Delivery</h3>
+<div class="row collapse flushed-right">
+	<div class="columns twelve double-bordered">
+		<div class="rule-left">
+			<div class="flip-container">
+				<a class="flip" id="to-back" href="#"><i class="icon-flip-right"></i></a>
+				<a class="flip" id="to-front" href="#"><i class="icon-flip-left"></i></a>
+				<span class="corner-one"></span>
+				<span class="corner-two "></span>
+				<span class="corner-three"></span>
+				<span class="corner-four "></span>
+				<div class="flipper">
+					<div class="front">
+					<?php if (has_post_thumbnail()) { 
+								the_post_thumbnail();
+							} else {
+								echo '<img src="' . get_bloginfo("stylesheet_directory") . '/images/placeholder.png" class="placeholder-players"/>';
+						} 
+						$first_name = preg_split("/[\s,]+/", get_the_title());
+					?>
+					</div>
+					<div class="back">
+						<?php echo '<div class="back-logo icon-' . $icon . '"></div>';
+						 	the_title('<h2>', '</h2>');
+						 	echo get_post_meta( $id, '_cartogram_short_description_value', TRUE );
+							the_content();
+						?>
+					</div>
+				</div>
+			</div>
 		</div>
-	</section>
-</div>
+	</div>
+</div>	

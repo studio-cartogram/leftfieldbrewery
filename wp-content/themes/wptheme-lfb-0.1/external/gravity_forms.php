@@ -7,5 +7,5 @@
 	======================================================================================================================== */
 
 	function form_submit_button($button, $form){
-	    return "<button class='button' id='gform_submit_button_{$form["id"]}'><span>Submit</span></button>";
+	    return "<button class='button expand' id='gform_submit_button_{$form["id"]}'><span>Submit</span></button>";
 	}
