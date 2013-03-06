@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 51, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
-.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer, .post-text .gform_body .gform_fields li .ginput_complex span, .post-text .gform_body .gform_fields li .ginput_complex span:first-child {
+.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer, .post-text .gform_body .gform_fields li .ginput_complex span, .post-text .gform_body .gform_fields li .ginput_complex span:first-child, .beer-stats .alc, .beer-stats .IBU, .beer-stats .SRM, .beer-stats .food_pairings {
   float: left;
 }
 
@@ -26,7 +26,7 @@
 }
 
 /* line 62, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_semantic-grid.scss */
-.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer, .post-text .gform_body .gform_fields li .ginput_complex span, .post-text .gform_body .gform_fields li .ginput_complex span:first-child {
+.footer .gform_body, .footer .gform_body .gform_fields li .ginput_complex span, .footer .gform_footer, .post-text .gform_body .gform_fields li .ginput_complex span, .post-text .gform_body .gform_fields li .ginput_complex span:first-child, .beer-stats .alc, .beer-stats .IBU, .beer-stats .SRM, .beer-stats .food_pairings {
   position: relative;
   min-height: 1px;
   padding: 0 15px;
@@ -5385,43 +5385,59 @@ h6 {
 .post-text h2:first-of-type {
   margin-top: 0;
 }
-/* line 152, ../scss/base/_typography.scss */
+/* line 153, ../scss/base/_typography.scss */
 .post-text h4 {
   margin: 30px 40px 10px;
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 155, ../scss/base/_typography.scss */
+/* line 157, ../scss/base/_typography.scss */
 .post-text h4.boxed {
   padding: 0;
+  overflow: hidden;
   font-size: 12px;
   font-size: 1.2rem;
 }
-/* line 158, ../scss/base/_typography.scss */
+/* line 161, ../scss/base/_typography.scss */
 .post-text h4.boxed span {
   padding: 10px;
-  display: inline-block;
-  margin-left: -5px;
+  display: block;
+  float: left;
 }
-/* line 165, ../scss/base/_typography.scss */
+/* line 168, ../scss/base/_typography.scss */
+.post-text h5 {
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+/* line 174, ../scss/base/_typography.scss */
+.post-text h6 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  padding-left: 20px;
+}
+/* line 179, ../scss/base/_typography.scss */
 .post-text p, .post-text .gform_heading span.gform_description {
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 168, ../scss/base/_typography.scss */
+/* line 182, ../scss/base/_typography.scss */
 .post-text ul.link-list {
   margin-left: -5px;
 }
-/* line 170, ../scss/base/_typography.scss */
+/* line 184, ../scss/base/_typography.scss */
 .post-text ul.link-list li {
   margin-left: 5px;
 }
-/* line 174, ../scss/base/_typography.scss */
+/* line 188, ../scss/base/_typography.scss */
 .post-text .wp-caption {
   padding: 20px 40px;
   width: 100%;
 }
-/* line 177, ../scss/base/_typography.scss */
+/* line 191, ../scss/base/_typography.scss */
 .post-text .wp-caption p, .post-text .wp-caption .gform_heading span.gform_description, .post-text .gform_heading .wp-caption span.gform_description {
   border: 1px solid;
   text-align: center;
@@ -6528,6 +6544,62 @@ ul.block-grid.excerpt-loop li {
   left: auto;
 }
 
+/* line 3, ../scss/parts/_stats.scss */
+.beer-stats .alc {
+  width: 25%;
+  position: relative;
+}
+/* line 87, ../scss/_mixins.scss */
+.beer-stats .alc:after {
+  position: absolute;
+  content: '';
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0px;
+  width: 1px;
+  background: #0c223f;
+}
+/* line 7, ../scss/parts/_stats.scss */
+.beer-stats .IBU {
+  width: 8.33333%;
+  position: relative;
+}
+/* line 87, ../scss/_mixins.scss */
+.beer-stats .IBU:after {
+  position: absolute;
+  content: '';
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0px;
+  width: 1px;
+  background: #0c223f;
+}
+/* line 12, ../scss/parts/_stats.scss */
+.beer-stats .SRM {
+  width: 25%;
+  position: relative;
+}
+/* line 87, ../scss/_mixins.scss */
+.beer-stats .SRM:after {
+  position: absolute;
+  content: '';
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0px;
+  width: 1px;
+  background: #0c223f;
+}
+/* line 16, ../scss/parts/_stats.scss */
+.beer-stats .food_pairings {
+  width: 41.66667%;
+}
+
 /* line 1, ../scss/vendor/_av-styles.scss */
 #av-overlay-wrap {
   background: rgba(12, 34, 63, 0.95);
@@ -7210,7 +7282,7 @@ html[xmlns] .slides {
 }
 
 /* line 81, ../scss/_helpers.scss */
-.border-bottom, .list-contact h5, .post-text .gform_body .gform_fields input, .post-text .gform_body .gform_fields textarea, .boxed span {
+.border-bottom, .list-contact h5, .post-text .gform_body .gform_fields input, .post-text .gform_body .gform_fields textarea, .beer-stats, .boxed span {
   border-bottom: 1px solid #0c223f !important;
 }
 

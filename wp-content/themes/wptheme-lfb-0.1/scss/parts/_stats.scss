@@ -1,0 +1,19 @@
+.beer-stats {
+	@extend .border-bottom;
+	.alc {
+		@include column(3);
+		@include rule(right);
+	}
+	.IBU {
+		@include column(1);
+		@include rule(right);
+
+	}
+	.SRM {
+		@include column(3);
+		@include rule(right);
+	}
+	.food_pairings {
+		@include column(5);
+	}
+}

@@ -149,18 +149,32 @@ h6 {
 			margin-top:0;
 		}
 	}
+	
 	h4 {
 		margin:30px 40px 10px;
 		@include font-size(14);
+		
 		&.boxed {
 			padding:0;
+			overflow:hidden;
 			@include font-size(12);
 			span {
 				padding:10px;
-				display:inline-block;
-				margin-left:-5px;
+				display:block;
+				float:left;
 			}
 		}
+	}
+	h5 {
+		font-family:$bodyFontFamily;
+		@include font-size(18);
+		padding-bottom:15px;
+		text-transform:uppercase;
+	}
+	h6 {
+		@include font-size(16);
+		font-weight:normal;
+		padding-left:20px;
 	}
 	p {
 		@include font-size(14);

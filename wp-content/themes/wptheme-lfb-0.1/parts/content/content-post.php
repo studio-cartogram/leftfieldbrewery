@@ -9,7 +9,7 @@ if ( have_posts() ) :
 					<div class="column twelve rule-right">
 						<div class="post-text double-bordered">
 							<div class="row collapse">
-								<div class="columns five post-meta">
+								<div class="columns seven post-meta">
 									<h4 class="boxed"> <span><?php the_date('jS F, Y'); ?></span></h4>
 								</div>
 							</div>
