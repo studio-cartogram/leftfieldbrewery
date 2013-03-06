@@ -48,7 +48,7 @@
     left: 25px;
     top: 11px;
   } @else if $location == bottom-right {
-    bottom:0px;
+    bottom:16px;
     top:auto;
     right:0px;
     left:auto;
@@ -57,7 +57,7 @@
   } @else if $location == bottom-left {
     top:auto;
     left:25px;
-    bottom:11px;
+    bottom:26px;
     @include rotate(-45deg);
   }
 }

@@ -5,28 +5,81 @@ ul#social {
     float:left;
     text-align:center;
     position:relative;
+    overflow:hidden;
     &:hover {
       background:$navy;
     }
-    &:before {
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      color: white;
-      margin: 0;
-      padding: 0;
-      @include font-size(20);
-      margin-left: -11px;
-    }
     a {
       border-right:1px solid;
-      text-indent:-9999px;
-      padding:0;
-      &:hover {
-        background:$navy;
+      position:relative;
+      &:before {
+        padding:0 50px 0 0 !important;
+        color: white;
+        margin: 0;
+        padding: 0;
+        @include font-size(20);
+        position:relative;
+        top:4px;
+        margin-left:8px;
+      }
+      &:hover:before {
+        color:$red;
       }
     }
   }
+  li.icon-facebook {
+    &:before {
+      display:none;
+    }
+    > a {
+      @extend .icon-facebook;
+    }
+  }
+  li.icon-google-plus {
+    &:before {
+      display:none;
+    }
+    > a {
+      @extend .icon-google-plus;
+    }
+  }
+  li.icon-twitter {
+    &:before {
+      display:none;
+    }
+    > a {
+      @extend .icon-twitter;
+    }
+  }
+  li.icon-untappd {
+    &:before {
+      display:none;
+    }
+    > a {
+      @extend .icon-untappd;
+    }
+  }
+  li.icon-instagram {
+    &:before {
+      display:none;
+    }
+    > a {
+      @extend .icon-instagram;
+    }
+  }
+  li.icon-mail {
+    &:before {
+      display:none;
+    }
+    > a {
+      @extend .icon-mail;
+      &:before {
+         @include font-size(17);
+         top:2px;
+      }
+    }
+  }
+
 }
 .footer ul#social {
   width:100%;
@@ -41,3 +94,4 @@ ul#social {
     }
   }
 }
+

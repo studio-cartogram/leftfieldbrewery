@@ -19,11 +19,20 @@
     ul#social {
       width:100%;
     }
+    &.expanded ul li.toggle-topbar a {
+      border-bottom-color:$red;
+    }
+    section > ul li a:not(.button) {
+      padding-right:30px !important;
+    }
   }  
   h2.header-text {
     margin:10px 0;
   }
+
 }
+
+
 
 //Small Screen Changes
 @media only screen and (max-width: $screenSmall) {

@@ -39,6 +39,7 @@
         @include  transition(transform 0.3s);
         @include transform-style(preserve-3d);
 
+
       }
       &.has-dropdown {
         a {
@@ -65,7 +66,9 @@
             }
             &:hover, &.active, &:focus {
               > a { 
-                @include transform(rotateX( 180deg ));
+                color:$red;
+
+               // @include transform(rotateX( 180deg ));
               }
             }
           }
@@ -74,16 +77,16 @@
       &:not(.name), &:not(.divider), &:not(.has-dropdown) {
         &:hover, &.active, &:focus {
           > a { 
-            color: $black;
+            color:$red;
             background:$white;
-            @include transform(rotateX( 180deg ));
+            //@include transform(rotateX( 180deg ));
           }
         }
         &.current-menu-item > a, &.current-menu-item:hover > a {
           background:url(../images/stripe.png);
           color: darken($navy, 30%);
           @include transform(rotateX( 0deg ));
-          cursor:default;
+
 
         }
       }

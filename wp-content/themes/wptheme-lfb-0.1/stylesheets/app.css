@@ -5014,7 +5014,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
 /* line 7, ../scss/font/_classes.scss */
-.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .post-text .gform_body .gform_fields li.label-icon label:before, .icon-logo:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .post-text form.custom ul li span.custom:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-maris-b:before, .icon-maris-a:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before {
+.icon-twitter:before, ul#social li.icon-twitter > a:before, .icon-facebook:before, ul#social li.icon-facebook > a:before, .icon-google-plus:before, ul#social li.icon-google-plus > a:before, .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before, .icon-wordmark:before, .icon-untappd:before, ul#social li.icon-untappd > a:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, ul#social li.icon-mail > a:before, .post-text .gform_body .gform_fields li.label-icon label:before, .icon-logo:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, ul#social li.icon-instagram > a:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .post-text form.custom ul li span.custom:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-maris-b:before, .icon-maris-a:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -5026,17 +5026,17 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 17, ../scss/font/_classes.scss */
-.icon-twitter:before {
+.icon-twitter:before, ul#social li.icon-twitter > a:before {
   content: "\e000";
 }
 
 /* line 20, ../scss/font/_classes.scss */
-.icon-facebook:before {
+.icon-facebook:before, ul#social li.icon-facebook > a:before {
   content: "\e001";
 }
 
 /* line 23, ../scss/font/_classes.scss */
-.icon-google-plus:before {
+.icon-google-plus:before, ul#social li.icon-google-plus > a:before {
   content: "\e002";
 }
 
@@ -5051,7 +5051,7 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 32, ../scss/font/_classes.scss */
-.icon-untappd:before {
+.icon-untappd:before, ul#social li.icon-untappd > a:before {
   content: "\e006";
 }
 
@@ -5076,7 +5076,7 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 47, ../scss/font/_classes.scss */
-.icon-mail:before, .post-text .gform_body .gform_fields li.label-icon label:before {
+.icon-mail:before, ul#social li.icon-mail > a:before, .post-text .gform_body .gform_fields li.label-icon label:before {
   content: "\e00a";
 }
 
@@ -5091,7 +5091,7 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 56, ../scss/font/_classes.scss */
-.icon-instagram:before {
+.icon-instagram:before, ul#social li.icon-instagram > a:before {
   content: "\e00d";
 }
 
@@ -5557,35 +5557,65 @@ ul#social > li {
   float: left;
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
-/* line 8, ../scss/parts/_social.scss */
+/* line 9, ../scss/parts/_social.scss */
 ul#social > li:hover {
   background: #0c223f;
 }
-/* line 11, ../scss/parts/_social.scss */
-ul#social > li:before {
-  position: absolute;
-  top: 10px;
-  left: 50%;
+/* line 12, ../scss/parts/_social.scss */
+ul#social > li a {
+  border-right: 1px solid;
+  position: relative;
+}
+/* line 15, ../scss/parts/_social.scss */
+ul#social > li a:before {
+  padding: 0 50px 0 0 !important;
   color: white;
   margin: 0;
   padding: 0;
   font-size: 20px;
   font-size: 2rem;
-  margin-left: -11px;
-}
-/* line 21, ../scss/parts/_social.scss */
-ul#social > li a {
-  border-right: 1px solid;
-  text-indent: -9999px;
-  padding: 0;
+  position: relative;
+  top: 4px;
+  margin-left: 8px;
 }
 /* line 25, ../scss/parts/_social.scss */
-ul#social > li a:hover {
-  background: #0c223f;
+ul#social > li a:hover:before {
+  color: #ff4337;
+}
+/* line 31, ../scss/parts/_social.scss */
+ul#social li.icon-facebook:before {
+  display: none;
+}
+/* line 39, ../scss/parts/_social.scss */
+ul#social li.icon-google-plus:before {
+  display: none;
+}
+/* line 47, ../scss/parts/_social.scss */
+ul#social li.icon-twitter:before {
+  display: none;
+}
+/* line 55, ../scss/parts/_social.scss */
+ul#social li.icon-untappd:before {
+  display: none;
+}
+/* line 63, ../scss/parts/_social.scss */
+ul#social li.icon-instagram:before {
+  display: none;
+}
+/* line 71, ../scss/parts/_social.scss */
+ul#social li.icon-mail:before {
+  display: none;
+}
+/* line 76, ../scss/parts/_social.scss */
+ul#social li.icon-mail > a:before {
+  font-size: 17px;
+  font-size: 1.7rem;
+  top: 2px;
 }
 
-/* line 31, ../scss/parts/_social.scss */
+/* line 84, ../scss/parts/_social.scss */
 .footer ul#social {
   width: 100%;
   padding-bottom: 20px;
@@ -5600,12 +5630,12 @@ ul#social > li a:hover {
 .footer ul#social:after {
   clear: both;
 }
-/* line 35, ../scss/parts/_social.scss */
+/* line 88, ../scss/parts/_social.scss */
 .footer ul#social > li {
   display: block;
   float: left;
 }
-/* line 38, ../scss/parts/_social.scss */
+/* line 91, ../scss/parts/_social.scss */
 .footer ul#social > li a {
   border-right: none;
   display: block;
@@ -5640,7 +5670,7 @@ ul#social > li a:hover {
 /* line 11, ../scss/parts/_asides.scss */
 .vendor-listing .lead {
   position: relative;
-  padding: 20px 0 20px 80px;
+  padding: 20px 0 40px 80px;
   margin: 0;
   position: relative;
   color: #0c223f;
@@ -5808,8 +5838,10 @@ ul#social > li a:hover {
   background: #0c223f;
   width: 100%;
   overflow: hidden;
+  width: 100%;
+  height: 450px;
 }
-/* line 114, ../scss/parts/_asides.scss */
+/* line 116, ../scss/parts/_asides.scss */
 .flip-container .flip {
   position: absolute;
   z-index: 1000;
@@ -5826,15 +5858,15 @@ ul#social > li a:hover {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 124, ../scss/parts/_asides.scss */
+/* line 126, ../scss/parts/_asides.scss */
 .flip-container .flip:hover, .flip-container .flip:hover i {
   color: #ff4337;
 }
-/* line 127, ../scss/parts/_asides.scss */
+/* line 129, ../scss/parts/_asides.scss */
 .flip-container .flip i {
   display: block;
 }
-/* line 131, ../scss/parts/_asides.scss */
+/* line 133, ../scss/parts/_asides.scss */
 .flip-container .flip#to-front {
   opacity: 0;
   left: 0;
@@ -5844,11 +5876,11 @@ ul#social > li a:hover {
   -o-backface-visibility: visible;
   backface-visibility: visible;
 }
-/* line 136, ../scss/parts/_asides.scss */
+/* line 138, ../scss/parts/_asides.scss */
 .flip-container .flip#to-back {
   opacity: 1;
 }
-/* line 142, ../scss/parts/_asides.scss */
+/* line 144, ../scss/parts/_asides.scss */
 .flip-container.hover .flipper {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -5856,15 +5888,15 @@ ul#social > li a:hover {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-/* line 145, ../scss/parts/_asides.scss */
+/* line 147, ../scss/parts/_asides.scss */
 .flip-container.hover .flip#to-front {
   opacity: 1;
 }
-/* line 148, ../scss/parts/_asides.scss */
+/* line 150, ../scss/parts/_asides.scss */
 .flip-container.hover .flip#to-back {
   opacity: 0;
 }
-/* line 152, ../scss/parts/_asides.scss */
+/* line 154, ../scss/parts/_asides.scss */
 .flip-container .name {
   left: -1px;
   bottom: 1px;
@@ -5872,29 +5904,8 @@ ul#social > li a:hover {
   position: absolute;
   border-top: none;
 }
-
 /* line 161, ../scss/parts/_asides.scss */
-.flip-container, .front, .back {
-  width: 100%;
-  height: 450px;
-}
-
-/* line 166, ../scss/parts/_asides.scss */
-.flipper {
-  -webkit-transition: 0.6s;
-  -moz-transition: 0.6s;
-  -o-transition: 0.6s;
-  transition: 0.6s;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  position: relative;
-}
-
-/* line 172, ../scss/parts/_asides.scss */
-.front, .back {
+.flip-container .front, .flip-container .back {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
@@ -5904,9 +5915,11 @@ ul#social > li a:hover {
   top: 0;
   left: 0;
   text-align: center;
+  width: 100%;
+  height: 450px;
 }
-/* line 178, ../scss/parts/_asides.scss */
-.front .back-logo, .front .big-icon, .back .back-logo, .back .big-icon {
+/* line 169, ../scss/parts/_asides.scss */
+.flip-container .front .back-logo, .flip-container .front .big-icon, .flip-container .back .back-logo, .flip-container .back .big-icon {
   font-size: 130px;
   font-size: 13rem;
   margin: auto;
@@ -5918,19 +5931,17 @@ ul#social > li a:hover {
   line-height: 0;
   position: relative;
 }
-/* line 189, ../scss/parts/_asides.scss */
-.front p, .front .post-text .gform_heading span.gform_description, .post-text .gform_heading .front span.gform_description, .back p, .back .post-text .gform_heading span.gform_description, .post-text .gform_heading .back span.gform_description {
+/* line 180, ../scss/parts/_asides.scss */
+.flip-container .front p, .flip-container .front .post-text .gform_heading span.gform_description, .post-text .gform_heading .flip-container .front span.gform_description, .flip-container .back p, .flip-container .back .post-text .gform_heading span.gform_description, .post-text .gform_heading .flip-container .back span.gform_description {
   color: white;
   padding: 15px 30px;
 }
-
-/* line 195, ../scss/parts/_asides.scss */
-.front {
+/* line 186, ../scss/parts/_asides.scss */
+.flip-container .front {
   z-index: 2;
 }
-
-/* line 202, ../scss/parts/_asides.scss */
-.back {
+/* line 193, ../scss/parts/_asides.scss */
+.flip-container .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
@@ -5938,9 +5949,23 @@ ul#social > li a:hover {
   transform: rotateY(180deg);
   background: #0c223f;
 }
-/* line 207, ../scss/parts/_asides.scss */
-.back h2 {
+/* line 198, ../scss/parts/_asides.scss */
+.flip-container .back h2 {
   color: white;
+}
+
+/* line 205, ../scss/parts/_asides.scss */
+.flipper {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
 /** 
@@ -6550,15 +6575,21 @@ ul#social > li a:hover {
 }
 
 /* line 6, ../scss/parts/_instagram.scss */
-.flexslider-beers {
-  padding: 60px;
+.cartogram-slider-internal-viewport {
+  -webkit-transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
-/* line 9, ../scss/parts/_instagram.scss */
+/* line 11, ../scss/parts/_instagram.scss */
+.flexslider-beers {
+  padding-bottom: 60px;
+}
+
+/* line 14, ../scss/parts/_instagram.scss */
 .image-wrap {
   position: relative;
 }
-/* line 11, ../scss/parts/_instagram.scss */
+/* line 16, ../scss/parts/_instagram.scss */
 .image-wrap .image-caption {
   padding: 15px;
   position: absolute;
@@ -7777,7 +7808,7 @@ span.corner-three {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  bottom: 0px;
+  bottom: 16px;
   top: auto;
   right: 0px;
   left: auto;
@@ -7803,7 +7834,7 @@ span.corner-four {
   transform: rotate(45deg);
   top: auto;
   left: 25px;
-  bottom: 11px;
+  bottom: 26px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -7963,15 +7994,15 @@ body {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 44, ../scss/components/modules/_topbar.scss */
+/* line 45, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown a {
   padding-right: 0;
 }
-/* line 46, ../scss/components/modules/_topbar.scss */
+/* line 47, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown a:after {
   display: none;
 }
-/* line 51, ../scss/components/modules/_topbar.scss */
+/* line 52, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown {
   width: auto;
   padding: 0;
@@ -7980,37 +8011,28 @@ body {
   height: auto;
   border-left: 5px solid #0c223f;
 }
-/* line 58, ../scss/components/modules/_topbar.scss */
+/* line 59, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li {
   padding-bottom: 0;
 }
-/* line 60, ../scss/components/modules/_topbar.scss */
+/* line 61, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li:last-child {
   padding-bottom: 5px;
 }
-/* line 63, ../scss/components/modules/_topbar.scss */
+/* line 64, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li a {
   font-weight: bold;
 }
-/* line 67, ../scss/components/modules/_topbar.scss */
+/* line 68, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li.has-dropdown .dropdown li:hover > a, .top-bar ul#global > li.has-dropdown .dropdown li.active > a, .top-bar ul#global > li.has-dropdown .dropdown li:focus > a {
-  -webkit-transform: rotateX(180deg);
-  -moz-transform: rotateX(180deg);
-  -ms-transform: rotateX(180deg);
-  -o-transform: rotateX(180deg);
-  transform: rotateX(180deg);
+  color: #ff4337;
 }
-/* line 76, ../scss/components/modules/_topbar.scss */
+/* line 79, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li:not(.name):hover > a, .top-bar ul#global > li:not(.name).active > a, .top-bar ul#global > li:not(.name):focus > a, .top-bar ul#global > li:not(.divider):hover > a, .top-bar ul#global > li:not(.divider).active > a, .top-bar ul#global > li:not(.divider):focus > a, .top-bar ul#global > li:not(.has-dropdown):hover > a, .top-bar ul#global > li:not(.has-dropdown).active > a, .top-bar ul#global > li:not(.has-dropdown):focus > a {
-  color: black;
+  color: #ff4337;
   background: white;
-  -webkit-transform: rotateX(180deg);
-  -moz-transform: rotateX(180deg);
-  -ms-transform: rotateX(180deg);
-  -o-transform: rotateX(180deg);
-  transform: rotateX(180deg);
 }
-/* line 82, ../scss/components/modules/_topbar.scss */
+/* line 85, ../scss/components/modules/_topbar.scss */
 .top-bar ul#global > li:not(.name).current-menu-item > a, .top-bar ul#global > li:not(.name).current-menu-item:hover > a, .top-bar ul#global > li:not(.divider).current-menu-item > a, .top-bar ul#global > li:not(.divider).current-menu-item:hover > a, .top-bar ul#global > li:not(.has-dropdown).current-menu-item > a, .top-bar ul#global > li:not(.has-dropdown).current-menu-item:hover > a {
   background: url(../images/stripe.png);
   color: black;
@@ -8019,7 +8041,6 @@ body {
   -ms-transform: rotateX(0deg);
   -o-transform: rotateX(0deg);
   transform: rotateX(0deg);
-  cursor: default;
 }
 
 /* Normal Buttons ---------------------- */
@@ -9953,46 +9974,54 @@ table.hide-for-medium {
   .top-bar ul#social {
     width: 100%;
   }
+  /* line 22, ../scss/components/modules/_mqueries-overrides.scss */
+  .top-bar.expanded ul li.toggle-topbar a {
+    border-bottom-color: #ff4337;
+  }
+  /* line 25, ../scss/components/modules/_mqueries-overrides.scss */
+  .top-bar section > ul li a:not(.button) {
+    padding-right: 30px !important;
+  }
 
-  /* line 23, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 29, ../scss/components/modules/_mqueries-overrides.scss */
   h2.header-text {
     margin: 10px 0;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 30, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 39, ../scss/components/modules/_mqueries-overrides.scss */
   body {
     overflow-x: hidden;
     width: auto;
   }
 
-  /* line 35, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 44, ../scss/components/modules/_mqueries-overrides.scss */
   .row.flushed-right, #av-overlay #av_verify_form p.flushed-right, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-right.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-right.gform_description {
     margin-right: 0 !important;
   }
 
-  /* line 38, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 47, ../scss/components/modules/_mqueries-overrides.scss */
   .row.flushed-left, #av-overlay #av_verify_form p.flushed-left, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-left.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-left.gform_description {
     margin-left: 0 !important;
   }
 
-  /* line 41, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 50, ../scss/components/modules/_mqueries-overrides.scss */
   .post-text, .mobile-flush {
     margin-left: -15px !important;
     margin-right: -15px !important;
   }
 
-  /* line 45, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 54, ../scss/components/modules/_mqueries-overrides.scss */
   #container-navigation .row .twelve, #container-navigation #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve, #container-navigation #av-overlay #av_verify_form p .row .twelve, .row #container-navigation #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form #container-navigation p .row .twelve, .row #av-overlay #av_verify_form #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .row .twelve, .row #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .row .twelve, .row #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .row .twelve, .row #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .row .twelve, .row .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve, #container-navigation .row #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form p #container-navigation .row .twelve, #container-navigation #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description p .twelve, #container-navigation #av-overlay #av_verify_form p .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description p .twelve, #av-overlay #av_verify_form p .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description p .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form p span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description p .twelve, .post-text .gform_heading #av-overlay #av_verify_form p #container-navigation span.gform_description .twelve, #container-navigation .row #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description #container-navigation .row .twelve, #container-navigation #av-overlay #av_verify_form p .post-text .gform_heading span.gform_description .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description p .twelve, #av-overlay #av_verify_form #container-navigation p .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation .post-text .gform_heading span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .row .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description #container-navigation .row .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form p span.gform_description .twelve, .post-text .gform_heading #container-navigation #av-overlay #av_verify_form p span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description p .twelve, .post-text .gform_heading #container-navigation #av-overlay #av_verify_form span.gform_description p .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation p span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation #av-overlay #av_verify_form span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve {
     margin: 0;
     padding: 0;
   }
 
-  /* line 49, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 58, ../scss/components/modules/_mqueries-overrides.scss */
   .flexslider-instagram, .flexslider-beers {
     padding: 0;
   }
-  /* line 51, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 60, ../scss/components/modules/_mqueries-overrides.scss */
   .flexslider-instagram .corner-one, .flexslider-instagram .corner-two, .flexslider-instagram .corner-three, .flexslider-instagram .corner-four, .flexslider-beers .corner-one, .flexslider-beers .corner-two, .flexslider-beers .corner-three, .flexslider-beers .corner-four {
     display: none;
   }
