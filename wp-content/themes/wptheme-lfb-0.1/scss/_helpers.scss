@@ -170,7 +170,7 @@ span.corner-four {
 
 .insides {
   padding-left:30px;
-  @media only screen and (max-width: $screenSmall) {
+  @media only screen and (max-width: $screenSmall - 1) {
     padding-left:15px;
   }
 }

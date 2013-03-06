@@ -5,11 +5,11 @@
 <div class="row collapse flushed-right sidebar-beer">
 	<div class="columns twelve double-bordered">
 		<div class="rule-left">
-			<div class="flip-container ">
-				<a class="flip" id="to-back" href="#"><i class="icon-flip-right"></i></a>
+			<div style="background:<?php echo $color; ?>" class="flip-container ">
+				<a class="flip" id="to-back" href="#"><i  style="color:<?php echo $color; ?>"  class="icon-flip-right"></i></a>
 				<a class="flip" id="to-front" href="#"><i class="icon-flip-left"></i></a>
 				<span class="corner-two "></span>
-				<div class="flipper">
+				<div class="flipper ">
 					<div class="front" style="background:<?php echo $color; ?>">
 							<?php
 							the_title('<h2 class="light beer-name beer-block">', '</h2>');
@@ -18,7 +18,7 @@
 							the_content();
 						?>
 					</div>
-					<div class="back">
+					<div class="back" style="background:<?php echo $color; ?>">
 						 	<p class="space-inner-top-large">More Details Coming Soon...</p>
 					</div>
 				</div>

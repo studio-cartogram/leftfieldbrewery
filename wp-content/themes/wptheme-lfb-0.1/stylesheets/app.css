@@ -2623,7 +2623,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 /* Element that controls breakpoint, no need to change this ever */
 /* line 16, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
 .top-bar-js-breakpoint {
-  width: 768px !important;
+  width: 767px !important;
   visibility: hidden;
 }
 
@@ -2979,7 +2979,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 142, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_topbar.scss */
   .top-bar {
     margin-bottom: 0;
@@ -5680,7 +5680,7 @@ ul#social li.icon-mail > a:before {
   width: 1px;
   background: #0c223f;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 68, ../scss/_mixins.scss */
   .vendor-listing .lead:before {
     display: none;
@@ -5742,7 +5742,7 @@ ul#social li.icon-mail > a:before {
   width: 1px;
   background: #0c223f;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 92, ../scss/_mixins.scss */
   .vendor-listing ul li .icon-wrap:after {
     display: none;
@@ -5851,10 +5851,6 @@ ul#social li.icon-mail > a:before {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 126, ../scss/parts/_asides.scss */
-.flip-container .flip:hover, .flip-container .flip:hover i {
-  color: #ff4337;
-}
 /* line 129, ../scss/parts/_asides.scss */
 .flip-container .flip i {
   display: block;
@@ -5913,13 +5909,13 @@ ul#social li.icon-mail > a:before {
 }
 /* line 169, ../scss/parts/_asides.scss */
 .flip-container .front .back-logo, .flip-container .front .big-icon, .flip-container .back .back-logo, .flip-container .back .big-icon {
-  font-size: 130px;
-  font-size: 13rem;
+  font-size: 100px;
+  font-size: 10rem;
   margin: auto;
   color: white;
   display: block;
-  height: 120px;
-  margin-top: 20px;
+  height: 100px;
+  margin-top: 30px;
   width: 200px;
   line-height: 0;
   position: relative;
@@ -5973,29 +5969,34 @@ ul#social li.icon-mail > a:before {
   border-color: white;
 }
 
+/* line 226, ../scss/parts/_asides.scss */
+.sidebar-beer .flip-container .flip {
+  padding-top: 3px;
+}
+
 /** 
   * Contact Page
   *
   */
-/* line 233, ../scss/parts/_asides.scss */
+/* line 237, ../scss/parts/_asides.scss */
 .list-contact {
   list-style: none;
   margin: 0;
 }
-/* line 236, ../scss/parts/_asides.scss */
+/* line 240, ../scss/parts/_asides.scss */
 .list-contact h5 {
   padding-bottom: 8px;
   margin-top: 10px;
 }
-/* line 241, ../scss/parts/_asides.scss */
+/* line 245, ../scss/parts/_asides.scss */
 .list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .footer .gform_body, .footer .list-contact li:last-child .gform_body {
   border-color: #0c223f !important;
 }
-/* line 245, ../scss/parts/_asides.scss */
+/* line 249, ../scss/parts/_asides.scss */
 .list-contact li a:hover h5 {
   color: #ff4337;
 }
-/* line 248, ../scss/parts/_asides.scss */
+/* line 252, ../scss/parts/_asides.scss */
 .list-contact li a:hover h4 {
   background: #ff4337;
 }
@@ -6004,7 +6005,7 @@ ul#social li.icon-mail > a:before {
   * Highlights Page
   *
   */
-/* line 259, ../scss/parts/_asides.scss */
+/* line 263, ../scss/parts/_asides.scss */
 .tags-wrap {
   position: relative;
   padding-top: 3px;
@@ -6024,11 +6025,11 @@ ul#social li.icon-mail > a:before {
 .tags-wrap:after {
   top: 0px;
 }
-/* line 263, ../scss/parts/_asides.scss */
+/* line 267, ../scss/parts/_asides.scss */
 .tags-wrap a {
   color: white;
 }
-/* line 266, ../scss/parts/_asides.scss */
+/* line 270, ../scss/parts/_asides.scss */
 .tags-wrap .tag-cloud {
   position: relative;
 }
@@ -6047,7 +6048,7 @@ ul#social li.icon-mail > a:before {
   top: 0px;
 }
 
-/* line 271, ../scss/parts/_asides.scss */
+/* line 275, ../scss/parts/_asides.scss */
 .categories-wrap {
   position: relative;
 }
@@ -6066,7 +6067,7 @@ ul#social li.icon-mail > a:before {
   top: 0px;
 }
 
-/* line 275, ../scss/parts/_asides.scss */
+/* line 279, ../scss/parts/_asides.scss */
 .list-categories {
   margin: -3px 0 0 0 !important;
   padding-bottom: 2px;
@@ -6086,11 +6087,11 @@ ul#social li.icon-mail > a:before {
 .list-categories:after {
   top: 0px;
 }
-/* line 280, ../scss/parts/_asides.scss */
+/* line 284, ../scss/parts/_asides.scss */
 .list-categories:before {
   top: 3px;
 }
-/* line 283, ../scss/parts/_asides.scss */
+/* line 287, ../scss/parts/_asides.scss */
 .list-categories li {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
@@ -6110,13 +6111,13 @@ ul#social li.icon-mail > a:before {
   width: 1px;
   background: white;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 92, ../scss/_mixins.scss */
   .list-categories li:after {
     display: none;
   }
 }
-/* line 290, ../scss/parts/_asides.scss */
+/* line 294, ../scss/parts/_asides.scss */
 .list-categories li.active a:after {
   content: ' ';
   position: absolute;
@@ -6131,7 +6132,7 @@ ul#social li.icon-mail > a:before {
   top: 2px;
   z-index: 0;
 }
-/* line 302, ../scss/parts/_asides.scss */
+/* line 306, ../scss/parts/_asides.scss */
 .list-categories li:nth-child(2), .list-categories li:nth-child(1) {
   margin-top: 3px;
 }
@@ -6541,7 +6542,7 @@ ul#social li.icon-mail > a:before {
   font-size: 16px;
   font-size: 1.6rem;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 262, ../scss/parts/_gravity-forms.scss */
   .post-text .gform_body .gform_fields li .gfield_checkbox label {
     font-size: 13px;
@@ -6704,7 +6705,7 @@ ul.block-grid.excerpt-loop li {
   background: #0c223f;
   right: -15px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 92, ../scss/_mixins.scss */
   .beer-stats .columns.alc:after {
     display: none;
@@ -6731,7 +6732,7 @@ ul.block-grid.excerpt-loop li {
   width: 1px;
   background: #0c223f;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 92, ../scss/_mixins.scss */
   .beer-stats .columns.IBU:after {
     display: none;
@@ -6770,7 +6771,7 @@ ul.block-grid.excerpt-loop li {
   width: 1px;
   background: #0c223f;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 92, ../scss/_mixins.scss */
   .beer-stats .columns.SRM:after {
     display: none;
@@ -6792,12 +6793,12 @@ ul.block-grid.excerpt-loop li {
 .beer-stats .columns.food_pairings {
   width: 41.66667%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 1, ../scss/parts/_stats.scss */
   .beer-stats {
     padding: 25px 0 20px 0;
   }
-  /* line 49, ../scss/parts/_stats.scss */
+  /* line 50, ../scss/parts/_stats.scss */
   .beer-stats .columns {
     width: auto !important;
     float: none !important;
@@ -6805,11 +6806,11 @@ ul.block-grid.excerpt-loop li {
     text-align: center;
     min-height: 1px !important;
   }
-  /* line 55, ../scss/parts/_stats.scss */
+  /* line 56, ../scss/parts/_stats.scss */
   .beer-stats .columns .border-bottom, .beer-stats .columns .list-contact h5, .list-contact .beer-stats .columns h5, .beer-stats .columns .post-text .gform_body .gform_fields input, .post-text .gform_body .gform_fields .beer-stats .columns input, .beer-stats .columns .post-text .gform_body .gform_fields textarea, .post-text .gform_body .gform_fields .beer-stats .columns textarea, .beer-stats .columns .beer-stats, .beer-stats .columns .boxed span, .boxed .beer-stats .columns span {
     border: none !important;
   }
-  /* line 58, ../scss/parts/_stats.scss */
+  /* line 59, ../scss/parts/_stats.scss */
   .beer-stats .columns h5, .beer-stats .columns h6 {
     display: inline;
     padding-left: 10px !important;
@@ -7566,7 +7567,7 @@ html[xmlns] .slides {
   width: 1px;
   background: #0c223f;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 68, ../scss/_mixins.scss */
   .rule-left:before {
     display: none;
@@ -7589,7 +7590,7 @@ html[xmlns] .slides {
   width: 1px;
   background: #0c223f;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 92, ../scss/_mixins.scss */
   .rule-right:after {
     display: none;
@@ -7613,7 +7614,7 @@ html[xmlns] .slides {
   background: #0c223f;
   right: -15px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 92, ../scss/_mixins.scss */
   .rule-outside-right:after {
     display: none;
@@ -7638,7 +7639,7 @@ html[xmlns] .slides {
   right: -15px;
   right: 15px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 92, ../scss/_mixins.scss */
   .rule-inside-right:after {
     display: none;
@@ -7661,7 +7662,7 @@ html[xmlns] .slides {
   width: 1px;
   background: white;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 68, ../scss/_mixins.scss */
   .rule-left-white:before {
     display: none;
@@ -7684,7 +7685,7 @@ html[xmlns] .slides {
   width: 1px;
   background: white;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 92, ../scss/_mixins.scss */
   .rule-right-white:after {
     display: none;
@@ -7708,7 +7709,7 @@ html[xmlns] .slides {
   background: white;
   right: -15px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 92, ../scss/_mixins.scss */
   .rule-outside-right-white:after {
     display: none;
@@ -7733,7 +7734,7 @@ html[xmlns] .slides {
   right: -15px;
   right: 15px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 92, ../scss/_mixins.scss */
   .rule-inside-right-white:after {
     display: none;
@@ -7911,7 +7912,7 @@ span.corner-four {
 .insides {
   padding-left: 30px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 171, ../scss/_helpers.scss */
   .insides {
     padding-left: 15px;
@@ -9705,7 +9706,7 @@ table.hide-for-medium {
   }
 }
 /* Topbar Specific Breakpoint that you can customize */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 354, ../scss/components/modules/_mqueries.scss */
   .top-bar {
     margin-bottom: 0;
@@ -10036,7 +10037,7 @@ table.hide-for-medium {
     margin: 0;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 5, ../scss/components/modules/_mqueries-overrides.scss */
   .top-bar ul li.name {
     background: #0c223f;
@@ -10074,7 +10075,7 @@ table.hide-for-medium {
     margin: 10px 0;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 40, ../scss/components/modules/_mqueries-overrides.scss */
   body {
     overflow-x: hidden;

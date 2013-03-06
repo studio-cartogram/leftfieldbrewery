@@ -82,7 +82,7 @@
         left:15px;
       }
       @if $mobile == false {
-        @media only screen and (max-width: $screenSmall) {
+        @media only screen and (max-width: $screenSmall - 1) {
           display:none;
         }
       }
@@ -106,7 +106,8 @@
         right:15px;
       }
       @if $mobile == false {
-        @media only screen and (max-width: $screenSmall) {
+        @media only screen and (max-width: $screenSmall - 1) {
+
           display:none;
         }
       } 

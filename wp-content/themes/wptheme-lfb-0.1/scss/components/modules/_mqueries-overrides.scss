@@ -36,7 +36,7 @@
 
 
 //Small Screen Changes
-@media only screen and (max-width: $screenSmall) {
+@media only screen and (max-width: $screenSmall - 1) {
   body {
     overflow-x:hidden;
     width:auto;
