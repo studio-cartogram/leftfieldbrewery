@@ -444,7 +444,7 @@
 		if ($myExcerptLength) {
 		    return $myExcerptLength;
 		} else {
-		    return 200; //default value
+		    return 100; //default value
 	    }
 	}
 	
@@ -463,7 +463,8 @@
 						<div class="columns six">
 							<input type="text" name="av_verify_y" id="av_verify_y" maxlength="4" value="" placeholder="YYYY" />
 						</div>';
-		$newForm .= '<p class="submit"><label for="av_verify_remember"><input type="checkbox" name="av_verify_remember" id="av_verify_remember" value="1" /> Remember me</label> ';
+		$newForm .= '<p class="submit"><label for="av_verify_remember"><input type="checkbox" name="av_verify_remember" id="av_verify_remember" value="1" /> Remember me</label> <input type="submit" name="av_verify" id="av_verify" value="Enter Site" /></p>';
+		
 		$append = '</div>';
 		return $prepend . $newForm . $append;
 	}

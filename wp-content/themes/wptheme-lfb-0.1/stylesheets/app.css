@@ -1672,23 +1672,23 @@ that IE7/8 do not support :nth-child.
   box-shadow: 0 0 4px #c60f13, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 /* line 33, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.secondary, #pagination .pagination-link a.secondary, #pagination .pagination-link #av-overlay a.error, #av-overlay #pagination .pagination-link a.error, #av-overlay .submit input[type=submit], #av-overlay .button.error, #av-overlay .submit input.error[type=submit] {
+.button.secondary, #pagination .pagination-link a.secondary, #pagination .pagination-link #av-overlay a.error, #av-overlay #pagination .pagination-link a.error, #av-overlay .submit input.secondary[type=submit], #av-overlay .submit input[type=submit].error, #av-overlay .button.error {
   background-color: #fefcf8;
   color: #523b0c;
   border: 1px solid #f4dfb5;
 }
 /* line 34, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.secondary:hover, #pagination .pagination-link a.secondary:hover, #pagination .pagination-link #av-overlay a.error:hover, #av-overlay #pagination .pagination-link a.error:hover, #av-overlay .submit input[type=submit]:hover, #av-overlay .button.error:hover, #av-overlay .submit input.error[type=submit]:hover {
+.button.secondary:hover, #pagination .pagination-link a.secondary:hover, #pagination .pagination-link #av-overlay a.error:hover, #av-overlay #pagination .pagination-link a.error:hover, #av-overlay .submit input.secondary[type=submit]:hover, #av-overlay .submit input[type=submit].error:hover, #av-overlay .button.error:hover {
   background-color: #f8e9cb;
 }
 /* line 35, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.secondary:focus, #pagination .pagination-link a.secondary:focus, #pagination .pagination-link #av-overlay a.error:focus, #av-overlay #pagination .pagination-link a.error:focus, #av-overlay .submit input[type=submit]:focus, #av-overlay .button.error:focus, #av-overlay .submit input.error[type=submit]:focus {
+.button.secondary:focus, #pagination .pagination-link a.secondary:focus, #pagination .pagination-link #av-overlay a.error:focus, #av-overlay #pagination .pagination-link a.error:focus, #av-overlay .submit input.secondary[type=submit]:focus, #av-overlay .submit input[type=submit].error:focus, #av-overlay .button.error:focus {
   -webkit-box-shadow: 0 0 5px #fefcf8, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 0 5px #fefcf8, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 0 5px #fefcf8, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 /* line 39, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.radius, #pagination .pagination-link a.radius, #av-overlay .submit input[type=submit] {
+.button.radius, #pagination .pagination-link a.radius, #av-overlay .submit input.radius[type=submit] {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -1745,11 +1745,11 @@ that IE7/8 do not support :nth-child.
   background-color: #c60f13;
 }
 /* line 56, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.secondary, #pagination .pagination-link a.disabled.secondary, #pagination .pagination-link #av-overlay a.disabled.error, #av-overlay #pagination .pagination-link a.disabled.error, #av-overlay .submit input.disabled[type=submit], #av-overlay .button.disabled.error, #av-overlay .submit input.disabled.error[type=submit], .button[disabled].secondary, #pagination .pagination-link a[disabled].secondary, #pagination .pagination-link #av-overlay a[disabled].error, #av-overlay #pagination .pagination-link a[disabled].error, #av-overlay .submit input[disabled][type=submit], #av-overlay .button[disabled].error, #av-overlay .submit input[disabled].error[type=submit] {
+.button.disabled.secondary, #pagination .pagination-link a.disabled.secondary, #pagination .pagination-link #av-overlay a.disabled.error, #av-overlay #pagination .pagination-link a.disabled.error, #av-overlay .submit input.disabled.secondary[type=submit], #av-overlay .submit input.disabled[type=submit].error, #av-overlay .button.disabled.error, .button[disabled].secondary, #pagination .pagination-link a[disabled].secondary, #pagination .pagination-link #av-overlay a[disabled].error, #av-overlay #pagination .pagination-link a[disabled].error, #av-overlay .submit input[disabled].secondary[type=submit], #av-overlay .submit input[disabled][type=submit].error, #av-overlay .button[disabled].error {
   background-color: #fefcf8;
 }
 /* line 57, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.secondary:hover, #pagination .pagination-link a.disabled.secondary:hover, #pagination .pagination-link #av-overlay a.disabled.error:hover, #av-overlay #pagination .pagination-link a.disabled.error:hover, #av-overlay .submit input.disabled[type=submit]:hover, #av-overlay .button.disabled.error:hover, #av-overlay .submit input.disabled.error[type=submit]:hover, .button[disabled].secondary:hover, #pagination .pagination-link a[disabled].secondary:hover, #pagination .pagination-link #av-overlay a[disabled].error:hover, #av-overlay #pagination .pagination-link a[disabled].error:hover, #av-overlay .submit input[disabled][type=submit]:hover, #av-overlay .button[disabled].error:hover, #av-overlay .submit input[disabled].error[type=submit]:hover {
+.button.disabled.secondary:hover, #pagination .pagination-link a.disabled.secondary:hover, #pagination .pagination-link #av-overlay a.disabled.error:hover, #av-overlay #pagination .pagination-link a.disabled.error:hover, #av-overlay .submit input.disabled.secondary[type=submit]:hover, #av-overlay .submit input.disabled[type=submit].error:hover, #av-overlay .button.disabled.error:hover, .button[disabled].secondary:hover, #pagination .pagination-link a[disabled].secondary:hover, #pagination .pagination-link #av-overlay a[disabled].error:hover, #av-overlay #pagination .pagination-link a[disabled].error:hover, #av-overlay .submit input[disabled].secondary[type=submit]:hover, #av-overlay .submit input[disabled][type=submit].error:hover, #av-overlay .button[disabled].error:hover {
   background-color: #fefcf8;
 }
 
@@ -1958,7 +1958,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   background-color: #5da423;
 }
 /* line 120, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary:hover, #pagination .pagination-link a.dropdown.split.secondary:hover, #pagination .pagination-link #av-overlay a.dropdown.split.error:hover, #av-overlay #pagination .pagination-link a.dropdown.split.error:hover, #av-overlay .submit input.dropdown.split[type=submit]:hover, #av-overlay .button.dropdown.split.error:hover, #av-overlay .submit input.dropdown.split.error[type=submit]:hover {
+.button.dropdown.split.secondary:hover, #pagination .pagination-link a.dropdown.split.secondary:hover, #pagination .pagination-link #av-overlay a.dropdown.split.error:hover, #av-overlay #pagination .pagination-link a.dropdown.split.error:hover, #av-overlay .submit input.dropdown.split.secondary[type=submit]:hover, #av-overlay .submit input.dropdown.split[type=submit].error:hover, #av-overlay .button.dropdown.split.error:hover {
   background-color: #fefcf8;
 }
 /* line 123, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
@@ -2031,7 +2031,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   margin-top: -2px;
 }
 /* line 135, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary > span:after, #pagination .pagination-link a.dropdown.split.secondary > span:after, #pagination .pagination-link #av-overlay a.dropdown.split.error > span:after, #av-overlay #pagination .pagination-link a.dropdown.split.error > span:after, #av-overlay .submit input.dropdown.split[type=submit] > span:after, #av-overlay .button.dropdown.split.error > span:after, #av-overlay .submit input.dropdown.split.error[type=submit] > span:after {
+.button.dropdown.split.secondary > span:after, #pagination .pagination-link a.dropdown.split.secondary > span:after, #pagination .pagination-link #av-overlay a.dropdown.split.error > span:after, #av-overlay #pagination .pagination-link a.dropdown.split.error > span:after, #av-overlay .submit input.dropdown.split.secondary[type=submit] > span:after, #av-overlay .submit input.dropdown.split[type=submit].error > span:after, #av-overlay .button.dropdown.split.error > span:after {
   content: "";
   display: block;
   width: 0;
@@ -2095,12 +2095,12 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   border-left-color: #396516;
 }
 /* line 148, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary > span, #pagination .pagination-link a.dropdown.split.secondary > span, #pagination .pagination-link #av-overlay a.dropdown.split.error > span, #av-overlay #pagination .pagination-link a.dropdown.split.error > span, #av-overlay .submit input.dropdown.split[type=submit] > span, #av-overlay .button.dropdown.split.error > span, #av-overlay .submit input.dropdown.split.error[type=submit] > span {
+.button.dropdown.split.secondary > span, #pagination .pagination-link a.dropdown.split.secondary > span, #pagination .pagination-link #av-overlay a.dropdown.split.error > span, #av-overlay #pagination .pagination-link a.dropdown.split.error > span, #av-overlay .submit input.dropdown.split.secondary[type=submit] > span, #av-overlay .submit input.dropdown.split[type=submit].error > span, #av-overlay .button.dropdown.split.error > span {
   background-color: #fefcf8;
   border-left-color: #f4dfb5;
 }
 /* line 149, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary > a, #pagination .pagination-link a.dropdown.split.secondary > a, #pagination .pagination-link #av-overlay a.dropdown.split.error > a, #av-overlay #pagination .pagination-link a.dropdown.split.error > a, #av-overlay .submit input.dropdown.split[type=submit] > a, #av-overlay .button.dropdown.split.error > a, #av-overlay .submit input.dropdown.split.error[type=submit] > a {
+.button.dropdown.split.secondary > a, #pagination .pagination-link a.dropdown.split.secondary > a, #pagination .pagination-link #av-overlay a.dropdown.split.error > a, #av-overlay #pagination .pagination-link a.dropdown.split.error > a, #av-overlay .submit input.dropdown.split.secondary[type=submit] > a, #av-overlay .submit input.dropdown.split[type=submit].error > a, #av-overlay .button.dropdown.split.error > a {
   color: #523b0c;
 }
 /* line 151, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
@@ -2112,7 +2112,7 @@ input[type=submit].button, #av-overlay .submit input[type=submit], button.button
   background-color: #457a1a;
 }
 /* line 153, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary > a:hover, #pagination .pagination-link a.dropdown.split.secondary > a:hover, #pagination .pagination-link #av-overlay a.dropdown.split.error > a:hover, #av-overlay #pagination .pagination-link a.dropdown.split.error > a:hover, #av-overlay .submit input.dropdown.split[type=submit] > a:hover, #av-overlay .button.dropdown.split.error > a:hover, #av-overlay .submit input.dropdown.split.error[type=submit] > a:hover, .button.dropdown.split.secondary > span:hover, #pagination .pagination-link a.dropdown.split.secondary > span:hover, #pagination .pagination-link #av-overlay a.dropdown.split.error > span:hover, #av-overlay #pagination .pagination-link a.dropdown.split.error > span:hover, #av-overlay .submit input.dropdown.split[type=submit] > span:hover, #av-overlay .button.dropdown.split.error > span:hover, #av-overlay .submit input.dropdown.split.error[type=submit] > span:hover {
+.button.dropdown.split.secondary > a:hover, #pagination .pagination-link a.dropdown.split.secondary > a:hover, #pagination .pagination-link #av-overlay a.dropdown.split.error > a:hover, #av-overlay #pagination .pagination-link a.dropdown.split.error > a:hover, #av-overlay .submit input.dropdown.split.secondary[type=submit] > a:hover, #av-overlay .submit input.dropdown.split[type=submit].error > a:hover, #av-overlay .button.dropdown.split.error > a:hover, .button.dropdown.split.secondary > span:hover, #pagination .pagination-link a.dropdown.split.secondary > span:hover, #pagination .pagination-link #av-overlay a.dropdown.split.error > span:hover, #av-overlay #pagination .pagination-link a.dropdown.split.error > span:hover, #av-overlay .submit input.dropdown.split.secondary[type=submit] > span:hover, #av-overlay .submit input.dropdown.split[type=submit].error > span:hover, #av-overlay .button.dropdown.split.error > span:hover {
   background-color: #f8e9cb;
 }
 
@@ -4291,7 +4291,7 @@ div.alert-box a.close:hover, #av-overlay .error a.close:hover, div.alert-box a.c
   background: #0c223f;
 }
 /* line 160, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
-.label.radius, #av-overlay .submit input.label[type=submit] {
+.label.radius {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -4316,7 +4316,7 @@ div.alert-box a.close:hover, #av-overlay .error a.close:hover, div.alert-box a.c
   background-color: #5da423;
 }
 /* line 165, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
-.label.secondary, #av-overlay .submit input.label[type=submit], #av-overlay .label.error {
+.label.secondary, #av-overlay .label.error {
   background-color: #fefcf8;
   color: #ac7b18;
 }
@@ -4480,7 +4480,7 @@ div.alert-box a.close:hover, #av-overlay .error a.close:hover, div.alert-box a.c
   background: rgba(255, 255, 255, 0.8);
 }
 /* line 225, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/components/modules/_ui.scss */
-.panel.radius, #av-overlay .submit input.panel[type=submit] {
+.panel.radius {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -5014,7 +5014,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
 /* line 7, ../scss/font/_classes.scss */
-.icon-twitter:before, ul#social li.icon-twitter > a:before, .icon-facebook:before, ul#social li.icon-facebook > a:before, .icon-google-plus:before, ul#social li.icon-google-plus > a:before, .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before, .icon-wordmark:before, .icon-untappd:before, ul#social li.icon-untappd > a:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, ul#social li.icon-mail > a:before, .post-text .gform_body .gform_fields li.label-icon label:before, .icon-logo:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, ul#social li.icon-instagram > a:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .post-text form.custom ul li span.custom:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-maris-b:before, .icon-maris-a:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before {
+.icon-twitter:before, ul#social li.icon-twitter > a:before, .icon-facebook:before, ul#social li.icon-facebook > a:before, .icon-google-plus:before, ul#social li.icon-google-plus > a:before, .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before, .icon-wordmark:before, .icon-untappd:before, ul#social li.icon-untappd > a:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, ul#social li.icon-mail > a:before, .post-text .gform_body .gform_fields li.label-icon label:before, .icon-logo:before, #av-overlay h1:before, #av-overlay .post-text .gform_heading h3.gform_title:before, .post-text .gform_heading #av-overlay h3.gform_title:before, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child:before, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 #av-overlay label.gform_title:first-child:before, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child:before, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay label.gform_title:first-child:before, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title:before, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 #av-overlay label.gform_title:before, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title:before, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay label.gform_title:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, ul#social li.icon-instagram > a:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .post-text form.custom ul li span.custom:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-maris-b:before, .icon-maris-a:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -5081,7 +5081,7 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 50, ../scss/font/_classes.scss */
-.icon-logo:before {
+.icon-logo:before, #av-overlay h1:before, #av-overlay .post-text .gform_heading h3.gform_title:before, .post-text .gform_heading #av-overlay h3.gform_title:before, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child:before, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 #av-overlay label.gform_title:first-child:before, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child:before, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay label.gform_title:first-child:before, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title:before, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 #av-overlay label.gform_title:before, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title:before, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay label.gform_title:before {
   content: "\e00b";
 }
 
@@ -6832,11 +6832,29 @@ ul.block-grid.excerpt-loop li {
   visibility: visible;
   display: block;
 }
-/* line 17, ../scss/vendor/_av-styles.scss */
+/* line 8, ../scss/vendor/_av-styles.scss */
+#av-overlay h1, #av-overlay .post-text .gform_heading h3.gform_title, .post-text .gform_heading #av-overlay h3.gform_title, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 #av-overlay label.gform_title:first-child, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay label.gform_title:first-child, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 #av-overlay label.gform_title, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay label.gform_title {
+  position: relative;
+  padding-top: 250px;
+}
+/* line 12, ../scss/vendor/_av-styles.scss */
+#av-overlay h1:before, #av-overlay .post-text .gform_heading h3.gform_title:before, .post-text .gform_heading #av-overlay h3.gform_title:before, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child:before, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 #av-overlay label.gform_title:first-child:before, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child:before, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay label.gform_title:first-child:before, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title:before, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 #av-overlay label.gform_title:before, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title:before, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay label.gform_title:before {
+  font-size: 200px;
+  font-size: 20rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -140px;
+}
+/* line 20, ../scss/vendor/_av-styles.scss */
+#av-overlay > .row, #av-overlay #av_verify_form #av-overlay > p, #av-overlay #av_verify_form .post-text .gform_heading #av-overlay > span.gform_description, .post-text .gform_heading #av-overlay #av_verify_form #av-overlay > span.gform_description {
+  max-width: 750px !important;
+}
+/* line 32, ../scss/vendor/_av-styles.scss */
 #av-overlay p, #av-overlay .post-text .gform_heading span.gform_description, .post-text .gform_heading #av-overlay span.gform_description, #av-overlay h1, #av-overlay .post-text .gform_heading h3.gform_title, .post-text .gform_heading #av-overlay h3.gform_title, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 #av-overlay label.gform_title:first-child, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay label.gform_title:first-child, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 #av-overlay label.gform_title, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay label.gform_title, #av-overlay h3, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 #av-overlay label:first-child, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 #av-overlay label, #av-overlay h4, #av-overlay h5, #av-overlay h6, #av-overlay h6, #av-overlay label {
   color: white;
 }
-/* line 32, ../scss/vendor/_av-styles.scss */
+/* line 45, ../scss/vendor/_av-styles.scss */
 #av-overlay #av_verify_m, #av-overlay #av_verify_d, #av-overlay #av_verify_y {
   -webkit-box-shadow: 0 0 0;
   -moz-box-shadow: 0 0 0;
@@ -6851,6 +6869,7 @@ ul.block-grid.excerpt-loop li {
   border: none;
   color: white;
   border-bottom: 1px solid white;
+  text-align: center;
 }
 
 /* CORE CSS AND ANIMATIONS
@@ -6918,58 +6937,66 @@ ul.block-grid.excerpt-loop li {
 /* line 6, ../scss/vendor/_digits-default.scss */
 .digits .top-half-wrapper,
 .digits .bottom-half-wrapper {
-  width: 100px;
-  height: 50px;
+  width: 75px;
+  height: 40px;
 }
 
 /* line 12, ../scss/vendor/_digits-default.scss */
 .digits .top-half,
 .digits .bottom-half {
-  width: 100px;
-  height: 50px;
-  text-shadow: 0px 1px 0px #000;
+  width: 75px;
+  height: 40px;
+  text-shadow: 0px 1px 0px rgba(12, 34, 63, 0.3);
   text-align: center;
-  font-family: helvetica, sans;
-  font-weight: bold;
-  font-size: 80px;
+  font-family: "haymakerregular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  font-size: 6rem;
 }
 
-/* line 22, ../scss/vendor/_digits-default.scss */
+/* line 21, ../scss/vendor/_digits-default.scss */
 .digits .top-half {
   color: #fff;
 }
 
-/* line 26, ../scss/vendor/_digits-default.scss */
+/* line 25, ../scss/vendor/_digits-default.scss */
 .digits .bottom-half {
   color: #f1f1f1;
 }
 
-/* line 30, ../scss/vendor/_digits-default.scss */
+/* line 29, ../scss/vendor/_digits-default.scss */
 .digits .top-half {
-  background: #525252;
+  background: #85909f;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -ms-border-radius: 10px 10px 0px 0px;
+  -o-border-radius: 10px 10px 0px 0px;
   border-radius: 10px 10px 0px 0px;
-  line-height: 100px;
+  line-height: 80px;
 }
 
-/* line 36, ../scss/vendor/_digits-default.scss */
+/* line 35, ../scss/vendor/_digits-default.scss */
 .digits .bottom-half {
-  background: #333;
+  background: #546478;
+  -webkit-border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -ms-border-radius: 0px 0px 10px 10px;
+  -o-border-radius: 0px 0px 10px 10px;
   border-radius: 0px 0px 10px 10px;
 }
 
 /* COUNTDOWN MODE
 -------------------------------------------------*/
-/* line 45, ../scss/vendor/_digits-default.scss */
+/* line 44, ../scss/vendor/_digits-default.scss */
 .digits.countdown .digit:not(:last-child) {
   margin-right: 10px;
 }
 
-/* line 49, ../scss/vendor/_digits-default.scss */
+/* line 48, ../scss/vendor/_digits-default.scss */
 .digits.countdown .digit.second-2 {
   margin-right: 0;
 }
 
-/* line 55, ../scss/vendor/_digits-default.scss */
+/* line 54, ../scss/vendor/_digits-default.scss */
 .digits.countdown .digit.second-1,
 .digits.countdown .digit.minute-1,
 .digits.countdown .digit.hour-1 {
@@ -6978,20 +7005,20 @@ ul.block-grid.excerpt-loop li {
 
 /* STATISTICS MODE
 -------------------------------------------------*/
-/* line 63, ../scss/vendor/_digits-default.scss */
+/* line 62, ../scss/vendor/_digits-default.scss */
 .digits.statistics .digit:not(:last-of-type) {
   margin-right: 5px;
 }
 
 /* LABELS
 -------------------------------------------------*/
-/* line 71, ../scss/vendor/_digits-default.scss */
+/* line 70, ../scss/vendor/_digits-default.scss */
 .digits .labels {
   text-align: right;
   color: #111;
 }
 
-/* line 76, ../scss/vendor/_digits-default.scss */
+/* line 75, ../scss/vendor/_digits-default.scss */
 .digits .label {
   display: inline-block;
   width: 210px;
@@ -7004,29 +7031,29 @@ ul.block-grid.excerpt-loop li {
   margin: 20px 0;
 }
 
-/* line 90, ../scss/vendor/_digits-default.scss */
+/* line 89, ../scss/vendor/_digits-default.scss */
 .digits .label.hours,
 .digits .label.minutes,
 .digits .label.seconds {
   margin-left: 60px;
 }
 
-/* line 94, ../scss/vendor/_digits-default.scss */
+/* line 93, ../scss/vendor/_digits-default.scss */
 .digits .label.days:after {
   content: "Days";
 }
 
-/* line 98, ../scss/vendor/_digits-default.scss */
+/* line 97, ../scss/vendor/_digits-default.scss */
 .digits .label.hours:after {
   content: "Hours";
 }
 
-/* line 102, ../scss/vendor/_digits-default.scss */
+/* line 101, ../scss/vendor/_digits-default.scss */
 .digits .label.minutes:after {
   content: "Minutes";
 }
 
-/* line 106, ../scss/vendor/_digits-default.scss */
+/* line 105, ../scss/vendor/_digits-default.scss */
 .digits .label.seconds:after {
   content: "Seconds";
 }
@@ -8212,7 +8239,7 @@ body {
 /* line 9, ../scss/components/modules/_reveal.scss */
 .reveal-modal-bg, #av-overlay-wrap {
   background: transparent;
-  background: #fefcf8;
+  background: #0c223f;
 }
 
 /* line 15, ../scss/components/modules/_reveal.scss */
@@ -10071,84 +10098,88 @@ table.hide-for-medium {
     width: 100%;
   }
   /* line 12, ../scss/components/modules/_mqueries-overrides.scss */
+  .top-bar ul#global li h5, .top-bar ul#global li.has-dropdown .dropdown h5 {
+    text-align: center;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  /* line 16, ../scss/components/modules/_mqueries-overrides.scss */
   .top-bar ul#global li h5 a, .top-bar ul#global li.has-dropdown .dropdown h5 a {
     background: none;
     color: #fefcf8;
     text-align: left;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-block;
   }
-  /* line 19, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 23, ../scss/components/modules/_mqueries-overrides.scss */
+  .top-bar ul#global li h5 a:before, .top-bar ul#global li.has-dropdown .dropdown h5 a:before {
+    left: -20px;
+  }
+  /* line 30, ../scss/components/modules/_mqueries-overrides.scss */
   .top-bar ul#social {
     width: 100%;
   }
-  /* line 22, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 33, ../scss/components/modules/_mqueries-overrides.scss */
   .top-bar.expanded ul li.toggle-topbar a {
     border-bottom-color: #ff4337;
   }
-  /* line 25, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 36, ../scss/components/modules/_mqueries-overrides.scss */
   .top-bar section > ul li a:not(.button) {
     padding-right: 10px !important;
     padding-left: 10px !important;
   }
 
-  /* line 30, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 41, ../scss/components/modules/_mqueries-overrides.scss */
   h2.header-text {
     margin: 10px 0;
   }
+}
+@media only screen and (max-width: 769px) and (min-width: 768px) {
+  /* line 48, ../scss/components/modules/_mqueries-overrides.scss */
+  ul#global li a {
+    font-size: 11px !important;
+  }
 
-  /* line 34, ../scss/components/modules/_mqueries-overrides.scss */
-  ul#global li h5,
-  ul#global li.has-dropdown .dropdown h5 {
-    text-align: center;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-  }
-  /* line 38, ../scss/components/modules/_mqueries-overrides.scss */
-  ul#global li h5 a,
-  ul#global li.has-dropdown .dropdown h5 a {
-    padding: 0 !important;
-    margin: 0 !important;
-    display: inline-block;
-  }
-  /* line 42, ../scss/components/modules/_mqueries-overrides.scss */
-  ul#global li h5 a:before,
-  ul#global li.has-dropdown .dropdown h5 a:before {
-    left: -20px;
+  /* line 51, ../scss/components/modules/_mqueries-overrides.scss */
+  .list-contact li a h5 {
+    padding-left: 3px;
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 55, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 58, ../scss/components/modules/_mqueries-overrides.scss */
   body {
     overflow-x: hidden;
     width: auto;
   }
 
-  /* line 60, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 63, ../scss/components/modules/_mqueries-overrides.scss */
   .row.flushed-right, #av-overlay #av_verify_form p.flushed-right, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-right.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-right.gform_description {
     margin-right: 0 !important;
   }
 
-  /* line 63, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 66, ../scss/components/modules/_mqueries-overrides.scss */
   .row.flushed-left, #av-overlay #av_verify_form p.flushed-left, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-left.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-left.gform_description {
     margin-left: 0 !important;
   }
 
-  /* line 66, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 69, ../scss/components/modules/_mqueries-overrides.scss */
   .post-text, .mobile-flush {
     margin-left: -15px !important;
     margin-right: -15px !important;
   }
 
-  /* line 70, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 73, ../scss/components/modules/_mqueries-overrides.scss */
   #container-navigation .row .twelve, #container-navigation #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve, #container-navigation #av-overlay #av_verify_form p .row .twelve, .row #container-navigation #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form #container-navigation p .row .twelve, .row #av-overlay #av_verify_form #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .row .twelve, .row #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .row .twelve, .row #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .row .twelve, .row #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .row .twelve, .row .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve, #container-navigation .row #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form p #container-navigation .row .twelve, #container-navigation #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description p .twelve, #container-navigation #av-overlay #av_verify_form p .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description p .twelve, #av-overlay #av_verify_form p .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description p .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form p span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description p .twelve, .post-text .gform_heading #av-overlay #av_verify_form p #container-navigation span.gform_description .twelve, #container-navigation .row #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description #container-navigation .row .twelve, #container-navigation #av-overlay #av_verify_form p .post-text .gform_heading span.gform_description .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description p .twelve, #av-overlay #av_verify_form #container-navigation p .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation .post-text .gform_heading span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .row .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description #container-navigation .row .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form p span.gform_description .twelve, .post-text .gform_heading #container-navigation #av-overlay #av_verify_form p span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description p .twelve, .post-text .gform_heading #container-navigation #av-overlay #av_verify_form span.gform_description p .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation p span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation #av-overlay #av_verify_form span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve {
     margin: 0;
     padding: 0;
   }
 
-  /* line 74, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 77, ../scss/components/modules/_mqueries-overrides.scss */
   .flexslider-instagram, .flexslider-beers {
     padding: 0;
   }
-  /* line 76, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 79, ../scss/components/modules/_mqueries-overrides.scss */
   .flexslider-instagram .corner-one, .flexslider-instagram .corner-two, .flexslider-instagram .corner-three, .flexslider-instagram .corner-four, .flexslider-beers .corner-one, .flexslider-beers .corner-two, .flexslider-beers .corner-three, .flexslider-beers .corner-four {
     display: none;
   }

@@ -9,10 +9,21 @@
       width: 100%;
       li, li.has-dropdown .dropdown {
         width:100%;
-        h5 a {
-          background:none;
-          color:$cream;
-          text-align:left;
+        h5 {
+          text-align:center;
+          padding-left:0 !important;
+          margin-left:0 !important;
+          a {
+            background:none;
+            color:$cream;
+            text-align:left;
+            padding:0 !important;
+            margin:0 !important;
+            display:inline-block;
+            &:before {  
+              left:-20px;
+            }
+          }
         }
       }
     }
@@ -30,25 +41,17 @@
   h2.header-text {
     margin:10px 0;
   }
-  ul#global li h5 , 
-  ul#global li.has-dropdown .dropdown h5 {
-    text-align:center;
-    padding-left:0 !important;
-    margin-left:0 !important;
-    a {
-      padding:0 !important;
-      margin:0 !important;
-      display:inline-block;
-      &:before {
-        left:-20px;
-      }
-
-    }
-  }
-
 }
 
 
+@media only screen and (max-width: $screenSmall + 1) and (min-width: $screenSmall ) {
+    ul#global li a {
+      font-size:11px !important;
+    }
+    .list-contact li a h5 {
+      padding-left:3px;
+    }
+}
 
 //Small Screen Changes
 @media only screen and (max-width: $screenSmall - 1) {

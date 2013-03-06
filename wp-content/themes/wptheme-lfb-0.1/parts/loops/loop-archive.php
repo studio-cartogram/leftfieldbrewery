@@ -26,23 +26,26 @@ global $slug; ?>
 								_e( 'Archives', 'twentytwelve' );
 							endif;
 							?>
-							<?php $total = $wp_query->found_posts; ?>
+							
 						</div>
 					</div>
 				</div>
 				
 				<?php if ( have_posts() ) : $count=0 ;
 						$posts_per_page = get_option('posts_per_page');
+						$posts_on_this_page = $wp_query->post_count;
+						$posts_in_query = $wp_query->found_posts; 
 						 while ( have_posts() ) : the_post(); $count++;
 							if ($count % 2 != 0 || $total == 1) {
 								echo'<div class="row  bg-cream collapse">';
-							} ?>
-
-							<div class="columns six format-text rule-right bg-cream post-small">
+							} 
+							?>
+							<div class="columns six format-text rule-right bg-cream post-small post-<?php echo $count ?>">
 								<?php get_template_part('parts/content/content', 'excerpt'); ?>
 							</div>
-							<?php if (($count % 2 == 0) || ($count == $total) || ($count == $posts_per_page) || $count == 1  ) {
+							<?php if (($count % 2 == 0) || ($count == $posts_in_query) || ($count == $posts_per_page) || $posts_on_this_page == 1  ) {
 								echo '</div>';
+
 							} ?>
 						<?php endwhile; ?>
 					
