@@ -1,21 +1,25 @@
 .beer-stats {
 	@extend .border-bottom;
 	.columns {
+		min-height:160px !important;
 		&.alc {
 			@include column(3);
 			@include mobileColumn(4);
 			@include rule(right);
+			@extend .text-center;
 
 		}
 		&.IBU {
 			@include column(1);
 			@include rule(right);
 			@include mobileColumn(4);
+			@extend .text-center;
 
 		}
 		&.SRM {
 			@include column(3);
 			@include rule(right);
+			@extend .text-center;
 		}
 		&.food_pairings {
 			@include column(5);

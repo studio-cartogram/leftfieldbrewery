@@ -171,11 +171,13 @@
 
           span {
             @include double-bordered();
-            @include column(8);
-            padding:0;
+            @include column(7);
+            @include mobileColumn(2);
+            padding:0 !important;
             &:first-child {
-              @include column(4);
-              padding:0;
+              @include column(5);
+              @include mobileColumn(2);
+              padding:0 !important;
               input {
                 @extend .border-right;
               }
@@ -259,9 +261,12 @@
           }
           label {
             display:block !important;
-            float:left;
-            padding:10px 0 0 20px ;
-            @include font-size(16)
+            padding:10px 0 0 60px ;
+            @include font-size(16);
+            @media only screen and (max-width: $screenSmall) {
+              @include font-size(13);
+              padding:15px 0 0 60px ;
+            }
           }
         }
       }
