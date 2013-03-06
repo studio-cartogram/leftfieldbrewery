@@ -48,13 +48,16 @@
 							if (get_post_meta( $post->ID, '_cartogram_mvp_value', TRUE )) { 						$foundMVP = true;
 								$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 								$permalink = get_permalink( $post->ID );
+								$color = get_post_meta( $post->ID, '_cartogram_color_value', TRUE );
 							}
 						endwhile;
 						?>
-					<div class="mobile-flush columns twelve mvp space-inner-bottom text-center border-top bg-blue" style="background-image: url('<?php echo $image[0]; ?>')">
-							<h2 class="beer-name beer-block"><?php the_title(); ?></h2>
-							<?php echo '<h3 class="light beer-tagline">' . get_post_meta( $id, '_cartogram_short_description_value', TRUE ) . '</h3>';?>
-							<?php more_link() ?>
+					<div class="mobile-flush columns twelve mvp space-inner-bottom text-center border-top" style="background:<?php echo $color; ?>">
+							<a class="light" href="<?php echo $permalink; ?>">
+								<h2 class="beer-name beer-block light"><?php the_title(); ?></h2>
+								<?php echo '<h3 class="light beer-tagline">' . get_post_meta( $id, '_cartogram_short_description_value', TRUE ) . '</h3>';?>
+								<?php more_link() ?>
+							</a>
 					</div>
 				</div>
 			</div>

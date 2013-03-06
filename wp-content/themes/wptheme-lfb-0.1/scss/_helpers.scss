@@ -133,7 +133,7 @@
 
 .rule-right-white { @include rule(right, false, $white) }
 
-.rule-outside-right-white { @include rule(right, true) }
+.rule-outside-right-white { @include rule(right, true, $white) }
 
 .rule-inside-right-white { @include rule(right, true, $white, true) }
 
@@ -159,6 +159,21 @@ span.corner-four {
   @include corner(bottom-left);
 }
 
+
+.row.equal-heights {
+  overflow:hidden !important;
+  > .columns {
+    margin-bottom:-200px !important;
+    padding-bottom:200px !important;
+  }
+}
+
+.insides {
+  padding-left:30px;
+  @media only screen and (max-width: $screenSmall) {
+    padding-left:15px;
+  }
+}
 
 /** 
   * Foundation Grid Hacks

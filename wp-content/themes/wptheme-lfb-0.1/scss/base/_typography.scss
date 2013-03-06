@@ -5,13 +5,16 @@ h1, h2, h3, h4, h5, h6, p, span, a {
 	&.collapse-inner {
 		padding:0;
 	}
-	&.light {
+	&.light, &.light a {
 		color:$white;
 	}
 	&.text-small {
 		@include font-size(11);
 	}
+
 }
+
+
 
 p {
 	&.lead {
@@ -177,7 +180,6 @@ h6 {
 	h6 {
 		@include font-size(16);
 		font-weight:normal;
-		padding-left:20px;
 	}
 	p {
 		@include font-size(14);

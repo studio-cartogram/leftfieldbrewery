@@ -115,7 +115,7 @@ p a, .post-text .gform_heading span.gform_description a, p a:visited, .post-text
 }
 
 /* line 26, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/common/_globals.scss */
-.text-center, .beer-stats .columns.alc, .beer-stats .columns.IBU, .beer-stats .columns.SRM {
+.text-center, .beer-stats .columns.alc, .beer-stats .columns.IBU, .beer-stats .columns.SRM, .beer-stats .columns.food_pairings {
   text-align: center;
 }
 
@@ -5231,7 +5231,7 @@ h1.collapse-inner, .post-text .gform_heading h3.collapse-inner.gform_title, .pos
   padding: 0;
 }
 /* line 8, ../scss/base/_typography.scss */
-h1.light, .post-text .gform_heading h3.light.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.light.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.light.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.light.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.light.gform_title, h2.light, h3.light, .post-text .gform_body .gform_fields li#field_2_1 label.light:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.light, h4.light, h5.light, h6.light, p.light, .post-text .gform_heading span.light.gform_description, span.light, a.light {
+h1.light, .post-text .gform_heading h3.light.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.light.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.light.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.light.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.light.gform_title, h1.light a, .post-text .gform_heading h3.light.gform_title a, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.light.gform_title:first-child a, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.light.gform_title:first-child a, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.light.gform_title a, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.light.gform_title a, h2.light, h2.light a, h3.light, .post-text .gform_body .gform_fields li#field_2_1 label.light:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.light, h3.light a, .post-text .gform_body .gform_fields li#field_2_1 label.light:first-child a, .post-text .gform_body .gform_fields li#field_2_3 label.light a, h4.light, h4.light a, h5.light, h5.light a, h6.light, h6.light a, p.light, .post-text .gform_heading span.light.gform_description, p.light a, .post-text .gform_heading span.light.gform_description a, span.light, span.light a, a.light, a.light a {
   color: white;
 }
 /* line 11, ../scss/base/_typography.scss */
@@ -5240,13 +5240,13 @@ h1.text-small, .post-text .gform_heading h3.text-small.gform_title, .post-text .
   font-size: 1.1rem;
 }
 
-/* line 17, ../scss/base/_typography.scss */
+/* line 20, ../scss/base/_typography.scss */
 p.lead, .post-text .gform_heading span.lead.gform_description {
   font-weight: 500;
   line-height: 1.4;
 }
 
-/* line 23, ../scss/base/_typography.scss */
+/* line 26, ../scss/base/_typography.scss */
 h1, .post-text .gform_heading h3.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title {
   font-size: 30px;
   font-size: 3rem;
@@ -5255,33 +5255,33 @@ h1, .post-text .gform_heading h3.gform_title, .post-text .gform_heading .gform_b
   margin: 0;
   padding: 40px 0 10px 0;
 }
-/* line 29, ../scss/base/_typography.scss */
+/* line 32, ../scss/base/_typography.scss */
 h1.post-title, .post-text .gform_heading h3.post-title.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.post-title.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.post-title.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.post-title.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.post-title.gform_title {
   padding-top: 20px;
 }
 
-/* line 34, ../scss/base/_typography.scss */
+/* line 37, ../scss/base/_typography.scss */
 h2 {
   font-size: 24px;
   font-size: 2.4rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-/* line 38, ../scss/base/_typography.scss */
+/* line 41, ../scss/base/_typography.scss */
 h2.beer-name {
   font-family: "haymakerregular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 35px;
   font-size: 3.5rem;
 }
-/* line 42, ../scss/base/_typography.scss */
+/* line 45, ../scss/base/_typography.scss */
 h2.beer-name.beer-block {
   position: relative;
   padding-top: 20px;
   margin-top: 20px;
   margin-bottom: 0;
 }
-/* line 47, ../scss/base/_typography.scss */
+/* line 50, ../scss/base/_typography.scss */
 h2.beer-name.beer-block:before {
   height: 4px;
   width: 4px;
@@ -5298,7 +5298,7 @@ h2.beer-name.beer-block:before {
   transform: rotate(-45deg);
 }
 
-/* line 62, ../scss/base/_typography.scss */
+/* line 65, ../scss/base/_typography.scss */
 h3, .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_3 label {
   font-size: 12px;
   font-size: 1.2rem;
@@ -5307,11 +5307,11 @@ h3, .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-t
   padding: 15px 0;
   text-transform: uppercase;
 }
-/* line 68, ../scss/base/_typography.scss */
+/* line 71, ../scss/base/_typography.scss */
 h3.bg-navy, h3.list-categories, .post-text .gform_body .gform_fields li#field_2_1 label.list-categories:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.list-categories, .post-text .gform_body .gform_fields li#field_2_1 label.bg-navy:first-child, .post-text .gform_body .gform_fields li#field_2_1 .banner > .row > label.columns:first-child, .post-text .gform_body .gform_fields li#field_2_1 #av-overlay #av_verify_form .banner > p > label.columns:first-child, #av-overlay #av_verify_form .post-text .gform_body .gform_fields li#field_2_1 .banner > p > label.columns:first-child, #av-overlay #av_verify_form .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .banner > span.gform_description > label.columns:first-child, #av-overlay #av_verify_form .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .banner > span.gform_description > label.columns:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay #av_verify_form .banner > span.gform_description > label.columns:first-child, .post-text .gform_heading #av-overlay #av_verify_form .gform_body .gform_fields li#field_2_1 .banner > span.gform_description > label.columns:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.bg-navy, .post-text .gform_body .gform_fields li#field_2_3 .banner > .row > label.columns, .post-text .gform_body .gform_fields li#field_2_3 #av-overlay #av_verify_form .banner > p > label.columns, #av-overlay #av_verify_form .post-text .gform_body .gform_fields li#field_2_3 .banner > p > label.columns, #av-overlay #av_verify_form .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .banner > span.gform_description > label.columns, #av-overlay #av_verify_form .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .banner > span.gform_description > label.columns, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay #av_verify_form .banner > span.gform_description > label.columns, .post-text .gform_heading #av-overlay #av_verify_form .gform_body .gform_fields li#field_2_3 .banner > span.gform_description > label.columns, .banner > .row > h3.columns, #av-overlay #av_verify_form .banner > p > h3.columns, #av-overlay #av_verify_form .post-text .gform_heading .banner > span.gform_description > h3.columns, .post-text .gform_heading #av-overlay #av_verify_form .banner > span.gform_description > h3.columns {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
-/* line 71, ../scss/base/_typography.scss */
+/* line 74, ../scss/base/_typography.scss */
 h3.beer-tagline, .post-text .gform_body .gform_fields li#field_2_1 label.beer-tagline:first-child, .post-text .gform_body .gform_fields li#field_2_3 label.beer-tagline {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -5320,7 +5320,7 @@ h3.beer-tagline, .post-text .gform_body .gform_fields li#field_2_1 label.beer-ta
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 77, ../scss/base/_typography.scss */
+/* line 80, ../scss/base/_typography.scss */
 h3.beer-tagline:after, .post-text .gform_body .gform_fields li#field_2_1 label.beer-tagline:first-child:after, .post-text .gform_body .gform_fields li#field_2_3 label.beer-tagline:after {
   content: ' ';
   position: absolute;
@@ -5332,7 +5332,7 @@ h3.beer-tagline:after, .post-text .gform_body .gform_fields li#field_2_1 label.b
   margin-left: -5px;
 }
 
-/* line 90, ../scss/base/_typography.scss */
+/* line 93, ../scss/base/_typography.scss */
 h4 {
   font-size: 10px;
   font-size: 1rem;
@@ -5342,7 +5342,7 @@ h4 {
   letter-spacing: 0.03em;
 }
 
-/* line 97, ../scss/base/_typography.scss */
+/* line 100, ../scss/base/_typography.scss */
 h5 {
   font-size: 12px;
   font-size: 1.2rem;
@@ -5351,7 +5351,7 @@ h5 {
   margin: 15px 0 0 0;
 }
 
-/* line 104, ../scss/base/_typography.scss */
+/* line 107, ../scss/base/_typography.scss */
 h6 {
   line-height: 1.6;
   font-size: 12px;
@@ -5363,12 +5363,12 @@ h6 {
   font-weight: normal;
 }
 
-/* line 116, ../scss/base/_typography.scss */
+/* line 119, ../scss/base/_typography.scss */
 .icon-with-space {
   position: relative;
   padding-left: 20px;
 }
-/* line 119, ../scss/base/_typography.scss */
+/* line 122, ../scss/base/_typography.scss */
 .icon-with-space:before {
   font-size: 14px;
   font-size: 1.4rem;
@@ -5377,27 +5377,27 @@ h6 {
   top: 2px;
 }
 
-/* line 128, ../scss/base/_typography.scss */
+/* line 131, ../scss/base/_typography.scss */
 .inner-text {
   padding: 0 20px;
 }
 
-/* line 133, ../scss/base/_typography.scss */
+/* line 136, ../scss/base/_typography.scss */
 .format-text h1, .format-text .post-text .gform_heading h3.gform_title, .post-text .gform_heading .format-text h3.gform_title, .format-text .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 .format-text label.gform_title:first-child, .format-text .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading .format-text label.gform_title:first-child, .format-text .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 .format-text label.gform_title, .format-text .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading .format-text label.gform_title, .format-text h2, .format-text h3, .format-text .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 .format-text label:first-child, .format-text .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 .format-text label, .format-text h4, .format-text h5, .format-text h6, .format-text p, .format-text .post-text .gform_heading span.gform_description, .post-text .gform_heading .format-text span.gform_description {
   padding: 0 20px;
 }
 
-/* line 138, ../scss/base/_typography.scss */
+/* line 141, ../scss/base/_typography.scss */
 .post-text {
   padding-bottom: 0px;
   background: #fefcf8;
 }
-/* line 141, ../scss/base/_typography.scss */
+/* line 144, ../scss/base/_typography.scss */
 .post-text h1, .post-text .gform_heading h3.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text h2, .post-text p, .post-text .gform_heading span.gform_description, .post-text ul {
   padding-left: 40px;
   padding-right: 40px;
 }
-/* line 145, ../scss/base/_typography.scss */
+/* line 148, ../scss/base/_typography.scss */
 .post-text h2 {
   position: relative;
   padding: 30px 40px 10px;
@@ -5420,30 +5420,30 @@ h6 {
 .post-text h2:after {
   top: 0px;
 }
-/* line 151, ../scss/base/_typography.scss */
+/* line 154, ../scss/base/_typography.scss */
 .post-text h2:first-of-type {
   margin-top: 0;
 }
-/* line 156, ../scss/base/_typography.scss */
+/* line 159, ../scss/base/_typography.scss */
 .post-text h4 {
   margin: 30px 40px 10px;
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 160, ../scss/base/_typography.scss */
+/* line 163, ../scss/base/_typography.scss */
 .post-text h4.boxed {
   padding: 0;
   overflow: hidden;
   font-size: 12px;
   font-size: 1.2rem;
 }
-/* line 164, ../scss/base/_typography.scss */
+/* line 167, ../scss/base/_typography.scss */
 .post-text h4.boxed span {
   padding: 10px;
   display: block;
   float: left;
 }
-/* line 171, ../scss/base/_typography.scss */
+/* line 174, ../scss/base/_typography.scss */
 .post-text h5 {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -5451,32 +5451,31 @@ h6 {
   padding-bottom: 15px;
   text-transform: uppercase;
 }
-/* line 177, ../scss/base/_typography.scss */
+/* line 180, ../scss/base/_typography.scss */
 .post-text h6 {
   font-size: 16px;
   font-size: 1.6rem;
   font-weight: normal;
-  padding-left: 20px;
 }
-/* line 182, ../scss/base/_typography.scss */
+/* line 184, ../scss/base/_typography.scss */
 .post-text p, .post-text .gform_heading span.gform_description {
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 185, ../scss/base/_typography.scss */
+/* line 187, ../scss/base/_typography.scss */
 .post-text ul.link-list {
   margin-left: -5px;
 }
-/* line 187, ../scss/base/_typography.scss */
+/* line 189, ../scss/base/_typography.scss */
 .post-text ul.link-list li {
   margin-left: 5px;
 }
-/* line 191, ../scss/base/_typography.scss */
+/* line 193, ../scss/base/_typography.scss */
 .post-text .wp-caption {
   padding: 20px 40px;
   width: 100%;
 }
-/* line 194, ../scss/base/_typography.scss */
+/* line 196, ../scss/base/_typography.scss */
 .post-text .wp-caption p, .post-text .wp-caption .gform_heading span.gform_description, .post-text .gform_heading .wp-caption span.gform_description {
   border: 1px solid;
   text-align: center;
@@ -5499,23 +5498,14 @@ h6 {
 .footer h3, .footer .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 .footer label:first-child, .footer .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 .footer label {
   padding-top: 25px;
 }
-/* line 11, ../scss/parts/_footer.scss */
-.footer > .row, #av-overlay #av_verify_form .footer > p, #av-overlay #av_verify_form .post-text .gform_heading .footer > span.gform_description, .post-text .gform_heading #av-overlay #av_verify_form .footer > span.gform_description {
-  overflow: hidden;
-}
-/* line 13, ../scss/parts/_footer.scss */
-.footer > .row > .columns, #av-overlay #av_verify_form .footer > p > .columns, #av-overlay #av_verify_form .post-text .gform_heading .footer > span.gform_description > .columns, .post-text .gform_heading #av-overlay #av_verify_form .footer > span.gform_description > .columns {
-  margin-bottom: -200px;
-  padding-bottom: 200px;
-}
 
-/* line 20, ../scss/parts/_footer.scss */
+/* line 16, ../scss/parts/_footer.scss */
 .credit {
   background-color: #0c223f;
   color: white;
   border-top: 1px solid white;
 }
-/* line 24, ../scss/parts/_footer.scss */
+/* line 20, ../scss/parts/_footer.scss */
 .credit p, .credit .post-text .gform_heading span.gform_description, .post-text .gform_heading .credit span.gform_description {
   padding-top: 10px;
   margin-bottom: 10px;
@@ -5619,6 +5609,10 @@ ul#social li.icon-mail > a:before {
 .footer ul#social {
   width: 100%;
   padding-bottom: 20px;
+  display: inline;
+  height: 38px;
+  line-height: 38px;
+  list-style: none;
   *zoom: 1;
 }
 /* line 4, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.1.1/scss/foundation/mixins/_clearfix.scss */
@@ -5630,15 +5624,14 @@ ul#social li.icon-mail > a:before {
 .footer ul#social:after {
   clear: both;
 }
-/* line 88, ../scss/parts/_social.scss */
+/* line 92, ../scss/parts/_social.scss */
 .footer ul#social > li {
-  display: block;
-  float: left;
+  height: 38px;
+  margin-bottom: 10px;
 }
-/* line 91, ../scss/parts/_social.scss */
+/* line 95, ../scss/parts/_social.scss */
 .footer ul#social > li a {
   border-right: none;
-  display: block;
 }
 
 /** 
@@ -6709,6 +6702,7 @@ ul.block-grid.excerpt-loop li {
   right: 0px;
   width: 1px;
   background: #0c223f;
+  right: -15px;
 }
 @media only screen and (max-width: 768px) {
   /* line 92, ../scss/_mixins.scss */
@@ -6716,9 +6710,13 @@ ul.block-grid.excerpt-loop li {
     display: none;
   }
 }
-/* line 12, ../scss/parts/_stats.scss */
+/* line 10, ../scss/parts/_stats.scss */
+.beer-stats .columns.alc:after {
+  right: -19px;
+}
+/* line 15, ../scss/parts/_stats.scss */
 .beer-stats .columns.IBU {
-  width: 8.33333%;
+  width: 16.66667%;
   position: relative;
 }
 /* line 92, ../scss/_mixins.scss */
@@ -6740,16 +6738,24 @@ ul.block-grid.excerpt-loop li {
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 12, ../scss/parts/_stats.scss */
+  /* line 15, ../scss/parts/_stats.scss */
   .beer-stats .columns.IBU {
     float: left;
     width: 100%;
     padding: 0 15px;
   }
 }
-/* line 19, ../scss/parts/_stats.scss */
+/* line 20, ../scss/parts/_stats.scss */
+.beer-stats .columns.IBU h5 {
+  padding-left: 20px;
+}
+/* line 23, ../scss/parts/_stats.scss */
+.beer-stats .columns.IBU h6 {
+  padding-left: 20px;
+}
+/* line 28, ../scss/parts/_stats.scss */
 .beer-stats .columns.SRM {
-  width: 25%;
+  width: 16.66667%;
   position: relative;
 }
 /* line 92, ../scss/_mixins.scss */
@@ -6770,7 +6776,19 @@ ul.block-grid.excerpt-loop li {
     display: none;
   }
 }
-/* line 24, ../scss/parts/_stats.scss */
+/* line 32, ../scss/parts/_stats.scss */
+.beer-stats .columns.SRM:after {
+  right: -10px;
+}
+/* line 35, ../scss/parts/_stats.scss */
+.beer-stats .columns.SRM h5 {
+  padding-left: 10px;
+}
+/* line 38, ../scss/parts/_stats.scss */
+.beer-stats .columns.SRM h6 {
+  padding-left: 10px;
+}
+/* line 42, ../scss/parts/_stats.scss */
 .beer-stats .columns.food_pairings {
   width: 41.66667%;
 }
@@ -6779,7 +6797,7 @@ ul.block-grid.excerpt-loop li {
   .beer-stats {
     padding: 25px 0 20px 0;
   }
-  /* line 30, ../scss/parts/_stats.scss */
+  /* line 49, ../scss/parts/_stats.scss */
   .beer-stats .columns {
     width: auto !important;
     float: none !important;
@@ -6787,13 +6805,14 @@ ul.block-grid.excerpt-loop li {
     text-align: center;
     min-height: 1px !important;
   }
-  /* line 36, ../scss/parts/_stats.scss */
+  /* line 55, ../scss/parts/_stats.scss */
   .beer-stats .columns .border-bottom, .beer-stats .columns .list-contact h5, .list-contact .beer-stats .columns h5, .beer-stats .columns .post-text .gform_body .gform_fields input, .post-text .gform_body .gform_fields .beer-stats .columns input, .beer-stats .columns .post-text .gform_body .gform_fields textarea, .post-text .gform_body .gform_fields .beer-stats .columns textarea, .beer-stats .columns .beer-stats, .beer-stats .columns .boxed span, .boxed .beer-stats .columns span {
     border: none !important;
   }
-  /* line 39, ../scss/parts/_stats.scss */
+  /* line 58, ../scss/parts/_stats.scss */
   .beer-stats .columns h5, .beer-stats .columns h6 {
     display: inline;
+    padding-left: 10px !important;
   }
 }
 
@@ -7686,7 +7705,7 @@ html[xmlns] .slides {
   left: auto;
   right: 0px;
   width: 1px;
-  background: #0c223f;
+  background: white;
   right: -15px;
 }
 @media only screen and (max-width: 768px) {
@@ -7878,18 +7897,48 @@ span.corner-four {
   transform: rotate(-45deg);
 }
 
+/* line 163, ../scss/_helpers.scss */
+.row.equal-heights, .footer > .row, #av-overlay #av_verify_form .footer > p, #av-overlay #av_verify_form .post-text .gform_heading .footer > span.gform_description, .post-text .gform_heading #av-overlay #av_verify_form .footer > span.gform_description, #av-overlay #av_verify_form p.equal-heights, #av-overlay #av_verify_form .footer > p.row, #av-overlay #av_verify_form .post-text .gform_heading .footer > span.row.gform_description, .post-text .gform_heading #av-overlay #av_verify_form .footer > span.row.gform_description, #av-overlay #av_verify_form .post-text .gform_heading span.equal-heights.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.equal-heights.gform_description {
+  overflow: hidden !important;
+}
+/* line 165, ../scss/_helpers.scss */
+.row.equal-heights > .columns, .footer > .row > .columns, #av-overlay #av_verify_form .footer > p > .columns, #av-overlay #av_verify_form .post-text .gform_heading .footer > span.gform_description > .columns, .post-text .gform_heading #av-overlay #av_verify_form .footer > span.gform_description > .columns, #av-overlay #av_verify_form p.equal-heights > .columns, #av-overlay #av_verify_form .footer > p.row > .columns, #av-overlay #av_verify_form .post-text .gform_heading .footer > span.row.gform_description > .columns, .post-text .gform_heading #av-overlay #av_verify_form .footer > span.row.gform_description > .columns, #av-overlay #av_verify_form .post-text .gform_heading span.equal-heights.gform_description > .columns, .post-text .gform_heading #av-overlay #av_verify_form span.equal-heights.gform_description > .columns {
+  margin-bottom: -200px !important;
+  padding-bottom: 200px !important;
+}
+
+/* line 171, ../scss/_helpers.scss */
+.insides {
+  padding-left: 30px;
+}
+@media only screen and (max-width: 768px) {
+  /* line 171, ../scss/_helpers.scss */
+  .insides {
+    padding-left: 15px;
+  }
+}
+
 /** 
   * Foundation Grid Hacks
   *
   */
-/* line 168, ../scss/_helpers.scss */
+/* line 183, ../scss/_helpers.scss */
 .row.flushed-right, #av-overlay #av_verify_form p.flushed-right, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-right.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-right.gform_description {
   margin-right: -15px !important;
 }
 
-/* line 171, ../scss/_helpers.scss */
+/* line 186, ../scss/_helpers.scss */
 .row.flushed-left, #av-overlay #av_verify_form p.flushed-left, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-left.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-left.gform_description {
   margin-left: -15px !important;
+}
+
+/* line 2, ../scss/_homepage.scss */
+.mvp a {
+  color: white;
+}
+/* line 4, ../scss/_homepage.scss */
+.mvp a:hover a {
+  color: white;
 }
 
 /* line 1, ../scss/_screen.scss */

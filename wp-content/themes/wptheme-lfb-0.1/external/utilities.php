@@ -124,10 +124,12 @@
 	function cartogram_share() { 
 	global $post;
 		//http://atlchris.com/1665/how-to-create-custom-share-buttons-for-all-the-popular-social-services/
-		$twitter = '<a target="_blank" href="http://twitter.com/home?status=' . get_the_title() . '+' . get_permalink() . '"><i class="foundsocialicon-twitter"></i></a>';
-		$facebook = '<a target="_blank" href="http://www.facebook.com/share.php?u=' . get_permalink() . '&title='  . get_the_title() . '"><i class="foundsocialicon-facebook"></i></a>';
-		$mail = '<a href="mailto:?subject=' . get_the_title() . ' at ' . get_permalink() . '"><i class="foundicon-mail"></i></a>';
-		$content .= '<ul class="link-list social icons"><li>' . $twitter . '</li><li>' . $facebook . '</li><li>' . $mail . '</li></ul>';
+		$twitter = '<a target="_blank"  href="http://twitter.com/home?status=' . get_the_title() . '+' . get_permalink() . '">Share on Twitter</a>';
+		$facebook = '<a target="_blank" class="icon-twitter" href="http://www.facebook.com/share.php?u=' . get_permalink() . '&title='  . get_the_title() . '">Share on Facebook</a>';
+		$mail = '<a href="mailto:?subject=' . get_the_title() . ' at ' . get_permalink() . '">Share in an email</a>';
+		$untappd = '<a target="_blank"  href="https://untappd.com/leftfieldbrewery">Share on untappd</a>';
+		$googleplus = '<a target="_blank"  href="https://plus.google.com/share?url=' . get_permalink() . '">Share on google plus</a>';
+		$content .= '<ul id="social"><li class="icon-twitter">' . $twitter . '</li><li class="icon-untappd">' . $untappd . '</li><li class="icon-facebook">' . $facebook . '</li><li class="icon-google-plus">' . $googleplus . '</li><li class="icon-mail">' . $mail . '</li></ul>';
 		echo $content;
 	}
 	/**
