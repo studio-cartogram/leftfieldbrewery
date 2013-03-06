@@ -30,11 +30,17 @@ body {
   min-height:155px;
 }
 
-#container-slider {
+#container-site {
   width:100%;
   overflow:hidden;
-  padding-top:3px;
-  margin-top:-4px;
+  @include double-bordered();
+  &:before {
+    top:40px;
+    z-index:9;
+  }
+  &:after {
+    top:43px;
+  }
  }
 
  #container-navigation {

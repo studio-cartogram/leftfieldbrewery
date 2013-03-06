@@ -9,17 +9,17 @@
 	</div>
 	<div class="columns mobile-one five rule-right border-bottom bg-cream pagination-link">
 		<?php if(!get_previous_posts_link()){
-				echo "<a class='disabled'>Older</a>";
+				echo "<a class='disabled'>Newer</a>";
  			} else {
- 				previous_posts_link( __( 'Older', 'cartogram' ) );
+ 				previous_posts_link( __( 'Newer', 'cartogram' ) );
  			}
  		?>
 	</div>
 	<div class="columns mobile-one five rule-right border-bottom bg-cream pagination-link">
 			<?php if(!get_next_posts_link()){
-				echo "<a class='disabled'>Newer</a>";
+				echo "<a class='disabled'>Older</a>";
  			} else {
- 				next_posts_link( __( 'Newer ', 'cartogram' ) );
+ 				next_posts_link( __( 'Older ', 'cartogram' ) );
  			}
  		?>
 	</div>

@@ -7,7 +7,7 @@ global $slug; ?>
 			<div class="column twelve rule-right ">
 				<div class="post-text double-bordered">
 					<div class="row collapse bg-cream">
-						<div class="columns seven post-meta ">
+						<div class="columns seven post-meta space-inner-bottom">
 							<?php if ( is_day() ) :
 								echo '<h4 class="boxed"><span>Archives</span> <span class="bg-navy light">' . get_the_date(  ) . '</span></h4>';
 							elseif ( is_month() ) :
@@ -31,17 +31,17 @@ global $slug; ?>
 					</div>
 				</div>
 				
-				<?php if ( have_posts() ) : $count=0 ?>
-					
-						<?php while ( have_posts() ) : the_post(); $count++;
-							if ($count % 2 != 0 ) {
+				<?php if ( have_posts() ) : $count=0 ;
+						$posts_per_page = get_option('posts_per_page');
+						 while ( have_posts() ) : the_post(); $count++;
+							if ($count % 2 != 0 || $total == 1) {
 								echo'<div class="row  bg-cream collapse">';
 							} ?>
 
 							<div class="columns six format-text rule-right bg-cream post-small">
 								<?php get_template_part('parts/content/content', 'excerpt'); ?>
 							</div>
-							<?php if (($count % 2 == 0) || ($count == $total) || $total == 1  ) {
+							<?php if (($count % 2 == 0) || ($count == $total) || ($count == $posts_per_page) || $count == 1  ) {
 								echo '</div>';
 							} ?>
 						<?php endwhile; ?>

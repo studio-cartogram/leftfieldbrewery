@@ -266,6 +266,7 @@
 	color:$white;
 	a {
 		color:$white;
+		line-height: 1.6;
 	}
 	.tag-cloud {
 		@include double-bordered(false, false, false, false,  $white);
