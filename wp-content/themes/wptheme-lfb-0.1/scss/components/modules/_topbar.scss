@@ -82,7 +82,12 @@
             //@include transform(rotateX( 180deg ));
           }
         }
-        &.current-menu-item > a, &.current-menu-item:hover > a {
+        &.current-menu-item > a,   
+        &.current-menu-item:hover > a, 
+        &.current-menu-parent > a, 
+        &.current-menu-parent > a:hover,
+        &.current-menu-parent .current-menu-item > a,
+        &.current-menu-parent .current-menu-item > a:hover {
           background:url(../images/stripe.png);
           color: darken($navy, 30%);
           @include transform(rotateX( 0deg ));
