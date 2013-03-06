@@ -15,6 +15,8 @@
 	content: attr(data-icon);
 	speak: none;
 	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
@@ -25,11 +27,13 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
-.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .icon-logo:before, .icon-loader-simple:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .icon-bar:before, .icon-bar-restaurant:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before {
+.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .icon-logo:before, .icon-loader-simple:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .icon-bar:before, .icon-bar-restaurant:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-maris-b:before, .icon-maris-a:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
@@ -111,30 +115,21 @@ you can use the generic selector below, but it's slower:
 .icon-icon-mandie:before {
 	content: "\e019";
 }
-gram:before {
-	content: "\e013";
-}
-.icon-flip-right:before {
-	content: "\e014";
-}
-.icon-flip-left:before {
-	content: "\e015";
-}
-.icon-est2013:before {
-	content: "\e016";
-}
-.icon-eephus:before {
-	content: "\e017";
-}
-.icon-diamond:before {
-	content: "\e018";
-}
-.icon-diamond-stroke:before {
-	content: "\e019";
-}
-.icon-cross:before {
+.icon-maris-b:before {
 	content: "\e01a";
 }
-.icon-close:before {
+.icon-maris-a:before {
 	content: "\e01b";
+}
+.icon-eephus-b:before {
+	content: "\e01c";
+}
+.icon-eephus-a:before {
+	content: "\e01d";
+}
+.icon-doubleipa-b:before {
+	content: "\e01e";
+}
+.icon-doubleipa-a:before {
+	content: "\e01f";
 }
