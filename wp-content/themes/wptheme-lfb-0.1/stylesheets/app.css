@@ -6602,21 +6602,16 @@ ul#social li.icon-mail > a:before {
 }
 
 /* line 6, ../scss/parts/_instagram.scss */
-.cartogram-slider-internal-viewport {
+.cartogram-slider-internal-viewport, .cartogram-slider-sidebar-viewport {
   -webkit-transform: translateZ(0);
   -webkit-transform: translate3d(0, 0, 0);
 }
 
 /* line 11, ../scss/parts/_instagram.scss */
-.flexslider-beers {
-  padding-bottom: 60px;
-}
-
-/* line 14, ../scss/parts/_instagram.scss */
 .image-wrap {
   position: relative;
 }
-/* line 16, ../scss/parts/_instagram.scss */
+/* line 13, ../scss/parts/_instagram.scss */
 .image-wrap .image-caption {
   padding: 15px;
   position: absolute;
@@ -7220,7 +7215,7 @@ html[xmlns] .slides {
 
 /* line 109, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-internal-control-paging {
-  bottom: 20px;
+  bottom: 14px;
 }
 
 /* captions */
@@ -7246,13 +7241,14 @@ html[xmlns] .slides {
   *height: 0;
   width: 100%;
   list-style: none;
+  margin: 0;
 }
-/* line 135, ../scss/vendor/_flexslider.scss */
+/* line 136, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav li:nth-child(1):after, .cartogram-slider-direction-nav li:nth-child(1):before, .cartogram-slider-internal-direction-nav li:nth-child(1):after, .cartogram-slider-internal-direction-nav li:nth-child(1):before, .cartogram-slider-sidebar-direction-nav li:nth-child(1):after, .cartogram-slider-sidebar-direction-nav li:nth-child(1):before {
   left: auto;
   right: -15px;
 }
-/* line 141, ../scss/vendor/_flexslider.scss */
+/* line 142, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav li:after, .cartogram-slider-direction-nav li:before, .cartogram-slider-internal-direction-nav li:after, .cartogram-slider-internal-direction-nav li:before, .cartogram-slider-sidebar-direction-nav li:after, .cartogram-slider-sidebar-direction-nav li:before {
   height: 1px;
   width: 15px;
@@ -7262,11 +7258,11 @@ html[xmlns] .slides {
   top: 43px;
   left: -15px;
 }
-/* line 150, ../scss/vendor/_flexslider.scss */
+/* line 151, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav li:before, .cartogram-slider-internal-direction-nav li:before, .cartogram-slider-sidebar-direction-nav li:before {
   top: 40px;
 }
-/* line 154, ../scss/vendor/_flexslider.scss */
+/* line 155, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav li a, .cartogram-slider-internal-direction-nav li a, .cartogram-slider-sidebar-direction-nav li a {
   position: absolute;
   color: #fefcf8;
@@ -7281,82 +7277,82 @@ html[xmlns] .slides {
   z-index: 10;
   border: 1px solid #0c223f;
 }
-/* line 166, ../scss/vendor/_flexslider.scss */
+/* line 167, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav li a:hover, .cartogram-slider-internal-direction-nav li a:hover, .cartogram-slider-sidebar-direction-nav li a:hover {
   background: #fefcf8;
   color: #0c223f;
 }
-/* line 170, ../scss/vendor/_flexslider.scss */
+/* line 171, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav li a.cartogram-slider-next, .cartogram-slider-internal-direction-nav li a.cartogram-slider-next, .cartogram-slider-sidebar-direction-nav li a.cartogram-slider-next {
   right: -70px;
 }
-/* line 174, ../scss/vendor/_flexslider.scss */
+/* line 175, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav li a.cartogram-slider-prev, .cartogram-slider-internal-direction-nav li a.cartogram-slider-prev, .cartogram-slider-sidebar-direction-nav li a.cartogram-slider-prev {
   left: -70px;
 }
 
-/* line 183, ../scss/vendor/_flexslider.scss */
+/* line 184, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-internal-direction-nav li:before, .cartogram-slider-internal-direction-nav li:after {
   display: none;
 }
-/* line 186, ../scss/vendor/_flexslider.scss */
+/* line 187, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-internal-direction-nav li a {
   background: none;
   border: none;
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
 }
-/* line 190, ../scss/vendor/_flexslider.scss */
+/* line 191, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-internal-direction-nav li a.cartogram-slider-internal-prev {
   left: 40px;
   top: 50%;
   margin-top: -20px;
 }
-/* line 195, ../scss/vendor/_flexslider.scss */
+/* line 196, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-internal-direction-nav li a.cartogram-slider-internal-next {
   right: 40px;
   top: 50%;
   margin-top: -20px;
 }
-/* line 200, ../scss/vendor/_flexslider.scss */
+/* line 201, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-internal-direction-nav li a:hover {
   background: none;
 }
 
-/* line 210, ../scss/vendor/_flexslider.scss */
+/* line 211, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-sidebar-direction-nav li:before, .cartogram-slider-sidebar-direction-nav li:after {
   display: none;
 }
-/* line 213, ../scss/vendor/_flexslider.scss */
+/* line 214, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-sidebar-direction-nav li a {
   background: none;
   border: none;
   color: #0c223f;
   z-index: 11;
 }
-/* line 218, ../scss/vendor/_flexslider.scss */
+/* line 219, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-sidebar-direction-nav li a.cartogram-slider-sidebar-prev {
   left: 0px;
   top: 100%;
   margin-top: 0px;
 }
-/* line 223, ../scss/vendor/_flexslider.scss */
+/* line 224, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-sidebar-direction-nav li a.cartogram-slider-sidebar-next {
   right: 0px;
   top: 100%;
   margin-top: 0px;
 }
-/* line 228, ../scss/vendor/_flexslider.scss */
+/* line 229, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-sidebar-direction-nav li a:hover {
   background: none;
   color: #ff4337;
 }
 
-/* line 237, ../scss/vendor/_flexslider.scss */
+/* line 238, ../scss/vendor/_flexslider.scss */
 .flexslider:hover .cartogram-slider-next:hover, .flexslider:hover .cartogram-slider-prev:hover {
   opacity: 1;
 }
 
-/* line 238, ../scss/vendor/_flexslider.scss */
+/* line 239, ../scss/vendor/_flexslider.scss */
 .cartogram-slider-direction-nav .cartogram-slider-disabled, .cartogram-slider-disabled, .cartogram-slider-disabled:hover {
   opacity: .3!important;
   filter: alpha(opacity=30);
@@ -7866,7 +7862,7 @@ span.corner-three {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  bottom: 16px;
+  bottom: 1px;
   top: auto;
   right: 0px;
   left: auto;
@@ -7892,7 +7888,7 @@ span.corner-four {
   transform: rotate(45deg);
   top: auto;
   left: 25px;
-  bottom: 26px;
+  bottom: 11px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -10098,41 +10094,61 @@ table.hide-for-medium {
   h2.header-text {
     margin: 10px 0;
   }
+
+  /* line 34, ../scss/components/modules/_mqueries-overrides.scss */
+  ul#global li h5,
+  ul#global li.has-dropdown .dropdown h5 {
+    text-align: center;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  /* line 38, ../scss/components/modules/_mqueries-overrides.scss */
+  ul#global li h5 a,
+  ul#global li.has-dropdown .dropdown h5 a {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-block;
+  }
+  /* line 42, ../scss/components/modules/_mqueries-overrides.scss */
+  ul#global li h5 a:before,
+  ul#global li.has-dropdown .dropdown h5 a:before {
+    left: -20px;
+  }
 }
 @media only screen and (max-width: 767px) {
-  /* line 40, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 55, ../scss/components/modules/_mqueries-overrides.scss */
   body {
     overflow-x: hidden;
     width: auto;
   }
 
-  /* line 45, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 60, ../scss/components/modules/_mqueries-overrides.scss */
   .row.flushed-right, #av-overlay #av_verify_form p.flushed-right, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-right.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-right.gform_description {
     margin-right: 0 !important;
   }
 
-  /* line 48, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 63, ../scss/components/modules/_mqueries-overrides.scss */
   .row.flushed-left, #av-overlay #av_verify_form p.flushed-left, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-left.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-left.gform_description {
     margin-left: 0 !important;
   }
 
-  /* line 51, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 66, ../scss/components/modules/_mqueries-overrides.scss */
   .post-text, .mobile-flush {
     margin-left: -15px !important;
     margin-right: -15px !important;
   }
 
-  /* line 55, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 70, ../scss/components/modules/_mqueries-overrides.scss */
   #container-navigation .row .twelve, #container-navigation #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve, #container-navigation #av-overlay #av_verify_form p .row .twelve, .row #container-navigation #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form #container-navigation p .row .twelve, .row #av-overlay #av_verify_form #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .row .twelve, .row #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .row .twelve, .row #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .row .twelve, .row #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .row .twelve, .row .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve, #container-navigation .row #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form p #container-navigation .row .twelve, #container-navigation #av-overlay #av_verify_form p .twelve, #av-overlay #av_verify_form #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description p .twelve, #container-navigation #av-overlay #av_verify_form p .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description p .twelve, #av-overlay #av_verify_form p .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description p .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form p span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description p .twelve, .post-text .gform_heading #av-overlay #av_verify_form p #container-navigation span.gform_description .twelve, #container-navigation .row #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description #container-navigation .row .twelve, #container-navigation #av-overlay #av_verify_form p .post-text .gform_heading span.gform_description .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description p .twelve, #av-overlay #av_verify_form #container-navigation p .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading span.gform_description #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form .post-text .gform_heading span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation .post-text .gform_heading span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form .post-text .gform_heading #container-navigation span.gform_description .twelve, #container-navigation .row .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description #container-navigation .row .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form p span.gform_description .twelve, .post-text .gform_heading #container-navigation #av-overlay #av_verify_form p span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description p .twelve, .post-text .gform_heading #container-navigation #av-overlay #av_verify_form span.gform_description p .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation p span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form span.gform_description #container-navigation p .twelve, #container-navigation #av-overlay #av_verify_form .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #container-navigation #av-overlay #av_verify_form span.gform_description .twelve, #av-overlay #av_verify_form .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve, #container-navigation .post-text .gform_heading #av-overlay #av_verify_form span.gform_description .twelve, .post-text .gform_heading #av-overlay #av_verify_form #container-navigation span.gform_description .twelve {
     margin: 0;
     padding: 0;
   }
 
-  /* line 59, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 74, ../scss/components/modules/_mqueries-overrides.scss */
   .flexslider-instagram, .flexslider-beers {
     padding: 0;
   }
-  /* line 61, ../scss/components/modules/_mqueries-overrides.scss */
+  /* line 76, ../scss/components/modules/_mqueries-overrides.scss */
   .flexslider-instagram .corner-one, .flexslider-instagram .corner-two, .flexslider-instagram .corner-three, .flexslider-instagram .corner-four, .flexslider-beers .corner-one, .flexslider-beers .corner-two, .flexslider-beers .corner-three, .flexslider-beers .corner-four {
     display: none;
   }

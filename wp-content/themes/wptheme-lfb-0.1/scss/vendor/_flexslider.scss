@@ -107,7 +107,7 @@ left: 0;
 }
 
 .cartogram-slider-internal-control-paging {
-	bottom:20px;
+	bottom:14px;
 }
 /* captions */
 
@@ -131,6 +131,7 @@ left: 0;
 	*height: 0;
 	width:100%;
 	list-style:none;
+	margin:0;
 	li:nth-child(1) {
 		&:after, &:before {
 			left:auto;
