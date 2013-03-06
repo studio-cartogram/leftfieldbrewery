@@ -241,6 +241,14 @@
 	li:last-child .border-bottom-white {
 		border-color:$navy !important;
 	}
+	li a:hover {
+		h5 {
+			color:$red;
+		}
+		h4 {
+			background:$red;
+		}
+	}
 }
 
 /** 

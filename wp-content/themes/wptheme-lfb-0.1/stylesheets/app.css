@@ -5998,12 +5998,20 @@ ul#social li.icon-mail > a:before {
 .list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .footer .gform_body, .footer .list-contact li:last-child .gform_body {
   border-color: #0c223f !important;
 }
+/* line 245, ../scss/parts/_asides.scss */
+.list-contact li a:hover h5 {
+  color: #ff4337;
+}
+/* line 248, ../scss/parts/_asides.scss */
+.list-contact li a:hover h4 {
+  background: #ff4337;
+}
 
 /** 
   * Highlights Page
   *
   */
-/* line 251, ../scss/parts/_asides.scss */
+/* line 259, ../scss/parts/_asides.scss */
 .tags-wrap {
   position: relative;
   padding-top: 3px;
@@ -6023,11 +6031,11 @@ ul#social li.icon-mail > a:before {
 .tags-wrap:after {
   top: 0px;
 }
-/* line 255, ../scss/parts/_asides.scss */
+/* line 263, ../scss/parts/_asides.scss */
 .tags-wrap a {
   color: white;
 }
-/* line 258, ../scss/parts/_asides.scss */
+/* line 266, ../scss/parts/_asides.scss */
 .tags-wrap .tag-cloud {
   position: relative;
 }
@@ -6046,7 +6054,7 @@ ul#social li.icon-mail > a:before {
   top: 0px;
 }
 
-/* line 263, ../scss/parts/_asides.scss */
+/* line 271, ../scss/parts/_asides.scss */
 .categories-wrap {
   position: relative;
 }
@@ -6065,7 +6073,7 @@ ul#social li.icon-mail > a:before {
   top: 0px;
 }
 
-/* line 267, ../scss/parts/_asides.scss */
+/* line 275, ../scss/parts/_asides.scss */
 .list-categories {
   margin: -3px 0 0 0 !important;
   padding-bottom: 2px;
@@ -6085,11 +6093,11 @@ ul#social li.icon-mail > a:before {
 .list-categories:after {
   top: 0px;
 }
-/* line 272, ../scss/parts/_asides.scss */
+/* line 280, ../scss/parts/_asides.scss */
 .list-categories:before {
   top: 3px;
 }
-/* line 275, ../scss/parts/_asides.scss */
+/* line 283, ../scss/parts/_asides.scss */
 .list-categories li {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
@@ -6115,7 +6123,7 @@ ul#social li.icon-mail > a:before {
     display: none;
   }
 }
-/* line 282, ../scss/parts/_asides.scss */
+/* line 290, ../scss/parts/_asides.scss */
 .list-categories li.active a:after {
   content: ' ';
   position: absolute;
@@ -6130,7 +6138,7 @@ ul#social li.icon-mail > a:before {
   top: 2px;
   z-index: 0;
 }
-/* line 294, ../scss/parts/_asides.scss */
+/* line 302, ../scss/parts/_asides.scss */
 .list-categories li:nth-child(2), .list-categories li:nth-child(1) {
   margin-top: 3px;
 }
@@ -6777,12 +6785,13 @@ ul.block-grid.excerpt-loop li {
     float: none !important;
     padding: 0 0 5px 0  !important;
     text-align: center;
+    min-height: 1px !important;
   }
-  /* line 35, ../scss/parts/_stats.scss */
+  /* line 36, ../scss/parts/_stats.scss */
   .beer-stats .columns .border-bottom, .beer-stats .columns .list-contact h5, .list-contact .beer-stats .columns h5, .beer-stats .columns .post-text .gform_body .gform_fields input, .post-text .gform_body .gform_fields .beer-stats .columns input, .beer-stats .columns .post-text .gform_body .gform_fields textarea, .post-text .gform_body .gform_fields .beer-stats .columns textarea, .beer-stats .columns .beer-stats, .beer-stats .columns .boxed span, .boxed .beer-stats .columns span {
     border: none !important;
   }
-  /* line 38, ../scss/parts/_stats.scss */
+  /* line 39, ../scss/parts/_stats.scss */
   .beer-stats .columns h5, .beer-stats .columns h6 {
     display: inline;
   }
