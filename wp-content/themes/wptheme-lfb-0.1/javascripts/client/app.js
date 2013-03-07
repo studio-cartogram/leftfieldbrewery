@@ -80,7 +80,7 @@ App.bindListeners = function () {
 	Counters for Age Verification
 
 	======================================================================================================================== */
-	if ( $.fn.Digits ) {
+
 	 	month = new Digits({ 
 	  		wrapper: '#av-digits-m', 
 	  		mode: 'statistics', 
@@ -108,8 +108,6 @@ App.bindListeners = function () {
 		$('#av_verify_y').change(function() {
 	  		year.changeValue($(this).val());
 		});
-	};
-
 }; // App.bindListeners().
 
 /*
