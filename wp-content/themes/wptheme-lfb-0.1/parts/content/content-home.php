@@ -59,7 +59,7 @@ global $query_string;
 			<?php query_posts( $query_string . '&posts_per_page=2&offset=1' );
 				if (have_posts()) : 	
 				while (have_posts()): the_post(); ?>
-					<div class="columns six format-text rule-right bg-cream post-small">
+					<div class="columns six format-text rule-right bg-cream post-small space-inner-bottom">
 						<?php get_template_part('parts/content/content', 'summary'); ?>
 					</div>		
 				<?php endwhile; 

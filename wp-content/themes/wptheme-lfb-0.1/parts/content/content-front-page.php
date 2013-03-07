@@ -63,7 +63,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="columns four pull-eight mobile-flush">
+	<div class="columns four sidebar pull-eight mobile-flush">
 		<?php if (is_front_page()) {
 			get_sidebar('front-page'); 
 		} elseif (is_home()) { 
