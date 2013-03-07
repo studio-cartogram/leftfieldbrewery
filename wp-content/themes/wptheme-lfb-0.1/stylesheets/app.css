@@ -5636,10 +5636,14 @@ ul#social li.icon-mail > a:before {
 }
 
 /** 
+  * Shared
+  *
+  */
+/** 
   * Home Page
   *
   */
-/* line 6, ../scss/parts/_asides.scss */
+/* line 14, ../scss/parts/_asides.scss */
 .vendor-listing {
   position: relative;
   background: #fefcf8;
@@ -5661,7 +5665,7 @@ ul#social li.icon-mail > a:before {
 .vendor-listing:after {
   top: 0px;
 }
-/* line 11, ../scss/parts/_asides.scss */
+/* line 19, ../scss/parts/_asides.scss */
 .vendor-listing .lead {
   position: relative;
   padding: 20px 0 40px 80px;
@@ -5687,7 +5691,7 @@ ul#social li.icon-mail > a:before {
     display: none;
   }
 }
-/* line 19, ../scss/parts/_asides.scss */
+/* line 27, ../scss/parts/_asides.scss */
 .vendor-listing .icon-tap {
   font-size: 60px;
   font-size: 6rem;
@@ -5696,17 +5700,17 @@ ul#social li.icon-mail > a:before {
   top: 5px;
   color: #0c223f;
 }
-/* line 26, ../scss/parts/_asides.scss */
+/* line 34, ../scss/parts/_asides.scss */
 .vendor-listing ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 30, ../scss/parts/_asides.scss */
+/* line 38, ../scss/parts/_asides.scss */
 .vendor-listing ul li {
   position: relative;
 }
-/* line 32, ../scss/parts/_asides.scss */
+/* line 40, ../scss/parts/_asides.scss */
 .vendor-listing ul li a.block-level {
   display: block;
   overflow: hidden;
@@ -5727,7 +5731,7 @@ ul#social li.icon-mail > a:before {
 .vendor-listing ul li:after {
   top: 0px;
 }
-/* line 38, ../scss/parts/_asides.scss */
+/* line 46, ../scss/parts/_asides.scss */
 .vendor-listing ul li .icon-wrap {
   position: relative;
 }
@@ -5749,7 +5753,7 @@ ul#social li.icon-mail > a:before {
     display: none;
   }
 }
-/* line 41, ../scss/parts/_asides.scss */
+/* line 49, ../scss/parts/_asides.scss */
 .vendor-listing ul li .icon {
   font-size: 20px;
   font-size: 2rem;
@@ -5758,15 +5762,15 @@ ul#social li.icon-mail > a:before {
   margin: auto;
   display: block;
 }
-/* line 52, ../scss/parts/_asides.scss */
+/* line 60, ../scss/parts/_asides.scss */
 .vendor-listing ul li .rule-right {
   position: static;
 }
-/* line 54, ../scss/parts/_asides.scss */
+/* line 62, ../scss/parts/_asides.scss */
 .vendor-listing ul li .rule-right:after {
   right: -15px;
 }
-/* line 58, ../scss/parts/_asides.scss */
+/* line 66, ../scss/parts/_asides.scss */
 .vendor-listing ul li .map-wrap {
   height: 52px;
   opacity: 0;
@@ -5778,11 +5782,11 @@ ul#social li.icon-mail > a:before {
   position: relative;
   left: -2px;
 }
-/* line 65, ../scss/parts/_asides.scss */
+/* line 73, ../scss/parts/_asides.scss */
 .vendor-listing ul li .map-wrap h4 {
   padding: 20px 0;
 }
-/* line 69, ../scss/parts/_asides.scss */
+/* line 77, ../scss/parts/_asides.scss */
 .vendor-listing ul li:hover .map-wrap {
   opacity: 1;
 }
@@ -5791,38 +5795,38 @@ ul#social li.icon-mail > a:before {
   * About Page
   *
   */
-/* line 81, ../scss/parts/_asides.scss */
+/* line 89, ../scss/parts/_asides.scss */
 .slides-players {
   margin: 0;
   list-style: none;
 }
 
-/* line 87, ../scss/parts/_asides.scss */
+/* line 95, ../scss/parts/_asides.scss */
 .flexslider-players .corner-one {
   top: -20px;
   left: -6px;
   z-index: 1;
 }
-/* line 92, ../scss/parts/_asides.scss */
+/* line 100, ../scss/parts/_asides.scss */
 .flexslider-players .corner-two {
   top: -31px;
   right: -31px;
   z-index: 1;
 }
-/* line 97, ../scss/parts/_asides.scss */
+/* line 105, ../scss/parts/_asides.scss */
 .flexslider-players .corner-three {
   bottom: 13px;
   right: -31px;
   z-index: 1;
 }
-/* line 102, ../scss/parts/_asides.scss */
+/* line 110, ../scss/parts/_asides.scss */
 .flexslider-players .corner-four {
   left: -5px;
   bottom: 23px;
   z-index: 1;
 }
 
-/* line 109, ../scss/parts/_asides.scss */
+/* line 117, ../scss/parts/_asides.scss */
 .flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
@@ -5835,7 +5839,7 @@ ul#social li.icon-mail > a:before {
   width: 100%;
   height: 450px;
 }
-/* line 116, ../scss/parts/_asides.scss */
+/* line 124, ../scss/parts/_asides.scss */
 .flip-container .flip {
   position: absolute;
   z-index: 1000;
@@ -5852,11 +5856,11 @@ ul#social li.icon-mail > a:before {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 129, ../scss/parts/_asides.scss */
+/* line 137, ../scss/parts/_asides.scss */
 .flip-container .flip i {
   display: block;
 }
-/* line 133, ../scss/parts/_asides.scss */
+/* line 141, ../scss/parts/_asides.scss */
 .flip-container .flip#to-front {
   opacity: 0;
   left: 0;
@@ -5866,11 +5870,11 @@ ul#social li.icon-mail > a:before {
   -o-backface-visibility: visible;
   backface-visibility: visible;
 }
-/* line 138, ../scss/parts/_asides.scss */
+/* line 146, ../scss/parts/_asides.scss */
 .flip-container .flip#to-back {
   opacity: 1;
 }
-/* line 144, ../scss/parts/_asides.scss */
+/* line 152, ../scss/parts/_asides.scss */
 .flip-container.hover .flipper {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -5878,15 +5882,15 @@ ul#social li.icon-mail > a:before {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-/* line 147, ../scss/parts/_asides.scss */
+/* line 155, ../scss/parts/_asides.scss */
 .flip-container.hover .flip#to-front {
   opacity: 1;
 }
-/* line 150, ../scss/parts/_asides.scss */
+/* line 158, ../scss/parts/_asides.scss */
 .flip-container.hover .flip#to-back {
   opacity: 0;
 }
-/* line 154, ../scss/parts/_asides.scss */
+/* line 162, ../scss/parts/_asides.scss */
 .flip-container .name {
   left: -1px;
   bottom: 1px;
@@ -5894,7 +5898,7 @@ ul#social li.icon-mail > a:before {
   position: absolute;
   border-top: none;
 }
-/* line 161, ../scss/parts/_asides.scss */
+/* line 169, ../scss/parts/_asides.scss */
 .flip-container .front, .flip-container .back {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -5908,7 +5912,7 @@ ul#social li.icon-mail > a:before {
   width: 100%;
   height: 450px;
 }
-/* line 169, ../scss/parts/_asides.scss */
+/* line 177, ../scss/parts/_asides.scss */
 .flip-container .front .back-logo, .flip-container .front .big-icon, .flip-container .back .back-logo, .flip-container .back .big-icon {
   font-size: 100px;
   font-size: 10rem;
@@ -5921,16 +5925,16 @@ ul#social li.icon-mail > a:before {
   line-height: 0;
   position: relative;
 }
-/* line 180, ../scss/parts/_asides.scss */
+/* line 188, ../scss/parts/_asides.scss */
 .flip-container .front p, .flip-container .front .post-text .gform_heading span.gform_description, .post-text .gform_heading .flip-container .front span.gform_description, .flip-container .back p, .flip-container .back .post-text .gform_heading span.gform_description, .post-text .gform_heading .flip-container .back span.gform_description {
   color: white;
   padding: 15px 30px;
 }
-/* line 186, ../scss/parts/_asides.scss */
+/* line 194, ../scss/parts/_asides.scss */
 .flip-container .front {
   z-index: 2;
 }
-/* line 193, ../scss/parts/_asides.scss */
+/* line 201, ../scss/parts/_asides.scss */
 .flip-container .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -5939,12 +5943,12 @@ ul#social li.icon-mail > a:before {
   transform: rotateY(180deg);
   background: #0c223f;
 }
-/* line 198, ../scss/parts/_asides.scss */
+/* line 206, ../scss/parts/_asides.scss */
 .flip-container .back h2 {
   color: white;
 }
 
-/* line 205, ../scss/parts/_asides.scss */
+/* line 213, ../scss/parts/_asides.scss */
 .flipper {
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
@@ -5962,7 +5966,7 @@ ul#social li.icon-mail > a:before {
   * Beers Page
   *
   */
-/* line 218, ../scss/parts/_asides.scss */
+/* line 226, ../scss/parts/_asides.scss */
 .sidebar-beer .corner-two {
   top: -31px;
   right: -31px;
@@ -5970,7 +5974,7 @@ ul#social li.icon-mail > a:before {
   border-color: white;
 }
 
-/* line 226, ../scss/parts/_asides.scss */
+/* line 234, ../scss/parts/_asides.scss */
 .sidebar-beer .flip-container .flip {
   padding-top: 3px;
 }
@@ -5979,25 +5983,25 @@ ul#social li.icon-mail > a:before {
   * Contact Page
   *
   */
-/* line 237, ../scss/parts/_asides.scss */
+/* line 245, ../scss/parts/_asides.scss */
 .list-contact {
   list-style: none;
   margin: 0;
 }
-/* line 240, ../scss/parts/_asides.scss */
+/* line 248, ../scss/parts/_asides.scss */
 .list-contact h5 {
   padding-bottom: 8px;
   margin-top: 10px;
 }
-/* line 245, ../scss/parts/_asides.scss */
+/* line 253, ../scss/parts/_asides.scss */
 .list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .footer .gform_body, .footer .list-contact li:last-child .gform_body {
   border-color: #0c223f !important;
 }
-/* line 249, ../scss/parts/_asides.scss */
+/* line 257, ../scss/parts/_asides.scss */
 .list-contact li a:hover h5 {
   color: #ff4337;
 }
-/* line 252, ../scss/parts/_asides.scss */
+/* line 260, ../scss/parts/_asides.scss */
 .list-contact li a:hover h4 {
   background: #ff4337;
 }
@@ -6006,7 +6010,7 @@ ul#social li.icon-mail > a:before {
   * Highlights Page
   *
   */
-/* line 263, ../scss/parts/_asides.scss */
+/* line 271, ../scss/parts/_asides.scss */
 .tags-wrap {
   position: relative;
   padding-top: 3px;
@@ -6026,12 +6030,12 @@ ul#social li.icon-mail > a:before {
 .tags-wrap:after {
   top: 0px;
 }
-/* line 267, ../scss/parts/_asides.scss */
+/* line 275, ../scss/parts/_asides.scss */
 .tags-wrap a {
   color: white;
   line-height: 1.6;
 }
-/* line 271, ../scss/parts/_asides.scss */
+/* line 279, ../scss/parts/_asides.scss */
 .tags-wrap .tag-cloud {
   position: relative;
 }
@@ -6050,7 +6054,7 @@ ul#social li.icon-mail > a:before {
   top: 0px;
 }
 
-/* line 276, ../scss/parts/_asides.scss */
+/* line 284, ../scss/parts/_asides.scss */
 .categories-wrap {
   position: relative;
 }
@@ -6069,7 +6073,7 @@ ul#social li.icon-mail > a:before {
   top: 0px;
 }
 
-/* line 280, ../scss/parts/_asides.scss */
+/* line 288, ../scss/parts/_asides.scss */
 .list-categories {
   margin: -3px 0 0 0 !important;
   padding-bottom: 2px;
@@ -6089,11 +6093,11 @@ ul#social li.icon-mail > a:before {
 .list-categories:after {
   top: 0px;
 }
-/* line 285, ../scss/parts/_asides.scss */
+/* line 293, ../scss/parts/_asides.scss */
 .list-categories:before {
   top: 3px;
 }
-/* line 288, ../scss/parts/_asides.scss */
+/* line 296, ../scss/parts/_asides.scss */
 .list-categories li {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
@@ -6119,7 +6123,7 @@ ul#social li.icon-mail > a:before {
     display: none;
   }
 }
-/* line 295, ../scss/parts/_asides.scss */
+/* line 303, ../scss/parts/_asides.scss */
 .list-categories li.active a:after {
   content: ' ';
   position: absolute;
@@ -6134,7 +6138,7 @@ ul#social li.icon-mail > a:before {
   top: 2px;
   z-index: 0;
 }
-/* line 307, ../scss/parts/_asides.scss */
+/* line 315, ../scss/parts/_asides.scss */
 .list-categories li:nth-child(2), .list-categories li:nth-child(1) {
   margin-top: 3px;
 }
@@ -10182,5 +10186,10 @@ table.hide-for-medium {
   /* line 79, ../scss/components/modules/_mqueries-overrides.scss */
   .flexslider-instagram .corner-one, .flexslider-instagram .corner-two, .flexslider-instagram .corner-three, .flexslider-instagram .corner-four, .flexslider-beers .corner-one, .flexslider-beers .corner-two, .flexslider-beers .corner-three, .flexslider-beers .corner-four {
     display: none;
+  }
+
+  /* line 83, ../scss/components/modules/_mqueries-overrides.scss */
+  .sidebar > h3, .post-text .gform_body .gform_fields li#field_2_1 .sidebar > label:first-child, .post-text .gform_body .gform_fields li#field_2_3 .sidebar > label {
+    border-bottom: 1px solid;
   }
 }

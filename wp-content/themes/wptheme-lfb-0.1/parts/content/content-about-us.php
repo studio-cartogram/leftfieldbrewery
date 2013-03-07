@@ -11,7 +11,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="columns four pull-eight mobile-flush">
+	<div class="sidebar columns four pull-eight mobile-flush">
 		<?php get_sidebar($slug); ?>
 	</div>
 </div>

@@ -47,7 +47,7 @@ if ( have_posts() ) :
 				</div>
 			<?php get_template_part('parts/navigation/pagination','single') ?>
 			</div>
-			<div class="columns mobile-flush four pull-eight">
+			<div class="columns sidebar mobile-flush four pull-eight">
 				<?php get_sidebar(get_post_type()); ?>
 			</div>
 		</div>

@@ -40,7 +40,7 @@ global $slug; ?>
 								echo'<div class="row  bg-cream collapse">';
 							} 
 							?>
-							<div class="columns six format-text rule-right bg-cream post-small post-<?php echo $count ?>">
+							<div class="columns six format-text space-inner-bottom rule-right bg-cream post-small post-<?php echo $count ?>">
 								<?php get_template_part('parts/content/content', 'excerpt'); ?>
 							</div>
 							<?php if (($count % 2 == 0) || ($count == $posts_in_query) || ($count == $posts_per_page) || $posts_on_this_page == 1  ) {
