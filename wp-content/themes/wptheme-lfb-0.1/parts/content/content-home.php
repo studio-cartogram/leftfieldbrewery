@@ -3,11 +3,11 @@ global $query_string;
 ?>
 
 <div class="row  <?php echo $slug; ?>">
-	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four rule-left"); ?>>	
+	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four mobile-flush rule-left"); ?>>	
 		<h3 class="rule-right text-center"><?php echo get_the_title(get_option('page_for_posts')) ?></h3>
 		<div class="row flushed-left collapse">
 			<div class="column twelve rule-right">
-				<div class="post-text double-bordered">
+				<div class="post-text double-bordered space-inner-bottom-xlarge">
 					<?php
 						query_posts( $query_string . '&posts_per_page=1' );
 					if (have_posts()) : 	
@@ -59,7 +59,7 @@ global $query_string;
 			<?php query_posts( $query_string . '&posts_per_page=2&offset=1' );
 				if (have_posts()) : 	
 				while (have_posts()): the_post(); ?>
-					<div class="columns six format-text rule-right bg-cream post-small">
+					<div class="columns six format-text rule-right bg-cream post-small space-inner-bottom">
 						<?php get_template_part('parts/content/content', 'summary'); ?>
 					</div>		
 				<?php endwhile; 
@@ -72,7 +72,7 @@ global $query_string;
 
 
 	</div>
-	<div class="columns four pull-eight">
+	<div class="columns four mobile-flush pull-eight">
 			<?php get_sidebar('home'); ?>
 	</div>
 </div>

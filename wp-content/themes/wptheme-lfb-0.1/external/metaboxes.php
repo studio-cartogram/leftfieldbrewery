@@ -53,6 +53,20 @@
 	    	"title" => __('Short Description.','cartogram'),
 	    	"description" => __('Enter the short description for the beer such as "Oatmeal brown ale"','cartogram')
 	    ),
+	    "color" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."color",
+	    	"std" => "",
+	    	"title" => __('Beer Color','cartogram'),
+	    	"description" => __('Enter the short description for the beer such as "Oatmeal brown ale"','cartogram')
+	    ),
+	    "icon" => array(
+	    	"type" => "textfield",
+			"name" => $prefix."icon",
+	    	"std" => "",
+	    	"title" => __('Beer Icon','cartogram'),
+	    	"description" => __('Enter the short description for the beer such as "Oatmeal brown ale"','cartogram')
+	    ),
 		"alc" => array(
 	    	"type" => "textfield",
 			"name" => $prefix."alc",

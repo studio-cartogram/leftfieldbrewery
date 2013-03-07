@@ -9,11 +9,7 @@
     padding-top:25px;
   }
   > .row {
-    overflow:hidden;
-    > .columns {
-      margin-bottom:-200px;
-      padding-bottom:200px;
-    }
+    @extend .equal-heights;
   }
 }
 
@@ -28,3 +24,4 @@
     @include font-size(11);
   }
 }
+

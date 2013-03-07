@@ -1,7 +1,7 @@
 <div class="row bg-cream collapse flushed-left ">
 	<div class="columns twelve double-bordered">
-		<div class="flexslider-beers">
-			<ul class="beers_slides">
+		<div class="flexslider-beers rule-right">
+			<ul class="slides-beers">
 				<?php $thumb_ID = get_post_thumbnail_id( $post->ID );
 				if ( $images = get_posts(array(
 						'post_parent' => $id,

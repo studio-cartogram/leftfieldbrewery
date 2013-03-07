@@ -10,7 +10,7 @@
     @extend .space-top;
     @extend .border-bottom-white;
     @include column(9);
-    @include rule(right, false, $white);
+    @include rule(right, false, $white, false, true);
     padding:0;
     .gform_fields {
       list-style:none;
@@ -134,7 +134,7 @@
   }
   form {
       margin:0;
-      padding:0 0 80px;
+      padding:0 0 0px;
       background:$cream;
     }
   .gform_body {
@@ -171,11 +171,13 @@
 
           span {
             @include double-bordered();
-            @include column(8);
-            padding:0;
+            @include column(7);
+            @include mobileColumn(2);
+            padding:0 !important;
             &:first-child {
-              @include column(4);
-              padding:0;
+              @include column(5);
+              @include mobileColumn(2);
+              padding:0 !important;
               input {
                 @extend .border-right;
               }
@@ -259,9 +261,12 @@
           }
           label {
             display:block !important;
-            float:left;
-            padding:10px 0 0 20px ;
-            @include font-size(16)
+            padding:10px 0 0 60px ;
+            @include font-size(16);
+            @media only screen and (max-width: $screenSmall - 1) {
+              @include font-size(13);
+              padding:15px 0 0 60px ;
+            }
           }
         }
       }

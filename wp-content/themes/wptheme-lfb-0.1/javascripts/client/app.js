@@ -134,7 +134,8 @@ App.flexsliderInit = function () {
 	    pauseOnHover: true,
 	    slideshowSpeed: 5000,
 	    animationLoop: true,
-	    keyboard: false
+	    keyboard: false,
+	    smoothHeight: true,            //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode  
 	});
 
 	$('.flexslider-players').flexslider({
@@ -149,11 +150,12 @@ App.flexsliderInit = function () {
 	    pauseOnHover: true,
 	    slideshowSpeed: 5000,
 	    animationLoop: true,
-	    keyboard: false
+	    keyboard: false,
+	    smoothHeight: true,            //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode  
 	});
 
 	$('.flexslider-beers').flexslider({
-	    selector: ".beers_slides > li",
+	    selector: ".slides-beers > li",
 	    animation: "slide",
 	    namespace: "cartogram-slider-internal-",
 	    prevText: "<i class='icon-arrow-left'></i>",

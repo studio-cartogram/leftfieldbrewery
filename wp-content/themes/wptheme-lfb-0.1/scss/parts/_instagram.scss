@@ -1,8 +1,12 @@
-.flexslider-instagram {
+.flexslider-instagram, .flexslider-beers {
 	padding:40px;
 	position:relative;
+	
 }
-
+.cartogram-slider-internal-viewport, .cartogram-slider-sidebar-viewport {
+	-webkit-transform: translateZ(0);
+	-webkit-transform: translate3d(0,0,0);
+}
 
 .image-wrap {
 	position:relative;

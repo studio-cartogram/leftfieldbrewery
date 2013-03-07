@@ -11,7 +11,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="columns four pull-eight">
+	<div class="columns sidebar four pull-eight mobile-flush">
 		<?php if (is_front_page()) {
 			get_sidebar('front-page'); 
 		} elseif (is_home()) { 

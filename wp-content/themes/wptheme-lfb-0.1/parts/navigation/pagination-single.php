@@ -8,7 +8,7 @@ global $post;
 ?>
 
 <nav class="row collapse flushed-left border-top border-bottom" id="pagination" role="navigation">
-	<div class="columns one rule-right bg-navy pagination-arrow">
+	<div class="columns mobile-one one rule-right bg-navy pagination-arrow">
 		<?php if(!$prevURL){
 				echo "<a class='cartogram-slider-disabled'><i class='icon-arrow-left'></i></a>";
  			} else { 
@@ -16,7 +16,7 @@ global $post;
  			}
  		?>
 	</div>
-	<div class="columns five rule-right border-bottom bg-cream pagination-link">
+	<div class="columns mobile-one five rule-right border-bottom bg-cream pagination-link">
 		<?php if(!$prevURL){
 				echo "<a class='disabled'>Older</a>";
  			} else {
@@ -24,7 +24,7 @@ global $post;
  			}
  		?>
 	</div>
-	<div class="columns five rule-right border-bottom bg-cream pagination-link">
+	<div class="columns mobile-one five rule-right border-bottom bg-cream pagination-link">
 			<?php if(!$nextURL){
 				echo "<a class='disabled'>Newer</a>";
  			} else {
@@ -32,7 +32,7 @@ global $post;
  			}
  		?>
 	</div>
-	<div class="columns one rule-right rule-left bg-navy pagination-arrow">
+	<div class="columns mobile-one one rule-right rule-left bg-navy pagination-arrow">
 			<?php if(!$nextURL){
 				echo "<a class='cartogram-slider-disabled'><i class='icon-arrow-right'></i></a>";
  			} else {

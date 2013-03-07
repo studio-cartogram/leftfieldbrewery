@@ -24,13 +24,13 @@
 						$closing_wrapper = '</a>';
 						break;
 					case "tweet":
-						$open_wrapper = '<a href="http://twitter.com/home?status=' . $options[$medium] . '">';
+						$open_wrapper = '<a target="_blank" href="http://twitter.com/home?status=' . $options[$medium] . '">';
 						$closing_wrapper = '</a>';	
 						break;
 					case "toast":
 					case "like":
 					case "follow":
-						$open_wrapper = '<a href="http://' . $options[$medium] . '">';
+						$open_wrapper = '<a target="_blank" href="http://' . $options[$medium] . '">';
 						$closing_wrapper = '</a>';
 						break;
 					default:

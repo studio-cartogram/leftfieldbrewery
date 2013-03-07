@@ -48,7 +48,7 @@
     left: 25px;
     top: 11px;
   } @else if $location == bottom-right {
-    bottom:0px;
+    bottom:1px;
     top:auto;
     right:0px;
     left:auto;
@@ -62,7 +62,7 @@
   }
 }
 
-@mixin rule($location, $outside:false, $color:$navy, $inside:false) {
+@mixin rule($location, $outside:false, $color:$navy, $inside:false, $mobile:false) {
   position:relative;
   @if $location == left {
     &:before {
@@ -80,6 +80,11 @@
       }
       @if $inside == true {
         left:15px;
+      }
+      @if $mobile == false {
+        @media only screen and (max-width: $screenSmall - 1) {
+          display:none;
+        }
       }
     }
   }
@@ -100,6 +105,12 @@
       @if $inside == true {
         right:15px;
       }
+      @if $mobile == false {
+        @media only screen and (max-width: $screenSmall - 1) {
+
+          display:none;
+        }
+      } 
     }
   }
 }

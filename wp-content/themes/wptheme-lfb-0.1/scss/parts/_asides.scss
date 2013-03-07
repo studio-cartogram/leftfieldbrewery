@@ -1,4 +1,12 @@
 /** 
+  * Shared
+  *
+  */ 
+
+
+
+
+/** 
   * Home Page
   *
   */ 
@@ -10,7 +18,7 @@
 	padding-right:15px;
 	.lead {
 		position:relative;
-		padding:20px 0 20px 80px;
+		padding:20px 0 40px 80px;
 		margin:0 ;
 		@include rule(left);
 		color:$navy;
@@ -111,6 +119,8 @@
   	background:$navy;
   	width:100%;
   	overflow:hidden;
+  	width: 100%;
+	height: 450px;
   	.flip {
   		position:absolute;
   		z-index:1000;
@@ -122,7 +132,7 @@
 		right: 0px;
 		display:block;
 		&:hover, &:hover i {
-	 		color:$red;
+	 		
 		}
 		i {
 			display:block;
@@ -156,12 +166,49 @@
 		position: absolute;
 		border-top:none;
 	} 	
-}
+	.front, .back {
+		@include backface-visibility(hidden);
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align:center;
+		width: 100%;
+		height: 450px;
+		.back-logo, .big-icon {
+			@include font-size(100);
+			margin:auto;
+			color:$white;
+			display:block;
+			height:100px;
+			margin-top:30px;
+			width:200px;
+			line-height:0;
+			position:relative;
+		}
+		p {
+			color:$white;
+			padding:15px 30px;
+		}
+	}
 
-.flip-container, .front, .back {
-	width: 100%;
-	height: 450px;
-} 
+	.front {
+		z-index: 2;
+		.playholder-players {
+			@extend .icon-placeholder;
+		}
+	}
+
+	.back {
+		@include transform(rotateY(180deg));
+		background: $navy;
+		
+		
+		h2 {
+			color:$white;
+		}
+	}
+ 
+}
  
 .flipper {
 	@include transition(0.6s);
@@ -169,44 +216,26 @@
 	position: relative;
 }
 
-.front, .back {
-	@include backface-visibility(hidden);
-	position: absolute;
-	top: 0;
-	left: 0;
-	text-align:center;
-}
-
-.front {
-	z-index: 2;
-	.playholder-players {
-		@extend .icon-placeholder;
-	}
-}
 
 
-.back {
-	@include transform(rotateY(180deg));
-	background: $navy;
-	.back-logo {
-		@include font-size(130);
-		margin:auto;
-		color:$white;
-		display:block;
-		height:200px;
-		width:200px;
-		line-height:0;
-		position:relative;
-	}
-	p {
-		color:$white;
-		padding:15px 30px;
-	}
-	h2 {
-		color:$white;
-	}
+/** 
+  * Beers Page
+  *
+  */ 
+
+.sidebar-beer .corner-two {
+	top: -31px; 
+	right: -31px;
+	z-index:1;
+	border-color:$white;
+
 }
- 
+
+.sidebar-beer .flip-container .flip {
+	padding-top:3px;
+}
+
+
 /** 
   * Contact Page
   *
@@ -224,6 +253,14 @@
 	li:last-child .border-bottom-white {
 		border-color:$navy !important;
 	}
+	li a:hover {
+		h5 {
+			color:$red;
+		}
+		h4 {
+			background:$red;
+		}
+	}
 }
 
 /** 
@@ -237,6 +274,7 @@
 	color:$white;
 	a {
 		color:$white;
+		line-height: 1.6;
 	}
 	.tag-cloud {
 		@include double-bordered(false, false, false, false,  $white);
