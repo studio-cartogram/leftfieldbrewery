@@ -81,17 +81,18 @@ App.bindListeners = function () {
 
 	======================================================================================================================== */
 
-	 	month = new Digits({ 
+	if ($("#av-overlay").length) {
+		var AVMonth = new Digits({ 
 	  		wrapper: '#av-digits-m', 
 	  		mode: 'statistics', 
 	  		value: 10 
 	  	});
-		day = new Digits({ 
+		var AVDay = new Digits({ 
 	  		wrapper: '#av-digits-d', 
 	  		mode: 'statistics', 
 	  		value: 24 
 	  	});  
-	  	year = new Digits({ 
+	  	var AVYear = new Digits({ 
 	  		wrapper: '#av-digits-y', 
 	  		mode: 'statistics', 
 	  		value: 1992 
@@ -100,14 +101,16 @@ App.bindListeners = function () {
 	  	// Change value when the input changes 
 
 	  	$('#av_verify_m').change(function() {
-	  		month.changeValue($(this).val());
+	  		AVMonth.changeValue($(this).val());
 		});
 		$('#av_verify_d').change(function() {
-	  		day.changeValue($(this).val());
+	  		AVDay.changeValue($(this).val());
 		});
 		$('#av_verify_y').change(function() {
-	  		year.changeValue($(this).val());
+	  		AVYear.changeValue($(this).val());
 		});
+	}
+	
 }; // App.bindListeners().
 
 /*
