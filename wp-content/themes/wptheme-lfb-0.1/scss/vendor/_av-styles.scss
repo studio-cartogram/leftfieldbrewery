@@ -5,18 +5,24 @@
 }
 
 #av-overlay {
+	top:0;
 	h1 {
 		@extend .icon-logo;
 		position:relative;
-		padding-top:250px;
+		padding-top:180px; 
 		&:before {
-			@include font-size(200);
+			@include font-size(160);
 			position:absolute;
-			top:0;
+			top:-10px;
 			left:50%;
-			margin-left:-140px;
+			margin-left:-100px;
 		}
 	}
+	p {
+		@include font-size(16);	
+		padding-bottom:20px;
+	}
+	
 	> .row {
 		max-width:750px !important;
 	}
@@ -32,8 +38,14 @@
 	p, h1, h3, h4, h5, h6, h6, label {
 		color:$white;
 	}
-	.submit input[type=submit]{
-		@extend .button;
+	p.submit {
+		input[type=submit]{
+			margin-top:20px;
+			@extend .button;
+			height:85px;
+      		border:1px solid $white;
+		} 
+	
 	}
 	#av_verify_form p {
 		@extend .row;
@@ -54,5 +66,25 @@
 	}
 
 }
-
+form.custom span.custom {
+	margin-top:20px;
+	display: inline-block;
+	width: 20px;
+	left: -5px;
+	height: 20px;
+	position: relative;
+	top: 5px;
+    background: none;
+    cursor:pointer;
+    margin-bottom:-2px;
+    @extend .icon-cross;
+	border:1px solid white;
+	color:$white;
+    &.checkbox.checked:before {
+    	@include font-size(18);
+    	color:$white;
+    	content: "\e010";
+    	top: 3px;
+    }
+  }
 
