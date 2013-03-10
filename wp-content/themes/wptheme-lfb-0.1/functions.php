@@ -34,8 +34,8 @@
 	======================================================================================================================== */
 
 	register_sidebar(array(
-		'name' => 'Hompage Features',
-		'id' => 'hompage-features',
+		'name' => 'Sidebar',
+		'id' => 'sidebar',
 		'description' => __('This is the default widget area for the sidebar. This will be displayed if the other sidebars have not been populated with widgets.', 'cartogram'),
 		'before_widget' => '<div class="sidebar">',
 		'after_widget' => '</div>',
@@ -451,38 +451,57 @@
 	/*******************************************************************
 	 * Filter for Age Verify
 	 ******************************************************************/
-	
 	function cartogram_av_filter($form){
-		$prepend = '<form class="custom" id="av_verify_form" action="' . home_url( '/' ) . '" method="post">';
+		$prepend = '<form id="av_verify_form" action="' . home_url( '/' ) . '" method="post">';
+		$error = ( isset( $_GET['verify-error'] ) ) ? $_GET['verify-error'] : false;
+		if ( $error ) :
+		
+			// Catch-all error
+			$error_string = apply_filters( 'av_error_text_general', __( 'Sorry, something must have gone wrong. Please try again', 'age_verify' ) );
+			
+			// Visitor didn't check the box (only for the simple checkbox form)
+			if ( $error == 2 )
+				$error_string = apply_filters( 'av_error_text_not_checked', __( 'Check the box to confirm your age before continuing', 'age_verify' ) );
+			
+			// Visitor isn't old enough
+			if ( $error == 3 )
+				$error_string = apply_filters( 'av_error_text_too_young', __( 'Sorry, it doesn\'t look like you\'re old enough', 'age_verify' ) );
+			
+			// Visitor entered an invalid date
+			if ( $error == 4 )
+				$error_string = apply_filters( 'av_error_text_bad_date', __( 'Please enter a valid date', 'age_verify' ) );
+			
+			$prepend .= '<p class="error">' . $error_string . '</p>';
+			
+		endif;
 		$prepend .= wp_nonce_field( 'verify-age', 'av-nonce' );
 		$prepend .= '<div class="row">
-						<div class="columns three" id="av-digits-m"></div>
-						<div class="columns three" id="av-digits-d"></div>
-						<div class="columns six" id="av-digits-y"></div>
-					</div>';
-
-		$newForm = '<div class="row">						
-						<div class="columns three">
-							<input type="text" name="av_verify_m" id="av_verify_m" maxlength="2" value="" placeholder="MM" />
-						</div>
-						<div class="columns three">
-							<input type="text" name="av_verify_d" id="av_verify_d" maxlength="2" value="" placeholder="DD" />
-						</div>
-						<div class="columns six">
-							<input type="text" name="av_verify_y" id="av_verify_y" maxlength="4" value="" placeholder="YYYY" />
+							<div class="columns three" id="av-digits-m"></div>
+							<div class="columns three" id="av-digits-d"></div>
+							<div class="columns six" id="av-digits-y"></div>
 						</div>';
-		$newForm .= '<p class="submit">
-						<label for="av_verify_remember">
-						<input type="checkbox" name="av_verify_remember" id="av_verify_remember" value="1" /> Remember me
-						</label> 
-						<input type="submit" name="av_verify" id="av_verify" value="Enter The Site" />
-					</p>';
+
+		$newForm = '	<div class="row">						
+							<div class="columns three">
+								<input type="text" name="av_verify_m" id="av_verify_m" maxlength="2" value="" placeholder="MM" />
+							</div>
+							<div class="columns three">
+								<input type="text" name="av_verify_d" id="av_verify_d" maxlength="2" value="" placeholder="DD" />
+							</div>
+							<div class="columns six">
+								<input type="text" name="av_verify_y" id="av_verify_y" maxlength="4" value="" placeholder="YYYY" />
+							</div>';
+		$newForm .= '		<p class="submit">
+								<label for="av_verify_remember">
+									<input type="checkbox" name="av_verify_remember" id="av_verify_remember" value="1" /> Remember me
+								</label> 
+								<input type="submit" name="av_verify" id="av_verify" value="Enter Site »" />
+							</p>';
 		
-		$append = 	'</div>
-				</form>';
+		$append = '		</div>
+					</form>';
 		return $prepend . $newForm . $append;
 	}
-	
 	add_filter('av_verify_form', 'cartogram_av_filter');
 
 ?>
