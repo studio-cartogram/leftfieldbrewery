@@ -6341,8 +6341,27 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
-/* line 7, ../scss/font/_classes.scss */
-.icon-twitter:before, ul#social li.icon-twitter > a:before, .icon-facebook:before, ul#social li.icon-facebook > a:before, .icon-google-plus:before, ul#social li.icon-google-plus > a:before, .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before, .icon-wordmark:before, .icon-untappd:before, ul#social li.icon-untappd > a:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, ul#social li.icon-mail > a:before, .post-text .gform_body .gform_fields li.label-icon label:before, .icon-logo:before, #av-overlay h1:before, #av-overlay .post-text .gform_heading h3.gform_title:before, .post-text .gform_heading #av-overlay h3.gform_title:before, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child:before, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 #av-overlay label.gform_title:first-child:before, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child:before, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay label.gform_title:first-child:before, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title:before, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 #av-overlay label.gform_title:before, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title:before, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay label.gform_title:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, ul#social li.icon-instagram > a:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .post-text form.custom ul li span.custom:before, form.custom span.custom:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-maris-b:before, .icon-maris-a:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before {
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+/* line 9, ../scss/font/_classes.scss */
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+/* line 26, ../scss/font/_classes.scss */
+.icon-twitter:before, ul#social li.icon-twitter > a:before, .icon-facebook:before, ul#social li.icon-facebook > a:before, .icon-google-plus:before, ul#social li.icon-google-plus > a:before, .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before, .icon-wordmark:before, .icon-untappd:before, ul#social li.icon-untappd > a:before, .icon-tap:before, .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, ul#social li.icon-mail > a:before, .post-text .gform_body .gform_fields li.label-icon label:before, .icon-logo:before, #av-overlay h1:before, #av-overlay .post-text .gform_heading h3.gform_title:before, .post-text .gform_heading #av-overlay h3.gform_title:before, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child:before, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 #av-overlay label.gform_title:first-child:before, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child:before, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay label.gform_title:first-child:before, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title:before, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 #av-overlay label.gform_title:before, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title:before, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay label.gform_title:before, .icon-loader-simple:before, #loader span:before, .icon-instagram:before, ul#social li.icon-instagram > a:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .post-text form.custom ul li span.custom:before, form.custom span.custom:before, .icon-close:before, .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before, .icon-bar:before, .vendor-listing ul li.bar .icon:before, .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before, .icon-maris-a:before, .icon-maris-b:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -6353,164 +6372,164 @@ you can use the generic selector below, but it's slower:
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 17, ../scss/font/_classes.scss */
+/* line 36, ../scss/font/_classes.scss */
 .icon-twitter:before, ul#social li.icon-twitter > a:before {
   content: "\e000";
 }
 
-/* line 20, ../scss/font/_classes.scss */
+/* line 39, ../scss/font/_classes.scss */
 .icon-facebook:before, ul#social li.icon-facebook > a:before {
   content: "\e001";
 }
 
-/* line 23, ../scss/font/_classes.scss */
+/* line 42, ../scss/font/_classes.scss */
 .icon-google-plus:before, ul#social li.icon-google-plus > a:before {
   content: "\e002";
 }
 
-/* line 26, ../scss/font/_classes.scss */
+/* line 45, ../scss/font/_classes.scss */
 .icon-phone:before, .post-text .gform_body .gform_fields li.label-icon#field_2_4 label:before {
   content: "\e003";
 }
 
-/* line 29, ../scss/font/_classes.scss */
+/* line 48, ../scss/font/_classes.scss */
 .icon-wordmark:before {
   content: "\e004";
 }
 
-/* line 32, ../scss/font/_classes.scss */
+/* line 51, ../scss/font/_classes.scss */
 .icon-untappd:before, ul#social li.icon-untappd > a:before {
   content: "\e006";
 }
 
-/* line 35, ../scss/font/_classes.scss */
+/* line 54, ../scss/font/_classes.scss */
 .icon-tap:before {
   content: "\e007";
 }
 
-/* line 38, ../scss/font/_classes.scss */
+/* line 57, ../scss/font/_classes.scss */
 .icon-restaurant:before, .vendor-listing ul li.restaurant .icon:before {
   content: "\e008";
 }
 
-/* line 41, ../scss/font/_classes.scss */
+/* line 60, ../scss/font/_classes.scss */
 .icon-newletter:before {
   content: "\e005";
 }
 
-/* line 44, ../scss/font/_classes.scss */
+/* line 63, ../scss/font/_classes.scss */
 .icon-mark:before {
   content: "\e009";
 }
 
-/* line 47, ../scss/font/_classes.scss */
+/* line 66, ../scss/font/_classes.scss */
 .icon-mail:before, ul#social li.icon-mail > a:before, .post-text .gform_body .gform_fields li.label-icon label:before {
   content: "\e00a";
 }
 
-/* line 50, ../scss/font/_classes.scss */
+/* line 69, ../scss/font/_classes.scss */
 .icon-logo:before, #av-overlay h1:before, #av-overlay .post-text .gform_heading h3.gform_title:before, .post-text .gform_heading #av-overlay h3.gform_title:before, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child:before, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 #av-overlay label.gform_title:first-child:before, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child:before, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay label.gform_title:first-child:before, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title:before, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 #av-overlay label.gform_title:before, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title:before, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay label.gform_title:before {
   content: "\e00b";
 }
 
-/* line 53, ../scss/font/_classes.scss */
+/* line 72, ../scss/font/_classes.scss */
 .icon-loader-simple:before, #loader span:before {
   content: "\e00c";
 }
 
-/* line 56, ../scss/font/_classes.scss */
+/* line 75, ../scss/font/_classes.scss */
 .icon-instagram:before, ul#social li.icon-instagram > a:before {
   content: "\e00d";
 }
 
-/* line 59, ../scss/font/_classes.scss */
+/* line 78, ../scss/font/_classes.scss */
 .icon-flip-right:before {
   content: "\e00e";
 }
 
-/* line 62, ../scss/font/_classes.scss */
+/* line 81, ../scss/font/_classes.scss */
 .icon-flip-left:before {
   content: "\e00f";
 }
 
-/* line 65, ../scss/font/_classes.scss */
+/* line 84, ../scss/font/_classes.scss */
 .icon-cross:before, .post-text form.custom ul li span.custom:before, form.custom span.custom:before {
   content: "\e010";
 }
 
-/* line 68, ../scss/font/_classes.scss */
+/* line 87, ../scss/font/_classes.scss */
 .icon-close:before {
   content: "\e011";
 }
 
-/* line 71, ../scss/font/_classes.scss */
+/* line 90, ../scss/font/_classes.scss */
 .icon-brewpub:before, .vendor-listing ul li.brew-pub .icon:before {
   content: "\e012";
 }
 
-/* line 74, ../scss/font/_classes.scss */
+/* line 93, ../scss/font/_classes.scss */
 .icon-bar:before, .vendor-listing ul li.bar .icon:before {
   content: "\e013";
 }
 
-/* line 77, ../scss/font/_classes.scss */
+/* line 96, ../scss/font/_classes.scss */
 .icon-bar-restaurant:before, .vendor-listing ul li.bar-restaurant .icon:before {
   content: "\e014";
 }
 
-/* line 80, ../scss/font/_classes.scss */
+/* line 99, ../scss/font/_classes.scss */
 .icon-arrow-right:before {
   content: "\e015";
 }
 
-/* line 83, ../scss/font/_classes.scss */
+/* line 102, ../scss/font/_classes.scss */
 .icon-arrow-left:before {
   content: "\e016";
 }
 
-/* line 86, ../scss/font/_classes.scss */
+/* line 105, ../scss/font/_classes.scss */
 .icon-mark-mug:before {
   content: "\e017";
 }
 
-/* line 89, ../scss/font/_classes.scss */
+/* line 108, ../scss/font/_classes.scss */
 .icon-mandie-wheat:before {
   content: "\e018";
 }
 
-/* line 92, ../scss/font/_classes.scss */
+/* line 111, ../scss/font/_classes.scss */
 .icon-icon-mandie:before {
   content: "\e019";
 }
 
-/* line 95, ../scss/font/_classes.scss */
-.icon-maris-b:before {
-  content: "\e01a";
-}
-
-/* line 98, ../scss/font/_classes.scss */
-.icon-maris-a:before {
-  content: "\e01b";
-}
-
-/* line 101, ../scss/font/_classes.scss */
+/* line 114, ../scss/font/_classes.scss */
 .icon-eephus-b:before {
   content: "\e01c";
 }
 
-/* line 104, ../scss/font/_classes.scss */
+/* line 117, ../scss/font/_classes.scss */
 .icon-eephus-a:before {
   content: "\e01d";
 }
 
-/* line 107, ../scss/font/_classes.scss */
+/* line 120, ../scss/font/_classes.scss */
 .icon-doubleipa-b:before {
   content: "\e01e";
 }
 
-/* line 110, ../scss/font/_classes.scss */
+/* line 123, ../scss/font/_classes.scss */
 .icon-doubleipa-a:before {
   content: "\e01f";
+}
+
+/* line 126, ../scss/font/_classes.scss */
+.icon-maris-a:before {
+  content: "\e01a";
+}
+
+/* line 129, ../scss/font/_classes.scss */
+.icon-maris-b:before {
+  content: "\e01b";
 }
 
 @font-face {
