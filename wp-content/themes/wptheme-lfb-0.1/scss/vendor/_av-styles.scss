@@ -52,7 +52,9 @@
 	}
 	.error {
 		@extend div.alert-box;
-		@extend .secondary;
+		background:none;
+		color:$white;
+		border:none;
 	}
 	#av_verify_m, #av_verify_d, #av_verify_y {
 		@include box-shadow(0 0 0);
