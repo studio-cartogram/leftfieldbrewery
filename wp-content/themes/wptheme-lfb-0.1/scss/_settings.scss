@@ -10,8 +10,8 @@ $blockGridElements: 12 !default; // Highest number of block grid elements, Maxim
 
 // Colors Settings
 $navy: #0c223f;
-$navyLight: tint($navy, 30%);
-$navyLighter: tint($navy, 50%);
+$navyLight: rgba(tint($navy, 30%), 0.95);
+$navyLighter:tint($navy, 40%);
 
 $cream: #fefcf8;
 
@@ -29,7 +29,7 @@ $successColor: #5da423 !default;
 $txtColor: #222 !default;
 $highlightColor: #ffff99 !default;
 $black: #000 !default;
-$white: #fff !default;
+$white: $cream;
 $shinyEdge: rgba(#fff, .5) !default;
 $darkEdge: rgba(#000, .1) !default;
 

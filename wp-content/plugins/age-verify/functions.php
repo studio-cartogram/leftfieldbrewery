@@ -287,7 +287,7 @@ function av_get_verify_form() {
 	
 	$form = '';
 	
-	$form .= '<form id="av_verify_form" action="' . home_url( '/' ) . '" method="post">';
+	$form .= '<form id="av_verify_form" class="custom" action="' . home_url( '/' ) . '" method="post">';
 	
 	
 	/* Parse the errors, if any */
