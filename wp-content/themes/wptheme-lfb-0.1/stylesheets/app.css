@@ -5991,8 +5991,8 @@ ul#social li.icon-mail > a:before {
 }
 /* line 248, ../scss/parts/_asides.scss */
 .list-contact h5 {
-  padding-bottom: 8px;
-  margin-top: 10px;
+  padding-bottom: 6px;
+  margin-top: 6px;
 }
 /* line 253, ../scss/parts/_asides.scss */
 .list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .footer .gform_body, .footer .list-contact li:last-child .gform_body {
@@ -6578,8 +6578,9 @@ ul#social li.icon-mail > a:before {
   float: left;
   cursor: pointer;
   margin-bottom: -2px;
+  margin-top: 0;
 }
-/* line 295, ../scss/parts/_gravity-forms.scss */
+/* line 296, ../scss/parts/_gravity-forms.scss */
 .post-text form.custom ul li span.custom.checkbox.checked:before {
   font-size: 45px;
   font-size: 4.5rem;
@@ -6587,7 +6588,7 @@ ul#social li.icon-mail > a:before {
   content: "\e010";
   top: 2px;
 }
-/* line 302, ../scss/parts/_gravity-forms.scss */
+/* line 303, ../scss/parts/_gravity-forms.scss */
 .post-text .gform_confirmation_message_2 {
   position: relative;
   padding: 70px;
@@ -6595,7 +6596,7 @@ ul#social li.icon-mail > a:before {
   font-size: 14px;
 }
 
-/* line 311, ../scss/parts/_gravity-forms.scss */
+/* line 312, ../scss/parts/_gravity-forms.scss */
 .gforms_confirmation_message {
   padding: 20px;
 }
@@ -8010,11 +8011,17 @@ span.corner-four {
 }
 
 /* line 171, ../scss/_helpers.scss */
+.equal-height {
+  margin-bottom: -200px !important;
+  padding-bottom: 200px !important;
+}
+
+/* line 176, ../scss/_helpers.scss */
 .insides {
   padding-left: 30px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 171, ../scss/_helpers.scss */
+  /* line 176, ../scss/_helpers.scss */
   .insides {
     padding-left: 15px;
   }
@@ -8024,14 +8031,21 @@ span.corner-four {
   * Foundation Grid Hacks
   *
   */
-/* line 183, ../scss/_helpers.scss */
+/* line 188, ../scss/_helpers.scss */
 .row.flushed-right, #av-overlay #av_verify_form p.flushed-right, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-right.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-right.gform_description {
   margin-right: -15px !important;
 }
 
-/* line 186, ../scss/_helpers.scss */
+/* line 191, ../scss/_helpers.scss */
 .row.flushed-left, #av-overlay #av_verify_form p.flushed-left, #av-overlay #av_verify_form .post-text .gform_heading span.flushed-left.gform_description, .post-text .gform_heading #av-overlay #av_verify_form span.flushed-left.gform_description {
   margin-left: -15px !important;
+}
+
+/* line 195, ../scss/_helpers.scss */
+.mobile-divide {
+  border-top: 1px solid #0c223f;
+  background: url(../images/bg.png);
+  border-bottom: none;
 }
 
 /* line 2, ../scss/_homepage.scss */

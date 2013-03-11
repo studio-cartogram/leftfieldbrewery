@@ -292,6 +292,7 @@
     @extend .icon-cross;
     cursor:pointer;
     margin-bottom:-2px;
+    margin-top:0;
     &.checkbox.checked:before {
       @include font-size(45);
       color:$navy;
