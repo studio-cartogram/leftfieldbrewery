@@ -193,9 +193,12 @@ span.corner-four {
 }
 
 .mobile-divide {
-  border-top:1px solid $navy;
-  background:url(../images/bg.png);
-  border-bottom:none;
+  @media only screen and (max-width: $screenSmall - 1) {
+    border-top:1px solid $navy;
+    background:url(../images/bg.png);
+    border-bottom:none;
+    margin-bottom:-1px;
+  }
 }
 
 
