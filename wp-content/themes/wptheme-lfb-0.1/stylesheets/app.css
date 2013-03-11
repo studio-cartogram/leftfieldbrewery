@@ -6820,7 +6820,7 @@ ul.block-grid.excerpt-loop li {
 
 /* line 1, ../scss/vendor/_av-styles.scss */
 #av-overlay-wrap {
-  background: rgba(12, 34, 63, 0.95);
+  background: rgba(12, 34, 63, 0.8);
   display: block;
 }
 
@@ -6865,19 +6865,30 @@ ul.block-grid.excerpt-loop li {
 #av-overlay p, #av-overlay .post-text .gform_heading span.gform_description, .post-text .gform_heading #av-overlay span.gform_description, #av-overlay h1, #av-overlay .post-text .gform_heading h3.gform_title, .post-text .gform_heading #av-overlay h3.gform_title, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 #av-overlay label.gform_title:first-child, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading #av-overlay label.gform_title:first-child, #av-overlay .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 #av-overlay label.gform_title, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading #av-overlay label.gform_title, #av-overlay h3, #av-overlay .post-text .gform_body .gform_fields li#field_2_1 label:first-child, .post-text .gform_body .gform_fields li#field_2_1 #av-overlay label:first-child, #av-overlay .post-text .gform_body .gform_fields li#field_2_3 label, .post-text .gform_body .gform_fields li#field_2_3 #av-overlay label, #av-overlay h4, #av-overlay h5, #av-overlay h6, #av-overlay h6, #av-overlay label {
   color: #fefcf8;
 }
-/* line 42, ../scss/vendor/_av-styles.scss */
+/* line 41, ../scss/vendor/_av-styles.scss */
+#av-overlay p.submit, #av-overlay .post-text .gform_heading span.submit.gform_description, .post-text .gform_heading #av-overlay span.submit.gform_description {
+  clear: both;
+  position: relative;
+  top: 20px;
+}
+/* line 45, ../scss/vendor/_av-styles.scss */
 #av-overlay p.submit input[type=submit], #av-overlay .post-text .gform_heading span.submit.gform_description input[type=submit], .post-text .gform_heading #av-overlay span.submit.gform_description input[type=submit] {
   margin-top: 20px;
   height: 85px;
   border: 1px solid #fefcf8;
+  background: none;
 }
-/* line 53, ../scss/vendor/_av-styles.scss */
+/* line 57, ../scss/vendor/_av-styles.scss */
 #av-overlay .error {
   background: none;
   color: #fefcf8;
   border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
-/* line 59, ../scss/vendor/_av-styles.scss */
+/* line 66, ../scss/vendor/_av-styles.scss */
 #av-overlay #av_verify_m, #av-overlay #av_verify_d, #av-overlay #av_verify_y {
   -webkit-box-shadow: 0 0 0;
   -moz-box-shadow: 0 0 0;
@@ -6895,7 +6906,7 @@ ul.block-grid.excerpt-loop li {
   text-align: center;
 }
 
-/* line 71, ../scss/vendor/_av-styles.scss */
+/* line 78, ../scss/vendor/_av-styles.scss */
 form.custom span.custom {
   margin-top: 20px;
   display: inline-block;
@@ -6910,7 +6921,7 @@ form.custom span.custom {
   border: 1px solid white;
   color: #fefcf8;
 }
-/* line 85, ../scss/vendor/_av-styles.scss */
+/* line 92, ../scss/vendor/_av-styles.scss */
 form.custom span.custom.checkbox.checked:before {
   font-size: 18px;
   font-size: 1.8rem;
@@ -6998,19 +7009,20 @@ form.custom span.custom.checkbox.checked:before {
   font-family: "haymakerregular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 60px;
   font-size: 6rem;
+  padding-top: 3px;
 }
 
-/* line 21, ../scss/vendor/_digits-default.scss */
+/* line 22, ../scss/vendor/_digits-default.scss */
 .digits .top-half {
   color: #fff;
 }
 
-/* line 25, ../scss/vendor/_digits-default.scss */
+/* line 26, ../scss/vendor/_digits-default.scss */
 .digits .bottom-half {
   color: #f1f1f1;
 }
 
-/* line 29, ../scss/vendor/_digits-default.scss */
+/* line 30, ../scss/vendor/_digits-default.scss */
 .digits .top-half {
   background: #85909f;
   -webkit-border-radius: 10px 10px 0px 0px;
@@ -7021,7 +7033,7 @@ form.custom span.custom.checkbox.checked:before {
   line-height: 80px;
 }
 
-/* line 35, ../scss/vendor/_digits-default.scss */
+/* line 36, ../scss/vendor/_digits-default.scss */
 .digits .bottom-half {
   background: #546478;
   -webkit-border-radius: 0px 0px 10px 10px;
@@ -7033,17 +7045,17 @@ form.custom span.custom.checkbox.checked:before {
 
 /* COUNTDOWN MODE
 -------------------------------------------------*/
-/* line 44, ../scss/vendor/_digits-default.scss */
+/* line 45, ../scss/vendor/_digits-default.scss */
 .digits.countdown .digit:not(:last-child) {
   margin-right: 10px;
 }
 
-/* line 48, ../scss/vendor/_digits-default.scss */
+/* line 49, ../scss/vendor/_digits-default.scss */
 .digits.countdown .digit.second-2 {
   margin-right: 0;
 }
 
-/* line 54, ../scss/vendor/_digits-default.scss */
+/* line 55, ../scss/vendor/_digits-default.scss */
 .digits.countdown .digit.second-1,
 .digits.countdown .digit.minute-1,
 .digits.countdown .digit.hour-1 {
@@ -7052,20 +7064,20 @@ form.custom span.custom.checkbox.checked:before {
 
 /* STATISTICS MODE
 -------------------------------------------------*/
-/* line 62, ../scss/vendor/_digits-default.scss */
+/* line 63, ../scss/vendor/_digits-default.scss */
 .digits.statistics .digit:not(:last-of-type) {
   margin-right: 5px;
 }
 
 /* LABELS
 -------------------------------------------------*/
-/* line 70, ../scss/vendor/_digits-default.scss */
+/* line 71, ../scss/vendor/_digits-default.scss */
 .digits .labels {
   text-align: right;
   color: #111;
 }
 
-/* line 75, ../scss/vendor/_digits-default.scss */
+/* line 76, ../scss/vendor/_digits-default.scss */
 .digits .label {
   display: inline-block;
   width: 210px;
@@ -7078,35 +7090,35 @@ form.custom span.custom.checkbox.checked:before {
   margin: 20px 0;
 }
 
-/* line 89, ../scss/vendor/_digits-default.scss */
+/* line 90, ../scss/vendor/_digits-default.scss */
 .digits .label.hours,
 .digits .label.minutes,
 .digits .label.seconds {
   margin-left: 60px;
 }
 
-/* line 93, ../scss/vendor/_digits-default.scss */
+/* line 94, ../scss/vendor/_digits-default.scss */
 .digits .label.days:after {
   content: "Days";
 }
 
-/* line 97, ../scss/vendor/_digits-default.scss */
+/* line 98, ../scss/vendor/_digits-default.scss */
 .digits .label.hours:after {
   content: "Hours";
 }
 
-/* line 101, ../scss/vendor/_digits-default.scss */
+/* line 102, ../scss/vendor/_digits-default.scss */
 .digits .label.minutes:after {
   content: "Minutes";
 }
 
-/* line 105, ../scss/vendor/_digits-default.scss */
+/* line 106, ../scss/vendor/_digits-default.scss */
 .digits .label.seconds:after {
   content: "Seconds";
 }
 
 @media only screen and (max-width: 900px) {
-  /* line 110, ../scss/vendor/_digits-default.scss */
+  /* line 111, ../scss/vendor/_digits-default.scss */
   .digits {
     display: none;
   }
@@ -8292,7 +8304,7 @@ body {
 /* line 9, ../scss/components/modules/_reveal.scss */
 .reveal-modal-bg, #av-overlay-wrap {
   background: transparent;
-  background: #0c223f;
+  background: rgba(12, 34, 63, 0.8);
 }
 
 /* line 15, ../scss/components/modules/_reveal.scss */

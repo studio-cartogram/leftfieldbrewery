@@ -1,6 +1,6 @@
 #av-overlay-wrap { 
 	@extend .reveal-modal-bg;
-	background:rgba($mainColor, 0.95); 
+	background:rgba($mainColor, 0.8); 
 	display:block; 
 }
 
@@ -39,11 +39,15 @@
 		color:$white;
 	}
 	p.submit {
+		clear:both;
+		position:relative;
+		top:20px;
 		input[type=submit]{
 			margin-top:20px;
 			@extend .button;
 			height:85px;
       		border:1px solid $white;
+      		background:none;
 		} 
 	
 	}
@@ -55,6 +59,9 @@
 		background:none;
 		color:$white;
 		border:none;
+		margin:0;
+		padding:0;
+		@include font-size(16);
 	}
 	#av_verify_m, #av_verify_d, #av_verify_y {
 		@include box-shadow(0 0 0);
