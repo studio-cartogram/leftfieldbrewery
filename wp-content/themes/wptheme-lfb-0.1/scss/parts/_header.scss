@@ -11,5 +11,8 @@ h2.header-text {
 	}
 }
 h1 a.icon-logo {
-	@include font-size(160)
+	@include font-size(160);
+	&:hover {
+		color:$navy;
+	}
 }

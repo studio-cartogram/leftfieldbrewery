@@ -5538,6 +5538,10 @@ h1 a.icon-logo, .post-text .gform_heading h3.gform_title a.icon-logo, .post-text
   font-size: 160px;
   font-size: 16rem;
 }
+/* line 15, ../scss/parts/_header.scss */
+h1 a.icon-logo:hover, .post-text .gform_heading h3.gform_title a.icon-logo:hover, .post-text .gform_heading .gform_body .gform_fields li#field_2_1 label.gform_title:first-child a.icon-logo:hover, .post-text .gform_body .gform_fields li#field_2_1 .gform_heading label.gform_title:first-child a.icon-logo:hover, .post-text .gform_heading .gform_body .gform_fields li#field_2_3 label.gform_title a.icon-logo:hover, .post-text .gform_body .gform_fields li#field_2_3 .gform_heading label.gform_title a.icon-logo:hover {
+  color: #0c223f;
+}
 
 /* line 1, ../scss/parts/_social.scss */
 ul#social {

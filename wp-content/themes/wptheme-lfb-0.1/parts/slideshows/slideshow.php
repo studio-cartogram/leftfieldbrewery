@@ -1,7 +1,8 @@
 <?php 
 $instagram = new WP_Query();
 $instagram->query( array(
-	'post_type'=> 'instagrams'
+	'post_type'=> 'instagrams',
+	'posts_per_page' => 50 
 	));
 	if ($instagram->have_posts()) : ?>	
 		<div class="row bg-cream collapse flushed-left ">
