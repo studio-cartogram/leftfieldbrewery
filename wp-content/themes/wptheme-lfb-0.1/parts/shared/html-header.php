@@ -11,7 +11,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Remove if you're not building a responsive site. (But then why would you do such a thing?) -->
 		<meta name="description" content="<?php bloginfo('description') ?>">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">		<script type="text/javascript" src="//use.typekit.net/ekm7axz.js"></script>
+		<link rel="icon" type="image/svg+xml" href="/icon.svg"/>
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+
+		<!-- For third-generation iPad with high-resolution Retina display: -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
+
+		<!-- For iPhone with high-resolution Retina display: -->
+
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+
+		<!-- For first- and second-generation iPad: -->
+
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+
+		<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+
+		<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+
+		<script type="text/javascript" src="//use.typekit.net/ekm7axz.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<?php wp_head(); ?>
 	</head>

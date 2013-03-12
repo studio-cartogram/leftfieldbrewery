@@ -1,4 +1,4 @@
-/* Use this script if you need to support IE 7 and IE 6. */
+/* Load this script using conditional IE comments if you need to support IE 7 and IE 6. */
 
 window.onload = function() {
 	function addIcon(el, entity) {
@@ -32,12 +32,12 @@ window.onload = function() {
 			'icon-mark-mug' : '&#xe017;',
 			'icon-mandie-wheat' : '&#xe018;',
 			'icon-icon-mandie' : '&#xe019;',
-			'icon-maris-b' : '&#xe01a;',
-			'icon-maris-a' : '&#xe01b;',
 			'icon-eephus-b' : '&#xe01c;',
 			'icon-eephus-a' : '&#xe01d;',
 			'icon-doubleipa-b' : '&#xe01e;',
-			'icon-doubleipa-a' : '&#xe01f;'
+			'icon-doubleipa-a' : '&#xe01f;',
+			'icon-maris-a' : '&#xe01a;',
+			'icon-maris-b' : '&#xe01b;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;
