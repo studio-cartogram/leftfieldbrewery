@@ -188,6 +188,7 @@
 		p {
 			color:$white;
 			padding:15px 30px;
+			@include font-size(13);
 		}
 	}
 
@@ -275,6 +276,9 @@
 	a {
 		color:$white;
 		line-height: 1.6;
+		&:hover {
+			color:$red;
+		}
 	}
 	.tag-cloud {
 		@include double-bordered(false, false, false, false,  $white);
@@ -300,7 +304,7 @@
 		@include rule(right, false, $white);
 		text-align:center;
 		overflow:hidden;
-		&.active a:after {
+		&.active a:after, a:hover:after {
 			content: ' ';
 			position:absolute;
 			width:305px;

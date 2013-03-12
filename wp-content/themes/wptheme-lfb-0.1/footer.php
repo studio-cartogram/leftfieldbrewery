@@ -34,7 +34,7 @@
 <section class="container credit" id="container-credit">
 	<div class="row">
 		<div class="six columns">
-			<p>&copy; <?php echo Date(Y) . ' ' . get_bloginfo('name') . ' ◆ ' . get_bloginfo('description'); ?></p>
+			<p>&copy; <?php echo Date(Y) . ' ' . get_bloginfo('name') . ' ◆ ' . 'website by <a class="light" href="http://www.studiocartogram.com">Cartogram Inc.</a>' ?></p>
 		</div>
 		<div class="six columns">
 			<?php $footernav = array(

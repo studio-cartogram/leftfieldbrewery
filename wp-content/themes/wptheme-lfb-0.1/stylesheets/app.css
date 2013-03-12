@@ -5534,6 +5534,15 @@ h6 {
   font-size: 11px;
   font-size: 1.1rem;
 }
+/* line 25, ../scss/parts/_footer.scss */
+.credit p a, .credit .post-text .gform_heading span.gform_description a, .post-text .gform_heading .credit span.gform_description a {
+  border: none;
+  color: #fefcf8;
+}
+/* line 28, ../scss/parts/_footer.scss */
+.credit p a:hover, .credit .post-text .gform_heading span.gform_description a:hover, .post-text .gform_heading .credit span.gform_description a:hover {
+  color: #ff4337;
+}
 
 /* line 1, ../scss/parts/_header.scss */
 h2.header-text {
@@ -5953,12 +5962,14 @@ ul#social li.icon-mail > a:before {
 .flip-container .front p, .flip-container .front .post-text .gform_heading span.gform_description, .post-text .gform_heading .flip-container .front span.gform_description, .flip-container .back p, .flip-container .back .post-text .gform_heading span.gform_description, .post-text .gform_heading .flip-container .back span.gform_description {
   color: #fefcf8;
   padding: 15px 30px;
+  font-size: 13px;
+  font-size: 1.3rem;
 }
-/* line 194, ../scss/parts/_asides.scss */
+/* line 195, ../scss/parts/_asides.scss */
 .flip-container .front {
   z-index: 2;
 }
-/* line 201, ../scss/parts/_asides.scss */
+/* line 202, ../scss/parts/_asides.scss */
 .flip-container .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -5967,12 +5978,12 @@ ul#social li.icon-mail > a:before {
   transform: rotateY(180deg);
   background: #0c223f;
 }
-/* line 206, ../scss/parts/_asides.scss */
+/* line 207, ../scss/parts/_asides.scss */
 .flip-container .back h2 {
   color: #fefcf8;
 }
 
-/* line 213, ../scss/parts/_asides.scss */
+/* line 214, ../scss/parts/_asides.scss */
 .flipper {
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
@@ -5990,7 +6001,7 @@ ul#social li.icon-mail > a:before {
   * Beers Page
   *
   */
-/* line 226, ../scss/parts/_asides.scss */
+/* line 227, ../scss/parts/_asides.scss */
 .sidebar-beer .corner-two {
   top: -31px;
   right: -31px;
@@ -5998,7 +6009,7 @@ ul#social li.icon-mail > a:before {
   border-color: #fefcf8;
 }
 
-/* line 234, ../scss/parts/_asides.scss */
+/* line 235, ../scss/parts/_asides.scss */
 .sidebar-beer .flip-container .flip {
   padding-top: 3px;
 }
@@ -6007,25 +6018,25 @@ ul#social li.icon-mail > a:before {
   * Contact Page
   *
   */
-/* line 245, ../scss/parts/_asides.scss */
+/* line 246, ../scss/parts/_asides.scss */
 .list-contact {
   list-style: none;
   margin: 0;
 }
-/* line 248, ../scss/parts/_asides.scss */
+/* line 249, ../scss/parts/_asides.scss */
 .list-contact h5 {
   padding-bottom: 6px;
   margin-top: 6px;
 }
-/* line 253, ../scss/parts/_asides.scss */
+/* line 254, ../scss/parts/_asides.scss */
 .list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .footer .gform_body, .footer .list-contact li:last-child .gform_body {
   border-color: #0c223f !important;
 }
-/* line 257, ../scss/parts/_asides.scss */
+/* line 258, ../scss/parts/_asides.scss */
 .list-contact li a:hover h5 {
   color: #ff4337;
 }
-/* line 260, ../scss/parts/_asides.scss */
+/* line 261, ../scss/parts/_asides.scss */
 .list-contact li a:hover h4 {
   background: #ff4337;
 }
@@ -6034,7 +6045,7 @@ ul#social li.icon-mail > a:before {
   * Highlights Page
   *
   */
-/* line 271, ../scss/parts/_asides.scss */
+/* line 272, ../scss/parts/_asides.scss */
 .tags-wrap {
   position: relative;
   padding-top: 3px;
@@ -6054,12 +6065,16 @@ ul#social li.icon-mail > a:before {
 .tags-wrap:after {
   top: 0px;
 }
-/* line 275, ../scss/parts/_asides.scss */
+/* line 276, ../scss/parts/_asides.scss */
 .tags-wrap a {
   color: #fefcf8;
   line-height: 1.6;
 }
 /* line 279, ../scss/parts/_asides.scss */
+.tags-wrap a:hover {
+  color: #ff4337;
+}
+/* line 283, ../scss/parts/_asides.scss */
 .tags-wrap .tag-cloud {
   position: relative;
 }
@@ -6078,7 +6093,7 @@ ul#social li.icon-mail > a:before {
   top: 0px;
 }
 
-/* line 284, ../scss/parts/_asides.scss */
+/* line 288, ../scss/parts/_asides.scss */
 .categories-wrap {
   position: relative;
 }
@@ -6097,7 +6112,7 @@ ul#social li.icon-mail > a:before {
   top: 0px;
 }
 
-/* line 288, ../scss/parts/_asides.scss */
+/* line 292, ../scss/parts/_asides.scss */
 .list-categories {
   margin: -3px 0 0 0 !important;
   padding-bottom: 2px;
@@ -6117,11 +6132,11 @@ ul#social li.icon-mail > a:before {
 .list-categories:after {
   top: 0px;
 }
-/* line 293, ../scss/parts/_asides.scss */
+/* line 297, ../scss/parts/_asides.scss */
 .list-categories:before {
   top: 3px;
 }
-/* line 296, ../scss/parts/_asides.scss */
+/* line 300, ../scss/parts/_asides.scss */
 .list-categories li {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
@@ -6147,8 +6162,8 @@ ul#social li.icon-mail > a:before {
     display: none;
   }
 }
-/* line 303, ../scss/parts/_asides.scss */
-.list-categories li.active a:after {
+/* line 307, ../scss/parts/_asides.scss */
+.list-categories li.active a:after, .list-categories li a:hover:after {
   content: ' ';
   position: absolute;
   width: 305px;
@@ -6162,7 +6177,7 @@ ul#social li.icon-mail > a:before {
   top: 2px;
   z-index: 0;
 }
-/* line 315, ../scss/parts/_asides.scss */
+/* line 319, ../scss/parts/_asides.scss */
 .list-categories li:nth-child(2), .list-categories li:nth-child(1) {
   margin-top: 3px;
 }
@@ -6282,7 +6297,7 @@ ul#social li.icon-mail > a:before {
 }
 /* line 71, ../scss/parts/_gravity-forms.scss */
 .footer .gform_confirmation_message_1 {
-  padding: 56px 0;
+  padding: 54px 0;
   font-size: 16px;
   font-size: 1.6rem;
 }
