@@ -6,7 +6,8 @@
 	</ul>
 	<div class="row collapse flushed-right">
 		<div class="columns twelve double-bordered">
-			<a class="button expand">Pitch Left Field at Your Local</a>
+			<?php $options = get_option('lfb_theme_options');?> 
+			<a href="mailto:<?php echo $options['email'] ?>" class="button expand">Pitch Left Field at Your Local</a>
 		</div>
 	</div>	
 </section> 
