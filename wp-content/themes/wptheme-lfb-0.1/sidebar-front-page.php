@@ -1,6 +1,6 @@
 <h3 class="rule-left mobile-divide text-center">Try LeftField </h3>
 <section class="vendor-listing bg-cream">		
-	<p class="lead"><i class="icon-tap"></i>Find out beer at these all-star establishments.</p>
+	<p class="lead"><i class="icon-tap"></i>Find our beer at these all-star establishments.</p>
 	<ul>
 		<?php get_template_part('parts/loops/loop', 'vendor') ?>
 	</ul>
