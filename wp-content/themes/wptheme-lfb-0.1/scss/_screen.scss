@@ -66,15 +66,18 @@ body {
 }
 
 .browseralert {
-  width:75%;
+  width:100%;
   background-color:$red;
   text-align:center;
   margin:0px auto;
   .leftfield_message {
     margin:10px 0;
   }
-  p {
+  p, a, a:hover {
     margin:0;
     color:$cream !important;
+  }
+  a:hover {
+    color:$navy;
   }
 }
