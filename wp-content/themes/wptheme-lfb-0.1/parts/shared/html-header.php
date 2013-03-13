@@ -35,6 +35,13 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+	<!--[if lt IE 9]>
+	    <div class="browseralert">
+	   		<div class="woocommerce_message">
+	   	 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+	   		</div>
+	   	</div>
+    <![endif]-->
 		<script type="text/javascript">
 
 		var _gaq = _gaq || [];
