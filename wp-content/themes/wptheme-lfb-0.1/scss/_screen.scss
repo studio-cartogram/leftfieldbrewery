@@ -67,17 +67,14 @@ body {
 
 .browseralert {
   width:75%;
+  background-color:$red;
   text-align:center;
   margin:0px auto;
-  .woocommerce_message {
+  .leftfield_message {
     margin:10px 0;
   }
   p {
     margin:0;
+    color:$cream !important;
   }
 }
-
-
-
-
-
