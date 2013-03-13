@@ -26,9 +26,9 @@ $mainColor: $navy;
 $secondaryColor: $cream ;
 $alertColor: #c60f13 !default;
 $successColor: #5da423 !default;
-$txtColor: #222 !default;
+$txtColor: $navy;
 $highlightColor: #ffff99 !default;
-$black: #000 !default;
+$black: $navy;
 $white: $cream;
 $shinyEdge: rgba(#fff, .5) !default;
 $darkEdge: rgba(#000, .1) !default;
@@ -43,7 +43,7 @@ $headerFontColor: $navy;
 $bodyFontFamily:  "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $bodyFontWeight: 500 ;
 $bodyFontStyle: normal !default;
-$bodyFontColor: $txtColor !default;
+$bodyFontColor: $txtColor;
 
 
 $beerFontFamily: "haymakerregular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;

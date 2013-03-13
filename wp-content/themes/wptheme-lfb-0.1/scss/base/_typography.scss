@@ -194,7 +194,9 @@ h6 {
 		margin-left:-5px;
 		li {
 			margin-left:5px;
-			border-bottom:none;
+			a {
+				border-bottom:none;
+			}
 		}
 	}
 	ul li {
