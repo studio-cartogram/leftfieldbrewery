@@ -120,7 +120,7 @@
   	width:100%;
   	overflow:hidden;
   	width: 100%;
-	height: 450px;
+	height: 500px;
   	.flip {
   		position:absolute;
   		z-index:1000;
@@ -172,7 +172,7 @@
 		left: 0;
 		text-align:center;
 		width: 100%;
-		height: 450px;
+		height: 500px;
 		.back-logo, .big-icon {
 			@include font-size(100);
 			margin:auto;
@@ -236,10 +236,18 @@
 	z-index:1;
 	border-left-color:$white;
 
+
+	// remove once content is added
+	display:none;
+
 }
 
 .sidebar-beer .flip-container .flip {
 	padding-top:3px;
+
+		// remove once content is added
+	display:none;
+
 }
 
 
