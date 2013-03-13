@@ -160,10 +160,11 @@
   	}
   	.name {
 		left: -1px;
-		bottom:1px;
+		bottom:0px;
 		border:none;
 		position: absolute;
 		border-top:none;
+		border-bottom:1px solid $navy;
 	} 	
 	.front, .back {
 		@include backface-visibility(hidden);
@@ -209,7 +210,7 @@
 
 	.back {
 		@include transform(rotateY(180deg));
-		background: $navy;
+		background: $white;
 		.flip {
 			color:$cream;
 		}
@@ -245,7 +246,7 @@
 .sidebar-beer .flip-container .flip {
 	padding-top:3px;
 
-		// remove once content is added
+	// remove once content is added
 	display:none;
 
 }

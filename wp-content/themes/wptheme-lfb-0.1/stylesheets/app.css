@@ -5942,12 +5942,13 @@ ul#social li.icon-mail > a:before {
 /* line 161, ../scss/parts/_asides.scss */
 .flip-container .name {
   left: -1px;
-  bottom: 1px;
+  bottom: 0px;
   border: none;
   position: absolute;
   border-top: none;
+  border-bottom: 1px solid #0c223f;
 }
-/* line 168, ../scss/parts/_asides.scss */
+/* line 169, ../scss/parts/_asides.scss */
 .flip-container .front, .flip-container .back {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -5961,7 +5962,7 @@ ul#social li.icon-mail > a:before {
   width: 100%;
   height: 500px;
 }
-/* line 176, ../scss/parts/_asides.scss */
+/* line 177, ../scss/parts/_asides.scss */
 .flip-container .front .back-logo, .flip-container .front .big-icon, .flip-container .back .back-logo, .flip-container .back .big-icon {
   font-size: 100px;
   font-size: 10rem;
@@ -5974,40 +5975,40 @@ ul#social li.icon-mail > a:before {
   line-height: 0;
   position: relative;
 }
-/* line 187, ../scss/parts/_asides.scss */
+/* line 188, ../scss/parts/_asides.scss */
 .flip-container .front p, .flip-container .front .post-text .gform_heading span.gform_description, .post-text .gform_heading .flip-container .front span.gform_description, .flip-container .back p, .flip-container .back .post-text .gform_heading span.gform_description, .post-text .gform_heading .flip-container .back span.gform_description {
   color: #fefcf8;
   padding: 15px 30px;
   font-size: 13px;
   font-size: 1.3rem;
 }
-/* line 192, ../scss/parts/_asides.scss */
+/* line 193, ../scss/parts/_asides.scss */
 .flip-container .front h2, .flip-container .back h2 {
   color: #fefcf8;
 }
-/* line 198, ../scss/parts/_asides.scss */
+/* line 199, ../scss/parts/_asides.scss */
 .flip-container .front {
   z-index: 2;
 }
-/* line 203, ../scss/parts/_asides.scss */
+/* line 204, ../scss/parts/_asides.scss */
 .flip-container .front .corner-two {
   border-left-color: #fefcf8;
 }
-/* line 210, ../scss/parts/_asides.scss */
+/* line 211, ../scss/parts/_asides.scss */
 .flip-container .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
-  background: #0c223f;
+  background: #fefcf8;
 }
-/* line 213, ../scss/parts/_asides.scss */
+/* line 214, ../scss/parts/_asides.scss */
 .flip-container .back .flip {
   color: #fefcf8;
 }
 
-/* line 220, ../scss/parts/_asides.scss */
+/* line 221, ../scss/parts/_asides.scss */
 .flipper {
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
@@ -6025,7 +6026,7 @@ ul#social li.icon-mail > a:before {
   * Beers Page
   *
   */
-/* line 233, ../scss/parts/_asides.scss */
+/* line 234, ../scss/parts/_asides.scss */
 .sidebar-beer .corner-two {
   top: -31px;
   right: -31px;
@@ -6034,7 +6035,7 @@ ul#social li.icon-mail > a:before {
   display: none;
 }
 
-/* line 245, ../scss/parts/_asides.scss */
+/* line 246, ../scss/parts/_asides.scss */
 .sidebar-beer .flip-container .flip {
   padding-top: 3px;
   display: none;
@@ -6044,25 +6045,25 @@ ul#social li.icon-mail > a:before {
   * Contact Page
   *
   */
-/* line 260, ../scss/parts/_asides.scss */
+/* line 261, ../scss/parts/_asides.scss */
 .list-contact {
   list-style: none;
   margin: 0;
 }
-/* line 263, ../scss/parts/_asides.scss */
+/* line 264, ../scss/parts/_asides.scss */
 .list-contact h5 {
   padding-bottom: 6px;
   margin-top: 6px;
 }
-/* line 268, ../scss/parts/_asides.scss */
+/* line 269, ../scss/parts/_asides.scss */
 .list-contact li:last-child .border-bottom-white, .list-contact li:last-child .list-categories li, .list-categories .list-contact li:last-child li, .list-contact li:last-child .footer .gform_body, .footer .list-contact li:last-child .gform_body {
   border-color: #0c223f !important;
 }
-/* line 272, ../scss/parts/_asides.scss */
+/* line 273, ../scss/parts/_asides.scss */
 .list-contact li a:hover h5 {
   color: #ff4337;
 }
-/* line 275, ../scss/parts/_asides.scss */
+/* line 276, ../scss/parts/_asides.scss */
 .list-contact li a:hover h4 {
   background: #ff4337;
 }
@@ -6071,7 +6072,7 @@ ul#social li.icon-mail > a:before {
   * Highlights Page
   *
   */
-/* line 286, ../scss/parts/_asides.scss */
+/* line 287, ../scss/parts/_asides.scss */
 .tags-wrap {
   position: relative;
   padding-top: 3px;
@@ -6091,16 +6092,16 @@ ul#social li.icon-mail > a:before {
 .tags-wrap:after {
   top: 0px;
 }
-/* line 290, ../scss/parts/_asides.scss */
+/* line 291, ../scss/parts/_asides.scss */
 .tags-wrap a {
   color: #fefcf8;
   line-height: 1.6;
 }
-/* line 293, ../scss/parts/_asides.scss */
+/* line 294, ../scss/parts/_asides.scss */
 .tags-wrap a:hover {
   color: #ff4337;
 }
-/* line 297, ../scss/parts/_asides.scss */
+/* line 298, ../scss/parts/_asides.scss */
 .tags-wrap .tag-cloud {
   position: relative;
 }
@@ -6119,7 +6120,7 @@ ul#social li.icon-mail > a:before {
   top: 0px;
 }
 
-/* line 302, ../scss/parts/_asides.scss */
+/* line 303, ../scss/parts/_asides.scss */
 .categories-wrap {
   position: relative;
 }
@@ -6138,7 +6139,7 @@ ul#social li.icon-mail > a:before {
   top: 0px;
 }
 
-/* line 306, ../scss/parts/_asides.scss */
+/* line 307, ../scss/parts/_asides.scss */
 .list-categories {
   margin: -3px 0 0 0 !important;
   padding-bottom: 2px;
@@ -6158,11 +6159,11 @@ ul#social li.icon-mail > a:before {
 .list-categories:after {
   top: 0px;
 }
-/* line 311, ../scss/parts/_asides.scss */
+/* line 312, ../scss/parts/_asides.scss */
 .list-categories:before {
   top: 3px;
 }
-/* line 314, ../scss/parts/_asides.scss */
+/* line 315, ../scss/parts/_asides.scss */
 .list-categories li {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
@@ -6188,7 +6189,7 @@ ul#social li.icon-mail > a:before {
     display: none;
   }
 }
-/* line 321, ../scss/parts/_asides.scss */
+/* line 322, ../scss/parts/_asides.scss */
 .list-categories li.active a:after, .list-categories li a:hover:after {
   content: ' ';
   position: absolute;
@@ -6203,7 +6204,7 @@ ul#social li.icon-mail > a:before {
   top: 2px;
   z-index: 0;
 }
-/* line 333, ../scss/parts/_asides.scss */
+/* line 334, ../scss/parts/_asides.scss */
 .list-categories li:nth-child(2), .list-categories li:nth-child(1) {
   margin-top: 3px;
 }
