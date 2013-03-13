@@ -35,7 +35,7 @@ body {
   overflow:hidden;
   @include double-bordered();
   &:before {
-    top:40px;
+    top:40px; 
     z-index:9;
   }
   &:after {
