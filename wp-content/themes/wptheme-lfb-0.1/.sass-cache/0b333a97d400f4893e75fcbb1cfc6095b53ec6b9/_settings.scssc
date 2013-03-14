@@ -1,5 +1,5 @@
 3.2.3 (Media Mark)
-b030336325b697790543af7bd488ebbdbababcef
+3005c02ef1b89f7431aa54153b4a3d03ca2b0f63
 o:Sass::Tree::RootNode
 :@template"9#// Settings file containing Foundation defaults
 
@@ -277,7 +277,7 @@ $base-size: $baseFontSize $importantModNum;
 
 // Media Queries
 
-$screenSmall: 830px !default;
+$screenSmall: 768px !default;
 $screenMedium: 1279px !default;
 $screenXlarge: 1441px !default;
 
@@ -415,7 +415,7 @@ solid;iýo;;["px;@;"1px;i;[ ;iýo;	;{	;iZ;i;iZ;iZ;@;0;i
  * https://github.com/scottkellum/modular-scale by scottkellum */;io;
 
 ;;;@;	[ ;["/* Media Queries */;io;;o;;["px;@;"
-830px;i>;[ ;i;"screenSmall;@;	[ ;"!default;io;;o;;["px;@;"1279px;iÿ;[ ;i;"screenMedium;@;	[ ;"!default;io;;o;;["px;@;"1441px;i¡;[ ;i;"screenXlarge;@;	[ ;"!default;io;
+768px;i ;[ ;i;"screenSmall;@;	[ ;"!default;io;;o;;["px;@;"1279px;iÿ;[ ;i;"screenMedium;@;	[ ;"!default;io;;o;;["px;@;"1441px;i¡;[ ;i;"screenXlarge;@;	[ ;"!default;io;
 
 ;;;@;	[ ;["‹/* Saving for better em-based testing
  * $screenSmall: 44em !default;
