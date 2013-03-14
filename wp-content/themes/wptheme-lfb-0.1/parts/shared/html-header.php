@@ -14,6 +14,13 @@
 		<link rel="icon" type="image/svg+xml" href="/icon.svg"/>
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
+		<meta property="og:title" content="Left Field Brewery"/>
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="http://leftfieldbrewery.ca/resources/logo.jpg" />
+		<meta property="og:description"
+		      content="We brew beer that we love to drink and we hope you enjoy it as much as we do."/>
+		<meta property="og:site_name" content="Left Field Brewery"/>
+
 
 		<!-- For third-generation iPad with high-resolution Retina display: -->
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
