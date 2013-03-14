@@ -111,6 +111,10 @@ function theme_options_do_page() {
 												"title" => "Instagram",
 												"description" => "Enter your instagram url."
 												),
+											"redirect" => array(
+												"title" => "Redirect",
+												"description" => "Enter the website users are redirected to if they enter an age too young to view the website."
+												),
 											);
 
 				//Name is the string to use to reference the value int he backend
