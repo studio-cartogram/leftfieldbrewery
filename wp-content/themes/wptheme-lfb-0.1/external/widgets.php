@@ -203,7 +203,7 @@ class TTrust_Twitter extends WP_Widget {
     			</script>				
 				
 				<?php if($label) : ?>
-                <p class="twitterLink"><a class="action" href="http://twitter.com/<?php echo $user; ?>"><span><?php echo $label; ?></span></a></p>
+                <p class="twitterLink"><a target="_blank" class="action" href="http://twitter.com/<?php echo $user; ?>"><span><?php echo $label; ?></span></a></p>
                 <?php endif; ?>
  
 			<?php echo $after_widget; ?>
