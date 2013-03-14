@@ -24,7 +24,7 @@
 					</div>
 				</div>
 				<div class="columns seven insides">
-					<h3><?php echo '<a class="icon-twitter icon-with-space" href="https://www.twitter.com/:'. $options['twitter'] . '> Chatter</a>' ; ?></h3>
+					<h3><a class="icon-twitter icon-with-space" target="_blank" href="http://www.twitter.com/lfbrewery">Chatter</a></h3>
 					<div id='twitter'></div>
 				</div>
 			</div>
