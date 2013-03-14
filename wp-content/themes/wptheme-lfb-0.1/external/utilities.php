@@ -125,7 +125,7 @@
 	global $post;
 		//http://atlchris.com/1665/how-to-create-custom-share-buttons-for-all-the-popular-social-services/
 		$twitter = '<a target="_blank"  href="http://twitter.com/home?status=' . 'Fan of delicious beers? Check out Left Field Brewery!' . '+' . 'http://www.leftfieldbrewery.ca' . '">Share on Twitter</a>';
-		$facebook = '<a target="_blank" class="icon-facebook" href="http://www.facebook.com/sharer.php?u=' . 'http://www.leftfieldbrewery.ca' . '&t='  . 'Fan%20of%20delicious%20beers?%20Check%20out%20Left%20Field%20Brewery!' . '">Share on Facebook</a>';
+		$facebook = '<a target="_blank" class="icon-facebook" href="http://www.facebook.com/sharer.php?u=' . 'http://www.leftfieldbrewery.ca' . '&p='  . 'Fan%20of%20delicious%20beers?%20Check%20out%20Left%20Field%20Brewery!' . '">Share on Facebook</a>';
 		$mail = '<a href="mailto:?subject=' . 'Fan of delicious beers? Check out Left Field Brewery!' . ' at ' . 'http://www.leftfieldbrewery.ca' . '">Share in an email</a>';
 		$untappd = '<a target="_blank"  href="https://untappd.com/leftfieldbrewery">Share on untappd</a>';
 		$googleplus = '<a target="_blank"  href="https://plus.google.com/share?url=' . 'http://www.leftfieldbrewery.ca' . '">Share on google plus</a>';
