@@ -6,11 +6,10 @@
 	<div class="columns twelve double-bordered">
 		<div class="rule-left">
 			<div style="background:<?php echo $color; ?>" class="flip-container ">
-				<a class="flip" id="to-back" href="#"><i  style="color:<?php echo $color; ?>"  class="icon-flip-right"></i></a>
-				<a class="flip" id="to-front" href="#"><i class="icon-flip-left"></i></a>
-				<span class="corner-two "></span>
+				<a class="flip" id="to-back" href="#"><i style="color:<?php echo $color; ?>"  class="icon-flip-right"></i></a>
 				<div class="flipper ">
 					<div class="front" style="background:<?php echo $color; ?>">
+						<span class="corner-two "></span>
 							<?php
 							the_title('<h2 class="light beer-name beer-block">', '</h2>');
 							echo '<h3 class="light beer-tagline">' . get_post_meta( $id, '_cartogram_short_description_value', TRUE ) . '</h3>';
@@ -19,7 +18,9 @@
 						?>
 					</div>
 					<div class="back" style="background:<?php echo $color; ?>">
-						 	<p class="space-inner-top-large">More Details Coming Soon...</p>
+						<span class="corner-two "></span>
+						<a class="flip" id="to-front" href="#"><i style="color:<?php echo $color; ?>" class="icon-flip-left"></i></a>
+						<p class="space-inner-top-large">More Details Coming Soon...</p>
 					</div>
 				</div>
 			</div>

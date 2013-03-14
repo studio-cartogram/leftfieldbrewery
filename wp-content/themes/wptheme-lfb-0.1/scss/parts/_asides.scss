@@ -120,12 +120,12 @@
   	width:100%;
   	overflow:hidden;
   	width: 100%;
-	height: 450px;
+	height: 500px;
   	.flip {
   		position:absolute;
   		z-index:1000;
 		@include font-size(16);
-		color: $white;
+		color: $navy;
 		position: absolute;
 		padding: 0px 10px 30px;
 		cursor:pointer;
@@ -140,7 +140,6 @@
 		@include transition(all 0.3s ease);
 		&#to-front {
 	 		opacity:0; 
-	 		left:0;
 	 		@include backface-visibility(visible);
 	 	}
 	 	&#to-back {
@@ -161,10 +160,11 @@
   	}
   	.name {
 		left: -1px;
-		bottom:1px;
+		bottom:0px;
 		border:none;
 		position: absolute;
 		border-top:none;
+		border-bottom:1px solid $navy;
 	} 	
 	.front, .back {
 		@include backface-visibility(hidden);
@@ -173,7 +173,7 @@
 		left: 0;
 		text-align:center;
 		width: 100%;
-		height: 450px;
+		height: 500px;
 		.back-logo, .big-icon {
 			@include font-size(100);
 			margin:auto;
@@ -188,7 +188,12 @@
 		p {
 			color:$white;
 			padding:15px 30px;
+			@include font-size(13);
 		}
+		h2 {
+			color:$white;
+		}
+		
 	}
 
 	.front {
@@ -196,15 +201,18 @@
 		.playholder-players {
 			@extend .icon-placeholder;
 		}
+		.corner-two {
+			border-left-color:$cream;
+		}
+		
+		
 	}
 
 	.back {
 		@include transform(rotateY(180deg));
-		background: $navy;
-		
-		
-		h2 {
-			color:$white;
+		background: $white;
+		.flip {
+			color:$cream;
 		}
 	}
  
@@ -227,12 +235,20 @@
 	top: -31px; 
 	right: -31px;
 	z-index:1;
-	border-color:$white;
+	border-left-color:$white;
+
+
+	// remove once content is added
+	display:none;
 
 }
 
 .sidebar-beer .flip-container .flip {
 	padding-top:3px;
+
+	// remove once content is added
+	display:none;
+
 }
 
 
@@ -246,8 +262,8 @@
 	list-style:none;
 	margin:0;
 	h5 {
-		padding-bottom:8px;
-		margin-top:10px;
+		padding-bottom:6px;
+		margin-top:6px;
 		@extend .border-bottom;
 	}
 	li:last-child .border-bottom-white {
@@ -275,6 +291,9 @@
 	a {
 		color:$white;
 		line-height: 1.6;
+		&:hover {
+			color:$red;
+		}
 	}
 	.tag-cloud {
 		@include double-bordered(false, false, false, false,  $white);
@@ -300,7 +319,7 @@
 		@include rule(right, false, $white);
 		text-align:center;
 		overflow:hidden;
-		&.active a:after {
+		&.active a:after, a:hover:after {
 			content: ' ';
 			position:absolute;
 			width:305px;

@@ -497,7 +497,7 @@
 								<label for="av_verify_remember">
 									<input type="checkbox" name="av_verify_remember" id="av_verify_remember" value="1" /> Remember me
 								</label> 
-								<input type="submit" name="av_verify" id="av_verify" value="Enter Site »" />
+								<input type="submit" name="av_verify" id="av_verify" value="Enter The Site" />
 							</p>';
 		
 		$append = '		</div>

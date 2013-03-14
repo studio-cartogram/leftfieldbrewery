@@ -76,7 +76,7 @@
 					$.each(data, function(key, val) {
 						var tweetHTML = "<li><span>" + replaceURLWithHTMLLinks(val.text) + "</span>";
 
-						if (o.showTimestamp) tweetHTML += " <a style=\"font-size:85%\" href=\"https://twitter.com/" + o.userName + "/statuses/" + val.id_str + "\">" + relative_time(val.created_at) + "</a>";
+						if (o.showTimestamp) tweetHTML += " <a target='_blank' style=\"font-size:85%\" href=\"https://twitter.com/" + o.userName + "/statuses/" + val.id_str + "\">" + relative_time(val.created_at) + "</a>";
 					
 						tweetHTML += "</li>";
 

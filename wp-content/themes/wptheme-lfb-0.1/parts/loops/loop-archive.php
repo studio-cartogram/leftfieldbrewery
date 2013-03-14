@@ -62,7 +62,7 @@ global $slug; ?>
 		} elseif (is_home()) { 
 			get_sidebar('home');
 		} else {
-			get_sidebar($slug);
+			get_sidebar('home');
 		} ?>
 	</div>
 </div>

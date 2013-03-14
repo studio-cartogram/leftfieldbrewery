@@ -23,7 +23,7 @@
 								</div>
 							</div>
 							<div class="row border-bottom">
-								<div class="columns format-text twelve rule-right bg-cream">
+								<div class="columns format-text twelve rule-right equal-height bg-cream">
 									<h5><a href="the_permalink() ?>"><?php the_title(); ?></a></h5>
 									<?php the_excerpt(); ?>
 									<?php  more_link(); ?>
@@ -36,7 +36,7 @@
 			</div>
 			<div class="columns five rule-inside-right">
 				<div class="row row-flush-left">
-					<div class="double-bordered-inside columns twelve space-inner-top space-inner-bottom text-center">
+					<div class="double-bordered-inside columns twelve mobile-divide space-inner-top space-inner-bottom text-center">
 						<h3>MVP</h3>
 					</div>
 				</div>
@@ -52,7 +52,7 @@
 							}
 						endwhile;
 						?>
-					<div class="mobile-flush columns twelve mvp space-inner-bottom text-center border-top" style="background:<?php echo $color; ?>">
+					<div class="mobile-flush equal-height rule-right columns twelve mvp space-inner-bottom text-center border-top" style="background:<?php echo $color; ?>">
 							<a class="light" href="<?php echo $permalink; ?>">
 								<h2 class="beer-name beer-block light"><?php the_title(); ?></h2>
 								<?php echo '<h3 class="light beer-tagline">' . get_post_meta( $id, '_cartogram_short_description_value', TRUE ) . '</h3>';?>

@@ -152,7 +152,6 @@ App.flexsliderInit = function () {
 	    slideshowSpeed: 5000,
 	    animationLoop: true,
 	    keyboard: false,
-	    smoothHeight: true,            //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode  
 	});
 
 	$('.flexslider-beers').flexslider({

@@ -24,7 +24,7 @@
 					</div>
 				</div>
 				<div class="columns seven insides">
-					<h3><a class="icon-twitter icon-with-space" href="">Chatter</a></h3>
+					<h3><a class="icon-twitter icon-with-space" target="_blank" href="http://www.twitter.com/lfbrewery">Chatter</a></h3>
 					<div id='twitter'></div>
 				</div>
 			</div>
@@ -34,7 +34,7 @@
 <section class="container credit" id="container-credit">
 	<div class="row">
 		<div class="six columns">
-			<p>&copy; <?php echo Date(Y) . ' ' . get_bloginfo('name') . ' ◆ ' . get_bloginfo('description'); ?></p>
+			<p>&copy; <?php echo Date(Y) . ' ' . get_bloginfo('name') . ' ◆ ' . 'website by <a class="light" target="_blank" href="http://www.studiocartogram.com">Cartogram Inc.</a>' ?></p>
 		</div>
 		<div class="six columns">
 			<?php $footernav = array(

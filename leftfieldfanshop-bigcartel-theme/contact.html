@@ -1,0 +1,49 @@
+<header class="product_header page_header">
+  <h1>Contact</h1>
+  <span class="dash"></span>            
+</header>
+
+<section id="page_body">
+  {% if contact.sent %}
+  <p id="thank_you">Your message has been sent and we will try to respond within 24 business hours.</p>      
+  {% else %}      
+  
+  {% if twitter_username != blank or facebook_username != blank %}
+  <ul id="contact_links" class="{% if intro_paragraph == blank %}no_intro{% endif %}">
+    {% if theme.twitter_username != blank %}
+      <li><a href="http://twitter.com/{{ theme.twitter_username }}" title="Follow us on Twitter">Twitter</a></li>
+    {% endif %}
+    {% if theme.facebook_username != blank %}
+      <li><a href="http://facebook.com/{{ theme.facebook_username }}" title="Friend us on Facebook">Facebook</a></li>
+    {% endif %}
+  </ul>
+  {% endif %}
+  
+  <form id="contact_form" method="post" action="/contact">
+    <ul>
+      <li>
+        <label>Your name</label>
+        {{ contact | contact_input: 'name' }}
+      </li>
+      <li>
+        <label>Your email</label>
+        {{ contact | contact_input: 'email' }}                 
+      </li>
+      <li>
+        <label>Subject</label>
+        {{ contact | contact_input: 'subject' }}
+      </li>
+      <li>
+        <label>Message</label>
+        {{ contact | contact_input: 'message' }}
+      </li>
+      <li id="captcha_img">
+        <label>Are you human? Enter the characters from the image</label>
+        <div id="captcha_phrase">{{ contact.captcha }}</div>                
+        {{ contact | contact_input: 'captcha' }}       
+      </li>
+    </ul>
+    <button id="contact_button" type="submit" name="submit" class="button">Send Message</button>            
+  </form>
+  {% endif %}
+</section>

@@ -35,7 +35,7 @@ body {
   overflow:hidden;
   @include double-bordered();
   &:before {
-    top:40px;
+    top:40px; 
     z-index:9;
   }
   &:after {
@@ -60,3 +60,24 @@ body {
  .post-small {
   min-height:200px;
  }
+
+.post-12 .post-text {
+  padding-bottom:155px !important;
+}
+
+.browseralert {
+  width:100%;
+  background-color:$red;
+  text-align:center;
+  margin:0px auto;
+  .leftfield_message {
+    margin:10px 0;
+  }
+  p, a, a:hover {
+    margin:0;
+    color:$cream !important;
+  }
+  a:hover {
+    color:$navy;
+  }
+}

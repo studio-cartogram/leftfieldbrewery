@@ -168,6 +168,11 @@ span.corner-four {
   }
 }
 
+.equal-height {
+  margin-bottom:-200px !important;
+  padding-bottom:200px !important;
+}
+
 .insides {
   padding-left:30px;
   @media only screen and (max-width: $screenSmall - 1) {
@@ -187,7 +192,14 @@ span.corner-four {
   margin-left:-15px !important;
 }
 
-
+.mobile-divide {
+  @media only screen and (max-width: $screenSmall - 1) {
+    border-top:1px solid $navy;
+    background:url(../images/bg.png);
+    border-bottom:none;
+    margin-bottom:-1px;
+  }
+}
 
 
 
