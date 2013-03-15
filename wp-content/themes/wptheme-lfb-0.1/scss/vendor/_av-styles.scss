@@ -68,9 +68,9 @@
 		@include box-shadow(0 0 0);
 		@include border-radius(0);
 		padding-left:0;
-		background:none;
+		background:$white;
 		border:none;
-		color:$white;
+		color:$navy;
 		border-bottom:1px solid $white;
 		text-align:center;
 		@include font-size(16);

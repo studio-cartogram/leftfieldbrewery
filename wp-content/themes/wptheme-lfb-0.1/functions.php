@@ -452,6 +452,7 @@
 	 * Filter for Age Verify
 	 ******************************************************************/
 	function cartogram_av_filter($form){
+		$options = get_option('lfb_theme_options');
 		$prepend = '<form id="av_verify_form" action="' . home_url( '/' ) . '" method="post">';
 		$error = ( isset( $_GET['verify-error'] ) ) ? $_GET['verify-error'] : false;
 		if ( $error ) :
@@ -465,8 +466,9 @@
 			
 			// Visitor isn't old enough
 			if ( $error == 3 )
-				$error_string = apply_filters( 'av_error_text_too_young', __( 'Sorry, it doesn\'t look like you\'re old enough', 'age_verify' ) );
-			
+
+				header("Location: " . $options['redirect']);
+				exit;
 			// Visitor entered an invalid date
 			if ( $error == 4 )
 				$error_string = apply_filters( 'av_error_text_bad_date', __( 'Please enter a valid date', 'age_verify' ) );
@@ -503,5 +505,9 @@
 		return $prepend . $newForm . $append;
 	}
 	add_filter('av_verify_form', 'cartogram_av_filter');
+	add_action('init', 'do_output_buffer');
+	function do_output_buffer() {
+	        ob_start();
+	}
 
 ?>
