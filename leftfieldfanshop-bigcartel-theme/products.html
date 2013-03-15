@@ -2,7 +2,6 @@
 
 <aside class="category_nav {% if artists.active != blank && categories.active != blank %}double{% endif %}">
   <nav class="categories">
-    <h3>Products</h3>
     <ul>
       <li class="{% if page.full_url contains '/products' %}selected{% endif %}"><a href="/products">All</a></li>    
       {% for category in categories.active %}
@@ -12,7 +11,6 @@
   </nav>     
   {% if artists.active != blank %}
   <nav class="artists">
-    <h3>Artists</h3>
     <ul>
       {% for artist in artists.active %}
       <li class="page {% if page.full_url contains artist.url %}selected{% endif %}">{{ artist | link_to }}</li>
@@ -39,9 +37,9 @@
         {% when 'active' %}
           {% if product.on_sale %}<h5>On Sale</h5>{% endif %}
         {% when 'sold-out' %}
-      		<h5>Sold Out</h5>
+          <h5>Sold Out</h5>
         {% when 'coming-soon' %}
-      		<h5>Coming Soon</h5>
+          <h5>Coming Soon</h5>
         {% endcase %}
       </div>
       <div class="product_thumb">
@@ -60,7 +58,6 @@
 
 <aside class="category_nav {% if artists.active != blank && categories.active != blank %}double{% endif %}">
   <nav class="categories">
-    <h3>Products</h3>
     <ul>
       <li class="{% if page.full_url contains '/products' %}selected{% endif %}"><a href="/products">All</a></li>    
       {% for category in categories.active %}
@@ -70,7 +67,6 @@
   </nav>     
   {% if artists.active != blank %}
   <nav class="artists">
-    <h3>Artists</h3>
     <ul>
       {% for artist in artists.active %}
       <li class="page {% if page.full_url contains artist.url %}selected{% endif %}">{{ artist | link_to }}</li>

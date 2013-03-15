@@ -1,10 +1,10 @@
 <?php
 $players = new WP_Query( array( "post_type" => "players") );
 ?>
-<h3 class="rule-left text-center ">Meet The Team </h3>
+<h3 class="rule-left text-center mobile-divide">Meet The Team </h3>
 <div class="row collapse flushed-right">
 	<div class="columns twelve double-bordered">
-		<div class="flexslider-players rule-left">
+		<div class="flexslider-players rule-left mobile-divide">
 			<ul class="slides-players">
 				<?php while ($players->have_posts()) :$players->the_post(); ?>
 					<?php 	$email = get_post_meta( $post->ID, '_cartogram_email_value', TRUE );

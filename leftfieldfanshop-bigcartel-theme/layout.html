@@ -24,6 +24,10 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
     <script src="{{ theme | theme_js_url }}" type="text/javascript"></script>
+
+
+    <script type="text/javascript" src="//use.typekit.net/ekm7axz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
     <script type="text/javascript" charset="utf-8">
       $(function() {
@@ -46,18 +50,14 @@
   <body id="{{ page.permalink }}_page" class="{{ page.category }} no_transition">
     <div id="site_header" class="strip">
       <div class="canvas">
-        <nav id="main_nav">
-          <ul>
-            <li {% if page.full_url contains '/products' or page.full_url contains '/product/' or page.full_url contains '/category/' %}class="selected"{% endif %}><a href="/products">Products</a></li>{% for page in pages.all limit:2 %}<li {% if page.full_url contains page.url %}class="selected"{% endif %}>{{ page | link_to }}</li>{% endfor %}<li {% if page.full_url contains '/contact' %}class="selected"{% endif %}><a href="/contact">Contact</a></li><li {% if page.full_url contains '/cart' %}class="selected"{% endif %}><a href="/cart">Cart</a></li>
-          </ul>
-        </nav>
-      
+        
         <header>
           {% if theme.image != blank %}
           <div id="branding">
             <a href="/">
-              <h2>{{ page.name }}</h2>
+             
               <img src="{{ theme.image.url }}" alt="{{ store.name }}">
+              <h2>{{ store.name }}</h2>
             </a>
           </div>
           {% elsif page.name == 'Home' %}
@@ -66,14 +66,15 @@
             <h2 id="store_name"><a href="/">{{ store.name }}</a></h2>  
           {% endif %}
         </header>
-      
-        <nav id="mobile_nav">
-          <ul>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/cart">Cart</a></li>
-            <li><a href="#site_footer" alt="See more options">More</a></li>          
-          </ul>      
+
+        <nav id="main_nav" class="top-bar">
+          <section>
+            <ul id="global">
+              <li {% if page.full_url contains '/products' or page.full_url contains '/product/' or page.full_url contains '/category/' %}class="selected"{% endif %}><a href="/products">Products</a></li>{% for page in pages.all limit:2 %}<li {% if page.full_url contains page.url %}class="selected"{% endif %}>{{ page | link_to }}</li>{% endfor %}<li {% if page.full_url contains '/contact' %}class="selected"{% endif %}><a href="/contact">Contact</a></li><li {% if page.full_url contains '/cart' %}class="selected"{% endif %}><a href="/cart">Cart</a></li>
+            </ul>
+          </section>
         </nav>
+      
       </div>
     </div>
     
