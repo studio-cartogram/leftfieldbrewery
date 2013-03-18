@@ -1,7 +1,8 @@
 <?php 
 $vendors = new WP_Query();
 $vendors->query( array(
-	'post_type'=> 'vendors'
+	'post_type'=> 'vendors',
+	'posts_per_page' => '-1'
 	));
 	if ($vendors->have_posts()) : ?>	
 		<?php while ($vendors->have_posts()) : $vendors->the_post(); ?>
