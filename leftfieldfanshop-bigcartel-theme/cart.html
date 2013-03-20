@@ -13,8 +13,8 @@
           <div class="item_image"><img src="{{ item.product.image | product_image_url size:"thumb" }}" alt="Photo of {{ item.name }}"></div>          
           <dl>
             <dt><a href="{{ item.product.url }}">{{ item.product.name }}</a></dt>
-            <dd class="item_price">{{ item.unit_price | money_with_sign }}{% if item.quantity > 1 %}<span class="item_quantity">(x{{ item.quantity }})</span>{% endif %}</dd>
-            <dd class="quantity_input" style="display:none">{{ item | item_quantity_input }}</dd>
+            <dd class="item_price">{{ item.unit_price | money_with_sign }}<span class="item_quantity"> x </span><span class="quantity_input">{{ item | item_quantity_input }}</span></dd>
+           
             {% unless item.product.has_default_option %}<dd class="item_option">{{ item.option.name }}</dd>{% endunless %}
           </dl>
           
@@ -24,8 +24,9 @@
       </ul>
     </section>
 
-    {% if cart.shipping.enabled or cart.discount.enabled %}
+   
     <section id="cart_options">
+       {% if cart.shipping.enabled or cart.discount.enabled %}
       <ul>
         {% if cart.shipping.enabled %}
         {% if cart.shipping.strict %}
@@ -57,12 +58,12 @@
         </li>
         {% endif %}
       </ul>
-      
+      {% endif %}
       <div class="cart-update">
-        <button id="update-btn-footer" class="update-btn button disabled" name="update" type="submit" title="Update your cart total"><span>Update total</span></button>
+        <button id="update-btn-footer" class="update-btn button" name="update" type="submit" title="Update your cart total"><span>Update total</span></button>
       </div>    
     </section>
-    {% endif %}
+    
   </div>
   
   <section id="cart_summary">

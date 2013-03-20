@@ -31,7 +31,10 @@ global $slug; ?>
 					</div>
 				</div>
 				
-				<?php if ( have_posts() ) : $count=0 ;
+				<?php 
+				global $query_string;
+				query_posts( $query_string . 'posts_per_page=10' );
+				if ( have_posts() ) : $count=0 ;
 						$posts_per_page = get_option('posts_per_page');
 						$posts_on_this_page = $wp_query->post_count;
 						$posts_in_query = $wp_query->found_posts; 

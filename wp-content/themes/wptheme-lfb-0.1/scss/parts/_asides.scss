@@ -115,7 +115,7 @@
 }
 
 .flip-container {
-  	@include perspective(1000);
+ 	@include perspective(1000);
   	background:$navy;
   	width:100%;
   	overflow:hidden;
@@ -215,6 +215,7 @@
 			color:$cream;
 		}
 	}
+	
  
 }
  
@@ -224,6 +225,24 @@
 	position: relative;
 }
 
+.no-csstransforms3d .flip-container {
+	.flipper {
+ 		.back {
+ 			display:none;
+ 		}
+ 		.front {
+ 			display:block;
+ 		}
+ 	}
+ 	&.hover {
+ 		.back {
+ 			display:block;
+ 		}
+ 		.front {
+ 			display:none;
+ 		}
+ 	}
+}
 
 
 /** 

@@ -275,7 +275,14 @@ label {
   text-align: right;  
   font-size: 13px;
   }
-  
+
+.quantity_input input {
+  width: 40px;
+  padding: 7px;
+  text-align: center;
+  margin-left: 10px;
+}
+
 @-webkit-keyframes reset { from { opacity: 0; } to { opacity: 0; } }
 @-webkit-keyframes fade-in { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes reset { from { opacity: 0; } to { opacity: 0; } }
@@ -1451,14 +1458,14 @@ label {
   }  
 
 .cart-update {
-  margin-left: 227px;
-  margin-bottom: 20px;
+  overflow: hidden;
+  margin-bottom: 10px;
   }
   
 .cart-update .button {
   font-size: 12px;
-  padding: 12px 0;
-  width: 213px;
+  float:right;
+  width: 200px;
   }  
   
 #cart_summary {
