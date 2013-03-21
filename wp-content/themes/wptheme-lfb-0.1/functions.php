@@ -172,6 +172,60 @@
 	 **/
 	add_action('comment_post', 'ajaxify_comments',20, 2);
 
+
+
+	//test something to deal with ofset problem
+
+function myprefix_query_offset(&$query) {
+
+    //Before anything else, make sure this is the right query...
+    if ( ! $query->is_posts_page ) {
+        return;
+    }
+
+    //First, define your desired offset...
+    $offset = 3;
+    
+    //Next, determine how many posts per page you want (we'll use WordPress's settings)
+    $pagesize = get_option('posts_per_page');
+
+    //Next, detect and handle pagination...
+    if ( $query->is_paged ) {
+
+        //Manually determine page query offset (offset + current page (minus one) x posts per page)
+        $page_offset = $offset + ( ($query->query_vars['paged']-1) * $ppp );
+
+        //Apply adjust page offset
+        $query->set('offset', $page_offset );
+
+    }
+    else {
+
+        //This is the first page. Just use the offset...
+        $query->set('offset',$offset);
+
+    }
+}
+
+function myprefix_adjust_offset_pagination($found_posts, $query) {
+
+    //Define our offset again...
+    $offset = 10;
+
+    //Ensure we're modifying the right query object...
+    if ( $query->is_posts_page ) {
+        //Reduce WordPress's found_posts count by the offset... 
+        return $found_posts - $offset;
+    }
+}
+
+
+add_action('pre_get_posts', 'myprefix_query_offset', 1 );
+add_filter('found_posts', 'myprefix_adjust_offset_pagination', 1 );
+
+
+
+
 	/********************************************************************
 	 * Adding actions to response to ajax requests.
 	 *

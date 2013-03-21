@@ -30,6 +30,10 @@ global $slug; ?>
 						</div>
 					</div>
 				</div>
+				<?php 
+				// global $query_string;
+				// query_posts($query_string. '&offset=3');
+				?>
 				
 				<?php if ( have_posts() ) : $count=0 ;
 						$posts_per_page = get_option('posts_per_page');
