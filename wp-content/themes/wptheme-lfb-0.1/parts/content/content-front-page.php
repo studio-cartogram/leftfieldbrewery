@@ -24,7 +24,7 @@
 							</div>
 							<div class="row border-bottom">
 								<div class="columns format-text twelve rule-right equal-height bg-cream">
-									<h5><a href="<the_permalink() ?>"><?php the_title(); ?></a></h5>
+									<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 									<?php the_excerpt(); ?>
 									<?php  more_link(); ?>
 								</div>
