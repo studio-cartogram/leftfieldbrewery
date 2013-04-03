@@ -10,6 +10,14 @@
 			&:after {
 				right:-19px;
 			}
+			h5 {
+				padding-left:20px;
+				padding-right:1px;
+			}
+			h6 {
+				padding-left:20px;
+				padding-right:1px;
+			}
 
 		}
 		&.IBU {
@@ -19,9 +27,11 @@
 			@extend .text-center;
 			h5 {
 				padding-left:20px;
+				padding-right:1px;
 			}
 			h6 {
 				padding-left:20px;
+				padding-right:1px;
 			}
 
 		}
@@ -34,9 +44,11 @@
 			}
 			h5 {
 				padding-left:10px;
+				padding-right:10px;
 			}
 			h6 {
 				padding-left:10px;
+				padding-right:10px;
 			}
 		}
 		&.food_pairings {

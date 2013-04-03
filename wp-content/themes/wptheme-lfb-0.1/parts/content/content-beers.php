@@ -9,7 +9,7 @@ if ( have_posts() ) :
 				<div class="row flushed-left collapse">
 					<div class="column twelve rule-right">
 						<div class="post-text double-bordered">
-							<div class="row collapse beer-stats">					
+							<div class="row collapse beer-stats equal-heights">					
 								<?php
 								$fields = array(
 										"ALC./VOL" => "alc",
