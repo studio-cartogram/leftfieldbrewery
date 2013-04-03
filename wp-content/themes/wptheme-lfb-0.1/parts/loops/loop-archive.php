@@ -41,7 +41,7 @@ global $slug; ?>
 						$posts_in_query = $wp_query->found_posts; 
 						 while ( have_posts() ) : the_post(); $count++;
 							if ($count % 2 != 0 || $total == 1) {
-								echo'<div class="row  bg-cream collapse">';
+								echo'<div class="row equal-heights  bg-cream collapse">';
 							} 
 							?>
 							<div class="columns six format-text space-inner-bottom rule-right bg-cream post-small post-<?php echo $count ?>">

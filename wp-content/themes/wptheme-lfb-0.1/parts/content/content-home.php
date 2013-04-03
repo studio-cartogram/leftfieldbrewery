@@ -55,7 +55,7 @@ global $query_string;
 				<h3 class="text-center rule-right">More from the feed</h3>
 			</div>
 		</div>
-		<div class="row flushed-left collapse">
+		<div class="row flushed-left equal-heights collapse">
 			<?php query_posts( $query_string . '&posts_per_page=2&offset=1' );
 				if (have_posts()) : 	
 				while (have_posts()): the_post(); ?>
