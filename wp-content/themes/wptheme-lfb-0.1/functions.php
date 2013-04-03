@@ -184,7 +184,7 @@ function myprefix_query_offset(&$query) {
     }
 
     //First, define your desired offset...
-    $offset = 3;
+    $offset = -3;
     
     //Next, determine how many posts per page you want (we'll use WordPress's settings)
     $pagesize = get_option('posts_per_page');
@@ -193,7 +193,7 @@ function myprefix_query_offset(&$query) {
     if ( $query->is_paged ) {
 
         //Manually determine page query offset (offset + current page (minus one) x posts per page)
-        $page_offset = $offset + ( ($query->query_vars['paged']-1) * $ppp );
+        $page_offset = $offset + ( ($query->query_vars['paged']-1) * $pagesize );
 
         //Apply adjust page offset
         $query->set('offset', $page_offset );
@@ -202,18 +202,19 @@ function myprefix_query_offset(&$query) {
     else {
 
         //This is the first page. Just use the offset...
-        $query->set('offset',$offset);
+        //$query->set('offset',$offset);
 
     }
+    return $query;
 }
 
-function myprefix_adjust_offset_pagination($found_posts, $query) {
-
+function myprefix_adjust_offset_pagination($found_posts) {
+	global $wp_query;
     //Define our offset again...
-    $offset = 10;
+    $offset = -3;
 
     //Ensure we're modifying the right query object...
-    if ( $query->is_posts_page ) {
+    if ( $wp_query->is_posts_page ) {
         //Reduce WordPress's found_posts count by the offset... 
         return $found_posts - $offset;
     }
