@@ -99,7 +99,8 @@
 	set_post_thumbnail_size(450, 450, true);
 
 	add_image_size('cartogram_post_thumb_big',450, 450, true);
-	// add_image_size('cartogram_post_thumb_big_cropped',470, 340, true);
+	
+	add_image_size('cartogram_player_cropped',320, 460, true);
 
 	// add_image_size('cartogram_post_thumb_small', 310, 180, true);
 	// add_image_size('cartogram_post_thumb_tiny', 220, 140, true);
