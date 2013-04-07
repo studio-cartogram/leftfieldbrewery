@@ -25,7 +25,7 @@ $players = new WP_Query( array( "post_type" => "players") );
 									<span class="corner-two "></span>
 									<a class="flip" id="to-front" href="#"><i class="icon-flip-left"></i></a>
 									<?php if (has_post_thumbnail()) { 
-											the_post_thumbnail();
+											the_post_thumbnail('cartogram_player_cropped');
 										} else {
 											echo '<img src="' . get_bloginfo("stylesheet_directory") . '/images/placeholder.png" class="placeholder-players"/>';
 									} 
