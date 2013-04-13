@@ -23,7 +23,7 @@
 								</div>
 							</div>
 							<div class="row border-bottom">
-								<div class="columns format-text twelve rule-right equal-height bg-cream">
+								<div class="columns format-text twelve rule-right equal-height border-bottom bg-cream">
 									<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 									<?php the_excerpt(); ?>
 									<?php  more_link(); ?>
@@ -52,7 +52,7 @@
 							}
 						endwhile;
 						?>
-					<div class="mobile-flush equal-height rule-right columns twelve mvp space-inner-bottom text-center border-top" style="background:<?php echo $color; ?>">
+					<div class="mobile-flush equal-height rule-right border-bottom columns twelve mvp space-inner-bottom text-center border-top" style="background:<?php echo $color; ?>">
 							<a class="light" href="<?php echo $permalink; ?>">
 								<h2 class="beer-name beer-block light"><?php the_title(); ?></h2>
 								<?php echo '<h3 class="light beer-tagline">' . get_post_meta( $id, '_cartogram_short_description_value', TRUE ) . '</h3>';?>
