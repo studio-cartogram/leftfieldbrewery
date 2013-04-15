@@ -137,16 +137,17 @@
 				position:static;
 				&:after {
 					right:-15px;
-				}
+				} 
 			}
 			.map-wrap {
-				height:52px;
+				height:51px;
 				opacity:0;
 				z-index:10;
 				@include transition(0.3s opacity ease);
 				background:url(../images/stripe.png);
 				position:relative;
 				left:-2px;
+				top:1px;
 				h4 {
 					padding:20px 0;
 				}
