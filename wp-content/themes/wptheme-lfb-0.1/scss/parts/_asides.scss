@@ -100,6 +100,9 @@
 		color:$navy;
 		background:$cream;
 	}
+	.button.expand {
+		border-left:none;
+	}
 	.icon-tap {
 		@include font-size(60);
 		position:absolute;
