@@ -14,7 +14,7 @@ if ( have_posts() ) :
 								</div>
 							</div>
 							
-							
+							<?php 
 							echo "<h1 class='post-title'>" . "<a href='" . get_permalink() . "'>" . get_the_title() . "</a></h1>";
 							
 							$categories = 	get_the_category();
