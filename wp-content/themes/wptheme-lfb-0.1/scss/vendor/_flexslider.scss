@@ -45,9 +45,9 @@ html[xmlns] .slides {display: block;}
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider, .cartogram-slider-sidebar-viewport, .cartogram-slider-internal-viewport {margin: 0 0 0px;  position: relative; zoom: 1;  min-height:100px;}
+.flexslider, .cartogram-slider-sidebar-viewport, .cartogram-slider-internal-viewport {margin: 0 0 0px;  position: relative; zoom: 1;  }
 .cartogram-slider-viewport, .cartogram-slider-sidebar-viewport, .cartogram-slider-internal-viewport { -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
-.loading .cartogram-slider-viewport, .loading .cartogram-slider-internal-viewport, .loading .cartogram-slider-sidebar-viewport {max-height: 300px; min-height:100px;}
+.loading .cartogram-slider-viewport, .loading .cartogram-slider-internal-viewport, .loading .cartogram-slider-sidebar-viewport {min-height:100px;}
 .flexslider .slides, .cartogram-slider-sidebar-viewport > ul, .cartogram-slider-internal-viewport > ul{zoom: 1;}
 
 .loading {
