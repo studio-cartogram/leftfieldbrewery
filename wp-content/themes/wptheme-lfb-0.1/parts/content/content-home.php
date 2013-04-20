@@ -17,9 +17,7 @@ global $query_string;
 								<h4 class="boxed"> <span><?php the_date('jS F, Y'); ?></span></h4>
 							</div>
 						</div>
-						<?php if (has_post_thumbnail()){
-							echo "<a href='" . get_permalink() . "'>" . get_the_post_thumbnail() . "</a>";
-						}
+						<?php 
 						echo "<h1 class='post-title'>" . "<a href='" . get_permalink() . "'>" . get_the_title() . "</a></h1>";
 						$categories = 	get_the_category();
 						$tags 		= 	get_the_tags();
@@ -42,6 +40,9 @@ global $query_string;
 							$output .= "</ul>";
 							echo trim($output, $separator);
 						}				
+						if (has_post_thumbnail()){
+							echo "<a href='" . get_permalink() . "'>" . get_the_post_thumbnail('cartogram_full') . "</a>";
+						}
 						the_excerpt();
 						more_link();
 					endwhile;

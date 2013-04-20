@@ -104,7 +104,7 @@
 
 	// add_image_size('cartogram_post_thumb_small', 310, 180, true);
 	// add_image_size('cartogram_post_thumb_tiny', 220, 140, true);
-	// add_image_size('cartogram_slideshow_image_full', 1000, 444, true);
+	add_image_size('cartogram_full', 660, 400, true);
 
 	// new MultiPostThumbnails(array(
 	// 	'label' => 'Slideshow Image',
