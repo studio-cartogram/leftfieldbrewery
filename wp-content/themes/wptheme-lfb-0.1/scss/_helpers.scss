@@ -202,5 +202,24 @@ span.corner-four {
 }
 
 
+.featured-img {
+  border-bottom:1px solid $navy;
+  border-top:1px solid $navy;
+  margin-bottom:35px;
+  margin-top:35px;
+  width:100%;
+  a {
+    display:block;
+    width:100%;
+    line-height:0;
+  }
+  img {
+    width:100%;
+    display:block;
+    width:100%;
+    line-height:0;
+  }
+}
+
 
 

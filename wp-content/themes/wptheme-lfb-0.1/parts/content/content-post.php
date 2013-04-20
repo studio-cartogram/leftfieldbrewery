@@ -39,7 +39,9 @@ if ( have_posts() ) :
 								echo trim($output, $separator);
 							}				
 							if (has_post_thumbnail()){
-								echo get_the_post_thumbnail('cartogram_full');
+								echo "<div class='featured-img'>";
+									the_post_thumbnail('cartogram_full');
+								echo "</div>";
 							}
 							
 							the_content(); ?>

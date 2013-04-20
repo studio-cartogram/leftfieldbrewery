@@ -41,7 +41,9 @@ global $query_string;
 							echo trim($output, $separator);
 						}				
 						if (has_post_thumbnail()){
-							echo "<a href='" . get_permalink() . "'>" . get_the_post_thumbnail('cartogram_full') . "</a>";
+							echo "<div class='featured-img'><a href='" . get_permalink() . "'>";
+								the_post_thumbnail('cartogram_full');
+							echo "</a></div>";
 						}
 						the_excerpt();
 						more_link();
