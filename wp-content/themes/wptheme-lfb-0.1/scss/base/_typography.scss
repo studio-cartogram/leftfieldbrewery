@@ -199,7 +199,7 @@ h6 {
 			}
 			&.sep {
 				font-size: 10px;
-padding: 3px;
+				padding: 3px;
 			}
 		}
 	}
@@ -223,5 +223,8 @@ padding: 3px;
 		}
 	}
 
-
+	p img.size-large  {
+	  padding: 2px;
+	  border: 1px solid;
+	}
 }
