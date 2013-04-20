@@ -208,6 +208,10 @@ span.corner-four {
   margin-bottom:35px;
   margin-top:35px;
   width:100%;
+  &:hover {
+    @include box-shadow(0 0px 13px rgba(0, 0, 0, 0.2));
+  }
+  cursor:pointer;
   a {
     display:block;
     width:100%;
