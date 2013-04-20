@@ -215,9 +215,14 @@ h6 {
 	.wp-caption  {
 		padding:20px 40px;
 		width:100% !important;
-
+		img {
+			padding: 2px;
+			border: 1px solid;
+			border-bottom: none;
+		}
 		p {
 			border:1px solid;
+			border-top:none;
 			text-align:center;
 			@include font-size(11);
 			padding:5px 20px;
@@ -225,7 +230,7 @@ h6 {
 		}
 	}
 
-	p img.size-large  {
+	p img.alignnone  {
 	  padding: 2px;
 	  border: 1px solid;
 	}
