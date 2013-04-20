@@ -38,7 +38,7 @@ if ( have_posts() ) :
 								$output .= "</ul>";
 								echo trim($output, $separator);
 							}				
-							<?php if (has_post_thumbnail()){
+							if (has_post_thumbnail()){
 								echo get_the_post_thumbnail('cartogram_full');
 							}
 							
