@@ -160,12 +160,15 @@
         @extend .border-bottom;
         color:$navy;
         @include font-size(16);
-        padding:25px;
+        padding:0 25px;
         &:active, &:focus {
-          background-color: $white;
+          background-color: white;
           color:$navy;
           border-color:$white;
         }
+      }
+      textarea {
+        padding-top:20px;
       }
 
       li {

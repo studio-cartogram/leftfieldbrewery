@@ -164,9 +164,8 @@ App.flexsliderInit = function () {
 	    slideshow: false,
 	    pauseOnHover: true,
 	    slideshowSpeed: 5000,
-	    animationLoop: true,
+	    animationLoop: true, 
 	    keyboard: false,
-	    smoothHeight: true,            //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode  
 
 
 	});
