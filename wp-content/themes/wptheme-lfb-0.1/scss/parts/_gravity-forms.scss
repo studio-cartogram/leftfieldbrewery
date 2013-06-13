@@ -5,7 +5,14 @@
       @include clearfix();
     }
   }
-
+  .gform_heading h3 {
+    @extend .icon-with-space;
+    @extend .icon-newletter; 
+    padding-left:48px;
+    &:before {
+      top:25px;
+    }
+  }
   .gform_body {
     @extend .space-top;
     @extend .border-bottom-white;

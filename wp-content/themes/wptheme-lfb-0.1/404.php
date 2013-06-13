@@ -74,7 +74,7 @@
 					</div>
 				</div>
 				<div class="columns sidebar four pull-eight mobile-flush">
-					<?php get_sidebar('front-page');  ?>
+					<?php get_sidebar('contact-us');  ?>
 				</div>
 			</div>
 		</div>
