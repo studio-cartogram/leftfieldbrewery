@@ -46,19 +46,19 @@ App.bindListeners = function () {
 
 	======================================================================================================================== */
 
-	$("#twitter").getTwitter({
-		userName: "lfbrewery",
-		numTweets: 1,
-		loaderText: "Loading tweets...",
-		slideIn: false,
-		slideDuration: 750,
-		showHeading: false,
-		headingText: "Latest Tweets",
-		showProfileLink: false,
-		showTimestamp: true,
-		includeRetweets: false,
-		excludeReplies: true
-	});
+	// $("#twitter").getTwitter({
+	// 	userName: "lfbrewery",
+	// 	numTweets: 1,
+	// 	loaderText: "Loading tweets...",
+	// 	slideIn: false,
+	// 	slideDuration: 750,
+	// 	showHeading: false,
+	// 	headingText: "Latest Tweets",
+	// 	showProfileLink: false,
+	// 	showTimestamp: true,
+	// 	includeRetweets: false,
+	// 	excludeReplies: true
+	// });
 
 	/* ========================================================================================================================
 	  
