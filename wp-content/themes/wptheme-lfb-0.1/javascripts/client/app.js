@@ -35,10 +35,10 @@ App.bindListeners = function () {
 	======================================================================================================================== */
 
 
-	$("#modal-splash").reveal({
-		'closeOnBackgroundClick' : false,
-		'animation' : 'fade'
-	});
+	// $("#modal-splash").reveal({
+	// 	'closeOnBackgroundClick' : false,
+	// 	'animation' : 'fade'
+	// });
 
 	/* ========================================================================================================================
 
@@ -60,20 +60,45 @@ App.bindListeners = function () {
 	// 	excludeReplies: true
 	// });
 
+	/**
+	 * How to use fetch function:
+	 * @param {string} Your Twitter widget ID.
+	 * @param {string} The ID of the DOM element you want to write results to. 
+	 * @param {int} Optional - the maximum number of tweets you want returned. Must
+	 *     be a number between 1 and 20.
+	 * @param {boolean} Optional - set true if you want urls and hash
+	       tags to be hyperlinked!
+	 * @param {boolean} Optional - Set false if you dont want user photo /
+	 *     name for tweet to show.
+	 * @param {boolean} Optional - Set false if you dont want time of tweet
+	 *     to show.
+	 * @param {function/string} Optional - A function you can specify to format
+	 *     tweet date/time however you like. This function takes a JavaScript date
+	 *     as a parameter and returns a String representation of that date.
+	 *     Alternatively you may specify the string 'default' to leave it with
+	 *     Twitter's default renderings.
+	 * @param {boolean} Optional - Show retweets or not. Set false to not show.
+	 * @param {function/string} Optional - A function to call when data is ready. It
+	 *     also passes the data to this function should you wish to manipulate it
+	 *     yourself before outputting. If you specify this parameter you  must
+	 *     output data yourself!
+	 * @param {boolean} Optional - Show links for reply, retweet, favourite. Set false to not show.
+	 */
+	twitterFetcher.fetch('371772142548824064', 'twitter', 1, true, false);
 	/* ========================================================================================================================
 	  
 	Fold Nav
 
 	======================================================================================================================== */
 
-	$('.rolldown-list li').each(function () {
-	  var delay = ($(this).index()/4) + 's';
-	  $(this).css({
-	      webkitAnimationDelay: delay,
-	      mozAnimationDelay: delay,
-	      animationDelay: delay
-	  });
-	});
+	// $('.rolldown-list li').each(function () {
+	//   var delay = ($(this).index()/4) + 's';
+	//   $(this).css({
+	//       webkitAnimationDelay: delay,
+	//       mozAnimationDelay: delay,
+	//       animationDelay: delay
+	//   });
+	// });
 
 	/* ========================================================================================================================
 	  
@@ -81,35 +106,35 @@ App.bindListeners = function () {
 
 	======================================================================================================================== */
 
-	if ($("#av-overlay").length) {
-		var AVMonth = new Digits({ 
-	  		wrapper: '#av-digits-m', 
-	  		mode: 'statistics', 
-	  		value: 10 
-	  	});
-		var AVDay = new Digits({ 
-	  		wrapper: '#av-digits-d', 
-	  		mode: 'statistics', 
-	  		value: 24 
-	  	});  
-	  	var AVYear = new Digits({ 
-	  		wrapper: '#av-digits-y', 
-	  		mode: 'statistics', 
-	  		value: 1992 
-	  	});
+	// if ($("#av-overlay").length) {
+	// 	var AVMonth = new Digits({ 
+	//   		wrapper: '#av-digits-m', 
+	//   		mode: 'statistics', 
+	//   		value: 10 
+	//   	});
+	// 	var AVDay = new Digits({ 
+	//   		wrapper: '#av-digits-d', 
+	//   		mode: 'statistics', 
+	//   		value: 24 
+	//   	});  
+	//   	var AVYear = new Digits({ 
+	//   		wrapper: '#av-digits-y', 
+	//   		mode: 'statistics', 
+	//   		value: 1992 
+	//   	});
 	  
-	  	// Change value when the input changes 
+	//   	// Change value when the input changes 
 
-	  	$('#av_verify_m').change(function() {
-	  		AVMonth.changeValue($(this).val());
-		});
-		$('#av_verify_d').change(function() {
-	  		AVDay.changeValue($(this).val());
-		});
-		$('#av_verify_y').change(function() {
-	  		AVYear.changeValue($(this).val());
-		});
-	}
+	//   	$('#av_verify_m').change(function() {
+	//   		AVMonth.changeValue($(this).val());
+	// 	});
+	// 	$('#av_verify_d').change(function() {
+	//   		AVDay.changeValue($(this).val());
+	// 	});
+	// 	$('#av_verify_y').change(function() {
+	//   		AVYear.changeValue($(this).val());
+	// 	});
+	// }
 	
 }; // App.bindListeners().
 

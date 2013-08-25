@@ -1,12 +1,14 @@
-#twitter_update_list {
-	list-style:none;
-	span {
-		display:block;
-
+#twitter {
+	li {
+		list-style:none;
+		
 	}
-	li > a {
-		display:block;
-		font-weight:bold;
-		margin:20px 0 20px 0;
+	.timePosted {
+		margin:0;
+	}
+	.interact {
+		a {
+			margin:0 5px 0 0;
+		}
 	}
 }
