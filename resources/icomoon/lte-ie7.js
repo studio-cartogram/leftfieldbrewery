@@ -32,17 +32,22 @@ window.onload = function() {
 			'icon-mark-mug' : '&#xe017;',
 			'icon-mandie-wheat' : '&#xe018;',
 			'icon-icon-mandie' : '&#xe019;',
+			'icon-maris-b' : '&#xe01a;',
+			'icon-maris-a' : '&#xe01b;',
 			'icon-eephus-b' : '&#xe01c;',
 			'icon-eephus-a' : '&#xe01d;',
 			'icon-doubleipa-b' : '&#xe01e;',
 			'icon-doubleipa-a' : '&#xe01f;',
-			'icon-maris-a' : '&#xe01a;',
-			'icon-maris-b' : '&#xe01b;'
+			'icon-resinbag' : '&#xe020;',
+			'icon-resinbag-alt' : '&#xe021;'
 		},
 		els = document.getElementsByTagName('*'),
-		i, attr, html, c, el;
-	for (i = 0; i < els.length; i += 1) {
+		i, attr, c, el;
+	for (i = 0; ; i += 1) {
 		el = els[i];
+		if(!el) {
+			break;
+		}
 		attr = el.getAttribute('data-icon');
 		if (attr) {
 			addIcon(el, attr);
