@@ -25,7 +25,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-twitter, .icon-facebook, .icon-google-plus, .icon-phone, .icon-wordmark, .icon-untappd, .icon-tap, .icon-restaurant, .icon-newletter, .icon-mark, .icon-mail, .icon-logo, .icon-loader-simple, .icon-instagram, .icon-flip-right, .icon-flip-left, .icon-cross, .icon-close, .icon-brewpub, .icon-bar, .icon-bar-restaurant, .icon-arrow-right, .icon-arrow-left, .icon-mark-mug, .icon-mandie-wheat, .icon-icon-mandie, .icon-maris-b, .icon-maris-a, .icon-eephus-b, .icon-eephus-a, .icon-doubleipa-b, .icon-doubleipa-a, .icon-resinbag-alt, .icon-resinbag-a {
+.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .icon-logo:before, .icon-loader-simple:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .icon-bar:before, .icon-bar-restaurant:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-maris-b:before, .icon-maris-a:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before, .icon-resinbag-alt:before, .icon-resinbag-a:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
