@@ -18,13 +18,14 @@ you can use the generic selector below, but it's slower:
 }
 
 
+
 /* Use the following CSS code if you want to have a class per icon */
 /*
 Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-twitter, .icon-facebook, .icon-google-plus, .icon-phone, .icon-wordmark, .icon-untappd, .icon-tap, .icon-restaurant, .icon-newletter, .icon-mark, .icon-mail, .icon-logo, .icon-loader-simple, .icon-instagram, .icon-flip-right, .icon-flip-left, .icon-cross, .icon-close, .icon-brewpub, .icon-bar, .icon-bar-restaurant, .icon-arrow-right, .icon-arrow-left, .icon-mark-mug, .icon-mandie-wheat, .icon-icon-mandie, .icon-maris-b, .icon-maris-a, .icon-eephus-b, .icon-eephus-a, .icon-doubleipa-b, .icon-doubleipa-a, .icon-resinbag, .icon-resinbag-alt {
+.icon-twitter, .icon-facebook, .icon-google-plus, .icon-phone, .icon-wordmark, .icon-untappd, .icon-tap, .icon-restaurant, .icon-newletter, .icon-mark, .icon-mail, .icon-logo, .icon-loader-simple, .icon-instagram, .icon-flip-right, .icon-flip-left, .icon-cross, .icon-close, .icon-brewpub, .icon-bar, .icon-bar-restaurant, .icon-arrow-right, .icon-arrow-left, .icon-mark-mug, .icon-mandie-wheat, .icon-icon-mandie, .icon-maris-b, .icon-maris-a, .icon-eephus-b, .icon-eephus-a, .icon-doubleipa-b, .icon-doubleipa-a, .icon-resinbag-alt, .icon-resinbag-a {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -130,9 +131,9 @@ you can use the generic selector below, but it's slower:
 .icon-doubleipa-a:before {
 	content: "\e01f";
 }
-.icon-resinbag-a:before {
-	content: "\e020";
-}
 .icon-resinbag-alt:before {
 	content: "\e021";
+}
+.icon-resinbag-a:before {
+	content: "\e020";
 }
