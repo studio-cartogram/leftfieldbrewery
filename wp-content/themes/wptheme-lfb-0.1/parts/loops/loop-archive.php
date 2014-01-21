@@ -9,7 +9,7 @@ global $slug; ?>
 					<div class="row collapse bg-cream">
 						<div class="columns seven post-meta space-inner-bottom">
 							<?php if ( is_day() ) :
-								echo '<h4 class="boxed"><span>Archives</span> <span class="bg-navy light">' . get_the_date(  ) . '</span></h4>';
+							echo '<h4 class="boxed"><span>Archives</span> <span class="bg-navy light">' . get_the_date(  ) . '</span></h4>';
 							elseif ( is_month() ) :
 								echo '<h4 class="boxed"><span>Archives</span> <span class="bg-navy light">' . get_the_date( 'F Y' ) . '</span></h4>';
 							elseif ( is_year() ) :
@@ -36,37 +36,39 @@ global $slug; ?>
 				?>
 				
 				<?php if ( have_posts() ) : $count=0 ;
-						$posts_per_page = get_option('posts_per_page');
-						$posts_on_this_page = $wp_query->post_count;
-						$posts_in_query = $wp_query->found_posts; 
-						 while ( have_posts() ) : the_post(); $count++;
-							if ($count % 2 != 0 || $total == 1) {
-								echo'<div class="row equal-heights  bg-cream collapse">';
-							} 
-							?>
-							<div class="columns six format-text space-inner-bottom rule-right bg-cream post-small post-<?php echo $count ?>">
-								<?php get_template_part('parts/content/content', 'excerpt'); ?>
-							</div>
-							<?php if (($count % 2 == 0) || ($count == $posts_in_query) || ($count == $posts_per_page) || $posts_on_this_page == 1  ) {
-								echo '</div>';
-
-							} ?>
-						<?php endwhile; ?>
-					
-					
-				<?php endif; ?>	
+				$posts_per_page = get_option('posts_per_page');
+				$posts_on_this_page = $wp_query->post_count;
+				$posts_in_query = $wp_query->found_posts; 
+				while ( have_posts() ) : the_post(); $count++;
+				if ($count % 2 != 0 || $total == 1) {
+					echo'<div class="row equal-heights  bg-cream collapse">';
+				} 
+				?>
+				<div class="columns six format-text space-inner-bottom rule-right bg-cream post-small post-<?php echo $count ?>">
+					<?php get_template_part('parts/content/content', 'excerpt'); ?>
+				</div>
+				<?php if (($count % 2 == 0) || ($count == $posts_in_query) || ($count == $posts_per_page) || $posts_on_this_page == 1  ) {
+					echo '</div>';
+				}  ?>
 				
-			</div>
-		</div>
-		<?php get_template_part('parts/navigation/pagination'); ?>	
+			<?php endwhile; ?>
+
+			<?php if ($count == 3) { // this is a hot fix for a broken layout when there is three posts, but do not fully understand the need.
+					echo '</div>';
+				}?>
+		<?php endif; ?>	
+
 	</div>
-	<div class="columns mobile-flush four pull-eight">
-		<?php if (is_front_page()) {
-			get_sidebar('front-page'); 
-		} elseif (is_home()) { 
-			get_sidebar('home');
-		} else {
-			get_sidebar('home');
-		} ?>
-	</div>
+</div>
+<?php get_template_part('parts/navigation/pagination'); ?>	
+</div>
+<div class="columns mobile-flush four pull-eight">
+	<?php if (is_front_page()) {
+		get_sidebar('front-page'); 
+	} elseif (is_home()) { 
+		get_sidebar('home');
+	} else {
+		get_sidebar('home');
+	} ?>
+</div>
 </div>
