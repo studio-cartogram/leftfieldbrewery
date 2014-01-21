@@ -17,13 +17,15 @@ you can use the generic selector below, but it's slower:
 	-webkit-font-smoothing: antialiased;
 }
 
+
+
 /* Use the following CSS code if you want to have a class per icon */
 /*
 Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
-[class*="icon-"]:before {
+[class*="icon-"] {
 */
-.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .icon-logo:before, .icon-loader-simple:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .icon-bar:before, .icon-bar-restaurant:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before, .icon-maris-a:before, .icon-maris-b:before {
+.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .icon-logo:before, .icon-loader-simple:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .icon-bar:before, .icon-bar-restaurant:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-maris-b:before, .icon-maris-a:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before, .icon-resinbag-alt:before, .icon-resinbag-a:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -111,6 +113,12 @@ you can use the generic selector below, but it's slower:
 .icon-icon-mandie:before {
 	content: "\e019";
 }
+.icon-maris-b:before {
+	content: "\e01a";
+}
+.icon-maris-a:before {
+	content: "\e01b";
+}
 .icon-eephus-b:before {
 	content: "\e01c";
 }
@@ -123,9 +131,9 @@ you can use the generic selector below, but it's slower:
 .icon-doubleipa-a:before {
 	content: "\e01f";
 }
-.icon-maris-a:before {
-	content: "\e01a";
+.icon-resinbag-alt:before {
+	content: "\e021";
 }
-.icon-maris-b:before {
-	content: "\e01b";
+.icon-resinbag-a:before {
+	content: "\e020";
 }
