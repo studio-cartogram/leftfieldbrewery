@@ -53,7 +53,7 @@ global $slug; ?>
 				
 			<?php endwhile; ?>
 
-			<?php if ($count == 3) { // this is a hot fix for a broken layout when there is three posts, but do not fully understand the need.
+			<?php if ($count == 3 || $count == 5) { // this is a hot fix for a broken layout when there is three posts, but do not fully understand the need.
 					echo '</div>';
 				}?>
 		<?php endif; ?>	
