@@ -1,42 +1,33 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot');
-	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('fonts/icomoon.woff') format('woff'),
-		url('fonts/icomoon.ttf') format('truetype'),
-		url('fonts/icomoon.svg#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?-gwq5q1');
+	src:url('fonts/icomoon.eot?#iefix-gwq5q1') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-gwq5q1') format('woff'),
+		url('fonts/icomoon.ttf?-gwq5q1') format('truetype'),
+		url('fonts/icomoon.svg?-gwq5q1#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
+[class^="icon-"], [class*=" icon-"] {
 	font-family: 'icomoon';
-	content: attr(data-icon);
 	speak: none;
+	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
+
+	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"] {
-*/
-.icon-twitter, .icon-facebook, .icon-google-plus, .icon-phone, .icon-wordmark, .icon-untappd, .icon-tap, .icon-restaurant, .icon-newletter, .icon-mark, .icon-mail, .icon-logo, .icon-loader-simple, .icon-instagram, .icon-flip-right, .icon-flip-left, .icon-cross, .icon-close, .icon-brewpub, .icon-bar, .icon-bar-restaurant, .icon-arrow-right, .icon-arrow-left, .icon-mark-mug, .icon-mandie-wheat, .icon-icon-mandie, .icon-maris-b, .icon-maris-a, .icon-eephus-b, .icon-eephus-a, .icon-doubleipa-b, .icon-doubleipa-a, .icon-resinbag, .icon-resinbag-alt {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+.icon-sunlightpark-alt:before {
+	content: "\e600";
+}
+.icon-sunlightpark-a:before {
+	content: "\e601";
 }
 .icon-twitter:before {
 	content: "\e000";
@@ -44,7 +35,7 @@ you can use the generic selector below, but it's slower:
 .icon-facebook:before {
 	content: "\e001";
 }
-.icon-google-plus:before {
+.icon-googleplus:before {
 	content: "\e002";
 }
 .icon-phone:before {
@@ -134,14 +125,9 @@ you can use the generic selector below, but it's slower:
 .icon-doubleipa-a:before {
 	content: "\e01f";
 }
-.icon-resinbag:before {
-	content: "\e020";
-}
 .icon-resinbag-alt:before {
 	content: "\e021";
 }
-content: "\e01a";
-}
-.icon-maris-b:before {
-	content: "\e01b";
+.icon-resinbag-a:before {
+	content: "\e020";
 }
