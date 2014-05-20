@@ -128,7 +128,7 @@
 		$facebook = '<a target="_blank" class="icon-facebook" href="http://www.facebook.com/sharer.php?s=100&amp;p%5Btitle%5D=Left%20Field%20Brewery&amp;p%5Burl%5D=http%3A%2F%2Fwww.leftfieldbrewery.ca&amp;p%5Bsummary%5D=Fan%20of%20delicious%20beers?%20Try%20Left%20Field%20Brewery!">Share on Facebook</a>';
 		$mail = '<a href="mailto:?subject=' . 'Fan of delicious beers? Check out Left Field Brewery!' . ' at ' . 'http://www.leftfieldbrewery.ca' . '">Share in an email</a>';
 		$untappd = '<a target="_blank"  href="https://untappd.com/leftfieldbrewery">Share on untappd</a>';
-		$googleplus = '<a target="_blank"  href="https://plus.google.com/share?url=' . 'http://www.leftfieldbrewery.ca' . '">Share on google plus</a>';
+		$googleplus = '<a target="_blank"  class="icon-googleplus" href="https://plus.google.com/share?url=' . 'http://www.leftfieldbrewery.ca' . '">Share on google plus</a>';
 		$content .= '<ul id="social"><li class="icon-twitter">' . $twitter . '</li><li class="icon-untappd">' . $untappd . '</li><li class="icon-facebook">' . $facebook . '</li><li class="icon-googleplus">' . $googleplus . '</li><li class="icon-mail">' . $mail . '</li></ul>';
 		echo $content;
 	}
