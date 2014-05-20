@@ -129,7 +129,7 @@
 		$mail = '<a href="mailto:?subject=' . 'Fan of delicious beers? Check out Left Field Brewery!' . ' at ' . 'http://www.leftfieldbrewery.ca' . '">Share in an email</a>';
 		$untappd = '<a target="_blank"  href="https://untappd.com/leftfieldbrewery">Share on untappd</a>';
 		$googleplus = '<a target="_blank"  href="https://plus.google.com/share?url=' . 'http://www.leftfieldbrewery.ca' . '">Share on google plus</a>';
-		$content .= '<ul id="social"><li class="icon-twitter">' . $twitter . '</li><li class="icon-untappd">' . $untappd . '</li><li class="icon-facebook">' . $facebook . '</li><li class="icon-google-plus">' . $googleplus . '</li><li class="icon-mail">' . $mail . '</li></ul>';
+		$content .= '<ul id="social"><li class="icon-twitter">' . $twitter . '</li><li class="icon-untappd">' . $untappd . '</li><li class="icon-facebook">' . $facebook . '</li><li class="icon-googleplus">' . $googleplus . '</li><li class="icon-mail">' . $mail . '</li></ul>';
 		echo $content;
 	}
 	/**
