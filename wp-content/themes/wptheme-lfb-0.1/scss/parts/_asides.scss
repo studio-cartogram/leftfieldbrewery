@@ -201,7 +201,7 @@
   	width:100%;
   	overflow:hidden;
   	width: 100%;
-	height: 500px;
+	height: 530px;
   	.flip {
   		position:absolute;
   		z-index:1000;
@@ -254,7 +254,7 @@
 		left: 0;
 		text-align:center;
 		width: 100%;
-		height: 500px;
+		height: 530px;
 		.back-logo, .big-icon {
 			@include font-size(100);
 			margin:auto;
@@ -270,6 +270,7 @@
 			color:$white;
 			padding:15px 30px;
 			@include font-size(13);
+			font-weight:600;
 		}
 		h2 {
 			color:$white;
@@ -349,6 +350,10 @@
 	// remove once content is added
 	display:none;
 
+}
+
+.single-beers .flip-container {
+	border-bottom: 1px solid #0c223f;
 }
 
 
