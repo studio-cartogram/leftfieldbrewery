@@ -201,7 +201,7 @@
   	width:100%;
   	overflow:hidden;
   	width: 100%;
-	height: 530px;
+	height: 500px;
   	.flip {
   		position:absolute;
   		z-index:1000;
@@ -254,7 +254,7 @@
 		left: 0;
 		text-align:center;
 		width: 100%;
-		height: 530px;
+		height: 500px;
 		.back-logo, .big-icon {
 			@include font-size(100);
 			margin:auto;
@@ -354,6 +354,7 @@
 
 .single-beers .flip-container .front {
 	border-bottom: 1px solid #0c223f;
+	height:530px;
 }
 
 
