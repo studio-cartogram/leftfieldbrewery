@@ -58,14 +58,14 @@
 			"name" => $prefix."color",
 	    	"std" => "",
 	    	"title" => __('Beer Color','cartogram'),
-	    	"description" => __('Enter the short description for the beer such as "Oatmeal brown ale"','cartogram')
+	    	"description" => __('Enter the 6-digit hexidecimal color value such as #FFDD00','cartogram')
 	    ),
 	    "icon" => array(
 	    	"type" => "textfield",
 			"name" => $prefix."icon",
 	    	"std" => "",
 	    	"title" => __('Beer Icon','cartogram'),
-	    	"description" => __('Enter the short description for the beer such as "Oatmeal brown ale"','cartogram')
+	    	"description" => __('Enter the class name of the beer icon that corresponds to the iconfont such as resinbag','cartogram')
 	    ),
 		"alc" => array(
 	    	"type" => "textfield",
