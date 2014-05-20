@@ -352,14 +352,17 @@
 
 }
 
-.single-beers .flip-container .front {
+.single-beers .flip-container {
 	border-bottom: 1px solid #0c223f;
 	height:530px;
 }
 
 .sunlight-park .flip-container .front {
-	p, h2, h3, h3:after, .big-icon {
+	p, h2, h3, .big-icon {
 		color:$navy;
+	}
+	h3.beer-tagline:after {
+		background:$navy;
 	}
 }
 
