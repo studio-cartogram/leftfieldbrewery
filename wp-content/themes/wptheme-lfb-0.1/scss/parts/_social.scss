@@ -35,12 +35,12 @@ ul#social {
       @extend .icon-facebook;
     }
   }
-  li.icon-google-plus {
+  li.icon-googleplus {
     &:before {
       display:none;
     }
     > a {
-      @extend .icon-google-plus;
+      @extend .icon-googleplus;
     }
   }
   li.icon-twitter {
