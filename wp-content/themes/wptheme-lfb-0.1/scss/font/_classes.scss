@@ -25,7 +25,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .icon-logo:before, .icon-loader-simple:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .icon-bar:before, .icon-bar-restaurant:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-maris-b:before, .icon-maris-a:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before, .icon-resinbag-alt:before, .icon-resinbag-a:before {
+.icon-twitter:before, .icon-facebook:before, .icon-google-plus:before, .icon-phone:before, .icon-wordmark:before, .icon-untappd:before, .icon-tap:before, .icon-restaurant:before, .icon-newletter:before, .icon-mark:before, .icon-mail:before, .icon-logo:before, .icon-loader-simple:before, .icon-instagram:before, .icon-flip-right:before, .icon-flip-left:before, .icon-cross:before, .icon-close:before, .icon-brewpub:before, .icon-bar:before, .icon-bar-restaurant:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-mark-mug:before, .icon-mandie-wheat:before, .icon-icon-mandie:before, .icon-maris-b:before, .icon-maris-a:before, .icon-eephus-b:before, .icon-eephus-a:before, .icon-doubleipa-b:before, .icon-doubleipa-a:before, .icon-resinbag-alt:before, .icon-resinbag-a:before, .icon-sunlightpark-alt:before , .icon-sunlightpark-a:before  {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -35,13 +35,20 @@ you can use the generic selector below, but it's slower:
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
+
+.icon-sunlightpark-alt:before {
+	content: "\e600";
+}
+.icon-sunlightpark-a:before {
+	content: "\e601";
+}
 .icon-twitter:before {
 	content: "\e000";
 }
 .icon-facebook:before {
 	content: "\e001";
 }
-.icon-google-plus:before {
+.icon-googleplus:before {
 	content: "\e002";
 }
 .icon-phone:before {

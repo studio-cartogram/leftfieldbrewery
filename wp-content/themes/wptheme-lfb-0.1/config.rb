@@ -1,4 +1,5 @@
-require 'zurb-foundation'
+gem 'zurb-foundation', '=3.2.5'
+require "zurb-foundation";
 # Require any additional compass plugins here.
 
 
