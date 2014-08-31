@@ -1,15 +1,15 @@
-/** 
+/**
   * Shared
   *
-  */ 
+  */
 
 
 
 
-/** 
+/**
   * Home Page
   *
-  */ 
+  */
 .screen {
     overflow: hidden;
     position: relative;
@@ -26,7 +26,7 @@
     overflow-y: auto;
     overflow-x:hidden;
     margin-bottom:-3px;
-    padding: 0rem 0 0; 
+    padding: 0rem 0 0;
     position: relative;
 
 
@@ -123,7 +123,7 @@
 			}
 			@include double-bordered(true, false);
 			.icon-wrap {
-				@include rule(right);			
+				@include rule(right);
 			}
 			.icon {
 				@include font-size(20);
@@ -140,7 +140,7 @@
 				position:static;
 				&:after {
 					right:-15px;
-				} 
+				}
 			}
 			.map-wrap {
 				height:51px;
@@ -160,12 +160,12 @@
 			}
 		}
 	}
-}	
+}
 
-/** 
+/**
   * About Page
   *
-  */ 
+  */
 
 .slides-players {
 	margin:0;
@@ -179,7 +179,7 @@
 		z-index:1;
   	}
   	.corner-two {
-  		top: -31px; 
+  		top: -31px;
 		right: -31px;
 		z-index:1;
   	}
@@ -213,20 +213,20 @@
 		right: 0px;
 		display:block;
 		&:hover, &:hover i {
-	 		
+
 		}
 		i {
 			display:block;
 		}
 		@include transition(all 0.3s ease);
 		&#to-front {
-	 		opacity:0; 
+	 		opacity:0;
 	 		@include backface-visibility(visible);
 	 	}
 	 	&#to-back {
 	 		opacity:1;
 	 	}
-	 	
+
   	}
   	&.hover {
   		.flipper {
@@ -246,7 +246,7 @@
 		position: absolute;
 		border-top:none;
 		border-bottom:1px solid $navy;
-	} 	
+	}
 	.front, .back {
 		@include backface-visibility(hidden);
 		position: absolute;
@@ -275,7 +275,7 @@
 		h2 {
 			color:$white;
 		}
-		
+
 	}
 
 	.front {
@@ -286,8 +286,8 @@
 		.corner-two {
 			border-left-color:$cream;
 		}
-		
-		
+
+
 	}
 
 	.back {
@@ -297,10 +297,10 @@
 			color:$cream;
 		}
 	}
-	
- 
+
+
 }
- 
+
 .flipper {
 	@include transition(0.6s);
 	@include  transform-style(preserve-3d);
@@ -327,13 +327,13 @@
 }
 
 
-/** 
+/**
   * Beers Page
   *
-  */ 
+  */
 
 .sidebar-beer .corner-two {
-	top: -31px; 
+	top: -31px;
 	right: -31px;
 	z-index:1;
 	border-left-color:$white;
@@ -366,11 +366,15 @@
 	}
 }
 
+.multi-svg object {
+    width:110px;
+}
 
-/** 
+
+/**
   * Contact Page
   *
-  */ 
+  */
 
 
 .list-contact {
@@ -394,10 +398,10 @@
 	}
 }
 
-/** 
+/**
   * Highlights Page
   *
-  */ 
+  */
 
 .tags-wrap {
 	@include double-bordered(false, false, false, false,  $white);
@@ -450,6 +454,3 @@
 		margin-top:3px;
 	}
 }
-
-
-
