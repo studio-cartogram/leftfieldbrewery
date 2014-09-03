@@ -155,10 +155,10 @@ h6 {
 			margin-top:0;
 		}
 	}
-	
+
 	h4 {
 		margin:30px 40px 10px;
-		@include font-size(14);	
+		@include font-size(14);
 		&.boxed {
 			padding:0;
 			overflow:hidden;
@@ -177,13 +177,13 @@ h6 {
 		text-transform:uppercase;
 		line-height: 1.6;
 		padding-left:40px;
-		padding-right:40px;	
+		padding-right:40px;
 	}
 	h6 {
 		@include font-size(16);
 		font-weight:normal;
 		padding-left:40px;
-		padding-right:40px;	
+		padding-right:40px;
 	}
 	p {
 		@include font-size(14);
@@ -210,9 +210,10 @@ h6 {
 			padding-left:0;
 		}
 	}
+
 	.wp-caption  {
 		padding:20px 40px;
-		width:100% !important;
+		margin: 0 auto!important;
 		img {
 			padding: 2px;
 			border: 1px solid;
@@ -227,6 +228,14 @@ h6 {
 			margin-top:-2px;
 		}
 	}
+	.post-text .wp-caption.alignleft {
+		float:left; 
+	}
+
+	.post-text .wp-caption.alignright {
+		float:right;
+	}
+
 
 	p img.alignnone  {
 	  padding: 2px;
