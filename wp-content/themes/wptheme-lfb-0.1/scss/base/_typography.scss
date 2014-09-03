@@ -213,7 +213,7 @@ h6 {
 
 	.wp-caption  {
 		padding:20px 40px;
-		margin: 0 auto!important;
+
 		img {
 			padding: 2px;
 			border: 1px solid;
@@ -228,8 +228,11 @@ h6 {
 			margin-top:-2px;
 		}
 	}
+	.post-text .wp-caption.aligncenter {
+		margin: 0 auto!important;
+	}
 	.post-text .wp-caption.alignleft {
-		float:left; 
+		float:left;
 	}
 
 	.post-text .wp-caption.alignright {
