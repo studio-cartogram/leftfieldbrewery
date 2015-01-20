@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
-<!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]--> 
-<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]--> 
-<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]--> 
-<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]--> 
+<!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]-->
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 		<title><?php bloginfo( 'name' ); ?> ◆ Toronto, Canada</title>
@@ -20,6 +20,11 @@
 		<meta property="og:description"
 		      content="We brew beer that we love to drink and we hope you enjoy it as much as we do."/>
 		<meta property="og:site_name" content="Left Field Brewery"/>
+
+		<link rel="image_src" href="http://leftfieldbrewery.ca/resources/logo-main-home.png" / ><!--formatted-->
+		<link rel="image_src" href="http://leftfieldbrewery.ca/resources/logo-wordmark-home.png" / ><!--formatted-->
+		<link rel="image_src" href="http://leftfieldbrewery.ca/resources/logo-main-away.png" / ><!--formatted-->
+		<link rel="image_src" href="http://leftfieldbrewery.ca/resources/logo-wordmark-away.png" / ><!--formatted-->
 
 
 		<!-- For third-generation iPad with high-resolution Retina display: -->
