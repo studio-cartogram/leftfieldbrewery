@@ -21,6 +21,11 @@
 		      content="We brew beer that we love to drink and we hope you enjoy it as much as we do."/>
 		<meta property="og:site_name" content="Left Field Brewery"/>
 
+		<link rel="image_src" href="http://leftfieldbrewery.ca/resources/logo-main-home.png" / ><!--formatted-->
+		<link rel="image_src" href="http://leftfieldbrewery.ca/resources/logo-wordmark-home.png" / ><!--formatted-->
+		<link rel="image_src" href="http://leftfieldbrewery.ca/resources/logo-main-away.png" / ><!--formatted-->
+		<link rel="image_src" href="http://leftfieldbrewery.ca/resources/logo-wordmark-away.png" / ><!--formatted-->
+
 
 		<!-- For third-generation iPad with high-resolution Retina display: -->
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
