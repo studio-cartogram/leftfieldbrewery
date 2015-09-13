@@ -1,0 +1,38 @@
+.footer {
+  background-color: $navy;
+  color:  $white;
+  margin-top:1px;
+  h3, a {
+    color:$white;
+    border:none;
+  }
+  h3 {
+    padding-top:25px;
+  }
+  > .row {
+    @extend .equal-heights;
+  }
+  a:hover {
+    border-bottom:1px solid;
+  }
+}
+
+.credit {
+  background-color: $navy;
+  color:  $white;
+  border-top:1px solid $white;
+  p {
+    padding-top:10px;
+    margin-bottom:10px;
+    font-weight:normal;
+    @include font-size(11);
+    a {
+      border:none;
+      color:$cream;
+      &:hover {
+        color:$red;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,102 @@
+
+.top-bar ul > li.name a  {
+  line-height:$topBarHeightMobile;
+
+}
+
+.top-bar > ul .name h1 a {
+  font-size:45px !important;
+  padding-top:5px;
+}
+
+
+.top-bar { 
+  position: relative;
+  z-index: 10;
+  ul#global {
+    width:67.2%;
+    padding-left:5px;
+     &>li { 
+      width:16.66666%;
+      
+      &.name a {
+        padding:0 15px;line-height:95px;
+        font-size:80px !important;
+      }
+     
+      a:not(.button) { 
+        text-transform:uppercase;
+        background:$cream;
+        color:$mainColor;
+        line-height:$topBarHeight - 10;
+        height: $topBarHeight - 10;
+        margin-top:5px;
+        text-align:center;
+        margin-right:5px;
+        @include font-size(12);
+        padding:0;
+        text-align:center;
+        @include  transition(transform 0.3s);
+        @include transform-style(preserve-3d);
+
+
+      }
+      &.has-dropdown {
+        a {
+          padding-right:0;
+          &:after {
+            display:none;
+          }
+          
+        }
+        .dropdown {
+          width:auto;
+          padding:0;
+          right:0;
+          left:-5px;
+          height:auto;
+          border-left:5px solid $navy;
+          li { 
+            padding-bottom:0;
+            &:last-child {
+              padding-bottom:5px;
+            }
+            a {
+              font-weight:bold;
+            }
+            &:hover, &.active, &:focus {
+              > a { 
+                color:$red;
+
+               // @include transform(rotateX( 180deg ));
+              }
+            }
+          }
+        }
+      } 
+      &:not(.name), &:not(.divider), &:not(.has-dropdown) {
+        &:hover, &.active, &:focus {
+          > a { 
+            color:$red;
+            background:$white;
+            //@include transform(rotateX( 180deg ));
+          }
+        }
+        &.current-menu-item > a,   
+        &.current-menu-item:hover > a, 
+        &.current-menu-parent > a, 
+        &.current-menu-parent > a:hover,
+        &.current-menu-parent .current-menu-item > a,
+        &.current-menu-parent .current-menu-item > a:hover {
+          background:url(../images/stripe.png);
+          color: darken($navy, 30%);
+          @include transform(rotateX( 0deg ));
+
+
+        }
+      }
+    }
+  }
+}
+
+

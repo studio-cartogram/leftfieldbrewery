@@ -1,0 +1,99 @@
+//Nav Changes
+
+@media only screen and (max-width: $topBarBreakPoint) {
+  .top-bar {
+    ul li.name {
+      background:$navy;
+    }
+    ul#global { 
+      width: 100%;
+      li, li.has-dropdown .dropdown {
+        width:100%;
+        h5 {
+          text-align:center;
+          padding-left:0 !important;
+          margin-left:0 !important;
+          a {
+            background:none;
+            color:$cream;
+            text-align:left;
+            padding:0 !important;
+            margin:0 !important;
+            display:inline-block;
+            &:before {  
+              left:-20px;
+            }
+          }
+        }
+      }
+    }
+    ul#social {
+      width:100%;
+    }
+    &.expanded ul li.toggle-topbar a {
+      border-bottom-color:$red;
+    }
+    section > ul li a:not(.button) {
+      padding-right:10px !important;
+      padding-left:10px !important;
+    }
+  }  
+  h2.header-text {
+    margin:10px 0;
+  }
+}
+
+
+@media only screen and (max-width: $screenSmall + 1) and (min-width: $screenSmall ) {
+    ul#global li a {
+      font-size:11px !important;
+    }
+    .list-contact li a h5 {
+      padding-left:3px;
+    }
+    .flip-container .front p {
+      @include font-size(12);
+      line-height: 1.4;
+    }
+}
+
+
+@media only screen and (max-width: 825px) and (min-width: $screenSmall ) {
+    .flip-container .front p {
+      @include font-size(12);
+      line-height: 1.4;
+    }
+}
+
+//Small Screen Changes
+@media only screen and (max-width: $screenSmall - 1) {
+  body {
+    overflow-x:hidden;
+    width:auto;
+   
+  }
+  .row.flushed-right {
+    margin-right:0 !important;
+  }
+  .row.flushed-left {
+    margin-left:0 !important;
+  }
+  .post-text, .mobile-flush {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+  #container-navigation .row .twelve {
+    margin:0;
+    padding:0;
+  }
+  .flexslider-instagram, .flexslider-beers {
+    padding:0;
+    .corner-one, .corner-two, .corner-three, .corner-four {
+      display:none;
+    }
+  }
+  .sidebar > h3 {
+    border-bottom:1px solid;
+  }
+
+}

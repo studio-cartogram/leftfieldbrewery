@@ -6,7 +6,11 @@ function gfapiCalculateSig(stringToSign, privateKey) {
 
 
 function gfapiToggleSettings(enabled) {
-    jQuery("#gform_section_authentication").toggle(enabled);
+    jQuery("#gaddon-setting-row-public_key").toggle(enabled);
+    jQuery("#gaddon-setting-row-private_key").toggle(enabled);
+    jQuery("#gaddon-setting-row-impersonate_account").toggle(enabled);
+    jQuery("#gaddon-setting-row-developer_tools").toggle(enabled);
+    jQuery("#gaddon-setting-row-qrcode").toggle(enabled);
 }
 
 jQuery(document).ready(function () {

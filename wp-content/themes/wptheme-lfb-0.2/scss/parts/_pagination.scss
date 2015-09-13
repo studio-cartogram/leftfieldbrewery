@@ -1,0 +1,13 @@
+#pagination {
+  .pagination-arrow a {
+    @extend .direction-nav; 
+  }
+
+  .pagination-link a  {
+    @extend .button-link;
+    @extend .expand; 
+    @extend .button;
+    padding:0;
+    left: auto;
+  }
+}
