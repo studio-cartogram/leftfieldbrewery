@@ -62,7 +62,7 @@
 		</ul>
 	</div>
 </div>		
-<h3 class="rule-left text-center ">Ways to Get in Touch </h3>
+<h3 class="rule-left text-center ">Visit</h3>
 	<div class="row collapse flushed-right">
         <div class="columns twelve double-bordered">
         </div>

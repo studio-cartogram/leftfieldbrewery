@@ -2,5 +2,7 @@
 /.htaccess
 wp-config.php
 wp-content/themes/wptheme-lfb-0.1/.sass-cache
+wp-content/themes/wptheme-lfb-0.2/node_modules
+wp-content/themes/uploads/*
 _modular-scale.sassc
 /wp-content/plugins/instagrate-to-wordpress/debug.txt

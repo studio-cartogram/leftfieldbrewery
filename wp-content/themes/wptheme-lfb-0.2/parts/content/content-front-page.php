@@ -3,7 +3,67 @@
 <div class="row  <?php echo $slug; ?>">
 	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four mobile-flush rule-left"); ?>>	
 		<?php the_title('<h3 class="rule-right text-center">','</h3>') ?>
-		<?php get_template_part('parts/slideshows/slideshow'); ?>
+        <?php get_template_part('parts/slideshows/slideshow'); ?>
+        <div class="row">
+            <div class="columns twelve atthebrewery">
+				<div class="row flushed-left collapse">
+					<div class="columns double-bordered twelve  ">
+						<h3 class="text-center rule-right ">In the Brewery</h3>
+					</div>
+				</div>
+				<div class="row text-center flushed-left collapse">
+                    <?php
+                        $posts = get_posts(array(
+                            'post_type' => 'beers',
+                            'posts_per_page' => -1,
+                            'meta_query' => array(
+                                array(
+                                    'key' => 'at_the_brewery',
+                                    'value' => '1',
+                                    'compare' => '=='
+                                )
+                            )
+                        ));
+
+                    if( $posts ) { ?>
+                                <div class="row border-bottom collapse"> 
+                                    <div class="columns six  ">
+                                        <h4>Beer</h4>
+                                    </div>
+                                    <div class="columns two"> 
+                                        <h4>Tall Cans</h4> 
+                                    </div>
+                                    <div class="columns two ">
+                                        <h4>650ml Bottles</h4>
+                                    </div>
+                                    <div class="columns two rule-right">
+                                        <h4>On Tap</h4>
+                                    </div>
+                                </div>
+                                <?php foreach( $posts as $post ) {
+                                setup_postdata( $post );?>
+                                <div class="row equal-heights collapse"> 
+                                    <div class="columns six  bg-cream rule-right">
+                                        <?php the_title('<h5>', '</h5>');?>
+                                    </div>
+                                    <div class="columns two bg-cream rule-right">
+                                        <?php echo (get_field('in_cans') ? '<span class="check">&times;</span>' : '&nbsp;'); ?>
+                                    </div>
+                                    <div class="columns two bg-cream rule-right">
+                                        <?php echo (get_field('in_bottles') ? '<span class="check">&times;</span>' : '&nbsp;'); ?>
+                                    </div>
+                                    <div class="columns two bg-cream rule-right">
+                                        <?php echo (get_field('on_tap') ? '<span class="check">&times;</span>' : '&nbsp;');?>
+                                    </div>
+                                </div>
+                            <?php }
+                            wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
+                        }
+
+                    ?>
+				</div>
+            </div>
+        </div>
 		<div class="row">
 			<div class="columns seven rule-right">
 				<div class="row">
