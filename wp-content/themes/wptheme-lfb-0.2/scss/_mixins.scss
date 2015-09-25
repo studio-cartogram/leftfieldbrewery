@@ -1,0 +1,116 @@
+@mixin double-bordered($outside-right:false, $inside-right:false, $outside-left:false, $inside-left:false, $color:$navy) {
+  position:relative;
+  &:before, &:after {
+    height:1px;
+    background:$color;
+    content:' ';
+    position:absolute;
+    right:0px;
+    left:0;
+    top:-3px;
+    @if $outside-right == true {
+      right:-15px;
+    }
+    @if $inside-right == true {
+      right:15px;
+    }
+    @if $outside-left == true {
+      left:-15px;
+    }
+    @if $inside-left == true {
+      left:15px;
+    }
+  }
+  &:after {
+    top:0px
+  }
+}
+
+@mixin corner($location) {
+  height:1px;
+  width:1px;
+  border-left:30px solid tranparent;
+  border-top:30px solid transparent;
+  border-bottom:30px solid transparent;
+  border-right:30px solid $navy;
+  content:' ';
+  position:absolute;
+  z-index:10;
+  @include rotate(45deg);
+  @if $location == top-right {
+    top:0px;
+    right:0px;
+    left:auto;
+    border-left:30px solid $navy;
+    border-right-color:transparent;
+    @include rotate(-45deg);
+  } @else if $location == top-left {
+    left: 25px;
+    top: 11px;
+  } @else if $location == bottom-right {
+    bottom:1px;
+    top:auto;
+    right:0px;
+    left:auto;
+    border-left:30px solid $navy;
+    border-right-color:transparent;
+  } @else if $location == bottom-left {
+    top:auto;
+    left:25px;
+    bottom:11px;
+    @include rotate(-45deg);
+  }
+}
+
+@mixin rule($location, $outside:false, $color:$navy, $inside:false, $mobile:false) {
+  position:relative;
+  @if $location == left {
+    &:before {
+      position:absolute;
+      content:'';
+      height:auto;
+      top:0;
+      bottom:0;
+      left:-1px;
+      z-index:10;
+      width:1px;
+      background:$color;
+      @if $outside == true {
+        left:-15px;
+      }
+      @if $inside == true {
+        left:15px;
+      }
+      @if $mobile == false {
+        @media only screen and (max-width: $screenSmall - 1) {
+          display:none;
+        }
+      }
+    }
+  }
+  @if $location == right {
+    &:after {
+      position:absolute;
+      content:'';
+      height:auto;
+      top:0;
+      bottom:0;
+      left:auto;
+      right:0px;
+      width:1px;
+      background:$color;
+      @if $outside == true {
+        right:-15px;
+      }
+      @if $inside == true {
+        right:15px;
+      }
+      @if $mobile == false {
+        @media only screen and (max-width: $screenSmall - 1) {
+
+          display:none;
+        }
+      } 
+    }
+  }
+}

@@ -15,8 +15,6 @@
 
         var checkLocksKey = 'gform-check-locked-objects-' + objectType;
 
-        wp.heartbeat.interval( 30 );
-
         $(document).on('heartbeat-tick.' + checkLocksKey,function (e, data) {
             var locked = data[checkLocksKey] || {};
 

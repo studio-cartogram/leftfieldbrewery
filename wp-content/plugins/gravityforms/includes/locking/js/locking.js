@@ -22,10 +22,9 @@
     function lock_request_timedout() {
         $("#gform-lock-request-status").html(strings.noResponse);
         $("#gform-lock-request-button").attr("disabled", false).text(strings.requestAgain);
-        lockRequestInProgress = false;
+        lockRequestInProgress = false
         rejectionRequestTimeout = true;
         rejectionCountdown = false;
-        wp.heartbeat.interval( 30 );
     }
 
     function initUI() {
@@ -36,8 +35,7 @@
             $("#gform-lock-request-status").html("");
             rejectionRequestTimeout = false;
             lockRequestInProgress = true;
-            wp.heartbeat.interval( 5 );
-            rejectionCountdown = setTimeout(lock_request_timedout, 120000);
+            rejectionCountdown = setTimeout(lock_request_timedout, 30000);
             $.getJSON(ajaxurl, { action: "gf_lock_request_" + objectType, object_id: objectID })
                 .done(function (json) {
                     $("#gform-lock-request-status").html(json.html);
@@ -65,8 +63,6 @@
 
     function initHeartbeat() {
 
-        wp.heartbeat.interval( 30 );
-
         $("#wpfooter").append(lockUI);
 
         // todo: refresh nonces
@@ -93,7 +89,7 @@
             var send = {};
 
             if (!lockRequestInProgress)
-                return data;
+                return;
 
             send['objectID'] = objectID;
 

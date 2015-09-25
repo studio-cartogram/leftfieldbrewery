@@ -1,0 +1,457 @@
+/**
+  * Shared
+  *
+  */
+
+
+
+
+/**
+  * Home Page
+  *
+  */
+.screen {
+    overflow: hidden;
+    position: relative;
+    margin-right:-15px;
+    z-index: 5;
+    margin-left:-1px;
+	border-left:1px solid $navy;
+	margin-bottom:3px;
+}
+  .scrollshadow {
+    font-family: monospace;
+    border-top:1px solid $navy;
+    max-height: 700px;
+    overflow-y: auto;
+    overflow-x:hidden;
+    margin-bottom:-3px;
+    padding: 0rem 0 0;
+    position: relative;
+
+
+	ul {
+	    list-style-type: none;
+	    position: static;
+	    margin-bottom: -1rem; /*colisión de estilos con codepen*/
+	}
+}
+
+.screen:before {
+    border-radius: 60%/10px;
+    box-shadow: 2px 0 10px 3px rgba(0, 0, 0, 0.8);
+    content: "";
+    height: 47px;
+    left: 0;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+}
+.screen:after {
+    border-radius: 60%/10px;
+    box-shadow: -2px 0 10px 2px rgba(0, 0, 0, 0.6);
+    content: "";
+    height: 20px;
+    left: 0;
+    margin-left: 10%;
+    position: absolute;
+    bottom: -20px;
+    width: 80%;
+}
+.scrollshadow ul:before {
+    background: $cream;
+    content: "";
+    display: block;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0rem;
+    width: 100%;
+    z-index: 8;
+}
+.scrollshadow ul:after {
+    background: $cream;
+    content: "";
+    display: block;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0rem;
+    z-index: 8;
+    width:1px;
+    background:$navy;
+    left:16.66667%;
+    margin-left:-1px;
+}
+
+
+.vendor-listing {
+	@include double-bordered(true, false, false, false);
+	background:$cream;
+	margin-right:-15px;
+	padding-right:15px;
+	.lead {
+		position:relative;
+		padding:20px 0 40px 80px;
+		margin:1px 0 0 ;
+		@include rule(left);
+		color:$navy;
+		background:$cream;
+	}
+	.button.expand {
+		border-left:none;
+	}
+	.icon-tap {
+		@include font-size(60);
+		position:absolute;
+		left:15px;
+		top:5px;
+		color:$navy;
+	}
+	ul {
+		margin:0;
+		padding:0;
+		list-style:none;
+		li {
+
+			a.block-level {
+			  display:block;
+			  overflow:hidden;
+			  height:55px;
+			}
+			@include double-bordered(true, false);
+			.icon-wrap {
+				@include rule(right);
+			}
+			.icon {
+				@include font-size(20);
+				color:$navy;
+				padding:10px 0px;
+				margin:auto;
+				display:block;
+			}
+			&.bar .icon { @extend .icon-bar;}
+			&.brew-pub .icon { @extend .icon-brewpub;}
+			&.restaurant .icon { @extend .icon-restaurant;}
+			&.bar-restaurant .icon { @extend .icon-bar-restaurant;}
+			.rule-right {
+				position:static;
+				&:after {
+					right:-15px;
+				}
+			}
+			.map-wrap {
+				height:51px;
+				opacity:0;
+				z-index:10;
+				@include transition(0.3s opacity ease);
+				background:url(../images/stripe.png);
+				position:relative;
+				left:-2px;
+				top:1px;
+				h4 {
+					padding:20px 0;
+				}
+			}
+			&:hover .map-wrap {
+				opacity:1;
+			}
+		}
+	}
+}
+
+/**
+  * About Page
+  *
+  */
+
+.slides-players {
+	margin:0;
+	list-style:none;
+}
+
+.flexslider-players {
+	.corner-one {
+  		top: -20px;
+		left: -6px;
+		z-index:1;
+  	}
+  	.corner-two {
+  		top: -31px;
+		right: -31px;
+		z-index:1;
+  	}
+  	.corner-three {
+  		bottom:13px;
+  		right:-31px;
+		z-index:1;
+  	}
+  	.corner-four {
+  		left: -5px;
+		bottom: 23px;
+		z-index:1;
+  	}
+}
+
+.flip-container {
+ 	@include perspective(1000);
+  	background:$navy;
+  	width:100%;
+  	overflow:hidden;
+  	width: 100%;
+	height: 500px;
+  	.flip {
+  		position:absolute;
+  		z-index:1000;
+		@include font-size(16);
+		color: $navy;
+		position: absolute;
+		padding: 0px 10px 30px;
+		cursor:pointer;
+		right: 0px;
+		display:block;
+		&:hover, &:hover i {
+
+		}
+		i {
+			display:block;
+		}
+		@include transition(all 0.3s ease);
+		&#to-front {
+	 		opacity:0;
+	 		@include backface-visibility(visible);
+	 	}
+	 	&#to-back {
+	 		opacity:1;
+	 	}
+
+  	}
+  	&.hover {
+  		.flipper {
+  	 		@include transform(rotateY(180deg));
+  	 	}
+  	 	.flip#to-front {
+	 		opacity:1;
+  	 	}
+  	 	.flip#to-back {
+	 		opacity:0;
+  	 	}
+  	}
+  	.name {
+		left: -1px;
+		bottom:0px;
+		border:none;
+		position: absolute;
+		border-top:none;
+		border-bottom:1px solid $navy;
+	}
+	.front, .back {
+		@include backface-visibility(hidden);
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align:center;
+		width: 100%;
+		height: 500px;
+		.back-logo, .big-icon {
+			@include font-size(100);
+			margin:auto;
+			color:$white;
+			display:block;
+			height:100px;
+			margin-top:30px;
+			width:200px;
+			line-height:0;
+			position:relative;
+		}
+		p {
+			color:$white;
+			padding:15px 30px;
+			@include font-size(13);
+			font-weight:600;
+		}
+		h2 {
+			color:$white;
+		}
+
+	}
+
+	.front {
+		z-index: 2;
+		.playholder-players {
+			@extend .icon-placeholder;
+		}
+		.corner-two {
+			border-left-color:$cream;
+		}
+
+
+	}
+
+	.back {
+		@include transform(rotateY(180deg));
+		background: $white;
+		.flip {
+			color:$cream;
+		}
+	}
+
+
+}
+
+.flipper {
+	@include transition(0.6s);
+	@include  transform-style(preserve-3d);
+	position: relative;
+}
+
+.no-csstransforms3d .flip-container {
+	.flipper {
+ 		.back {
+ 			display:none;
+ 		}
+ 		.front {
+ 			display:block;
+ 		}
+ 	}
+ 	&.hover {
+ 		.back {
+ 			display:block;
+ 		}
+ 		.front {
+ 			display:none;
+ 		}
+ 	}
+}
+
+
+/**
+  * Beers Page
+  *
+  */
+
+.sidebar-beer .corner-two {
+	top: -31px;
+	right: -31px;
+	z-index:1;
+	border-left-color:$white;
+
+
+	// remove once content is added
+	display:none;
+
+}
+
+.sidebar-beer .flip-container .flip {
+	padding-top:3px;
+
+	// remove once content is added
+	display:none;
+
+}
+
+.single-beers .flip-container {
+	border-bottom: 1px solid #0c223f;
+	height:530px;
+}
+
+.sunlight-park .flip-container .front {
+	p, h2, h3, .big-icon {
+		color:$navy;
+	}
+	h3.beer-tagline:after {
+		background:$navy;
+	}
+}
+
+.multi-svg object {
+    width:110px;
+    height:105px;
+}
+
+
+/**
+  * Contact Page
+  *
+  */
+
+
+.list-contact {
+	list-style:none;
+	margin:0;
+	h5 {
+		padding-bottom:6px;
+		margin-top:6px;
+		@extend .border-bottom;
+	}
+	li:last-child .border-bottom-white {
+		border-color:$navy !important;
+	}
+	li a:hover {
+		h5 {
+			color:$red;
+		}
+		h4 {
+			background:$red;
+		}
+	}
+}
+
+/**
+  * Highlights Page
+  *
+  */
+
+.tags-wrap {
+	@include double-bordered(false, false, false, false,  $white);
+	padding-top:3px;
+	color:$white;
+	a {
+		color:$white;
+		line-height: 1.6;
+		&:hover {
+			color:$red;
+		}
+	}
+	.tag-cloud {
+		@include double-bordered(false, false, false, false,  $white);
+	}
+}
+
+.categories-wrap {
+	@include double-bordered();
+}
+
+.list-categories {
+	margin:-3px 0 0 0 !important;
+	@extend .bg-navy;
+	padding-bottom: 2px;
+	@include double-bordered(false, false, false, false,  $white);
+	&:before {
+		top:3px;
+	}
+	li {
+		padding-top:8px !important;
+		padding-bottom:8px !important;
+		@extend .border-bottom-white;
+		@include rule(right, false, $white);
+		text-align:center;
+		overflow:hidden;
+		&.active a:after, a:hover:after {
+			content: ' ';
+			position:absolute;
+			width:305px;
+			border-bottom:1px solid white;
+			@include transform(rotate(-12deg));
+			left:-4px;
+			top:2px;
+			z-index:0;
+
+		}
+	}
+	li:nth-child(2), li:nth-child(1) {
+		margin-top:3px;
+	}
+}

@@ -1,0 +1,86 @@
+body {
+  background:url(../images/bg.png);
+}
+.banner > .row {
+  position:relative;
+  height:3px;
+  > .columns {
+    @extend .bg-navy;
+    height:3px;
+    right:15px;
+    left:15px;
+    position:absolute;
+    width:auto;
+  }
+}
+
+.direction-nav {
+  color:$cream;
+  line-height:46px;
+  @include font-size(16);
+  text-align:center;
+  display:block;
+  &:hover {
+    background:$cream;
+    color:$navy;
+  }
+}
+
+.homehighlightreel .format-text.twelve {
+  min-height:155px;
+}
+
+#container-site {
+  width:100%;
+  overflow:hidden;
+  @include double-bordered();
+  &:before {
+    top:40px; 
+    z-index:9;
+  }
+  &:after {
+    top:43px;
+  }
+ }
+
+ #container-navigation {
+  position:relative;
+  @include double-bordered();
+  &:before {
+    bottom:0;
+    top:auto;
+    z-index:9;
+  }
+  &:after {
+    top:auto;
+    bottom:3px;
+  }
+ }
+
+ .post-small {
+  min-height:200px;
+ }
+
+.post-12 .post-text {
+  padding-bottom:155px !important;
+}
+
+.browseralert {
+  width:100%;
+  background-color:$red;
+  text-align:center;
+  margin:0px auto;
+  .leftfield_message {
+    margin:10px 0;
+  }
+  p, a, a:hover {
+    margin:0;
+    color:$cream !important;
+  }
+  a:hover {
+    color:$navy;
+  }
+}
+
+
+
