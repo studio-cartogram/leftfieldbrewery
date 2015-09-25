@@ -98,6 +98,21 @@ gulp.task('fonts', function () {
     .pipe($.size({title: 'fonts'}));
 });
 
+//SVGS
+gulp.task('svgs', function () {
+    var config = {
+    mode: {
+        symbol: {
+            sprite:'svgs.php',
+            inline: true,
+            dest: '../'
+        }
+    }}
+    gulp.src(['images/**/*.svg'], {cwd: paths.src})
+        .pipe($.svgSprite(config))
+        .pipe(gulp.dest(paths.src));
+});
+
 // copy legacy code to dist
 gulp.task('v1', function () {
     gulp.src([
@@ -119,6 +134,7 @@ gulp.task('clean', del.bind(null, ['.tmp', paths.dist], {dot: true}));
 gulp.task('default', [
     'styles',
     'images',
+    'svgs',
     'fonts',
     'v1',
     'scripts'
