@@ -111,7 +111,7 @@ $font-secondary: "haymakerregular","Helvetica Neue","Helvetica",Helvetica,Arial,
         height:7px;
         width:7px;
         background:$navy;
-        transform:rotate(-45deg);
+        transform: translate(-50%, -50%) rotate(-45deg);
         content: ' ';
     }
 }
