@@ -12,12 +12,12 @@ $base-size: 30px;
 
 //File icons.scss
 .icon--small {
-    width: 70%;
+    width: $base-size;
+    height: $base-size;
 }
 
 .icon--large {
-    width: $base-size;
-    height: $base-size;
+    width: 70%;
 }
 
 .beer-icon {
