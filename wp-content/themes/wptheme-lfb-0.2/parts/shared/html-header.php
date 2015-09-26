@@ -66,4 +66,5 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 
-		</script>
+        </script>
+        <?php get_template_part('svgs') ?>

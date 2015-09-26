@@ -1,0 +1,148 @@
+//config.colors
+$navy : #0c223f;
+$cream : #fefcf8;
+$cream-dark : #F7F5F1;
+
+.bg-cream-dark {
+    background: $cream-dark;
+}
+
+//config.sizes
+$base-size: 30px;
+
+//File icons.scss
+.icon--small {
+    width: $base-size;
+    height: $base-size;
+}
+
+.beer-icon {
+    position: absolute;
+    left: 15px;
+    top: 13px;
+}
+
+//File helpers.scss
+
+.block {
+    display:block;
+}
+.soft-quarter {
+    padding:$base-size/4;
+}
+.soft-half {
+    padding:$base-size/2;
+}
+.soft-half--left {
+    padding-left:$base-size/2;
+}
+
+.soft {
+    padding:$base-size;
+}
+.soft--left {
+    padding-left:$base-size ;
+}
+
+.soft-double--left {
+    padding-left:$base-size * 2;
+}
+
+.centered {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:100%;
+}
+//Typography
+
+$font-secondary: "haymakerregular","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+
+.delta {
+    display:block;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:rem-calc(16);
+}
+.beta {
+    display:block;
+    font-size:rem-calc(26);
+    line-height:3.5;
+    font-family: $font-secondary; 
+}
+.zeta {
+    display:block;
+    font-size:rem-calc(16);
+    line-height:1.5;
+    padding:$base-size/2;
+}
+//Components
+.atthebrewery {
+    border-bottom:1px solid $navy;
+    @media only screen and (min-width: 768px) { 
+        border-bottom:none;
+    }
+}
+.atthebrewery__row {
+    &, .columns {
+        height:52px;
+    }
+
+    background:$cream;
+
+    &:nth-of-type(odd) {
+        background:$cream-dark;
+    }
+}
+
+.check {
+    display: block;
+    width:100%;
+    &, &:before {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+    }
+
+    &:before {
+        height:7px;
+        width:7px;
+        background:$navy;
+        transform:rotate(-45deg);
+        content: ' ';
+    }
+}
+
+.check-text {
+    display:none;
+}
+
+.atb__col--large {
+    width: 55% !important;
+    float:left !important;
+    overflow:hidden;
+    position: relative;
+}
+.atb__col--medium {
+    width: 24% !important;
+    float:left !important;
+}
+.atb__col--small {
+    width: 15% !important;
+    float:left !important;
+}
+
+@media only screen and (min-width: 768px) { 
+    .atb__col--large {
+        width: 40% !important;
+    }
+    .atb__col--medium {
+        width: 24% !important;
+    }
+    .atb__col--small {
+        width: 12% !important;
+    }
+}

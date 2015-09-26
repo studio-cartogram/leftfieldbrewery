@@ -1,6 +1,6 @@
 <?php global $slug;
 ?>
-<div class="row  <?php echo $slug; ?>">
+<div class="row  ">
 	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four mobile-flush rule-left"); ?>>	
 		<?php the_title('<h3 class="rule-right text-center">','</h3>') ?>
         <?php get_template_part('parts/slideshows/slideshow'); ?>
@@ -8,7 +8,7 @@
             <div class="columns twelve atthebrewery">
 				<div class="row flushed-left collapse">
 					<div class="columns double-bordered twelve  ">
-						<h3 class="text-center rule-right ">In the Brewery</h3>
+						<h3 class="soft text-center rule-right ">At the Brewery</h3>
 					</div>
 				</div>
 				<div class="row text-center flushed-left collapse">
@@ -26,34 +26,44 @@
                         ));
 
                     if( $posts ) { ?>
-                                <div class="row border-bottom collapse"> 
-                                    <div class="columns six  ">
-                                        <h4>Beer</h4>
+                                <div class="atthebrewery__heading-row row border-top border-bottom collapse"> 
+                                    <div class="text-left columns atb__col--large  ">
+                                        <span class="delta soft-quarter soft-half--left">Beer</span>
                                     </div>
-                                    <div class="columns two"> 
-                                        <h4>Tall Cans</h4> 
+                                    <div class="columns hide-for-small atb__col--medium "> 
+                                        <span class="delta soft-quarter">Style</span>
                                     </div>
-                                    <div class="columns two ">
-                                        <h4>650ml Bottles</h4>
+                                    <div class="columns atb__col--small"> 
+                                        <span class="delta soft-quarter">Can</span>
                                     </div>
-                                    <div class="columns two rule-right">
-                                        <h4>On Tap</h4>
+                                    <div class="columns atb__col--small ">
+                                        <span class="delta soft-quarter">Bottle</span>
+                                    </div>
+                                    <div class="columns atb__col--small rule-right">
+                                        <span class="delta soft-quarter">Tap</span>
                                     </div>
                                 </div>
                                 <?php foreach( $posts as $post ) {
-                                setup_postdata( $post );?>
-                                <div class="row equal-heights collapse"> 
-                                    <div class="columns six  bg-cream rule-right">
-                                        <?php the_title('<h5>', '</h5>');?>
+                                setup_postdata( $post );
+                                $color = get_post_meta( $post->ID, '_cartogram_color_value', TRUE ); ?>
+
+                                <div class="row atthebrewery__row collapse"> 
+
+                                    <div style="color: <?php echo $color; ?>" class="columns atb__col--large text-left rule-right">
+                                        <svg class="icon--small beer-icon"><use xlink:href="#<?php echo $post->post_name; ?>-color"></use></svg>
+                                        <?php the_title('<span class="beta soft-double--left beer-title">', '</span>');?>
                                     </div>
-                                    <div class="columns two bg-cream rule-right">
-                                        <?php echo (get_field('in_cans') ? '<span class="check">&times;</span>' : '&nbsp;'); ?>
+                                    <div class="columns atb__col--medium hide-for-small  rule-right">
+                                        <?php echo '<span class="centered zeta">' . get_post_meta( $id, '_cartogram_short_description_value', TRUE ) . '</span>' ;?>
                                     </div>
-                                    <div class="columns two bg-cream rule-right">
-                                        <?php echo (get_field('in_bottles') ? '<span class="check">&times;</span>' : '&nbsp;'); ?>
+                                    <div class="columns atb__col--small rule-right ">
+                                        <?php echo (get_field('in_cans') ? '<span class="check-text">In Cans</span><span class="check"></span>' : '&nbsp;'); ?>
                                     </div>
-                                    <div class="columns two bg-cream rule-right">
-                                        <?php echo (get_field('on_tap') ? '<span class="check">&times;</span>' : '&nbsp;');?>
+                                    <div class="columns atb__col--small rule-right ">
+                                        <?php echo (get_field('in_bottles') ? '<span class="check-text">In Bottles</span><span class="check"></span>' : '&nbsp;'); ?>
+                                    </div>
+                                    <div class="columns atb__col--small rule-right ">
+                                        <?php echo (get_field('on_tap') ? '<span class="check-text">On Tap</span><span class="check"></span>' : '&nbsp;');?>
                                     </div>
                                 </div>
                             <?php }
