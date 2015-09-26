@@ -12,6 +12,10 @@ $base-size: 30px;
 
 //File icons.scss
 .icon--small {
+    width: 70%;
+}
+
+.icon--large {
     width: $base-size;
     height: $base-size;
 }

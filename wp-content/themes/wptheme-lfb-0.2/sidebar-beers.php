@@ -14,7 +14,7 @@
 							the_title('<h2 class="light beer-name beer-block">', '</h2>');
 							echo '<h3 class="light beer-tagline">' . get_post_meta( $id, '_cartogram_short_description_value', TRUE ) . '</h3>';
                             echo '<div class="back-logo big-icon multi-svg">';
-                            echo '<svg class="icon--large"><use xlink:href="#' . $post->post_name . '"></use</svg>';
+                            echo '<svg class="centered icon--large"><use xlink:href="#' . $post->post_name . '"></use</svg>';
 							echo '</div>';
 							the_content();
 						?>
