@@ -574,11 +574,7 @@ add_filter('found_posts', 'myprefix_adjust_offset_pagination', 1 );
 if( function_exists('acf_add_options_page') ) {
  
 	$page = acf_add_options_page(array(
-		'page_title' 	=> 'Theme General Settings',
-		'menu_title' 	=> 'Theme Settings',
-		'menu_slug' 	=> 'theme-general-settings',
-		'capability' 	=> 'edit_posts',
-		'redirect' 	=> false
+		'page_title' 	=> 'At the Brewery'
 	));
  
 }
