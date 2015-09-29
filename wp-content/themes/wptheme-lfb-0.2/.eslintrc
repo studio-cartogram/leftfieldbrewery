@@ -4,7 +4,10 @@
         "forOf": true,
         "jsx": true,
         "modules": true,
-        "classes": true
+        "arrowFunctions": true,
+        "classes": true,
+        "spread": true,
+        "destructuring":true
     },
     "rules": {
         "semi": 2

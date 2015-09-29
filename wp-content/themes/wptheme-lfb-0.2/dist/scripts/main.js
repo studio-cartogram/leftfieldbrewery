@@ -41526,8 +41526,6 @@ var _googleMapReact = require('google-map-react');
 
 var _googleMapReact2 = _interopRequireDefault(_googleMapReact);
 
-var _markerStylesJs = require('./markerStyles.js');
-
 var Vendor = (function (_React$Component) {
     _inherits(Vendor, _React$Component);
 
@@ -41542,8 +41540,8 @@ var Vendor = (function (_React$Component) {
         value: function render() {
             return _react2['default'].createElement(
                 'div',
-                { style: _markerStylesJs.markerStyle },
-                this.props.lat
+                { className: 'brew-finder__marker' },
+                this.props.text
             );
         }
     }]);
@@ -41554,15 +41552,42 @@ var Vendor = (function (_React$Component) {
 var Map = (function (_React$Component2) {
     _inherits(Map, _React$Component2);
 
-    function Map() {
+    function Map(props) {
         _classCallCheck(this, Map);
 
-        _get(Object.getPrototypeOf(Map.prototype), 'constructor', this).apply(this, arguments);
+        _get(Object.getPrototypeOf(Map.prototype), 'constructor', this).call(this, props);
+        this.state = { data: [] };
     }
 
     _createClass(Map, [{
+        key: 'loadDataFromServer',
+        value: function loadDataFromServer() {
+            var _this = this;
+
+            $.ajax({
+                url: this.props.url,
+                dataType: 'jsonp',
+                success: function success(data) {
+                    _this.setState({ data: data.result });
+                    console.log(data.result[0].name);
+                },
+                error: function error(xhr, status, err) {
+                    console.error(_this.props.url, status, err.toString());
+                }
+            });
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.loadDataFromServer();
+        }
+    }, {
         key: 'render',
         value: function render() {
+            var vendorNodes = this.state.data.map(function (vendor) {
+                console.log(vendor, vendor.name, vendor.id);
+                return _react2['default'].createElement(Vendor, { text: vendor.quantity, lat: vendor.latitude, key: vendor.id, lng: vendor.longitude });
+            });
             return _react2['default'].createElement(
                 'div',
                 { className: 'brew-finder__container' },
@@ -41572,7 +41597,7 @@ var Map = (function (_React$Component2) {
                         className: 'brew-finder__map',
                         center: this.props.map.center,
                         zoom: this.props.map.zoom },
-                    _react2['default'].createElement(Vendor, { lat: 43.76159, lng: -79.411079 })
+                    vendorNodes
                 )
             );
         }
@@ -41581,38 +41606,10 @@ var Map = (function (_React$Component2) {
     return Map;
 })(_react2['default'].Component);
 
-var _map = { zoom: 4, center: [43.76159, -79.411079] };
-
-_react2['default'].render(_react2['default'].createElement(Map, { map: _map }), document.getElementById('map'));
-
-},{"./markerStyles.js":351,"google-map-react":6,"react":349}],351:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-var K_WIDTH = 40;
-var K_HEIGHT = 40;
-
-var markerStyle = {
-  // initially any map object has left top corner at lat lng coordinates
-  // it's on you to set object origin to 0,0 coordinates
-  position: 'absolute',
-  width: K_WIDTH,
-  height: K_HEIGHT,
-  left: -K_WIDTH / 2,
-  top: -K_HEIGHT / 2,
-
-  border: '5px solid #f44336',
-  borderRadius: K_HEIGHT,
-  backgroundColor: 'white',
-  textAlign: 'center',
-  color: '#3f51b5',
-  fontSize: 16,
-  fontWeight: 'bold',
-  padding: 4
+var _map = {
+    zoom: 11,
+    center: [43.76159, -79.411079]
 };
+_react2['default'].render(_react2['default'].createElement(Map, { url: 'http://lcboapi.com/stores?product_id=416818', map: _map }), document.getElementById('map'));
 
-exports.markerStyle = markerStyle;
-
-},{}]},{},[350]);
+},{"google-map-react":6,"react":349}]},{},[350]);

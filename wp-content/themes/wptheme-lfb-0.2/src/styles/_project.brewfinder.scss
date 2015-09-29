@@ -1,7 +1,29 @@
 $map-height: 400px;
+$marker-size: 30px;
 
 .brew-finder {
-    
+    height:100%;
+}
+
+.brew-finder__marker {
+    position: absolute;
+    height: $marker-size;
+    line-height: $marker-size;
+    top: -$marker-size / 2;
+    transform:translate(-50%, 0);
+    color:$cream;
+    background: $navy;
+    padding:5px;
+    &:after {
+        position:absolute;
+        top:100%;
+        left:50%;
+        transform:translate(-50%, -0%);
+        content:' ';
+        border:10px solid transparent;
+        border-top:10px solid $cream;
+        
+    }   
 }
 
 .brew-finder__container,
