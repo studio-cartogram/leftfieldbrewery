@@ -1,0 +1,20 @@
+
+.delta {
+    display:block;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:rem-calc(16);
+}
+.beta {
+    display:block;
+    font-size:rem-calc(26);
+    line-height:3.5;
+    font-family: $font-secondary; 
+}
+.zeta {
+    display:block;
+    font-size:rem-calc(16);
+    line-height:1.5;
+    padding:$base-size/2;
+}

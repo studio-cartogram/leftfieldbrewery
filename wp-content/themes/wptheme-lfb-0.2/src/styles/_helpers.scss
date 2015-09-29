@@ -1,0 +1,33 @@
+//File helpers.scss
+
+.block {
+    display:block;
+}
+.soft-quarter {
+    padding:$base-size/4;
+}
+.soft-half {
+    padding:$base-size/2;
+}
+.soft-half--left {
+    padding-left:$base-size/2;
+}
+
+.soft {
+    padding:$base-size;
+}
+.soft--left {
+    padding-left:$base-size ;
+}
+
+.soft-double--left {
+    padding-left:$base-size * 2;
+}
+
+.centered {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:100%;
+}
