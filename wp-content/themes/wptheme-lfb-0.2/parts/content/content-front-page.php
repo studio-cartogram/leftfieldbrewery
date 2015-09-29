@@ -12,20 +12,13 @@
 					</div>
 				</div>
 				<div class="row text-center flushed-left collapse">
-                    <?php
-                        $posts = get_posts(array(
-                            'post_type' => 'beers',
-                            'posts_per_page' => -1,
-                            'meta_query' => array(
-                                array(
-                                    'key' => 'at_the_brewery',
-                                    'value' => '1',
-                                    'compare' => '=='
-                                )
-                            )
-                        ));
 
-                    if( $posts ) { ?>
+            <?php 
+            ?>
+
+                    <?php $posts = get_field('beers_at_the_brewery', 'option'); 
+
+                    if( $posts ) : ?>
                                 <div class="atthebrewery__heading-row row border-top border-bottom collapse"> 
                                     <div class="text-left columns atb__col--large  ">
                                         <span class="delta soft-quarter soft-half--left">Beer</span>
@@ -43,34 +36,34 @@
                                         <span class="delta soft-quarter">Tap</span>
                                     </div>
                                 </div>
-                                <?php foreach( $posts as $post ) {
-                                setup_postdata( $post );
-                                $color = get_post_meta( $post->ID, '_cartogram_color_value', TRUE ); ?>
+                                <?php while(the_repeater_field('beers_at_the_brewery', 'option')) :
+                                        $beer = get_sub_field('beer');
+                                        $beer_icon = get_sub_field('beer_icon');
+                                        $beer_color = get_post_meta( $beer->ID, '_cartogram_color_value', TRUE ); ?>
 
                                 <div class="row atthebrewery__row collapse"> 
 
-                                    <div style="color: <?php echo $color; ?>" class="columns atb__col--large text-left rule-right">
-                                        <svg class="icon--small beer-icon"><use xlink:href="#<?php echo $post->post_name; ?>-color"></use></svg>
-                                        <?php the_title('<span class="beta soft-double--left beer-title">', '</span>');?>
+                                    <div style="color: <?php echo $beer_color; ?>" class="columns atb__col--large text-left rule-right">
+                                        <svg class="icon--small beer-icon"><use xlink:href="#<?php echo $beer_icon->post_name; ?>-color"></use></svg>
+                                        <?php echo '<span class="beta soft-double--left beer-title">' .get_the_title($beer->ID) . '</span>';?>
+
                                     </div>
                                     <div class="columns atb__col--medium hide-for-small  rule-right">
-                                        <?php echo '<span class="centered zeta">' . get_post_meta( $id, '_cartogram_short_description_value', TRUE ) . '</span>' ;?>
+                                        <?php echo '<span class="centered zeta">' . get_post_meta( $beer->ID, '_cartogram_short_description_value', TRUE ) . '</span>' ;?>
                                     </div>
                                     <div class="columns atb__col--small rule-right ">
-                                        <?php echo (get_field('in_cans') ? '<span class="check-text">In Cans</span><span class="check"></span>' : '&nbsp;'); ?>
+                                        <?php echo (get_sub_field('in_cans') ? '<span class="check-text">In Cans</span><span class="check"></span>' : '&nbsp;'); ?>
                                     </div>
                                     <div class="columns atb__col--small rule-right ">
-                                        <?php echo (get_field('in_bottles') ? '<span class="check-text">In Bottles</span><span class="check"></span>' : '&nbsp;'); ?>
+                                        <?php echo (get_sub_field('in_bottles') ? '<span class="check-text">In Bottles</span><span class="check"></span>' : '&nbsp;'); ?>
                                     </div>
                                     <div class="columns atb__col--small rule-right ">
-                                        <?php echo (get_field('on_tap') ? '<span class="check-text">On Tap</span><span class="check"></span>' : '&nbsp;');?>
+                                        <?php echo (get_sub_field('on_tap') ? '<span class="check-text">On Tap</span><span class="check"></span>' : '&nbsp;');?>
                                     </div>
                                 </div>
-                            <?php }
-                            wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
-                        }
+                            <?php endwhile;
+                    endif;?>
 
-                    ?>
 				</div>
             </div>
         </div>
