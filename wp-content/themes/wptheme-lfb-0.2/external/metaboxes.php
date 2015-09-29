@@ -94,14 +94,7 @@
 	    	"std" => "",
 	    	"title" => __('Food Pairings','cartogram'),
 	    	"description" => __('Enter food pairings.','cartogram')
-	    ),
-	    "mvp" => array(
-	    	"type" => "checkbox",
-			"name" => $prefix."mvp",
-	    	"std" => "",
-	    	"title" => __('MVP','cartogram'),
-	    	"description" => __('Check this box if this beer is to be featured on the home page.','cartogram')
-	    ),
+	    )
 	);
 
 	$meta_box_groups = array($vendor_options, $players_options, $beers_options);
