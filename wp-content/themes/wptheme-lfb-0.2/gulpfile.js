@@ -10,6 +10,9 @@ var browserSync = require('browser-sync');
 var pagespeed = require('psi');
 var reload = browserSync.reload;
 var args = require('yargs').argv;
+var browserify = require('browserify');
+var babelify = require('babelify');
+var source = require('vinyl-source-stream');
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -29,7 +32,7 @@ var paths = {
 // Lint JavaScript
 gulp.task('jshint', function () {
     return gulp.src([
-        paths.src + '/scripts/main.js'
+        paths.src + '/scripts/main.jsx'
     ])
     .pipe(reload({stream: true, once: true}))
     .pipe($.jshint())
@@ -38,15 +41,16 @@ gulp.task('jshint', function () {
 });
 
 // Optimize Scripts
-gulp.task('scripts',['jshint'], function () {
-    return gulp.src([paths.src + '/scripts/main.js'])
-    .pipe($.browserify({
-        insertGlobals : true,
-        debug : args.debug 
-    }))
-    .pipe($.print())
+gulp.task('scripts', function () {
+    browserify({
+        entries: paths.src + '/scripts/main.jsx',
+        extensions: ['.jsx'],
+        debug: args.debug 
+    })
+    .transform(babelify)
+    .bundle()
+    .pipe(source('main.js'))
     .pipe(gulp.dest(paths.dist + '/scripts'))
-    .pipe($.size({title: 'scripts'}));
 });
 
 // Build Vendor Script File
@@ -153,7 +157,7 @@ gulp.task('default', [
 
   gulp.watch(['**/*.php'], reload);
   gulp.watch([paths.src + '/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch([paths.src + '/scripts/**/*.js'], ['scripts']);
+  gulp.watch([paths.src + '/scripts/**/*.{js,jsx}'], ['scripts']);
   gulp.watch([paths.src + '/scripts/vendor/*.js'], ['vendor']);
   gulp.watch([paths.src + '/images/**/*'], reload);
 });

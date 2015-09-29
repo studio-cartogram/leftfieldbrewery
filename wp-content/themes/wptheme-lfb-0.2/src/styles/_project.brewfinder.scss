@@ -1,0 +1,11 @@
+$map-height: 400px;
+
+.brew-finder {
+    
+}
+
+.brew-finder__container,
+.brew-finder__map,
+.brew-finder__height {
+    height:$map-height;
+}
