@@ -41549,8 +41549,31 @@ var Vendor = (function (_React$Component) {
     return Vendor;
 })(_react2['default'].Component);
 
-var Map = (function (_React$Component2) {
-    _inherits(Map, _React$Component2);
+var VendorList = (function (_React$Component2) {
+    _inherits(VendorList, _React$Component2);
+
+    function VendorList() {
+        _classCallCheck(this, VendorList);
+
+        _get(Object.getPrototypeOf(VendorList.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(VendorList, [{
+        key: 'render',
+        value: function render() {
+            return _react2['default'].createElement(
+                'div',
+                { className: 'brew-finder__list' },
+                this.props.children
+            );
+        }
+    }]);
+
+    return VendorList;
+})(_react2['default'].Component);
+
+var Map = (function (_React$Component3) {
+    _inherits(Map, _React$Component3);
 
     function Map(props) {
         _classCallCheck(this, Map);
@@ -41566,7 +41589,7 @@ var Map = (function (_React$Component2) {
 
             $.ajax({
                 url: this.props.url,
-                dataType: 'jsonp',
+                dataType: this.props.dataType,
                 success: function success(data) {
                     _this.setState({ data: data.result });
                     console.log(data.result[0].name);
@@ -41596,7 +41619,16 @@ var Map = (function (_React$Component2) {
                     {
                         className: 'brew-finder__map',
                         center: this.props.map.center,
+                        onBoundsChange: this._onBoundsChange,
+                        onChildClick: this._onChildClick,
+                        onChildMouseEnter: this._onChildMouseEnter,
+                        onChildMouseLeave: this._onChildMouseLeave,
                         zoom: this.props.map.zoom },
+                    vendorNodes
+                ),
+                _react2['default'].createElement(
+                    VendorList,
+                    null,
                     vendorNodes
                 )
             );
@@ -41606,10 +41638,33 @@ var Map = (function (_React$Component2) {
     return Map;
 })(_react2['default'].Component);
 
+Map._onBoundsChange = function (center, zoom /* , bounds, marginBounds */) {
+    undefined.props.onCenterChange(center);
+    undefined.props.onZoomChange(zoom);
+    console.log('on bounds change ');
+};
+
+Map._onChildClick = function (key, childProps) {
+    undefined.props.onCenterChange([childProps.lat, childProps.lng]);
+    console.log('on child click');
+};
+
+Map._onChildMouseEnter = function (key /*, childProps */) {
+    undefined.props.onHoverKeyChange(key);
+    console.log('on hover change');
+};
+
+Map._onChildMouseLeave = function () /* key, childProps */{
+    undefined.props.onHoverKeyChange(null);
+    console.log('on child mouse leave');
+};
+
 var _map = {
     zoom: 11,
     center: [43.76159, -79.411079]
 };
-_react2['default'].render(_react2['default'].createElement(Map, { url: 'http://lcboapi.com/stores?product_id=416818', map: _map }), document.getElementById('map'));
+
+// React.render(<Map url="http://lcboapi.com/stores?product_id=416818" map={_map} />, document.getElementById('map'));
+_react2['default'].render(_react2['default'].createElement(Map, { dataType: 'json', url: '/wp-json/cartogram-api/vendors', map: _map }), document.getElementById('map'));
 
 },{"google-map-react":6,"react":349}]},{},[350]);

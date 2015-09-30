@@ -7,6 +7,12 @@ class Vendor extends React.Component {
     }
 }
 
+class VendorList extends React.Component {  
+    render() {
+        return <div className="brew-finder__list" >{this.props.children}</div>;
+    }
+}
+
 class Map extends React.Component {  
     constructor(props) {
         super(props);
@@ -15,7 +21,7 @@ class Map extends React.Component {
     loadDataFromServer() {
         $.ajax({
             url: this.props.url,
-            dataType: 'jsonp',
+            dataType: this.props.dataType,
             success: (data) => {
                 this.setState({data: data.result});
                 console.log(data.result[0].name);
@@ -35,20 +41,52 @@ class Map extends React.Component {
                 <Vendor text={vendor.quantity} lat={vendor.latitude} key={vendor.id} lng={vendor.longitude} ></Vendor>
             );
         });
-        return <div className="brew-finder__container">
-            <GoogleMap 
-                className="brew-finder__map"
-                center={this.props.map.center}
-                zoom={this.props.map.zoom} >
-                {vendorNodes}
-            </GoogleMap>
-        </div>;
+        return (
+            <div className="brew-finder__container">
+                <GoogleMap 
+                    className="brew-finder__map"
+                    center={this.props.map.center}
+                    onBoundsChange={this._onBoundsChange}
+                    onChildClick={this._onChildClick}
+                    onChildMouseEnter={this._onChildMouseEnter}
+                    onChildMouseLeave={this._onChildMouseLeave}
+                    zoom={this.props.map.zoom} >
+                    {vendorNodes}
+                </GoogleMap>
+                <VendorList >
+                    {vendorNodes}
+                </VendorList>
+            </div>
+        );
     }
 }
 
-var _map = { 
+Map._onBoundsChange = (center, zoom /* , bounds, marginBounds */) => {
+    this.props.onCenterChange(center);
+    this.props.onZoomChange(zoom);
+    console.log('on bounds change ');
+};
+
+Map._onChildClick = (key, childProps) => {
+    this.props.onCenterChange([childProps.lat, childProps.lng]);
+    console.log('on child click');
+};
+
+Map._onChildMouseEnter = (key /*, childProps */) => {
+    this.props.onHoverKeyChange(key);
+    console.log('on hover change');
+};
+
+Map._onChildMouseLeave = (/* key, childProps */) => {
+    this.props.onHoverKeyChange(null);
+    console.log('on child mouse leave');
+};
+
+const _map = { 
     zoom: 11, 
     center: [43.76159,-79.411079]  
 };
-React.render(<Map url="http://lcboapi.com/stores?product_id=416818" map={_map} />, document.getElementById('map'));
+
+// React.render(<Map url="http://lcboapi.com/stores?product_id=416818" map={_map} />, document.getElementById('map'));
+React.render(<Map dataType='json' url="/wp-json/cartogram-api/vendors" map={_map} />, document.getElementById('map'));
 

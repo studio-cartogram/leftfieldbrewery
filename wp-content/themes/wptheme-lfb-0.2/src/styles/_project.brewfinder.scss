@@ -10,7 +10,7 @@ $marker-size: 30px;
     height: $marker-size;
     line-height: $marker-size;
     top: -$marker-size / 2;
-    transform:translate(-50%, 0);
+    transform:translate(-50%, -100%);
     color:$cream;
     background: $navy;
     padding:5px;
@@ -22,8 +22,7 @@ $marker-size: 30px;
         content:' ';
         border:10px solid transparent;
         border-top:10px solid $cream;
-        
-    }   
+    }
 }
 
 .brew-finder__container,

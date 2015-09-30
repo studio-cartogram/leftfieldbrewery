@@ -28,17 +28,19 @@ class Cartogram_API {
 
 	public function register_routes( $routes ) {
 
-		$routes[ $this->base .  '/module/(?P<page>.+)/(?P<module>.+)'] = array(
+		$routes[ $this->base .  '/menu/(?P<menu>.+)'] = array(
+			array( array( $this, 'cartogram_get_navigation'), WP_JSON_Server::READABLE ),
+		);
+
+		$routes[ $this->base .  '/page/(?P<page>.+)/(?P<module>.+)'] = array(
 			array( array( $this, 'cartogram_get_module'), WP_JSON_Server::READABLE ),
 		);
 
-		$routes[ $this->base .  '/(?P<type>.+)/(?P<path>.+)'] = array(
-			array( array( $this, 'cartogram_get_item_by_path'), WP_JSON_Server::READABLE ),
+		$routes[ $this->base .  '/(?P<type>.+)'] = array(
+			array( array( $this, 'cartogram_get_posts'), WP_JSON_Server::READABLE ),
 		);
 
-		$routes[ $this->base .  '-menu/(?P<menu>.+)'] = array(
-			array( array( $this, 'cartogram_get_navigation'), WP_JSON_Server::READABLE ),
-		);
+
 
 		// Add more custom routes here
 
@@ -217,145 +219,6 @@ class Cartogram_API {
 		}
 	}
 
-	/**
-	* Prepare Points
-	*
-	* @access public
-	* @param int points repeater
-	*/
-
-	public function cartogram_prepare_points( $points ) {
-
-		$_points = array();
-
-		foreach ($points as $point) {
-			if($point ){
-				array_push($_points, $point);
-			}
-		}
-
-		return $_points;
-
-	}
-
-
-	/**
-	* Prepare Button
-	*
-	* @access public
-	*/
-
-	public function cartogram_prepare_button( ) {
-
-		if(get_sub_field('button_link') && get_sub_field('button_text')) {
-			$button = (object) array(
-				'link' => get_sub_field('button_link'),
-				'text' => get_sub_field('button_text')
-			);
-		} else {
-			$button = null;
-		}
-		return $button;
-
-	}
-
-	/**
-	* Prepare Video
-	*
-	* @access public
-	*/
-
-	public function cartogram_prepare_video( ) {
-
-		if(get_sub_field('wistia_video_embed')) {
-			$video = (object) array(
-				'embed' => get_sub_field('wistia_video_embed')
-			);
-		} else {
-			$video = null;
-		}
-
-
-		return $video;
-
-	}
-
-	/**
-	* Prepare Artists
-	*
-	* @access public
-	* @param int $artistid Artist Post ID
-	*/
-
-	public function cartogram_prepare_artists( $artists ) {
-		$_artists = array();
-
-		foreach ($artists as $artist) {
-			if($artist ){
-				$_artist = $this->cartogram_prepare_artist_slide( $artist->ID );
-				array_push($_artists, $_artist);
-			}
-		}
-
-		return $_artists;
-	}
-
-	/**
-	* Prepare Artist Slide
-	*
-	* @access public
-	* @param int $artistid Artist Post ID
-	*/
-
-	public function cartogram_prepare_artist_slide( $artistid ) {
-
-		$artist = array(
-			'id' 		=> 	 $artistid,
-			'name' 		=> 	 get_the_title($artistid),
-			'image'		=>   $this->prepare_image_src(get_post_thumbnail_id($artistid)),
-			'link'		=>   get_permalink($artistid),
-			'content'   =>   get_the_content($artistid),
-
-		);
-
-		return $artist;
-	}
-
-	/**
-	* Prepare Slides
-	*
-	* @access public
-	*/
-
-	public function cartogram_prepare_slides( $slides ) {
-
-		$_slides = array();
-
-		foreach ($slides as $slide) {
-			$_slide = $this->cartogram_prepare_slide( $slide );
-			array_push($_slides, $_slide);
-		}
-
-		return $_slides;
-	}
-
-	/**
-	* Prepare Slide
-	*
-	* @access public
-	*/
-
-	public function cartogram_prepare_slide( $slide ) {
-
-		$_slide = array(
-			'text'		=> 	 $slide['text'],
-			'image'		=> 	 $this->prepare_image_src($slide['image'], 'img-large'),
-			'link_text'	=> 	 $slide['link_text'],
-			'link' 		=> 	 $slide['link_destination'],
-		);
-
-		return $_slide;
-	}
 
 	/**
 	* Prepare Post Custom Fields
@@ -364,171 +227,37 @@ class Cartogram_API {
 	* @param int $id Post ID
 	*/
 
-	public function cartogram_prepare_acf_modules(  $id ) {
+	public function cartogram_prepare_acf(  $id ) {
 
-		$modules = array();
+        $location = get_field('location');
 
-		if( have_rows('modules', $id) ):
-
-			while ( have_rows('modules', $id) ) : the_row();
-
-			$module = array(
-				'layout'           => get_row_layout(),
-				'image'            => $this->prepare_image_src(get_sub_field('image'), 'img-large'),
-				'heading'	       => get_sub_field('heading'),
-				'subheading'	   => get_sub_field('subheading'),
-				'blockquote'	   => get_sub_field('blockquote'),
-				'text'	           => get_sub_field('text'),
-
-			);
-
-			if(get_row_layout() == 'introduction') :
-
-				$module_extra = array(
-					'heading_below_image' => get_sub_field('heading_below_image')
-				);
-
-			elseif(get_row_layout() == 'banner') :
-
-				$type = get_sub_field('type');
-
-				$module_extra = array(
-					'full_width'	=> get_sub_field('full_width'),
-					'icon'     		=> get_sub_field('icon'),
-					'orientation'   => get_sub_field('orientation'),
-					'button'   		=> $this->cartogram_prepare_button(),
-					'type'     		=> $type,
-					'color'			   => get_sub_field('color_scheme'),
-				);
-
-				if($type == 'video') {
-
-					$type_extra = array (
-						'video'   		=> $this->cartogram_prepare_video(),
-					);
-
-				} elseif($type == 'slider') {
-
-					$type_extra = array (
-						'slides'    => $this->cartogram_prepare_slides(get_sub_field('slides')),
-					);
-
-				} else {
-
-					$type_extra = array();
-
-				}
-
-				$module_extra = array_merge( $module_extra, $type_extra );
+            $acf = array(
+                'address'             => $location[address],
+                'latitude'            => floatval($location[lat]),
+                'longitude'           => floatval($location[lng]),
+                'neighborhood'       => get_field('neighborhood')
+    		);
 
 
-			elseif(get_row_layout() == 'artists') :
-
-				$module_extra = array(
-					'artists'     => $this->cartogram_prepare_artists(get_sub_field('artists')),
-				);
-
-			elseif(get_row_layout() == 'diagram') :
-				$module_extra = array(
-					'points'     => $this->cartogram_prepare_points(get_sub_field('points')),
-				);
-
-			else :
-
-				$module_extra = array();
-
-			endif;
-
-			$_module = array_merge( $module, $module_extra );
-			array_push($modules, $_module);
-
-		endwhile;
-
-		else :
-
-			// $modules = array(
-			// 	'error' => true,
-			// 	'message' => 'no modules found',
-			// 	'id' => $id,
-			// 	'fields' => get_field('modules')
-			// );
-
-		endif;
-
-		return $modules;
-
-
+		return $acf;
 	}
 
-
 	/**
-	* Prepare Built in Modules
+	* Prepare Post Custom Fields Raw
 	*
 	* @access public
 	* @param int $id Post ID
 	*/
 
-	public function cartogram_prepare_modules(  $post ) {
+	public function cartogram_prepare_acf_raw(  $id ) {
+		if( get_fields($id) ) {
+			$acf = get_fields($id);
 
-		$modules = array();
-
-		$slug = $post['post_name'];
-
-		$args = array(
-			'post_type' => $slug
-		);
-
-		$posts = get_posts( $args );
-
-		if($slug && $posts):
-
-			foreach ( $posts as $post ) : setup_postdata( $post );
-
-				$module = array(
-					'layout' => 'team',
-					'team_name' => $post->post_title,
-					'team_description' => $post->content,
-					'team_slug' => $post->post_name,
-					'team_link' => get_permalink($post->ID),
-					'team_id' => $post->ID,
-					'artists' => $this->cartogram_prepare_artists(get_field('artists', $post->ID)),
-
-				);
-
-				//$_module = array_merge( $module, $module_extra );
-				$_module = $module;
-				array_push($modules, $_module);
-
-			endforeach;
-
-		elseif($post['post_type'] == 'teams') :
-
-			$module = array(
-				'layout' 		  => 'page',
-				'title'           => get_the_title( $post['ID'] ), // $post['post_title'],
-				'slug'            => $post['post_name'], // $post['post_title'],
-				'type'            => $post['post_type'],
-				'content'         => apply_filters( 'the_content', $post['post_content'] ),
-				'parent'          => (int) $post['post_parent'],
-				'link'            => get_permalink( $post['ID'] ),
-				'images'		  => $this->prepare_images(get_post_thumbnail_id($post['ID'])),
-				'next'		  	  => $this->prepare_next($post['ID']),
-				'previous'		  => $this->prepare_previous($post['ID']),
-				'viewed'		  => false,
-				'artists' 		  => $this->cartogram_prepare_artists(get_field('artists', $post['ID'])),
-				'newest_member'   => $this->cartogram_prepare_artists(get_field('newest_member', $post['ID'])),
-			);
-
-			$_module = $module;
-			array_push($modules, $_module);
-
-		else :
-		endif;
-
-		return $modules;
-
-
+			return $acf;
+		}
 	}
+
+
 
 	/**
 	* Retrieve a post.
@@ -565,14 +294,119 @@ class Cartogram_API {
 			return $post;
 		}
 
-
-
 		$response->link_header( 'alternate',  get_permalink( $id ), array( 'type' => 'text/html' ) );
 		$response->set_data( $post );
 
 		return $response;
 	}
 
+        /**
+     * Retrieve posts.
+     *
+     * @since 3.4.0
+     *
+     * The optional $filter parameter modifies the query used to retrieve posts.
+     * Accepted keys are 'post_type', 'post_status', 'number', 'offset',
+     * 'orderby', and 'order'.
+     *
+     * The optional $fields parameter specifies what fields will be included
+     * in the response array.
+     *
+     * @uses wp_get_recent_posts()
+     * @see WP_JSON_Posts::get_post() for more on $fields
+     * @see get_posts() for more on $filter values
+     *
+     * @param array $filter Parameters to pass through to `WP_Query`
+     * @param string $context
+     * @param string|array $type Post type slug, or array of slugs
+     * @param int $page Page number (1-indexed)
+     * @return stdClass[] Collection of Post entities
+     */
+    public function cartogram_get_posts( $filter = array(), $context = 'view', $type = 'post', $page = 1 ) {
+        $query = array();
+
+        // Validate post types and permissions
+        $query['post_type'] = array();
+
+        foreach ( (array) $type as $type_name ) {
+            $post_type = get_post_type_object( $type_name );
+
+            if ( ! ( (bool) $post_type ) || ! $post_type->show_in_json ) {
+                return new WP_Error( 'json_invalid_post_type', sprintf( __( 'The post type "%s" is not valid' ), $type_name ), array( 'status' => 403 ) );
+            }
+
+            $query['post_type'][] = $post_type->name;
+        }
+
+        global $wp;
+
+        // Allow the same as normal WP
+        $valid_vars = apply_filters('query_vars', $wp->public_query_vars);
+
+        // If the user has the correct permissions, also allow use of internal
+        // query parameters, which are only undesirable on the frontend
+        //
+        // To disable anyway, use `add_filter('json_private_query_vars', '__return_empty_array');`
+
+        if ( current_user_can( $post_type->cap->edit_posts ) ) {
+            $private = apply_filters( 'json_private_query_vars', $wp->private_query_vars );
+            $valid_vars = array_merge( $valid_vars, $private );
+        }
+
+        // Define our own in addition to WP's normal vars
+        $json_valid = array( 'posts_per_page' );
+        $valid_vars = array_merge( $valid_vars, $json_valid );
+
+        // Filter and flip for querying
+        $valid_vars = apply_filters( 'json_query_vars', $valid_vars );
+        $valid_vars = array_flip( $valid_vars );
+
+        // Exclude the post_type query var to avoid dodging the permission
+        // check above
+        unset( $valid_vars['post_type'] );
+
+        foreach ( $valid_vars as $var => $index ) {
+            if ( isset( $filter[ $var ] ) ) {
+                $query[ $var ] = apply_filters( 'json_query_var-' . $var, $filter[ $var ] );
+            }
+        }
+
+        // Special parameter handling
+        $query['paged'] = absint( $page );
+        $query['posts_per_page'] = -1;
+
+        $post_query = new WP_Query();
+        $posts_list = $post_query->query( $query );
+        $response   = new WP_JSON_Response();
+        $response->query_navigation_headers( $post_query );
+
+        if ( ! $posts_list ) {
+            $response->set_data( array() );
+            return $response;
+        }
+
+        // holds all the posts data
+        $struct = array();
+
+        $response->header( 'Last-Modified', mysql2date( 'D, d M Y H:i:s', get_lastpostmodified( 'GMT' ), 0 ).' GMT' );
+
+        foreach ( $posts_list as $post ) {
+            $post = get_object_vars( $post );
+
+            $response->link_header( 'item', json_url( '/posts/' . $post['ID'] ), array( 'title' => $post['post_title'] ) );
+            $post_data = $this->cartogram_prepare_post( $post, $context );
+            if ( is_wp_error( $post_data ) ) {
+                continue;
+            }
+
+            $struct[] = $post_data;
+        }
+        $response->set_data( $struct );
+        $result = array(
+            'result' => $response
+        );
+        return $result;
+    }
 
 
 	/**
@@ -587,7 +421,7 @@ class Cartogram_API {
 
 	protected function cartogram_prepare_post( $post, $context = 'view' ) {
 		// holds the data for this post. built up based on $fields
-		$_post = array( 'ID' => (int) $post['ID'] );
+		$_post = array( 'id' => (int) $post['ID'] );
 
 		$post_type = get_post_type_object( $post['post_type'] );
 
@@ -600,99 +434,18 @@ class Cartogram_API {
 		$GLOBALS['post'] = $post_obj;
 		setup_postdata( $post_obj );
 
-		$acf_modules = $this->cartogram_prepare_acf_modules($post['ID']);
-		$modules = $this->cartogram_prepare_modules($post);
-
-		$modules = array_merge( $acf_modules, $modules );
-
 		// prepare common post fields
 		$post_fields = array(
-			'modules'		  => $modules,
-			'title'           => get_the_title( $post['ID'] ), // $post['post_title'],
+			'name'           => get_the_title( $post['ID'] ), // $post['post_title'],
 			'slug'            => $post['post_name'], // $post['post_title'],
-			'type'            => $post['post_type'],
-			'content'         => apply_filters( 'the_content', $post['post_content'] ),
-			'parent'          => (int) $post['post_parent'],
-			'link'            => get_permalink( $post['ID'] ),
-			'images'		  => $this->prepare_images(get_post_thumbnail_id($post['ID'])),
-			'next'		  	  => $this->prepare_next($post['ID']),
-			'previous'		  => $this->prepare_previous($post['ID']),
-			'viewed'		  => false,
-
 		);
 
-		$post_fields_extended = array(
-			'slug'           => $post['post_name'],
-			'guid'           => apply_filters( 'get_the_guid', $post['guid'] ),
-			'menu_order'     => (int) $post['menu_order'],
-			'comment_status' => $post['comment_status'],
-			'ping_status'    => $post['ping_status'],
-			'sticky'         => ( $post['post_type'] === 'post' && is_sticky( $post['ID'] ) ),
-		);
-
-
-		// Merge requested $post_fields fields into $_post
 		$_post = array_merge( $_post, $post_fields );
+		$acf = $this->cartogram_prepare_acf($post['ID']);
+		$_post = array_merge( $_post, $acf );
 
 		return apply_filters( 'cartogram_prepare_post', $_post);
 	}
 
-
-	/**
-	* Retrieve a page by path name
-	*
-	* @param string $path
-	* @param string $type
-	*/
-	public function cartogram_get_module( $page, $module, $context = 'view' ) {
-		$post = get_page_by_path( $page, ARRAY_A, 'page' );
-
-		if ( empty( $post ) ) {
-			return new WP_Error( 'json_post_invalid_id', __( 'Invalid post ID.' ), array( 'status' => 404 ) );
-		}
-
-		return $this->get_module( $post['ID'], $module);
-	}
-
-
-
-	/**
-	* Retrieve a post.
-	*
-	* @uses get_post()
-	* @param int $id Post ID
-	* @param array $fields Post fields to return (optional)
-	* @return array Post entity
-	*/
-
-	public function get_module( $id, $module, $context = 'view' ) {
-		$id = (int) $id;
-
-		if ( empty( $id ) ) {
-			return new WP_Error( 'json_post_invalid_id', __( 'Invalid post ID.' ), array( 'status' => 404 ) );
-		}
-
-		$_modules = get_field('modules', $id);
-		$modules = array();
-
-		foreach($_modules as $_module):
-			if($_module['acf_fc_layout'] == $module) :
-
-				$modules = $_module;
-
-			endif;
-
-		endforeach;
-
-		// Link headers (see RFC 5988)
-
-		$response = new WP_JSON_Response();
-
-
-		$response->link_header( 'alternate',  get_permalink( $id ), array( 'type' => 'text/html' ) );
-		$response->set_data( $modules );
-
-		return $response;
-	}
 
 }
