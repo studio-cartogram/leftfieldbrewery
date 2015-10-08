@@ -41,8 +41,7 @@
                                         $beer_icon = get_sub_field('beer_icon');
                                         $beer_color = get_post_meta( $beer->ID, '_cartogram_color_value', TRUE ); ?>
 
-                                <div class="row atthebrewery__row collapse"> 
-
+                                <a href="<?php echo get_permalink($beer->ID) ?>" class="row atthebrewery__row collapse"> 
                                     <div style="color: <?php echo $beer_color; ?>" class="columns atb__col--large text-left rule-right">
                                         <svg class="icon--small beer-icon"><use xlink:href="#<?php echo $beer_icon->post_name; ?>-color"></use></svg>
                                         <?php echo '<span class="beta soft-double--left beer-title">' .get_the_title($beer->ID) . '</span>';?>
@@ -60,7 +59,7 @@
                                     <div class="columns atb__col--small rule-right ">
                                         <?php echo (get_sub_field('on_tap') ? '<span class="check-text">On Tap</span><span class="check"></span>' : '&nbsp;');?>
                                     </div>
-                                </div>
+                                </a>
                             <?php endwhile;
                     endif;?>
 
