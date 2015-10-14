@@ -2,7 +2,9 @@
 <section class="container footer" id="container-footer">
 	<div class="row">
 		<div class="columns six hook rule-outside-right-white">
-			<?php gravity_form('Newsletter', true, true, false, '', true, 300); ?>
+<?php if( function_exists('gravity_form') ) : ?>
+            <?php gravity_form('Newsletter', true, true, false, '', true, 300); ?>
+<?php endif; ?>
 		</div>
 		<div class="columns six rule-inside-right-white">
 			<div class="row">
