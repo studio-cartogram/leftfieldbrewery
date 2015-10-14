@@ -577,5 +577,8 @@ if( function_exists('acf_add_options_page') ) {
 		'page_title' 	=> 'At the Brewery'
 	));
  
+	$page2 = acf_add_options_page(array(
+		'page_title' 	=> 'Contact Information'
+	));
 }
 ?>
