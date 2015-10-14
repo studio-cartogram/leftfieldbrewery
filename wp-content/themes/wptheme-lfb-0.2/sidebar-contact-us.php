@@ -62,9 +62,54 @@
 		</ul>
 	</div>
 </div>		
-<h3 class="rule-left text-center ">Visit</h3>
-	<div class="row collapse flushed-right">
-        <div class="columns twelve double-bordered">
-        </div>
+<h3 class="rule-left text-center ">Visit Us</h3>
+<div class="row collapse flushed-right">
+    <div class="columns twelve double-bordered">
+        <ul class="list-contact ">
+            <li class="row collapse bg-cream">
+            <a href="http://maps.google.com/?q=<?php the_field('address_line_1', 'option'); ?><?php the_field('address_line_2', 'option'); ?> ">	
+                    <div class="columns rule-left mobile-one three bg-navy border-bottom-white">
+                        <h4 class="text-center text-tall light">Location</h4>
+                    </div>
+                    <div class="columns mobile-three nine format-text ">
+                    <h5><?php the_field('address_line_1', 'option'); ?><br/><?php the_field('address_line_2', 'option'); ?></h5>
+                    </div>
+                </a>
+            </li>
+            <!-- <li class="row collapse bg&#45;cream"> -->
+            <!--     <a href="#">	 -->
+            <!--         <div class="columns rule&#45;left mobile&#45;one three bg&#45;navy border&#45;bottom&#45;white"> -->
+            <!--             <h4 class="text&#45;tall text&#45;center light">Hours</h4> -->
+            <!--         </div> -->
+            <!--         <div class="columns mobile&#45;three nine format&#45;text "> -->
+            <!--             <h5>Bottle Shop &#38; Tap Room<br/>Open Daily, 12 Noon – 9 pm</h5> -->
+            <!--         </div> -->
+            <!--     </a> -->
+            <!-- </li> -->
+        </ul>
     </div>
 </div>
+<div class="row collapse flushed-right">
+    <div class="columns twelve bg-cream ">
+            <p class="soft rule-left border-bottom text-center flush">
+                <strong><?php the_field('hours', 'option'); ?></strong>
+            </p>
+    </div>
+</div>
+<?php if( have_rows('notes', 'option') ): ?>
+
+
+<div class="row collapse flushed-right">
+    <div class="columns twelve bg-cream ">
+    <?php while( have_rows('notes', 'option') ): the_row(); ?>
+
+            <p class="soft rule-left border-bottom text-center flush">
+                <strong class="block"><?php the_sub_field('title'); ?></strong>
+                <?php the_sub_field('text'); ?>
+            </p>
+    <?php endwhile; ?>
+
+
+    </div>
+</div>
+<?php endif; ?>
