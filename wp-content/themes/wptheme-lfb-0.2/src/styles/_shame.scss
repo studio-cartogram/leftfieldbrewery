@@ -1,3 +1,10 @@
 .single-beers .flip-container {
     height: 654px;
 }
+
+.contact-page-faux-height {
+    min-height:1000px;
+    @media only screen and (min-width: 768px) { 
+        min-height:0;
+    }
+}

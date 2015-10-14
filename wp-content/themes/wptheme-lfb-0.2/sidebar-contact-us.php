@@ -91,7 +91,7 @@
 </div>
 <div class="row collapse flushed-right">
     <div class="columns twelve bg-cream ">
-            <p class="soft rule-left border-bottom text-center flush">
+            <p class="soft rule-left text-center flush">
                 <strong><?php the_field('hours', 'option'); ?></strong>
             </p>
     </div>
@@ -100,7 +100,7 @@
 
 
 <div class="row collapse flushed-right">
-    <div class="columns twelve bg-cream ">
+    <div class="columns twelve bg-cream double-bordered ">
     <?php while( have_rows('notes', 'option') ): the_row(); ?>
 
             <p class="soft rule-left border-bottom text-center flush">
