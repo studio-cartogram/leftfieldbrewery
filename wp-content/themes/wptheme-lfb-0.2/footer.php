@@ -3,7 +3,7 @@
 	<div class="row">
 		<div class="columns six hook rule-outside-right-white">
 <?php if( function_exists('gravity_form') ) : ?>
-            <?php gravity_form('Newsletter', true, true, false, '', true, 300); ?>
+            <?php gravity_form('Newsletter', true, true, false, '', true, 0); ?>
 <?php endif; ?>
 		</div>
 		<div class="columns six rule-inside-right-white">

@@ -2,9 +2,9 @@
     height: 654px;
 }
 
-.contact-us .post-text {
-     min-height:0;
+.post-text .gform_body .gform_fields textarea {
+    min-height:0;
     @media only screen and (min-width: 768px) { 
-        min-height:852px;
+        min-height:310px;
     }
 }
