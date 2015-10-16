@@ -8,3 +8,13 @@
         min-height:310px;
     }
 }
+
+.post-12 .post-text  {
+    min-height:0;
+    @media only screen and (min-width: 768px) { 
+        min-height:610px;
+    }
+}
+.list-contact li a h4 {
+    transition:background $transition-timing $transition-easing;
+}
