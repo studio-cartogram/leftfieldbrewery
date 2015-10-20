@@ -235,7 +235,7 @@ class Cartogram_API {
                 'address'             => $location[address],
                 'latitude'            => floatval($location[lat]),
                 'longitude'           => floatval($location[lng]),
-                'neighborhood'       => get_field('neighborhood')
+                'neighbourhood'       => get_field('neighbourhood')
     		);
 
 
@@ -433,11 +433,14 @@ class Cartogram_API {
 
 		$GLOBALS['post'] = $post_obj;
 		setup_postdata( $post_obj );
-
-		// prepare common post fields
+        $term_list = wp_get_post_terms($post['ID'], 'type', array("fields" => "all"));
+        foreach($term_list as $term_single) {
+            $vendor_type =  $term_single->slug;
+        }
 		$post_fields = array(
 			'name'           => get_the_title( $post['ID'] ), // $post['post_title'],
-			'slug'            => $post['post_name'], // $post['post_title'],
+            'slug'            => $post['post_name'], // $post['post_title'],
+            'vendor_type'=> $vendor_type
 		);
 
 		$_post = array_merge( $_post, $post_fields );

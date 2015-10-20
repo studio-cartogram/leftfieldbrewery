@@ -1,3 +1,6 @@
+<?php global $wp_query;?>
+<?php global $post;?>
+<?php global $paged;?>
 <?php
 global $slug; ?>
 <div class="row">

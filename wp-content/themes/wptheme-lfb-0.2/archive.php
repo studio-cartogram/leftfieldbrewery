@@ -4,6 +4,9 @@
  */
 ?>
 
+<?php global $wp_query;?>
+<?php global $post;?>
+<?php global $paged;?>
 <?php $slug = basename(get_permalink()); ?>
 <?php get_template_part('parts/shared/html-header'); ?>
 <?php get_header(); ?> 

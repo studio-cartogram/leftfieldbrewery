@@ -45,12 +45,14 @@ gulp.task('scripts', function () {
     browserify({
         entries: paths.src + '/scripts/main.jsx',
         extensions: ['.jsx'],
-        debug: args.debug 
+        debug: args.debug,
+        transform: [babelify.configure({
+            optional: [ "es7.classProperties" ]
+        })]
     })
-    .transform(babelify)
     .bundle()
     .pipe(source('main.js'))
-    .pipe(gulp.dest(paths.dist + '/scripts'))
+    .pipe(gulp.dest(paths.dist + '/scripts'));
 });
 
 // Build Vendor Script File
@@ -111,7 +113,7 @@ gulp.task('svgs', function () {
             inline: true,
             dest: '../'
         }
-    }}
+    }};
     gulp.src(['images/**/*.svg'], {cwd: paths.src})
         .pipe($.svgSprite(config))
         .pipe(gulp.dest(paths.src));

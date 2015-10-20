@@ -77,9 +77,9 @@
 		wp_enqueue_script( 'modernizr' );
 
 		wp_register_script( 'app', get_template_directory_uri().'/dist/scripts/v1.js', array('jquery') );
-		// wp_register_script( 'main', get_template_directory_uri().'/dist/scripts/main.js', array(), false, true);
+		wp_register_script( 'main', get_template_directory_uri().'/dist/scripts/main.js', array(), false, true);
         wp_enqueue_script( 'app', array('jquery')  );
-        // wp_enqueue_script('main');
+        wp_enqueue_script('main');
 		/* Give index-ck.js access to the variable AjaxResources containg the given info in the array */
 		wp_localize_script('app', 'AjaxResources', array('ajax_url'=> get_site_url() . '/wp-admin/admin-ajax.php',
 		'post_id' => get_the_ID(), 'request_url' => get_permalink(get_the_ID())));

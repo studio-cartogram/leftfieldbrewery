@@ -1,3 +1,6 @@
+<?php global $wp_query;?>
+<?php global $post;?>
+<?php global $paged;?>
 <nav class="row collapse flushed-left border-top border-bottom" id="pagination" role="navigation">
 	<div class="columns mobile-one one rule-right bg-navy pagination-arrow">
 		<?php if(!get_previous_posts_link()){
