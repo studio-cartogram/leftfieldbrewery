@@ -20,6 +20,7 @@
 }
 .visit-us-section {
     position:relative;
+    left:-1px;
     top:-1px;
     // &:before {
     //     width:auto;
@@ -34,10 +35,11 @@
     //     content: ' ';
     // }
     &:after {
+        top:0;
         width:auto;
         position:absolute;
-        left:-1px;
-        right:0;
+        left:0px;
+        right:-16px;;
         content:'';
         height:4px;
         background:$cream;
@@ -45,22 +47,31 @@
     }
 }
 .visit-us__label {
-    min-width:25%;
-    z-index:1;
-    border-top:1px solid;
-    position:relative;
 }
+
 
 .visit-us {
     position:relative;
+    margin-top:1px !important;
+    &:before {
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        width:1px;
+        background:$navy;
+        content: ' ';
+        bottom:0;
+    }
+
     &:after {
         width:auto;
         position:absolute;
-        left:-1px;
-        right:0;
+        left:0;
+        right:-15px;
         content:'';
         height:1px;
-        top:-0px;
+        bottom:-0px;
         background:$navy;
     }
 }
