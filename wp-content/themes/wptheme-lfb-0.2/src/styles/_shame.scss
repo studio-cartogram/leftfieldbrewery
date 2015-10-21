@@ -53,6 +53,9 @@
 .visit-us {
     position:relative;
     margin-top:1px !important;
+    p {
+        padding-left:20px !important;
+    }
     &:before {
         height:100%;
         position:absolute;
