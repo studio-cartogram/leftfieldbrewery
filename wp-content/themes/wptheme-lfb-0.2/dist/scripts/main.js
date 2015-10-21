@@ -46123,6 +46123,11 @@ var VendorList = (function (_React$Component) {
     }
 
     _createClass(VendorList, [{
+        key: 'handleChange',
+        value: function handleChange(type) {
+            this.props.onUserInput();
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _reactAddons2['default'].createElement(
@@ -46135,7 +46140,32 @@ var VendorList = (function (_React$Component) {
                         'p',
                         { className: 'lead' },
                         _reactAddons2['default'].createElement('i', { className: 'icon-tap' }),
-                        'Find our beer at these all-star establishments.'
+                        'Find our beer at these all-star establishments.',
+                        _reactAddons2['default'].createElement('br', null),
+                        _reactAddons2['default'].createElement(
+                            'a',
+                            { className: 'text-small', href: '' },
+                            'Bars'
+                        ),
+                        ' ',
+                        _reactAddons2['default'].createElement(
+                            'a',
+                            { className: 'text-small', href: '' },
+                            'Restuarants'
+                        ),
+                        ' ',
+                        _reactAddons2['default'].createElement(
+                            'a',
+                            { className: 'text-small', href: '' },
+                            'Brew Pubs'
+                        ),
+                        ' ',
+                        _reactAddons2['default'].createElement('input', {
+                            type: 'checkbox',
+                            checked: this.props.filterLcbo,
+                            ref: 'onlyLcboInput',
+                            onChange: this.handleChange.bind(this)
+                        })
                     ),
                     _reactAddons2['default'].createElement(
                         'div',
@@ -46219,10 +46249,23 @@ var Map = (function (_React$Component2) {
             _this.setState({ zoom: 3 });
         };
 
-        this.state = { data: [] };
+        this.state = {
+            data: [],
+            filterLcbo: false
+        };
     }
 
     _createClass(Map, [{
+        key: 'handleUserInput',
+        value: function handleUserInput() {
+            var vendorTypeFilter = 'bar';
+            this.setState({
+                data: this.originalData.filter(function (vendor) {
+                    return vendor.vendor_type === vendorTypeFilter;
+                })
+            });
+        }
+    }, {
         key: 'loadDataFromServer',
         value: function loadDataFromServer() {
             var _this2 = this;
@@ -46231,6 +46274,7 @@ var Map = (function (_React$Component2) {
                 url: this.props.url,
                 dataType: this.props.dataType,
                 success: function success(data) {
+                    _this2.originalData = data.result;
                     _this2.setState({ data: data.result });
                 },
                 error: function error(xhr, status, err) {
@@ -46285,6 +46329,7 @@ var Map = (function (_React$Component2) {
                             onChildMouseEnter: this._onChildMouseEnter,
                             onChildMouseLeave: this._onChildMouseLeave,
                             options: createMapOptions,
+                            filter: this.state.filter,
                             zoom: this.props.zoom },
                         vendorNodes
                     )
@@ -46294,7 +46339,9 @@ var Map = (function (_React$Component2) {
                     { className: 'columns four sidebar pull-eight mobile-flush' },
                     _reactAddons2['default'].createElement(
                         VendorList,
-                        null,
+                        {
+                            onUserInput: this.handleUserInput.bind(this),
+                            filterLcbo: this.state.filterLcbo },
                         vendorListNodes
                     )
                 )
@@ -46386,17 +46433,9 @@ var Vendor = (function (_React$Component) {
                         _reactAddons2['default'].createElement(
                             'h5',
                             { className: 'text-small' },
-                            _reactAddons2['default'].createElement(
-                                'strong',
-                                null,
-                                this.props.name
-                            )
+                            _reactAddons2['default'].createElement('strong', { dangerouslySetInnerHTML: { __html: this.props.name } })
                         ),
-                        _reactAddons2['default'].createElement(
-                            'h6',
-                            { className: 'text-small' },
-                            this.props.neighbourhood
-                        )
+                        _reactAddons2['default'].createElement('h6', { className: 'text-small', dangerouslySetInnerHTML: { __html: this.props.neighbourhood } })
                     ),
                     _reactAddons2['default'].createElement(
                         'div',
@@ -46404,7 +46443,7 @@ var Vendor = (function (_React$Component) {
                         _reactAddons2['default'].createElement(
                             'h4',
                             null,
-                            'MAP'
+                            'VIEW'
                         )
                     )
                 )
@@ -46486,16 +46525,8 @@ var Vendor = (function (_React$Component) {
                 _reactAddons2['default'].createElement(
                     'div',
                     { className: 'overlay', style: overlayStyle },
-                    _reactAddons2['default'].createElement(
-                        'span',
-                        { className: 'overlay__name' },
-                        this.props.text
-                    ),
-                    _reactAddons2['default'].createElement(
-                        'span',
-                        { className: 'overlay__address' },
-                        this.props.address
-                    )
+                    _reactAddons2['default'].createElement('span', { className: 'overlay__name', dangerouslySetInnerHTML: { __html: this.props.text } }),
+                    _reactAddons2['default'].createElement('span', { className: 'overlay__address', dangerouslySetInnerHTML: { __html: this.props.address } })
                 )
             );
         }

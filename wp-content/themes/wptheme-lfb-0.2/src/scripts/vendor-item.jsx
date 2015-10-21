@@ -26,11 +26,11 @@ export default class Vendor extends React.Component {
                         <i className="icon"></i>
                     </div>	
                     <div className="columns format-text eight rule-right rule-left">
-                        <h5 className="text-small"><strong>{this.props.name}</strong></h5>
-                        <h6 className="text-small">{this.props.neighbourhood}</h6>
+                        <h5 className="text-small" ><strong dangerouslySetInnerHTML={{__html: this.props.name}}></strong></h5>
+                        <h6 className="text-small" dangerouslySetInnerHTML={{__html: this.props.neighbourhood}}></h6>
                     </div>
                     <div className="columns two map-wrap text-center">
-                        <h4>MAP</h4>
+                        <h4>VIEW</h4>
                     </div>
                 </a> 
             </li>

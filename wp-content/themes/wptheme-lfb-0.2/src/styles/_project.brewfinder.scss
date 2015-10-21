@@ -94,7 +94,7 @@ $marker-size: 30px;
 } 
 .overlay__address {
     display:block;
-    font-size:11px;
+    font-size:10px;
 }
 .marker--is-active {
     cursor:pointer;
@@ -103,7 +103,7 @@ $marker-size: 30px;
     transition: all $transition-timing $transition-easing;
     z-index:100;
     &:before {
-        transform:translate(-50%, 0%);
+        transform:translate(-50%, 10%);
     }
 }
 

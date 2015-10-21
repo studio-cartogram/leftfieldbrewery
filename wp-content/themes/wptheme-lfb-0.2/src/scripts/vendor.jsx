@@ -26,8 +26,8 @@ export default class Vendor extends React.Component {
                     this.props.$hover ? 'marker--is-active' : 'marker--is-inactive'
                 )}> 
                 <div className="overlay" style={overlayStyle}>
-                    <span className="overlay__name">{this.props.text}</span>
-                    <span className="overlay__address">{this.props.address}</span>
+                    <span className="overlay__name" dangerouslySetInnerHTML={{__html: this.props.text}}></span>
+                    <span className="overlay__address" dangerouslySetInnerHTML={{__html: this.props.address}}></span>
                 </div>
             </div>
         );

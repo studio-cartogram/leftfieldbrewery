@@ -27,11 +27,24 @@ function createMapOptions(maps) {
   };
 }
 class VendorList extends React.Component {  
+    handleChange(type) {
+        this.props.onUserInput();
+    }
     render() {
         return (
             <section className="rule-left brew-finder__list vendor-listing bg-cream ">
                 <div className="screen">
-                    <p className="lead"><i className="icon-tap"></i>Find our beer at these all-star establishments.</p>
+                    <p className="lead"><i className="icon-tap"></i>Find our beer at these all-star establishments.<br/>
+                        <a className="text-small" href="">Bars</a>&nbsp;
+                        <a className="text-small" href="">Restuarants</a>&nbsp;
+                        <a className="text-small" href="">Brew Pubs</a>&nbsp;
+                        <input 
+                            type="checkbox" 
+                            checked={this.props.filterLcbo} 
+                            ref="onlyLcboInput" 
+                            onChange={this.handleChange.bind(this)}
+                       />
+                    </p>
                     <div className="scrollshadow">
                         <ul >{this.props.children}</ul>
                     </div>
@@ -60,13 +73,27 @@ class Map extends React.Component {
     // shouldComponentUpdate = shouldPureComponentUpdate;
     constructor(props) {
         super(props);
-        this.state = { data: [] };
+        this.state = { 
+            data: [],
+            filterLcbo: false
+        };
     }
+    originalData
+    handleUserInput() {
+        const vendorTypeFilter = 'bar';
+        this.setState({
+            data: this.originalData.filter(function(vendor) {
+                return vendor.vendor_type === vendorTypeFilter;
+            })
+        });
+    }
+
     loadDataFromServer() {
         $.ajax({
             url: this.props.url,
             dataType: this.props.dataType,
             success: (data) => {
+                this.originalData = data.result;
                 this.setState({data: data.result});
             },
             error: (xhr, status, err) => {
@@ -143,13 +170,16 @@ class Map extends React.Component {
                         onChildMouseEnter={this._onChildMouseEnter}
                         onChildMouseLeave={this._onChildMouseLeave}
                         options={createMapOptions}
+                        filter={this.state.filter}
                         zoom={this.props.zoom} >
                         {vendorNodes}
                     </GoogleMap>
                 </div>
                 <div className="columns four sidebar pull-eight mobile-flush">
-                <VendorList >
-                    {vendorListNodes}
+                    <VendorList 
+                        onUserInput={this.handleUserInput.bind(this)}
+                        filterLcbo={this.state.filterLcbo} >
+                        {vendorListNodes}
                 </VendorList>
             </div>
             </div>
