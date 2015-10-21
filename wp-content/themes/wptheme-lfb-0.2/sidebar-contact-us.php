@@ -95,7 +95,7 @@
     <?php while( have_rows('notes', 'option') ): the_row(); ?>
             <div class="visit-us rule-left flush">
                 <h4 class="i-block text-center bg-navy soft-quarter text-cream visit-us__label light"><?php the_sub_field('title'); ?></h4>
-                <p class="soft-half flush text-center"><?php the_sub_field('text'); ?></p>
+                <p class="soft-half soft-quarter--top flush "><?php the_sub_field('text'); ?></p>
             </div>
     <?php endwhile; ?>
 
