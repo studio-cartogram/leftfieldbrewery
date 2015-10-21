@@ -72,27 +72,28 @@
                         <h4 class="text-center text-tall light">Location</h4>
                     </div>
                     <div class="columns mobile-three nine format-text ">
-                    <h5><?php the_field('address_line_1', 'option'); ?><br/><?php the_field('address_line_2', 'option'); ?></h5>
+                        <h5><?php the_field('address_line_1', 'option'); ?><br/><?php the_field('address_line_2', 'option'); ?></h5>
                     </div>
                 </a>
             </li>
+            <li class="row collapse bg-cream">
+                    <div class="columns rule-left mobile-one three bg-navy border-bottom-white">
+                        <h4 class="text-center text-tall light">Hours</h4>
+                    </div>
+                    <div class="columns mobile-three nine format-text ">
+                        <h5><?php the_field('hours', 'option'); ?></h4>
+                    </div>
+            </li>
         </ul>
-    </div>
-</div>
-<div class="row collapse flushed-right">
-    <div class="columns twelve bg-cream ">
-            <p class="soft-half rule-left text-center flush">
-                <strong><?php the_field('hours', 'option'); ?></strong>
-            </p>
     </div>
 </div>
 <?php if( have_rows('notes', 'option') ): ?>
 
 
 <div class="row collapse flushed-right">
-    <div class="columns twelve bg-cream double-bordered ">
+    <div class="visit-us-section columns twelve bg-cream ">
     <?php while( have_rows('notes', 'option') ): the_row(); ?>
-            <div class="rule-left border-bottom flush">
+            <div class="visit-us rule-left flush">
                 <h4 class="i-block text-center bg-navy soft-quarter text-cream visit-us__label light"><?php the_sub_field('title'); ?></h4>
                 <p class="soft-half flush text-center"><?php the_sub_field('text'); ?></p>
             </div>
