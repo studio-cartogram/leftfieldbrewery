@@ -20,6 +20,7 @@ export default class Vendor extends React.Component {
     render() {
         const style = this.props.active || this.props.$hover ? vendorStyleHover : vendorStyle;
         const overlayStyle = this.props.active || this.props.$hover ? vendorOverlayStyleHover : vendorOverlayStyle;
+        const mapLink = "https://maps.google.ca/?q=" + this.props.address;
         return (
             <div style={style} 
                 className={cx('brew-finder__marker',
@@ -27,10 +28,10 @@ export default class Vendor extends React.Component {
                     this.props.$hover ? 'marker--is-hovered' : '',
                     this.props.active ? 'marker--is-active' : 'marker--is-inactive'
                 )}> 
-                <div className="overlay" style={overlayStyle}>
+                <a className="overlay" href={mapLink} target="_blank" style={overlayStyle}>
                     <span className="overlay__name" dangerouslySetInnerHTML={{__html: this.props.text}}></span>
-                    <span className="overlay__address" dangerouslySetInnerHTML={{__html: this.props.address}}></span>
-                </div>
+                    <span className="overlay__address" dangerouslySetInnerHTML={{__html: this.props.neighbourhood}}></span>
+                </a>
             </div>
         );
     }

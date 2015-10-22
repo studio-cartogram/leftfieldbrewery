@@ -132,8 +132,7 @@ class Map extends React.Component {
                     key={vendor.id} 
                     neighbourhood={vendor.neighbourhood} 
                     onClick={boundClick}
-                    active={this.state.activeVendor === vendor.id}  >
-                    
+                    active={this.state.activeVendor === vendor.id} >
                 </VendorItem>
             );
         });
@@ -146,6 +145,7 @@ class Map extends React.Component {
                     lat={vendor.latitude} 
                     key={vendor.id} 
                     lng={vendor.longitude} 
+                    neighbourhood={vendor.neighbourhood} 
                     $hover={this.props.hoverKey === vendor.id}  
                     active={this.state.activeVendor === vendor.id}  >
                 </Vendor>

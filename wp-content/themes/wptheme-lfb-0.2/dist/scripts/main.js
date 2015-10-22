@@ -46285,6 +46285,7 @@ var Map = (function (_React$Component2) {
                     lat: vendor.latitude,
                     key: vendor.id,
                     lng: vendor.longitude,
+                    neighbourhood: vendor.neighbourhood,
                     $hover: _this3.props.hoverKey === vendor.id,
                     active: _this3.state.activeVendor === vendor.id });
             });
@@ -46487,15 +46488,16 @@ var Vendor = (function (_React$Component) {
         value: function render() {
             var style = this.props.active || this.props.$hover ? _vendorStylesJs.vendorStyleHover : _vendorStylesJs.vendorStyle;
             var overlayStyle = this.props.active || this.props.$hover ? _vendorStylesJs.vendorOverlayStyleHover : _vendorStylesJs.vendorOverlayStyle;
+            var mapLink = "https://maps.google.ca/?q=" + this.props.address;
             return _reactAddons2['default'].createElement(
                 'div',
                 { style: style,
                     className: (0, _classnames2['default'])('brew-finder__marker', this.props.vendor_type, this.props.$hover ? 'marker--is-hovered' : '', this.props.active ? 'marker--is-active' : 'marker--is-inactive') },
                 _reactAddons2['default'].createElement(
-                    'div',
-                    { className: 'overlay', style: overlayStyle },
+                    'a',
+                    { className: 'overlay', href: mapLink, target: '_blank', style: overlayStyle },
                     _reactAddons2['default'].createElement('span', { className: 'overlay__name', dangerouslySetInnerHTML: { __html: this.props.text } }),
-                    _reactAddons2['default'].createElement('span', { className: 'overlay__address', dangerouslySetInnerHTML: { __html: this.props.address } })
+                    _reactAddons2['default'].createElement('span', { className: 'overlay__address', dangerouslySetInnerHTML: { __html: this.props.neighbourhood } })
                 )
             );
         }
