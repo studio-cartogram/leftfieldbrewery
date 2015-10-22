@@ -34,16 +34,7 @@ class VendorList extends React.Component {
         return (
             <section className="rule-left brew-finder__list vendor-listing bg-cream ">
                 <div className="screen">
-                    <p className="lead"><i className="icon-tap"></i>Find our beer at these all-star establishments.<br/>
-                        <a className="text-small" href="">Bars</a>&nbsp;
-                        <a className="text-small" href="">Restuarants</a>&nbsp;
-                        <a className="text-small" href="">Brew Pubs</a>&nbsp;
-                        <input 
-                            type="checkbox" 
-                            checked={this.props.filterLcbo} 
-                            ref="onlyLcboInput" 
-                            onChange={this.handleChange.bind(this)}
-                       />
+                    <p className="lead"><i className="icon-tap"></i>Find our beer at these all-star establishments.
                     </p>
                     <div className="scrollshadow">
                         <ul >{this.props.children}</ul>
@@ -125,16 +116,12 @@ class Map extends React.Component {
         this.props.onCenterChange([clickedMarker.latitude, clickedMarker.longitude]);
         this.setState({activeVendor:markerId});
         this.props.onHoverKeyChange(key.toString());
-        this.setState({hoverKey:key.toString()});
-        this.setState({zoom:3});
-        this.props.onClickKeyChange();
     }
     componentDidMount() {
         this.loadDataFromServer();
     }
     render() {
         const vendorListNodes = this.state.data.map((vendor, i) => {
-            console.log('active vendor:' + this.state.activeVendor);
             var boundClick = this._onChildClick.bind(this, vendor.id);
             return (
                 <VendorItem
@@ -145,12 +132,12 @@ class Map extends React.Component {
                     key={vendor.id} 
                     neighbourhood={vendor.neighbourhood} 
                     onClick={boundClick}
-                    >
+                    active={this.state.activeVendor === vendor.id}  >
+                    
                 </VendorItem>
             );
         });
         const vendorNodes = this.state.data.map(vendor => {
-            console.log(this.state.activeVendor, vendor.id);
             return (
                 <Vendor 
                     text={vendor.name} 

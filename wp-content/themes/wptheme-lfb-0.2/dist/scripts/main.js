@@ -46140,32 +46140,7 @@ var VendorList = (function (_React$Component) {
                         'p',
                         { className: 'lead' },
                         _reactAddons2['default'].createElement('i', { className: 'icon-tap' }),
-                        'Find our beer at these all-star establishments.',
-                        _reactAddons2['default'].createElement('br', null),
-                        _reactAddons2['default'].createElement(
-                            'a',
-                            { className: 'text-small', href: '' },
-                            'Bars'
-                        ),
-                        ' ',
-                        _reactAddons2['default'].createElement(
-                            'a',
-                            { className: 'text-small', href: '' },
-                            'Restuarants'
-                        ),
-                        ' ',
-                        _reactAddons2['default'].createElement(
-                            'a',
-                            { className: 'text-small', href: '' },
-                            'Brew Pubs'
-                        ),
-                        ' ',
-                        _reactAddons2['default'].createElement('input', {
-                            type: 'checkbox',
-                            checked: this.props.filterLcbo,
-                            ref: 'onlyLcboInput',
-                            onChange: this.handleChange.bind(this)
-                        })
+                        'Find our beer at these all-star establishments.'
                     ),
                     _reactAddons2['default'].createElement(
                         'div',
@@ -46244,9 +46219,6 @@ var Map = (function (_React$Component2) {
             _this.props.onCenterChange([clickedMarker.latitude, clickedMarker.longitude]);
             _this.setState({ activeVendor: markerId });
             _this.props.onHoverKeyChange(key.toString());
-            _this.setState({ hoverKey: key.toString() });
-            _this.setState({ zoom: 3 });
-            _this.props.onClickKeyChange();
         };
 
         this.state = {
@@ -46294,7 +46266,6 @@ var Map = (function (_React$Component2) {
             var _this3 = this;
 
             var vendorListNodes = this.state.data.map(function (vendor, i) {
-                console.log('active vendor:' + _this3.state.activeVendor);
                 var boundClick = _this3._onChildClick.bind(_this3, vendor.id);
                 return _reactAddons2['default'].createElement(_vendorItemJsx2['default'], {
                     name: vendor.name,
@@ -46303,11 +46274,10 @@ var Map = (function (_React$Component2) {
                     lng: vendor.longitude,
                     key: vendor.id,
                     neighbourhood: vendor.neighbourhood,
-                    onClick: boundClick
-                });
+                    onClick: boundClick,
+                    active: _this3.state.activeVendor === vendor.id });
             });
             var vendorNodes = this.state.data.map(function (vendor) {
-                console.log(_this3.state.activeVendor, vendor.id);
                 return _reactAddons2['default'].createElement(_vendorJsx2['default'], {
                     text: vendor.name,
                     address: vendor.address,
@@ -46396,6 +46366,7 @@ var Vendor = (function (_React$Component) {
     _createClass(Vendor, null, [{
         key: 'propTypes',
         value: {
+            active: _reactAddons.PropTypes.bool,
             name: _reactAddons.PropTypes.string,
             vendor_type: _reactAddons.PropTypes.string,
             onClick: _reactAddons.PropTypes.func,
@@ -46421,8 +46392,9 @@ var Vendor = (function (_React$Component) {
         value: function render() {
             return _reactAddons2['default'].createElement(
                 'li',
-                { className: this.props.vendor_type,
+                {
                     onClick: this.props.onClick,
+                    className: (0, _classnames2['default'])('vendor-item', this.props.vendor_type, this.props.$hover ? 'vendor-item--is-hovered' : '', this.props.active ? 'vendor-item--is-active' : 'vendor-item--is-inactive'),
                     key: this.props.key },
                 _reactAddons2['default'].createElement(
                     'a',
@@ -46434,22 +46406,13 @@ var Vendor = (function (_React$Component) {
                     ),
                     _reactAddons2['default'].createElement(
                         'div',
-                        { className: 'columns format-text eight rule-right rule-left' },
+                        { className: 'columns format-text ten rule-right rule-left' },
                         _reactAddons2['default'].createElement(
                             'h5',
                             { className: 'text-small' },
                             _reactAddons2['default'].createElement('strong', { dangerouslySetInnerHTML: { __html: this.props.name } })
                         ),
                         _reactAddons2['default'].createElement('h6', { className: 'text-small', dangerouslySetInnerHTML: { __html: this.props.neighbourhood } })
-                    ),
-                    _reactAddons2['default'].createElement(
-                        'div',
-                        { className: 'columns two map-wrap text-center' },
-                        _reactAddons2['default'].createElement(
-                            'h4',
-                            null,
-                            'VIEW'
-                        )
                     )
                 )
             );
