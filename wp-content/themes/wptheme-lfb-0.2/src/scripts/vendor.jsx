@@ -28,10 +28,12 @@ export default class Vendor extends React.Component {
                     this.props.$hover ? 'marker--is-hovered' : '',
                     this.props.active ? 'marker--is-active' : 'marker--is-inactive'
                 )}> 
-                <a className="overlay" href={mapLink} target="_blank" style={overlayStyle}>
+                <div className="overlay" style={overlayStyle}>
+                    <a href={mapLink} target="_blank"> 
                     <span className="overlay__name" dangerouslySetInnerHTML={{__html: this.props.text}}></span>
                     <span className="overlay__address" dangerouslySetInnerHTML={{__html: this.props.neighbourhood}}></span>
                 </a>
+            </div>
             </div>
         );
     }

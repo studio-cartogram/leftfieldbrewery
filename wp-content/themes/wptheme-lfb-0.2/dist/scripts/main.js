@@ -46494,10 +46494,14 @@ var Vendor = (function (_React$Component) {
                 { style: style,
                     className: (0, _classnames2['default'])('brew-finder__marker', this.props.vendor_type, this.props.$hover ? 'marker--is-hovered' : '', this.props.active ? 'marker--is-active' : 'marker--is-inactive') },
                 _reactAddons2['default'].createElement(
-                    'a',
-                    { className: 'overlay', href: mapLink, target: '_blank', style: overlayStyle },
-                    _reactAddons2['default'].createElement('span', { className: 'overlay__name', dangerouslySetInnerHTML: { __html: this.props.text } }),
-                    _reactAddons2['default'].createElement('span', { className: 'overlay__address', dangerouslySetInnerHTML: { __html: this.props.neighbourhood } })
+                    'div',
+                    { className: 'overlay', style: overlayStyle },
+                    _reactAddons2['default'].createElement(
+                        'a',
+                        { href: mapLink, target: '_blank' },
+                        _reactAddons2['default'].createElement('span', { className: 'overlay__name', dangerouslySetInnerHTML: { __html: this.props.text } }),
+                        _reactAddons2['default'].createElement('span', { className: 'overlay__address', dangerouslySetInnerHTML: { __html: this.props.neighbourhood } })
+                    )
                 )
             );
         }

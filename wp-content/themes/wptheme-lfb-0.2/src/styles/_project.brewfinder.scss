@@ -95,8 +95,10 @@ $marker-size: 30px;
     text-align:center;
     line-height:$marker-size/2;
     padding:10px;
+    display:none;
 
     .marker--is-active & {
+        display:block;
         opacity:1;
         transition-delay:$transition-timing;
     }
