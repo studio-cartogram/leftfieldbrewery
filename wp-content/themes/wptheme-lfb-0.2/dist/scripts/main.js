@@ -46234,8 +46234,6 @@ var Map = (function (_React$Component2) {
                 _this.props.onCenterChange(center);
                 _this.props.onZoomChange(zoom);
             }
-            console.log(center);
-            console.log('on bounds change');
         };
 
         this._onChildClick = function (key, childProps) {
@@ -46244,13 +46242,16 @@ var Map = (function (_React$Component2) {
                 return m.id === markerId;
             });
             _this.props.onCenterChange([clickedMarker.latitude, clickedMarker.longitude]);
+            _this.setState({ activeVendor: markerId });
             _this.props.onHoverKeyChange(key.toString());
             _this.setState({ hoverKey: key.toString() });
             _this.setState({ zoom: 3 });
+            _this.props.onClickKeyChange();
         };
 
         this.state = {
             data: [],
+            activeVendor: "",
             filterLcbo: false
         };
     }
@@ -46293,6 +46294,7 @@ var Map = (function (_React$Component2) {
             var _this3 = this;
 
             var vendorListNodes = this.state.data.map(function (vendor, i) {
+                console.log('active vendor:' + _this3.state.activeVendor);
                 var boundClick = _this3._onChildClick.bind(_this3, vendor.id);
                 return _reactAddons2['default'].createElement(_vendorItemJsx2['default'], {
                     name: vendor.name,
@@ -46305,6 +46307,7 @@ var Map = (function (_React$Component2) {
                 });
             });
             var vendorNodes = this.state.data.map(function (vendor) {
+                console.log(_this3.state.activeVendor, vendor.id);
                 return _reactAddons2['default'].createElement(_vendorJsx2['default'], {
                     text: vendor.name,
                     address: vendor.address,
@@ -46312,7 +46315,8 @@ var Map = (function (_React$Component2) {
                     lat: vendor.latitude,
                     key: vendor.id,
                     lng: vendor.longitude,
-                    $hover: _this3.props.hoverKey === vendor.id });
+                    $hover: _this3.props.hoverKey === vendor.id,
+                    active: _this3.state.activeVendor === vendor.id });
             });
             return _reactAddons2['default'].createElement(
                 'div',
@@ -46330,6 +46334,7 @@ var Map = (function (_React$Component2) {
                             onChildMouseLeave: this._onChildMouseLeave,
                             options: createMapOptions,
                             filter: this.state.filter,
+                            activeVendor: this.state.activeVendor,
                             zoom: this.props.zoom },
                         vendorNodes
                     )
@@ -46495,6 +46500,7 @@ var Vendor = (function (_React$Component) {
         key: 'propTypes',
         value: {
             hover: _reactAddons.PropTypes.bool,
+            active: _reactAddons.PropTypes.bool,
             text: _reactAddons.PropTypes.string,
             address: _reactAddons.PropTypes.string,
             vendor_type: _reactAddons.PropTypes.string
@@ -46516,12 +46522,12 @@ var Vendor = (function (_React$Component) {
     _createClass(Vendor, [{
         key: 'render',
         value: function render() {
-            var style = this.props.$hover ? _vendorStylesJs.vendorStyleHover : _vendorStylesJs.vendorStyle;
-            var overlayStyle = this.props.$hover ? _vendorStylesJs.vendorOverlayStyleHover : _vendorStylesJs.vendorOverlayStyle;
+            var style = this.props.active || this.props.$hover ? _vendorStylesJs.vendorStyleHover : _vendorStylesJs.vendorStyle;
+            var overlayStyle = this.props.active || this.props.$hover ? _vendorStylesJs.vendorOverlayStyleHover : _vendorStylesJs.vendorOverlayStyle;
             return _reactAddons2['default'].createElement(
                 'div',
                 { style: style,
-                    className: (0, _classnames2['default'])('brew-finder__marker', this.props.vendor_type, this.props.$hover ? 'marker--is-active' : 'marker--is-inactive') },
+                    className: (0, _classnames2['default'])('brew-finder__marker', this.props.vendor_type, this.props.$hover ? 'marker--is-hovered' : '', this.props.active ? 'marker--is-active' : 'marker--is-inactive') },
                 _reactAddons2['default'].createElement(
                     'div',
                     { className: 'overlay', style: overlayStyle },

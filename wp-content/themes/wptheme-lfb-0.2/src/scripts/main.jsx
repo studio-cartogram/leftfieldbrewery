@@ -75,6 +75,7 @@ class Map extends React.Component {
         super(props);
         this.state = { 
             data: [],
+            activeVendor: "",
             filterLcbo: false
         };
     }
@@ -114,8 +115,6 @@ class Map extends React.Component {
             this.props.onCenterChange(center);
             this.props.onZoomChange(zoom);
         }
-        console.log(center);
-        console.log('on bounds change');
     }
 
     _onChildClick = (key, childProps) => {
@@ -124,15 +123,18 @@ class Map extends React.Component {
             return m.id === markerId;
         });
         this.props.onCenterChange([clickedMarker.latitude, clickedMarker.longitude]);
+        this.setState({activeVendor:markerId});
         this.props.onHoverKeyChange(key.toString());
         this.setState({hoverKey:key.toString()});
         this.setState({zoom:3});
+        this.props.onClickKeyChange();
     }
     componentDidMount() {
         this.loadDataFromServer();
     }
     render() {
         const vendorListNodes = this.state.data.map((vendor, i) => {
+            console.log('active vendor:' + this.state.activeVendor);
             var boundClick = this._onChildClick.bind(this, vendor.id);
             return (
                 <VendorItem
@@ -148,6 +150,7 @@ class Map extends React.Component {
             );
         });
         const vendorNodes = this.state.data.map(vendor => {
+            console.log(this.state.activeVendor, vendor.id);
             return (
                 <Vendor 
                     text={vendor.name} 
@@ -156,7 +159,8 @@ class Map extends React.Component {
                     lat={vendor.latitude} 
                     key={vendor.id} 
                     lng={vendor.longitude} 
-                    $hover={this.props.hoverKey === vendor.id}  >
+                    $hover={this.props.hoverKey === vendor.id}  
+                    active={this.state.activeVendor === vendor.id}  >
                 </Vendor>
             );
         });
@@ -171,6 +175,7 @@ class Map extends React.Component {
                         onChildMouseLeave={this._onChildMouseLeave}
                         options={createMapOptions}
                         filter={this.state.filter}
+                        activeVendor={this.state.activeVendor}
                         zoom={this.props.zoom} >
                         {vendorNodes}
                     </GoogleMap>
@@ -180,12 +185,12 @@ class Map extends React.Component {
                         onUserInput={this.handleUserInput.bind(this)}
                         filterLcbo={this.state.filterLcbo} >
                         {vendorListNodes}
-                </VendorList>
-            </div>
+                    </VendorList>
+                </div>
             </div>
         );
     }
 }
 
-React.render(<Map dataType='json' url="/wp-json/cartogram-api/vendors" />, document.getElementById('map'));
+React.render(<Map  dataType='json' url="/wp-json/cartogram-api/vendors" />, document.getElementById('map'));
 

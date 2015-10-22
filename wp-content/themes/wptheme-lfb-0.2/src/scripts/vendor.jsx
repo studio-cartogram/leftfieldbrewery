@@ -6,6 +6,7 @@ import {vendorStyle, vendorStyleHover, vendorOverlayStyle, vendorOverlayStyleHov
 export default class Vendor extends React.Component {  
     static propTypes = {
         hover: PropTypes.bool,
+        active: PropTypes.bool,
         text: PropTypes.string,
         address: PropTypes.string,
         vendor_type: PropTypes.string
@@ -17,13 +18,14 @@ export default class Vendor extends React.Component {
         super(props);
     }
     render() {
-        const style = this.props.$hover ? vendorStyleHover : vendorStyle;
-        const overlayStyle = this.props.$hover ? vendorOverlayStyleHover : vendorOverlayStyle;
+        const style = this.props.active || this.props.$hover ? vendorStyleHover : vendorStyle;
+        const overlayStyle = this.props.active || this.props.$hover ? vendorOverlayStyleHover : vendorOverlayStyle;
         return (
             <div style={style} 
                 className={cx('brew-finder__marker',
                     this.props.vendor_type,
-                    this.props.$hover ? 'marker--is-active' : 'marker--is-inactive'
+                    this.props.$hover ? 'marker--is-hovered' : '',
+                    this.props.active ? 'marker--is-active' : 'marker--is-inactive'
                 )}> 
                 <div className="overlay" style={overlayStyle}>
                     <span className="overlay__name" dangerouslySetInnerHTML={{__html: this.props.text}}></span>
