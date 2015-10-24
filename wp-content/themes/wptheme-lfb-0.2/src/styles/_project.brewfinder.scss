@@ -52,15 +52,24 @@ $marker-size: 30px;
         content: ' ';
         transition:all $transition-timing $transition-easing;
     }
+    
 
     &.lcbo:before {
         content: '\e600';
         font-size:8px;
     }
+
+    &.marker--is-active.lcbo:before {
+        font-size:12px;
+    }
     
     &.bar:before {
         content: '\e013';
         font-size:14px;
+    }
+    
+    &.marker--is-active.bar:before {
+        font-size:21px;
     }
 
     &.restaurant:before {
@@ -68,9 +77,17 @@ $marker-size: 30px;
         content: '\e008';
     }
 
+    &.marker--is-active.restaurant:before {
+        font-size:21px;
+    }
+    
     &.brew-pub:before {
-        font-size:15px;
         content: '\e012';
+        font-size:15px;
+    }
+
+    &.marker--is-active.brew-pub:before {
+        font-size:23px;
     }
 
     &.marker--is-active,
@@ -123,7 +140,8 @@ $marker-size: 30px;
     z-index:100;
 
     &:before {
-        transform:translate(-50%, 10%);
+        transform:translate(-50%, 20%);
+        width:100%;
     }
 }
 
@@ -155,8 +173,10 @@ $marker-size: 30px;
 
 .vendor-item {
     cursor:pointer;
+    
     &:last-of-type {
         border-bottom:1px solid $navy;
+
         .format-text:after {
             height:1px;
             background:$navy;
