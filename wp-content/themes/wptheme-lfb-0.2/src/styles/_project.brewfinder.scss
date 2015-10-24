@@ -144,7 +144,8 @@ $marker-size: 30px;
 
 .brew-finder__list {
     .scrollshadow {
-        max-height:500px;
+        height:500px;
+
     }
 
     .screen {
@@ -154,6 +155,20 @@ $marker-size: 30px;
 
 .vendor-item {
     cursor:pointer;
+    &:last-of-type {
+        border-bottom:1px solid $navy;
+        .format-text:after {
+            height:1px;
+            background:$navy;
+            width:auto;
+            left:-20%;
+            right:0;
+            bottom:-11px;
+            position:absolute;
+            content:'';
+        }
+    }
+
 
     &:hover,
     &.vendor-item--is-active {

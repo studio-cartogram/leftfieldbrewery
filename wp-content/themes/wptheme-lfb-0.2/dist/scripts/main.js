@@ -46088,9 +46088,9 @@ var _vendorItemJsx = require('./vendor-item.jsx');
 
 var _vendorItemJsx2 = _interopRequireDefault(_vendorItemJsx);
 
-var _classnames = require('classnames');
+var _vendorListJsx = require('./vendor-list.jsx');
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _vendorListJsx2 = _interopRequireDefault(_vendorListJsx);
 
 var _googleMapReact = require('google-map-react');
 
@@ -46110,6 +46110,411 @@ function createMapOptions(maps) {
         mapTypeControl: true
     };
 }
+
+var Map = (function (_React$Component) {
+    _inherits(Map, _React$Component);
+
+    _createClass(Map, null, [{
+        key: 'propTypes',
+        value: {
+            center: _reactAddons.PropTypes.array, // @controllable
+            zoom: _reactAddons.PropTypes.number, // @controllable
+            hoverKey: _reactAddons.PropTypes.string, // @controllable
+            clickKey: _reactAddons.PropTypes.string, // @controllable
+            onCenterChange: _reactAddons.PropTypes.func, // @controllable generated fn
+            onZoomChange: _reactAddons.PropTypes.func, // @controllable generated fn
+            onHoverKeyChange: _reactAddons.PropTypes.func, // @controllable generated fn
+            openBallonIndex: _reactAddons.PropTypes.number,
+            onChildClick: _reactAddons.PropTypes.func
+        },
+        enumerable: true
+    }, {
+        key: 'defaultProps',
+        value: {
+            zoom: 13,
+            center: [43.67325256259363, -79.39391286230466]
+        },
+        enumerable: true
+    }]);
+
+    function Map(props) {
+        var _this = this;
+
+        _classCallCheck(this, _Map);
+
+        _get(Object.getPrototypeOf(_Map.prototype), 'constructor', this).call(this, props);
+        this.shouldComponentUpdate = _reactPureRenderFunction2['default'];
+
+        this._onChildMouseEnter = function (key, childProps) {
+            _this.props.onHoverKeyChange(key);
+        };
+
+        this._onChildMouseLeave = function () /* key, childProps */{
+            _this.props.onHoverKeyChange(null);
+        };
+
+        this._onBoundsChange = function (center, zoom, bounds, marginBounds) {
+            if (_this.props.onBoundsChange) {
+                _this.props.onBoundsChange({ center: center, zoom: zoom, bounds: bounds, marginBounds: marginBounds });
+            } else {
+                _this.props.onCenterChange(center);
+                _this.props.onZoomChange(zoom);
+            }
+        };
+
+        this._onChildClick = function (key, childProps) {
+            var markerId = Number(key);
+            var clickedMarker = _this.state.data.find(function (m) {
+                return m.id === markerId;
+            });
+            _this.props.onCenterChange([clickedMarker.latitude, clickedMarker.longitude]);
+            _this.setState({ activeVendor: markerId });
+            _this.props.onHoverKeyChange(key.toString());
+        };
+
+        this.state = {
+            data: [],
+            activeVendor: "",
+            scrollPos: 0,
+            filter: ''
+        };
+    }
+
+    _createClass(Map, [{
+        key: 'filterVendorsList',
+        value: function filterVendorsList(filter) {
+            var newData = this.originalData;
+
+            if (filter !== '') {
+                newData = this.originalData.filter(function (vendor) {
+                    return vendor.vendor_type === filter;
+                });
+            }
+
+            this.setState({
+                data: newData,
+                scrollPos: 0,
+                filter: filter
+            });
+        }
+    }, {
+        key: 'scrollVendorList',
+        value: function scrollVendorList(pos) {
+            console.log('from main map' + pos);
+            this.setState({
+                scrollPos: pos
+            });
+        }
+    }, {
+        key: 'loadDataFromServer',
+        value: function loadDataFromServer() {
+            var _this2 = this;
+
+            $.ajax({
+                url: this.props.url,
+                dataType: this.props.dataType,
+                success: function success(data) {
+                    _this2.originalData = data.result;
+                    _this2.setState({ data: data.result });
+                },
+                error: function error(xhr, status, err) {
+                    console.error(_this2.props.url, status, err.toString());
+                }
+            });
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.loadDataFromServer();
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            var vendorListNodes = this.state.data.map(function (vendor, i) {
+                var boundClick = _this3._onChildClick.bind(_this3, vendor.id);
+                return _reactAddons2['default'].createElement(_vendorItemJsx2['default'], {
+                    name: vendor.name,
+                    vendor_type: vendor.vendor_type,
+                    lat: vendor.latitude,
+                    lng: vendor.longitude,
+                    key: vendor.id,
+                    neighbourhood: vendor.neighbourhood,
+                    onClick: boundClick,
+                    scrollPos: _this3.state.vendorListScrollPos,
+                    onScrollVendorList: _this3.scrollVendorList.bind(_this3),
+                    active: _this3.state.activeVendor === vendor.id });
+            });
+            var vendorNodes = this.state.data.map(function (vendor) {
+                return _reactAddons2['default'].createElement(_vendorJsx2['default'], {
+                    text: vendor.name,
+                    address: vendor.address,
+                    vendor_type: vendor.vendor_type,
+                    lat: vendor.latitude,
+                    key: vendor.id,
+                    lng: vendor.longitude,
+                    neighbourhood: vendor.neighbourhood,
+                    $hover: _this3.props.hoverKey === vendor.id,
+                    active: _this3.state.activeVendor === vendor.id });
+            });
+            return _reactAddons2['default'].createElement(
+                'div',
+                { className: 'row collapse brew-finder__container' },
+                _reactAddons2['default'].createElement(
+                    'div',
+                    { className: 'columns eight push-four mobile-flush brew-finder__map' },
+                    _reactAddons2['default'].createElement(
+                        _googleMapReact2['default'],
+                        {
+                            center: this.props.center,
+                            onBoundsChange: this._onBoundsChange,
+                            onChildClick: this._onChildClick,
+                            onChildMouseEnter: this._onChildMouseEnter,
+                            onChildMouseLeave: this._onChildMouseLeave,
+                            options: createMapOptions,
+                            filter: this.state.filter,
+                            activeVendor: this.state.activeVendor,
+                            zoom: this.props.zoom },
+                        vendorNodes
+                    )
+                ),
+                _reactAddons2['default'].createElement(
+                    'div',
+                    { className: 'columns four sidebar pull-eight mobile-flush' },
+                    _reactAddons2['default'].createElement(
+                        _vendorListJsx2['default'],
+                        {
+                            onFilter: this.filterVendorsList.bind(this),
+                            scrollPos: this.state.scrollPos,
+                            filter: this.state.filter },
+                        vendorListNodes
+                    )
+                )
+            );
+        }
+    }]);
+
+    var _Map = Map;
+    Map = (0, _reactControllables2['default'])(['center', 'zoom', 'hoverKey', 'clickKey'])(Map) || Map;
+    return Map;
+})(_reactAddons2['default'].Component);
+
+_reactAddons2['default'].render(_reactAddons2['default'].createElement(Map, { dataType: 'json', url: '/wp-json/cartogram-api/vendors' }), document.getElementById('map'));
+
+},{"./vendor-item.jsx":455,"./vendor-list.jsx":456,"./vendor.jsx":457,"./vendor.styles.js":458,"babel-runtime/helpers/class-call-check":6,"babel-runtime/helpers/create-class":7,"babel-runtime/helpers/get":9,"babel-runtime/helpers/inherits":10,"babel-runtime/helpers/interop-require-default":11,"google-map-react":45,"react-controllables":88,"react-pure-render/function":278,"react/addons":280}],454:[function(require,module,exports){
+'use strict';
+
+var _get = require('babel-runtime/helpers/get')['default'];
+
+var _inherits = require('babel-runtime/helpers/inherits')['default'];
+
+var _createClass = require('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = require('babel-runtime/helpers/class-call-check')['default'];
+
+var _interopRequireDefault = require('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+    value: true
+});
+
+var _reactAddons = require('react/addons');
+
+var _reactAddons2 = _interopRequireDefault(_reactAddons);
+
+var _reactPureRenderFunction = require('react-pure-render/function');
+
+var _reactPureRenderFunction2 = _interopRequireDefault(_reactPureRenderFunction);
+
+var Scroller = (function (_React$Component) {
+    _inherits(Scroller, _React$Component);
+
+    function Scroller() {
+        _classCallCheck(this, Scroller);
+
+        _get(Object.getPrototypeOf(Scroller.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(Scroller, [{
+        key: 'scrollThis',
+        value: function scrollThis() {
+            var pos = _reactAddons2['default'].findDOMNode(this).scrollTop;
+            var newPos = this.props.scrollPos;
+            if (pos !== newPos) {
+                // React.findDOMNode(this).scrollTop = this.props.scrollPos;
+                $(_reactAddons2['default'].findDOMNode(this)).animate({ scrollTop: this.props.scrollPos }, 100);
+            }
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(pp, ps) {
+            this.scrollThis();
+        }
+
+        // shouldComponentUpdate(nextProps, nextState) {
+        //     return nextProps.scrollPos === this.props.scrollPos;
+        // }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _reactAddons2['default'].createElement(
+                'div',
+                { className: 'scrollshadow' },
+                _reactAddons2['default'].createElement(
+                    'ul',
+                    null,
+                    this.props.items
+                )
+            );
+        }
+    }]);
+
+    return Scroller;
+})(_reactAddons2['default'].Component);
+
+exports['default'] = Scroller;
+module.exports = exports['default'];
+
+},{"babel-runtime/helpers/class-call-check":6,"babel-runtime/helpers/create-class":7,"babel-runtime/helpers/get":9,"babel-runtime/helpers/inherits":10,"babel-runtime/helpers/interop-require-default":11,"react-pure-render/function":278,"react/addons":280}],455:[function(require,module,exports){
+'use strict';
+
+var _get = require('babel-runtime/helpers/get')['default'];
+
+var _inherits = require('babel-runtime/helpers/inherits')['default'];
+
+var _createClass = require('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = require('babel-runtime/helpers/class-call-check')['default'];
+
+var _interopRequireDefault = require('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+    value: true
+});
+
+var _reactAddons = require('react/addons');
+
+var _reactAddons2 = _interopRequireDefault(_reactAddons);
+
+var _reactPureRenderFunction = require('react-pure-render/function');
+
+var _reactPureRenderFunction2 = _interopRequireDefault(_reactPureRenderFunction);
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var Vendor = (function (_React$Component) {
+    _inherits(Vendor, _React$Component);
+
+    _createClass(Vendor, null, [{
+        key: 'propTypes',
+        value: {
+            active: _reactAddons.PropTypes.bool,
+            name: _reactAddons.PropTypes.string,
+            vendor_type: _reactAddons.PropTypes.string,
+            onClick: _reactAddons.PropTypes.func,
+            key: _reactAddons.PropTypes.string,
+            neighbourhood: _reactAddons.PropTypes.string
+        },
+        enumerable: true
+    }, {
+        key: 'defaultProps',
+        value: {},
+        enumerable: true
+    }]);
+
+    function Vendor(props) {
+        _classCallCheck(this, Vendor);
+
+        _get(Object.getPrototypeOf(Vendor.prototype), 'constructor', this).call(this, props);
+        this.shouldComponentUpdate = _reactPureRenderFunction2['default'];
+    }
+
+    _createClass(Vendor, [{
+        key: 'updateScrollPos',
+        value: function updateScrollPos(pos) {
+            this.props.onScrollVendorList(pos);
+        }
+    }, {
+        key: 'componentWillUpdate',
+        value: function componentWillUpdate(pp, ps) {
+            if (pp.active) {
+                var pos2 = _reactAddons2['default'].findDOMNode(this).offsetTop;
+                this.updateScrollPos(pos2);
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _reactAddons2['default'].createElement(
+                'li',
+                {
+                    onClick: this.props.onClick,
+                    className: (0, _classnames2['default'])('vendor-item', this.props.vendor_type, this.props.$hover ? 'vendor-item--is-hovered' : '', this.props.active ? 'vendor-item--is-active' : 'vendor-item--is-inactive'),
+                    key: this.props.key },
+                _reactAddons2['default'].createElement(
+                    'a',
+                    { className: 'row collapse block-level' },
+                    _reactAddons2['default'].createElement(
+                        'div',
+                        { className: 'columns two icon-wrap mobile-one text-center' },
+                        _reactAddons2['default'].createElement('i', { className: 'icon' })
+                    ),
+                    _reactAddons2['default'].createElement(
+                        'div',
+                        { className: 'columns format-text ten rule-left' },
+                        _reactAddons2['default'].createElement(
+                            'h5',
+                            { className: 'text-small' },
+                            _reactAddons2['default'].createElement('strong', { dangerouslySetInnerHTML: { __html: this.props.name } })
+                        ),
+                        _reactAddons2['default'].createElement('h6', { className: 'text-small', dangerouslySetInnerHTML: { __html: this.props.neighbourhood } })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Vendor;
+})(_reactAddons2['default'].Component);
+
+exports['default'] = Vendor;
+module.exports = exports['default'];
+
+},{"babel-runtime/helpers/class-call-check":6,"babel-runtime/helpers/create-class":7,"babel-runtime/helpers/get":9,"babel-runtime/helpers/inherits":10,"babel-runtime/helpers/interop-require-default":11,"classnames":40,"react-pure-render/function":278,"react/addons":280}],456:[function(require,module,exports){
+'use strict';
+
+var _get = require('babel-runtime/helpers/get')['default'];
+
+var _inherits = require('babel-runtime/helpers/inherits')['default'];
+
+var _createClass = require('babel-runtime/helpers/create-class')['default'];
+
+var _classCallCheck = require('babel-runtime/helpers/class-call-check')['default'];
+
+var _interopRequireDefault = require('babel-runtime/helpers/interop-require-default')['default'];
+
+Object.defineProperty(exports, '__esModule', {
+    value: true
+});
+
+var _reactAddons = require('react/addons');
+
+var _reactAddons2 = _interopRequireDefault(_reactAddons);
+
+var _reactPureRenderFunction = require('react-pure-render/function');
+
+var _reactPureRenderFunction2 = _interopRequireDefault(_reactPureRenderFunction);
+
+var _scrollerJsx = require('./scroller.jsx');
+
+var _scrollerJsx2 = _interopRequireDefault(_scrollerJsx);
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
 
 var VendorList = (function (_React$Component) {
     _inherits(VendorList, _React$Component);
@@ -46169,15 +46574,7 @@ var VendorList = (function (_React$Component) {
                             'Restaurant'
                         )
                     ),
-                    _reactAddons2['default'].createElement(
-                        'div',
-                        { className: 'scrollshadow' },
-                        _reactAddons2['default'].createElement(
-                            'ul',
-                            null,
-                            this.props.children
-                        )
-                    )
+                    _reactAddons2['default'].createElement(_scrollerJsx2['default'], { scrollPos: this.props.scrollPos, items: this.props.children })
                 )
             );
         }
@@ -46186,287 +46583,10 @@ var VendorList = (function (_React$Component) {
     return VendorList;
 })(_reactAddons2['default'].Component);
 
-var Map = (function (_React$Component2) {
-    _inherits(Map, _React$Component2);
-
-    _createClass(Map, null, [{
-        key: 'propTypes',
-        value: {
-            center: _reactAddons.PropTypes.array, // @controllable
-            zoom: _reactAddons.PropTypes.number, // @controllable
-            hoverKey: _reactAddons.PropTypes.string, // @controllable
-            clickKey: _reactAddons.PropTypes.string, // @controllable
-            onCenterChange: _reactAddons.PropTypes.func, // @controllable generated fn
-            onZoomChange: _reactAddons.PropTypes.func, // @controllable generated fn
-            onHoverKeyChange: _reactAddons.PropTypes.func, // @controllable generated fn
-            openBallonIndex: _reactAddons.PropTypes.number,
-            onChildClick: _reactAddons.PropTypes.func
-        },
-        enumerable: true
-    }, {
-        key: 'defaultProps',
-        value: {
-            zoom: 13,
-            center: [43.67325256259363, -79.39391286230466]
-        },
-
-        // shouldComponentUpdate = shouldPureComponentUpdate;
-        enumerable: true
-    }]);
-
-    function Map(props) {
-        var _this = this;
-
-        _classCallCheck(this, _Map);
-
-        _get(Object.getPrototypeOf(_Map.prototype), 'constructor', this).call(this, props);
-
-        this._onChildMouseEnter = function (key, childProps) {
-            _this.props.onHoverKeyChange(key);
-        };
-
-        this._onChildMouseLeave = function () /* key, childProps */{
-            _this.props.onHoverKeyChange(null);
-        };
-
-        this._onBoundsChange = function (center, zoom, bounds, marginBounds) {
-            if (_this.props.onBoundsChange) {
-                _this.props.onBoundsChange({ center: center, zoom: zoom, bounds: bounds, marginBounds: marginBounds });
-            } else {
-                _this.props.onCenterChange(center);
-                _this.props.onZoomChange(zoom);
-            }
-        };
-
-        this._onChildClick = function (key, childProps) {
-            var markerId = Number(key);
-            var clickedMarker = _this.state.data.find(function (m) {
-                return m.id === markerId;
-            });
-            _this.props.onCenterChange([clickedMarker.latitude, clickedMarker.longitude]);
-            _this.setState({ activeVendor: markerId });
-            _this.props.onHoverKeyChange(key.toString());
-        };
-
-        this.state = {
-            data: [],
-            activeVendor: "",
-            filter: ''
-        };
-    }
-
-    _createClass(Map, [{
-        key: 'filterVendorsList',
-        value: function filterVendorsList(filter) {
-            var newData = this.originalData;
-
-            if (filter !== '') {
-                newData = this.originalData.filter(function (vendor) {
-                    return vendor.vendor_type === filter;
-                });
-            }
-
-            this.setState({
-                data: newData,
-                filter: filter
-            });
-        }
-    }, {
-        key: 'loadDataFromServer',
-        value: function loadDataFromServer() {
-            var _this2 = this;
-
-            $.ajax({
-                url: this.props.url,
-                dataType: this.props.dataType,
-                success: function success(data) {
-                    _this2.originalData = data.result;
-                    _this2.setState({ data: data.result });
-                },
-                error: function error(xhr, status, err) {
-                    console.error(_this2.props.url, status, err.toString());
-                }
-            });
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            this.loadDataFromServer();
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this3 = this;
-
-            var vendorListNodes = this.state.data.map(function (vendor, i) {
-                var boundClick = _this3._onChildClick.bind(_this3, vendor.id);
-                return _reactAddons2['default'].createElement(_vendorItemJsx2['default'], {
-                    name: vendor.name,
-                    vendor_type: vendor.vendor_type,
-                    lat: vendor.latitude,
-                    lng: vendor.longitude,
-                    key: vendor.id,
-                    neighbourhood: vendor.neighbourhood,
-                    onClick: boundClick,
-                    active: _this3.state.activeVendor === vendor.id });
-            });
-            var vendorNodes = this.state.data.map(function (vendor) {
-                return _reactAddons2['default'].createElement(_vendorJsx2['default'], {
-                    text: vendor.name,
-                    address: vendor.address,
-                    vendor_type: vendor.vendor_type,
-                    lat: vendor.latitude,
-                    key: vendor.id,
-                    lng: vendor.longitude,
-                    neighbourhood: vendor.neighbourhood,
-                    $hover: _this3.props.hoverKey === vendor.id,
-                    active: _this3.state.activeVendor === vendor.id });
-            });
-            return _reactAddons2['default'].createElement(
-                'div',
-                { className: 'row collapse brew-finder__container' },
-                _reactAddons2['default'].createElement(
-                    'div',
-                    { className: 'columns eight push-four mobile-flush brew-finder__map' },
-                    _reactAddons2['default'].createElement(
-                        _googleMapReact2['default'],
-                        {
-                            center: this.props.center,
-                            onBoundsChange: this._onBoundsChange,
-                            onChildClick: this._onChildClick,
-                            onChildMouseEnter: this._onChildMouseEnter,
-                            onChildMouseLeave: this._onChildMouseLeave,
-                            options: createMapOptions,
-                            filter: this.state.filter,
-                            activeVendor: this.state.activeVendor,
-                            zoom: this.props.zoom },
-                        vendorNodes
-                    )
-                ),
-                _reactAddons2['default'].createElement(
-                    'div',
-                    { className: 'columns four sidebar pull-eight mobile-flush' },
-                    _reactAddons2['default'].createElement(
-                        VendorList,
-                        {
-                            onFilter: this.filterVendorsList.bind(this),
-                            filter: this.state.filter },
-                        vendorListNodes
-                    )
-                )
-            );
-        }
-    }]);
-
-    var _Map = Map;
-    Map = (0, _reactControllables2['default'])(['center', 'zoom', 'hoverKey', 'clickKey'])(Map) || Map;
-    return Map;
-})(_reactAddons2['default'].Component);
-
-_reactAddons2['default'].render(_reactAddons2['default'].createElement(Map, { dataType: 'json', url: '/wp-json/cartogram-api/vendors' }), document.getElementById('map'));
-
-},{"./vendor-item.jsx":454,"./vendor.jsx":455,"./vendor.styles.js":456,"babel-runtime/helpers/class-call-check":6,"babel-runtime/helpers/create-class":7,"babel-runtime/helpers/get":9,"babel-runtime/helpers/inherits":10,"babel-runtime/helpers/interop-require-default":11,"classnames":40,"google-map-react":45,"react-controllables":88,"react-pure-render/function":278,"react/addons":280}],454:[function(require,module,exports){
-'use strict';
-
-var _get = require('babel-runtime/helpers/get')['default'];
-
-var _inherits = require('babel-runtime/helpers/inherits')['default'];
-
-var _createClass = require('babel-runtime/helpers/create-class')['default'];
-
-var _classCallCheck = require('babel-runtime/helpers/class-call-check')['default'];
-
-var _interopRequireDefault = require('babel-runtime/helpers/interop-require-default')['default'];
-
-Object.defineProperty(exports, '__esModule', {
-    value: true
-});
-
-var _reactAddons = require('react/addons');
-
-var _reactAddons2 = _interopRequireDefault(_reactAddons);
-
-var _reactPureRenderFunction = require('react-pure-render/function');
-
-var _reactPureRenderFunction2 = _interopRequireDefault(_reactPureRenderFunction);
-
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var Vendor = (function (_React$Component) {
-    _inherits(Vendor, _React$Component);
-
-    _createClass(Vendor, null, [{
-        key: 'propTypes',
-        value: {
-            active: _reactAddons.PropTypes.bool,
-            name: _reactAddons.PropTypes.string,
-            vendor_type: _reactAddons.PropTypes.string,
-            onClick: _reactAddons.PropTypes.func,
-            key: _reactAddons.PropTypes.string,
-            neighbourhood: _reactAddons.PropTypes.string
-        },
-        enumerable: true
-    }, {
-        key: 'defaultProps',
-        value: {},
-        enumerable: true
-    }]);
-
-    function Vendor(props) {
-        _classCallCheck(this, Vendor);
-
-        _get(Object.getPrototypeOf(Vendor.prototype), 'constructor', this).call(this, props);
-        this.shouldComponentUpdate = _reactPureRenderFunction2['default'];
-    }
-
-    _createClass(Vendor, [{
-        key: 'componentDidUpdate',
-        value: function componentDidUpdate(pp, ps) {
-            if (pp.active) {
-                console.log(_reactAddons2['default'].findDOMNode(this).getBoundingClientRect().top);
-            }
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return _reactAddons2['default'].createElement(
-                'li',
-                {
-                    onClick: this.props.onClick,
-                    className: (0, _classnames2['default'])('vendor-item', this.props.vendor_type, this.props.$hover ? 'vendor-item--is-hovered' : '', this.props.active ? 'vendor-item--is-active' : 'vendor-item--is-inactive'),
-                    key: this.props.key },
-                _reactAddons2['default'].createElement(
-                    'a',
-                    { className: 'row collapse block-level' },
-                    _reactAddons2['default'].createElement(
-                        'div',
-                        { className: 'columns two icon-wrap mobile-one text-center' },
-                        _reactAddons2['default'].createElement('i', { className: 'icon' })
-                    ),
-                    _reactAddons2['default'].createElement(
-                        'div',
-                        { className: 'columns format-text ten rule-right rule-left' },
-                        _reactAddons2['default'].createElement(
-                            'h5',
-                            { className: 'text-small' },
-                            _reactAddons2['default'].createElement('strong', { dangerouslySetInnerHTML: { __html: this.props.name } })
-                        ),
-                        _reactAddons2['default'].createElement('h6', { className: 'text-small', dangerouslySetInnerHTML: { __html: this.props.neighbourhood } })
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Vendor;
-})(_reactAddons2['default'].Component);
-
-exports['default'] = Vendor;
+exports['default'] = VendorList;
 module.exports = exports['default'];
 
-},{"babel-runtime/helpers/class-call-check":6,"babel-runtime/helpers/create-class":7,"babel-runtime/helpers/get":9,"babel-runtime/helpers/inherits":10,"babel-runtime/helpers/interop-require-default":11,"classnames":40,"react-pure-render/function":278,"react/addons":280}],455:[function(require,module,exports){
+},{"./scroller.jsx":454,"babel-runtime/helpers/class-call-check":6,"babel-runtime/helpers/create-class":7,"babel-runtime/helpers/get":9,"babel-runtime/helpers/inherits":10,"babel-runtime/helpers/interop-require-default":11,"classnames":40,"react-pure-render/function":278,"react/addons":280}],457:[function(require,module,exports){
 'use strict';
 
 var _get = require('babel-runtime/helpers/get')['default'];
@@ -46553,7 +46673,7 @@ var Vendor = (function (_React$Component) {
 exports['default'] = Vendor;
 module.exports = exports['default'];
 
-},{"./vendor.styles.js":456,"babel-runtime/helpers/class-call-check":6,"babel-runtime/helpers/create-class":7,"babel-runtime/helpers/get":9,"babel-runtime/helpers/inherits":10,"babel-runtime/helpers/interop-require-default":11,"classnames":40,"react-pure-render/function":278,"react/addons":280}],456:[function(require,module,exports){
+},{"./vendor.styles.js":458,"babel-runtime/helpers/class-call-check":6,"babel-runtime/helpers/create-class":7,"babel-runtime/helpers/get":9,"babel-runtime/helpers/inherits":10,"babel-runtime/helpers/interop-require-default":11,"classnames":40,"react-pure-render/function":278,"react/addons":280}],458:[function(require,module,exports){
 "use strict";
 
 var _extends = require("babel-runtime/helpers/extends")["default"];

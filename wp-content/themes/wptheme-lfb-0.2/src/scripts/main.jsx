@@ -4,7 +4,7 @@ import shouldPureComponentUpdate from 'react-pure-render/function';
 import {K_SIZE} from './vendor.styles.js';
 import Vendor from './vendor.jsx';
 import VendorItem from './vendor-item.jsx';
-import cx from 'classnames';
+import VendorList from './vendor-list.jsx';
 import GoogleMap from 'google-map-react';
 
 function createMapOptions(maps) {
@@ -20,30 +20,6 @@ function createMapOptions(maps) {
     },
     mapTypeControl: true
   };
-}
-class VendorList extends React.Component {  
-    filterVendors(type) {
-        this.props.onFilter(type);
-    }
-    render() {
-        return (
-            <section className="rule-left brew-finder__list vendor-listing bg-cream ">
-                <div className="screen">
-                    <p className="lead"><i className="icon-tap"></i>Find our beer at these all-star establishments.</p>
-                    <nav className="vendor-filter">
-                        <a onClick={this.filterVendors.bind(this, '')} className={cx(this.props.filter === '' ? 'is-active' : '')}>All</a>
-                        <a onClick={this.filterVendors.bind(this, 'bar')} className={cx(this.props.filter === 'bar' ? 'is-active' : '')}>Bars</a>
-                        <a onClick={this.filterVendors.bind(this, 'lcbo')} className={cx(this.props.filter === 'lcbo' ? 'is-active' : '')}>LCBO</a>
-                        <a onClick={this.filterVendors.bind(this, 'brew-pub')} className={cx(this.props.filter === 'brew-pub' ? 'is-active' : '')}>Brew Pubs</a>
-                        <a onClick={this.filterVendors.bind(this, 'restaurant')} className={cx(this.props.filter === 'restaurant' ? 'is-active' : '')}>Restaurant</a>
-                    </nav>
-                    <div className="scrollshadow">
-                        <ul >{this.props.children}</ul>
-                    </div>
-                </div>
-            </section>
-            );
-    }
 }
 @controllable(['center', 'zoom', 'hoverKey', 'clickKey'])
 class Map extends React.Component {  
@@ -62,12 +38,13 @@ class Map extends React.Component {
         zoom: 13, 
         center: [43.67325256259363, -79.39391286230466]
     }
-    // shouldComponentUpdate = shouldPureComponentUpdate;
+    shouldComponentUpdate = shouldPureComponentUpdate;
     constructor(props) {
         super(props);
         this.state = { 
             data: [],
             activeVendor: "",
+            scrollPos: 0,
             filter:'' 
         };
     }
@@ -83,9 +60,17 @@ class Map extends React.Component {
 
         this.setState({
             data: newData,
+            scrollPos: 0,
             filter: filter
         });
 
+    }
+
+    scrollVendorList(pos) {
+        console.log('from main map' + pos);
+        this.setState({
+            scrollPos: pos
+        });
     }
 
     loadDataFromServer() {
@@ -140,6 +125,8 @@ class Map extends React.Component {
                     key={vendor.id} 
                     neighbourhood={vendor.neighbourhood} 
                     onClick={boundClick}
+                    scrollPos={this.state.vendorListScrollPos}
+                    onScrollVendorList={this.scrollVendorList.bind(this)}
                     active={this.state.activeVendor === vendor.id} >
                 </VendorItem>
             );
@@ -178,6 +165,7 @@ class Map extends React.Component {
                 <div className="columns four sidebar pull-eight mobile-flush">
                     <VendorList 
                         onFilter={this.filterVendorsList.bind(this)}
+                        scrollPos={this.state.scrollPos}
                         filter={this.state.filter} >
                         {vendorListNodes}
                     </VendorList>

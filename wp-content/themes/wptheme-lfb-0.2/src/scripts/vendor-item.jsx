@@ -17,9 +17,13 @@ export default class Vendor extends React.Component {
     constructor(props) {
         super(props);
     }
-    componentDidUpdate(pp, ps) {
+    updateScrollPos(pos){
+        this.props.onScrollVendorList(pos);
+    }
+    componentWillUpdate(pp, ps) {
         if(pp.active) {
-            console.log(React.findDOMNode(this).getBoundingClientRect().top);
+            let pos2 = React.findDOMNode(this).offsetTop;
+            this.updateScrollPos(pos2);
         }
     }
     render() {
@@ -36,7 +40,7 @@ export default class Vendor extends React.Component {
                     <div className="columns two icon-wrap mobile-one text-center">
                         <i className="icon"></i>
                     </div>	
-                    <div className="columns format-text ten rule-right rule-left">
+                    <div className="columns format-text ten rule-left">
                         <h5 className="text-small" ><strong dangerouslySetInnerHTML={{__html: this.props.name}}></strong></h5>
                         <h6 className="text-small" dangerouslySetInnerHTML={{__html: this.props.neighbourhood}}></h6>
                     </div>
