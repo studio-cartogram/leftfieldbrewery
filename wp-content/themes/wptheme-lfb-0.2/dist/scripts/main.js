@@ -46088,17 +46088,15 @@ var _vendorItemJsx = require('./vendor-item.jsx');
 
 var _vendorItemJsx2 = _interopRequireDefault(_vendorItemJsx);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _googleMapReact = require('google-map-react');
 
 var _googleMapReact2 = _interopRequireDefault(_googleMapReact);
 
 function createMapOptions(maps) {
-    // next props are exposed at maps
-    // "Animation", "ControlPosition", "MapTypeControlStyle", "MapTypeId",
-    // "NavigationControlStyle", "ScaleControlStyle", "StrokePosition", "SymbolPath", "ZoomControlStyle",
-    // "DirectionsStatus", "DirectionsTravelMode", "DirectionsUnitSystem", "DistanceMatrixStatus",
-    // "DistanceMatrixElementStatus", "ElevationStatus", "GeocoderLocationType", "GeocoderStatus", "KmlLayerStatus",
-    // "MaxZoomStatus", "StreetViewStatus", "TransitMode", "TransitRoutePreference", "TravelMode", "UnitSystem"
     return {
         zoomControlOptions: {
             position: maps.ControlPosition.RIGHT_CENTER,
@@ -46123,9 +46121,9 @@ var VendorList = (function (_React$Component) {
     }
 
     _createClass(VendorList, [{
-        key: 'handleChange',
-        value: function handleChange(type) {
-            this.props.onUserInput();
+        key: 'filterVendors',
+        value: function filterVendors(type) {
+            this.props.onFilter(type);
         }
     }, {
         key: 'render',
@@ -46141,6 +46139,35 @@ var VendorList = (function (_React$Component) {
                         { className: 'lead' },
                         _reactAddons2['default'].createElement('i', { className: 'icon-tap' }),
                         'Find our beer at these all-star establishments.'
+                    ),
+                    _reactAddons2['default'].createElement(
+                        'nav',
+                        { className: 'vendor-filter' },
+                        _reactAddons2['default'].createElement(
+                            'a',
+                            { onClick: this.filterVendors.bind(this, ''), className: (0, _classnames2['default'])(this.props.filter === '' ? 'is-active' : '') },
+                            'All'
+                        ),
+                        _reactAddons2['default'].createElement(
+                            'a',
+                            { onClick: this.filterVendors.bind(this, 'bar'), className: (0, _classnames2['default'])(this.props.filter === 'bar' ? 'is-active' : '') },
+                            'Bars'
+                        ),
+                        _reactAddons2['default'].createElement(
+                            'a',
+                            { onClick: this.filterVendors.bind(this, 'lcbo'), className: (0, _classnames2['default'])(this.props.filter === 'lcbo' ? 'is-active' : '') },
+                            'LCBO'
+                        ),
+                        _reactAddons2['default'].createElement(
+                            'a',
+                            { onClick: this.filterVendors.bind(this, 'brew-pub'), className: (0, _classnames2['default'])(this.props.filter === 'brew-pub' ? 'is-active' : '') },
+                            'Brew Pubs'
+                        ),
+                        _reactAddons2['default'].createElement(
+                            'a',
+                            { onClick: this.filterVendors.bind(this, 'restaurant'), className: (0, _classnames2['default'])(this.props.filter === 'restaurant' ? 'is-active' : '') },
+                            'Restaurant'
+                        )
                     ),
                     _reactAddons2['default'].createElement(
                         'div',
@@ -46224,18 +46251,24 @@ var Map = (function (_React$Component2) {
         this.state = {
             data: [],
             activeVendor: "",
-            filterLcbo: false
+            filter: ''
         };
     }
 
     _createClass(Map, [{
-        key: 'handleUserInput',
-        value: function handleUserInput() {
-            var vendorTypeFilter = 'bar';
+        key: 'filterVendorsList',
+        value: function filterVendorsList(filter) {
+            var newData = this.originalData;
+
+            if (filter !== '') {
+                newData = this.originalData.filter(function (vendor) {
+                    return vendor.vendor_type === filter;
+                });
+            }
+
             this.setState({
-                data: this.originalData.filter(function (vendor) {
-                    return vendor.vendor_type === vendorTypeFilter;
-                })
+                data: newData,
+                filter: filter
             });
         }
     }, {
@@ -46316,8 +46349,8 @@ var Map = (function (_React$Component2) {
                     _reactAddons2['default'].createElement(
                         VendorList,
                         {
-                            onUserInput: this.handleUserInput.bind(this),
-                            filterLcbo: this.state.filterLcbo },
+                            onFilter: this.filterVendorsList.bind(this),
+                            filter: this.state.filter },
                         vendorListNodes
                     )
                 )
@@ -46332,7 +46365,7 @@ var Map = (function (_React$Component2) {
 
 _reactAddons2['default'].render(_reactAddons2['default'].createElement(Map, { dataType: 'json', url: '/wp-json/cartogram-api/vendors' }), document.getElementById('map'));
 
-},{"./vendor-item.jsx":454,"./vendor.jsx":455,"./vendor.styles.js":456,"babel-runtime/helpers/class-call-check":6,"babel-runtime/helpers/create-class":7,"babel-runtime/helpers/get":9,"babel-runtime/helpers/inherits":10,"babel-runtime/helpers/interop-require-default":11,"google-map-react":45,"react-controllables":88,"react-pure-render/function":278,"react/addons":280}],454:[function(require,module,exports){
+},{"./vendor-item.jsx":454,"./vendor.jsx":455,"./vendor.styles.js":456,"babel-runtime/helpers/class-call-check":6,"babel-runtime/helpers/create-class":7,"babel-runtime/helpers/get":9,"babel-runtime/helpers/inherits":10,"babel-runtime/helpers/interop-require-default":11,"classnames":40,"google-map-react":45,"react-controllables":88,"react-pure-render/function":278,"react/addons":280}],454:[function(require,module,exports){
 'use strict';
 
 var _get = require('babel-runtime/helpers/get')['default'];
@@ -46389,6 +46422,13 @@ var Vendor = (function (_React$Component) {
     }
 
     _createClass(Vendor, [{
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(pp, ps) {
+            if (pp.active) {
+                console.log(_reactAddons2['default'].findDOMNode(this).getBoundingClientRect().top);
+            }
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _reactAddons2['default'].createElement(

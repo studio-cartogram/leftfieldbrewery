@@ -81,3 +81,18 @@
         background:$navy;
     }
 }
+
+.vendor-filter {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 80px;
+    right: 0;
+    width: auto;
+    a {
+        display:inline-block;
+        margin:0 5px 0 0;
+        cursor:pointer;
+        border-bottom:1px solid;
+    }
+}

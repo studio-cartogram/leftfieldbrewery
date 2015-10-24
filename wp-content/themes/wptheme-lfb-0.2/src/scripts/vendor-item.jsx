@@ -17,6 +17,11 @@ export default class Vendor extends React.Component {
     constructor(props) {
         super(props);
     }
+    componentDidUpdate(pp, ps) {
+        if(pp.active) {
+            console.log(React.findDOMNode(this).getBoundingClientRect().top);
+        }
+    }
     render() {
         return (
             <li

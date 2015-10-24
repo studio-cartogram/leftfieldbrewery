@@ -164,3 +164,13 @@ $marker-size: 30px;
         }
     }
 }
+
+.is-active {
+    color:$red !important;
+}
+
+.vendor-filter {
+    a {
+        font-size:10px;
+    }
+}

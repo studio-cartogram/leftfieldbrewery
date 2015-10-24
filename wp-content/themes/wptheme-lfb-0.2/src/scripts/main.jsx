@@ -4,15 +4,10 @@ import shouldPureComponentUpdate from 'react-pure-render/function';
 import {K_SIZE} from './vendor.styles.js';
 import Vendor from './vendor.jsx';
 import VendorItem from './vendor-item.jsx';
+import cx from 'classnames';
 import GoogleMap from 'google-map-react';
 
 function createMapOptions(maps) {
-  // next props are exposed at maps
-  // "Animation", "ControlPosition", "MapTypeControlStyle", "MapTypeId",
-  // "NavigationControlStyle", "ScaleControlStyle", "StrokePosition", "SymbolPath", "ZoomControlStyle",
-  // "DirectionsStatus", "DirectionsTravelMode", "DirectionsUnitSystem", "DistanceMatrixStatus",
-  // "DistanceMatrixElementStatus", "ElevationStatus", "GeocoderLocationType", "GeocoderStatus", "KmlLayerStatus",
-  // "MaxZoomStatus", "StreetViewStatus", "TransitMode", "TransitRoutePreference", "TravelMode", "UnitSystem"
   return {
     zoomControlOptions: {
       position: maps.ControlPosition.RIGHT_CENTER,
@@ -27,15 +22,21 @@ function createMapOptions(maps) {
   };
 }
 class VendorList extends React.Component {  
-    handleChange(type) {
-        this.props.onUserInput();
+    filterVendors(type) {
+        this.props.onFilter(type);
     }
     render() {
         return (
             <section className="rule-left brew-finder__list vendor-listing bg-cream ">
                 <div className="screen">
-                    <p className="lead"><i className="icon-tap"></i>Find our beer at these all-star establishments.
-                    </p>
+                    <p className="lead"><i className="icon-tap"></i>Find our beer at these all-star establishments.</p>
+                    <nav className="vendor-filter">
+                        <a onClick={this.filterVendors.bind(this, '')} className={cx(this.props.filter === '' ? 'is-active' : '')}>All</a>
+                        <a onClick={this.filterVendors.bind(this, 'bar')} className={cx(this.props.filter === 'bar' ? 'is-active' : '')}>Bars</a>
+                        <a onClick={this.filterVendors.bind(this, 'lcbo')} className={cx(this.props.filter === 'lcbo' ? 'is-active' : '')}>LCBO</a>
+                        <a onClick={this.filterVendors.bind(this, 'brew-pub')} className={cx(this.props.filter === 'brew-pub' ? 'is-active' : '')}>Brew Pubs</a>
+                        <a onClick={this.filterVendors.bind(this, 'restaurant')} className={cx(this.props.filter === 'restaurant' ? 'is-active' : '')}>Restaurant</a>
+                    </nav>
                     <div className="scrollshadow">
                         <ul >{this.props.children}</ul>
                     </div>
@@ -67,17 +68,24 @@ class Map extends React.Component {
         this.state = { 
             data: [],
             activeVendor: "",
-            filterLcbo: false
+            filter:'' 
         };
     }
     originalData
-    handleUserInput() {
-        const vendorTypeFilter = 'bar';
+    filterVendorsList(filter) {
+        var newData = this.originalData;
+
+        if (filter !== '') {
+            newData = this.originalData.filter(function(vendor) {
+                return vendor.vendor_type === filter;
+            });
+        }
+
         this.setState({
-            data: this.originalData.filter(function(vendor) {
-                return vendor.vendor_type === vendorTypeFilter;
-            })
+            data: newData,
+            filter: filter
         });
+
     }
 
     loadDataFromServer() {
@@ -169,8 +177,8 @@ class Map extends React.Component {
                 </div>
                 <div className="columns four sidebar pull-eight mobile-flush">
                     <VendorList 
-                        onUserInput={this.handleUserInput.bind(this)}
-                        filterLcbo={this.state.filterLcbo} >
+                        onFilter={this.filterVendorsList.bind(this)}
+                        filter={this.state.filter} >
                         {vendorListNodes}
                     </VendorList>
                 </div>
