@@ -46131,7 +46131,7 @@ var Map = (function (_React$Component) {
     }, {
         key: 'defaultProps',
         value: {
-            zoom: 13,
+            zoom: 14,
             center: [43.67325256259363, -79.39391286230466]
         },
         enumerable: true

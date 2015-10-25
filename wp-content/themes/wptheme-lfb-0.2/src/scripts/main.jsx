@@ -35,7 +35,7 @@ class Map extends React.Component {
         onChildClick: PropTypes.func
     }
     static defaultProps = {
-        zoom: 13, 
+        zoom: 14, 
         center: [43.67325256259363, -79.39391286230466]
     }
     shouldComponentUpdate = shouldPureComponentUpdate;
