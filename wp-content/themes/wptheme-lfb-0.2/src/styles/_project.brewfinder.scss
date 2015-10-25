@@ -236,12 +236,11 @@ $marker-size: 30px;
     }
 
 
-    &:hover,
-    &.vendor-item--is-active {
+    &:hover {
         h6,
         h5 {
             transition:all $transition-timing $transition-easing;
-            // color:$red !important;
+            color:$red !important;
         }
     }
     &.vendor-item--is-active {
