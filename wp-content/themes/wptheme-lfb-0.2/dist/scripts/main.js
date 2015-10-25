@@ -46241,6 +46241,7 @@ var Map = (function (_React$Component) {
                     lng: vendor.longitude,
                     key: vendor.id,
                     neighbourhood: vendor.neighbourhood,
+                    address: vendor.address,
                     onClick: boundClick,
                     scrollPos: _this3.state.vendorListScrollPos,
                     onScrollVendorList: _this3.scrollVendorList.bind(_this3),
@@ -46448,6 +46449,7 @@ var Vendor = (function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
+            var mapLink = "https://www.google.com/maps/dir/Current+Location/" + this.props.address;
             return _reactAddons2['default'].createElement(
                 'li',
                 {
@@ -46472,6 +46474,12 @@ var Vendor = (function (_React$Component) {
                         ),
                         _reactAddons2['default'].createElement('h6', { className: 'text-small', dangerouslySetInnerHTML: { __html: this.props.neighbourhood } })
                     )
+                ),
+                _reactAddons2['default'].createElement(
+                    'a',
+                    { href: mapLink, target: '_blank',
+                        className: 'link--get-directions' },
+                    'Get directions'
                 )
             );
         }

@@ -124,6 +124,7 @@ class Map extends React.Component {
                     lng={vendor.longitude} 
                     key={vendor.id} 
                     neighbourhood={vendor.neighbourhood} 
+                    address={vendor.address} 
                     onClick={boundClick}
                     scrollPos={this.state.vendorListScrollPos}
                     onScrollVendorList={this.scrollVendorList.bind(this)}

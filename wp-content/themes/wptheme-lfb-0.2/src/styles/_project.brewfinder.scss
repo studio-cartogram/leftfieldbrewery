@@ -174,7 +174,52 @@ $marker-size: 30px;
 
 .vendor-item {
     cursor:pointer;
-    
+    height:55px;
+    overflow:hidden;
+    .link--get-directions {
+        height:20px !important;
+        font-size:9px;
+        padding:0px 10px 0 20px;
+        padding-left:16.6%;
+        text-indent:20px;
+        line-height:20px;
+        display:block;
+        // border-top:1px solid $navy;
+        font-family: $font-primary; 
+        font-weight:bold;
+        position:relative;
+        overflow:hidden;
+        text-transform:uppercase;
+        // background:url(../images/stripe.png);
+        &:after {
+            position:absolute;
+            top:0;
+            left:0;
+            height:25px;
+            width:16.6%;
+            border-top:1px solid $navy;
+            border-right:1px solid $navy;
+            background:$cream;
+            background:url(../images/stripe.png);
+            // border-bottom:1px solid $navy;
+            content:'';
+        }
+
+        &:before {
+            content:'';
+            right:0;
+            content:' ';
+            height:15px;
+            width:15px;
+            transform:translate(50%, -50%) rotate(-45deg);
+            top:100%;
+            border:1px solid $navy;
+            background:url(../images/stripe.png) $navy;
+            background:$navy;
+            position:absolute;
+        }
+
+    }
     &:last-of-type {
         border-bottom:1px solid $navy;
 
@@ -196,8 +241,11 @@ $marker-size: 30px;
         h6,
         h5 {
             transition:all $transition-timing $transition-easing;
-            color:$red !important;
+            // color:$red !important;
         }
+    }
+    &.vendor-item--is-active {
+        height:75px;
     }
 }
 

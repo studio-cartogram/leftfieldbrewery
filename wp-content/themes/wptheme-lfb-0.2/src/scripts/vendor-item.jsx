@@ -27,6 +27,7 @@ export default class Vendor extends React.Component {
         }
     }
     render() {
+        const mapLink = "https://www.google.com/maps/dir/Current+Location/" + this.props.address;
         return (
             <li
                 onClick={this.props.onClick}
@@ -44,6 +45,11 @@ export default class Vendor extends React.Component {
                         <h5 className="text-small" ><strong dangerouslySetInnerHTML={{__html: this.props.name}}></strong></h5>
                         <h6 className="text-small" dangerouslySetInnerHTML={{__html: this.props.neighbourhood}}></h6>
                     </div>
+                </a> 
+
+                <a href={mapLink} target="_blank"
+                className="link--get-directions">
+                    Get directions
                 </a> 
             </li>
         );
