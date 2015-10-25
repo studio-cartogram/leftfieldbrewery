@@ -46540,38 +46540,52 @@ var VendorList = (function (_React$Component) {
                     'div',
                     { className: 'screen' },
                     _reactAddons2['default'].createElement(
-                        'p',
-                        { className: 'lead' },
-                        _reactAddons2['default'].createElement('i', { className: 'icon-tap' }),
-                        'Find our beer at these all-star establishments.'
-                    ),
-                    _reactAddons2['default'].createElement(
-                        'nav',
+                        'ul',
                         { className: 'vendor-filter' },
                         _reactAddons2['default'].createElement(
-                            'a',
-                            { onClick: this.filterVendors.bind(this, ''), className: (0, _classnames2['default'])(this.props.filter === '' ? 'is-active' : '') },
-                            'All'
+                            'li',
+                            null,
+                            _reactAddons2['default'].createElement(
+                                'a',
+                                { onClick: this.filterVendors.bind(this, ''), className: (0, _classnames2['default'])('', this.props.filter === '' ? 'is-active' : '') },
+                                'All'
+                            )
                         ),
                         _reactAddons2['default'].createElement(
-                            'a',
-                            { onClick: this.filterVendors.bind(this, 'bar'), className: (0, _classnames2['default'])(this.props.filter === 'bar' ? 'is-active' : '') },
-                            'Bars'
+                            'li',
+                            null,
+                            _reactAddons2['default'].createElement(
+                                'a',
+                                { onClick: this.filterVendors.bind(this, 'bar'), className: (0, _classnames2['default'])('', this.props.filter === 'bar' ? 'is-active' : '') },
+                                'Bars'
+                            )
                         ),
                         _reactAddons2['default'].createElement(
-                            'a',
-                            { onClick: this.filterVendors.bind(this, 'lcbo'), className: (0, _classnames2['default'])(this.props.filter === 'lcbo' ? 'is-active' : '') },
-                            'LCBO'
+                            'li',
+                            null,
+                            _reactAddons2['default'].createElement(
+                                'a',
+                                { onClick: this.filterVendors.bind(this, 'lcbo'), className: (0, _classnames2['default'])('', this.props.filter === 'lcbo' ? 'is-active' : '') },
+                                'LCBOs'
+                            )
                         ),
                         _reactAddons2['default'].createElement(
-                            'a',
-                            { onClick: this.filterVendors.bind(this, 'brew-pub'), className: (0, _classnames2['default'])(this.props.filter === 'brew-pub' ? 'is-active' : '') },
-                            'Brew Pubs'
+                            'li',
+                            null,
+                            _reactAddons2['default'].createElement(
+                                'a',
+                                { onClick: this.filterVendors.bind(this, 'brew-pub'), className: (0, _classnames2['default'])('', this.props.filter === 'brew-pub' ? 'is-active' : '') },
+                                'Brew Pubs'
+                            )
                         ),
                         _reactAddons2['default'].createElement(
-                            'a',
-                            { onClick: this.filterVendors.bind(this, 'restaurant'), className: (0, _classnames2['default'])(this.props.filter === 'restaurant' ? 'is-active' : '') },
-                            'Restaurant'
+                            'li',
+                            null,
+                            _reactAddons2['default'].createElement(
+                                'a',
+                                { onClick: this.filterVendors.bind(this, 'restaurant'), className: (0, _classnames2['default'])('', this.props.filter === 'restaurant' ? 'is-active' : '') },
+                                'Restaurants'
+                            )
                         )
                     ),
                     _reactAddons2['default'].createElement(_scrollerJsx2['default'], { scrollPos: this.props.scrollPos, items: this.props.children })

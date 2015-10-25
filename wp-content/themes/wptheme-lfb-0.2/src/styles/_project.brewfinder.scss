@@ -162,7 +162,8 @@ $marker-size: 30px;
 
 .brew-finder__list {
     .scrollshadow {
-        height:500px;
+        height:560px;
+        border-bottom:1px solid $navy;
 
     }
 
@@ -200,12 +201,44 @@ $marker-size: 30px;
     }
 }
 
-.is-active {
-    color:$red !important;
+.screen:before {
+    top:-7px;
 }
 
 .vendor-filter {
-    a {
-        font-size:10px;
+    background:$cream;
+    position: relative;
+    height:40px;
+    top:1px;
+    left:0;
+    text-align:center;
+    &:before {
+        position: absolute;
+        content: '';
+        height: auto;
+        top: 0;
+        bottom: 0;
+        left: -1px;
+        z-index: 10;
+        width: 1px;
+        background: $navy;
+    }
+    li {
+        display:inline-block;
+        padding:10px 5px;
+
+        &:before,
+        &:after {
+            display:none;
+        }
+
+        a {
+            font-weight: bold;
+            cursor:pointer;
+            &.is-active {
+                border-bottom:1px solid;
+                color:$red;
+            }
+        }
     }
 }
