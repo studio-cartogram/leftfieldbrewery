@@ -1,20 +1,19 @@
 //Components
-.atthebrewery {
-    border-bottom:1px solid $navy;
-    @media only screen and (min-width: 768px) { 
-        border-bottom:none;
-    }
+.atthebrewery__table {
 }
 .atthebrewery__row {
+    display:block;
     &, .columns {
         height:52px;
-        background: $cream;
     }
 
     background:$cream;
 
     &:nth-of-type(odd) {
         background:$cream-dark;
+    }
+    &:last-of-type {
+        border-bottom:1px solid $navy;
     }
 }
 

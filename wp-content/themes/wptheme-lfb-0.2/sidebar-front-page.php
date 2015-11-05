@@ -2,7 +2,7 @@
      //  Brew Finder
     // *************************************** // ?>
 
-<h3 class="rule-left mobile-divide text-center">Try Left Field </h3>
+<h3 class="rule-left mobile-divide sidebar-title text-center">Try Left Field </h3>
 <section class="rule-left border-bottom vendor-listing bg-cream ">		
     <a href="<?php echo get_bloginfo('url') ?>/brew-finder" class="link--bordered link--brew-finder">        
         <i class="icon-tap"></i>
@@ -45,7 +45,7 @@ $tagline = get_post_meta( $post->ID, '_cartogram_short_description_value', TRUE 
      //  Highlight Reel 
     // *************************************** // ?>
 
-<h3 class="rule-left mobile-divide  text-center">Hightlight Reel</h3>
+<h3 class="rule-left mobile-divide sidebar-title text-center">Hightlight Reel</h3>
 
 <?php global $myExcerptLength;
 
@@ -76,7 +76,7 @@ while ($query->have_posts()): $query->the_post();?>
      //  Wriggley
     // *************************************** // ?>
 
-<h3 class="rule-left mobile-divide  text-center">Brew Dog</h3>
+<h3 class="rule-left mobile-divide sidebar-title text-center">Brew Dog</h3>
 
 <?php
     $name = get_field('wrigley_title', 'options');
@@ -84,8 +84,8 @@ while ($query->have_posts()): $query->the_post();?>
     $image = get_field('wrigley_headshot', 'option');
     $handle = get_field('wrigley_handle', 'option');
 ?>
-<div class="row homehighlightreel">
-    <div class="border-bottom  bg-cream double-bordered columns twelve text-center">
+<div class="row wrigley">
+    <div class="border-bottom space-inner-bottom bg-cream double-bordered columns twelve text-center">
         <div class="row border-top border-bottom ">
             <div class="columns format-text bg-cream ">
                 <p class="collapse text-small">&nbsp;</p>

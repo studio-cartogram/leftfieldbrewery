@@ -7,7 +7,30 @@
     }
 }
 
+.sidebar-title {
+    margin-right:-15px;
+}
+
 .homehighlightreel {
     margin: 0 -14px 0 -1px !important;
     border-left: 1px solid $navy;
+}
+
+.wrigley {
+    margin: 0 -15px 0 -1px !important;
+    border-left: 1px solid $navy;
+    border-right: 1px solid $navy;
+    
+    img {
+        width:40%;
+        margin: auto;
+        border:1px solid $navy;
+        padding:1px;
+        margin-top:$base-size/2;
+    }
+    @media only screen and (min-width: 768px) { 
+        img {
+            margin-top:-$base-size/3;
+        }
+    }
 }

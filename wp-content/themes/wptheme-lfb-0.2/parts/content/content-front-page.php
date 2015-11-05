@@ -11,7 +11,7 @@
 						<h3 class="soft text-center rule-right ">At the Brewery</h3>
 					</div>
 				</div>
-				<div class="row text-center flushed-left collapse">
+				<div class="row atthebrewery__table text-center flushed-left collapse">
 
             <?php 
             ?>
