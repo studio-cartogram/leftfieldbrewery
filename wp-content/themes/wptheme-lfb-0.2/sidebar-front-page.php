@@ -56,12 +56,12 @@ while ($query->have_posts()): $query->the_post();?>
 <div class="row homehighlightreel">
     <div class="double-bordered columns twelve">
         <div class="row border-top border-bottom ">
-            <div class="columns eight format-text bg-cream rule-right bg-cream">
+            <div class="columns rule-right eight format-text bg-cream ">
                 <p class="collapse text-small"><?php the_date('jS F, Y'); ?></p>
             </div>
         </div>
         <div class="row border-bottom">
-            <div class="space-inner-top space-inner-bottom columns format-text twelve rule-right bg-cream">
+            <div class="space-inner-top space-inner-bottom columns format-text twelve bg-cream">
                 <h5 class="space-bottom"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                 <?php the_excerpt(); ?>
                 <?php  more_link(); ?>
@@ -72,6 +72,31 @@ while ($query->have_posts()): $query->the_post();?>
 
 <?php endwhile; ?>
 
+<?php // *************************************** //
+     //  Wriggley
+    // *************************************** // ?>
 
+<h3 class="rule-left mobile-divide  text-center">Brew Dog</h3>
 
-
+<?php
+    $name = get_field('wrigley_title', 'options');
+    $tagline = get_field('wrigley_tagline', 'option');
+    $image = get_field('wrigley_headshot', 'option');
+    $handle = get_field('wrigley_handle', 'option');
+?>
+<div class="row homehighlightreel">
+    <div class="border-bottom  bg-cream double-bordered columns twelve text-center">
+        <div class="row border-top border-bottom ">
+            <div class="columns format-text bg-cream ">
+                <p class="collapse text-small">&nbsp;</p>
+            </div>
+        </div>
+        <?php 
+        if( !empty($image) ): ?>
+            <img class="img-round" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+        <?php endif; ?>
+        <h5 class="upcase"><?php echo $name; ?></h5>
+        <p class="lead"><?php echo $tagline; ?></p>
+        <p class="lead"><a class="strong" href="http://instagram.com/<?php $handle ?>">Follow @<?php echo $handle ?></a></p>
+    </div>
+</div>
