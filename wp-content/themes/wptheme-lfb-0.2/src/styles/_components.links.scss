@@ -1,3 +1,20 @@
 a {
     transition:color $transition-timing $transition-easing;
 }
+
+.link--complex {
+    border:none;
+    display:block;
+    .link--complex__target {
+        border-bottom:1px solid;
+    }
+    &:hover .link--complex__target {
+        color:$red;
+    }
+}
+
+.link--big {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+}

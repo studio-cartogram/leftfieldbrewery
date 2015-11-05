@@ -22,18 +22,6 @@
     position:relative;
     left:-1px;
     top:-1px;
-    // &:before {
-    //     width:auto;
-    //     bottom:100%;
-    //     position:absolute;
-    //     left:-1px;
-    //     margin-top:3px;
-    //     height:4px;
-    //     right:0;
-    //     background:$cream;
-    //     border:1px solid $navy;
-    //     content: ' ';
-    // }
     &:after {
         top:0;
         width:auto;
@@ -96,7 +84,9 @@ ul#social>li a:before {
 .vendor-listing .lead {
     padding-right:20px;
 }
-
+.vendor-listing:after {
+        display:none;
+    }
 .top-bar {
     z-index:100;
 }
@@ -108,3 +98,7 @@ h1 {
 .footer .gform_wrapper form {
         max-width: 500px;
     }
+.tweet img {
+    width: 12px;
+    padding-left: 1px;
+}

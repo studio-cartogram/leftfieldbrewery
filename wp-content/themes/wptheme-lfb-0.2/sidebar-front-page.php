@@ -1,17 +1,74 @@
+<?php // *************************************** //
+     //  Brew Finder
+    // *************************************** // ?>
+
 <h3 class="rule-left mobile-divide text-center">Try Left Field </h3>
-<section class="rule-left  vendor-listing bg-cream ">		
-	<div class="screen">
-	<p class="lead"><i class="icon-tap"></i>Find our beer at these all-star establishments.</p>
-	<div class="scrollshadow">
-		<ul>
-			<?php get_template_part('parts/loops/loop', 'vendor') ?>
-		</ul>
-	</div>	
-</div>
-	<div class="row collapse flushed-right">
-		<div class="columns twelve double-bordered">
-			<?php $options = get_option('lfb_theme_options');?> 
-			<a href="mailto:hello@yourlocalbar.com?Subject=Tap%20Request:%20Left%20Field%20Brewery&body=Hi%20There,%20I'm a regular at your fine establishment%20and%20I'd%20love%20to%20see%20some%20of%20Left%20Field's%20beer%20on%20tap.%20I%20think%20either%20the%20Eephus%20Brown%20Ale,%20Maris*%20American%20Pale%20Ale,%20or%20the%206-4-3%20Double%20IPA%20would%20be%20a%20great%20draft%20pick%20for%20your%20pub.%20You%20can%20find%20out%20more%20at%20http://www.leftfieldbrewery.ca%20or%20email%20them%20directly:%20mark@leftfieldbrewery.ca%20Cheers!" class="button expand">Pitch Left Field at Your Local</a>
-		</div>
-	</div>	
+<section class="rule-left border-bottom vendor-listing bg-cream ">		
+    <a href="<?php echo get_bloginfo('url') ?>/brew-finder" class="lead link--big link--complex">        
+        <i class="icon-tap"></i>
+        Find our beer a bar, brewpub, restaurant or LCBO new you. <span class="link--complex__target">Click Here</span>
+    </a>
 </section> 
+
+<?php // *************************************** //
+     //  MVP 
+    // *************************************** // ?>
+
+<?php 
+
+$mvp = get_field('mvp', 'option');
+
+if( $mvp): 
+
+$post = $mvp;
+
+$permalink = get_permalink( $post->ID );
+$color = get_post_meta( $post->ID, '_cartogram_color_value', TRUE );
+$title = get_the_title( $post->ID);
+$tagline = get_post_meta( $post->ID, '_cartogram_short_description_value', TRUE );
+?>
+
+<h3 class="rule-left mobile-divide  text-center">MVP</h3>
+<section class="mvp rule-left" style="background:<?php echo $color; ?>">
+    <a class="light double-bordered border-bottom " href="<?php echo $permalink; ?>">
+        <h2 class="beer-name beer-block light"><?php echo $title; ?></h2>
+        <?php echo '<h3 class="light beer-tagline">' . $tagline . '</h3>'; ?>
+    </a>
+</section> 
+
+<?php endif; ?>
+
+<?php // *************************************** //
+     //  Highlight Reel 
+    // *************************************** // ?>
+
+<h3 class="rule-left mobile-divide  text-center">Hightlight Reel</h3>
+
+<?php global $myExcerptLength;
+
+$query = new WP_Query('showposts=1');
+
+while ($query->have_posts()): $query->the_post();?>
+
+<div class="row homehighlightreel">
+    <div class="double-bordered columns twelve">
+        <div class="row border-top border-bottom ">
+            <div class="columns eight format-text bg-cream rule-right bg-cream">
+                <p class="collapse text-small"><?php the_date('jS F, Y'); ?></p>
+            </div>
+        </div>
+        <div class="row border-bottom">
+            <div class="space-inner-top space-inner-bottom columns format-text twelve rule-right bg-cream">
+                <h5 class="space-bottom"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                <?php the_excerpt(); ?>
+                <?php  more_link(); ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php endwhile; ?>
+
+
+
+
