@@ -6,7 +6,7 @@
 <section class="rule-left border-bottom vendor-listing bg-cream ">		
     <a href="<?php echo get_bloginfo('url') ?>/brew-finder" class="link--bordered link--brew-finder">        
         <i class="icon-tap"></i>
-        Locate our beer at a bar, brewpub, restaurant or LCBO new you.<br/>
+        Locate our beer at a bar, brewpub, restaurant or LCBO near you.<br/>
     </a>
 </section> 
 
@@ -49,7 +49,7 @@ $tagline = get_post_meta( $post->ID, '_cartogram_short_description_value', TRUE 
 
 <?php global $myExcerptLength;
 
-$query = new WP_Query('showposts=1');
+$query = near WP_Query('showposts=1');
 
 while ($query->have_posts()): $query->the_post();?>
 
