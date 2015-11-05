@@ -3,7 +3,7 @@
     // *************************************** // ?>
 
 <h3 class="rule-left mobile-divide sidebar-title text-center">Try Left Field </h3>
-<section class="rule-left border-bottom vendor-listing bg-cream ">		
+<section style="background-image:url(<?php bloginfo('template_url') ?>/dist/images/brewfinder.png)" class="rule-left border-bottom homebrewfinder bg-cream ">		
     <a href="<?php echo get_bloginfo('url') ?>/brew-finder" class="link--bordered link--brew-finder">        
         <i class="icon-tap"></i>
         Locate our beer at a bar, brewpub, restaurant or LCBO near you.<br/>
