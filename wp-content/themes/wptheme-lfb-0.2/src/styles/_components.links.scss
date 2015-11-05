@@ -2,19 +2,35 @@ a {
     transition:color $transition-timing $transition-easing;
 }
 
-.link--complex {
+.link--brew-finder {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
     border:none;
     display:block;
-    .link--complex__target {
-        border-bottom:1px solid;
+    margin-right:-14px;
+    background:$navy !important;
+    padding: $base-size $base-size $base-size $base-size * 3;
+    &:after {
+        content: '';
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        border:0px solid $cream;
+        transition: all $transition-timing $transition-easing;
     }
-    &:hover .link--complex__target {
-        color:$red;
+    &, i {
+        color:$cream !important;
+    }
+    i.icon-tap {
+        left: $base-size;
+        top: $base-size/2;
+        
+    }
+    &:hover:after {
+        border:8px solid $cream;
     }
 }
 
-.link--big {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1.4;
-}

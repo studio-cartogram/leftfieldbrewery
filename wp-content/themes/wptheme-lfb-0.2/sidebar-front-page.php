@@ -4,9 +4,9 @@
 
 <h3 class="rule-left mobile-divide text-center">Try Left Field </h3>
 <section class="rule-left border-bottom vendor-listing bg-cream ">		
-    <a href="<?php echo get_bloginfo('url') ?>/brew-finder" class="lead link--big link--complex">        
+    <a href="<?php echo get_bloginfo('url') ?>/brew-finder" class="link--brew-finder">        
         <i class="icon-tap"></i>
-        Find our beer a bar, brewpub, restaurant or LCBO new you. <span class="link--complex__target">Click Here</span>
+        Locate our beer at a bar, brewpub, restaurant or LCBO new you.<br/>
     </a>
 </section> 
 
