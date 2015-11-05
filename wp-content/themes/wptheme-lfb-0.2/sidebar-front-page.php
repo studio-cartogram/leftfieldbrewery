@@ -76,7 +76,7 @@ while ($query->have_posts()): $query->the_post();?>
      //  Wriggley
     // *************************************** // ?>
 
-<h3 class="rule-left mobile-divide sidebar-title text-center">Brew Dog</h3>
+<h3 class="rule-left mobile-divide sidebar-title text-center">Mascot</h3>
 
 <?php
     $name = get_field('wrigley_title', 'options');
