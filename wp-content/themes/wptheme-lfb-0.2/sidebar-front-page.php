@@ -91,12 +91,14 @@ while ($query->have_posts()): $query->the_post();?>
                 <p class="collapse text-small">&nbsp;</p>
             </div>
         </div>
-        <?php 
-        if( !empty($image) ): ?>
-            <img class="img-round" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-        <?php endif; ?>
-        <h5 class="upcase"><?php echo $name; ?></h5>
-        <p class="lead"><?php echo $tagline; ?></p>
-        <p class="lead"><a class="strong" href="http://instagram.com/<?php echo $handle ?>">Follow @<?php echo $handle ?></a></p>
+        <div class="wrigley__inner">
+            <?php 
+            if( !empty($image) ): ?>
+                <img class="img-round" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <?php endif; ?>
+            <h5 class="upcase"><?php echo $name; ?></h5>
+            <p class="lead"><?php echo $tagline; ?></p>
+            <p class="lead"><a class="strong" href="http://instagram.com/<?php echo $handle ?>">Follow @<?php echo $handle ?></a></p>
+    </div>
     </div>
 </div>
