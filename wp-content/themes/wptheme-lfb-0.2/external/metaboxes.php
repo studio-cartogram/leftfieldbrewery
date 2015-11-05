@@ -97,7 +97,7 @@
 	    )
 	);
 
-	$meta_box_groups = array($vendor_options, $players_options, $beers_options);
+	$meta_box_groups = array($players_options, $beers_options);
 
 	function new_meta_box($post, $metabox) {	
 		
@@ -152,10 +152,9 @@
 	} // end meta boxes
 
 	function create_meta_box() {	
-		global $vendor_options, $players_options, $beers_options;	
+		global $players_options, $beers_options;	
 		
 		if ( function_exists('add_meta_box') ) {				
-			add_meta_box( 'new-meta-boxes-vendors', __('Vendor Options','cartogram'), 'new_meta_box', 'vendors', 'normal', 'high', array('inputs'=>$vendor_options) );
 			add_meta_box( 'new-meta-boxes-players', __('Players Options','cartogram'), 'new_meta_box', 'players', 'normal', 'high', array('inputs'=>$players_options) );
 			add_meta_box( 'new-meta-boxes-beers', __('Beers Options','cartogram'), 'new_meta_box', 'beers', 'normal', 'high', array('inputs'=>$beers_options) );
 		}
