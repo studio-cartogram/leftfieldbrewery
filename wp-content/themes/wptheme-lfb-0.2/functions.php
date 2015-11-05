@@ -580,5 +580,9 @@ if( function_exists('acf_add_options_page') ) {
 	$page2 = acf_add_options_page(array(
 		'page_title' 	=> 'Contact Information'
 	));
+
+	$page2 = acf_add_options_page(array(
+		'page_title' 	=> 'Wrigley Information'
+	));
 }
 ?>
