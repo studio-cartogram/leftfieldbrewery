@@ -52,6 +52,7 @@ gulp.task('scripts', function () {
     })
     .bundle()
     .pipe(source('main.js'))
+    .pipe($.if(!args.debug, $.streamify($.uglify())))
     .pipe(gulp.dest(paths.dist + '/scripts'));
 });
 
