@@ -102,3 +102,19 @@ h1 {
     width: 12px;
     padding-left: 1px;
 }
+
+.mvp {
+    .beer-tagline {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .beer-name.beer-block {
+        margin:0 0 5px 0;
+        padding:0;
+    }
+    .beer-tagline:after,
+    .beer-name:before {
+        display:none;
+    }
+}

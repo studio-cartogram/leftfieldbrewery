@@ -4,7 +4,7 @@
 
 <h3 class="rule-left mobile-divide text-center">Try Left Field </h3>
 <section class="rule-left border-bottom vendor-listing bg-cream ">		
-    <a href="<?php echo get_bloginfo('url') ?>/brew-finder" class="link--brew-finder">        
+    <a href="<?php echo get_bloginfo('url') ?>/brew-finder" class="link--bordered link--brew-finder">        
         <i class="icon-tap"></i>
         Locate our beer at a bar, brewpub, restaurant or LCBO new you.<br/>
     </a>
@@ -30,10 +30,13 @@ $tagline = get_post_meta( $post->ID, '_cartogram_short_description_value', TRUE 
 
 <h3 class="rule-left mobile-divide  text-center">MVP</h3>
 <section class="mvp rule-left" style="background:<?php echo $color; ?>">
-    <a class="light double-bordered border-bottom " href="<?php echo $permalink; ?>">
+    <div class="double-bordered">
+    <a class="link--bordered light border-bottom " href="<?php echo $permalink; ?>">
+        <svg class="icon--medium"><use xlink:href="#<?php echo $post->post_name ?>"></use</svg>
         <h2 class="beer-name beer-block light"><?php echo $title; ?></h2>
         <?php echo '<h3 class="light beer-tagline">' . $tagline . '</h3>'; ?>
     </a>
+    </div>
 </section> 
 
 <?php endif; ?>

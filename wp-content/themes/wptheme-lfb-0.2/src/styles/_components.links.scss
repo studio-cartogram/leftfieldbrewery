@@ -2,6 +2,24 @@ a {
     transition:color $transition-timing $transition-easing;
 }
 
+.link--bordered {
+    position:relative;
+    &:after {
+        content: '';
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        border:0px solid $cream;
+        transition: all $transition-timing $transition-easing;
+    }
+    &:hover:after {
+        border:8px solid $cream;
+    }
+}
+
 .link--brew-finder {
     font-size: 15px;
     font-weight: 700;
@@ -11,16 +29,6 @@ a {
     margin-right:-14px;
     background:$navy !important;
     padding: $base-size $base-size $base-size $base-size * 3;
-    &:after {
-        content: '';
-        position:absolute;
-        top:0;
-        left:0;
-        right:0;
-        bottom:0;
-        border:0px solid $cream;
-        transition: all $transition-timing $transition-easing;
-    }
     &, i {
         color:$cream !important;
     }
@@ -28,9 +36,6 @@ a {
         left: $base-size;
         top: $base-size/2;
         
-    }
-    &:hover:after {
-        border:8px solid $cream;
     }
 }
 
