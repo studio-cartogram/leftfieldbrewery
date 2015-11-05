@@ -49,7 +49,7 @@ $tagline = get_post_meta( $post->ID, '_cartogram_short_description_value', TRUE 
 
 <?php global $myExcerptLength;
 
-$query = near WP_Query('showposts=1');
+$query = new WP_Query('showposts=1');
 
 while ($query->have_posts()): $query->the_post();?>
 
