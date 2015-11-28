@@ -99,6 +99,6 @@ while ($query->have_posts()): $query->the_post();?>
             <h5 class="upcase"><?php echo $name; ?></h5>
             <p class="lead"><?php echo $tagline; ?></p>
             <p class="lead"><a class="strong" href="http://instagram.com/<?php echo $handle ?>">Follow @<?php echo $handle ?></a></p>
-    </div>
+        </div>
     </div>
 </div>
