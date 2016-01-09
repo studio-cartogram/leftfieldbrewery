@@ -2,6 +2,7 @@ $map-height: 600px;
 $marker-size: 30px;
 
 .brew-finder {
+    min-height: rem-calc(300);
     height:100%;
     position:relative;
 }
