@@ -1,5 +1,7 @@
-<?php 	$icon = (get_post_meta( $post->ID, '_cartogram_icon_value', TRUE ) ? get_post_meta( $post->ID, '_cartogram_icon_value', TRUE ) : $post->post_name);
-		$color = get_post_meta( $post->ID, '_cartogram_color_value', TRUE );?>
+<?php 	
+$icon_image = get_field('icon');
+$icon = (!$icon_image && get_post_meta( $post->ID, '_cartogram_icon_value', TRUE ) ? get_post_meta( $post->ID, '_cartogram_icon_value', TRUE ) : $post->post_name);
+$color = get_post_meta( $post->ID, '_cartogram_color_value', TRUE );?>
 
 <h3 class="rule-left text-center ">An Unusual Delivery</h3>
 <div class="row collapse flushed-right sidebar-beer">
@@ -14,7 +16,12 @@
 							the_title('<h2 class="light beer-name beer-block">', '</h2>');
 							echo '<h3 class="light beer-tagline">' . get_post_meta( $id, '_cartogram_short_description_value', TRUE ) . '</h3>';
                             echo '<div class="back-logo big-icon multi-svg">';
-                                echo '<svg class="centered icon--large"><use xlink:href="#' . $icon . '"></use</svg>';
+                                if($icon_image) :
+                                    echo '<img src="' . wp_get_attachment_image_src( $icon_image )[0] . '" />';
+                                else :
+                                    echo '<svg class="centered icon--large"><use xlink:href="#' . $icon . '"></use</svg>';
+                                endif;
+
 							echo '</div>';
 							the_content();
 						?>
