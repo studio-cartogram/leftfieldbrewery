@@ -39,12 +39,19 @@
                                 <?php while(the_repeater_field('beers_at_the_brewery', 'option')) :
                                         $beer = get_sub_field('beer');
                                         $beer_icon = get_sub_field('beer_icon');
+                                        $icon_image = get_field('icon', $beer_icon);
                                         $beer_color = get_post_meta( $beer->ID, '_cartogram_color_value', TRUE ); ?>
 
                                 <a href="<?php echo get_permalink($beer->ID) ?>" class="row atthebrewery__row collapse"> 
                                     <div style="color: <?php echo $beer_color; ?>" class="columns atb__col--large text-left rule-right">
+                                        <?php if($icon_image) :
+                                            echo '<img class="icon--small beer-icon" src="' . wp_get_attachment_image_src( $icon_image )[0] . '" />';
+                    else :?>
+
                                         <svg class="icon--small beer-icon"><use xlink:href="#<?php echo $beer_icon->post_name; ?>-color"></use></svg>
-                                        <?php echo '<span class="beta soft-double--left beer-title">' .get_the_title($beer->ID) . '</span>';?>
+                                        <?php 
+                                        endif;
+                                        echo '<span class="beta soft-double--left beer-title">' .get_the_title($beer->ID) . '</span>';?>
 
                                     </div>
                                     <div class="columns atb__col--medium hide-for-small  rule-right">
