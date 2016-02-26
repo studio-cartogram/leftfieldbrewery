@@ -26,13 +26,18 @@ $permalink = get_permalink( $post->ID );
 $color = get_post_meta( $post->ID, '_cartogram_color_value', TRUE );
 $title = get_the_title( $post->ID);
 $tagline = get_post_meta( $post->ID, '_cartogram_short_description_value', TRUE );
+$icon_image = get_field('icon', $post->ID);
 ?>
 
 <h3 class="rule-left mobile-divide  text-center">MVP</h3>
 <section class="mvp rule-left" style="background:<?php echo $color; ?>">
     <div class="double-bordered">
     <a class="link--bordered light border-bottom " href="<?php echo $permalink; ?>">
+        <?php if($icon_image) :
+        echo '<img class="icon--medium space-top space-bottom" src="' . wp_get_attachment_image_src( $icon_image )[0] . '" />';
+        else :?>
         <svg class="icon--medium"><use xlink:href="#<?php echo $post->post_name ?>"></use</svg>
+        <?php endif; ?>
         <h2 class="beer-name beer-block light"><?php echo $title; ?></h2>
         <?php echo '<h3 class="light beer-tagline">' . $tagline . '</h3>'; ?>
     </a>
