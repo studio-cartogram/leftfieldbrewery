@@ -76,7 +76,7 @@
 		wp_register_script( 'modernizr', get_template_directory_uri() . '/dist/scripts/modernizr.custom.js', NULL, NULL, NULL);
 		wp_enqueue_script( 'modernizr' );
 
-		wp_register_script( 'app', get_template_directory_uri().'/dist/scripts/v1.js', array('jquery') );
+		wp_register_script( 'app', get_template_directory_uri().'/dist/scripts/legacy.js', array('jquery') );
 		wp_register_script( 'main', get_template_directory_uri().'/dist/scripts/main.js', array(), false, true);
         wp_enqueue_script( 'app', array('jquery')  );
     if(is_page('brew-finder')) {    wp_enqueue_script('main'); };

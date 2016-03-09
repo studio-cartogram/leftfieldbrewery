@@ -56,12 +56,26 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest(paths.dist + '/scripts'));
 });
 
-// Build Vendor Script File
-gulp.task('vendor', function () {
-    return gulp.src([paths.src + '/scripts/vendor/*.js'])
-    .pipe($.concat('vendor.js'))
-    .pipe($.if(!args.debug, $.uglify()))
+// Build Version 1 Script File
+gulp.task('legacy', function () {
+    return gulp.src([
+        paths.src + "/scripts/foundation/jquery.foundation.mediaQueryToggle.js",
+        paths.src + "/scripts/foundation/jquery.foundation.forms.js",
+        paths.src + "/scripts/foundation/jquery.foundation.navigation.js",
+        paths.src + "/scripts/foundation/jquery.foundation.buttons.js",
+        paths.src + "/scripts/foundation/jquery.foundation.tabs.js",
+        paths.src + "/scripts/foundation/jquery.placeholder.js",
+        paths.src + "/scripts/foundation/jquery.foundation.topbar.js",
+        paths.src + "/scripts/foundation/jquery.cookie.js",
+        paths.src + "/scripts/foundation/app.js",
+        paths.src + "/scripts/client/jquery.flexslider.js",
+        paths.src + "/scripts/client/twitterFetcher.js",
+        paths.src + "/scripts/client/gf.placeholders.js",
+        paths.src + "/scripts/client/app.js",
+    ])
     .pipe($.print())
+    .pipe($.concat('legacy.js'))
+    .pipe($.if(!args.debug, $.uglify()))
     .pipe(gulp.dest(paths.dist + '/scripts/'))
     .pipe($.size({title: 'scripts'}));
 });
@@ -128,7 +142,6 @@ gulp.task('v1', function () {
     .pipe(gulp.dest(paths.dist + '/styles'));
 
     gulp.src([
-        paths.src + '/scripts/v1.js',
         paths.src + '/scripts/modernizr.custom.js'
     ])
     .pipe(gulp.dest(paths.dist + '/scripts'));
@@ -144,6 +157,7 @@ gulp.task('default', [
     'svgs',
     'fonts',
     'v1',
+    'legacy',
     'scripts'
 ], function () {
   browserSync({
@@ -161,7 +175,7 @@ gulp.task('default', [
   gulp.watch(['**/*.php'], reload);
   gulp.watch([paths.src + '/styles/**/*.{scss,css}'], ['styles', reload]);
   gulp.watch([paths.src + '/scripts/**/*.{js,jsx}'], ['scripts']);
-  gulp.watch([paths.src + '/scripts/vendor/*.js'], ['vendor']);
+  gulp.watch([paths.src + '/scripts/foundation/*.js', paths.src + '/scripts/client/*.js'], ['legacy']);
   gulp.watch([paths.src + '/images/**/*'], reload);
 });
 
