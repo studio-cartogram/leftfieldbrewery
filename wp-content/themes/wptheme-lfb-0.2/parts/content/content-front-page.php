@@ -3,7 +3,8 @@
 <div class="row  ">
 	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four mobile-flush rule-left"); ?>>	
 		<?php the_title('<h3 class="rule-right text-center">','</h3>') ?>
-        <?php get_template_part('parts/slideshows/slideshow'); ?>
+        <?php // get_template_part('parts/slideshows/slideshow'); ?>
+        <div class="instagrams" id="instafeed"></div>
         <div class="row">
             <div class="columns twelve atthebrewery">
 				<div class="row flushed-left collapse">

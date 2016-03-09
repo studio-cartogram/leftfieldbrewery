@@ -70,6 +70,7 @@ gulp.task('legacy', function () {
         paths.src + "/scripts/foundation/app.js",
         paths.src + "/scripts/client/jquery.flexslider.js",
         paths.src + "/scripts/client/twitterFetcher.js",
+        paths.src + "/scripts/client/instafeed.js",
         paths.src + "/scripts/client/gf.placeholders.js",
         paths.src + "/scripts/client/app.js",
     ])

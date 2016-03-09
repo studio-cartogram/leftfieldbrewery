@@ -102,56 +102,24 @@ App.bindListeners = function () {
         "showInteraction": false
     };
     twitterFetcher.fetch(twitterConfig);
-	/* ========================================================================================================================
-	  
-	Fold Nav
 
-	======================================================================================================================== */
+    /* ========================================================================================================================
 
-	// $('.rolldown-list li').each(function () {
-	//   var delay = ($(this).index()/4) + 's';
-	//   $(this).css({
-	//       webkitAnimationDelay: delay,
-	//       mozAnimationDelay: delay,
-	//       animationDelay: delay
-	//   });
-	// });
+       Instagram
 
-	/* ========================================================================================================================
-	  
-	Counters for Age Verification
+       ======================================================================================================================== */
 
-	======================================================================================================================== */
+    var feed = new Instafeed({
+        get: 'user',
+        limit:6,
+        accessToken: '676456.da1c4f5.f362ab74206b4eedad3c89d13b015235',
+        userId: 296366000,
+        resolution: 'standard_resolution',
+        template: '<a class="instagram bg {{orientation}}" href="{{link}}" target="_blank" style="background-image:url({{image}})"/><span class="instagram__caption"><span class="instagram__caption-text"><span class="icon-instagram instagram__caption-icon"></span><span class="caption__text">{{caption}}</span></span></span></a>',
+    });
 
-	// if ($("#av-overlay").length) {
-	// 	var AVMonth = new Digits({ 
-	//   		wrapper: '#av-digits-m', 
-	//   		mode: 'statistics', 
-	//   		value: 10 
-	//   	});
-	// 	var AVDay = new Digits({ 
-	//   		wrapper: '#av-digits-d', 
-	//   		mode: 'statistics', 
-	//   		value: 24 
-	//   	});  
-	//   	var AVYear = new Digits({ 
-	//   		wrapper: '#av-digits-y', 
-	//   		mode: 'statistics', 
-	//   		value: 1992 
-	//   	});
-	  
-	//   	// Change value when the input changes 
+    feed.run();
 
-	//   	$('#av_verify_m').change(function() {
-	//   		AVMonth.changeValue($(this).val());
-	// 	});
-	// 	$('#av_verify_d').change(function() {
-	//   		AVDay.changeValue($(this).val());
-	// 	});
-	// 	$('#av_verify_y').change(function() {
-	//   		AVYear.changeValue($(this).val());
-	// 	});
-	// }
 	
 }; // App.bindListeners().
 
