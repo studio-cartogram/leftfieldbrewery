@@ -112,7 +112,7 @@ App.bindListeners = function () {
     var feed = new Instafeed({
         get: 'user',
         limit:6,
-        accessToken: '676456.da1c4f5.f362ab74206b4eedad3c89d13b015235',
+        accessToken: '296366000.1677ed0.5880677c1fd8462d9f99a523c2f77e40',
         userId: 296366000,
         resolution: 'standard_resolution',
         template: '<a class="instagram bg {{orientation}}" href="{{link}}" target="_blank" style="background-image:url({{image}})"/><span class="instagram__caption"><span class="instagram__caption-text"><span class="icon-instagram instagram__caption-icon"></span><span class="caption__text">{{caption}}</span></span></span></a>',
