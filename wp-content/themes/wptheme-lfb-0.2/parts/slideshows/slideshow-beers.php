@@ -18,7 +18,6 @@
 							<li class="beer_slide">
 								<div class="image-wrap">
 									<img src="<?php echo $attachment[0]; ?>" <?php echo $attributes; ?> />
-									<div class="image-caption"><?php echo get_post_field('post_excerpt', $image->ID);?></div>
 								</div>
 							</li>
 						<?php
