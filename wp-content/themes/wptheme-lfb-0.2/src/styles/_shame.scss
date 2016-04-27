@@ -1,3 +1,27 @@
+// Stats
+
+.beer-stats {
+
+    @media only screen and (max-width: 768px) { 
+        .columns h5,
+        .columns h6 {
+            margin:0 2px !important;
+            padding:0px 2px 5px!important;
+        }
+        .columns.food_pairings h5 {
+            padding-top:20px !important;
+        }
+        .columns.food_pairings h5,
+        .columns.food_pairings h6 {
+            display:block;
+        }
+
+        .columns h5:after {
+            content: ':';
+        }
+    }
+}
+
 .single-beers .flip-container {
     height: 654px;
 }
