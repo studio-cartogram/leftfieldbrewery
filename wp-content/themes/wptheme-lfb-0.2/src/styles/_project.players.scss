@@ -47,7 +47,10 @@
             transition: all 200ms;
             font-size:12px;
         }
-
+        &:active,
+        &:hover {
+            opacity:0.95 !important;
+        }
 
     }
     &.hover {
@@ -77,6 +80,7 @@
         font-size: 12px;
         margin:0;
         padding:0 0 8px;
+        line-height: 1.5;
     }
     .player-card__contact {
         margin:0;
