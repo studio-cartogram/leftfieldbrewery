@@ -72,7 +72,7 @@ $jobs = new WP_Query( array(
 
                     $email = get_field('email');
                     $title = get_field('title');
-                    $placeholder = get_bloginfo("stylesheet_directory") . '/dist/images/placeholder-jobs.png';
+                    $placeholder = get_bloginfo("stylesheet_directory") . '/dist/images/placeholder-jobs.svg';
                     $image = (has_post_thumbnail() ? wp_get_attachment_image_url( get_post_thumbnail_id(), 'cartogram_player_cropped' ) : $placeholder);
                     ?>
 
