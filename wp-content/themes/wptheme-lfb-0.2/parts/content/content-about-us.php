@@ -80,7 +80,7 @@ $jobs = new WP_Query( array(
 						<div class="flip-container">
                              <?php echo (get_the_content() ? '<a class="flip" id="to-back" href="#"><i class="icon-flip-right"></i></a>' : '');?>
 							<div class="flipper">
-                                <div class="front bg-cover" style="background-image:url(<?php echo $image ?>)"></div>
+                                <div class="front " style="background-image:url(<?php echo $image ?>)"></div>
                                 <div class="back"><?php the_content(); ?></div>
                             </div>
                         </div>

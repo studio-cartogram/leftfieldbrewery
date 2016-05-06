@@ -20,7 +20,10 @@
     .back {
         height: 300px;
     }
-
+    .front {
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
     .back {
         border:1px solid $navy;
         overflow:scroll;
