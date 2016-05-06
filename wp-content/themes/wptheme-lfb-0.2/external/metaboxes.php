@@ -9,41 +9,6 @@
 	$prefix = "_cartogram_";
 
 
-	$vendor_options = array(
-	    	"map" => array(
-	    	"type" => "textfield",
-			"name" => $prefix."email",
-			"name" => $prefix."map",
-	    	"std" => "",
-	    	"title" => __('Vendor Map URL','cartogram'),
-	    	"description" => __('Enter the link to the Google Map URL for this Vendor.','cartogram')
-	    	),
-
-	    	"address" => array(
-	    	"type" => "textfield",
-			"name" => $prefix."address",
-	    	"std" => "",
-	    	"title" => __('Address','cartogram'),
-	    	"description" => __('Enter the quick one line address of this vendor.','cartogram')
-	    	)
-	);
-	$players_options = array(
-	
-		"email" => array(
-	    	"type" => "textfield",
-			"name" => $prefix."email",
-	    	"std" => "",
-	    	"title" => __('Players contact info.','cartogram'),
-	    	"description" => __('Enter email. ','cartogram')
-	    ),
-	    "icon" => array(
-	    	"type" => "textfield",
-			"name" => $prefix."icon",
-	    	"std" => "",
-	    	"title" => __('Player Icon.','cartogram'),
-	    	"description" => __('Enter icon name. ','cartogram')
-	    )
-	);
 	$beers_options = array(
 	
 		"short_description" => array(
@@ -97,7 +62,7 @@
 	    )
 	);
 
-	$meta_box_groups = array($players_options, $beers_options);
+	$meta_box_groups = array($beers_options);
 
 	function new_meta_box($post, $metabox) {	
 		

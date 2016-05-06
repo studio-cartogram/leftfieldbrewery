@@ -1,0 +1,84 @@
+.players {
+    margin: 0 !important;
+    padding: 40px 34px !important;
+    background: $cream;
+}
+
+.players__card {
+    padding:0 6px !important;
+}
+
+@media only screen and (min-width: 768px) { 
+}
+
+.flip-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    &,
+    .front, 
+    .back {
+        height: 300px;
+    }
+
+    .back {
+        border:1px solid $navy;
+        overflow:scroll;
+        p {
+            color: $navy;
+            font-size: 12px;
+            line-height: 1.4;
+            font-weight: 600;
+            padding:12px;
+            text-align:left;
+        }
+    }
+    .flip {
+        bottom:0;
+        padding: 10px 12px;
+        line-height: 0;
+        background: white;
+        opacity:1 !important;
+        transition: all 200ms;
+        margin:0 1px 1px 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+        i {
+            transition: all 200ms;
+            font-size:12px;
+        }
+
+
+    }
+    &.hover {
+        .flip {
+            color: white;
+            background: $navy;
+            i {
+                font-size:12px;
+                transform:rotateY(180deg);
+            }
+
+        }
+    }
+
+}
+
+.player-card__info {
+    padding: 20px 10px 40px;
+    .player-card__name {
+        font-family: "proxima-nova","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+        text-transform:none;
+        font-size: 16px;
+        margin:0;
+        padding:0 0 8px;
+    }
+    .player-card__title {
+        font-size: 12px;
+        margin:0;
+        padding:0 0 8px;
+    }
+    .player-card__contact {
+        margin:0;
+        padding:0;
+    }
+
+}
