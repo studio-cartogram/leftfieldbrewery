@@ -4,6 +4,10 @@ $players = new WP_Query( array(
     "posts_per_page" => -1,
     "post_type" => "players"
 ) );
+$jobs = new WP_Query( array(
+    "posts_per_page" => -1,
+    "post_type" => "jobs"
+) );
 ?>
 
 <div class="row  <?php echo $page_title; ?>">
@@ -53,7 +57,7 @@ $players = new WP_Query( array(
                             <div class="flip-container">
                             <a class="flip" id="to-back" href="#"><i class="icon-flip-right"></i></a>
                                 <div class="flipper">
-                                    <div class="front bg-cover" style="background-image:url(<?php echo $image ?>)"></div>
+                                    <div class="front bg-cover" style="background-image:url(<?php echo $image['url']?>)"></div>
                                     <div class="back"><?php the_content(); ?></div>
                                 </div>
                             </div>
@@ -65,6 +69,34 @@ $players = new WP_Query( array(
 ?>
                         </div>
                     </li>
+                <?php 
+                    while ($jobs->have_posts()) :$jobs->the_post();
+
+                    $email = get_field('email');
+                    $title = get_field('title');
+                    $placeholder = get_bloginfo("stylesheet_directory") . '/dist/images/placeholder.png';
+                    $image = (has_post_thumbnail() ? wp_get_attachment_image_url( get_post_thumbnail_id(), 'cartogram_player_cropped' ) : $placeholder);
+                    $first_name = preg_split("/[\s,]+/", get_the_title());
+                    ?>
+
+					<li class="players__card card-players wrap">
+						<div class="flip-container">
+							<a class="flip" id="to-back" href="#"><i class="icon-flip-right"></i></a>
+							<div class="flipper">
+                                <div class="front bg-cover" style="background-image:url(<?php echo $image ?>)"></div>
+                                <div class="back"><?php the_content(); ?></div>
+                            </div>
+                        </div>
+                        <div class="player-card__info text-center ">
+                            <?php
+                                echo '<h3 class="player-card__name">' . get_the_title() . '</h3>';
+                                echo ($title ? '<h4 class="player-card__title">' . $title . '</h4>' : '');
+                                echo ($email ? '<a class="player-card__contact" href="mailto:' . $email . '">Contact ' . $first_name[0] . '</a>' : '');
+                            ?>
+                        </div>
+                    </li>
+
+                    <?php endwhile; ?>
 
 			    </ul>
 			</div>
