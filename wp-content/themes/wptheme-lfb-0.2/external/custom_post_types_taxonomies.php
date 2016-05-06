@@ -8,6 +8,39 @@
 
 	function create_post_types() {
 		
+		$jobsLabels = array(
+			'name' => __( 'Jobs' ),
+			'singular_name' => __( 'Job' ),
+			'add_new' => __( 'Add New' ),
+			'add_new_item' => __( 'Add New Job' ),
+			'edit' => __( 'Edit' ),
+			'edit_item' => __( 'Edit Job' ),
+			'new_item' => __( 'New Job' ),
+			'view' => __( 'View Job' ),
+			'view_item' => __( 'View Job' ),
+			'search_items' => __( 'Search Jobs' ),
+			'not_found' => __( 'No Jobs found' ),
+			'not_found_in_trash' => __( 'No Jobs found in Trash' ),
+			'parent' => __( 'Parent Job' ),
+		);
+		
+		$jobsArgs = array(
+			'labels' => $jobsLabels,
+			'public' => true,
+			'publicly_queryable' => true,
+			'show_ui' => true,
+			'query_var' => true,
+			'has_archive' => true,		
+			'rewrite' => true,
+			'capability_type' => 'post',
+			'hierarchical' => false,
+			'taxonomies' => array('category'),
+			'menu_position' => null,
+			'supports' => array('title', 'editor', 'thumbnail')
+		); 	
+		
+		register_post_type( 'jobs' , $jobsArgs );
+
 		$playersLabels = array(
 			'name' => __( 'Players' ),
 			'singular_name' => __( 'Player' ),

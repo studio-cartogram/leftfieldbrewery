@@ -13,6 +13,8 @@
 
 .flip-container {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width:300px;
+    margin:auto;
     &,
     .front, 
     .back {
