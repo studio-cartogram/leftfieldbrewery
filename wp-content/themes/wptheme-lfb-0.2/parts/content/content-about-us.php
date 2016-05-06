@@ -39,7 +39,33 @@ $players = new WP_Query( array(
                             ?>
                         </div>
                     </li>
-				    <?php endwhile; ?>
+
+                    <?php endwhile; ?>
+
+                    <?php
+                        // wrigley
+                        $name = get_field('wrigley_title', 'options');
+                        $tagline = get_field('wrigley_tagline', 'option');
+                        $image = get_field('wrigley_headshot', 'option');
+                        $handle = get_field('wrigley_handle', 'option');
+                       ?>
+                        <li class="players__card card-players wrap">
+                            <div class="flip-container">
+                            <a class="flip" id="to-back" href="#"><i class="icon-flip-right"></i></a>
+                                <div class="flipper">
+                                    <div class="front bg-cover" style="background-image:url(<?php echo $image ?>)"></div>
+                                    <div class="back"><?php the_content(); ?></div>
+                                </div>
+                            </div>
+                            <div class="player-card__info text-center ">
+<?php
+                                echo '<h3 class="player-card__name">' . $name . '</h3>';
+                                echo ($tagline ? '<h4 class="player-card__title">' . $tagline . '</h4>' : '');
+                                echo ($handle ? '<a class="player-card__contact" target="_blank" href="http://twitter.com/' . $handle . '">Follow  @' . $handle . '</a>' : '');
+?>
+                        </div>
+                    </li>
+
 			    </ul>
 			</div>
 		</div>
