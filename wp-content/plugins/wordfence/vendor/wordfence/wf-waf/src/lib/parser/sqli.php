@@ -1126,6 +1126,7 @@ class wfWAFSQLiParser extends wfWAFBaseParser {
 	 * | (ROW_SYM expression_list)
 	 * | subquery
 	 * | EXISTS subquery
+	 * | {identifier expr}
 	 * | match_against_statement
 	 * | case_when_statement
 	 * | interval_expr
@@ -1142,6 +1143,7 @@ class wfWAFSQLiParser extends wfWAFBaseParser {
 			($parseSubquery = $this->parseSubquery()) ||
 			($parseExistsSubquery = $this->parseExistsSubquery()) ||
 			($parseCaseWhen = $this->parseCaseWhen()) ||
+			($parseODBCExpression = $this->parseODBCExpression()) ||
 			($parseIntervalExpression = $this->parseIntervalExpression()) ||
 			($parseColumnSpec = $this->parseColumnSpec());
 
@@ -1559,6 +1561,18 @@ class wfWAFSQLiParser extends wfWAFBaseParser {
 	/**
 	 * @return bool
 	 */
+	private function parseODBCExpression() {
+		$startIndex = $this->index;
+		if ($this->isTokenOfType($this->nextToken(), wfWAFSQLiLexer::OPEN_BRACKET) && $this->isIdentifier($this->nextToken()) && $this->parseExpression() && $this->isTokenOfType($this->nextToken(), wfWAFSQLiLexer::CLOSE_BRACKET)) {
+			return true;
+		}
+		$this->index = $startIndex;
+		return false;
+	}
+
+	/**
+	 * @return bool
+	 */
 	private function parseIntervalExpression() {
 		$startIndex = $this->index;
 		if ($this->isIdentifierWithValue($this->nextToken(), 'interval') && $this->parseExpression()) {
@@ -1631,7 +1645,7 @@ class wfWAFSQLiParser extends wfWAFBaseParser {
 				$this->isTokenOfType($this->nextToken(), wfWAFSQLiLexer::OPEN_BRACKET) &&
 				$this->isIdentifierWithValue($this->nextToken(), 'oj') &&
 				$this->parseTableReference() &&
-				$this->isTokenOfType($this->nextToken(), wfWAFSQLiLexer::OPEN_BRACKET)
+				$this->isTokenOfType($this->nextToken(), wfWAFSQLiLexer::CLOSE_BRACKET)
 			)
 		) {
 			return true;
@@ -2553,6 +2567,14 @@ class wfWAFSQLiParser extends wfWAFBaseParser {
 
 	/**
 	 * @param wfWAFLexerToken $token
+	 * @return bool
+	 */
+	private function isIdentifier($token) {
+		return $token && ($token->getType() === wfWAFSQLiLexer::QUOTED_IDENTIFIER || $token->getType() === wfWAFSQLiLexer::UNQUOTED_IDENTIFIER);
+	}
+
+	/**
+	 * @param wfWAFLexerToken $token
 	 * @param string|array $value
 	 * @return bool
 	 */
@@ -2560,6 +2582,18 @@ class wfWAFSQLiParser extends wfWAFBaseParser {
 		return $token && $token->getType() === wfWAFSQLiLexer::UNQUOTED_IDENTIFIER &&
 		(is_array($value) ? in_array($token->getLowerCaseValue(), array_map('wfWAFUtils::strtolower', $value)) :
 			$token->getLowerCaseValue() === wfWAFUtils::strtolower($value));
+	}
+
+	/**
+	 * @param wfWAFLexerToken $token
+	 * @param mixed $type
+	 * @return bool
+	 */
+	protected function isTokenOfType($token, $type) {
+		if (is_array($type)) {
+			return $token && in_array($token->getType(), $type);
+		}
+		return $token && $token->getType() === $type;
 	}
 
 	/**
@@ -2707,15 +2741,15 @@ class wfWAFSQLiLexer implements wfWAFLexerInterface {
 				new wfWAFLexerTokenMatcher(self::BINARY_NUMBER_LITERAL, '/^(?:0b[01]+|[bB]\'[01]+\')/', true),
 				new wfWAFLexerTokenMatcher(self::HEX_NUMBER_LITERAL, '/^(?:0x[0-9a-fA-F]+|[xX]\'[0-9a-fA-F]+\')/', true),
 				new wfWAFLexerTokenMatcher(self::INTEGER_LITERAL, '/^[0-9]+/', true),
-				new wfWAFLexerTokenMatcher(self::VARIABLE, '/^(?:@(?:`([^`\\\\]{0,256}(?:\\\\.[^`\\\\]{0,256}){0,256})`|
-"(?:[^#"\\\\]{0,256}(?:\\\\.[^#"\\\\]{0,256}){0,256})"|
-\'(?:[^\'\\\\]{0,256}(?:\\\\.[^\'\\\\]{0,256}){0,256})\'|
+				new wfWAFLexerTokenMatcher(self::VARIABLE, '/^(?:@(?:`(?:[^`]*(?:``[^`]*)*)`|
+"([^"\\\\]*(?:\\\\.[^"\\\\]*)*)"|
+\'([^\'\\\\]*(?:\\\\.[^\'\\\\]*)*)\'|
 [a-zA-Z_\\$\\.]+|
 @[a-zA-Z_\\$][a-zA-Z_\\$0-9]{0,256}){0,1})
 /Asx'),
-				new wfWAFLexerTokenMatcher(self::QUOTED_IDENTIFIER, '/^`(?:[^`\\\\]{0,256}(?:\\\\.[^`\\\\]{0,256}){0,256})`/As'),
-				new wfWAFLexerTokenMatcher(self::DOUBLE_STRING_LITERAL, '/^(?:[nN]|_[0-9a-zA-Z\\$_]{0,256})?"(?:[^#"\\\\]{0,256}(?:\\\\.[^#"\\\\]{0,256}){0,256})"/As'),
-				new wfWAFLexerTokenMatcher(self::SINGLE_STRING_LITERAL, '/^(?:[nN]|_[0-9a-zA-Z\\$_]{0,256})?\'(?:[^\'\\\\]{0,256}(?:\\\\.[^\'\\\\]{0,256}){0,256})\'/As'),
+				new wfWAFLexerTokenMatcher(self::QUOTED_IDENTIFIER, '/^`(?:[^`]*(?:``[^`]*)*)`/As'),
+				new wfWAFLexerTokenMatcher(self::DOUBLE_STRING_LITERAL, '/^(?:[nN]|_[0-9a-zA-Z\\$_]{0,256})?"([^"\\\\]*(?:\\\\.[^"\\\\]*)*)"/As'),
+				new wfWAFLexerTokenMatcher(self::SINGLE_STRING_LITERAL, '/^(?:[nN]|_[0-9a-zA-Z\\$_]{0,256})?\'([^\'\\\\]*(?:\\\\.[^\'\\\\]*)*)\'/As'),
 				// U+0080 .. U+FFFF
 				new wfWAFLexerTokenMatcher(self::UNQUOTED_IDENTIFIER, '/^[0-9a-zA-Z\\$_\\x{0080}-\\x{FFFF}]{1,256}/u'),
 				new wfWAFLexerTokenMatcher(self::MYSQL_PORTABLE_COMMENT_START, '/^\\/\\*\\![0-9]{0,5}/s'),
@@ -2725,6 +2759,8 @@ class wfWAFSQLiLexer implements wfWAFLexerInterface {
 				new wfWAFLexerTokenMatcher(self::DOT, '/^\\./'),
 				new wfWAFLexerTokenMatcher(self::OPEN_PARENTHESIS, '/^\\(/'),
 				new wfWAFLexerTokenMatcher(self::CLOSE_PARENTHESIS, '/^\\)/'),
+				new wfWAFLexerTokenMatcher(self::OPEN_BRACKET, '/^\\{/'),
+				new wfWAFLexerTokenMatcher(self::CLOSE_BRACKET, '/^\\}/'),
 				new wfWAFLexerTokenMatcher(self::COMMA, '/^,/'),
 				new wfWAFLexerTokenMatcher(self::EXPR_OR, '/^\\|\\|/'),
 				new wfWAFLexerTokenMatcher(self::EXPR_AND, '/^&&/'),

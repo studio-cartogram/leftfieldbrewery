@@ -588,6 +588,8 @@ SQL
 		add_action('init', 'wordfence::initAction');
 		add_action('template_redirect', 'wordfence::templateRedir', 1001);
 		add_action('shutdown', 'wordfence::shutdownAction');
+		add_action('wp_enqueue_scripts', 'wordfence::enqueueAJAXWatcher');
+		add_action('admin_enqueue_scripts', 'wordfence::enqueueAJAXWatcher');
 
 		if(version_compare(PHP_VERSION, '5.4.0') >= 0){
 			add_action('wp_authenticate','wordfence::authActionNew', 1, 2);
@@ -712,6 +714,13 @@ SQL
 	public static function wpRedirectFilter($URL, $status){
 		return $URL;
 	}
+	public static function enqueueAJAXWatcher() {
+		if (wfUtils::isAdmin()) {
+			wp_enqueue_style('wordfence-colorbox-style', wfUtils::getBaseURL() . 'css/colorbox.css', '', WORDFENCE_VERSION);
+			wp_enqueue_script('jquery.wfcolorbox', wfUtils::getBaseURL() . 'js/jquery.colorbox-min.js', array('jquery'), WORDFENCE_VERSION);
+			wp_enqueue_script('wordfenceAJAXjs', wfUtils::getBaseURL() . 'js/admin.ajaxWatcher.js', array('jquery'), WORDFENCE_VERSION);
+		}
+	}
 	public static function ajax_testAjax_callback(){
 		die("WFSCANTESTOK");
 	}
@@ -740,12 +749,10 @@ SQL
 	}
 	public static function ajax_logHuman_callback(){
 		self::getLog()->canLogHit = false;
-		$browscap = new wfBrowscap();
 		$UA = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
 		$isCrawler = false;
-		if($UA){
-			$b = $browscap->getBrowser($UA);
-			if(!empty($b['Crawler']) || wfCrawl::isGoogleCrawler()){
+		if ($UA) {
+			if (wfCrawl::isCrawler($UA) || wfCrawl::isGoogleCrawler()) {
 				$isCrawler = true;
 			}
 		}
@@ -1163,7 +1170,10 @@ SQL
 						foreach($twoFactorUsers as &$t){
 							if($t[0] == $userDat->ID && $t[3] == 'activated'){
 								if($_POST['wordfence_authFactor'] == $t[2] && $t[4] > time()){
-									//Do nothing and allow user to sign in. Their passwd has already been modified to be the passwd without the code.
+									// Set this 2FA code to expire in 30 seconds (for other plugins hooking into the auth process)
+									$t[4] = time() + 30;
+									wfConfig::set_ser('twoFactorUsers', $twoFactorUsers);
+
 								} else if($_POST['wordfence_authFactor'] == $t[2]){
 									$api = new wfAPI(wfConfig::get('apiKey'), wfUtils::getWPVersion());
 									try {
@@ -1264,6 +1274,7 @@ SQL
 				if(wfConfig::get('loginSec_lockInvalidUsers')){
 					if(strlen($username) > 0 && preg_match('/[^\r\s\n\t]+/', $username)){
 						self::lockOutIP($IP, "Used an invalid username '" . $username . "' to try to sign in.");
+						self::getLog()->logLogin('loginFailInvalidUsername', true, $username);
 					}
 					require('wfLockedOut.php');
 				}
@@ -1350,6 +1361,9 @@ SQL
 		}
 		if(! $username){ return; }
 		$userDat = get_user_by('login', $username);
+		if (!$userDat) {
+			$userDat = get_user_by('email', $username);
+		}
 		$_POST['wordfence_userDat'] = $userDat;
 		if(preg_match(self::$passwordCodePattern, $passwd, $matches)){
 			$_POST['wordfence_authFactor'] = $matches[1];
@@ -1363,6 +1377,9 @@ SQL
 		}
 		if(! $username){ return; }
 		$userDat = get_user_by('login', $username);
+		if (!$userDat) {
+			$userDat = get_user_by('email', $username);
+		}
 		$_POST['wordfence_userDat'] = $userDat;
 		if(preg_match(self::$passwordCodePattern, $passwd, $matches)){
 			$_POST['wordfence_authFactor'] = $matches[1];
@@ -1485,8 +1502,11 @@ SQL
 			if($twoFactorUsers[$i][0] == $userID){
 				if($twoFactorUsers[$i][2] == $code){
 					$twoFactorUsers[$i][3] = 'activated';
+					// Set the expiration earlier to invalidate this code
+					$twoFactorUsers[$i][4] = 0;
 					$found = true;
 					$user = $twoFactorUsers[$i];
+
 					break;
 				} else {
 					return array('errorMsg' => "That is not the correct code. Please look for an SMS containing an activation code on the phone with number: " . wp_kses($twoFactorUsers[$i][1], array()) );
@@ -1517,7 +1537,7 @@ SQL
 				$i--;
 			}
 		}
-		$twoFactorUsers[] = array($ID, $phone, $code, 'notActivated', time() + (86400 * 100)); //expiry of code is 100 days in future
+		$twoFactorUsers[] = array($ID, $phone, $code, 'notActivated', time() + (86400 * 30)); //expiry of code is 30 days in future
 		wfConfig::set_ser('twoFactorUsers', $twoFactorUsers);
 	}
 	public static function ajax_loadTwoFactor_callback(){
@@ -1715,6 +1735,7 @@ SQL
 				wfConfig::set('isPaid', 0);
 				//When downgrading we must disable all two factor authentication because it can lock an admin out if we don't.
 				wfConfig::set_ser('twoFactorUsers', array());
+				self::licenseStatusChanged();
 			} else {
 				throw new Exception("Could not understand the response we received from the Wordfence servers when applying for a free API key.");
 			}
@@ -2208,6 +2229,7 @@ SQL
 					wfConfig::set('apiKey', $keyData['apiKey']);
 					wfConfig::set('isPaid', 0);
 					$reload = 'reload';
+					self::licenseStatusChanged();
 				} else {
 					throw new Exception("We could not understand the Wordfence server's response because it did not contain an 'ok' and 'apiKey' element.");
 				}
@@ -2225,6 +2247,7 @@ SQL
 					if($res['isPaid']){
 						$paidKeyMsg = true;
 					}
+					self::licenseStatusChanged();
 				} else {
 					throw new Exception("We could not understand the Wordfence API server reply when updating your API key.");
 				}
@@ -3917,7 +3940,7 @@ directives to put in your nginx.conf to fix this.
 ";
 					}
 
-
+					$adminURL = esc_url($adminURL);
 					$wafActionContent .= "
 <form action='$adminURL' method='post'>
 <input type='hidden' name='wfnonce' value='$wfnonce'>
@@ -4575,7 +4598,7 @@ to your httpd.conf if using Apache, or find documentation on how to disable dire
 						$deletedWhitelistedPath = stripslashes($_POST['deletedWhitelistedPath']);
 						$deletedWhitelistedParam = stripslashes($_POST['deletedWhitelistedParam']);
 						$savedWhitelistedURLParams = (array) wfWAF::getInstance()->getStorageEngine()->getConfig('whitelistedURLParams');
-						$key = base64_encode($deletedWhitelistedPath) . '|' . base64_encode($deletedWhitelistedParam);
+						$key = $deletedWhitelistedPath . '|' . $deletedWhitelistedParam;
 						unset($savedWhitelistedURLParams[$key]);
 						wfWAF::getInstance()->getStorageEngine()->setConfig('whitelistedURLParams', $savedWhitelistedURLParams);
 					}
@@ -4738,7 +4761,7 @@ to your httpd.conf if using Apache, or find documentation on how to disable dire
 				}
 				foreach ($items as $key) {
 					list($path, $paramKey, ) = $key;
-					$whitelistKey = base64_encode(rawurldecode($path)) . '|' . base64_encode(rawurldecode($paramKey));
+					$whitelistKey = $path . '|' . $paramKey;
 					if (array_key_exists($whitelistKey, $whitelist)) {
 						unset($whitelist[$whitelistKey]);
 					}
@@ -4787,7 +4810,7 @@ to your httpd.conf if using Apache, or find documentation on how to disable dire
 		}
 		foreach ($items as $key) {
 			list($path, $paramKey, ) = $key;
-			$whitelistKey = base64_encode(rawurldecode($path)) . '|' . base64_encode(rawurldecode($paramKey));
+			$whitelistKey = $path . '|' . $paramKey;
 			if (array_key_exists($whitelistKey, $whitelist) && is_array($whitelist[$whitelistKey])) {
 				foreach ($whitelist[$whitelistKey] as $ruleID => $data) {
 					$whitelist[$whitelistKey][$ruleID]['disabled'] = !$enabled;
@@ -4946,7 +4969,7 @@ LIMIT %d", $lastSendTime, $limit));
 							'k'      => $waf->getStorageEngine()->getConfig('apiKey'),
 							's'      => $waf->getStorageEngine()->getConfig('siteURL') ? $waf->getStorageEngine()->getConfig('siteURL') :
 								sprintf('%s://%s/', $waf->getRequest()->getProtocol(), rawurlencode($waf->getRequest()->getHost())),
-						)),
+						), null, '&'),
 						array(
 							'body'    => json_encode($dataToSend),
 							'headers' => array(
@@ -5182,6 +5205,26 @@ if (file_exists(%1$s)) {
 			}
 		}
 		return false;
+	}
+
+	public static function licenseStatusChanged() {
+		//Update the WAF cron
+		$cron = wfWAF::getInstance()->getStorageEngine()->getConfig('cron');
+		if (is_array($cron)) {
+			/** @var wfWAFCronEvent $event */
+			foreach ($cron as $index => $event) {
+				$event->setWaf(wfWAF::getInstance());
+				if (!$event->isInPast()) {
+					$newEvent = $event->reschedule();
+					if ($newEvent instanceof wfWAFCronEvent && $newEvent !== $event) {
+						$cron[$index] = $newEvent;
+					} else {
+						unset($cron[$index]);
+					}
+				}
+			}
+		}
+		wfWAF::getInstance()->getStorageEngine()->setConfig('cron', $cron);
 	}
 }
 

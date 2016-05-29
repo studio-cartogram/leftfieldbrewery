@@ -179,6 +179,9 @@ class wfLog {
 			);
 	}
 	private function getCurrentUserID(){
+		if (!function_exists('get_current_user_id') || !defined('AUTH_COOKIE')) { //If pluggable.php is loaded early by some other plugin on a multisite installation, it leads to an error because AUTH_COOKIE is undefined and WP doesn't check for it first
+			return 0;
+		}
 		$id = get_current_user_id();
 		return $id ? $id : 0;
 	}
@@ -542,7 +545,13 @@ class wfLog {
 	 * @return bool|int
 	 */
 	public function logHit(){
-		if (!wfConfig::liveTrafficEnabled() || !$this->logHitOK()) {
+		$liveTrafficEnabled = wfConfig::liveTrafficEnabled();
+		$action = $this->currentRequest->action;
+		$logHitOK = $this->logHitOK();
+		if (!$logHitOK) {
+			return false;
+		}
+		if (!$liveTrafficEnabled && !$action) {
 			return false;
 		}
 		if ($this->currentRequest !== null) {
@@ -564,7 +573,7 @@ class wfLog {
 			$res['browser'] = false;
 			if($res['UA']){
 				$b = $browscap->getBrowser($res['UA']);
-				if($b){
+				if ($b && $b['Parent'] != 'DefaultProperties') {
 					$res['browser'] = array(
 						'browser' => $b['Browser'],
 						'version' => $b['Version'],
@@ -572,6 +581,13 @@ class wfLog {
 						'isMobile' => $b['isMobileDevice'],
 						'isCrawler' => $b['Crawler']
 						);
+				}
+				else {
+					$log = new wfLog(wfConfig::get('apiKey'), wfUtils::getWPVersion());
+					$IP = wfUtils::getIP();
+					$res['browser'] = array(
+						'isCrawler' => !(isset($_COOKIE['wordfence_verifiedHuman']) && $log->validateVerifiedHumanCookie($_COOKIE['wordfence_verifiedHuman'], $res['UA'], $IP))
+					);
 				}
 			}
 			if($res['userID']){
@@ -722,13 +738,20 @@ class wfLog {
 			$res['browser'] = false;
 			if($res['UA']){
 				$b = $browscap->getBrowser($res['UA']);
-				if($b){
+				if($b && $b['Parent'] != 'DefaultProperties'){
 					$res['browser'] = array(
 						'browser'   => !empty($b['Browser']) ? $b['Browser'] : "",
 						'version'   => !empty($b['Version']) ? $b['Version'] : "",
 						'platform'  => !empty($b['Platform']) ? $b['Platform'] : "",
 						'isMobile'  => !empty($b['isMobileDevice']) ? $b['isMobileDevice'] : "",
 						'isCrawler' => !empty($b['Crawler']) ? $b['Crawler'] : "",
+					);
+				}
+				else {
+					$log = new wfLog(wfConfig::get('apiKey'), wfUtils::getWPVersion());
+					$IP = wfUtils::getIP();
+					$res['browser'] = array(
+						'isCrawler' => !(isset($_COOKIE['wordfence_verifiedHuman']) && $log->validateVerifiedHumanCookie($_COOKIE['wordfence_verifiedHuman'], $res['UA'], $IP)) ? 'true' : ''
 					);
 				}
 			}
@@ -1036,6 +1059,8 @@ class wfLog {
 		if (!$this->currentRequest->actionDescription) {
 			$this->currentRequest->actionDescription = "blocked: " . $reason;
 		}
+		
+		$this->logHit();
 
 		wfConfig::inc('total503s');
 		wfUtils::doNotCache();
@@ -1061,7 +1086,7 @@ class wfLog {
 			} else if($nb == 'neverBlockUA' || $nb == 'neverBlockVerified'){
 				if(wfCrawl::isGoogleCrawler()){ //Check the UA using regex
 					if($nb == 'neverBlockVerified'){
-						if(wfCrawl::isVerifiedGoogleCrawler($this->googlePattern, wfUtils::getIP())){ //UA check passed, now verify using PTR if configured to
+						if(wfCrawl::isVerifiedGoogleCrawler(wfUtils::getIP())){ //UA check passed, now verify using PTR if configured to
 							self::$gbSafeCache[$cacheKey] = false; //This is a verified Google crawler, so no we can't block it
 						} else {
 							self::$gbSafeCache[$cacheKey] = true; //This is a crawler claiming to be Google but it did not verify
@@ -1661,11 +1686,29 @@ class wfLiveTrafficQuery {
 		$sql = $this->buildQuery();
 		$results = $wpdb->get_results($sql, ARRAY_A);
 		$this->getWFLog()->processGetHitsResults('', $results);
-
-		foreach ($results as &$row) {
+		
+		$verifyCrawlers = false;
+		if ($this->filters !== null && count($this->filters->getFilters()) > 0) {
+			$filters = $this->filters->getFilters();
+			foreach ($filters as $f) {
+				if (strtolower($f->getParam()) == "isgoogle") {
+					$verifyCrawlers = true;
+					break;
+				}
+			}
+		}
+		
+		foreach ($results as $key => &$row) {
+			if ($row['isGoogle'] && $verifyCrawlers) {
+				if (!wfCrawl::isVerifiedGoogleCrawler($row['IP'], $row['UA'])) {
+					unset($results[$key]); //foreach copies $results and iterates on the copy, so it is safe to mutate $results within the loop
+					continue;
+				}
+			}
+			
 			$row['actionData'] = (array) json_decode($row['actionData'], true);
 		}
-		return $results;
+		return array_values($results);
 	}
 
 	/**
