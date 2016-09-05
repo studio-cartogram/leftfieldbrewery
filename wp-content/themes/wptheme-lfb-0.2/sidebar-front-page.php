@@ -50,7 +50,7 @@ $icon_image = get_field('icon', $post->ID);
      //  Highlight Reel 
     // *************************************** // ?>
 
-<h3 class="rule-left mobile-divide sidebar-title text-center">Hightlight Reel</h3>
+<h3 class="rule-left mobile-divide sidebar-title text-center">Highlight Reel</h3>
 
 <?php global $myExcerptLength;
 
