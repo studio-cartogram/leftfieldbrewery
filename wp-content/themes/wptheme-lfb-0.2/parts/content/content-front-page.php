@@ -27,9 +27,6 @@
                                     <div class="columns hide-for-small atb__col--medium "> 
                                         <span class="delta soft-quarter">Style</span>
                                     </div>
-                                    <div class="columns atb__col--small"> 
-                                        <span class="delta soft-quarter">Can</span>
-                                    </div>
                                     <div class="columns atb__col--small ">
                                         <span class="delta soft-quarter">Bottle</span>
                                     </div>
@@ -57,9 +54,6 @@
                                     </div>
                                     <div class="columns atb__col--medium hide-for-small  rule-right">
                                         <?php echo '<span class="centered zeta">' . get_post_meta( $beer->ID, '_cartogram_short_description_value', TRUE ) . '</span>' ;?>
-                                    </div>
-                                    <div class="columns atb__col--small rule-right ">
-                                        <?php echo (get_sub_field('in_cans') ? '<span class="check-text">In Cans</span><span class="check"></span>' : '&nbsp;'); ?>
                                     </div>
                                     <div class="columns atb__col--small rule-right ">
                                         <?php echo (get_sub_field('in_bottles') ? '<span class="check-text">In Bottles</span><span class="check"></span>' : '&nbsp;'); ?>
