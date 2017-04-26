@@ -101,7 +101,7 @@
 			'rewrite' => true,
 			'capability_type' => 'post',
 			'hierarchical' => false,
-			'taxonomies' => array('category'),
+			'taxonomies' => array('beer-category'),
 			'menu_position' => null,
 			'supports' => array('title', 'editor', 'thumbnail')
 		); 	
@@ -180,6 +180,24 @@
 	}
 
 	function create_taxonomies() {
+    $labels = array(
+      'name' => __( 'Beer Category' ),
+      'singular_name' => __( 'Beer Category' ),
+      'search_items' =>  __( 'Search Beer Categorys' ),
+      'all_items' => __( 'All Beer Categorys' ),
+      'parent_item' => __( 'Parent Beer Category' ),
+      'parent_item_colon' => __( 'Parent Beer Category:' ),
+      'edit_item' => __( 'Edit Beer Category' ),
+      'update_item' => __( 'Update Beer Category' ),
+      'add_new_item' => __( 'Add New Beer Category' ),
+      'new_item_name' => __( 'New Beer Category Name' )
+    ); 	
+
+    register_taxonomy('beer-category','beers', array(
+      'hierarchical' => true,
+      'labels' => $labels
+    ));
+
 		$labels = array(
 	    	'name' => __( 'Vendor Type' ),
 	    	'singular_name' => __( 'Vendor Type' ),

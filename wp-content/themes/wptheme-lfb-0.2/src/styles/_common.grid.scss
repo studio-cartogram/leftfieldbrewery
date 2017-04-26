@@ -1,0 +1,89 @@
+
+/* =========================================
+Grid Component
+========================================= */
+
+$d-grid-cols: 12;
+
+.container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.grid {
+  max-width: $d-container-max;
+  margin: 0 auto;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.grid--justify-center {
+  justify-content: center;
+}
+
+.grid--align-stretch {
+  align-items: stretch;
+}
+
+.grid--align-center {
+  align-items: center;
+}
+
+.grid--full {
+  max-width: 100%;
+}
+
+.col {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+@for $i from 0 to $d-grid-cols + 1 {
+  .col-#{$i} {
+    @include col($i, $d-grid-cols);
+  }
+  .offset-#{$i} {
+    @include col-offset($i, $d-grid-cols);
+  }
+}
+
+@for $i from 0 to $d-grid-cols + 1 {
+  .col-#{$i}-mobile {
+    @include bp($bp-mobile) {
+      @include col($i, $d-grid-cols);
+    }
+  }
+  .offset-#{$i}-mobile {
+    @include bp($bp-mobile) {
+      @include col-offset($i, $d-grid-cols);
+    }
+  }
+}
+
+@for $i from 0 to $d-grid-cols + 1 {
+  .col-#{$i}-tablet {
+    @include bp($bp-tablet) {
+      @include col($i, $d-grid-cols);
+    }
+  }
+
+  .offset-#{$i}-tablet {
+    @include bp($bp-tablet) {
+      @include col-offset($i, $d-grid-cols);
+    }
+  }
+}
+
+@for $i from 0 to $d-grid-cols + 1 {
+  .col-#{$i}-laptop {
+    @include bp($bp-laptop) {
+      @include col($i, $d-grid-cols);
+    }
+  }
+
+  .offset-#{$i}-laptop {
+    @include bp($bp-laptop) {
+      @include col-offset($i, $d-grid-cols);
+    }
+  }
+}
