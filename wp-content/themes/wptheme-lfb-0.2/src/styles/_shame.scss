@@ -152,4 +152,35 @@ body {
     background:url(../images/bg.png);
 }
 
+.footer form {
+    margin-bottom: 0;
+}
+
+.footer .first-row p, .footer .first-row .gform_description, .footer .first-row li a, .footer .first-row li, .footer .first-row p.tweet {
+    font-size: 13px;
+}
+
+.credit {
+    padding-top: 16px;
+}
+
+.credit ul#social {
+    width:60%;
+    padding-bottom:20px;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    list-style: none;
+    &>li { 
+      height: 38px;
+      margin-bottom:10px;
+      a {
+        border-right:none;
+      }
+      a:before {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
 

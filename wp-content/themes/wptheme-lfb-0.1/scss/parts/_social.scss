@@ -81,20 +81,5 @@ ul#social {
   }
 
 }
-.footer ul#social {
-  width:100%;
-  padding-bottom:20px;
-  display: inline;
-  height: 38px;
-  line-height: 38px;
-  list-style: none;
-  @include clearfix();
-  &>li { 
-    height: 38px;
-    margin-bottom:10px;
-    a {
-      border-right:none;
-    }
-  }
-}
+
 
