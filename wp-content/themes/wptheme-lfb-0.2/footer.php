@@ -15,6 +15,8 @@
 							<ul class="no-bullet text-small">
 								<li><?php echo '<a href="mailto:'. $options['email'] . '">' . $options['email'] . '</a>' ; ?></li>
 								<li><?php echo $options['phone']; ?></li>
+								<li>—</li>
+								<li><?php the_field('address_line_1', 'option'); ?><br /><?php the_field('address_line_2', 'option'); ?> </li>
 							</ul>	
 						</div>
 					</div>
