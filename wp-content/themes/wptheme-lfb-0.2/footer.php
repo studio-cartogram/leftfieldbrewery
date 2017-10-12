@@ -16,6 +16,7 @@
 								<li><?php echo '<a href="mailto:'. $options['email'] . '">' . $options['email'] . '</a>' ; ?></li>
 								<li><?php echo $options['phone']; ?></li>
 								<li>—</li>
+								<li><?php the_field('hours', 'option'); ?></li>
 								<li><?php the_field('address_line_1', 'option'); ?><br /><?php the_field('address_line_2', 'option'); ?> </li>
 							</ul>	
 						</div>
