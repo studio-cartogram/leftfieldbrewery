@@ -27,9 +27,9 @@ $second_row_text = $second_row['text' ]; // get the sub field value
 								<li><?php echo '<a href="mailto:'. $options['email'] . '">' . $options['email'] . '</a>' ; ?></li>
 								<li><?php echo $options['phone']; ?></li>
 								<li>—</li>
-								<li><?php echo $first_row_text ?></li>
-								<li>—</li>
 								<li><?php echo $second_row_text ?></li>
+								<li>—</li>
+								<li><?php echo $first_row_text ?></li>
 							</ul>	
 						</div>
 					</div>
