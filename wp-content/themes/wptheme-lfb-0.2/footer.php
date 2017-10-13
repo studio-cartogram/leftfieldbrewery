@@ -1,4 +1,11 @@
-<?php $options = get_option('lfb_theme_options');?> 
+<?php 
+$options = get_option('lfb_theme_options');
+$notes = get_field('notes' , 'option'); // get all the rows
+$first_row = $notes[0]; // get the first row
+$second_row = $notes[1]; // get the first row
+$first_row_text = $first_row['text' ]; // get the sub field value 
+$second_row_text = $second_row['text' ]; // get the sub field value 
+?> 
 <section class="container footer" id="container-footer">
 	<div class="row first-row">
 		<div class="columns six hook rule-outside-right-white">
@@ -20,9 +27,9 @@
 								<li><?php echo '<a href="mailto:'. $options['email'] . '">' . $options['email'] . '</a>' ; ?></li>
 								<li><?php echo $options['phone']; ?></li>
 								<li>—</li>
-								<li><?php the_field('hours', 'option'); ?></li>
+								<li><?php echo $first_row_text ?></li>
 								<li>—</li>
-								<li><?php the_field('address_line_1', 'option'); ?><br /><?php the_field('address_line_2', 'option'); ?> </li>
+								<li><?php echo $second_row_text ?></li>
 							</ul>	
 						</div>
 					</div>
