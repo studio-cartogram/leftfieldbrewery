@@ -1,13 +1,16 @@
 const K_SIZE = 40;
 
-const vendorStyle = {
-};
+const vendorStyle = {};
 
 const vendorStyleHover = {
-  ...vendorStyle,
+  ...vendorStyle
 };
-const vendorOverlayStyle = {
+const vendorOverlayStyle = {};
+const vendorOverlayStyleHover = {};
+export {
+  vendorStyle,
+  vendorStyleHover,
+  vendorOverlayStyle,
+  vendorOverlayStyleHover,
+  K_SIZE
 };
-const vendorOverlayStyleHover = {
-};
-export {vendorStyle, vendorStyleHover, vendorOverlayStyle, vendorOverlayStyleHover, K_SIZE};
