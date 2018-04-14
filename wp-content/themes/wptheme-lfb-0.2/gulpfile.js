@@ -158,7 +158,7 @@ gulp.task("clean", del.bind(null, [".tmp", paths.dist], { dot: true }));
 // Watch files for changes & reload
 gulp.task(
   "default",
-  ["styles", "images", "svgs", "fonts", "v1", "legacy", "scripts"],
+  [/*"styles", "images", "svgs", "fonts", "v1", "legacy",*/ "scripts"],
   function() {
     browserSync({
       notify: false,

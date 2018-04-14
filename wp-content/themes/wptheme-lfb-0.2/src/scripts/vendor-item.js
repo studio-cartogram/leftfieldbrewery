@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React from "react";
+import ReactDOM from "react-dom";
 import shouldPureComponentUpdate from "react-pure-render/function";
 import cx from "classnames";
 
@@ -22,7 +23,7 @@ export default class Vendor extends React.Component {
   }
   componentWillUpdate(pp, ps) {
     if (pp.active) {
-      let pos2 = React.findDOMNode(this).offsetTop;
+      let pos2 = ReactDOM.findDOMNode(this).offsetTop;
       this.updateScrollPos(pos2);
     }
   }

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React from "react";
 import shouldPureComponentUpdate from "react-pure-render/function";
 import cx from "classnames";
 import {
