@@ -34,7 +34,7 @@ class WPMDBPro_Media_Files extends WPMDBPro_Addon {
 		$this->plugin_slug    = 'wp-migrate-db-pro-media-files';
 		$this->plugin_version = $GLOBALS['wpmdb_meta']['wp-migrate-db-pro-media-files']['version'];
 
-		if ( ! $this->meets_version_requirements( '1.6' ) ) {
+		if ( ! $this->meets_version_requirements( '1.8.1' ) ) {
 			return;
 		}
 
@@ -111,16 +111,15 @@ class WPMDBPro_Media_Files extends WPMDBPro_Addon {
 	function load_assets() {
 		$plugins_url = trailingslashit( plugins_url( $this->plugin_folder_name ) );
 		$version     = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? time() : $this->plugin_version;
+		$ver_string  = '-' . str_replace( '.', '', $this->plugin_version );
 		$min         = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 		$src = $plugins_url . 'asset/dist/css/styles.css';
 		wp_enqueue_style( 'wp-migrate-db-pro-media-files-styles', $src, array( 'wp-migrate-db-pro-styles' ), $version );
 
-		$src = $plugins_url . "asset/dist/js/script$min.js";
+		$src = $plugins_url . "asset/dist/js/script{$ver_string}{$min}.js";
 		wp_enqueue_script( 'wp-migrate-db-pro-media-files-script', $src, array(
 			'jquery',
-			'wp-migrate-db-pro-common',
-			'wp-migrate-db-pro-hook',
 			'wp-migrate-db-pro-script',
 		), $version, true );
 
@@ -189,10 +188,10 @@ class WPMDBPro_Media_Files extends WPMDBPro_Addon {
 	 * @return array Updated array of nonces
 	 */
 	function add_nonces( $nonces ) {
-		$nonces['migrate_media']                        = wp_create_nonce( 'migrate-media' );
-		$nonces['remove_files_recursive']               = wp_create_nonce( 'remove-files-recursive' );
-		$nonces['prepare_determine_media']              = wp_create_nonce( 'prepare-determine-media' );
-		$nonces['determine_media_to_migrate_recursive'] = wp_create_nonce( 'determine-media-to-migrate-recursive' );
+		$nonces['migrate_media']                        = WPMDB_Utils::create_nonce( 'migrate-media' );
+		$nonces['remove_files_recursive']               = WPMDB_Utils::create_nonce( 'remove-files-recursive' );
+		$nonces['prepare_determine_media']              = WPMDB_Utils::create_nonce( 'prepare-determine-media' );
+		$nonces['determine_media_to_migrate_recursive'] = WPMDB_Utils::create_nonce( 'determine-media-to-migrate-recursive' );
 
 		return $nonces;
 	}

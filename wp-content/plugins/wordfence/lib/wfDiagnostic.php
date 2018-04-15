@@ -47,43 +47,88 @@ class wfDiagnostic
 		'cURL' => '1.0',
 	);
 
-	protected $description = array(
-		'Filesystem' => array(
-			'isTmpReadable' => 'Checking if web server can read from <code>~/plugins/wordfence/tmp</code>',
-			'isTmpWritable' => 'Checking if web server can write to <code>~/plugins/wordfence/tmp</code>',
-			'testWfCache'   => 'Checking if web server can write to <code>~/wp-content/wfcache</code>',
-		),
-		'MySQL' => array(
-			'userCanDelete' => 'Checking if MySQL user has <code>DELETE</code> privilege',
-			'userCanInsert' => 'Checking if MySQL user has <code>INSERT</code> privilege',
-			'userCanSelect' => 'Checking if MySQL user has <code>SELECT</code> privilege',
-			'userCanCreate' => 'Checking if MySQL user has <code>CREATE TABLE</code> privilege',
-			'userCanAlter'  => 'Checking if MySQL user has <code>ALTER TABLE</code> privilege',
-			'userCanDrop'   => 'Checking if MySQL user has <code>DROP</code> privilege',
-			'userCanTruncate'   => 'Checking if MySQL user has <code>TRUNCATE</code> privilege',
-		),
-		'PHP' => array(
-			'phpVersion' => 'PHP version >= PHP 5.2.4<br><em> (<a href="https://wordpress.org/about/requirements/" target="_blank">Minimum version required by WordPress</a>)</em>',
-			'processOwner' => 'Process Owner',
-			'hasOpenSSL' => 'Checking for OpenSSL support',
-			'hasCurl'    => 'Checking for cURL support',
-		),
-		'Connectivity' => array(
-			'connectToServer1' => 'Connecting to Wordfence servers (http)',
-			'connectToServer2' => 'Connecting to Wordfence servers (https)',
-		),
-//		'Configuration' => array(
-//			'howGetIPs' => 'How does get IPs',
-//		),
-	);
+	protected $description = false; //Defined in the constructor to allow for localization
 
 	protected $results = array();
 
 	public function __construct()
 	{
+		$this->description = array(
+			'Wordfence Status' => array(
+				'description' => __('General information about the Wordfence installation.', 'wordfence'),
+				'tests' => array(
+					'wfVersion' => __('Wordfence Version', 'wordfence'),
+				),
+			),
+			'Filesystem' => array(
+				'description' => __('Ability to read/write various files.', 'wordfence'),
+				'tests' => array(
+					'isPluginReadable' => __('Checking if web server can read from <code>~/plugins/wordfence</code>', 'wordfence'),
+					'isPluginWritable' => __('Checking if web server can write to <code>~/plugins/wordfence</code>', 'wordfence'),
+					'isWAFReadable' => __('Checking if web server can read from <code>~/wp-content/wflogs</code>', 'wordfence'),
+					'isWAFWritable' => __('Checking if web server can write to <code>~/wp-content/wflogs</code>', 'wordfence'),
+				),
+			),
+			'Wordfence Config' => array(
+				'description' => __('Ability to save Wordfence settings to the database.', 'wordfence'),
+				'tests' => array(
+					'configWritableSet' => __('Checking basic config reading/writing', 'wordfence'),
+					'configWritableSetSer' => __('Checking serialized config reading/writing', 'wordfence'),
+				),
+			),
+			'Wordfence Firewall' => array(
+				'description' => __('Current WAF configuration.', 'wordfence'),
+				'tests' => array(
+					'wafAutoPrepend' => __('WAF auto prepend active', 'wordfence'),
+					'wafLogPath' => __('WAF log path', 'wordfence'),
+					'wafSubdirectoryInstall' => __('WAF subdirectory installation', 'wordfence'),
+					'wafAutoPrependFilePath' => __('wordfence-waf.php path', 'wordfence'),
+				),
+			),
+			'MySQL' => array(
+				'description' => __('Database version and privileges.', 'wordfence'),
+				'tests' => array(
+					'databaseVersion' => __('Database Version', 'wordfence'),
+					'userCanDelete' => __('Checking if MySQL user has <code>DELETE</code> privilege', 'wordfence'),
+					'userCanInsert' => __('Checking if MySQL user has <code>INSERT</code> privilege', 'wordfence'),
+					'userCanUpdate' => __('Checking if MySQL user has <code>UPDATE</code> privilege', 'wordfence'),
+					'userCanSelect' => __('Checking if MySQL user has <code>SELECT</code> privilege', 'wordfence'),
+					'userCanCreate' => __('Checking if MySQL user has <code>CREATE TABLE</code> privilege', 'wordfence'),
+					'userCanAlter'  => __('Checking if MySQL user has <code>ALTER TABLE</code> privilege', 'wordfence'),
+					'userCanDrop'   => __('Checking if MySQL user has <code>DROP</code> privilege', 'wordfence'),
+					'userCanTruncate'   => __('Checking if MySQL user has <code>TRUNCATE</code> privilege', 'wordfence'),
+				)
+			),
+			'PHP Environment' => array(
+				'description' => __('PHP version, important PHP extensions.', 'wordfence'),
+				'tests' => array(
+					'phpVersion' => __('PHP version >= PHP 5.2.4<br><em> (<a href="https://wordpress.org/about/requirements/" target="_blank" rel="noopener noreferrer">Minimum version required by WordPress</a>)</em>', 'wordfence'),
+					'processOwner' => __('Process Owner', 'wordfence'),
+					'hasOpenSSL' => __('Checking for OpenSSL support', 'wordfence'),
+					'openSSLVersion' => __('Checking OpenSSL version', 'wordfence'),
+					'hasCurl'    => __('Checking for cURL support', 'wordfence'),
+					'displayErrors' => __('Checking <code>display_errors</code><br><em> (<a href="http://php.net/manual/en/errorfunc.configuration.php#ini.display-errors" target="_blank" rel="noopener noreferrer">Should be disabled on production servers</a>)</em>', 'wordfence'),
+				)
+			),
+			'Connectivity' => array(
+				'description' => __('Ability to connect to the Wordfence servers and your own site.', 'wordfence'),
+				'tests' => array(
+					'connectToServer1' => __('Connecting to Wordfence servers (http)', 'wordfence'),
+					'connectToServer2' => __('Connecting to Wordfence servers (https)', 'wordfence'),
+					'connectToSelf' => __('Connecting back to this site', 'wordfence'),
+				)
+			),
+		);
+		
 		foreach ($this->description as $title => $tests) {
-			$this->results[$title] = array();
-			foreach ($tests as $name => $description) {
+			$this->results[$title] = array(
+				'description' => $tests['description'],
+			);
+			foreach ($tests['tests'] as $name => $description) {
+				if (!method_exists($this, $name)) {
+					continue;
+				}
+				
 				$result = $this->$name();
 
 				if (is_bool($result)) {
@@ -94,8 +139,9 @@ class wfDiagnostic
 				}
 
 				$result['label'] = $description;
+				$result['name'] = $name;
 
-				$this->results[$title][] = $result;
+				$this->results[$title]['results'][] = $result;
 			}
 		}
 	}
@@ -104,25 +150,89 @@ class wfDiagnostic
 	{
 		return $this->results;
 	}
-
-	public function isTmpReadable() {
-		return is_readable(WORDFENCE_PATH . 'tmp');
+	
+	public function wfVersion() {
+		return array('test' => true, 'message' => WORDFENCE_VERSION . ' (' . WORDFENCE_BUILD_NUMBER . ')');
 	}
 
-	public function isTmpWritable() {
-		return is_writable(WORDFENCE_PATH . 'tmp');
+	public function isPluginReadable() {
+		return is_readable(WORDFENCE_PATH);
+	}
+
+	public function isPluginWritable() {
+		return is_writable(WORDFENCE_PATH);
+	}
+	
+	public function isWAFReadable() {
+		if (!is_readable(WFWAF_LOG_PATH)) {
+			return array('test' => false, 'message' => __('No files readable', 'wordfence'));
+		}
+		
+		$files = array(
+			WFWAF_LOG_PATH . 'attack-data.php', 
+			WFWAF_LOG_PATH . 'ips.php', 
+			WFWAF_LOG_PATH . 'config.php',
+			WFWAF_LOG_PATH . 'rules.php',
+			WFWAF_LOG_PATH . 'wafRules.rules',
+		);
+		$unreadable = array();
+		foreach ($files as $f) {
+			if (!file_exists($f)) {
+				$unreadable[] = sprintf(__('File "%s" does not exist', 'wordfence'), basename($f));
+			}
+			else if (!is_readable($f)) {
+				$unreadable[] = sprintf(__('File "%s" is unreadable', 'wordfence'), basename($f));
+			}
+		}
+		
+		if (count($unreadable) > 0) {
+			return array('test' => false, 'message' => implode(', ', $unreadable));
+		}
+		
+		return true;
+	}
+	
+	public function isWAFWritable() {
+		if (!is_writable(WFWAF_LOG_PATH)) {
+			return array('test' => false, 'message' => __('No files writable', 'wordfence'));
+		}
+		
+		$files = array(
+			WFWAF_LOG_PATH . 'attack-data.php',
+			WFWAF_LOG_PATH . 'ips.php',
+			WFWAF_LOG_PATH . 'config.php',
+			WFWAF_LOG_PATH . 'rules.php',
+			WFWAF_LOG_PATH . 'wafRules.rules',
+		);
+		$unwritable = array();
+		foreach ($files as $f) {
+			if (!file_exists($f)) {
+				$unwritable[] = sprintf(__('File "%s" does not exist', 'wordfence'), basename($f));
+			}
+			else if (!is_writable($f)) {
+				$unwritable[] = sprintf(__('File "%s" is unwritable', 'wordfence'), basename($f));
+			}
+		}
+		
+		if (count($unwritable) > 0) {
+			return array('test' => false, 'message' => implode(', ', $unwritable));
+		}
+		
+		return true;
+	}
+	
+	public function databaseVersion() {
+		global $wpdb;
+		$version = $wpdb->get_var("SELECT VERSION()");
+		return array('test' => true, 'message' => $version);
 	}
 
 	public function userCanInsert() {
 		return wfGrant::get()->insert;
 	}
-
-	public function testWfCache() {
-		$result = wfCache::cacheDirectoryTest();
-		return array(
-			'test' => $result === false,
-			'message' => is_string($result) ? $result : 'OK'
-		);
+	
+	public function userCanUpdate() {
+		return wfGrant::get()->update;
 	}
 
 	public function userCanDelete() {
@@ -156,6 +266,58 @@ class wfDiagnostic
 			'message'  => phpversion(),
 		);
 	}
+	
+	public function configWritableSet() {
+		global $wpdb;
+		$show = $wpdb->hide_errors();
+		$val = md5(time());
+		wfConfig::set('configWritingTest', $val, wfConfig::DONT_AUTOLOAD);
+		$testVal = wfConfig::get('configWritingTest');
+		$wpdb->show_errors($show);
+		return array(
+			'test' => ($val === $testVal),
+			'message' => __('Basic config writing', 'wordfence')
+		);
+	}
+	public function configWritableSetSer() {
+		global $wpdb;
+		$show = $wpdb->hide_errors();
+		$val = md5(time());
+		wfConfig::set_ser('configWritingTest_ser', array($val), false, wfConfig::DONT_AUTOLOAD);
+		$testVal = @array_shift(wfConfig::get_ser('configWritingTest_ser', array(), false));
+		$wpdb->show_errors($show);
+		return array(
+			'test' => ($val === $testVal),
+			'message' => __('Serialized config writing', 'wordfence')
+		);
+	}
+
+	public function wafAutoPrepend() {
+		return array('test' => true, 'infoOnly' => true, 'message' => (defined('WFWAF_AUTO_PREPEND') && WFWAF_AUTO_PREPEND ? __('Yes', 'wordfence') : __('No', 'wordfence')));
+	}
+	public function wafLogPath() {
+		$logPath = __('(not set)', 'wordfence');
+		if (defined('WFWAF_LOG_PATH')) {
+			$logPath = WFWAF_LOG_PATH;
+			if (strpos($logPath, ABSPATH) === 0) {
+				$logPath = '~/' . substr($logPath, strlen(ABSPATH));
+			}
+		}
+		
+		return array('test' => true, 'infoOnly' => true, 'message' => $logPath);
+	}
+	
+	public function wafSubdirectoryInstall() {
+		return array('test' => true, 'infoOnly' => true, 'message' => (defined('WFWAF_SUBDIRECTORY_INSTALL') && WFWAF_SUBDIRECTORY_INSTALL ? __('Yes', 'wordfence') : __('No', 'wordfence')));
+	}
+	
+	public function wafAutoPrependFilePath() {
+		$path = wordfence::getWAFBootstrapPath();
+		if (!file_exists($path)) {
+			$path = '';
+		}
+		return array('test' => true, 'infoOnly' => true, 'message' => $path);
+	}
 
 	public function processOwner() {
 		$disabledFunctions = explode(',', ini_get('disable_functions'));
@@ -164,7 +326,7 @@ class wfDiagnostic
 			if (!is_callable('posix_getpwuid') || in_array('posix_getpwuid', $disabledFunctions)) {
 				return array(
 					'test' => false,
-					'message' => 'Unavailable',
+					'message' => __('Unavailable', 'wordfence'),
 				);
 			}
 
@@ -203,12 +365,23 @@ class wfDiagnostic
 
 		return array(
 			'test' => false,
-			'message' => 'Unknown',
+			'message' => __('Unknown', 'wordfence'),
 		);
 	}
 
 	public function hasOpenSSL() {
 		return is_callable('openssl_open');
+	}
+	
+	public function openSSLVersion() {
+		if (!function_exists('openssl_verify') || !defined('OPENSSL_VERSION_NUMBER') || !defined('OPENSSL_VERSION_TEXT')) {
+			return false;
+		}
+		$compare = wfUtils::openssl_version_compare('1.0.1');
+		return array(
+			'test' => $compare < 0,
+			'message'  => OPENSSL_VERSION_TEXT,
+		);
 	}
 
 	public function hasCurl() {
@@ -219,6 +392,19 @@ class wfDiagnostic
 		return array(
 			'test' => version_compare($version['version'], $this->minVersion['cURL'], '>='),
 			'message'  => $version['version'],
+		);
+	}
+	
+	public function displayErrors() {
+		if (!is_callable('ini_get')) {
+			return false;
+		}
+		$value = ini_get('display_errors');
+		$isOn = strtolower($value) == 'on' || $value == 1;
+		return array(
+			'test' => !$isOn,
+			'message'  => $isOn ? __('On', 'wordfence') : __('Off', 'wordfence'),
+			'infoOnly' => true,
 		);
 	}
 
@@ -246,21 +432,59 @@ class wfDiagnostic
 			return true;
 		}
 
-		ob_start();
-		if(is_wp_error($result)){
-			echo "wp_remote_post() test to noc1.wordfence.com failed! Response was: " . $result->get_error_message() . "<br />\n";
-		} else {
-			echo "wp_remote_post() test to noc1.wordfence.com failed! Response was: " . $result['response']['code'] . " " . $result['response']['message'] . "<br />\n";
-			echo "This likely means that your hosting provider is blocking requests to noc1.wordfence.com or has set up a proxy that is not behaving itself.<br />\n";
-			echo "This additional info may help you diagnose the issue. The response headers we received were:<br />\n";
-			foreach($result['headers'] as $key => $value){
-				echo "$key => $value<br />\n";
+		$detail = '';
+		if (is_wp_error($result)) {
+			$message = __('wp_remote_post() test to noc1.wordfence.com failed! Response was: ', 'wordfence') . $result->get_error_message();
+		}
+		else {
+			$message = __('wp_remote_post() test to noc1.wordfence.com failed! Response was: ', 'wordfence') . $result['response']['code'] . " " . $result['response']['message'] . "\n";
+			$message .= __('This likely means that your hosting provider is blocking requests to noc1.wordfence.com or has set up a proxy that is not behaving itself.', 'wordfence') . "\n";
+			if (isset($result['http_response']) && is_object($result['http_response']) && method_exists($result['http_response'], 'get_response_object') && is_object($result['http_response']->get_response_object()) && property_exists($result['http_response']->get_response_object(), 'raw')) {
+				$detail = str_replace("\r\n", "\n", $result['http_response']->get_response_object()->raw);
 			}
 		}
 
 		return array(
 			'test' => false,
-			'message' => ob_get_clean()
+			'message' => $message,
+			'detail' => $detail,
+		);
+	}
+	
+	public function connectToSelf() {
+		$adminAJAX = admin_url('admin-ajax.php?action=wordfence_testAjax');
+		$result = wp_remote_post($adminAJAX, array(
+			'timeout' => 10, //Must be less than max execution time or more than 2 HTTP children will be occupied by scan
+			'blocking' => true, //Non-blocking seems to block anyway, so we use blocking
+			'headers' => array()
+		));
+		
+		if ((!is_wp_error($result)) && $result['response']['code'] == 200 && strpos($result['body'], "WFSCANTESTOK") !== false) {
+			$host = parse_url($adminAJAX, PHP_URL_HOST);
+			if ($host !== null) {
+				$ips = wfUtils::resolveDomainName($host);
+				$ips = implode(', ', $ips);
+				return array('test' => true, 'message' => sprintf(__('OK - %s', 'wordfence'), $ips));
+			}
+			return true;
+		}
+		
+		$detail = '';
+		if (is_wp_error($result)) {
+			$message = __('wp_remote_post() test back to this server failed! Response was: ', 'wordfence') . $result->get_error_message();
+		}
+		else {
+			$message = __('wp_remote_post() test back to this server failed! Response was: ', 'wordfence') . $result['response']['code'] . " " . $result['response']['message'] . "\n";
+			$message .= __('This additional info may help you diagnose the issue. The response headers we received were:', 'wordfence') . "\n";
+			if (isset($result['http_response']) && is_object($result['http_response']) && method_exists($result['http_response'], 'get_response_object') && is_object($result['http_response']->get_response_object()) && property_exists($result['http_response']->get_response_object(), 'raw')) {
+				$detail = str_replace("\r\n", "\n", $result['http_response']->get_response_object()->raw);
+			}
+		}
+		
+		return array(
+			'test' => false,
+			'message' => $message,
+			'detail' => $detail,
 		);
 	}
 
@@ -271,7 +495,7 @@ class wfDiagnostic
 			if (empty($_SERVER[$howGet])) {
 				return array(
 					'test' => false,
-					'message' => 'We cannot read $_SERVER[' . $howGet . ']',
+					'message' => sprintf(__('We cannot read $_SERVER[%s]', 'wordfence'), $howGet),
 				);
 			}
 			return array(
@@ -283,7 +507,7 @@ class wfDiagnostic
 			if (!empty($_SERVER[$test])) {
 				return array(
 					'test' => false,
-					'message' => 'Should be: ' . $test
+					'message' => __('Should be: ', 'wordfence') . $test
 				);
 			}
 		}

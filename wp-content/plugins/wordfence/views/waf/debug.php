@@ -102,7 +102,7 @@ try {
 <head>
 	<meta charset="UTF-8">
 	<title><?php echo esc_html($title) ?></title>
-	<link rel="stylesheet" href="<?php echo wfUtils::getBaseURL() . 'css/main.css' ?>">
+	<link rel="stylesheet" href="<?php echo wfUtils::getBaseURL() . wfUtils::versionedAsset('css/main.css'); ?>">
 	<style>
 		html {
 			font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -111,7 +111,7 @@ try {
 			margin: 20px 0px 8px;
 		}
 		pre, p {
-			8px 0px 20px;
+			margin: 8px 0px 20px;
 		}
 		pre.request-debug {
 			padding: 12px;
@@ -147,7 +147,7 @@ try {
 <div id="wrapper">
 	<h1><?php echo esc_html($title) ?></h1>
 
-	<table class="wf-table">
+	<table class="wf-striped-table">
 		<thead>
 		<tr>
 			<th colspan="2">Request Details</th>
@@ -184,7 +184,7 @@ try {
 
 	<?php if ($failedRules): ?>
 		<h4>Failed Rules</h4>
-		<table class="wf-table">
+		<table class="wf-striped-table">
 			<thead>
 			<tr>
 				<th>ID</th>
