@@ -1,4 +1,10 @@
 <?php
+$alcvol = get_field('alcvol');
+$ibu = get_field('ibu');
+$srm = get_field('srm');
+$food_pairings = get_field('food_pairings');
+$bottle_shop = get_field('bottle_shop');
+
 global $slug;
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post(); ?>
@@ -11,16 +17,21 @@ if ( have_posts() ) :
 						<div class="post-text double-bordered">
 							<div class="row collapse beer-stats equal-heights">					
 								<?php
-								$fields = array(
-										"ALC./VOL" => "alc",
-										"IBU" => "IBU",
-										"SRM" => "SRM",
-										"Food Pairings" => "food_pairings" 
-									);
-								foreach ($fields as $title => $name) { 
-									echo '<div class="columns double-bordered space-inner-top ' . $name . '">';
-										echo '<h5 class="text-center border-bottom">' . $title . '</h5>';
-										echo '<h6 class="space-top">'. get_post_meta( $id, '_cartogram_'.$name.'_value', TRUE ) . '</h6>';
+									echo '<div class="columns double-bordered space-inner-top alc">';
+										echo '<h5 class="text-center border-bottom">ALC./VOL</h5>';
+										echo '<h6 class="space-top">'. $alcvol . '</h6>';
+									echo '</div>';
+									echo '<div class="columns double-bordered space-inner-top IBU">';
+										echo '<h5 class="text-center border-bottom">IBU</h5>';
+										echo '<h6 class="space-top">'. $ibu . '</h6>';
+									echo '</div>';
+									echo '<div class="columns double-bordered space-inner-top SRM">';
+										echo '<h5 class="text-center border-bottom">BLOO</h5>';
+										echo '<h6 class="space-top">'. $srm . '</h6>';
+									echo '</div>';
+									echo '<div class="columns double-bordered space-inner-top food_pairings">';
+										echo '<h5 class="text-center border-bottom">SRM</h5>';
+										echo '<h6 class="space-top">'. $food_pairings . '</h6>';
 									echo '</div>';
 								}
 								?>

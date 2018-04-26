@@ -3,7 +3,8 @@
 $item = get_query_var('item');
 $icon_image = get_field('icon');
 $icon = (!$icon_image && get_post_meta( $item->ID, '_cartogram_icon_value', TRUE ) ? get_post_meta( $item->ID, '_cartogram_icon_value', TRUE ) : $item->post_name);
-$color = get_post_meta( $item->ID, '_cartogram_color_value', TRUE );
+$short_description = get_field('short_description');
+$color = get_field('color');
 
 
 echo '<a class="beercard col col-12 col-6-mobile col-4-tablet col-3-laptop" href="' . get_permalink($item->ID) . '">';

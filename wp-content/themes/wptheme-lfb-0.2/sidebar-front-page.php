@@ -1,14 +1,34 @@
 <?php // *************************************** //
-     //  Brew Finder
-    // *************************************** // ?>
+     //  Callout Modules
+    // *************************************** // 
+?>
 
-<h3 class="rule-left mobile-divide sidebar-title text-center">Try Left Field </h3>
-<section style="background-image:url(<?php bloginfo('template_url') ?>/dist/images/brewfinder.png)" class="rule-left border-bottom homebrewfinder bg-cream ">		
-    <a href="<?php echo get_bloginfo('url') ?>/brew-finder" class="link--bordered link--brew-finder">        
-        <i class="icon-tap"></i>
-        Locate our beer at a bar, brewpub, restaurant or LCBO near you.<br/>
-    </a>
-</section> 
+<?php if( have_rows('callout') ): ?>
+
+	<?php while( have_rows('callout') ): the_row(); 
+
+    $heading = get_sub_field('callout_heading');
+    $image = get_sub_field('callout_image');
+    $text = get_sub_field('callout_text');
+    $link = get_sub_field('callout_link');
+
+	?>
+
+	<div class="callout rule-left">
+
+        <h3 class="rule-left mobile-divide text-center"><?php echo $heading; ?></h3>
+
+        <section style="background-image: url(<?php echo $image; ?>);" class="rule-left callout-borders homebrewfinder bg-cream">		
+            <a href="<?php echo $link; ?>" class="link--bordered link--brew-finder  link--callout-module">
+            <?php echo $text; ?><br/>
+            </a>
+        </section>
+
+		</div>
+
+	<?php endwhile; ?>
+
+<?php endif; ?>
 
 <?php // *************************************** //
      //  MVP 
@@ -16,7 +36,7 @@
 
 <?php 
 
-$mvp = get_field('mvp', 'option');
+$mvp = get_field('mvp');
 
 if( $mvp): 
 
@@ -29,7 +49,7 @@ $tagline = get_post_meta( $post->ID, '_cartogram_short_description_value', TRUE 
 $icon_image = get_field('icon', $post->ID);
 ?>
 
-<h3 class="rule-left mobile-divide  text-center">MVP</h3>
+<h3 class="rule-left mobile-divide text-center">MVP</h3>
 <section class="mvp rule-left" style="background:<?php echo $color; ?>">
     <div class="double-bordered">
     <a class="link--bordered light border-bottom " href="<?php echo $permalink; ?>">

@@ -1,6 +1,6 @@
 <?php global $slug;
 ?>
-<div class="row  ">
+<div class="row">
 	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four mobile-flush rule-left"); ?>>	
 		<?php the_title('<h3 class="rule-right text-center">','</h3>') ?>
         <?php // get_template_part('parts/slideshows/slideshow'); ?>
@@ -13,9 +13,6 @@
 					</div>
 				</div>
 				<div class="row atthebrewery__table text-center flushed-left collapse">
-
-            <?php 
-            ?>
 
                     <?php $posts = get_field('beers_at_the_brewery', 'option'); 
 
@@ -41,7 +38,9 @@
                                         $beer = get_sub_field('beer');
                                         $beer_icon = get_sub_field('beer_icon');
                                         $icon_image = get_field('icon', $beer_icon);
-                                        $beer_color = get_post_meta( $beer->ID, '_cartogram_color_value', TRUE ); ?>
+                                        $beer_color = get_field('color', $beer->ID); 
+                                        $short_description = get_field('short_description', $beer->ID);
+                                        ?>
 
                                 <a href="<?php echo get_permalink($beer->ID) ?>" class="row atthebrewery__row collapse"> 
                                     <div style="color: <?php echo $beer_color; ?>" class="columns atb__col--large text-left rule-right">
@@ -56,7 +55,7 @@
 
                                     </div>
                                     <div class="columns atb__col--medium hide-for-small  rule-right">
-                                        <?php echo '<span class="centered zeta">' . get_post_meta( $beer->ID, '_cartogram_short_description_value', TRUE ) . '</span>' ;?>
+                                        <?php echo '<span class="centered zeta">' . $short_description . '</span>' ;?>
                                     </div>
                                     <div class="columns atb__col--small rule-right ">
                                         <?php echo (get_sub_field('in_cans') ? '<span class="check-text">In Cans</span><span class="check"></span>' : '&nbsp;'); ?>

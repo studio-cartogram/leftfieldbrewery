@@ -1,9 +1,20 @@
 <?php 	
 $icon_image = get_field('icon');
-$icon = (!$icon_image && get_post_meta( $post->ID, '_cartogram_icon_value', TRUE ) ? get_post_meta( $post->ID, '_cartogram_icon_value', TRUE ) : $post->post_name);
-$color = get_post_meta( $post->ID, '_cartogram_color_value', TRUE );?>
+$short_description = get_field('short_description');
+$color = get_field('color');
+$title_sidebar = get_field('sidebar_title');
+?>
 
-<h3 class="rule-left text-center ">An Unusual Delivery</h3>
+<h3 class="rule-left text-center ">
+<?php 
+	if ($title_sidebar) {
+		echo $title_sidebar;
+	} else {
+		echo 'An Unusual Delivery';
+	}
+?>
+</h3>
+
 <div class="row collapse flushed-right sidebar-beer">
 	<div class="columns twelve double-bordered">
 		<div class="rule-left">
@@ -14,14 +25,9 @@ $color = get_post_meta( $post->ID, '_cartogram_color_value', TRUE );?>
 						<span class="corner-two "></span>
 							<?php
 							the_title('<h2 class="light beer-name beer-block">', '</h2>');
-							echo '<h3 class="light beer-tagline">' . get_post_meta( $id, '_cartogram_short_description_value', TRUE ) . '</h3>';
-                            echo '<div class="back-logo big-icon multi-svg">';
-                                if($icon_image) :
-                                    echo '<img src="' . wp_get_attachment_image_src( $icon_image )[0] . '" />';
-                                else :
-                                    echo '<svg class="centered icon--large"><use xlink:href="#' . $icon . '"></use</svg>';
-                                endif;
-
+							echo '<h3 class="light beer-tagline">' . $short_description . '</h3>';
+              echo '<div class="back-logo big-icon multi-svg">';
+              echo '<img src="' . wp_get_attachment_image_src( $icon_image )[0] . '" />';
 							echo '</div>';
 							the_content();
 						?>

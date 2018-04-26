@@ -52,10 +52,10 @@ $cartogram_theme_name = "landmark";
 
 class TTrust_Recent_Posts extends WP_Widget {
 
-	function TTrust_Recent_Posts() {
+	function __construct() {
 		global $cartogram_theme_name, $ttrust_version, $options;
 		$widget_ops = array('classname' => 'ttrust_recent_posts', 'description' => __('Display recent posts from any category.', 'cartogram'));
-		$this->WP_Widget('ttrust_recent_posts', $cartogram_theme_name.' '.__('Recent Posts', 'cartogram'), $widget_ops);
+		parent::__construct('ttrust_recent_posts', $cartogram_theme_name.' '.__('Recent Posts', 'cartogram'), $widget_ops);
 	}
 
 	function widget($args, $instance) {
@@ -155,12 +155,12 @@ register_widget('TTrust_Recent_Posts');
 
 class TTrust_Twitter extends WP_Widget {
  
-	function TTrust_Twitter() {
+	function __construct() {
 	
 		global $cartogram_theme_name, $ttrust_version, $options;
 		
         $widget_ops = array('classname' => 'widget_ttrust_twitter', 'description' => 'Display latest tweets.');
-		$this->WP_Widget('ttrust_twitter', $cartogram_theme_name.' '.__('Twitter', 'cartogram'), $widget_ops);
+				parent::__construct('ttrust_twitter', $cartogram_theme_name.' '.__('Twitter', 'cartogram'), $widget_ops);
     
     }
  
@@ -266,10 +266,10 @@ register_widget('TTrust_Twitter');
 
 class TTrust_Flickr extends WP_Widget {
  
-	function TTrust_Flickr() {
+	function __construct() {
 		global $cartogram_theme_name, $ttrust_version, $options;
         $widget_ops = array('classname' => 'widget_ttrust_flickr', 'description' => 'Display flickr photos.');
-		$this->WP_Widget('ttrust_flickr', $cartogram_theme_name.' '.__('Flickr', 'cartogram'), $widget_ops);
+				parent::__construct('ttrust_flickr', $cartogram_theme_name.' '.__('Flickr', 'cartogram'), $widget_ops);
     
     }
  
