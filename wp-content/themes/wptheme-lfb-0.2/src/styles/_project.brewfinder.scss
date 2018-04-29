@@ -2,302 +2,297 @@ $map-height: 600px;
 $marker-size: 30px;
 
 .brew-finder {
-    min-height: rem-calc(300);
-    height:100%;
-    position:relative;
+  min-height: rem-calc(300);
+  height: 100%;
+  position: relative;
 }
 
 .brew-finder__marker {
+  position: absolute;
+  height: $marker-size;
+  line-height: $marker-size;
+  top: -$marker-size / 2;
+  transform: translate(-50%, -100%);
+  background: $cream;
+  padding: 5px;
+  border: 1px solid $navy;
+  width: $marker-size;
+  transition: all $transition-timing $transition-easing;
+  color: $navy;
+  cursor: pointer;
+
+  &:after {
     position: absolute;
-    height: $marker-size;
-    line-height: $marker-size;
-    top: -$marker-size / 2;
-    transform:translate(-50%, -100%);
-    background: $cream;
-    padding:5px;
-    border:1px solid $navy;
-    width: $marker-size;
     transition: all $transition-timing $transition-easing;
-    color:$navy;
-    cursor:pointer;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    content: " ";
+    border: 8px solid transparent;
+    border-top: 8px solid $navy;
+  }
 
+  &:before {
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    height: $marker-size;
+    width: $marker-size;
+    line-height: $marker-size;
+    display: block;
+    text-align: center;
+    transform: translate(-50%, -0%);
+    font-family: "icomoon";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    content: " ";
+    transition: all $transition-timing $transition-easing;
+  }
+
+  &.lcbo:before {
+    content: "\e600";
+    font-size: 8px;
+  }
+
+  &.marker--is-active.lcbo:before {
+    font-size: 12px;
+  }
+
+  &.bar:before {
+    content: "\e013";
+    font-size: 14px;
+  }
+
+  &.lfb:before {
+    content: "\e900";
+    font-size: 16px;
+  }
+  &.marker--is-active.lfb:before {
+    font-size: 18px;
+  }
+  &.marker--is-active.bar:before {
+    font-size: 21px;
+  }
+
+  &.restaurant:before {
+    font-size: 16px;
+    content: "\e008";
+  }
+
+  &.marker--is-active.restaurant:before {
+    font-size: 21px;
+  }
+
+  &.brew-pub:before {
+    content: "\e012";
+    font-size: 15px;
+  }
+
+  &.marker--is-active.brew-pub:before {
+    font-size: 23px;
+  }
+
+  &.marker--is-active,
+  &.marker--is-hovered {
     &:after {
-        position:absolute;
-        transition:all $transition-timing $transition-easing;
-        top:100%;
-        left:50%;
-        transform:translate(-50%, -0%);
-        content:' ';
-        border:8px solid transparent;
-        border-top:8px solid $navy;
+      border: 11px solid transparent;
+      border-top: 11px solid $navy;
     }
-
-    &:before {
-        cursor:pointer;
-        position:absolute;
-        top:0%;
-        left:50%;
-        height:$marker-size;
-        width:$marker-size;
-        line-height: $marker-size;
-        display:block;
-        text-align:center;
-        transform:translate(-50%, -0%);
-        font-family: 'icomoon';
-        speak: none;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        -webkit-font-smoothing: antialiased;   
-        content: ' ';
-        transition:all $transition-timing $transition-easing;
-    }
-    
-
-    &.lcbo:before {
-        content: '\e600';
-        font-size:8px;
-    }
-
-    &.marker--is-active.lcbo:before {
-        font-size:12px;
-    }
-    
-    &.bar:before {
-        content: '\e013';
-        font-size:14px;
-    }
-    
-    &.lfb:before {
-        content: '\e900';
-        font-size:16px;
-    }
-    &.marker--is-active.lfb:before {
-        font-size:18px;
-    }
-    &.marker--is-active.bar:before {
-        font-size:21px;
-    }
-
-    &.restaurant:before {
-        font-size:16px;
-        content: '\e008';
-    }
-
-    &.marker--is-active.restaurant:before {
-        font-size:21px;
-    }
-    
-    &.brew-pub:before {
-        content: '\e012';
-        font-size:15px;
-    }
-
-    &.marker--is-active.brew-pub:before {
-        font-size:23px;
-    }
-
-    &.marker--is-active,
-    &.marker--is-hovered {
-
-        &:after {
-            border:11px solid transparent;
-            border-top:11px solid $navy;
-        }
-    }
-
+  }
 }
 
 .overlay {
-    opacity:0;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -30%);
-    transition:all $transition-timing/2 $transition-easing;
-    width: 200px;
-    text-align:center;
-    line-height:$marker-size/2;
-    padding:10px;
-    display:none;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  transition: all $transition-timing/2 $transition-easing;
+  width: 200px;
+  text-align: center;
+  line-height: $marker-size/2;
+  padding: 10px;
+  display: none;
 
-    .marker--is-active & {
-        display:block;
-        opacity:1;
-        transition-delay:$transition-timing;
-    }
+  .marker--is-active & {
+    display: block;
+    opacity: 1;
+    transition-delay: $transition-timing;
+  }
 }
 
 .overlay__name {
-    white-space: nowrap;
-    font-weight:bold;
-    overflow: hidden;
-    text-overflow: ellipsis;
-} 
+  white-space: nowrap;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .overlay__address {
-    display:block;
-    font-size:10px;
+  display: block;
+  font-size: 10px;
 }
 
 .marker--is-active {
-    cursor:pointer;
-    width:200px;
-    height:$marker-size * 3;
-    transition: all $transition-timing $transition-easing;
-    z-index:100;
+  cursor: pointer;
+  width: 200px;
+  height: $marker-size * 3;
+  transition: all $transition-timing $transition-easing;
+  z-index: 100;
 
-    &:before {
-        transform:translate(-50%, 20%);
-        width:100%;
-    }
+  &:before {
+    transform: translate(-50%, 20%);
+    width: 100%;
+  }
 }
-
 
 .brew-finder__container,
 .brew-finder__map,
 .brew-finder__height {
-    height:$map-height;
+  height: $map-height;
 }
 
 .brew-finder__map {
-    z-index:10;
-    top:1px;
-    border-right:1px solid $navy;
-    border-left:1px solid $navy;
-    border-bottom:1px solid $navy;
+  z-index: 10;
+  top: 1px;
+  border-right: 1px solid $navy;
+  border-left: 1px solid $navy;
+  border-bottom: 1px solid $navy;
 }
 
 .brew-finder__list {
-    .scrollshadow {
-        height:560px;
-        border-bottom:1px solid $navy;
+  .scrollshadow {
+    height: 560px;
+    border-bottom: 1px solid $navy;
+  }
 
-    }
-
-    .screen {
-        margin-right:-2px;
-    }
+  .screen {
+    margin-right: -2px;
+  }
 }
 
 .vendor-item {
-    cursor:pointer;
-    height:55px;
-    overflow:hidden;
-    .link--get-directions {
-        height:20px !important;
-        font-size:9px;
-        padding:0px 10px 0 20px;
-        padding-left:16.6%;
-        text-indent:20px;
-        line-height:20px;
-        display:block;
-        // border-top:1px solid $navy;
-        font-family: $font-primary; 
-        font-weight:bold;
-        position:relative;
-        overflow:hidden;
-        text-transform:uppercase;
-        color:$red;
-        // background:url(../images/stripe.png);
-        &:after {
-            position:absolute;
-            top:0;
-            left:0;
-            height:25px;
-            width:16.6%;
-            border-top:1px solid $navy;
-            border-right:1px solid $navy;
-            background:$cream;
-            background:url(../images/stripe.png);
-            // border-bottom:1px solid $navy;
-            content:'';
-        }
-
-        &:before {
-            content:'';
-            right:0;
-            content:' ';
-            height:15px;
-            width:15px;
-            transform:translate(50%, -50%) rotate(-45deg);
-            top:100%;
-            border:1px solid $navy;
-            background:url(../images/stripe.png) $navy;
-            background:$navy;
-            position:absolute;
-        }
-        &:hover {
-            color:$navy;
-        }
-    }
-    &:last-of-type {
-        border-bottom:1px solid $navy;
-
-        .format-text:after {
-            height:1px;
-            background:$navy;
-            width:auto;
-            left:-20%;
-            right:0;
-            bottom:-11px;
-            position:absolute;
-            content:'';
-        }
+  cursor: pointer;
+  height: 55px;
+  overflow: hidden;
+  .link--get-directions {
+    height: 20px !important;
+    font-size: 9px;
+    padding: 0px 10px 0 20px;
+    padding-left: 16.6%;
+    text-indent: 20px;
+    line-height: 20px;
+    display: block;
+    // border-top:1px solid $navy;
+    font-family: $font-primary;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    color: $red;
+    // background:url(../images/stripe.png);
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 16.6%;
+      border-top: 1px solid $navy;
+      border-right: 1px solid $navy;
+      background: $cream;
+      background: url(images/stripe.png);
+      // border-bottom:1px solid $navy;
+      content: "";
     }
 
-    &.vendor-item--is-active,
+    &:before {
+      content: "";
+      right: 0;
+      content: " ";
+      height: 15px;
+      width: 15px;
+      transform: translate(50%, -50%) rotate(-45deg);
+      top: 100%;
+      border: 1px solid $navy;
+      background: url(../images/stripe.png) $navy;
+      background: $navy;
+      position: absolute;
+    }
     &:hover {
-        h6,
-        h5 {
-            transition:all $transition-timing $transition-easing;
-            color:$red !important;
-        }
+      color: $navy;
     }
-    &.vendor-item--is-active {
-        height:75px;
+  }
+  &:last-of-type {
+    border-bottom: 1px solid $navy;
+
+    .format-text:after {
+      height: 1px;
+      background: $navy;
+      width: auto;
+      left: -20%;
+      right: 0;
+      bottom: -11px;
+      position: absolute;
+      content: "";
     }
+  }
+
+  &.vendor-item--is-active,
+  &:hover {
+    h6,
+    h5 {
+      transition: all $transition-timing $transition-easing;
+      color: $red !important;
+    }
+  }
+  &.vendor-item--is-active {
+    height: 75px;
+  }
 }
 
 .screen:before {
-    top:-7px;
+  top: -7px;
 }
 
 .vendor-filter {
-    background:$cream;
-    position: relative;
-    height:40px;
-    top:1px;
-    left:0;
-    text-align:center;
-    &:before {
-        position: absolute;
-        content: '';
-        height: auto;
-        top: 0;
-        bottom: 0;
-        left: -1px;
-        z-index: 10;
-        width: 1px;
-        background: $navy;
-    }
-    li {
-        display:inline-block;
-        padding:10px 5px;
+  background: $cream;
+  position: relative;
+  height: 40px;
+  top: 1px;
+  left: 0;
+  text-align: center;
+  &:before {
+    position: absolute;
+    content: "";
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    z-index: 10;
+    width: 1px;
+    background: $navy;
+  }
+  li {
+    display: inline-block;
+    padding: 10px 5px;
 
-        &:before,
-        &:after {
-            display:none;
-        }
-
-        a {
-            font-weight: bold;
-            cursor:pointer;
-            &.is-active {
-                border-bottom:1px solid;
-                color:$red;
-            }
-        }
+    &:before,
+    &:after {
+      display: none;
     }
+
+    a {
+      font-weight: bold;
+      cursor: pointer;
+      &.is-active {
+        border-bottom: 1px solid;
+        color: $red;
+      }
+    }
+  }
 }

@@ -1,186 +1,186 @@
 // Stats
 
 .beer-stats {
-
-    @media only screen and (max-width: 768px) { 
-        .columns h5,
-        .columns h6 {
-            margin:0 2px !important;
-            padding:0px 2px 5px!important;
-        }
-        .columns.food_pairings h5 {
-            padding-top:20px !important;
-        }
-        .columns.food_pairings h5,
-        .columns.food_pairings h6 {
-            display:block;
-        }
-
-        .columns h5:after {
-            content: ':';
-        }
+  @media only screen and (max-width: 768px) {
+    .columns h5,
+    .columns h6 {
+      margin: 0 2px !important;
+      padding: 0px 2px 5px !important;
     }
+    .columns.food_pairings h5 {
+      padding-top: 20px !important;
+    }
+    .columns.food_pairings h5,
+    .columns.food_pairings h6 {
+      display: block;
+    }
+
+    .columns h5:after {
+      content: ":";
+    }
+  }
 }
 
 .single-beers .flip-container {
-    min-height: 480px;
+  min-height: 480px;
 }
 
 .post-text .gform_body .gform_fields textarea {
-    min-height:0;
-    @media only screen and (min-width: 768px) { 
-        min-height:310px;
-    }
+  min-height: 0;
+  @media only screen and (min-width: 768px) {
+    min-height: 310px;
+  }
 }
 
-.post-12 .post-text  {
-    min-height:0;
-    @media only screen and (min-width: 768px) { 
-        min-height:610px;
-    }
+.post-12 .post-text {
+  min-height: 0;
+  @media only screen and (min-width: 768px) {
+    min-height: 610px;
+  }
 }
 .list-contact li a h4 {
-    transition:background $transition-timing $transition-easing;
+  transition: background $transition-timing $transition-easing;
 }
 .visit-us-section {
-    position:relative;
-    left:-1px;
-    top:-1px;
-    &:after {
-        top:0;
-        width:auto;
-        position:absolute;
-        left:0px;
-        right:-16px;;
-        content:'';
-        height:4px;
-        background:$cream;
-        border:1px solid $navy;
-    }
+  position: relative;
+  left: -1px;
+  top: -1px;
+  &:after {
+    top: 0;
+    width: auto;
+    position: absolute;
+    left: 0px;
+    right: -16px;
+    content: "";
+    height: 4px;
+    background: $cream;
+    border: 1px solid $navy;
+  }
 }
 .visit-us__label {
-    position:relative;
-    border-top:1px solid $cream;
-    top:-1px;
+  position: relative;
+  border-top: 1px solid $cream;
+  top: -1px;
 }
 
-
 .visit-us {
-    position:relative;
-    margin-top:1px !important;
-    p {
-        padding-left:20px !important;
-    }
-    &:before {
-        height:100%;
-        position:absolute;
-        top:0;
-        left:0;
-        width:1px;
-        background:$navy;
-        content: ' ';
-        bottom:0;
-    }
+  position: relative;
+  margin-top: 1px !important;
+  p {
+    padding-left: 20px !important;
+  }
+  &:before {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    background: $navy;
+    content: " ";
+    bottom: 0;
+  }
 
-    &:after {
-        width:auto;
-        position:absolute;
-        left:0;
-        right:-15px;
-        content:'';
-        height:1px;
-        bottom:-0px;
-        background:$navy;
-    }
+  &:after {
+    width: auto;
+    position: absolute;
+    left: 0;
+    right: -15px;
+    content: "";
+    height: 1px;
+    bottom: -0px;
+    background: $navy;
+  }
 }
 
 .row {
-    width:1200px;
+  width: 1200px;
 }
-.footer ul#social>li a {
-    border:none;
-}
-
-ul#social>li a:before {
-    margin-left:35%;
+.footer ul#social > li a {
+  border: none;
 }
 
-.vendor-listing  {
-    margin-bottom:-1px;
+ul#social > li a:before {
+  margin-left: 35%;
+}
+
+.vendor-listing {
+  margin-bottom: -1px;
 }
 .vendor-listing:after {
-        display:none;
-    }
+  display: none;
+}
 .top-bar {
-    z-index:100;
+  z-index: 100;
 }
 
 h1 {
-    padding-bottom:40px;
+  padding-bottom: 40px;
 }
 
 .footer .gform_wrapper form {
-        max-width: 500px;
-    }
+  max-width: 500px;
+}
 .tweet img {
-    width: 12px;
-    padding-left: 1px;
+  width: 12px;
+  padding-left: 1px;
 }
 
 .tweet {
-    padding-right: 20px;
+  padding-right: 20px;
 }
 
 .mvp {
-    .beer-tagline {
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
+  .beer-tagline {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 
-    .beer-name.beer-block {
-        margin:0 0 5px 0;
-        padding:0;
-    }
+  .beer-name.beer-block {
+    margin: 0 0 5px 0;
+    padding: 0;
+  }
 
-    .beer-tagline:after,
-    .beer-name:before {
-        display:none;
-    }
+  .beer-tagline:after,
+  .beer-name:before {
+    display: none;
+  }
 }
 
 body {
-    background:url(../images/bg.png);
+  background: url(images/bg.png);
 }
 
 .footer form {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.footer .first-row p, .footer .first-row .gform_description, .footer .first-row li a, .footer .first-row li, .footer .first-row p.tweet {
-    font-size: 13px;
+.footer .first-row p,
+.footer .first-row .gform_description,
+.footer .first-row li a,
+.footer .first-row li,
+.footer .first-row p.tweet {
+  font-size: 13px;
 }
 
 .credit {
-    padding-top: 16px;
+  padding-top: 16px;
 }
 
 .credit ul#social {
-    width:60%;
-    padding-bottom:20px;
-    display: inline-block;
+  width: 60%;
+  padding-bottom: 20px;
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  list-style: none;
+  & > li {
     height: 38px;
-    line-height: 38px;
-    list-style: none;
-    &>li { 
-      height: 38px;
-      margin-bottom:10px;
-      a {
-        border-right:none;
-      }
-      a:before {
-        font-size: 1.6rem;
-      }
+    margin-bottom: 10px;
+    a {
+      border-right: none;
+    }
+    a:before {
+      font-size: 1.6rem;
     }
   }
-
-
+}

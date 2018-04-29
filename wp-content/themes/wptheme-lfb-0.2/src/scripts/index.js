@@ -9,6 +9,14 @@ import VendorItem from "./vendor-item.js";
 import VendorList from "./vendor-list.js";
 import GoogleMap from "google-map-react";
 
+import "./client/jquery.flexslider.js";
+import "./client/twitterFetcher.js";
+import "./client/gf.placeholders.js";
+import "./client/app.js";
+
+import "../styles/v1.scss";
+import "../styles/main.scss";
+
 function createMapOptions(maps) {
   return {
     zoomControlOptions: {
@@ -246,6 +254,9 @@ class Map extends React.Component {
       <div className="row collapse brew-finder__container">
         <div className="columns eight push-four mobile-flush brew-finder__map">
           <GoogleMap
+            bootstrapURLKeys={{
+              key: "AIzaSyDEd3sVjgdppCcDItkUNR17TEQ9k0Rdf6w"
+            }}
             center={this.props.center}
             onBoundsChange={this._onBoundsChange}
             onChildClick={this._onChildClick}
@@ -273,14 +284,10 @@ class Map extends React.Component {
   }
 }
 
-function App() {
-  return <div>from react</div>;
+const mount = document.getElementById("map");
+if (mount) {
+  ReactDOM.render(
+    <Map dataType="json" url="/wp-json/cartogram-api/vendors" />,
+    mount
+  );
 }
-
-ReactDOM.render(
-  // <App />,
-  <Map dataType="json" url="/wp-json/cartogram-api/vendors" />,
-  document.getElementById("map")
-);
-
-console.log("hello ffs");

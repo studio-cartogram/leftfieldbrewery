@@ -8,3 +8,6 @@ wp-content/themes/uploads/*
 _modular-scale.sassc
 /wp-content/plugins/instagrate-to-wordpress/debug.txt
 /wp-config.php
+wp-content/wflogs/*
+wp-content/themes/wptheme-lfb-0.2/.cache
+/wp-content/wflogs/config.php
