@@ -9,9 +9,7 @@
 	require_once( 'external/media.php' );
 	require_once( 'external/multiple_featured_images.php' );
 	require_once( 'external/widgets.php' );
-	require_once( 'external/navigation.php' );
 	require_once( 'external/utilities.php' );
-	// require_once( 'external/metaboxes.php' );
 	require_once( 'external/comments.php' );
 	require_once( 'external/theme_options.php' );
 	require_once( 'external/gravity_forms.php' );

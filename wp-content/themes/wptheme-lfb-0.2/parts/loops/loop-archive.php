@@ -43,7 +43,7 @@ global $slug; ?>
 				$posts_on_this_page = $wp_query->post_count;
 				$posts_in_query = $wp_query->found_posts; 
 				while ( have_posts() ) : the_post(); $count++;
-				if ($count % 2 != 0 || $total == 1) {
+				if ($count % 2 != 0 || $posts_in_query == 1) {
 					echo'<div class="row equal-heights  bg-cream collapse">';
 				} 
 				?>

@@ -31,8 +31,7 @@
 						'menu_class'      => 'right', 
 						'menu_id'         => 'global',
 						'echo'            => true,
-						'fallback_cb'     => '',
-						'walker' => new foundation_nav
+						'fallback_cb'     => ''
 					); 
 						wp_nav_menu( $headernav ); 
 					?>
@@ -42,8 +41,7 @@
 						'menu_class'      => 'left', 
 						'menu_id'         => 'social',
 						'echo'            => true,
-						'fallback_cb'     => '',
-						'walker' => new foundation_nav
+						'fallback_cb'     => ''
 					); 
 						wp_nav_menu( $socialnav ); 
 					?>
