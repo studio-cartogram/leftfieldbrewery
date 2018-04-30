@@ -22,7 +22,11 @@
 }
 
 .single-beers .flip-container {
-  min-height: 480px;
+  min-height: 640px;
+
+  @media only screen and (min-width: 768px) {
+    min-height: 380px;
+  }
 }
 
 .post-text .gform_body .gform_fields textarea {

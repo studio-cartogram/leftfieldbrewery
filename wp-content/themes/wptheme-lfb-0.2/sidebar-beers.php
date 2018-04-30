@@ -3,6 +3,7 @@ $icon_image = get_field('icon');
 $short_description = get_field('short_description');
 $color = get_field('color');
 $title_sidebar = get_field('sidebar_title');
+$bottleshop = get_field('bottle_shop');
 ?>
 
 <h3 class="rule-left text-center ">
@@ -20,7 +21,7 @@ $title_sidebar = get_field('sidebar_title');
 		<div class="rule-left">
 			<div style="background:<?php echo $color; ?>" class="flip-container ">
 				<a class="flip" id="to-back" href="#"><i style="color:<?php echo $color; ?>"  class="icon-flip-right"></i></a>
-				<div class="flipper ">
+				<div class="flipper">
 					<div class="front" style="background:<?php echo $color; ?>">
 						<span class="corner-two "></span>
 							<?php
@@ -32,13 +33,15 @@ $title_sidebar = get_field('sidebar_title');
 							the_content();
 						?>
 					</div>
-					<div class="back" style="background:<?php echo $color; ?>">
-						<span class="corner-two "></span>
-						<a class="flip" id="to-front" href="#"><i style="color:<?php echo $color; ?>" class="icon-flip-left"></i></a>
-						<p class="space-inner-top-large">More Details Coming Soon...</p>
-					</div>
 				</div>
 			</div>
+			<?php 
+					if ($bottleshop):
+						echo '<div class="beer-bottleshop">';
+							echo '<a href="'. $bottleshop .'" class="link--bordered link--brew-finder  link--callout-module">Buy this beer online</a>';
+						echo '</div>';
+					endif;
+					?>
 		</div>
 	</div>
 </div>
