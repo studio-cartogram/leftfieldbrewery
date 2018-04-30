@@ -10,4 +10,5 @@ _modular-scale.sassc
 /wp-config.php
 wp-content/wflogs/*
 wp-content/themes/wptheme-lfb-0.2/.cache
-/wp-content/wflogs/config.php
+/wp-content/wflogs/*
+/wp-content/uploads/*
