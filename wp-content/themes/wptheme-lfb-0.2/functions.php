@@ -102,6 +102,8 @@
 	set_post_thumbnail_size(450, 450, true);
 
 	add_image_size('cartogram_post_thumb_big',450, 450, true);
+
+	add_image_size('big_square',800, 800, true);
 	
 	add_image_size('cartogram_player_cropped',320, 460, true);
 
