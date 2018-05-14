@@ -39,7 +39,7 @@ if ( have_posts() ) :
 									echo '<h6 class="space-top">'. $srm . '</h6>';
 								echo '</div>';
 								echo '<div class="columns double-bordered space-inner-top food_pairings">';
-									echo '<h5 class="text-center border-bottom">SRM</h5>';
+									echo '<h5 class="text-center border-bottom">Food Pairings</h5>';
 									echo '<h6 class="space-top">'. $food_pairings . '</h6>';
 								echo '</div>';
 								?>
