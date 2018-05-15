@@ -65,6 +65,10 @@
   }
 }
 
+.players__card .flip-container .flip {
+  position: absolute;
+}
+
 .post-12 .post-text {
   min-height: 0;
   @media only screen and (min-width: 768px) {
