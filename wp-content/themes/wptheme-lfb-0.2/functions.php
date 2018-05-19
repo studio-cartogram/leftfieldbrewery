@@ -9,9 +9,7 @@
 	require_once( 'external/media.php' );
 	require_once( 'external/multiple_featured_images.php' );
 	require_once( 'external/widgets.php' );
-	require_once( 'external/navigation.php' );
 	require_once( 'external/utilities.php' );
-	// require_once( 'external/metaboxes.php' );
 	require_once( 'external/comments.php' );
 	require_once( 'external/theme_options.php' );
 	require_once( 'external/gravity_forms.php' );
@@ -104,6 +102,8 @@
 	set_post_thumbnail_size(450, 450, true);
 
 	add_image_size('cartogram_post_thumb_big',450, 450, true);
+
+	add_image_size('big_square',800, 800, true);
 	
 	add_image_size('cartogram_player_cropped',320, 460, true);
 

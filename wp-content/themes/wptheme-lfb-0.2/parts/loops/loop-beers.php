@@ -13,7 +13,7 @@ $the_query = new WP_Query($args);
 
 echo '<div class="grid">';
 
-  echo '<div class="columns twelve">';
+  echo '<div class="columns twelve tabs-container">';
 
     get_template_part('parts/navigation/nav-tabs', 'beers');
 

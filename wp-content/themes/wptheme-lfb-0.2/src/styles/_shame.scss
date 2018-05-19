@@ -22,14 +22,51 @@
 }
 
 .single-beers .flip-container {
-  min-height: 480px;
+  height: inherit;
+}
+
+.single-beers .flip-container {
+  display: grid;
+  grid-template-rows: 100%;
+  overflow: visible;
+  height: auto!important;
+  text-align: center;
+  color: white;
+  padding: 24px;
+
+  p {
+    font-size: 14px;
+  }
+
+  .big-icon {
+    padding: 8px 24px 16px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    height: auto;
+  }
+}
+
+.single-beers .sunlight-park .flip-container p,
+.single-beers .sunlight-park .flip-container h2,
+.single-beers .sunlight-park .flip-container h3 {
+  color: $navy;
+}
+
+.single-beers .sunlight-park .flip-container h3:after {
+  background: $navy;
 }
 
 .post-text .gform_body .gform_fields textarea {
   min-height: 0;
+  
   @media only screen and (min-width: 768px) {
     min-height: 310px;
   }
+}
+
+.players__card .flip-container .flip {
+  position: absolute;
 }
 
 .post-12 .post-text {
@@ -183,4 +220,10 @@ body {
       font-size: 1.6rem;
     }
   }
+}
+
+.cartogram-slider-internal-viewport > ul img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }

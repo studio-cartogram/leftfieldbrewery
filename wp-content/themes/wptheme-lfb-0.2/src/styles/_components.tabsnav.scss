@@ -1,17 +1,18 @@
-
+.tabs-container {
+  overflow-x: hidden;
+}
 
 .tabsnav {
   padding: 0 $base-size 0;
   justify-content: center;
   display:flex;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
   white-space: nowrap;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
   background: $cream;
   border-left: 1px solid $navy;
   border-right: 1px solid $navy;
+
   &::-webkit-scrollbar {
     display: none;
   }
