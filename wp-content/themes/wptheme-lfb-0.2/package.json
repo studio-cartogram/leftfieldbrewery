@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "server":
-      "browser-sync start --proxy 'leftfieldbrewery.local' --files 'src/scripts/*.js'",
+      "browser-sync start --proxy 'leftfieldbrewery.local' --files 'src/styles/*.scss' 'src/scripts/*.js'",
     "parcel": "parcel src/scripts/index.js --public-url ./dist/",
     "parcel-build": "parcel build src/scripts/index.js",
     "dev": "gulp && yarn run parcel",
