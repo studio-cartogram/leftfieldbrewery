@@ -21,7 +21,7 @@ echo '<a class="beercard col col-12 col-6-mobile col-4-tablet col-3-laptop" href
 
   echo '<h2>' . get_the_title($item->ID) . '</h2>';
 	
-  echo '<h5>' . get_post_meta( $id, '_cartogram_short_description_value', TRUE ) . '</h5>';
+  echo '<h5>' . $short_description . '</h5>';
 
   echo '<div class="beercard__background" style="background:' . $color . '" ></div>';
 
