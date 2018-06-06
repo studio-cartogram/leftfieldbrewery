@@ -58,7 +58,7 @@ $icon_image = get_field('icon', $post->ID);
         <svg class="icon--medium"><use xlink:href="#<?php echo $post->post_name ?>"></use</svg>
         <?php endif; ?>
         <h2 class="beer-name beer-block light"><?php echo $title; ?></h2>
-        <?php echo '<h3 class="light beer-tagline">' . $tagline . '</h3>'; ?>
+        <?php echo '<h3 class="light beer-tagline">' . $short_description . '</h3>'; ?>
     </a>
     </div>
 </section> 
