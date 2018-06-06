@@ -55,7 +55,7 @@ $icon_image = get_field('icon', $post->ID);
         <?php if($icon_image) :
         echo '<img class="icon--medium space-top space-bottom" src="' . wp_get_attachment_image_src( $icon_image )[0] . '" />';
         else :?>
-        <svg class="icon--medium"><use xlink:href="#<?php echo $post->post_name ?>"></use</svg>
+        <svg class="icon--medium"><use xlink:href="#<?php echo $post->post_name ?>"></use></svg>
         <?php endif; ?>
         <h2 class="beer-name beer-block light"><?php echo $title; ?></h2>
         <?php echo '<h3 class="light beer-tagline">' . $short_description . '</h3>'; ?>

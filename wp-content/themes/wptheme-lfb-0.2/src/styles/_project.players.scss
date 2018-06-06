@@ -11,10 +11,43 @@
 @media only screen and (min-width: 768px) { 
 }
 
+.button-flip.button-flip.button-flip.button-flip {
+    background-color: $cream;
+    width: 16px;
+    height: 16px;
+    padding: 12px;
+    color: $navy;
+    z-index: 9999;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 3px;
+        right: 3px;
+        background-image: url(../dist/images/flip.svg);
+        background-position: right bottom;
+        background-size: contain;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.flip-container.hover {
+
+    .button-flip.button-flip.button-flip.button-flip {
+        background-color: $navy;
+
+        &:after {
+            background-image: url(../dist/images/flip-reverse.svg);
+        }
+    }  
+}
+
 .block-grid .flip-container {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     max-width:300px;
     margin:auto;
+    position: relative;
     &,
     .front, 
     .back {

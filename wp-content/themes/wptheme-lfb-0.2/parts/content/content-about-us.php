@@ -29,7 +29,7 @@ $jobs = new WP_Query( array(
 
 					<li class="players__card card-players wrap">
 						<div class="flip-container">
-							<a class="flip" id="to-back" href="#"><i class="icon-flip-right"></i></a>
+							<a class="flip button-flip" id="to-back" href="#"></a>
 							<div class="flipper">
                                 <div class="front bg-cover" style="background-image:url(<?php echo $image ?>)"></div>
                                 <div class="back"><?php the_content(); ?></div>
