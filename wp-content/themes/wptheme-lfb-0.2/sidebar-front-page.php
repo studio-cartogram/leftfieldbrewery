@@ -41,11 +41,10 @@ $mvp = get_field('mvp');
 if( $mvp): 
 
 $post = $mvp;
-
+$short_description = get_field('short_description', $post->ID);
+$color = get_field('color', $post->ID);
 $permalink = get_permalink( $post->ID );
-$color = get_post_meta( $post->ID, '_cartogram_color_value', TRUE );
 $title = get_the_title( $post->ID);
-$tagline = get_post_meta( $post->ID, '_cartogram_short_description_value', TRUE );
 $icon_image = get_field('icon', $post->ID);
 ?>
 
