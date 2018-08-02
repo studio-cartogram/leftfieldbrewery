@@ -34,17 +34,6 @@ export default class VendorList extends React.Component {
             </li>
             <li>
               <a
-                onClick={this.filterVendors.bind(this, "lcbo")}
-                className={cx(
-                  "",
-                  this.props.filter === "lcbo" ? "is-active" : ""
-                )}
-              >
-                LCBOs
-              </a>
-            </li>
-            <li>
-              <a
                 onClick={this.filterVendors.bind(this, "brew-pub")}
                 className={cx(
                   "",

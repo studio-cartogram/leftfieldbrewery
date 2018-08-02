@@ -34,3 +34,5 @@ exit(0);
 1525467064_25:"Warning: admin, 127.0.0.1; Post deleted: (multiple entries): Post id: 5926"
 1525467069_03:"Notice: admin, 127.0.0.1; Page was updated; ID: 4; name: Caught lookin&#039;"
 1525467069_04:"Notice: admin, 127.0.0.1; Revision status has been changed; details: ID: 5934,Old status: new,New status: inherit,Title: Caught lookin&#039;"
+1533226588_22:"Notice: 127.0.0.1; User authentication succeeded: admin"
+1533226611_7:"Critical: admin, 127.0.0.1; WordPress updated to version: 4.9.7"

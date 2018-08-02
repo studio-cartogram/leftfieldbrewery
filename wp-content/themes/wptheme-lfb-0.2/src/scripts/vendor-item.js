@@ -57,7 +57,6 @@ export default class Vendor extends React.Component {
             />
           </div>
         </a>
-
         <a href={mapLink} target="_blank" className="link--get-directions">
           Get directions 123
         </a>
