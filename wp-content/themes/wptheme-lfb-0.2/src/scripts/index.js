@@ -146,7 +146,7 @@ class Map extends React.Component {
       data: [],
       activeVendor: "",
       scrollPos: 0,
-      filter: ""
+      filter: "bar"
     };
   }
   originalData;
@@ -179,7 +179,10 @@ class Map extends React.Component {
       dataType: this.props.dataType,
       success: data => {
         this.originalData = data.result;
-        this.setState({ data: data.result });
+        const filtered = data.result.filter(vendor => {
+          return vendor.vendor_type === this.state.filter;
+        });
+        this.setState({ data: filtered });
       },
       error: (xhr, status, err) => {
         console.error(this.props.url, status, err.toString());
