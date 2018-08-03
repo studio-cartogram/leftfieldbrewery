@@ -8164,7 +8164,7 @@ a {
 .link--bordered {
   position: relative; }
   .link--bordered:after {
-    content: '';
+    content: "";
     height: 100%;
     position: absolute;
     top: 0;
@@ -8185,7 +8185,8 @@ a {
   margin-right: -14px;
   background: #0c223f !important;
   padding: 30px 30px 30px 90px; }
-  .link--brew-finder, .link--brew-finder i {
+  .link--brew-finder,
+  .link--brew-finder i {
     color: #fefcf8 !important; }
   .link--brew-finder i.icon-tap {
     left: 30px;
@@ -8884,6 +8885,12 @@ h1 {
 .mvp .beer-tagline:after,
 .mvp .beer-name:before {
   display: none; }
+
+h3.beer-tagline:after {
+  display: none; }
+
+.sidebar-beer h3.beer-tagline {
+  margin-bottom: 0; }
 
 body {
   background: url(images/bg.png); }

@@ -29,7 +29,7 @@
   display: grid;
   grid-template-rows: 100%;
   overflow: visible;
-  height: auto!important;
+  height: auto !important;
   text-align: center;
   color: white;
   padding: 24px;
@@ -59,7 +59,7 @@
 
 .post-text .gform_body .gform_fields textarea {
   min-height: 0;
-  
+
   @media only screen and (min-width: 768px) {
     min-height: 310px;
   }
@@ -181,6 +181,14 @@ h1 {
   .beer-name:before {
     display: none;
   }
+}
+
+h3.beer-tagline:after {
+  display: none;
+}
+
+.sidebar-beer h3.beer-tagline {
+  margin-bottom: 0;
 }
 
 body {

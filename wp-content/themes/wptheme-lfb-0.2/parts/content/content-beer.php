@@ -5,6 +5,7 @@ $icon_image = get_field('icon');
 $icon = (!$icon_image && get_post_meta( $item->ID, '_cartogram_icon_value', TRUE ) ? get_post_meta( $item->ID, '_cartogram_icon_value', TRUE ) : $item->post_name);
 $short_description = get_field('short_description');
 $color = get_field('color');
+$colorText = get_field('color_text');
 
 
 echo '<a class="beercard col col-12 col-6-mobile col-4-tablet col-3-laptop" href="' . get_permalink($item->ID) . '">';

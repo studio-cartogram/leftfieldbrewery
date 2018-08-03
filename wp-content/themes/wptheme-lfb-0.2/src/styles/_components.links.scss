@@ -1,22 +1,22 @@
 a {
-  transition:color $transition-timing $transition-easing;
+  transition: color $transition-timing $transition-easing;
 }
 
 .link--bordered {
-  position:relative;
+  position: relative;
   &:after {
-    content: '';
-    height:100%;
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    border:0px solid $cream;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0px solid $cream;
     transition: all $transition-timing $transition-easing;
   }
   &:hover:after {
-    border:8px solid $cream;
+    border: 8px solid $cream;
   }
 }
 
@@ -24,13 +24,14 @@ a {
   font-size: 15px;
   font-weight: 700;
   line-height: 1.4;
-  border:none;
-  display:block;
-  margin-right:-14px;
-  background:$navy !important;
+  border: none;
+  display: block;
+  margin-right: -14px;
+  background: $navy !important;
   padding: $base-size $base-size $base-size $base-size * 3;
-  &, i {
-    color:$cream !important;
+  &,
+  i {
+    color: $cream !important;
   }
   i.icon-tap {
     left: $base-size;
@@ -45,4 +46,3 @@ a {
   padding: $base-size;
   background: inherit;
 }
-
