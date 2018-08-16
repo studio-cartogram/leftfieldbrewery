@@ -36,3 +36,7 @@ exit(0);
 1525467069_04:"Notice: admin, 127.0.0.1; Revision status has been changed; details: ID: 5934,Old status: new,New status: inherit,Title: Caught lookin&#039;"
 1533226588_22:"Notice: 127.0.0.1; User authentication succeeded: admin"
 1533226611_7:"Critical: admin, 127.0.0.1; WordPress updated to version: 4.9.7"
+1533272475_29:"Error: 127.0.0.1; User authentication failed: admin"
+1533272479_81:"Error: 127.0.0.1; User authentication failed: admin"
+1533272529_42:"Notice: 127.0.0.1; User authentication succeeded: admin"
+1533335853_74:"Notice: admin, 127.0.0.1; Acf-field status has been changed; details: ID: 5937,Old status: new,New status: publish,Title: Text colour"
