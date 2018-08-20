@@ -10,7 +10,6 @@ export default class Vendor extends React.Component {
     name: PropTypes.string,
     vendor_type: PropTypes.string,
     onClick: PropTypes.func,
-    key: PropTypes.string,
     neighbourhood: PropTypes.string
   };
   static defaultProps = {};
@@ -41,7 +40,7 @@ export default class Vendor extends React.Component {
             ? "vendor-item--is-active"
             : "vendor-item--is-inactive"
         )}
-        key={this.props.key}
+        key={this.props.id}
       >
         <a className="row collapse block-level">
           <div className="columns two icon-wrap mobile-one text-center">

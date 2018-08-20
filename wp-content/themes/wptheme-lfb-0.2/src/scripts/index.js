@@ -3,10 +3,10 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import controllable from "react-controllables";
 import shouldPureComponentUpdate from "react-pure-render/function";
-import { K_SIZE } from "./vendor.styles.js";
+import { K_SIZE, vendorOverlayStyle } from "./vendor.styles.js";
 import Vendor from "./vendor.js";
 import VendorItem from "./vendor-item.js";
-import VendorList from "./vendor-list.js";
+import VendorList from "./VendorList.js";
 import GoogleMap from "google-map-react";
 
 import "./client/jquery.flexslider.js";
@@ -229,6 +229,7 @@ class Map extends React.Component {
           lat={vendor.latitude}
           lng={vendor.longitude}
           key={vendor.id}
+          id={vendor.id}
           neighbourhood={vendor.neighbourhood}
           address={vendor.address}
           onClick={boundClick}
@@ -253,6 +254,7 @@ class Map extends React.Component {
         />
       );
     });
+
     return (
       <div className="row collapse brew-finder__container">
         <div className="columns eight push-four mobile-flush brew-finder__map">

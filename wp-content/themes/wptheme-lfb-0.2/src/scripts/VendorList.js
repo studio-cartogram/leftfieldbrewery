@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React from "react";
-import shouldPureComponentUpdate from "react-pure-render/function";
 import Scroller from "./scroller.js";
 import cx from "classnames";
 
@@ -44,6 +43,14 @@ export default class VendorList extends React.Component {
                 )}
               >
                 Restaurants
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="http://www.lcbo.com/lcbo/search?searchTerm=%27left+field+brewery%27"
+              >
+                LCBO
               </a>
             </li>
           </ul>
