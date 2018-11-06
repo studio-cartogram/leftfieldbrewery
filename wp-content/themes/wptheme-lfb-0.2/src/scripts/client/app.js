@@ -90,17 +90,30 @@ App.bindListeners = function() {
    *     for Twitter phrases like "posted on" or "time ago". Default value
    *     is "en" (English).
    */
+  // var twitterConfig = {
+  //   id: "371772142548824064",
+  //   domId: "twitter",
+  //   maxTweets: 1,
+  //   enableLinks: true,
+  //   showPermalinks: false,
+  //   showImages: false,
+  //   showUser: false,
+  //   showInteraction: false
+  // };
+
+  // twitterFetcher.fetch(twitterConfig);
+
   var twitterConfig = {
-    id: "371772142548824064",
+    profile: { screenName: "LFBrewery" },
     domId: "twitter",
     maxTweets: 1,
     enableLinks: true,
-    showPermalinks: false,
-    showImages: false,
     showUser: false,
-    showInteraction: false
+    showTime: true,
+    showImages: false,
+    showPermalinks: false,
+    lang: "en"
   };
-
   twitterFetcher.fetch(twitterConfig);
 
   /* ========================================================================================================================
