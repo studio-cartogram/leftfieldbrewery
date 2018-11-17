@@ -26,7 +26,7 @@
 }
 
 .single-beers .flip-container {
-  display: grid;
+  display: inline-block;
   grid-template-rows: 100%;
   overflow: visible;
   height: auto !important;
