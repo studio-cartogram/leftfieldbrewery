@@ -1,0 +1,57 @@
+.pagination {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: $d-base;
+    right: $d-base;
+    bottom: 0;
+    border-bottom: $ba-pagination;
+  }
+
+
+  .prev,
+  .page,
+  .next {
+    &.current,
+    a {
+      @extend .link--primary;
+      padding: $d-duo $d-base;
+      position: relative;
+      margin: 0 $d-base/2;
+      display: block;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-bottom: $ba-nav-item-active;
+        @include prefix(transform-origin, 100% 100%, $default-prefixes);
+        @include prefix(transform, scaleY(0), $default-prefixes);
+        @include prefix(transition, transform $a-timing $a-easing, $default-prefixes);
+      }
+    }
+    a:hover,
+    &.current {
+      &:before {
+        @include prefix(transform, scaleY(1), $default-prefixes);
+      }
+    }
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+}

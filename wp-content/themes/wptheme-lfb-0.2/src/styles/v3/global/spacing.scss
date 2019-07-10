@@ -1,0 +1,63 @@
+$directions: (
+  'top',
+  'bottom',
+  'left',
+  'right'
+);
+
+$sizes: (
+  'duo' $d-duo,
+  'trio' $d-trio
+);
+
+
+.soft {
+  padding: $d-base;
+}
+
+.hard {
+  padding: 0;
+}
+
+@each $direction in $directions {
+  $d: nth($direction, 1);
+  .soft--#{$d} {
+    padding-#{$d}: $d-base !important;
+  }
+
+  .hard--#{$d} {
+    padding-#{$d}: 0 !important;
+  }
+
+  @each $size in $sizes {
+    $siz: nth($size, 1);
+    $dim: nth($size, 2);
+
+    .soft-#{$siz}--#{$d} {
+      padding-#{$d}: $dim !important;
+    }
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+  $declaration: nth($breakpoint, 2);
+  @media only screen and #{$declaration} {
+    .soft--#{$name} {
+      padding: $d-base;
+    }
+
+    .hard--#{$name} {
+      padding: 0;
+    }
+    @each $direction in $directions {
+      $d: nth($direction, 1);
+      .soft--#{$name}--#{$d} {
+        padding-#{$d}: $d-base;
+      }
+      .hard--#{$name}--#{$d} {
+        padding-#{$d}: 0;
+      }
+    }
+  }
+}

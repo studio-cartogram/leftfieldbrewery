@@ -12,7 +12,7 @@
 			<h1><a class="icon-logo" href=<?php bloginfo( 'url' ); ?>></a></h1>
 		</hgroup>
 		<div class="columns four mobile-two text-left">
-			<h2 class="header-text">Est. 2013</h2>
+			<h2 class="header-text">Open Daily <span class="split">◆</span> 11AM&mdash;9pm</h2>
 		</div>
 	</header>
 </section>	

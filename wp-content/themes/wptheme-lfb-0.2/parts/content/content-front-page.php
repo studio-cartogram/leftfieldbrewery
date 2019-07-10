@@ -1,18 +1,17 @@
 <?php global $slug;
 ?>
 <div class="row">
-	<div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four mobile-flush rule-left"); ?>>	
-		<?php the_title('<h3 class="rule-right text-center">','</h3>') ?>
-        <?php // get_template_part('parts/slideshows/slideshow'); ?>
+    <div id="post-<?php the_ID(); ?>" <?php post_class("columns eight push-four mobile-flush rule-left"); ?>>	
+        <?php the_title('<h3 class="rule-right text-center">','</h3>') ?>
         <div class="instagrams" id="instafeed"></div>
         <div class="row">
             <div class="columns twelve atthebrewery">
-				<div class="row flushed-left collapse">
-					<div class="columns double-bordered twelve  ">
-						<h3 class="soft text-center rule-right ">At the Brewery</h3>
-					</div>
-				</div>
-				<div class="row atthebrewery__table text-center flushed-left collapse">
+                <div class="row flushed-left collapse">
+                    <div class="columns double-bordered twelve  ">
+                        <h3 class="soft text-center rule-right ">At the Brewery</h3>
+                    </div>
+                </div>
+                <div class="row atthebrewery__table text-center flushed-left collapse">
 
                     <?php $posts = get_field('beers_at_the_brewery', 'option'); 
 
@@ -70,17 +69,17 @@
                             <?php endwhile;
                     endif;?>
 
-				</div>
+                </div>
             </div>
         </div>
-	</div>
-	<div class="columns four sidebar pull-eight mobile-flush">
-		<?php if (is_front_page()) {
-			get_sidebar('front-page'); 
-		} elseif (is_home()) { 
-			get_sidebar('home');
-		} else {
-			get_sidebar($slug);
-		} ?>
-	</div>
+    </div>
+    <div class="columns four sidebar pull-eight mobile-flush">
+        <?php if (is_front_page()) {
+            get_sidebar('front-page'); 
+        } elseif (is_home()) { 
+            get_sidebar('home');
+        } else {
+            get_sidebar($slug);
+        } ?>
+    </div>
 </div>

@@ -1,0 +1,10 @@
+.label {
+}
+
+.label--hidden {
+  @include visually-hidden();
+
+  .no-placeholder & {
+    @include visually-shown();
+  }
+}

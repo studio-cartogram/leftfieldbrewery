@@ -1,0 +1,25 @@
+.footer {
+  padding-bottom: $d-quad;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -$d-base;
+    left: 0;
+    right: 0;
+    height: $d-base;
+    border-bottom: 1px solid $ca-header-bar-color;
+    border-top: 1px solid $ca-header-bar-color;
+    background: $c-beige;
+  }
+
+  &:after {
+    background: $ca-header-bar-color;
+    max-width: $d-grid-max-width;
+    width: 100%;
+    left: 50%;
+    right: auto;
+    @include prefix(transform, translate(-50%, 0), $default-prefixes);
+  }
+}

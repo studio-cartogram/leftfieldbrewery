@@ -7,39 +7,19 @@
   "license": "ISC",
   "scripts": {
     "server": "browser-sync start --proxy 'leftfieldbrewery.local' --files 'src/styles/*.scss' 'src/scripts/*.js'",
-    "parcel": "parcel src/scripts/index.js --public-url ./dist/",
-    "parcel-build": "parcel build src/scripts/index.js",
-    "dev": "gulp && yarn run parcel",
-    "build": "gulp && yarn run parcel-build"
+    "parcel": "parcel src/scripts/index.js --public-url ./",
+    "parcel-build": "parcel build src/scripts/index.js --public-url ./",
+    "dev": "yarn run parcel",
+    "build": "yarn run parcel-build"
   },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-runtime": "^6.26.0",
-    "classnames": "^2.2.0",
-    "google-map-react": "^0.33.0",
-    "gulp-cache": "^1.0.2",
-    "prop-types": "^15.6.1",
-    "react": "^16.2.0",
-    "react-controllables": "^0.6.0",
-    "react-dom": "^16.2.0",
-    "react-google-maps": "^9.4.5",
-    "react-hot-loader": "^4.0.0",
-    "react-pure-render": "^1.0.2"
+    "browser-sync": "^2.26.7",
+    "config": "^3.1.0",
+    "global": "^4.4.0",
+    "parcel-bundler": "^1.12.3",
+    "v3": "^0.0.0"
   },
   "devDependencies": {
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "browser-sync": "^2.9.3",
-    "gulp": "^3.9.0",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-load-plugins": "^1.0.0-rc.1",
-    "gulp-size": "^3.0.0",
-    "gulp-svg-sprite": "^1.2.10",
-    "gulp-util": "^3.0.6",
-    "node-sass": "^4.7.2",
-    "parcel-bundler": "^1.7.1"
+    "sass": "^1.22.3"
   }
 }

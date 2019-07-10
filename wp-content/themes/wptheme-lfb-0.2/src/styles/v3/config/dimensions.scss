@@ -1,0 +1,29 @@
+$d-base: 8px;
+
+$d-half: $d-base/2;
+$d-duo: $d-base * 2;
+$d-trio: $d-base * 3;
+$d-quad: $d-base * 4;
+$d-quin: $d-base * 5;
+$d-sex: $d-base * 6;
+$d-sep: $d-base * 7;
+$d-oct: $d-base * 8;
+$d-nan: $d-base * 9;
+$d-dec: $d-base * 10;
+
+$d-sm: 400px;
+$d-md: 700px;
+$d-lg: 800px;
+$d-xl: 1024px;
+
+$d-grid-max-width: 1000px;
+$d-grid-columns: 12;
+$d-grid-gutter-width: $d-quad;
+$d-grid-outer-margin: 2rem;
+
+$d-header-spacing: $d-quad;
+$da-header-height: $d-oct;
+
+$da-nav-height: $da-header-height;
+
+$d-logo-width: $d-base * 18;

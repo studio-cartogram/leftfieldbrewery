@@ -1,0 +1,50 @@
+$alignments: (
+  'left',
+  'right',
+  'center'
+);
+
+@each $alignment in $alignments {
+  $a: nth($alignment, 1);
+  .text-align--#{$a} {
+    text-align: #{$a}
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+  $declaration: nth($breakpoint, 2);
+  @media only screen and #{$declaration} {
+    @each $alignment in $alignments {
+      $a: nth($alignment, 1);
+      .text-align--#{$name}--#{$a} {
+        text-align: #{$a}
+      }
+    }
+  }
+}
+
+body,
+button,
+textarea,
+input,
+select {
+  font-family: $t-font-stack-sans;
+  line-height: 1.5;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+
+  .rte & {
+    margin-bottom: $d-duo;
+  }
+}
+

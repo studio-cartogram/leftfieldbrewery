@@ -1,0 +1,28 @@
+.cart {
+
+}
+
+.cart__image {
+  min-height: $d-dec;
+  img {
+    display: block;
+  }
+
+}
+
+.cart__row__bottom {
+  padding-top: $d-duo;
+  @include mq($medium) {
+    position: absolute;
+    left: $d-base;
+    right: $d-base;
+    bottom: 0;
+  }
+}
+
+.cart__actions {
+  background: none;
+  &:after {
+    display: none;
+  }
+}

@@ -1,126 +1,122 @@
 .players {
-    margin: 0 !important;
-    padding: 40px 34px !important;
-    background: $cream;
+  margin: 0 !important;
+  padding: 40px 34px !important;
+  background: $cream;
 }
 
 .players__card {
-    padding:0 6px !important;
+  padding: 0 6px !important;
 }
 
-@media only screen and (min-width: 768px) { 
+@media only screen and (min-width: 768px) {
 }
 
 .button-flip.button-flip.button-flip.button-flip {
-    background-color: $cream;
+  background-color: $cream;
+  width: 16px;
+  height: 16px;
+  padding: 12px;
+  color: $navy;
+  z-index: 9999;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    background-image: url(../images/flip.svg);
+    background-position: right bottom;
+    background-size: contain;
     width: 16px;
     height: 16px;
-    padding: 12px;
-    color: $navy;
-    z-index: 9999;
-
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: 3px;
-        right: 3px;
-        background-image: url(../dist/images/flip.svg);
-        background-position: right bottom;
-        background-size: contain;
-        width: 16px;
-        height: 16px;
-    }
+  }
 }
 
 .flip-container.hover {
+  .button-flip.button-flip.button-flip.button-flip {
+    background-color: $navy;
 
-    .button-flip.button-flip.button-flip.button-flip {
-        background-color: $navy;
-
-        &:after {
-            background-image: url(../dist/images/flip-reverse.svg);
-        }
-    }  
+    &:after {
+      background-image: url(../images/flip-reverse.svg);
+    }
+  }
 }
 
 .block-grid .flip-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  position: relative;
+  &,
+  .front,
+  .back {
+    height: 300px;
+  }
+  .front {
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  .back {
+    border: 1px solid $navy;
+    overflow: scroll;
+    p {
+      color: $navy;
+      font-size: 12px;
+      line-height: 1.4;
+      font-weight: 600;
+      padding: 12px;
+      text-align: left;
+    }
+  }
+  .flip {
+    bottom: 0;
+    padding: 10px 12px;
+    line-height: 0;
+    background: white;
+    opacity: 1 !important;
+    transition: all 200ms;
+    margin: 0 1px 1px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    max-width:300px;
-    margin:auto;
-    position: relative;
-    &,
-    .front, 
-    .back {
-        height: 300px;
+
+    i {
+      transition: all 200ms;
+      font-size: 12px;
     }
-    .front {
-        background-repeat: no-repeat;
-        background-position: top center;
+    &:active,
+    &:hover {
+      opacity: 0.95 !important;
     }
-    .back {
-        border:1px solid $navy;
-        overflow:scroll;
-        p {
-            color: $navy;
-            font-size: 12px;
-            line-height: 1.4;
-            font-weight: 600;
-            padding:12px;
-            text-align:left;
-        }
-    }
+  }
+  &.hover {
     .flip {
-        bottom:0;
-        padding: 10px 12px;
-        line-height: 0;
-        background: white;
-        opacity:1 !important;
-        transition: all 200ms;
-        margin:0 1px 1px 0;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-        i {
-            transition: all 200ms;
-            font-size:12px;
-        }
-        &:active,
-        &:hover {
-            opacity:0.95 !important;
-        }
-
+      color: white;
+      background: $navy;
+      i {
+        font-size: 12px;
+        transform: rotateY(180deg);
+      }
     }
-    &.hover {
-        .flip {
-            color: white;
-            background: $navy;
-            i {
-                font-size:12px;
-                transform:rotateY(180deg);
-            }
-
-        }
-    }
-
+  }
 }
 
 .player-card__info {
-    padding: 20px 10px 40px;
-    .player-card__name {
-        font-family: "proxima-nova","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-        text-transform:none;
-        font-size: 16px;
-        margin:0;
-        padding:0 0 8px;
-    }
-    .player-card__title {
-        font-size: 12px;
-        margin:0;
-        padding:0 0 8px;
-        line-height: 1.5;
-    }
-    .player-card__contact {
-        margin:0;
-        padding:0;
-    }
-
+  padding: 20px 10px 40px;
+  .player-card__name {
+    font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial,
+      sans-serif;
+    text-transform: none;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 8px;
+  }
+  .player-card__title {
+    font-size: 12px;
+    margin: 0;
+    padding: 0 0 8px;
+    line-height: 1.5;
+  }
+  .player-card__contact {
+    margin: 0;
+    padding: 0;
+  }
 }

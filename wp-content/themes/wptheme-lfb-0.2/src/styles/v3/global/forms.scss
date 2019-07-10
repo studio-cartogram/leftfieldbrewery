@@ -1,0 +1,48 @@
+/*============================================================================
+  Form scaffolding
+    - Selectors setup for you to style form elements how you want
+    - Focus, error, and disabled states are set to be extended
+==============================================================================*/
+input,
+textarea,
+select {
+  border-radius: 0;
+  max-width: 100%;
+  width: 100%;
+
+  &:focus {
+    // You should add some focus styles
+  }
+
+  &[disabled] {
+    cursor: default;
+  }
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.errors {
+  padding: $d-base 0;
+  ul {
+    &,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      @extend .heading--5;
+      color: $ca-errors-color;
+    }
+  }
+}
+
+/*================ Error styles ================*/
+input,
+select,
+textarea {
+  &.input-error {
+  }
+}

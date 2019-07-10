@@ -1,0 +1,50 @@
+.panel {
+  position: relative;
+  padding-top: $d-trio;
+  padding-bottom: $d-trio;
+  padding-left: $d-duo;
+  padding-right: $d-duo;
+
+  &.panel--white {
+    background: $ca-cart-row-background;
+    box-shadow: $sa-panel;
+  }
+
+  &.panel--narrow {
+    padding-top: $d-base;
+    padding-bottom: $d-base;
+  }
+
+  &.panel--bordered {
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      border-bottom: $ba-cart-row;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &:before {
+      top: 0;
+      bottom: auto;
+      display: none;
+    }
+
+    &.panel--first:before,
+    &:first-of-type:before {
+      display: block;
+    }
+
+
+    &.panel--bordered--half {
+      @include mq($medium) {
+        &:before,
+        &:after {
+          left: 50%;
+        }
+      }
+    }
+  }
+}

@@ -6,23 +6,30 @@ $icon = (!$icon_image && get_post_meta( $item->ID, '_cartogram_icon_value', TRUE
 $short_description = get_field('short_description');
 $color = get_field('color');
 $colorText = get_field('color_text');
+$default_link = 'https://fanshop.leftfieldbrewery.ca/products';
+$link = get_field('bottle_shop') ? get_field('bottle_shop') : $default_link;
 
-
-echo '<a class="beercard col col-12 col-6-mobile col-4-tablet col-3-laptop" href="' . get_permalink($item->ID) . '">';
+echo '<a target="_blank" class="beercard col col-12 col-6-mobile col-4-tablet col-3-laptop" href="' . $link . '">';
 
   echo '<div class="back-logo big-icon multi-svg">';
 
       if($icon_image) :
+
           echo '<img src="' . wp_get_attachment_image_src( $icon_image )[0] . '" />';
+
       else :
+
           echo '<svg class="centered icon--large"><use xlink:href="#' . $icon . '"></use</svg>';
+          
       endif;
 
   echo '</div>';
 
   echo '<h2>' . get_the_title($item->ID) . '</h2>';
-	
+    
   echo '<h5>' . $short_description . '</h5>';
+
+  echo '<span class="beercard__button">Buy this beer</span>';
 
   echo '<div class="beercard__background" style="background:' . $color . '" ></div>';
 

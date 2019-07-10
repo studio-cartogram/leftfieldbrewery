@@ -40,3 +40,8 @@ exit(0);
 1533272479_81:"Error: 127.0.0.1; User authentication failed: admin"
 1533272529_42:"Notice: 127.0.0.1; User authentication succeeded: admin"
 1533335853_74:"Notice: admin, 127.0.0.1; Acf-field status has been changed; details: ID: 5937,Old status: new,New status: publish,Title: Text colour"
+1562546326_04:"Error: 127.0.0.1; User authentication failed: admin"
+1562546422_59:"Notice: 127.0.0.1; User authentication succeeded: admin"
+1562546429_56:"Notice: admin, 127.0.0.1; Post status has been changed; details: ID: 4681,Old status: new,New status: auto-draft,Title: Auto Draft"
+1562547230_15:"Warning: admin, 127.0.0.1; Plugin updated: WP Migrate DB Pro (v1.8.1; wp-migrate-db-pro\/wp-migrate-db-pro.php)"
+1562547781_96:"Warning: admin, 127.0.0.1; Plugin updated: WP Migrate DB Pro (v1.8.1; wp-migrate-db-pro\/wp-migrate-db-pro.php)"

@@ -1,0 +1,10 @@
+hr,
+.hr {
+  margin: $d-trio 0;
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+  height: 1px;
+  background: rgba($ca-hr-background, 0.2);
+  display: block;
+}

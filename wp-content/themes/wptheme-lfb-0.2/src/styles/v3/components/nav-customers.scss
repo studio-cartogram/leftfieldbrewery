@@ -1,0 +1,33 @@
+.nav-customers {
+  position: relative;
+}
+
+.nav-customers__customer {
+  @include prefix(transform, translate(-50%, 0), $default-prefixes);
+  position: absolute;
+  border: 1px solid $c-navy;
+  border-radius: $b-radius;
+  padding: $d-base;
+  width: 100%;
+  min-width: 180px;
+  left: 50%;
+  top: 100%;
+  background: $c-beige;
+  margin-top: $d-duo + 3px;
+  text-align: center;
+  box-shadow: $sa-panel;
+
+  &:before {
+    content: '';
+    @include prefix(transform, translate(-50%, calc(50% - 1px)) rotate(-45deg), $default-prefixes);
+    position: absolute;
+    border-right: 1px solid $c-navy;
+    border-top: 1px solid $c-navy;
+    left: 50%;
+    bottom: 100%;
+    background: $c-beige;
+    height: $d-duo;
+    width: $d-duo;
+    margin-top: -1px;
+  }
+}

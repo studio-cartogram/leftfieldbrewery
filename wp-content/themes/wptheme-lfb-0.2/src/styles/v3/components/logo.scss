@@ -1,0 +1,21 @@
+.wordmark {
+  display: block;
+  margin-top: $d-base;
+
+  > .icon {
+    width: $d-logo-width;
+    height: 50px;
+    position: relative;
+    left: -$d-base;
+  }
+}
+
+.logo {
+  display: block;
+  text-align:center;
+  > .icon {
+    margin: auto;
+    width: $d-logo-width;
+    height: $d-logo-width;
+  }
+}

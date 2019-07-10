@@ -1,0 +1,33 @@
+.image {
+  @include prefix(transition, opacity $a-timing $a-easing, $default-prefixes);
+  &.lazyload,
+  &.lazyloading {
+    opacity: 0;
+  }
+
+  &.lazyloaded {
+    opacity: 1;
+  }
+}
+
+.with-ratio {
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+  }
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+

@@ -1,0 +1,62 @@
+// .button {
+//   @include prefix("user-select", "none", moz ms webkit spec);
+//   @include prefix(appearance, none, webkit moz spec);
+//   @include prefix(transition, opacity $a-timing $a-easing, $default-prefixes);
+//   @extend .heading--4;
+//   font-weight: $t-font-weight-bold;
+//   display: inline-block;
+//   width: auto;
+//   text-decoration: none;
+//   text-align: center;
+//   vertical-align: middle;
+//   white-space: nowrap;
+//   border: $ba-button;
+//   background: $ca-button-background;
+//   color: $ca-button-color;
+//   padding: $d-duo - 2px $d-trio;
+//   border-radius: $b-radius;
+
+//   &:hover,
+//   &:active,
+//   &:focus {
+//     color: $ca-button-color;
+//     opacity: 0.8;
+//   }
+// }
+
+// .button--full {
+//   width: 100%;
+// }
+
+// .button--narrow {
+//   padding-left: 0;
+//   padding-right: 0;
+// }
+
+// .button--secondary {
+//   background: $ca-button-secondary-background;
+//   color: $ca-button-secondary-color;
+//   border: $ba-button;
+
+//   &:hover,
+//   &:active,
+//   &:focus {
+//     color: $ca-button-secondary-color;
+//   }
+
+//   &:focus {
+//     opacity: 0.7;
+//   }
+// }
+
+// .button--tertiary {
+//   background: transparent;
+//   border: 0;
+//   color: $ca-button-tertiary-color;
+
+//   &:hover,
+//   &:active,
+//   &:focus {
+//     color: $ca-button-tertiary-color;
+//   }
+// }

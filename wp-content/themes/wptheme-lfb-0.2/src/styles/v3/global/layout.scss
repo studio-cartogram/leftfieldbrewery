@@ -1,0 +1,25 @@
+/*================ General layout styles ================*/
+body,
+html {
+  background-image: url($i-site-background);
+}
+
+.site {
+  min-height: 100vh;
+  @include flexbox;
+  @include flex-direction(column);
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main {
+  z-index: index($l-layout, main);
+  padding-top: $d-dec;
+  padding-bottom: $d-quin;
+  @include flex(1);
+}

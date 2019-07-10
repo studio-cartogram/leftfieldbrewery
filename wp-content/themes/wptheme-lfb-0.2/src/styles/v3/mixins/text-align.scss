@@ -1,0 +1,14 @@
+@mixin text-align($breakpoint: '') {
+  // sass-lint:disable no-important
+  .#{$breakpoint}text-left {
+    text-align: left !important;
+  }
+
+  .#{$breakpoint}text-right {
+    text-align: right !important;
+  }
+
+  .#{$breakpoint}text-center {
+    text-align: center !important;
+  }
+}

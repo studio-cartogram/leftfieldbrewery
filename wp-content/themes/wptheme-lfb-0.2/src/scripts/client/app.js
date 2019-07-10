@@ -1,4 +1,6 @@
 import Instafeed from "./instafeed";
+import "../client/twitterFetcher.js";
+
 //Set up global variable App for function calls.
 var App = {};
 
@@ -8,7 +10,6 @@ var App = {};
 App.init = function() {
   App.cache();
   App.bindListeners();
-  App.flexsliderInit();
   App.addFlipEvents();
 };
 
@@ -18,8 +19,6 @@ App.init = function() {
 App.cache = function() {
   /* Store all dom elements selected. */
   App.dom = {};
-  //Example:
-  //App.dom.page = $(".page");
 }; // App.cache();
 
 /*
@@ -124,7 +123,7 @@ App.bindListeners = function() {
 
   var feed = new Instafeed({
     get: "user",
-    limit: 6,
+    limit: 4,
     accessToken: "296366000.1677ed0.5880677c1fd8462d9f99a523c2f77e40",
     userId: 296366000,
     resolution: "standard_resolution",
@@ -136,61 +135,6 @@ App.bindListeners = function() {
     feed.run();
   }
 }; // App.bindListeners().
-
-/*
-  Apply the flexslider.
-*/
-App.flexsliderInit = function() {
-  /* ========================================================================================================================
-    
-  Flexslider: Call and focus on relevant slide.
-
-  ======================================================================================================================== */
-  $(".flexslider-instagram").flexslider({
-    selector: ".slides-instagram > li",
-    animation: "slide",
-    namespace: "cartogram-slider-internal-",
-    prevText: "<i class='icon-arrow-left'></i>",
-    nextText: "<i class='icon-arrow-right'></i>",
-    directionNav: true,
-    controlNav: false,
-    slideshow: false,
-    pauseOnHover: true,
-    slideshowSpeed: 5000,
-    animationLoop: true,
-    keyboard: false
-  });
-
-  $(".flexslider-players").flexslider({
-    selector: ".slides-players > li",
-    animation: "slide",
-    namespace: "cartogram-slider-sidebar-",
-    prevText: "<i class='icon-arrow-left'></i>",
-    nextText: "<i class='icon-arrow-right'></i>",
-    directionNav: true,
-    controlNav: true,
-    slideshow: false,
-    pauseOnHover: true,
-    slideshowSpeed: 5000,
-    animationLoop: true,
-    keyboard: false
-  });
-
-  $(".flexslider-beers").flexslider({
-    selector: ".slides-beers > li",
-    animation: "slide",
-    namespace: "cartogram-slider-internal-",
-    prevText: "<i class='icon-arrow-left'></i>",
-    nextText: "<i class='icon-arrow-right'></i>",
-    directionNav: true,
-    controlNav: true,
-    slideshow: false,
-    pauseOnHover: true,
-    slideshowSpeed: 5000,
-    animationLoop: true,
-    keyboard: false
-  });
-}; // App.addFlexslider().
 
 /*
   Add the click events for flipping the about us cards and the beer cards.

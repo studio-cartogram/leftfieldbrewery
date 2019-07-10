@@ -5,16 +5,14 @@
 
 <?php if( have_rows('callout') ): ?>
 
-	<?php while( have_rows('callout') ): the_row(); 
+    <?php while( have_rows('callout') ): the_row(); 
+        $heading = get_sub_field('callout_heading');
+        $image = get_sub_field('callout_image');
+        $text = get_sub_field('callout_text');
+        $link = get_sub_field('callout_link');
+    ?>
 
-    $heading = get_sub_field('callout_heading');
-    $image = get_sub_field('callout_image');
-    $text = get_sub_field('callout_text');
-    $link = get_sub_field('callout_link');
-
-	?>
-
-	<div class="callout rule-left">
+    <div class="callout rule-left">
 
         <h3 class="rule-left mobile-divide text-center"><?php echo $heading; ?></h3>
 
@@ -24,9 +22,9 @@
             </a>
         </section>
 
-		</div>
+        </div>
 
-	<?php endwhile; ?>
+    <?php endwhile; ?>
 
 <?php endif; ?>
 
@@ -95,34 +93,3 @@ while ($query->have_posts()): $query->the_post();?>
 </div>
 
 <?php endwhile; ?>
-
-<?php // *************************************** //
-     //  Wriggley
-    // *************************************** // ?>
-
-<h3 class="rule-left mobile-divide sidebar-title text-center">Mascot</h3>
-
-<?php
-    $name = get_field('wrigley_title', 'options');
-    $tagline = get_field('wrigley_tagline', 'option');
-    $image = get_field('wrigley_headshot', 'option');
-    $handle = get_field('wrigley_handle', 'option');
-?>
-<div class="row wrigley">
-    <div class="border-bottom space-inner-bottom bg-cream double-bordered columns twelve text-center">
-        <div class="row border-top border-bottom ">
-            <div class="columns format-text bg-cream ">
-                <p class="collapse text-small">&nbsp;</p>
-            </div>
-        </div>
-        <div class="wrigley__inner">
-            <?php 
-            if( !empty($image) ): ?>
-                <img class="img-round" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-            <?php endif; ?>
-            <h5 class="upcase"><?php echo $name; ?></h5>
-            <p class="lead"><?php echo $tagline; ?></p>
-            <p class="lead"><a class="strong" href="http://instagram.com/<?php echo $handle ?>">Follow @<?php echo $handle ?></a></p>
-        </div>
-    </div>
-</div>

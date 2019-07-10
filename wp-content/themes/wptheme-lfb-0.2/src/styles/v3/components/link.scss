@@ -1,0 +1,35 @@
+a,
+.link {
+  color:$ca-link-color;
+  text-decoration: none;
+  @include prefix(transition, opacity $a-timing $a-easing, $default-prefixes);
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.9;
+  }
+
+}
+
+.link--primary {
+  font-weight: $t-font-weight-bold;
+  text-transform: uppercase;
+  font-size: $t-font-size-xs;
+  letter-spacing: $t-letter-spacing;
+}
+
+.link--log-in {
+  margin: 0 $d-duo;
+}
+
+.link--cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: right;
+
+  > .icon {
+    margin: $d-base;
+  }
+}

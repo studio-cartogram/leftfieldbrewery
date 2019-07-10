@@ -1,0 +1,14 @@
+@mixin rule() {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom:0;
+    border-bottom: $ba-rule;
+    max-width: $d-grid-max-width - $d-duo;
+    width: 100%;
+    @include prefix(transform, translate(-50%, 0), $default-prefixes);
+  }
+}

@@ -1,0 +1,55 @@
+select {
+  @include prefix(appearance, none, webkit moz spec);
+  background-position: right center;
+  background: {
+    image: url($svg-select-icon);
+    repeat: no-repeat;
+    position: right $d-base center;
+    color: transparent;
+  }
+  padding-right: $d-quad;
+  text-indent: 0.01px;
+  text-overflow: '';
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  @extend .heading--4;
+  overflow: hidden;
+  border: $ba-select;
+  background: $ca-select-background;
+  padding: $d-duo - 2px;
+  right: -2px;
+  position: relative;
+  @include align-items(baseline);
+  @include flexbox();
+
+  .field & {
+    border-radius: $b-radius;
+    padding: $d-duo;
+  }
+}
+
+.select .select__select {
+  @include prefix(transition, color $a-timing $a-easing, $default-prefixes);
+  border: none;
+  box-shadow: none;
+  font-size: 16px;
+  line-height: 1;
+  color: $ca-link-secondary-color;
+  font-weight: $t-font-weight-bold;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $ca-link-secondary-hover-color;
+  }
+}
+
+.select .select__select:focus {
+  outline: none;
+}

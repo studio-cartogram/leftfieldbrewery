@@ -1,0 +1,50 @@
+.item {
+  @include prefix(transform, translate3d(0, 0, 0), $default-prefixes);
+  @include prefix(transition, all $a-timing $a-easing, $default-prefixes);
+  display: block;
+  text-align: center;
+  background: $ca-product-item-background;
+  border-radius: $b-radius;
+  overflow:hidden;
+  margin-bottom: $d-quad;
+  box-shadow: $sa-product-item;
+
+  &:hover {
+    box-shadow: $sa-product-item-hover;
+    opacity: 1;
+  }
+}
+
+.item__content {
+  padding: $d-base $d-base $d-trio;
+  position: relative;
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:before {
+    @include prefix(transform-origin, 0 0, $default-prefixes);
+    @include prefix(transition, transform $a-timing $a-easing, $default-prefixes);
+    @include prefix(transform, rotate(-2deg), $default-prefixes);
+    content: '';
+    height: $d-quad;
+    background: $ca-product-item-background;
+    position: absolute;
+    left: -$d-quad;
+    top: -$d-duo;
+    right: -$d-quad;
+  }
+
+  .item:hover &:before {
+    @include prefix(transform, rotate(0deg), $default-prefixes);
+  }
+}
+
+.item__image {
+  &,
+  img {
+    display: block;
+  }
+}

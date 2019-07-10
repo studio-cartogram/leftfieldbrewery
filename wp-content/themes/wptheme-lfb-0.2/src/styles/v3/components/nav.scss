@@ -1,0 +1,149 @@
+.nav--is-visible {
+  @include mq($medium-down) {
+    overflow: hidden;
+  }
+}
+
+.nav {
+  position: absolute;
+  width: 100%;
+  @include flexbox;
+  @include align-content(center);
+  @include justify-content(center);
+  @include flex-direction(column);
+
+
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 0;
+  //   top: 0;
+  //   right: 0;
+  //   width: 1px;
+  //   background: $c-navy;
+  //   display: none;
+  // }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // right: -$d-logo-width - $d-base;
+    height: 1px;
+    background: $c-navy;
+    display: none;
+  }
+
+  .nav--is-visible & {
+    height: 100vh;
+  }
+
+  @include mq($medium) {
+    max-width: calc(100% - #{($d-logo-width + $d-base) * 2});
+    position: relative;
+    background: none;
+    &,
+    .nav--is-visible & {
+      height: $da-nav-height;
+    }
+
+    &:before,
+    &:after {
+      display: block;
+    }
+  }
+
+  @include mq($large) {
+    padding-left: $d-quad;
+    padding-right: $d-quad;
+  }
+}
+
+.nav__list {
+  @include flexbox;
+  @include align-content(center);
+  @include justify-content(space-around);
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    background: $c-beige;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @include mq($medium-down) {
+    display: none;
+
+    .nav--is-visible & {
+      display: block;
+
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.nav-item__link {
+  @extend .link--primary;
+  text-align: center;
+  position: relative;
+  line-height: $da-nav-height;
+  display: block;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: $ba-nav-item-active;
+    @include prefix(transform-origin, 100% 100%, $default-prefixes);
+    @include prefix(transform, scaleY(0), $default-prefixes);
+    @include prefix(transition, transform $a-timing $a-easing, $default-prefixes);
+  }
+
+  &:hover,
+  &.nav-item__link--active {
+    &:before {
+      @include prefix(transform, scaleY(1), $default-prefixes);
+    }
+  }
+
+  @include mq($medium-down) {
+    font-family: $t-font-stack-serif;
+    font-size: $t-font-size-xl;
+    font-weight: $t-font-weight-bold;
+    letter-spacing: $t-letter-spacing;
+
+    &:hover,
+    &.nav-item__link--active {
+      color: $ca-nav-item-active-color;
+      &:before {
+        display:none;
+      }
+    }
+  }
+}
+
+.nav--is-visible .hide-when--nav--is-visible {
+  display:none;
+}
+
+
+.show-when--nav--is-visible {
+  display: none;
+}
+
+.nav--is-visible .show-when--nav--is-visible {
+  display: block;
+}

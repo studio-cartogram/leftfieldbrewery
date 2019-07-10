@@ -1,0 +1,22 @@
+.product__button {
+  margin-bottom: $d-quad;
+}
+
+.product__price {
+}
+
+.product__options {
+  margin-bottom: $d-quad;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__content {
+  text-align: center;
+  padding: 0 0 $d-quin;
+
+  @include mq($large) {
+    padding: 0 $d-quin $d-quin;
+  }
+}

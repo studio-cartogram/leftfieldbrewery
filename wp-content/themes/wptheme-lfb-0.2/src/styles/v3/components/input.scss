@@ -1,0 +1,45 @@
+.field {
+  margin-bottom: $d-base;
+
+  &.field--inline {
+    @include prefix(transform, translate3d(0, 0, 0), $default-prefixes);
+    @include flexbox();
+    @include flex(0, 1, auto);
+    @include flex-direction(row);
+    @include flex-wrap(no-wrap);
+    @include justify-content(center);
+    @include align-items(center);
+    border: $ba-input;
+    border-radius: $b-radius;
+    overflow: hidden;
+
+    & > .input {
+      @include flex-grow(1);
+      @include flex-basis(0);
+      max-width: 100%;
+      margin: 0;
+      border: none;
+    }
+
+    & > .button {
+      border-radius: 0;
+    }
+  }
+}
+
+.textarea,
+.input {
+  @include prefix(transition, border $a-timing $a-easing, $default-prefixes);
+  padding: $d-duo - 2px $d-duo;
+  background: $ca-input-background;
+  border: $ba-input;
+  border-radius: $b-radius;
+  line-height: 1;
+
+  &:focus {
+    outline: none;
+    border-color: $c-eephus;
+  }
+
+}
+

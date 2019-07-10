@@ -1,0 +1,76 @@
+.quantity {
+  display: flex;
+  position: relative;
+  background: $ca-quantity-background;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  background: none;
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  @include prefix(transition, border $a-timing $a-easing, $default-prefixes);
+  width: $d-dec;
+  height: $d-sex;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: $ba-quantity;
+  text-align: center;
+  padding-right: $d-trio;
+  font-weight: $t-font-weight-bold;
+
+  &:focus {
+    outline: none;
+    border: $ba-quantity-focus;
+  }
+}
+
+.quantity__nav {
+  position: relative;
+  height: $d-sex;
+}
+
+.quantity__button {
+  @include prefix('transform', translateX(-100%), moz ms webkit spec);
+  @include prefix('user-select', 'none', moz ms webkit spec);
+  @include prefix(transition, color $a-timing $a-easing, $default-prefixes);
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+  border-left: $ba-quantity;
+  width: $d-trio;
+  text-align: center;
+  color: $ca-link-secondary-color;
+  font-weight: $t-font-weight-bold;
+  text-transform: uppercase;
+  font-size: $t-font-size-md;
+  letter-spacing: $t-letter-spacing;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $ca-link-secondary-hover-color;
+  }
+}
+
+.quantity-up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: $ba-quantity;
+}
+
+.quantity-down {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+}

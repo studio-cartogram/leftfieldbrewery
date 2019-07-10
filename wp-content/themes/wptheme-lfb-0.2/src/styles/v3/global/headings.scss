@@ -1,0 +1,59 @@
+.heading {
+  text-align: center;
+}
+
+.heading--1,
+h1 {
+  font-family: $t-font-stack-serif;
+  font-size: $t-font-size-xl;
+  text-transform: uppercase;
+  font-weight: $t-font-weight-bold;
+  letter-spacing: $t-letter-spacing;
+}
+
+.heading--2,
+h2 {
+  font-family: $t-font-stack-serif;
+  display: block;
+  font-weight: $t-font-weight-normal;
+  font-size: $t-font-size-lg;
+}
+
+.heading--3,
+h3 {
+  text-transform: uppercase;
+  font-weight: $t-font-weight-bold;
+  font-size: $t-font-size-sm;
+  letter-spacing: $t-letter-spacing;
+  font-family: $t-font-stack-sans;
+}
+
+.heading--4,
+h4 {
+  text-transform: uppercase;
+  font-weight: $t-font-weight-normal;
+  font-size: $t-font-size-xs;
+  letter-spacing: $t-letter-spacing;
+  font-family: $t-font-stack-sans;
+}
+
+.heading--5,
+h5 {
+  font-family: $t-font-stack-sans;
+  font-size: $t-font-size-xs;
+  font-weight: $t-font-weight-bold;
+}
+
+.heading--6,
+h6 {
+  font-weight: $t-font-weight-bold;
+  font-size: $t-font-size-xs;
+  font-family: $t-font-stack-serif;
+  font-style: italic;
+}
+
+.strong {
+  font-weight: $t-font-weight-bold;
+}
+
+

@@ -1,0 +1,26 @@
+.alert {
+  &,
+  &:before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba($ca-alert-background, 0.7);
+  }
+
+  display: none;
+  z-index: index($l-layout, alert);
+  text-align: center;
+
+  .alert--is-visible & {
+    @include flexbox;
+  }
+
+  .alert__inner {
+    background: $ca-alert-background;
+    padding: $d-quad;
+    border-radius: $b-radius;
+    border: $ba-alert;
+  }
+}
