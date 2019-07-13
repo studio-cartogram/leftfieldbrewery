@@ -1,0 +1,9 @@
+.logo {
+  display: block;
+  text-align: center;
+  > .icon {
+    margin: auto;
+    width: $d-logo-width;
+    height: $d-logo-width;
+  }
+}

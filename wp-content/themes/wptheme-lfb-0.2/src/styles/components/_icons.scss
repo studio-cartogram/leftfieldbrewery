@@ -1,0 +1,49 @@
+$da-icon-base: $d-trio;
+
+.icon--small {
+  width: $da-icon-base;
+  height: $da-icon-base;
+}
+
+.icon--large {
+  width: 55% !important;
+}
+
+.icon--medium {
+  width: 40% !important;
+}
+
+.beer-icon {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+
+.icon-lfb:before,
+.vendor-listing ul li.lfb .icon:before {
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e900";
+  top: 5px;
+  font-size: 22px;
+  position: relative;
+}
+.icon-lcbo:before,
+.vendor-listing ul li.lcbo .icon:before {
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e600";
+  font-size: 12px;
+}
