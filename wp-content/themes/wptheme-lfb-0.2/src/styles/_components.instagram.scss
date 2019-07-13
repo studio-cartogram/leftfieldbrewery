@@ -1,102 +1,101 @@
 .instagrams {
-    overflow: hidden;
-    margin-left: -15px;
-    padding:35px;
-    background: $cream;
-    border-right: 1px solid $navy;
+  overflow: hidden;
+  margin-left: -15px;
+  padding: 35px;
+  background: $cream;
+  border-right: 1px solid $navy;
 }
 .instagram {
-    width: 25%;
-    display:block;
-    float:left;
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
-    border:5px solid $cream;
-    position:relative;
-    height: 100px;
+  width: 25%;
+  display: block;
+  float: left;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 5px solid $cream;
+  position: relative;
+  height: 100px;
+  &:nth-child(1) {
+    height: 300px;
+    width: 75%;
+  }
+  &:nth-child(6),
+  &:nth-child(5) {
+    height: 250px;
+    width: 50%;
+  }
+  @media only screen and (min-width: 768px) {
+    height: 200px;
     &:nth-child(1) {
-        height: 300px;
-        width:75%;
+      height: 600px;
     }
     &:nth-child(6),
     &:nth-child(5) {
-        height: 250px;
-        width:50%;
+      height: 350px;
     }
-    @media only screen and (min-width: 768px) { 
-        height: 200px;
-        &:nth-child(1) {
-            height: 600px;
-        }
-        &:nth-child(6),
-        &:nth-child(5) {
-            height: 350px;
-        }
-    }
-
+  }
 }
 
-    .instagram__caption {
-        position:absolute;
-        top:0;
-        left:0%;
-        right:0;
-        bottom:0;
-        background: rgba($navy, 0.8);
-        opacity:0;
-        transition:all $transition-timing $transition-easing;
+.instagram__caption {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  background: rgba($navy, 0.8);
+  opacity: 0;
+  transition: all $transition-timing $transition-easing;
 
-        .instagram:hover & {
-            opacity:1;
-        }
+  .instagram:hover & {
+    opacity: 1;
+  }
+}
+
+.instagram__caption-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all $transition-timing $transition-easing;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  .instagram:hover & {
+    transform: translate(-50%, -0%);
+  }
+
+  .instagram:nth-child(1):hover &,
+  .instagram:nth-child(5):hover &,
+  .instagram:nth-child(6):hover & {
+    transform: translate(-50%, -50%);
+  }
+
+  .caption__text {
+    display: none;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .instagram:nth-child(1) &,
+    .instagram:nth-child(5) &,
+    .instagram:nth-child(6) & {
+      transform: translate(-50%, -65%);
+      .caption__text {
+        display: block;
+      }
     }
+  }
+}
 
-    .instagram__caption-text {
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(-50%, -50%);
-        transition:all $transition-timing $transition-easing;
-        text-align:center;
-        color:white;
-        width:100%;
-        max-width:300px;
-        padding:20px;
-        font-size: 15px;
-        font-weight: 700;
-        line-height: 1.4;
-
-        .instagram:hover & {
-            transform:translate(-50%, -0%);
-        }
-
-        .instagram:nth-child(1):hover &,
-        .instagram:nth-child(5):hover &,
-        .instagram:nth-child(6):hover & {
-            transform:translate(-50%, -50%);
-        }
-
-        .caption__text {
-            display:none;
-        }
-
-        @media only screen and (min-width: 768px) { 
-            .instagram:nth-child(1) &,
-            .instagram:nth-child(5) &,
-            .instagram:nth-child(6) & {
-                transform:translate(-50%, -65%);
-                .caption__text {
-                    display:block;
-                }
-            }
-        }
-    }
-
-    .instagram__caption-icon {
-        position:absolute;
-        top:0;
-        left:50%;
-        transform:translate(-50%, -55%);
-        font-size:23px;
-    }
+.instagram__caption-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-size: 23px;
+}
