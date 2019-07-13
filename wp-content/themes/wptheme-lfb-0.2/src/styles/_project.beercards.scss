@@ -13,6 +13,11 @@
   position: relative;
   padding: $base-size * 3 $base-size $base-size * 4;
 
+  > * {
+    z-index: 2;
+    position: relative;
+  }
+
   &:hover {
   }
 }
@@ -24,6 +29,7 @@
   top: $base-size/2;
   left: $base-size/2;
   right: $base-size/2;
+  bottom: $base-size/2;
   width: auto;
   height: auto;
 }
