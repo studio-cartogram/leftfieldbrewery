@@ -1,2 +1,16 @@
-$base-size: 30px;
 $d-container-max: 1200px;
+
+$d-base: 10px;
+
+$d-half: $d-base/2;
+$d-duo: $d-base * 2;
+$d-trio: $d-base * 3;
+$d-quad: $d-base * 4;
+$d-quin: $d-base * 5;
+$d-sex: $d-base * 6;
+$d-sep: $d-base * 7;
+$d-oct: $d-base * 8;
+$d-nan: $d-base * 9;
+$d-dec: $d-base * 10;
+
+$d-logo-width: $d-base * 18;
