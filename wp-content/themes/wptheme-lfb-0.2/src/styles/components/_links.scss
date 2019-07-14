@@ -34,14 +34,14 @@ a {
   display: block;
   margin-right: -14px;
   background: $navy !important;
-  padding: $base-size $base-size $base-size $base-size * 3;
+  padding: $d-trio $d-trio $d-trio $d-trio * 3;
   &,
   i {
     color: $cream !important;
   }
   i.icon-tap {
-    left: $base-size;
-    top: $base-size/2;
+    left: $d-trio;
+    top: $d-trio/2;
     font-size: 6rem;
     position: absolute;
   }
