@@ -25,3 +25,24 @@ a {
   padding: $d-trio;
   background: inherit;
 }
+
+.link--brew-finder {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  border: none;
+  display: block;
+  margin-right: -14px;
+  background: $navy !important;
+  padding: $base-size $base-size $base-size $base-size * 3;
+  &,
+  i {
+    color: $cream !important;
+  }
+  i.icon-tap {
+    left: $base-size;
+    top: $base-size/2;
+    font-size: 6rem;
+    position: absolute;
+  }
+}
