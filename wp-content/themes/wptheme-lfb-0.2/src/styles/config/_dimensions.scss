@@ -14,3 +14,13 @@ $d-nan: $d-base * 9;
 $d-dec: $d-base * 10;
 
 $d-logo-width: $d-base * 18;
+
+$d-sm: 400px;
+$d-md: 700px;
+$d-lg: 800px;
+$d-xl: 1024px;
+
+$d-grid-max-width: 1000px;
+$d-grid-columns: 12;
+$d-grid-gutter-width: $d-quad;
+$d-grid-outer-margin: 2rem;

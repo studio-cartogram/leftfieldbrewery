@@ -2,8 +2,8 @@
   overflow: hidden;
   margin-left: -15px;
   padding: 35px;
-  background: $cream;
-  border-right: 1px solid $navy;
+  background: $c-beige;
+  border-right: 1px solid $c-navy;
 }
 .instagram {
   width: 25%;
@@ -12,7 +12,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  border: 5px solid $cream;
+  border: 5px solid $c-beige;
   position: relative;
   height: 100px;
   &:nth-child(1) {
@@ -42,7 +42,7 @@
   left: 0%;
   right: 0;
   bottom: 0;
-  background: rgba($navy, 0.8);
+  background: rgba($c-navy, 0.8);
   opacity: 0;
   transition: all $transition-timing $transition-easing;
 

@@ -11,9 +11,9 @@ $da-tabsnav-base: $d-trio;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  background: $cream;
-  border-left: 1px solid $navy;
-  border-right: 1px solid $navy;
+  background: $c-beige;
+  border-left: 1px solid $c-navy;
+  border-right: 1px solid $c-navy;
 
   &::-webkit-scrollbar {
     display: none;
@@ -40,7 +40,7 @@ $da-tabsnav-base: $d-trio;
 
     a {
       font-weight: bold;
-      color: $navy-light;
+      color: $c-navy-light;
     }
 
     &:before {
@@ -51,7 +51,7 @@ $da-tabsnav-base: $d-trio;
       height: 2px;
       position: absolute;
       display: block;
-      background: $navy;
+      background: $c-navy;
       transition: all $transition-timing $transition-easing;
       opacity: 0;
       transform: scaleX(0);
@@ -61,7 +61,7 @@ $da-tabsnav-base: $d-trio;
     &.is-active,
     &:hover {
       a {
-        color: $navy;
+        color: $c-navy;
       }
       &:before {
         opacity: 1;

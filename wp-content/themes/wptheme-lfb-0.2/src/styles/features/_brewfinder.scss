@@ -13,12 +13,12 @@ $marker-size: 30px;
   line-height: $marker-size;
   top: -$marker-size / 2;
   transform: translate(-50%, -100%);
-  background: $cream;
+  background: $c-beige;
   padding: 5px;
-  border: 1px solid $navy;
+  border: 1px solid $c-navy;
   width: $marker-size;
   transition: all $transition-timing $transition-easing;
-  color: $navy;
+  color: $c-navy;
   cursor: pointer;
 
   &:after {
@@ -29,7 +29,7 @@ $marker-size: 30px;
     transform: translate(-50%, -0%);
     content: " ";
     border: 8px solid transparent;
-    border-top: 8px solid $navy;
+    border-top: 8px solid $c-navy;
   }
 
   &:before {
@@ -101,7 +101,7 @@ $marker-size: 30px;
   &.marker--is-hovered {
     &:after {
       border: 11px solid transparent;
-      border-top: 11px solid $navy;
+      border-top: 11px solid $c-navy;
     }
   }
 }
@@ -160,15 +160,15 @@ $marker-size: 30px;
 .brew-finder__map {
   z-index: 10;
   top: 1px;
-  border-right: 1px solid $navy;
-  border-left: 1px solid $navy;
-  border-bottom: 1px solid $navy;
+  border-right: 1px solid $c-navy;
+  border-left: 1px solid $c-navy;
+  border-bottom: 1px solid $c-navy;
 }
 
 .brew-finder__list {
   .scrollshadow {
     height: 560px;
-    border-bottom: 1px solid $navy;
+    border-bottom: 1px solid $c-navy;
   }
 
   .screen {
@@ -188,13 +188,13 @@ $marker-size: 30px;
     text-indent: 20px;
     line-height: 20px;
     display: block;
-    // border-top:1px solid $navy;
-    font-family: $font-primary;
+    // border-top:1px solid $c-navy;
+    font-family: $t-font-stack-primary;
     font-weight: bold;
     position: relative;
     overflow: hidden;
     text-transform: uppercase;
-    color: $red;
+    color: $c-red;
     // background:url(../images/stripe.png);
     &:after {
       position: absolute;
@@ -202,11 +202,11 @@ $marker-size: 30px;
       left: 0;
       height: 25px;
       width: 16.6%;
-      border-top: 1px solid $navy;
-      border-right: 1px solid $navy;
-      background: $cream;
+      border-top: 1px solid $c-navy;
+      border-right: 1px solid $c-navy;
+      background: $c-beige;
       background: url(../images/stripe.png);
-      // border-bottom:1px solid $navy;
+      // border-bottom:1px solid $c-navy;
       content: "";
     }
 
@@ -218,21 +218,21 @@ $marker-size: 30px;
       width: 15px;
       transform: translate(50%, -50%) rotate(-45deg);
       top: 100%;
-      border: 1px solid $navy;
-      background: url(../images/stripe.png) $navy;
-      background: $navy;
+      border: 1px solid $c-navy;
+      background: url(../images/stripe.png) $c-navy;
+      background: $c-navy;
       position: absolute;
     }
     &:hover {
-      color: $navy;
+      color: $c-navy;
     }
   }
   &:last-of-type {
-    border-bottom: 1px solid $navy;
+    border-bottom: 1px solid $c-navy;
 
     .format-text:after {
       height: 1px;
-      background: $navy;
+      background: $c-navy;
       width: auto;
       left: -20%;
       right: 0;
@@ -247,7 +247,7 @@ $marker-size: 30px;
     h6,
     h5 {
       transition: all $transition-timing $transition-easing;
-      color: $red !important;
+      color: $c-red !important;
     }
   }
   &.vendor-item--is-active {
@@ -260,7 +260,7 @@ $marker-size: 30px;
 }
 
 .vendor-filter {
-  background: $cream;
+  background: $c-beige;
   position: relative;
   height: 40px;
   top: 1px;
@@ -275,7 +275,7 @@ $marker-size: 30px;
     left: -1px;
     z-index: 10;
     width: 1px;
-    background: $navy;
+    background: $c-navy;
   }
   li {
     display: inline-block;
@@ -291,7 +291,7 @@ $marker-size: 30px;
       cursor: pointer;
       &.is-active {
         border-bottom: 1px solid;
-        color: $red;
+        color: $c-red;
       }
     }
   }

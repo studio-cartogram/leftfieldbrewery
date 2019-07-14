@@ -50,11 +50,11 @@
 .single-beers .sunlight-park .flip-container p,
 .single-beers .sunlight-park .flip-container h2,
 .single-beers .sunlight-park .flip-container h3 {
-  color: $navy;
+  color: $c-navy;
 }
 
 .single-beers .sunlight-park .flip-container h3:after {
-  background: $navy;
+  background: $c-navy;
 }
 
 .post-text .gform_body .gform_fields textarea {
@@ -90,13 +90,13 @@
     right: -16px;
     content: "";
     height: 4px;
-    background: $cream;
-    border: 1px solid $navy;
+    background: $c-beige;
+    border: 1px solid $c-navy;
   }
 }
 .visit-us__label {
   position: relative;
-  border-top: 1px solid $cream;
+  border-top: 1px solid $c-beige;
   top: -1px;
 }
 
@@ -112,7 +112,7 @@
     top: 0;
     left: 0;
     width: 1px;
-    background: $navy;
+    background: $c-navy;
     content: " ";
     bottom: 0;
   }
@@ -125,7 +125,7 @@
     content: "";
     height: 1px;
     bottom: -0px;
-    background: $navy;
+    background: $c-navy;
   }
 }
 

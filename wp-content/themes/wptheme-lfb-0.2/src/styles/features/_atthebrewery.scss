@@ -7,13 +7,13 @@
         height:52px;
     }
 
-    background:$cream;
+    background:$c-beige;
 
     &:nth-of-type(odd) {
-        background:$cream-dark;
+        background:$c-beige-dark;
     }
     &:last-of-type {
-        border-bottom:1px solid $navy;
+        border-bottom:1px solid $c-navy;
     }
 }
 
@@ -30,7 +30,7 @@
     &:before {
         height:7px;
         width:7px;
-        background:$navy;
+        background:$c-navy;
         transform: translate(-50%, -50%) rotate(-45deg);
         content: ' ';
     }

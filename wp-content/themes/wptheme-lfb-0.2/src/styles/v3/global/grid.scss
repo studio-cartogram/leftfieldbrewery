@@ -71,7 +71,6 @@
   max-width: 100%;
 }
 
-
 @for $i from 1 through $d-grid-columns {
   .col--#{$i} {
     @include flex-basis(100% / $d-grid-columns * $i);

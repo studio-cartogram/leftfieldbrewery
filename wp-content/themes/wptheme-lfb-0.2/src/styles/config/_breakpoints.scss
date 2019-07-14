@@ -1,0 +1,43 @@
+/* =========================================
+Breakpoints
+========================================= */
+/**
+ * Prefix breakpoints with $b_
+ * You can use the 'bp' mixin to
+ * easily add breakpoints
+ */
+
+$bp-mobile: "(min-width: 450px)";
+
+$bp-tablet: "(min-width: 700px)";
+
+$bp-laptop: "(min-width: 950px)";
+
+$bp-desktop: "(min-width: 1280px)";
+
+$small: "sm";
+$small-down: "sm-down";
+$small-only: "sm-only";
+
+$medium: "md";
+$medium-down: "md-down";
+$medium-only: "md-only";
+
+$large: "lg";
+$large-down: "lg-down";
+$large-only: "lg-only";
+
+$xlarge: "xl";
+
+$breakpoints: (
+  $small "(min-width: #{$d-sm})",
+  $small-only "(min-width: #{$d-sm}) and (max-width: #{$d-md - 1})",
+  $small-down "(max-width: #{$d-sm - 1})",
+  $medium "(min-width: #{$d-md})",
+  $medium-only "(min-width: #{$d-md}) and (max-width: #{$d-lg - 1})",
+  $medium-down "(max-width: #{$d-md - 1})",
+  $large "(min-width: #{$d-lg})",
+  $large-only "(min-width: #{$d-lg}) and (max-width: #{$d-xl - 1})",
+  $large-down "(max-width: #{$d-xl - 1})",
+  $xlarge "(min-width: #{$d-xl})"
+);

@@ -1,39 +1,29 @@
 <?php
-
 $item = get_query_var('item');
 $icon_image = get_field('icon');
-$icon = (!$icon_image && get_post_meta( $item->ID, '_cartogram_icon_value', TRUE ) ? get_post_meta( $item->ID, '_cartogram_icon_value', TRUE ) : $item->post_name);
+$icon = (!$icon_image && get_post_meta($item->ID, '_cartogram_icon_value', true) ? get_post_meta($item->ID, '_cartogram_icon_value', true) : $item->post_name);
 $short_description = get_field('short_description');
 $color = get_field('color');
-$colorText = get_field('color_text');
+$defaultColorText = '#0c223f';
+$colorText = get_field('color_text') ? get_field('color_text') : $defaultColorText;
 $default_link = 'https://fanshop.leftfieldbrewery.ca/products';
 $link = get_field('bottle_shop') ? get_field('bottle_shop') : $default_link;
+$label = get_field('label');
 
-echo '<a target="_blank" class="beercard col col-12 col-6-mobile col-4-tablet col-3-laptop" href="' . $link . '">';
+echo '<a target="_blank" style="color: ' . $colorText . ' !important;"  class="beercard col col-12 col-6-mobile col-4-tablet" href="' . $link . '">';
 
-  echo '<div class="back-logo big-icon multi-svg">';
+    echo '<div class="beercard__label" style="background-color:' . $color . '; background-image: url(' . get_bloginfo('template_directory') . '/dist/images/label-sasko.svg)"></div>';
 
-      if($icon_image) :
+    echo '<div class="beercard__content">';
 
-          echo '<img src="' . wp_get_attachment_image_src( $icon_image )[0] . '" />';
+        echo '<h2 class="beta">' . get_the_title($item->ID) . '</h2>';
 
-      else :
+        echo '<h5>' . $short_description . '</h5>';
 
-          echo '<svg class="centered icon--large"><use xlink:href="#' . $icon . '"></use</svg>';
-          
-      endif;
+        echo '<span class="beercard__button button button--secondary">Buy online</span>';
 
-  echo '</div>';
+    echo '</div>';
 
-  echo '<h2>' . get_the_title($item->ID) . '</h2>';
-    
-  echo '<h5>' . $short_description . '</h5>';
-
-  echo '<span class="beercard__button">Buy this beer</span>';
-
-  echo '<div class="beercard__background" style="background:' . $color . '" ></div>';
+    echo '<div class="beercard__background" style="background:' . $color . '" ></div>';
 
 echo '</a>';
-
-
-?>

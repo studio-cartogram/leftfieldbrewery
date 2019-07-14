@@ -1,4 +1,4 @@
-.homebrewfinder {
+.callout__inner {
   margin-right: -15px;
   padding-right: 15px;
   background-size: cover;
@@ -22,7 +22,7 @@
   &:before,
   &:after {
     height: 1px;
-    background: $navy;
+    background: $c-navy;
     content: " ";
     position: absolute;
     right: 0px;
@@ -37,7 +37,7 @@
 
 .homehighlightreel {
   margin: 0 -14px 0 -1px !important;
-  border-left: 1px solid $navy;
+  border-left: 1px solid $c-navy;
 }
 
 .sidebar__content {
@@ -59,7 +59,7 @@
 .beer-bottleshop {
   display: block;
   width: 100%;
-  border-bottom: 1px solid $cream;
+  border-bottom: 1px solid $c-beige;
 
   .link--brew-finder {
     margin-right: 0;

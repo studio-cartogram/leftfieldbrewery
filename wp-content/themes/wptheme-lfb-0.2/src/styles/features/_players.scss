@@ -1,7 +1,7 @@
 .players {
   margin: 0 !important;
   padding: 40px 34px !important;
-  background: $cream;
+  background: $c-beige;
 }
 
 .players__card {
@@ -12,11 +12,11 @@
 }
 
 .button-flip.button-flip.button-flip.button-flip {
-  background-color: $cream;
+  background-color: $c-beige;
   width: 16px;
   height: 16px;
   padding: 12px;
-  color: $navy;
+  color: $c-navy;
   z-index: 9999;
 
   &:after {
@@ -34,7 +34,7 @@
 
 .flip-container.hover {
   .button-flip.button-flip.button-flip.button-flip {
-    background-color: $navy;
+    background-color: $c-navy;
 
     &:after {
       background-image: url(../images/flip-reverse.svg);
@@ -57,10 +57,10 @@
     background-position: top center;
   }
   .back {
-    border: 1px solid $navy;
+    border: 1px solid $c-navy;
     overflow: scroll;
     p {
-      color: $navy;
+      color: $c-navy;
       font-size: 12px;
       line-height: 1.4;
       font-weight: 600;
@@ -90,7 +90,7 @@
   &.hover {
     .flip {
       color: white;
-      background: $navy;
+      background: $c-navy;
       i {
         font-size: 12px;
         transform: rotateY(180deg);

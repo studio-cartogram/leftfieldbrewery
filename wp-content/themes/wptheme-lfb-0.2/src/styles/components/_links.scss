@@ -12,11 +12,11 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    border: 0px solid $cream;
+    border: 0px solid $c-beige;
     transition: all $transition-timing $transition-easing;
   }
   &:hover:after {
-    border: 8px solid $cream;
+    border: 8px solid $c-beige;
   }
 }
 
@@ -33,11 +33,11 @@ a {
   border: none;
   display: block;
   margin-right: -14px;
-  background: $navy !important;
+  background: $c-navy !important;
   padding: $d-trio;
   &,
   i {
-    color: $cream !important;
+    color: $c-beige !important;
   }
   i.icon-tap {
     left: $d-trio;
