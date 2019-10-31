@@ -6,7 +6,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "server": "browser-sync start --proxy 'leftfieldbrewery.local' --files 'src/styles/*.scss' 'src/scripts/*.js'",
+    "server": "browser-sync start --proxy 'left-field-brewery.local' --files 'src/styles/*.scss' 'src/scripts/*.js'",
     "parcel": "parcel src/scripts/index.js --public-url ./",
     "parcel-build": "parcel build src/scripts/index.js --public-url ./",
     "dev": "yarn run parcel",

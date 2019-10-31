@@ -1,22 +1,26 @@
-.heading {
-  text-align: center;
-}
-
+.post-text .gform_heading h3.gform_title.gform_title,
 .heading--1,
 h1 {
-  // font-family: $t-font-stack-serif;
-  // font-size: $t-font-size-xl;
-  // text-transform: uppercase;
-  // font-weight: $t-font-weight-bold;
-  // letter-spacing: $t-letter-spacing;
+  padding: 18px 0;
+  margin: 0;
+  font-family: $t-font-stack-secondary;
+  font-size: $t-font-size-xl;
+  text-transform: uppercase;
+  font-weight: $t-font-weight-bold;
+  letter-spacing: $t-letter-spacing-lg;
+  line-height: 1;
 }
 
 .heading--2,
 h2 {
+  padding: 18px 0;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
   font-family: $t-font-stack-tertiary;
-  // display: block;
-  // font-weight: $t-font-weight-normal;
-  // font-size: $t-font-size-lg;
+  display: block;
+  font-size: $t-font-size-lg;
+  letter-spacing: $t-letter-spacing;
 }
 
 .heading--3,

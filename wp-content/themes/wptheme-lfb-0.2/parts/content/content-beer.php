@@ -9,19 +9,45 @@ $colorText = get_field('color_text') ? get_field('color_text') : $defaultColorTe
 $default_link = 'https://fanshop.leftfieldbrewery.ca/products';
 $link = get_field('bottle_shop') ? get_field('bottle_shop') : $default_link;
 $label = get_field('label');
+$artwork = get_field('artwork');
 
-echo '<a target="_blank" style="color: ' . $colorText . ' !important;"  class="beercard col col-12 col-6-mobile col-4-tablet" href="' . $link . '">';
+echo '<a target="_blank" style="color: ' . $colorText . ' !important;"  class="beercard col col-12 col-6-mobile" href="' . $link . '">';
 
-    echo '<div class="beercard__label" style="background-color:' . $color . '; background-image: url(' . get_bloginfo('template_directory') . '/dist/images/label-sasko.svg)"></div>';
+        echo '<div class="beercard__label" style="background-color:' . $color . '; background-image: url(' . wp_get_attachment_image_url($artwork, array('300', '1000')) . ');" >';
 
+        if (!$artwork) :
+    
+            if($icon_image) :
+
+                echo '<img src="' . wp_get_attachment_image_src( $icon_image )[0] . '" />';
+
+            elseif($icon):
+
+                echo '<svg class="centered icon--large"><use xlink:href="#' . $icon . '"></use></svg>';
+                
+            endif;
+
+        endif;
+
+        echo '</div>';
+    
+   
     echo '<div class="beercard__content">';
 
-        echo '<h2 class="beta">' . get_the_title($item->ID) . '</h2>';
+        echo '<span class="beercard__heading">';
 
-        echo '<h5>' . $short_description . '</h5>';
+            echo '<h2 class="heading--1">' . get_the_title($item->ID) . '</h2>';
+           
+            echo '<h3 class="heading--2 heading--bordered">' . $short_description . '</h3>';
 
-        echo '<span class="beercard__button button button--secondary">Buy online</span>';
+        echo '</span>';
 
+        echo '<span class="beercard__info">';
+
+          echo '<span class="beercard__button button button--secondary">Buy online</span>';
+
+        echo '</span>';
+        
     echo '</div>';
 
     echo '<div class="beercard__background" style="background:' . $color . '" ></div>';

@@ -2,67 +2,71 @@
 .atthebrewery__table {
 }
 .atthebrewery__row {
-    display:block;
-    &, .columns {
-        height:52px;
-    }
+  display: block;
+  &,
+  .columns {
+    height: 52px;
+    display: flex;
+    align-items: center;
+  }
 
-    background:$c-beige;
+  background: $c-beige;
 
-    &:nth-of-type(odd) {
-        background:$c-beige-dark;
-    }
-    &:last-of-type {
-        border-bottom:1px solid $c-navy;
-    }
+  &:nth-of-type(odd) {
+    background: $c-beige-dark;
+  }
+  &:last-of-type {
+    border-bottom: 1px solid $c-navy;
+  }
 }
 
 .check {
-    display: block;
-    width:100%;
-    &, &:before {
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(-50%, -50%);
-    }
+  display: block;
+  width: 100%;
+  &,
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    &:before {
-        height:7px;
-        width:7px;
-        background:$c-navy;
-        transform: translate(-50%, -50%) rotate(-45deg);
-        content: ' ';
-    }
+  &:before {
+    height: 7px;
+    width: 7px;
+    background: $c-navy;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    content: " ";
+  }
 }
 
 .check-text {
-    display:none;
+  display: none;
 }
 
 .atb__col--large {
-    width: 55% !important;
-    float:left !important;
-    overflow:hidden;
-    position: relative;
+  width: 55% !important;
+  float: left !important;
+  overflow: hidden;
+  position: relative;
 }
 .atb__col--medium {
-    width: 24% !important;
-    float:left !important;
+  width: 24% !important;
+  float: left !important;
 }
 .atb__col--small {
-    width: 15% !important;
-    float:left !important;
+  width: 15% !important;
+  float: left !important;
 }
 
-@media only screen and (min-width: 768px) { 
-    .atb__col--large {
-        width: 40% !important;
-    }
-    .atb__col--medium {
-        width: 24% !important;
-    }
-    .atb__col--small {
-        width: 12% !important;
-    }
+@media only screen and (min-width: 768px) {
+  .atb__col--large {
+    width: 40% !important;
+  }
+  .atb__col--medium {
+    width: 24% !important;
+  }
+  .atb__col--small {
+    width: 12% !important;
+  }
 }

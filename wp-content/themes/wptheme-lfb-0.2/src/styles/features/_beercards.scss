@@ -9,37 +9,73 @@ $da-beercards-base: $d-trio;
 .beercard {
   padding: $da-beercards-base/2;
   text-align: center;
-  color: white;
   display: flex;
   flex-direction: row;
   position: relative;
-  height: 350px;
+  min-height: 400px;
+  color: white;
+  text-align: center;
 
   > * {
     z-index: 2;
     position: relative;
   }
 
+  h1,
+  h2,
+  h3 {
+    color: inherit !important;
+  }
+
   &:hover {
+    .button {
+      opacity: 0.8;
+    }
+    .heading--bordered {
+      &:after,
+      &:before {
+        transform: scaleX(1);
+      }
+    }
   }
 }
 
 .beercard__label {
-  height: 100%;
-  width: 250px;
-  background-size: cover;
-  background-position: 0% 50%;
+  height: auto;
+  width: 66%;
+  background-size: 100%;
+  background-position: 50% 50%;
   border-radius: 4px 0 0 4px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .beercard__content {
   display: flex;
   flex-direction: column;
   width: 100%;
+  justify-content: space-between;
+}
+
+.beercard__heading {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  flex-grow: 1;
+  padding: $da-beercards-base/4;
+}
+
+.beercard__info {
+  display: block;
+  padding: 0 $da-beercards-base * 2 $da-beercards-base * 2;
 }
 
 .beercard__background {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   z-index: 1;
   position: absolute;
   top: $da-beercards-base/2;
@@ -52,10 +88,38 @@ $da-beercards-base: $d-trio;
 }
 
 .beercard__button {
-  position: absolute;
-  bottom: $da-beercards-base/2;
-  left: $da-beercards-base/2;
-  right: $da-beercards-base/2;
   border-color: currentColor;
   color: currentColor;
+  width: min-content;
+  background: transparent;
+
+  &:hover {
+    color: currentColor;
+    background: transparent;
+  }
+}
+
+.heading--bordered {
+  position: relative;
+
+  &::before,
+  &::after {
+    transition: all 200ms ease-in-out;
+    transform: scaleX(0.8);
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: auto;
+    background: currentColor;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:after {
+    bottom: 0;
+    top: auto;
+    display: none;
+  }
 }

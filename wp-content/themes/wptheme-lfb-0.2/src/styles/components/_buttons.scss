@@ -3,7 +3,7 @@
   @include prefix(appearance, none, webkit moz spec);
   @include prefix(transition, opacity $a-timing $a-easing, $default-prefixes);
   text-transform: uppercase;
-  font-size: $t-font-size-xs;
+  font-size: $t-font-size-sm;
   letter-spacing: $t-letter-spacing;
   font-family: $t-font-stack-primary;
   font-weight: $t-font-weight-bold;
