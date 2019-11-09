@@ -43,7 +43,7 @@ $da-beercards-base: $d-trio;
 .beercard__label {
   height: auto;
   width: 66%;
-  background-size: 100%;
+  background-size: cover;
   background-position: 50% 50%;
   border-radius: 4px 0 0 4px;
   overflow: hidden;
