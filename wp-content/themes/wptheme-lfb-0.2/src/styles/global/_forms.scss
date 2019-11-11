@@ -1,0 +1,34 @@
+.input.input.input.input.input {
+  border: $ba-input;
+  border-color: white;
+  padding: 0 $d-duo;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  line-height: 3.5;
+}
+
+.label {
+  padding: 0;
+  margin: 0;
+  bottom: auto;
+}
+
+.combined-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .input.input.input.input.input {
+    border: none;
+    height: 54px;
+    box-shadow: 0 0 0;
+    @include bp($bp-mobile) {
+      width: 250px;
+    }
+  }
+
+  .button {
+    border-radius: 0 $b-radius $b-radius 0;
+  }
+}

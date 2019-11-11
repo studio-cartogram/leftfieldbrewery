@@ -1,0 +1,43 @@
+.newsletter {
+  display: none;
+  @include bp($bp-tablet) {
+    display: flex;
+  }
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $d-trio 0;
+  margin: 0;
+  background: $ca-newsletter-background;
+  position: relative;
+
+  @include bp($bp-mobile) {
+    flex-direction: row;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.08;
+    border-bottom: 1px solid white;
+    height: 1px;
+    width: auto;
+  }
+
+  .heading,
+  .button,
+  .button:hover {
+    color: white;
+  }
+
+  .button:hover {
+    opacity: 0.9;
+  }
+
+  > div {
+    padding: 0 $d-duo;
+  }
+}

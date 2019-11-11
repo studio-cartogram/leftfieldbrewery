@@ -1,0 +1,31 @@
+.footer__list {
+  margin: 0;
+  padding: $d-duo;
+  list-style: none;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  li {
+    padding: 0 $d-duo $d-base;
+    font-weight: $t-font-weight-bold;
+  }
+
+  a:hover {
+    border: none;
+    text-decoration: underline;
+  }
+
+  @include bp($bp-tablet) {
+    padding: 0 0 $d-base;
+    text-align: left;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+}
+
+.footer {
+  margin: 0;
+  padding: $d-trio 0 $d-duo;
+}

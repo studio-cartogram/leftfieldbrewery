@@ -21,31 +21,31 @@ h2 {
   display: block;
   font-size: $t-font-size-lg;
   letter-spacing: $t-letter-spacing;
+  text-transform: uppercase;
+  font-weight: $t-font-weight-bold;
 }
 
 .heading--3,
 h3 {
-  // text-transform: uppercase;
-  // font-weight: $t-font-weight-bold;
-  // font-size: $t-font-size-sm;
-  // letter-spacing: $t-letter-spacing;
-  // font-family: $t-font-stack-sans;
+  text-transform: uppercase;
+  font-size: $t-font-size-sm;
+  letter-spacing: $t-letter-spacing;
+  font-family: $t-font-stack-primary;
+  font-weight: $t-font-weight-bold;
 }
 
 .heading--4,
 h4 {
-  // text-transform: uppercase;
-  // font-weight: $t-font-weight-normal;
-  // font-size: $t-font-size-xs;
-  // letter-spacing: $t-letter-spacing;
-  // font-family: $t-font-stack-sans;
+  font-family: $t-font-stack-primary;
+  font-size: $t-font-size-md;
+  font-weight: $t-font-weight-bold;
 }
 
 .heading--5,
 h5 {
-  // font-family: $t-font-stack-sans;
-  // font-size: $t-font-size-xs;
-  // font-weight: $t-font-weight-bold;
+  font-family: $t-font-stack-primary;
+  font-size: $t-font-size-sm;
+  font-weight: $t-font-weight-bold;
 }
 
 .heading--6,
