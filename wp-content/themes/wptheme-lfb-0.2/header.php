@@ -6,7 +6,10 @@
 <section class="container hide-for-small" id="container-header">
   <header class="row text-center">
     <div class="columns four mobile-two text-right">
-      <h2 class="header-text">Toronto <span class="split">◆</span> Canada</h2>
+      <h2 class="header-text">
+        36 WAGSTAFF DRIVE<br/>
+        TORONTO&mdash;CANADA
+      </h2>
     </div>
     <hgroup class="columns four ">
       <h1>
@@ -16,7 +19,11 @@
       </h1>
     </hgroup>
     <div class="columns four mobile-two text-left">
-      <h2 class="header-text">Open Daily <span class="split">◆</span> 11AM&mdash;9pm</h2>
+    <h2 class="header-text">
+      <!-- Open Daily<br/> -->
+      THURS &mdash; SAT 11AM&mdash;11PM<br/>
+      SUN&mdash;WED 11AM&mdash;9PM
+    </h2>
     </div>
   </header>
 </section>	
