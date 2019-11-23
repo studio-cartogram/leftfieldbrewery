@@ -5,36 +5,15 @@ $size = 'full';
 
 <div class="row bg-cream collapse flushed-left ">
 	<div class="columns twelve double-bordered">
-		<div class="flexslider-beers rule-right">
-		
-		<?php if( have_rows('images') ): ?>
-
-			<ul class="slides-beers">
-
+		<div class="flexslider-beers rule-right text-center">
+			<?php if( have_rows('images') ): ?>
 				<?php while( have_rows('images') ): the_row(); 
-
-					$image = get_sub_field('image');
-					?>
-
-					<li class="beer_slide">
-
-						<div class="image-wrap">
-
-							<?php echo wp_get_attachment_image( $image, $size ); ?>
-							
-						</div>
-
-					</li>
-
+					$image = get_sub_field('image'); ?>
+					<div class="space-bottom">
+						<?php echo wp_get_attachment_image( $image, $size ); ?>
+					</div>
 				<?php endwhile; ?>
-
-			</ul>
-
 			<?php endif; ?>
-			<span class="corner-one"></span>
-			<span class="corner-two"></span>
-			<span class="corner-three"></span>
-			<span class="corner-four"></span>
 		</div>
 	</div>
 </div>
