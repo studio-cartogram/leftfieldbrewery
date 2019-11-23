@@ -54,7 +54,7 @@ endif;
 
         if ($link) :
 
-            echo '<span class="beercard__button button button--secondary">Buy online</span>';
+            echo '<span class="beercard__button button button--inverted button--secondary">Buy online</span>';
     
         endif;
 

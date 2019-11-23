@@ -44,6 +44,7 @@ a.beercard:hover {
   height: auto;
   width: 220px;
   background-size: contain;
+  background-repeat: no-repeat;
   background-position: 0% 50%;
   border-radius: $b-radius 0 0 $b-radius;
   overflow: hidden;
@@ -85,16 +86,7 @@ a.beercard:hover {
 }
 
 .beercard__button {
-  border-color: currentColor;
-  color: currentColor;
-  width: min-content;
-  background: transparent;
   margin-left: 5px;
-
-  &:hover {
-    color: currentColor;
-    background: transparent;
-  }
 }
 
 .heading--bordered {

@@ -70,3 +70,15 @@
   padding: $d-base/2 $d-base;
   border-radius: $b-radius * 2;
 }
+
+.button--inverted {
+  border-color: currentColor;
+  color: currentColor;
+  width: min-content;
+  background: transparent;
+
+  &:hover {
+    color: currentColor;
+    background: transparent;
+  }
+}
