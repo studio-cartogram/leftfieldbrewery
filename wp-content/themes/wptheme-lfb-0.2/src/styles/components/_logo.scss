@@ -1,6 +1,8 @@
 .logo {
   display: block;
   text-align: center;
+  padding: $d-trio 0;
+
   > .icon {
     margin: auto;
     width: $d-logo-width;

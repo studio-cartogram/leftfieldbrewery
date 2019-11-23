@@ -2,11 +2,15 @@
 $announcement_visible = get_field('announcement_visible', 'options');
 $announcement_text = get_field('announcement_text', 'options');
 $announcement_link = get_field('announcement_link', 'options');
+$announcement_button_text = get_field('announcement_button_text', 'options');
 
 if ($announcement_visible) :
 
-  echo '<a href="' . $announcement_link . '" class="container hide-for-small announcement">';
-    echo $announcement_text;
+  echo '<a href="' . $announcement_link . '" class="heading heading--3 container hide-for-small announcement">';
+    echo '<span class="announcement__text">';
+      echo $announcement_text;
+      echo '<span class="button button--small announcement__button">' . $announcement_button_text . '</span>';
+    echo '</span>';
   echo '</a>';
 
 endif;
@@ -25,11 +29,9 @@ endif;
       </h2>
     </div>
     <hgroup class="columns four ">
-      <h1>
-        <a class="logo" href=<?php bloginfo( 'url' ); ?>>
-          <img class="logo__image"  src="<?php bloginfo('template_directory') ?>/dist/images/logo-bg.svg" />
-        </a>
-      </h1>
+      <a class="logo" href=<?php bloginfo( 'url' ); ?>>
+        <img class="logo__image"  src="<?php bloginfo('template_directory') ?>/dist/images/logo-bg.svg" />
+      </a>
     </hgroup>
     <div class="columns four mobile-two text-left">
     <h2 class="header-text">
