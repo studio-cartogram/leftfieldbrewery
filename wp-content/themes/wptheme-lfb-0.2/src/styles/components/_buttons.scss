@@ -36,22 +36,6 @@
   padding-right: 0;
 }
 
-.button--secondary {
-  background: $ca-button-secondary-background;
-  color: $ca-button-secondary-color;
-  border: $ba-button;
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: $ca-button-secondary-color;
-  }
-
-  &:focus {
-    opacity: 0.7;
-  }
-}
-
 .button--tertiary {
   background: transparent;
   border: 0;
@@ -71,7 +55,7 @@
   border-radius: $b-radius * 2;
 }
 
-.button--inverted {
+.button--secondary {
   border-color: currentColor;
   color: currentColor;
   width: min-content;

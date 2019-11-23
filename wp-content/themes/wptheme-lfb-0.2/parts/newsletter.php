@@ -27,7 +27,7 @@ echo '<form class="newsletter" action="' . $newsletter_url . '" method="post" id
 
     echo '</label>';
 
-    echo '<button class="button beercard__button button--secondary newsletterform__button ">';
+    echo '<button class="button button--secondary newsletterform__button ">';
 
       echo $newsletter_button_text;
 
