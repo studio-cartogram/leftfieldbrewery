@@ -5,21 +5,22 @@ $announcement_link = get_field('announcement_link', 'options');
 $announcement_button_text = get_field('announcement_button_text', 'options');
 
 if ($announcement_visible) :
-
   echo '<a href="' . $announcement_link . '" class="heading heading--3 container hide-for-small announcement">';
     echo '<span class="announcement__text">';
       echo $announcement_text;
       echo '<span class="button button--small announcement__button">' . $announcement_button_text . '</span>';
     echo '</span>';
   echo '</a>';
-
+else:
+  echo '<section class="container hide-for-small bordered-main banner">';
+    echo '<div class="row">';
+      echo '<div class="columns bg-main twelve"></div>';
+    echo '</div>';
+  echo '</section>';
 endif;
+
 ?>
-<section class="container hide-for-small bordered-main banner">
-  <div class="row">
-    <div class="columns bg-main twelve"></div>
-  </div>
-</section>
+
 <section class="container hide-for-small" id="container-header">
   <header class="row text-center">
     <div class="columns four mobile-two text-right">
