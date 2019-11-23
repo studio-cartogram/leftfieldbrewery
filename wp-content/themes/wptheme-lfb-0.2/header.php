@@ -21,8 +21,8 @@
     <div class="columns four mobile-two text-left">
     <h2 class="header-text">
       <!-- Open Daily<br/> -->
-      THURS &mdash; SAT 11AM&mdash;11PM<br/>
-      SUN&mdash;WED 11AM&mdash;9PM
+      THURS&mdash;SAT&nbsp;&nbsp;11AM&mdash;11PM<br/>
+      SUN&mdash;WED&nbsp;&nbsp;11AM&mdash;9PM
     </h2>
     </div>
   </header>
