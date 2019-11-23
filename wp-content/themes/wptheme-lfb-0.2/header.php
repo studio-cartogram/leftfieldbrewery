@@ -3,12 +3,14 @@ $announcement_visible = get_field('announcement_visible', 'options');
 $announcement_text = get_field('announcement_text', 'options');
 $announcement_link = get_field('announcement_link', 'options');
 $announcement_button_text = get_field('announcement_button_text', 'options');
+$header_left = get_field('header_left', 'options') ? get_field('header_left', 'options') : '36 WAGSTAFF DRIVE<br/>TORONTO, CANADA';
+$header_right = get_field('header_right', 'options') ? get_field('header_right', 'options') : 'THURS—SAT&nbsp;&nbsp;11AM—11PM<br/>SUN—WED&nbsp;&nbsp;11AM—9PM';
 
 if ($announcement_visible) :
   echo '<a href="' . $announcement_link . '" class="heading heading--3 container hide-for-small announcement">';
     echo '<span class="announcement__text">';
       echo $announcement_text;
-      echo '<span class="button button--small announcement__button">' . $announcement_button_text . '</span>';
+      echo $announcement_button_text ? '<span class="button button--small announcement__button">' . $announcement_button_text . '</span>' : '';
     echo '</span>';
   echo '</a>';
 else:
@@ -25,8 +27,7 @@ endif;
   <header class="row text-center">
     <div class="columns four mobile-two text-right">
       <h2 class="header-text">
-        36 WAGSTAFF DRIVE<br/>
-        TORONTO&mdash;CANADA
+        <?php echo $header_left; ?>
       </h2>
     </div>
     <hgroup class="columns four ">
@@ -35,11 +36,9 @@ endif;
       </a>
     </hgroup>
     <div class="columns four mobile-two text-left">
-    <h2 class="header-text">
-      <!-- Open Daily<br/> -->
-      THURS&mdash;SAT&nbsp;&nbsp;11AM&mdash;11PM<br/>
-      SUN&mdash;WED&nbsp;&nbsp;11AM&mdash;9PM
-    </h2>
+      <h2 class="header-text">
+        <?php echo $header_right; ?>
+      </h2>
     </div>
   </header>
 </section>	
