@@ -53,7 +53,7 @@
   background: rgba($c-navy, 0.8);
   opacity: 0;
   transition: all $transition-timing $transition-easing;
-
+  display: none;
   // .instagram:hover & {
   //   opacity: 1;
   // }
