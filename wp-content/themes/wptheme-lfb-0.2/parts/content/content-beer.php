@@ -6,50 +6,77 @@ $short_description = get_field('short_description');
 $color = get_field('color');
 $defaultColorText = '#0c223f';
 $colorText = get_field('color_text') ? get_field('color_text') : $defaultColorText;
-$default_link = 'https://fanshop.leftfieldbrewery.ca/products';
-$link = get_field('bottle_shop') ? get_field('bottle_shop') : $default_link;
+$link = get_field('bottle_shop');
 $label = get_field('label');
 $artwork = get_field('artwork');
+$info = get_field('info');
+$alcvol = get_field('alcvol');
 
-echo '<a target="_blank" style="color: ' . $colorText . ' !important;"  class="beercard col col-12 col-6-mobile" href="' . $link . '">';
+if ($link) :
 
-        echo '<div class="beercard__label" style="background-color:' . $color . '; background-image: url(' . wp_get_attachment_image_url($artwork, array('300', '1000')) . ');" >';
+    echo '<a target="_blank" style="color: ' . $colorText . ' !important;"  class="beercard col col-12 col-6-mobile" href="' . $link . '">';
 
-        if (!$artwork) :
-    
-            if($icon_image) :
+else :
 
-                echo '<img src="' . wp_get_attachment_image_src( $icon_image )[0] . '" />';
+    echo '<div style="color: ' . $colorText . ' !important;"  class="beercard col col-12 col-6-mobile">';
 
-            elseif($icon):
+endif;
 
-                echo '<svg class="centered icon--large"><use xlink:href="#' . $icon . '"></use></svg>';
-                
-            endif;
+    echo '<div class="beercard__label" style="background-color:' . $color . '; background-image: url(' . wp_get_attachment_image_url($artwork, array('300', '1000')) . ');" >';
 
+    if (!$artwork) :
+
+        if($icon_image) :
+
+            echo '<img src="' . wp_get_attachment_image_src( $icon_image )[0] . '" />';
+
+        elseif($icon):
+
+            echo '<svg class="centered icon--large"><use xlink:href="#' . $icon . '"></use></svg>';
+            
         endif;
 
-        echo '</div>';
-    
-   
+    endif;
+
+    echo '</div>';
+
+
     echo '<div class="beercard__content">';
 
         echo '<span class="beercard__heading">';
 
             echo '<h2 class="heading--1">' . get_the_title($item->ID) . '</h2>';
-           
+            
             echo '<h3 class="heading--2 heading--bordered">' . $short_description . '</h3>';
 
         echo '</span>';
 
-        echo '<span class="beercard__info">';
 
-          echo '<span class="beercard__button button button--secondary">Buy online</span>';
+        if ($link) :
 
-        echo '</span>';
-        
+            echo '<span class="beercard__button button button--secondary">Buy online</span>';
+    
+        endif;
+
+        echo '<span class="heading heading--5 ">';
+
+        echo $alcvol . ' ABV';
+
+        if ($alcvol && $info) : echo ' • '; endif;
+
+        echo $info;
+
+            
     echo '</div>';
 
     echo '<div class="beercard__background" style="background:' . $color . '" ></div>';
 
-echo '</a>';
+if ($link) :
+
+    echo '</a>';
+
+ else :
+
+    echo '</div>';
+
+endif;
