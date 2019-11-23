@@ -1,5 +1,18 @@
+<?php
+$announcement_visible = get_field('announcement_visible', 'options');
+$announcement_text = get_field('announcement_text', 'options');
+$announcement_link = get_field('announcement_link', 'options');
+
+if ($announcement_visible) :
+
+  echo '<a href="' . $announcement_link . '" class="container hide-for-small announcement">';
+    echo $announcement_text;
+  echo '</a>';
+
+endif;
+?>
 <section class="container hide-for-small bordered-main banner">
-  <div class="row ">
+  <div class="row">
     <div class="columns bg-main twelve"></div>
   </div>
 </section>
