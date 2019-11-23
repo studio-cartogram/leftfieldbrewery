@@ -15,15 +15,23 @@
   border: 5px solid $c-beige;
   position: relative;
   height: 100px;
+  transition: all 200ms opacity;
+
   &:nth-child(1) {
     height: 300px;
     width: 75%;
   }
+
   &:nth-child(6),
   &:nth-child(5) {
     height: 250px;
     width: 50%;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
   @media only screen and (min-width: 768px) {
     height: 200px;
     &:nth-child(1) {
@@ -46,9 +54,9 @@
   opacity: 0;
   transition: all $transition-timing $transition-easing;
 
-  .instagram:hover & {
-    opacity: 1;
-  }
+  // .instagram:hover & {
+  //   opacity: 1;
+  // }
 }
 
 .instagram__caption-text {
@@ -66,15 +74,15 @@
   font-weight: 700;
   line-height: 1.4;
 
-  .instagram:hover & {
-    transform: translate(-50%, -0%);
-  }
+  // .instagram:hover & {
+  //   transform: translate(-50%, -0%);
+  // }
 
-  .instagram:nth-child(1):hover &,
-  .instagram:nth-child(5):hover &,
-  .instagram:nth-child(6):hover & {
-    transform: translate(-50%, -50%);
-  }
+  // .instagram:nth-child(1):hover &,
+  // .instagram:nth-child(5):hover &,
+  // .instagram:nth-child(6):hover & {
+  //   transform: translate(-50%, -50%);
+  // }
 
   .caption__text {
     display: none;
