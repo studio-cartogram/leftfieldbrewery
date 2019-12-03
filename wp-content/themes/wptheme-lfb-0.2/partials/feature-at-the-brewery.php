@@ -3,7 +3,7 @@
 $posts = get_field('beers_at_the_brewery', 'option');
 if ($posts) :
 
-  echo '<span class="soft text-center heading heading--2 ">At the Brewery</span>';
+  echo '<span class="soft border-left border-right text-center heading heading--2 ">At the Brewery</span>';
 
   echo '<div class="row atthebrewery__table text-center collapse">';
 

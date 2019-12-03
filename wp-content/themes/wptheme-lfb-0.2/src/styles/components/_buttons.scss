@@ -55,6 +55,15 @@
   border-radius: $b-radius * 2;
 }
 
+.button--disabled {
+  &,
+  &:hover {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
 .button--secondary {
   border-color: currentColor;
   color: currentColor;

@@ -11,6 +11,7 @@ $label = get_field('label', $item->ID);
 $artwork = get_field('artwork', $item->ID);
 $info = get_field('info', $item->ID);
 $alcvol = get_field('alcvol', $item->ID);
+$buttonText = $link ? 'Buy Now' : 'ꓘ STRUCK OUT';
 
 $cols = get_query_var('cols');
 $additional_classes = get_query_var('additional_classes');
@@ -53,23 +54,14 @@ echo '<h3 class="heading--2 heading--bordered">' . $short_description . '</h3>';
 
 echo '</span>';
 
+echo '<div>';
 
-echo '<span class="heading heading--5 ">';
+echo '<span class="heading heading--5 block">' . $info . '</span>';
+echo '<span class="heading heading--5 block ">' . $alcvol . ' ABV' . '</span>';
 
-echo $alcvol . ' ABV';
+echo '</div>';
 
-if ($alcvol && $info) : echo ' • ';
-endif;
-
-echo $info;
-
-echo '</span>';
-
-if ($link) :
-
-    echo '<span class="beercard__button button button--secondary">Buy online</span>';
-
-endif;
+echo '<span class="beercard__button button button--secondary ' . ($link ? '' : 'button--disabled') . '">' . $buttonText . '</span>';
 
 echo '</div>';
 
