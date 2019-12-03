@@ -1,7 +1,7 @@
 <?php
 // datastore=auditqueue;
 // created_on=1523747468;
-// updated_on=1573437007;
+// updated_on=1575332831;
 exit(0);
 ?>
 1523747468_25:"Warning: admin, 127.0.0.1; Plugin deactivated: SVG Upload (v1.5.2; lc-svg-upload.php)"
@@ -59,3 +59,17 @@ exit(0);
 1574514473_1988:"Notice: admin, 127.0.0.1; Events status has been changed; details: ID: 7001,Old status: new,New status: auto-draft,Title: Auto Draft"
 1574514478_574:"Notice: admin, 127.0.0.1; Events status has been changed; details: ID: 7001,Old status: auto-draft,New status: publish,Title: testestes"
 1574514605_4718:"Notice: admin, 127.0.0.1; Media file added; ID: 7002; name: 75543472_2674267889319427_3171391584939802624_o; type: image\/jpeg"
+1574664181_9536:"Notice: 127.0.0.1; User authentication succeeded: admin"
+1575102776_7803:"Warning: 127.0.0.1; Post deleted: (multiple entries): Post id: 6983,Post author: 1,Post type: acf-field-group,Post status: auto-draft,Post inserted: 2019-11-23 01:39:29,Post modified: 2019-11-23 01:39:29,Post guid: https:\/\/left-field-brewery.local\/?post_type=acf-field-group&p=6983,Post title: Auto Draft"
+1575102776_8113:"Warning: 127.0.0.1; Post deleted: (multiple entries): Post id: 6984,Post author: 1,Post type: acf-field-group,Post status: auto-draft,Post inserted: 2019-11-23 01:39:59,Post modified: 2019-11-23 01:39:59,Post guid: https:\/\/left-field-brewery.local\/?post_type=acf-field-group&p=6984,Post title: Auto Draft"
+1575102776_8348:"Warning: 127.0.0.1; Post deleted: (multiple entries): Post id: 6985,Post author: 1,Post type: acf-field-group,Post status: auto-draft,Post inserted: 2019-11-23 01:42:28,Post modified: 2019-11-23 01:42:28,Post guid: https:\/\/left-field-brewery.local\/?post_type=acf-field-group&p=6985,Post title: Auto Draft"
+1575102776_8617:"Warning: 127.0.0.1; Post deleted: (multiple entries): Post id: 6982,Post author: 1,Post type: post,Post status: auto-draft,Post inserted: 2019-11-23 01:38:07,Post modified: 2019-11-23 01:38:07,Post guid: https:\/\/left-field-brewery.local\/?p=6982,Post title: Auto Draft"
+1575172664_7963:"Warning: 127.0.0.1; Post deleted: (multiple entries): Post id: 6991,Post author: 1,Post type: acf-field-group,Post status: auto-draft,Post inserted: 2019-11-23 04:22:49,Post modified: 2019-11-23 04:22:49,Post guid: https:\/\/left-field-brewery.local\/?post_type=acf-field-group&p=6991,Post title: Auto Draft"
+1575172664_8092:"Warning: 127.0.0.1; Post deleted: (multiple entries): Post id: 6993,Post author: 1,Post type: events,Post status: auto-draft,Post inserted: 2019-11-23 07:34:54,Post modified: 2019-11-23 07:34:54,Post guid: https:\/\/left-field-brewery.local\/?post_type=events&p=6993,Post title: Auto Draft"
+1575172664_8196:"Warning: 127.0.0.1; Post deleted: (multiple entries): Post id: 6994,Post author: 1,Post type: events,Post status: auto-draft,Post inserted: 2019-11-23 07:35:19,Post modified: 2019-11-23 07:35:19,Post guid: https:\/\/left-field-brewery.local\/?post_type=events&p=6994,Post title: Auto Draft"
+1575278371_5133:"Notice: 127.0.0.1; User authentication succeeded: admin"
+1575278373_0508:"Notice: admin, 127.0.0.1; Post status has been changed; details: ID: 7003,Old status: new,New status: auto-draft,Title: Auto Draft"
+1575278402_1593:"Notice: admin, 127.0.0.1; Page was updated; ID: 4; name: Caught lookin&#039;"
+1575278402_3107:"Notice: admin, 127.0.0.1; Revision status has been changed; details: ID: 7004,Old status: new,New status: inherit,Title: Caught lookin&#039;"
+1575278558_6735:"Notice: admin, 127.0.0.1; Page was updated; ID: 4; name: Caught lookin&#039;"
+1575278558_819:"Notice: admin, 127.0.0.1; Revision status has been changed; details: ID: 7005,Old status: new,New status: inherit,Title: Caught lookin&#039;"

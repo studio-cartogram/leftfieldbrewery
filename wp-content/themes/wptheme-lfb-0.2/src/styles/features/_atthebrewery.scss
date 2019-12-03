@@ -1,10 +1,23 @@
 //Components
-.atthebrewery__table {
+
+.atb__col--0 {
+  width: 55%;
+  overflow: hidden;
+  position: relative;
 }
+.atb__col--1.atb__col--1.atb__col--1.atb__col--1 {
+  display: none;
+}
+.atb__col--2,
+.atb__col--3,
+.atb__col--4 {
+  width: 10%;
+}
+
 .atthebrewery__row {
   display: block;
   &,
-  .columns {
+  .col {
     height: 52px;
     display: flex;
     align-items: center;
@@ -17,6 +30,21 @@
   }
   &:last-of-type {
     border-bottom: 1px solid $c-navy;
+  }
+}
+
+@include bp($bp-tablet) {
+  .atb__col--0 {
+    width: 40%;
+  }
+  .atb__col--1.atb__col--1.atb__col--1.atb__col--1 {
+    width: 24%;
+    display: block;
+  }
+  .atb__col--2,
+  .atb__col--3,
+  .atb__col--4 {
+    width: 12%;
   }
 }
 
@@ -42,31 +70,4 @@
 
 .check-text {
   display: none;
-}
-
-.atb__col--large {
-  width: 55% !important;
-  float: left !important;
-  overflow: hidden;
-  position: relative;
-}
-.atb__col--medium {
-  width: 24% !important;
-  float: left !important;
-}
-.atb__col--small {
-  width: 15% !important;
-  float: left !important;
-}
-
-@media only screen and (min-width: 768px) {
-  .atb__col--large {
-    width: 40% !important;
-  }
-  .atb__col--medium {
-    width: 24% !important;
-  }
-  .atb__col--small {
-    width: 12% !important;
-  }
 }

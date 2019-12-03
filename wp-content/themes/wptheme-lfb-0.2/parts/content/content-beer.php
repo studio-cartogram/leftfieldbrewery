@@ -1,81 +1,85 @@
 <?php
 $item = get_query_var('item');
-$icon_image = get_field('icon');
+$icon_image = get_field('icon', $item->ID);
 $icon = (!$icon_image && get_post_meta($item->ID, '_cartogram_icon_value', true) ? get_post_meta($item->ID, '_cartogram_icon_value', true) : $item->post_name);
-$short_description = get_field('short_description');
-$color = get_field('color');
+$short_description = get_field('short_description', $item->ID);
+$color = get_field('color', $item->ID);
 $defaultColorText = '#0c223f';
-$colorText = get_field('color_text') ? get_field('color_text') : $defaultColorText;
-$link = get_field('bottle_shop');
-$label = get_field('label');
-$artwork = get_field('artwork');
-$info = get_field('info');
-$alcvol = get_field('alcvol');
+$colorText = get_field('color_text', $item->ID) ? get_field('color_text', $item->ID) : $defaultColorText;
+$link = get_field('bottle_shop', $item->ID);
+$label = get_field('label', $item->ID);
+$artwork = get_field('artwork', $item->ID);
+$info = get_field('info', $item->ID);
+$alcvol = get_field('alcvol', $item->ID);
 
+$cols = get_query_var('cols');
+$additional_classes = get_query_var('additional_classes');
 if ($link) :
 
-    echo '<a target="_blank" style="color: ' . $colorText . ' !important;"  class="beercard col col-12 col-6-mobile" href="' . $link . '">';
+    echo '<a target="_blank" style="color: ' . $colorText . ' !important;"  class="beercard col ' . $cols . ' ' . $additional_classes . '" href="' . $link . '">';
 
 else :
 
-    echo '<div style="color: ' . $colorText . ' !important;"  class="beercard col col-12 col-6-mobile">';
+    echo '<div style="color: ' . $colorText . ' !important;"  class="beercard col ' . $cols . ' ' . $additional_classes . '">';
 
 endif;
 
-    echo '<div class="beercard__label" style="background-color:' . $color . '; background-image: url(' . wp_get_attachment_image_url($artwork, array('300', '1000')) . ');" >';
+echo '<div class="beercard__label" style="background-color:' . $color . '; background-image: url(' . wp_get_attachment_image_url($artwork, array('300', '1000')) . ');" >';
 
-    if (!$artwork) :
+if (!$artwork) :
 
-        if($icon_image) :
+    if ($icon_image) :
 
-            echo '<img src="' . wp_get_attachment_image_src( $icon_image )[0] . '" />';
+        echo '<img src="' . wp_get_attachment_image_src($icon_image)[0] . '" />';
 
-        elseif($icon):
+    elseif ($icon) :
 
-            echo '<svg class="centered icon--large"><use xlink:href="#' . $icon . '"></use></svg>';
-            
-        endif;
+        echo '<svg class="centered icon--large"><use xlink:href="#' . $icon . '"></use></svg>';
 
     endif;
 
-    echo '</div>';
+endif;
+
+echo '</div>';
 
 
-    echo '<div class="beercard__content">';
+echo '<div class="beercard__content">';
 
-        echo '<span class="beercard__heading">';
+echo '<span class="beercard__heading">';
 
-            echo '<h2 class="heading--1">' . get_the_title($item->ID) . '</h2>';
-            
-            echo '<h3 class="heading--2 heading--bordered">' . $short_description . '</h3>';
+echo '<h2 class="heading--1">' . get_the_title($item->ID) . '</h2>';
 
-        echo '</span>';
+echo '<h3 class="heading--2 heading--bordered">' . $short_description . '</h3>';
+
+echo '</span>';
 
 
-        if ($link) :
+echo '<span class="heading heading--5 ">';
 
-            echo '<span class="beercard__button button button--secondary">Buy online</span>';
-    
-        endif;
+echo $alcvol . ' ABV';
 
-        echo '<span class="heading heading--5 ">';
+if ($alcvol && $info) : echo ' • ';
+endif;
 
-        echo $alcvol . ' ABV';
+echo $info;
 
-        if ($alcvol && $info) : echo ' • '; endif;
+echo '</span>';
 
-        echo $info;
+if ($link) :
 
-            
-    echo '</div>';
+    echo '<span class="beercard__button button button--secondary">Buy online</span>';
 
-    echo '<div class="beercard__background" style="background:' . $color . '" ></div>';
+endif;
+
+echo '</div>';
+
+echo '<div class="beercard__background" style="background:' . $color . '" ></div>';
 
 if ($link) :
 
     echo '</a>';
 
- else :
+else :
 
     echo '</div>';
 

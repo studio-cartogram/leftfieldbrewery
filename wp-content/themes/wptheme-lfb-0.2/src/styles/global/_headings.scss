@@ -28,10 +28,11 @@ h2 {
 .heading--3,
 h3 {
   text-transform: uppercase;
-  font-size: $t-font-size-sm;
+  font-size: $t-font-size-md;
   letter-spacing: $t-letter-spacing;
-  font-family: $t-font-stack-primary;
+  font-family: $t-font-stack-secondary;
   font-weight: $t-font-weight-bold;
+  display: block;
 }
 
 .heading--4,

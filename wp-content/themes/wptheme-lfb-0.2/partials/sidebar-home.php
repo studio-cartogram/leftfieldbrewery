@@ -1,0 +1,36 @@
+<?php if (have_rows('callout')) : ?>
+
+  <?php while (have_rows('callout')) : the_row();
+      $heading = get_sub_field('callout_heading');
+      $image = get_sub_field('callout_image');
+      $text = get_sub_field('callout_text');
+      $link = get_sub_field('callout_link');
+      ?>
+
+
+    <span class="border-left heading heading--3 soft text-center"><?php echo $heading; ?></span>
+
+    <section style="background-image: url(<?php echo $image; ?>);" class="border-left callout__inner bg-cream">
+      <a href="<?php echo $link; ?>" class="link--bordered link--brew-finder  link--callout-module">
+        <?php echo $text; ?><br />
+      </a>
+    </section>
+
+  <?php endwhile; ?>
+
+<?php endif; ?>
+
+
+<?php
+
+$mvp = get_field('mvp');
+
+if ($mvp) :
+  echo '<h3 class=" mobile-divide text-center">MVP</h3>';
+  set_query_var('item', $mvp);
+  set_query_var('cols', 'col-12');
+  set_query_var('additional_classes', 'beercard--sidebar');
+  get_template_part('parts/content/content', 'beer');
+endif;
+
+?>

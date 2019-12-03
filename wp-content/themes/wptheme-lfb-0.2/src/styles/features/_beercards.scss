@@ -26,6 +26,14 @@ $da-beercards-base: $d-trio;
   h3 {
     color: inherit !important;
   }
+
+  &.beercard--sidebar {
+    padding: 0;
+  }
+}
+
+.beercard--sidebar {
+  margin-right: $da-beercards-base;
 }
 
 a.beercard:hover {
@@ -43,9 +51,9 @@ a.beercard:hover {
 .beercard__label {
   height: auto;
   width: 220px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0% 50%;
+  background-position: 50% 50%;
   border-radius: $b-radius 0 0 $b-radius;
   overflow: hidden;
   display: flex;
@@ -83,6 +91,13 @@ a.beercard:hover {
   width: auto;
   height: auto;
   border-radius: $b-radius;
+
+  .beercard--sidebar & {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .beercard__button {

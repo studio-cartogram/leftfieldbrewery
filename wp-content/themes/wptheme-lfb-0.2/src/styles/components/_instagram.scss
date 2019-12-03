@@ -1,9 +1,9 @@
 .instagrams {
   overflow: hidden;
-  margin-left: -15px;
   padding: 35px;
   background: $c-beige;
-  border-right: 1px solid $c-navy;
+  border: 1px solid $c-navy;
+  border-top: none;
 }
 .instagram {
   width: 25%;
