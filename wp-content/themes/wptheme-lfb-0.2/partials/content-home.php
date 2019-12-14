@@ -12,7 +12,7 @@ get_template_part('partials/feature-at-the-brewery');
 
 echo '</div>';
 
-echo '<div class="col col-4-tablet">';
+echo '<div class="col col-4-tablet border-left">';
 
 get_template_part('partials/sidebar', 'home');
 

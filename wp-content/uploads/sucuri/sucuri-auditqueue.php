@@ -1,7 +1,7 @@
 <?php
 // datastore=auditqueue;
 // created_on=1523747468;
-// updated_on=1575332831;
+// updated_on=1576287038;
 exit(0);
 ?>
 1523747468_25:"Warning: admin, 127.0.0.1; Plugin deactivated: SVG Upload (v1.5.2; lc-svg-upload.php)"
@@ -73,3 +73,4 @@ exit(0);
 1575278402_3107:"Notice: admin, 127.0.0.1; Revision status has been changed; details: ID: 7004,Old status: new,New status: inherit,Title: Caught lookin&#039;"
 1575278558_6735:"Notice: admin, 127.0.0.1; Page was updated; ID: 4; name: Caught lookin&#039;"
 1575278558_819:"Notice: admin, 127.0.0.1; Revision status has been changed; details: ID: 7005,Old status: new,New status: inherit,Title: Caught lookin&#039;"
+1576287041_382:"Warning: 127.0.0.1; Post deleted: (multiple entries): Post id: 7003,Post author: 1,Post type: post,Post status: auto-draft,Post inserted: 2019-12-02 04:19:33,Post modified: 2019-12-02 04:19:33,Post guid: https:\/\/left-field-brewery.local\/?p=7003,Post title: Auto Draft"

@@ -518,4 +518,8 @@ if( function_exists('acf_add_options_page') ) {
 		'page_title' 	=> 'General Information'
 	));
 }
+
+function cartogram_get_slug() {
+	return is_front_page() ? 'home' : basename(get_permalink());
+} 
 ?>
