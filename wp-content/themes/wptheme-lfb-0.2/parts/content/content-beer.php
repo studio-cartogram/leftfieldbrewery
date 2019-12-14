@@ -17,15 +17,15 @@ $cols = get_query_var('cols');
 $additional_classes = get_query_var('additional_classes');
 if ($link) :
 
-    echo '<a target="_blank" style="color: ' . $colorText . ' !important;"  class="beercard col ' . $cols . ' ' . $additional_classes . '" href="' . $link . '">';
+    echo '<a target="_blank" style="color: ' . $colorText . ' !important;"  class="item col ' . $cols . ' ' . $additional_classes . '" href="' . $link . '">';
 
 else :
 
-    echo '<div style="color: ' . $colorText . ' !important;"  class="beercard col ' . $cols . ' ' . $additional_classes . '">';
+    echo '<div style="color: ' . $colorText . ' !important;"  class="item col ' . $cols . ' ' . $additional_classes . '">';
 
 endif;
 
-echo '<div class="beercard__label" style="background-color:' . $color . '; background-image: url(' . wp_get_attachment_image_url($artwork, array('300', '1000')) . ');" >';
+echo '<div class="item__label" style="background-color:' . $color . '; background-image: url(' . wp_get_attachment_image_url($artwork, array('300', '1000')) . ');" >';
 
 if (!$artwork) :
 
@@ -44,9 +44,9 @@ endif;
 echo '</div>';
 
 
-echo '<div class="beercard__content">';
+echo '<div class="item__content">';
 
-echo '<span class="beercard__heading">';
+echo '<span class="item__heading">';
 
 echo '<h2 class="heading--1">' . get_the_title($item->ID) . '</h2>';
 
@@ -61,11 +61,11 @@ echo '<span class="heading heading--5 block ">' . $alcvol . ' ABV' . '</span>';
 
 echo '</div>';
 
-echo '<span class="beercard__button button button--secondary ' . ($link ? '' : 'button--disabled') . '">' . $buttonText . '</span>';
+echo '<span class="item__button button button--secondary ' . ($link ? '' : 'button--disabled') . '">' . $buttonText . '</span>';
 
 echo '</div>';
 
-echo '<div class="beercard__background" style="background:' . $color . '" ></div>';
+echo '<div class="item__background" style="background:' . $color . '" ></div>';
 
 if ($link) :
 

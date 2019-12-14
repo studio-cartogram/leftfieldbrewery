@@ -530,5 +530,13 @@ function cartogram_get_slug() {
   endif;
 
   return basename(get_permalink());
-} 
+}
+
+function cartogram_get_button_text($slug, $link) {
+  if ($slug == 'events') :
+    return 'More info';
+  else :
+    return $link ? 'Buy Now' : 'ꓘ STRUCK OUT';
+  endif;
+}
 ?>

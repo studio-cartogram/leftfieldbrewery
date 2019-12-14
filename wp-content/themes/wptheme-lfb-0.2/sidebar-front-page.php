@@ -36,7 +36,7 @@ if ($mvp) :
     echo '<h3 class="rule-left mobile-divide text-center">MVP</h3>';
     set_query_var('item', $mvp);
     set_query_var('cols', 'col-12');
-    set_query_var('additional_classes', 'beercard--sidebar');
+    set_query_var('additional_classes', 'item--sidebar');
     get_template_part('parts/content/content', 'beer');
 endif;
 

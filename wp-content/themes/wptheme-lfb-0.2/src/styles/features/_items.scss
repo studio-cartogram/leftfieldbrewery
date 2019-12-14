@@ -1,13 +1,13 @@
-$da-beercards-base: $d-trio;
+$da-items-base: $d-trio;
 
-.beercards {
-  padding-top: $da-beercards-base;
-  padding-bottom: $da-beercards-base;
+.items {
+  padding-top: $da-items-base;
+  padding-bottom: $da-items-base;
   border-top: 1px solid $c-navy;
 }
 
-.beercard {
-  padding: $da-beercards-base/2;
+.item {
+  padding: $da-items-base/2;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -27,16 +27,16 @@ $da-beercards-base: $d-trio;
     color: inherit !important;
   }
 
-  &.beercard--sidebar {
+  &.item--sidebar {
     padding: 0;
   }
 }
 
-.beercard--sidebar {
-  margin-right: $da-beercards-base;
+.item--sidebar {
+  margin-right: $da-items-base;
 }
 
-a.beercard:hover {
+a.item:hover {
   .button {
     opacity: 0.8;
   }
@@ -48,9 +48,8 @@ a.beercard:hover {
   }
 }
 
-.beercard__label {
+.item__artwork {
   height: auto;
-  width: 220px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -59,20 +58,26 @@ a.beercard:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: 50%;
+
+  .item--beers & {
+    width: 220px;
+    flex-basis: 220px;
+  }
 }
 
-.beercard__content {
+.item__content {
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  padding: $da-beercards-base;
-  // position: relative;
+  padding: $da-items-base;
+  flex-basis: 50%;
 }
 
-.beercard__heading {
+.item__heading {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -80,19 +85,19 @@ a.beercard:hover {
   align-content: center;
 }
 
-.beercard__background {
+.item__background {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   z-index: 1;
   position: absolute;
-  top: $da-beercards-base/2;
-  left: $da-beercards-base/2;
-  right: $da-beercards-base/2;
-  bottom: $da-beercards-base/2;
+  top: $da-items-base/2;
+  left: $da-items-base/2;
+  right: $da-items-base/2;
+  bottom: $da-items-base/2;
   width: auto;
   height: auto;
   border-radius: $b-radius;
 
-  .beercard--sidebar & {
+  .item--sidebar & {
     top: 0;
     left: 0;
     right: 0;
@@ -100,7 +105,7 @@ a.beercard:hover {
   }
 }
 
-.beercard__button {
+.item__button {
   margin-left: 5px;
 }
 
