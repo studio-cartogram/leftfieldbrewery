@@ -24,6 +24,6 @@ if ($mvp) :
   set_query_var('item', $mvp);
   set_query_var('cols', 'col-12');
   set_query_var('additional_classes', 'item--sidebar');
-  get_template_part('parts/content/content', 'beer');
+  get_template_part('partials/item', 'beer');
 endif;
 ?>
