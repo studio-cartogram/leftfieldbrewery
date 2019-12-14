@@ -1,19 +1,17 @@
 <?php
+global $slug;
 
 $nav_tabs = array(
-  'theme_location'  => 'beers',
-  'container'       => false,
-  'items_wrap'      => '%3$s',
+  'theme_location' => $slug,
+  'container' => false,
+  'items_wrap' => '<nav class="tabsnav"><ul class="tabsnav__nav">%3$s</ul></nav>',
+  'fallback_cb' => function() {
+    global $slug;
+
+    echo '<span class="heading heading--3 soft border-left border-right text-center">' . $slug . '</span>';
+  }
 );
 
-echo '<nav class="tabsnav">';
-
-  echo '<ul class="tabsnav__nav">';
-
-    wp_nav_menu( $nav_tabs );
-
-  echo '</ul>';
-
-echo '</nav>';
+wp_nav_menu( $nav_tabs );
 
 ?>

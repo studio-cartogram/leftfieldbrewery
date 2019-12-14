@@ -1,5 +1,7 @@
 <?php
 
+global $slug;
+
 $item = get_query_var('item');
 $icon_image = get_field('icon', $item->ID);
 $icon = (!$icon_image && get_post_meta($item->ID, '_cartogram_icon_value', true) ? get_post_meta($item->ID, '_cartogram_icon_value', true) : $item->post_name);
@@ -16,13 +18,14 @@ $buttonText = $link ? 'Buy Now' : 'ꓘ STRUCK OUT';
 
 $cols = get_query_var('cols');
 $additional_classes = get_query_var('additional_classes');
+
 if ($link) :
 
-  echo '<a target="_blank" style="color: ' . $colorText . ' !important;"  class="beercard col ' . $cols . ' ' . $additional_classes . '" href="' . $link . '">';
+  echo '<a target="_blank" style="color: ' . $colorText . ' !important;"  class="item item--' . $slug . ' col ' . $cols . ' ' . $additional_classes . '" href="' . $link . '">';
 
 else :
 
-  echo '<div style="color: ' . $colorText . ' !important;"  class="beercard col ' . $cols . ' ' . $additional_classes . '">';
+  echo '<div style="color: ' . $colorText . ' !important;"  class="item item--' . $slug . ' col ' . $cols . ' ' . $additional_classes . '">';
 
 endif;
 

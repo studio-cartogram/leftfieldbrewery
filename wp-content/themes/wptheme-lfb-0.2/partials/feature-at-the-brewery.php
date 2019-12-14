@@ -1,6 +1,7 @@
 <?php
 
 $posts = get_field('beers_at_the_brewery', 'option');
+
 if ($posts) :
 
   echo '<span class="soft border-left border-right text-center heading heading--2 ">At the Brewery</span>';
@@ -9,7 +10,7 @@ if ($posts) :
 
   echo '<div class="atthebrewery__heading-row grid border-top border-right border-left border-bottom">';
 
-  $headings = array('Beer', 'Style', 'Can', 'Bottle', 'Tap');
+  $headings = ['Beer', 'Style', 'Can', 'Bottle', 'Tap'];
   $count = 0;
 
   foreach ($headings as $value) {
@@ -18,7 +19,7 @@ if ($posts) :
 
     echo '<div class="text-' . $align . ' col atb__col--' . $count++ . '">';
 
-    echo '<span class="delta soft-quarter soft-half--left">' . $value . '</span>';
+    echo '<span class="delta soft-half--right soft-half--left">' . $value . '</span>';
 
     echo '</div>';
   }
@@ -37,33 +38,39 @@ if ($posts) :
     echo '<a href="' . $link . '" class="grid border-left atthebrewery__row collapse">';
 
     echo '<div style="color:' . $beer_color . '" class="col atb__col--' . $count++ . ' text-left rule-right">';
-    echo '<span class="beta soft-half beer-title heading heading--3">' . get_the_title($beer->ID) . '</span>';
+
+      echo '<span class="beta soft-half beer-title heading heading--3">' . get_the_title($beer->ID) . '</span>';
+
     echo '</div>';
 
     echo '<div class="col atb__col--' . $count++ . '  rule-right">';
-    echo '<span class="centered zeta">' . $short_description . '</span>';
+
+      echo '<span class="centered zeta">' . $short_description . '</span>';
+
     echo '</div>';
 
     echo '<div class="col atb__col--' . $count++ . '  rule-right">';
-    echo (get_sub_field('in_cans') ? '<span class="check-text">In Cans</span><span class="check"></span>' : '&nbsp;');
+
+      echo (get_sub_field('in_cans') ? '<span class="check-text">In Cans</span><span class="check"></span>' : '&nbsp;');
+
     echo '</div>';
 
     echo '<div class="col atb__col--' . $count++ . '  rule-right">';
-    echo (get_sub_field('in_bottles') ? '<span class="check-text">In Bottles</span><span class="check"></span>' : '&nbsp;');
+
+      echo (get_sub_field('in_bottles') ? '<span class="check-text">In Bottles</span><span class="check"></span>' : '&nbsp;');
+
     echo '</div>';
 
     echo '<div class="col atb__col--' . $count++ . '  rule-right">';
-    echo (get_sub_field('on_tap') ? '<span class="check-text">On Tap</span><span class="check"></span>' : '&nbsp;');
-    echo '</div>';
 
+      echo (get_sub_field('on_tap') ? '<span class="check-text">On Tap</span><span class="check"></span>' : '&nbsp;');
+
+    echo '</div>';
 
     echo '</a>';
 
-
   endwhile;
-  ?>
 
-  </div>
+  echo '</div>';
 
-<?php
 endif; ?>

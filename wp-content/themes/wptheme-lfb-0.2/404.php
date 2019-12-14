@@ -20,10 +20,10 @@
 								<p class="space-bottom">Don't worry...it happens to the best of us.</p> 
 								<h3 class="double-bordered space-top-large space-inner-top-large ">Here are some pointers to help get your head back in the game:</h3>
 								<ul class="no-bullet space-inner-bottom" >
-									<li><a href="<?php bloginfo(url) ?>">Go Home</a></li>
+									<li><a href="<?php bloginfo('url') ?>">Go Home</a></li>
 									<?php $options = get_option('lfb_theme_options');?> 
 									<li><a href="mailto:<?php echo $options['email'] ?>">Email Us</a></li>
-									<li><a href="<?php bloginfo(url) ?>/about-us">Learn More About Us</a></li>
+									<li><a href="<?php bloginfo('url') ?>/about-us">Learn More About Us</a></li>
 								</ul>
 									<p class="no-bullet border-top space-inner-top-large">Also, you can check out our
 									<?php 

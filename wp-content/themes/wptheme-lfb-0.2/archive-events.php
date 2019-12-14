@@ -12,7 +12,7 @@ get_header();
 
 echo '<div class="container ' . $slug  . '" id="container-site">';
 
-get_template_part('partials/page', $slug);
+get_template_part('partials/content-archive', $slug);
 
 echo '</div>';
 

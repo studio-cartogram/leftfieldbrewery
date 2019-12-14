@@ -1,0 +1,45 @@
+<?php 
+global $wp_query;
+global $post;
+global $paged;
+global $slug;
+
+$modifications = array(
+  'posts_per_page' => 100,
+);
+
+$args = array_merge(
+  $wp_query->query_vars,
+  $modifications 
+);
+
+$the_query = new WP_Query($args);
+$count = 0;
+
+echo '<div class="grid">';
+
+  echo '<div class="col col-12">';
+
+  get_template_part('parts/navigation/nav-tabs', 'beers');
+
+    if ( $the_query->have_posts() ) : 
+
+      echo '<div class="grid grid--justify-center grid--align-stretch">';
+
+        while ( $the_query->have_posts() ) : $the_query->the_post(); $count++;
+
+          set_query_var( 'item', $post );
+
+          set_query_var('cols', 'col-12 col-6-mobile');
+
+          get_template_part('partials/item', $slug);
+
+        endwhile;
+
+        echo '</div>';
+    
+    endif;
+
+  echo '</div>';
+
+echo '</div>';

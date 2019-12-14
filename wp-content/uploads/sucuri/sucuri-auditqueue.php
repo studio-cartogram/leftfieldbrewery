@@ -1,7 +1,7 @@
 <?php
 // datastore=auditqueue;
 // created_on=1523747468;
-// updated_on=1576287038;
+// updated_on=1576326452;
 exit(0);
 ?>
 1523747468_25:"Warning: admin, 127.0.0.1; Plugin deactivated: SVG Upload (v1.5.2; lc-svg-upload.php)"
@@ -74,3 +74,16 @@ exit(0);
 1575278558_6735:"Notice: admin, 127.0.0.1; Page was updated; ID: 4; name: Caught lookin&#039;"
 1575278558_819:"Notice: admin, 127.0.0.1; Revision status has been changed; details: ID: 7005,Old status: new,New status: inherit,Title: Caught lookin&#039;"
 1576287041_382:"Warning: 127.0.0.1; Post deleted: (multiple entries): Post id: 7003,Post author: 1,Post type: post,Post status: auto-draft,Post inserted: 2019-12-02 04:19:33,Post modified: 2019-12-02 04:19:33,Post guid: https:\/\/left-field-brewery.local\/?p=7003,Post title: Auto Draft"
+1576323520_7087:"Notice: 127.0.0.1; User authentication succeeded: admin"
+1576323522_2661:"Notice: admin, 127.0.0.1; Post status has been changed; details: ID: 7006,Old status: new,New status: auto-draft,Title: Auto Draft"
+1576323609_4972:"Warning: admin, 127.0.0.1; Post deleted: (multiple entries): Post id: 4676,Post author: 1,Post type: nav_menu_item,Post status: publish,Post inserted: 2017-05-02 11:35:27,Post modified: 2017-10-28 19:23:22,Post guid: http:\/\/left-field-brewery.local\/?p=4676,Post title: (empty)"
+1576323609_5318:"Warning: admin, 127.0.0.1; Post deleted: (multiple entries): Post id: 4680,Post author: 1,Post type: nav_menu_item,Post status: publish,Post inserted: 2017-05-02 11:35:27,Post modified: 2017-10-28 19:23:22,Post guid: http:\/\/left-field-brewery.local\/?p=4680,Post title: (empty)"
+1576323609_5576:"Warning: admin, 127.0.0.1; Post deleted: (multiple entries): Post id: 4681,Post author: 1,Post type: nav_menu_item,Post status: publish,Post inserted: 2017-05-02 11:35:25,Post modified: 2017-10-28 19:23:22,Post guid: http:\/\/left-field-brewery.local\/?p=4681,Post title: All"
+1576323609_5855:"Warning: admin, 127.0.0.1; Post deleted: (multiple entries): Post id: 5353,Post author: 2,Post type: nav_menu_item,Post status: publish,Post inserted: 2017-10-28 19:22:32,Post modified: 2017-10-28 19:23:22,Post guid: http:\/\/left-field-brewery.local\/?p=5353,Post title: (empty)"
+1576323609_6162:"Warning: admin, 127.0.0.1; Post deleted: (multiple entries): Post id: 5354,Post author: 2,Post type: nav_menu_item,Post status: publish,Post inserted: 2017-10-28 19:22:32,Post modified: 2017-10-28 19:23:22,Post guid: http:\/\/left-field-brewery.local\/?p=5354,Post title: (empty)"
+1576324248_2369:"Notice: admin, 127.0.0.1; Nav_menu_item status has been changed; details: ID: 7007,Old status: new,New status: draft,Title: "
+1576324248_3284:"Notice: admin, 127.0.0.1; Nav_menu_item status has been changed; details: ID: 7008,Old status: new,New status: draft,Title: "
+1576324259_0721:"Notice: admin, 127.0.0.1; Nav_menu_item status has been changed; details: ID: 7007,Old status: draft,New status: publish,Title: "
+1576324259_148:"Notice: admin, 127.0.0.1; Nav_menu_item status has been changed; details: ID: 7008,Old status: draft,New status: publish,Title: "
+1576325188_5315:"Warning: admin, 127.0.0.1; Post deleted: (multiple entries): Post id: 7007,Post author: 1,Post type: nav_menu_item,Post status: publish,Post inserted: 2019-12-14 06:50:59,Post modified: 2019-12-14 06:51:19,Post guid: https:\/\/left-field-brewery.local\/?p=7007,Post title: (empty)"
+1576325188_5616:"Warning: admin, 127.0.0.1; Post deleted: (multiple entries): Post id: 7008,Post author: 1,Post type: nav_menu_item,Post status: publish,Post inserted: 2019-12-14 06:50:59,Post modified: 2019-12-14 06:51:19,Post guid: https:\/\/left-field-brewery.local\/?p=7008,Post title: (empty)"
