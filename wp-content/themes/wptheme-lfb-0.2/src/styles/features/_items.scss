@@ -75,6 +75,10 @@ a.item:hover {
   align-items: center;
   padding: $da-items-base;
   flex-basis: 50%;
+
+  .item--beers & {
+    flex-basis: 100%;
+  }
 }
 
 .item__heading {
