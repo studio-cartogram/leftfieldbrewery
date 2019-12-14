@@ -87,3 +87,7 @@ exit(0);
 1576324259_148:"Notice: admin, 127.0.0.1; Nav_menu_item status has been changed; details: ID: 7008,Old status: draft,New status: publish,Title: "
 1576325188_5315:"Warning: admin, 127.0.0.1; Post deleted: (multiple entries): Post id: 7007,Post author: 1,Post type: nav_menu_item,Post status: publish,Post inserted: 2019-12-14 06:50:59,Post modified: 2019-12-14 06:51:19,Post guid: https:\/\/left-field-brewery.local\/?p=7007,Post title: (empty)"
 1576325188_5616:"Warning: admin, 127.0.0.1; Post deleted: (multiple entries): Post id: 7008,Post author: 1,Post type: nav_menu_item,Post status: publish,Post inserted: 2019-12-14 06:50:59,Post modified: 2019-12-14 06:51:19,Post guid: https:\/\/left-field-brewery.local\/?p=7008,Post title: (empty)"
+1576330299_4107:"Notice: admin, 127.0.0.1; Acf-field status has been changed; details: ID: 7009,Old status: new,New status: publish,Title: date"
+1576330324_2689:"Notice: admin, 127.0.0.1; Acf-field status has been changed; details: ID: 7010,Old status: new,New status: publish,Title: info"
+1576331004_3432:"Notice: admin, 127.0.0.1; Revision status has been changed; details: ID: 7011,Old status: new,New status: inherit,Title: Mark&#039;s Pizzas Pop-Up"
+1576331259_6508:"Notice: admin, 127.0.0.1; Media file added; ID: 7012; name: 78681690_2752145118198370_6590646999547117568_o; type: image\/jpeg"
