@@ -3,9 +3,21 @@ global $wp_query;
 global $post;
 global $paged;
 global $slug;
+$yesterday = date('Ymd') - 1;
 
 $modifications = array(
   'posts_per_page' => 100,
+  'meta_key'  => 'date',
+  'orderby'   => 'meta_value_num',
+  'order'     => 'ASC',
+  'meta_query' => array(
+    array(
+        'key'     => 'date',
+        'compare' => '>=',
+        'value'   => $yesterday - 1,
+        'type' => 'DATE',
+    ),
+  ),
 );
 
 $args = array_merge(

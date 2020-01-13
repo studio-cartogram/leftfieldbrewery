@@ -15,7 +15,7 @@ $label = get_field('label', $item->ID);
 $artwork = get_field('artwork', $item->ID) ? get_field('artwork', $item->ID) : get_post_thumbnail_id($item->ID);
 $info = get_field('info', $item->ID);
 $alcvol = get_field('alcvol', $item->ID);
-$date = get_field('date', $item->ID);
+$date = date('M j • g:i a', strtotime(get_field('date', $item->ID)));
 $button_text = cartogram_get_button_text($slug, $link);
 
 $cols = get_query_var('cols');
