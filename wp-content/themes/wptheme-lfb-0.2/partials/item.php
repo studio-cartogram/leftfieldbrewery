@@ -23,8 +23,6 @@ $button_text = cartogram_get_button_text($slug, $link);
 $cols = get_query_var('cols');
 $additional_classes = get_query_var('additional_classes');
 
-echo get_field('date', $item->ID);
-
 if ($link) :
 
   echo '<a target="_blank" style="color: ' . $text_color . ' !important;"  class="item item--' . $slug . ' col ' . $cols . ' ' . $additional_classes . '" href="' . $link . '">';
