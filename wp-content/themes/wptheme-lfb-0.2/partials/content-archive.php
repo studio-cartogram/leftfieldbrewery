@@ -5,24 +5,28 @@ global $paged;
 global $slug;
 $yesterday = date('Ymd') - 1;
 
-$modifications = array(
+$common = array(
   'posts_per_page' => 100,
+);
+
+$date_args = $slug == 'events' ? array(
   'meta_key'  => 'date',
   'orderby'   => 'meta_value_num',
   'order'     => 'ASC',
   'meta_query' => array(
     array(
-        'key'     => 'date',
-        'compare' => '>=',
-        'value'   => $yesterday - 1,
-        'type' => 'DATE',
+      'key'     => 'date',
+      'compare' => '>=',
+      'value'   => $yesterday,
+      'type' => 'DATE',
     ),
   ),
-);
+) : array();
 
 $args = array_merge(
   $wp_query->query_vars,
-  $modifications 
+  $common,
+  $date_args
 );
 
 $the_query = new WP_Query($args);
@@ -32,7 +36,7 @@ echo '<div class="grid">';
 
   echo '<div class="col col-12">';
 
-  get_template_part('parts/navigation/nav-tabs', 'beers');
+  get_template_part('parts/navigation/nav-tabs', $slug);
 
     if ( $the_query->have_posts() ) : 
 

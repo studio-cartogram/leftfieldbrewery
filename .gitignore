@@ -12,3 +12,10 @@ wp-content/wflogs/*
 wp-content/themes/wptheme-lfb-0.2/.cache
 /wp-content/wflogs/*
 /wp-content/uploads/*
+/wp-content/wflogs/wafRules.rules
+/wp-content/wflogs/rules.php
+/wp-content/wflogs/config.php
+/wp-content/uploads/sucuri/sucuri-settings.php
+/wp-content/uploads/sucuri/sucuri-lastlogins.php
+/wp-content/uploads/sucuri/sucuri-hookdata.php
+/wp-content/uploads/sucuri/sucuri-auditqueue.php
