@@ -15,11 +15,15 @@ $label = get_field('label', $item->ID);
 $artwork = get_field('artwork', $item->ID) ? get_field('artwork', $item->ID) : get_post_thumbnail_id($item->ID);
 $info = get_field('info', $item->ID);
 $alcvol = get_field('alcvol', $item->ID);
-$date = date('M j • g:i a', strtotime(get_field('date', $item->ID)));
+$date = $slug == 'events' ? date('M j', strtotime(get_field('date', $item->ID))) : null;
+$start_time = $slug == 'events' ? get_field('start_time', $item->ID) : null;
+
 $button_text = cartogram_get_button_text($slug, $link);
 
 $cols = get_query_var('cols');
 $additional_classes = get_query_var('additional_classes');
+
+echo get_field('date', $item->ID);
 
 if ($link) :
 
@@ -58,7 +62,7 @@ echo '<h2 class="heading--1">' . get_the_title($item->ID) . '</h2>';
 
 echo $short_description ? '<h3 class="heading--2 heading--bordered">' . $short_description . '</h3>' : '';
 
-echo $date ? '<h3 class="heading--2 heading--bordered">' . $date . '</h3>' : '';
+echo $date ? '<h3 class="heading--2 heading--bordered">' . $date . ' • ' . $start_time . '</h3>' : '';
 
 echo '</span>';
 
