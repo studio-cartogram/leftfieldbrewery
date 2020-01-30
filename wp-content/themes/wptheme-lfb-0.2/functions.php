@@ -534,9 +534,9 @@ function cartogram_get_slug() {
 
 function cartogram_get_button_text($slug, $link) {
   if ($slug == 'events') :
-    return 'More info';
+    return $link ? 'More info' : 'Coming soon';
   else :
-    return $link ? 'Buy Now' : 'ꓘ STRUCK OUT';
+    return $link ? 'Buy now' : 'ꓘ STRUCK OUT';
   endif;
 }
 ?>
