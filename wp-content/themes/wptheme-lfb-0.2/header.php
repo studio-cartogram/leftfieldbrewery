@@ -50,7 +50,7 @@ endif;
           <li class="name">
             <h1 class="collapse-inner">
               <a class="logo--wordmark" href="<?php bloginfo( 'url' ); ?>">
-                <img class="logo--wordmark__image"  src="<?php bloginfo('template_directory') ?>/dist/images/wordmark.svg" />
+                <img class="logo--wordmark__image"  src="<?php bloginfo('template_directory') ?>/dist/images/wordmark-white.svg" />
               </a>
             </h1>
           </li>
