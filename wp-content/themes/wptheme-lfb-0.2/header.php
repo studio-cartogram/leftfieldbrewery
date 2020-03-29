@@ -47,7 +47,13 @@ endif;
     <div class="columns twelve ">
       <nav class="top-bar ">
         <ul class="show-for-small">
-          <li class="name"><h1 class="collapse-inner"><a class="icon-wordmark" href="<?php bloginfo( 'url' ); ?>"></a></h1></li>
+          <li class="name">
+            <h1 class="collapse-inner">
+              <a class="logo--wordmark" href="<?php bloginfo( 'url' ); ?>">
+                <img class="logo--wordmark__image"  src="<?php bloginfo('template_directory') ?>/dist/images/wordmark.svg" />
+              </a>
+            </h1>
+          </li>
           <li class="toggle-topbar"><a href="#"></a></li>
          </ul>
           <section class="">

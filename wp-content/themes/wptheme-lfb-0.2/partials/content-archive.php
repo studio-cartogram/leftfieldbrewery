@@ -53,7 +53,14 @@ echo '<div class="grid">';
         endwhile;
 
         echo '</div>';
-    
+    else:
+
+      echo '<div class="empty-state">';
+      
+        echo '<span class="heading heading--5 block">No ' . $slug . ' at this time. Please check back again soon.</span>';
+      
+      echo '</div>';
+
     endif;
 
   echo '</div>';

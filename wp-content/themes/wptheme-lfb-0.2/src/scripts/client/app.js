@@ -1,4 +1,4 @@
-import Instafeed from "./instafeed";
+import InstagramFeed from "./instagramFeed";
 
 //Set up global variable App for function calls.
 var App = {};
@@ -42,20 +42,31 @@ App.bindListeners = function() {
        Instagram
 
        ======================================================================================================================== */
+  new InstagramFeed({
+    username: "leftfieldbrewery",
+    container: document.getElementById("instafeed"),
+    display_profile: false,
+    display_biography: false,
 
-  var feed = new Instafeed({
-    get: "user",
-    limit: 4,
-    accessToken: "296366000.1677ed0.5880677c1fd8462d9f99a523c2f77e40",
-    userId: 296366000,
-    resolution: "standard_resolution",
-    template:
-      '<a class="instagram bg {{orientation}}" href="{{link}}" target="_blank" style="background-image:url({{image}})"/><span class="instagram__caption"><span class="instagram__caption-text"><span class="icon-instagram instagram__caption-icon"></span><span class="caption__text">{{caption}}</span></span></span></a>'
+    // display_biography: true,
+    // display_gallery: true,
+    // callback: null,
+    styling: false,
+    items: 4
   });
+  // var feed = new Instafeed({
+  //   get: "user",
+  //   limit: 4,
+  //   accessToken: "296366000.1677ed0.5880677c1fd8462d9f99a523c2f77e40",
+  //   userId: 296366000,
+  //   resolution: "standard_resolution",
+  //   template:
+  //     '<a class="instagram bg {{orientation}}" href="{{link}}" target="_blank" style="background-image:url({{image}})"/><span class="instagram__caption"><span class="instagram__caption-text"><span class="icon-instagram instagram__caption-icon"></span><span class="caption__text">{{caption}}</span></span></span></a>'
+  // });
 
-  if (document.getElementById("instafeed")) {
-    feed.run();
-  }
+  // if (document.getElementById("instafeed")) {
+  //   feed.run();
+  // }
 }; // App.bindListeners().
 
 /*
