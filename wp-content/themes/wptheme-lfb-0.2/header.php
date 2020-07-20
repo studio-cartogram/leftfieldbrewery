@@ -7,7 +7,7 @@ $header_left = get_field('header_left', 'options') ? get_field('header_left', 'o
 $header_right = get_field('header_right', 'options') ? get_field('header_right', 'options') : 'THURS—SAT&nbsp;&nbsp;11AM—11PM<br/>SUN—WED&nbsp;&nbsp;11AM—9PM';
 
 if ($announcement_visible) :
-  echo '<a href="' . $announcement_link . '" class="heading heading--3 container hide-for-small announcement">';
+  echo '<a href="' . $announcement_link . '" class="heading heading--3 container announcement">';
     echo '<span class="announcement__text">';
       echo $announcement_text;
       echo $announcement_button_text ? '<span class="button button--small announcement__button">' . $announcement_button_text . '</span>' : '';
@@ -82,3 +82,20 @@ endif;
     </div>	
   </div>
 </section>
+
+<?php if (is_front_page()) : ?>
+  <section class="container show-for-small">
+    <header class="soft row text-center">
+      <div class="columns mobile-two">
+        <h5 class="flush">
+          <?php echo $header_left; ?>
+        </h5>
+      </div>
+      <div class="columns mobile-two">
+        <h5 class="flush">
+          <?php echo $header_right; ?>
+        </h5>
+      </div>
+    </header>
+  </section>
+<?php endif; ?>

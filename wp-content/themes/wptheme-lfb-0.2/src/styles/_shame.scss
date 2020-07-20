@@ -248,6 +248,14 @@ ul#social {
   width: 66.6%;
 }
 
+
+@media only screen and (max-width: 767px) {
+  .top-bar ul#global {
+    width: 100%;
+  }
+
+}
+
 #container-navigation .row .twelve {
   padding: 0;
 }
