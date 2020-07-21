@@ -85,16 +85,16 @@ endif;
 
 <?php if (is_front_page()) : ?>
   <section class="container show-for-small">
-    <header class="soft row text-center">
+    <header class="soft row text-center bg-cream">
       <div class="columns mobile-two">
-        <h5 class="flush">
+        <h6 class="flush">
           <?php echo $header_left; ?>
-        </h5>
+        </h6>
       </div>
       <div class="columns mobile-two">
-        <h5 class="flush">
+        <h6 class="flush">
           <?php echo $header_right; ?>
-        </h5>
+        </h6>
       </div>
     </header>
   </section>
