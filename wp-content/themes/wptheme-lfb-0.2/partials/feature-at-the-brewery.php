@@ -51,13 +51,13 @@ if ($posts) :
 
     echo '<div class="col atb__col--' . $count++ . '  rule-right">';
 
-      echo (get_sub_field('fanshop') ? '<span class="check-text">In Cans</span><span class="check"></span>' : '&nbsp;');
+      echo (get_sub_field('curbside') ? '<span class="check-text">In Cans</span><span class="check"></span>' : '&nbsp;');
 
     echo '</div>';
 
     echo '<div class="col atb__col--' . $count++ . '  rule-right">';
 
-      echo (get_sub_field('curbside') ? '<span class="check-text">In Bottles</span><span class="check"></span>' : '&nbsp;');
+      echo (get_sub_field('fanshop') ? '<span class="check-text">In Bottles</span><span class="check"></span>' : '&nbsp;');
 
     echo '</div>';
 
