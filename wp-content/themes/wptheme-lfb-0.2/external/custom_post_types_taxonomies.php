@@ -202,7 +202,7 @@
       'hierarchical' => false,
       'taxonomies' => array(),
       'menu_position' => null,
-      'supports' => array('title', 'thumbnail')
+      'supports' => array('title', 'thumbnail', 'editor')
     ); 	
     
     register_post_type( 'events' , $eventsArgs );

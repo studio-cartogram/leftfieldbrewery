@@ -50,9 +50,7 @@ echo '<div class="grid">';
 
           set_query_var( 'item', $post );
 
-          $additional_cols = get_field('date', $post->ID) ? 'col-6-mobile' : '';
-
-          set_query_var('cols', 'col-12 ' . $additional_cols);
+          set_query_var('cols', 'col-12 col-6-mobile');
 
           get_template_part('partials/item', $slug);
 

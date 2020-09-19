@@ -17,15 +17,16 @@ $info = get_field('info', $item->ID);
 $alcvol = get_field('alcvol', $item->ID);
 $date = $slug == 'events' && get_field('date', $item->ID) ? date('M j', strtotime(get_field('date', $item->ID))) : null;
 $start_time = $slug == 'events' ? get_field('start_time', $item->ID) : null;
-
-$button_text = cartogram_get_button_text($slug, $link);
+$final_link = $slug == 'events' && !$link ? get_permalink($item->ID) : $link;
+$target = $link ? ' target="_blank" ' : '';
+$button_text = cartogram_get_button_text($slug, $final_link);
 
 $cols = get_query_var('cols');
 $additional_classes = get_query_var('additional_classes');
 
-if ($link) :
+if ($final_link) :
 
-  echo '<a target="_blank" style="color: ' . $text_color . ' !important;"  class="item item--' . $slug . ' col ' . $cols . ' ' . $additional_classes . '" href="' . $link . '">';
+  echo '<a ' . $target . ' style="color: ' . $text_color . ' !important;"  class="item item--' . $slug . ' col ' . $cols . ' ' . $additional_classes . '" href="' . $final_link . '">';
 
 else :
 
@@ -72,13 +73,13 @@ echo $alcvol ? '<span class="heading heading--5 block ">' . $alcvol . ' ABV' . '
 
 echo '</div>';
 
-echo '<span class="item__button button button--secondary ' . ($link ? '' : 'button--disabled') . '">' . $button_text . '</span>';
+echo '<span class="item__button button button--secondary ' . ($final_link ? '' : 'button--disabled') . '">' . $button_text . '</span>';
 
 echo '</div>';
 
 echo '<div class="item__background" style="background:' . $background_color . '" ></div>';
 
-if ($link) :
+if ($final_link) :
 
   echo '</a>';
 
