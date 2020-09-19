@@ -8,25 +8,9 @@ $yesterday = date('Ymd') - 1;
 $common = array(
   'posts_per_page' => 100,
 );
-
-$date_args = $slug == 'events' ? array(
-  'meta_key'  => 'date',
-  'orderby'   => 'meta_value_num',
-  'order'     => 'ASC',
-  'meta_query' => array(
-    array(
-      'key'     => 'date',
-      'compare' => '>=',
-      'value'   => $yesterday,
-      'type' => 'DATE',
-    ),
-  ),
-) : array();
-
 $args = array_merge(
   $wp_query->query_vars,
   $common,
-  $date_args
 );
 
 $the_query = new WP_Query($args);
@@ -53,6 +37,7 @@ echo '<div class="grid">';
         endwhile;
 
         echo '</div>';
+
     else:
 
       echo '<div class="empty-state">';

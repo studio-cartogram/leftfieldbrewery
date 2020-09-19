@@ -15,7 +15,7 @@ $label = get_field('label', $item->ID);
 $artwork = get_field('artwork', $item->ID) ? get_field('artwork', $item->ID) : get_post_thumbnail_id($item->ID);
 $info = get_field('info', $item->ID);
 $alcvol = get_field('alcvol', $item->ID);
-$date = $slug == 'events' ? date('M j', strtotime(get_field('date', $item->ID))) : null;
+$date = $slug == 'events' && get_field('date', $item->ID) ? date('M j', strtotime(get_field('date', $item->ID))) : null;
 $start_time = $slug == 'events' ? get_field('start_time', $item->ID) : null;
 
 $button_text = cartogram_get_button_text($slug, $link);
