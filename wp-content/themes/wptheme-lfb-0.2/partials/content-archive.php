@@ -6,11 +6,12 @@ global $slug;
 $yesterday = date('Ymd') - 1;
 
 $common = array(
-  'posts_per_page' => 100,
+  'posts_per_page' => 100
 );
+
 $args = array_merge(
   $wp_query->query_vars,
-  $common,
+  $common
 );
 
 $the_query = new WP_Query($args);
