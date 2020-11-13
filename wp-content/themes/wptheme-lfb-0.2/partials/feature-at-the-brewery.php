@@ -10,7 +10,7 @@ if ($posts) :
 
   echo '<div class="atthebrewery__heading-row grid border-top border-right border-left border-bottom">';
 
-  $headings = ['Beer', 'Style', ' Curbside Shop', 'Fan Shop'];
+  $headings = ['Beer', 'Style', ' Bottle Shop', 'Fan Shop'];
   $count = 0;
 
   foreach ($headings as $value) {
@@ -51,7 +51,7 @@ if ($posts) :
 
     echo '<div class="col atb__col--' . $count++ . '  rule-right">';
 
-      echo (get_sub_field('curbside') ? '<span class="check-text">In Cans</span><span class="check"></span>' : '&nbsp;');
+      echo (get_sub_field('bottleshop') ? '<span class="check-text">In Cans</span><span class="check"></span>' : '&nbsp;');
 
     echo '</div>';
 
