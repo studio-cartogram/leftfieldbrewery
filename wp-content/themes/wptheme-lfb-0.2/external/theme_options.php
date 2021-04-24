@@ -87,10 +87,15 @@ function theme_options_do_page() {
 				<?php 
 				//Elements in the options array are "lower_case_pothole" => array("title"=>"Nice Name for Client With Capitals",
 				//																	"description"=>"Describe this field")
-				$textfield_options = array ("email" => array(
+				$textfield_options = array (
+											"email" => array(
 												"title" => "Primary Email",
 												"description" => "Enter your email."
-												),
+											),
+											"wholesale_email" => array(
+												"title" => "Wholesale Email",
+												"description" => "Enter the wholesale email."
+											),
 											"phone" => array(
 												"title" => "Phone",
 												"description" => "Enter your phone number."

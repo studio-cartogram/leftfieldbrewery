@@ -6,10 +6,11 @@
 			<?php 
             $contact_options = array(
                 "phone"=>"talk",
-				"email"=>"write",
-				"twitter"=>"tweet",
-				"facebook"=>"like",
-				"untappd"=>"toast",
+								"email"=>"write",
+								"wholesale_email"=>"wholesale",
+								"twitter"=>"tweet",
+								"facebook"=>"like",
+								"untappd"=>"toast",
                 "instagram"=>"follow"
             );
 			foreach($contact_options as $medium=>$actionVerb) {
@@ -22,6 +23,10 @@
 						$closing_wrapper = '</a>';
 						break;
 					case "write":			
+						$open_wrapper = '<a href="mailto:' . $options[$medium] . '">';
+						$closing_wrapper = '</a>';
+						break;
+					case "wholesale":			
 						$open_wrapper = '<a href="mailto:' . $options[$medium] . '">';
 						$closing_wrapper = '</a>';
 						break;

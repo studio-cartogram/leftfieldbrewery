@@ -4,7 +4,7 @@ echo '<div class="grid grid--reverse">';
 
 echo '<div class="col col-8-tablet">';
 
-echo '<span class="heading heading--3 soft border-left border-right mobile-divide text-center">' . 'Instagram' . '</span>';
+echo '<a href="https://www.instagram.com/leftfieldbrewery/" class="heading heading--3 soft border-left border-right mobile-divide text-center">' . 'Instagram' . '</a>';
 
 get_template_part('partials/feature-instagram');
 
