@@ -10,7 +10,7 @@ if ($posts) :
 
   echo '<div class="atthebrewery__heading-row grid border-top border-right border-left border-bottom">';
 
-  $headings = ['Beer', 'Style', ' Bottle Shop', 'Fan Shop'];
+  $headings = ['Beer', 'Style', ' Bottle Shop', 'Fan Shop', 'On Tap'];
   $count = 0;
 
   foreach ($headings as $value) {
