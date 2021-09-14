@@ -61,6 +61,12 @@ if ($posts) :
 
     echo '</div>';
 
+    echo '<div class="col atb__col--' . $count++ . '  rule-right">';
+
+      echo (get_sub_field('on_tap') ? '<span class="check-text">On Tap</span><span class="check"></span>' : '&nbsp;');
+
+    echo '</div>';
+
     echo '</a>';
 
   endwhile;
