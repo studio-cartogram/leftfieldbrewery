@@ -4,11 +4,11 @@ $posts = get_field('beers_at_the_brewery', 'option');
 
 if ($posts) :
 
-  echo '<span class="soft border-left border-right text-center heading heading--2 ">At the Brewery</span>';
+  // echo '<span class="soft border-left border-right text-center heading heading--2 ">At the Brewery</span>';
 
   echo '<div class="row atthebrewery__table text-center collapse">';
 
-  echo '<div class="atthebrewery__heading-row grid border-top border-right border-left border-bottom">';
+  echo '<div class="atthebrewery__heading-row grid border-right border-left border-bottom">';
 
   $headings = ['Beer', 'Style', ' Bottle Shop', 'Fan Shop'];
   $count = 0;
