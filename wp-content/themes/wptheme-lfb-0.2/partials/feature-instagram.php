@@ -22,8 +22,6 @@ echo '<div class="instagrams">';
 
       echo get_the_post_thumbnail( get_the_ID(), 'large' );
 
-      echo '<img alt="' . get_the_title() . '" />';
-
       echo "</a>";
 
     endwhile;
