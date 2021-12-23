@@ -8,7 +8,7 @@ $args = array(
 
 $the_query = new WP_Query( $args );
 
-echo '<div class="instagrams" id="instafeed">';
+echo '<div class="instagrams">';
 
   if ( $the_query->have_posts() ) :
 
