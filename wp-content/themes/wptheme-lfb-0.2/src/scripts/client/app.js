@@ -1,12 +1,10 @@
-import InstagramFeed from "./instagramFeed";
-
 //Set up global variable App for function calls.
 var App = {};
 
 /*
   App's init function called when document is ready.
 */
-App.init = function() {
+App.init = function () {
   App.cache();
   App.bindListeners();
   App.addFlipEvents();
@@ -15,7 +13,7 @@ App.init = function() {
 /* 
   Cache all dom selectors required.
 */
-App.cache = function() {
+App.cache = function () {
   /* Store all dom elements selected. */
   App.dom = {};
 }; // App.cache();
@@ -24,7 +22,7 @@ App.cache = function() {
   For now, the bind listeners will be all the init functions
   outside of Push state.
 */
-App.bindListeners = function() {
+App.bindListeners = function () {
   /* ========================================================================================================================
     
   Toogle mobile nav
@@ -32,7 +30,7 @@ App.bindListeners = function() {
   ======================================================================================================================== */
   var $topbar = $("nav.top-bar");
 
-  $(".top-bar .toggle-topbar").on("click", function(e) {
+  $(".top-bar .toggle-topbar").on("click", function (e) {
     e.preventDefault();
     $topbar.toggleClass("expanded");
   });
@@ -42,18 +40,18 @@ App.bindListeners = function() {
        Instagram
 
        ======================================================================================================================== */
-  new InstagramFeed({
-    username: "leftfieldbrewery",
-    container: document.getElementById("instafeed"),
-    display_profile: false,
-    display_biography: false,
+  // new InstagramFeed({
+  //   username: "leftfieldbrewery",
+  //   container: document.getElementById("instafeed"),
+  //   display_profile: false,
+  //   display_biography: false,
 
-    // display_biography: true,
-    // display_gallery: true,
-    // callback: null,
-    styling: false,
-    items: 4
-  });
+  //   // display_biography: true,
+  //   // display_gallery: true,
+  //   // callback: null,
+  //   styling: false,
+  //   items: 4
+  // });
   // var feed = new Instafeed({
   //   get: "user",
   //   limit: 4,
@@ -72,17 +70,15 @@ App.bindListeners = function() {
 /*
   Add the click events for flipping the about us cards and the beer cards.
 */
-App.addFlipEvents = function() {
+App.addFlipEvents = function () {
   //Add toggle events for back and front of cards.
-  $(".flip").on("click", function() {
-    $(this)
-      .parents(".flip-container")
-      .toggleClass("hover");
+  $(".flip").on("click", function () {
+    $(this).parents(".flip-container").toggleClass("hover");
     return false;
   });
 }; // App.addFlipEvents.
 
 //On document ready, run App's init function.
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   App.init();
 });
