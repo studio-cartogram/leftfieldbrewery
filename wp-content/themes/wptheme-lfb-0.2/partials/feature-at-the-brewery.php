@@ -10,7 +10,7 @@ if ($posts) :
 
   echo '<div class="atthebrewery__heading-row grid border-right border-left border-bottom">';
 
-  $headings = ['Beer', 'Style', ' Bottle Shop', 'Fan Shop', 'On Tap'];
+  $headings = ['Beer', 'Style', 'Liberty', 'Leslieville', 'Online'];
   $count = 0;
 
   foreach ($headings as $value) {
@@ -51,19 +51,19 @@ if ($posts) :
 
     echo '<div class="col atb__col--' . $count++ . '  rule-right">';
 
-      echo (get_sub_field('bottleshop') ? '<span class="check-text">In Cans</span><span class="check"></span>' : '&nbsp;');
+      echo (get_sub_field('liberty') ? '<span class="check-text">Liberty</span><span class="check"></span>' : '&nbsp;');
 
     echo '</div>';
 
     echo '<div class="col atb__col--' . $count++ . '  rule-right">';
 
-      echo (get_sub_field('fanshop') ? '<span class="check-text">In Bottles</span><span class="check"></span>' : '&nbsp;');
+      echo (get_sub_field('leslieville') ? '<span class="check-text">Leslieville</span><span class="check"></span>' : '&nbsp;');
 
     echo '</div>';
 
     echo '<div class="col atb__col--' . $count++ . '  rule-right">';
 
-      echo (get_sub_field('on_tap') ? '<span class="check-text">On Tap</span><span class="check"></span>' : '&nbsp;');
+      echo (get_sub_field('online') ? '<span class="check-text">Online/span><span class="check"></span>' : '&nbsp;');
 
     echo '</div>';
 
