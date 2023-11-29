@@ -12,17 +12,8 @@ jobs:
       with:
         fetch-depth: 2
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
-        server: ftp.leftfieldbrewery.ca
-        username: cartogram@leftfieldbrewery.ca
-        password: ${{ secrets.FTP_PASSWORD }}
-        exclude: |
-        - wp-content/plugins/*
-        - wp-content/uploads/*
-        - wp-content/wp-includes/*
-        - wp-content/wpflogs/*
-        - wp-admin/**
-        - node_modules/**
-        - node_modules/**/*
-        - .htaccess
+        ftp-server: ftp.leftfieldbrewery.ca
+        ftp-username: cartogram@leftfieldbrewery.ca
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
