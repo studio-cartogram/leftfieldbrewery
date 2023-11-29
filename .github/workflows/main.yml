@@ -17,3 +17,10 @@ jobs:
         server: ftp.leftfieldbrewery.ca
         username: cartogram@leftfieldbrewery.ca
         password: ${{ secrets.FTP_PASSWORD }}
+        exclude: |
+        **/wp-content/plugins/**
+        **/wp-content/uploads/**
+        **/wp-content/wp-includes/**
+        **/wp-content/wpflogs/**
+        **/wp-admin**
+        .htaccess
