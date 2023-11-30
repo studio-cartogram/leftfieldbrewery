@@ -63,7 +63,7 @@ if ($posts) :
 
     echo '<div class="col atb__col--' . $count++ . '  rule-right">';
 
-      echo (get_sub_field('online') ? '<span class="check-text">Online/span><span class="check"></span>' : '&nbsp;');
+      echo (get_sub_field('online') ? '<span class="check-text">Online</span><span class="check"></span>' : '&nbsp;');
 
     echo '</div>';
 
